@@ -32,33 +32,43 @@ class Character(models.Model):
         return self.name
 
 
-class Speech(models.Model):
-    '''A direct speech instance'''
-    
-    work = models.ForeignKey(Work, on_delete=models.PROTECT)
-    l_fi = models.CharField('first line', max_length=8)
-    l_la = models.CharField('last line', max_length=8)
-    
-    def __str__(self):
-        return f'{self.work} {self.l_fi}-{self.l_la}'
-
-
 class CharacterInstance(models.Model):
     '''A character engaged in a speech'''
-    role_choices = [
-        ('SPKR', 'speaker'), 
-        ('ADDR', 'addressee'),
-    ]
     
-    char = models.ForeignKey(Character, related_name='character', 
+    char = models.ForeignKey(Character, related_name='instances', 
             on_delete=models.PROTECT)
-    disg = models.ForeignKey(Character, related_name='disguise', 
+    disg = models.ForeignKey(Character, related_name='disguises', 
             blank=True, null=True, on_delete=models.PROTECT)
-    role = models.CharField(max_length=4, choices=role_choices)
-    speech = models.ForeignKey(Speech, on_delete=models.PROTECT)
     
     def __str__(self):
         name = self.char.name
         if self.disg is not None:
             name += '/' + self.disg.name
         return name
+
+
+class SpeechCluster(models.Model):
+    '''A group of related speeches'''
+    
+    speech_types = [
+        ('S', 'Soliloqy'),
+        ('M', 'Monologue'),
+        ('D', 'Dialogue'),
+        ('G', 'General'),
+    ]
+    
+    type = models.CharField(max_length=1, choices=speech_types)
+    work = models.ForeignKey(Work, on_delete=models.PROTECT)
+
+
+class Speech(models.Model):
+    '''A direct speech instance'''
+    
+    cluster = models.ForeignKey(SpeechCluster, on_delete=models.CASCADE)
+    l_fi = models.CharField('first line', max_length=8)
+    l_la = models.CharField('last line', max_length=8)
+    spkr = models.ManyToManyField(CharacterInstance, related_name='speeches')
+    addr = models.ManyToManyField(CharacterInstance, related_name='addresses')
+    
+    def __str__(self):
+        return f'{self.work} {self.l_fi}-{self.l_la}'
