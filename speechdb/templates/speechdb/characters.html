@@ -1,0 +1,38 @@
+{% extends "speechdb/base.html" %}
+
+{% block title %}Characters{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-3">
+    <div class="jumbotron">
+      <h2>Characters</h2>
+      <p>
+        
+      </p>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <table class="table table-striped">
+      <thead>
+        <tr><th>Name</th><th>WikiData ID</th><th>MANTO ID</tr>
+      </thead>
+      <tbody>
+        {% for c in characters %}
+        <tr>
+          <td>{{ c.name }}</td>
+          <td><a href="https://www.wikidata.org/wiki/{{ c.wd }}">{{ c.wd }}</a></td>
+          <td>
+            {% if c.manto %}
+            <a href="https://yayalu.github.io/greekgraphs/#/datacards?id={{ c.manto }}">{{ c.manto }}</a>
+            {% else %}
+            {{ c.manto }}
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>        
+</div>
+{% endblock %}
