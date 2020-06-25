@@ -1,0 +1,27 @@
+{% extends "speechdb/base.html" %}
+
+{% block title %}Speeches{% endblock %}
+{% block sidebar_title %}Speeches{% endblock %}
+{% block sidebar_desc %}
+<p>
+  Individual direct speech instances, such as monologues or turns in a conversation. Loci link to the original text through Perseus.
+</p>
+{% endblock %}
+
+{% block results %}
+<table class="table table-striped">
+  <thead>
+    <tr><th>Locus</th><th>Speaker</th><th>Addressee</th><th>Type</th></tr>
+  </thead>
+  <tbody>
+    {% for s in speeches %}
+    <tr>
+      <td><a href="{{ reader }}{{ s.get_urn }}">{{ s.cluster.work.longname }} {{ s.l_fi }}—{{ s.l_la }}</a></td>
+      <td>{{ s.get_spkr_str }}</td>
+      <td>{{ s.get_addr_str }}</td>
+      <td>{{ s.get_short_type }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

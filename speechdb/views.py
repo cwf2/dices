@@ -1,18 +1,22 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from .models import Character
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
+from django.views import generic
+from .models import Character, Speech, SpeechCluster
+
+CTS_READER = 'https://scaife.perseus.org/reader/'
 
 def index(request):
     return HttpResponse(render(request, 'speechdb/index.html'))
 
 def characters(request):
     context = {'characters': Character.objects.all()}
-    return HttpResponse(render(request, 'speechdb/characters.html', context))
-
-def speech(request, speech_id):
-    return HttpResponse(f"You're looking at speech {speech_id}.")
+    return render(request, 'speechdb/characters.html', context)
     
+def clusters(request):
+    context = {'clusters': SpeechCluster.objects.all(), 'reader':CTS_READER}
+    return render(request, 'speechdb/clusters.html', context)
 
-def character(request, character_id):
-    return HttpResponse(f"You're looking at character {character_id}.")
-
+def speeches(request):
+    context = {'speeches': Speech.objects.all(), 'reader':CTS_READER}
+    return render(request, 'speechdb/speeches.html', context)

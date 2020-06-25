@@ -1,38 +1,32 @@
-{% extends "speechdb/base.html" %}
+{% extends "speechdb/results.html" %}
 
 {% block title %}Characters{% endblock %}
+{% block sidebar_title %}Characters{% endblock %}
+{% block sidebar_desc %}
+<p>
+  Core identities of speakers and addressees. External ID columns link to entries in the respective databases.
+</p>
+{% endblock %}
 
-{% block content %}
-<div class="row">
-  <div class="col-md-3">
-    <div class="jumbotron">
-      <h2>Characters</h2>
-      <p>
-        
-      </p>
-    </div>
-  </div>
-  <div class="col-md-9">
-    <table class="table table-striped">
-      <thead>
-        <tr><th>Name</th><th>WikiData ID</th><th>MANTO ID</tr>
-      </thead>
-      <tbody>
-        {% for c in characters %}
-        <tr>
-          <td>{{ c.name }}</td>
-          <td><a href="https://www.wikidata.org/wiki/{{ c.wd }}">{{ c.wd }}</a></td>
-          <td>
-            {% if c.manto %}
-            <a href="https://yayalu.github.io/greekgraphs/#/datacards?id={{ c.manto }}">{{ c.manto }}</a>
-            {% else %}
-            {{ c.manto }}
-            {% endif %}
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>        
-</div>
+{% block results %}
+<table class="table table-striped">
+  <thead>
+    <tr><th>Name</th><th>WikiData ID</th><th>MANTO ID</tr>
+  </thead>
+  <tbody>
+    {% for c in characters %}
+    <tr>
+      <td>{{ c.name }}</td>
+      <td><a href="https://www.wikidata.org/wiki/{{ c.wd }}">{{ c.wd }}</a></td>
+      <td>
+        {% if c.manto %}
+        <a href="https://yayalu.github.io/greekgraphs/#/datacards?id={{ c.manto }}">{{ c.manto }}</a>
+        {% else %}
+        {{ c.manto }}
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}
