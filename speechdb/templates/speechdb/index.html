@@ -1,16 +1,42 @@
-{% extends "speechdb/base.html" %}
+{% extends "speechdb/results.html" %}
 
-{% block content %}
-<div class="row">
-  <div class="col-md-3">
-    <div class="jumbotron">
-      <h2>DICES</h2>
-      <p>
-        A database of direct speech in epic.
-      </p>
+{% block title %}Search{% endblock %}
+{% block sidebar_title %}Search{% endblock %}
+{% block sidebar_desc %}
+<p>
+</p>
+{% endblock %}
+
+{% block results %}
+<form action="{% url 'speechdb:search' %}" method="GET">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="sel_spkr">Speaker</label>
+        <select class="form-control" id="sel_spkr" name="spkr_id">
+          <option value="" selected="selected"></option>
+          {% for c in characters %}
+          <option value="{{ c.pk }}">{{ c.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="sel_addr">Addressee</label>
+        <select class="form-control" id="sel_addr" name="addr_id">
+          <option selected="selected"></option>
+          {% for c in characters %}
+          <option value="{{ c.pk }}">{{ c.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
     </div>
   </div>
-  <div class="col-md-9">
-  </div>        
-</div>
+  <div class="row">
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </div>
+</form>
 {% endblock %}
