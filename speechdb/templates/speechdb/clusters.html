@@ -19,7 +19,9 @@
     <tr>
       <td>{{ c.work.longname }} {{ c.speech_set.first.l_fi }}—{{ c.speech_set.last.l_la }}</a></td>
       <td>{{ c.type }}</td>
-      <td style="text-align:right">{{ c.speech_set.count }}</td>
+      <td style="text-align:right">
+        <a href="{% url 'speechdb:search' %}?cluster_id={{ c.pk }}">{{ c.speech_set.count }}</a>
+      </td>
       <td>{{ c.get_chars_str }}</td>
     </tr>
     {% endfor %}
