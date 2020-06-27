@@ -1,2 +1,2 @@
-release: python manage.py migrate
+release: ./init.sh
 web: gunicorn dices.wsgi
