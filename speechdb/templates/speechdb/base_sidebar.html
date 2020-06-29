@@ -1,0 +1,17 @@
+{% extends "speechdb/base.html" %}
+
+{% block body %}
+<div class="row">
+  <div class="col-lg-3">
+    <div class="alert alert-dark">
+      <h4>{% block sidebar_title %}{% endblock %}</h4>
+      {% block sidebar_desc %}
+      {% endblock %}
+    </div>
+  </div>
+  <div class="col-lg-9">
+    {% block content %}
+    {% endblock %}
+  </div>
+</div>
+{% endblock %}

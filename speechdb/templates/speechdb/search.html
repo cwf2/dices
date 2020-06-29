@@ -1,4 +1,4 @@
-{% extends "speechdb/results.html" %}
+{% extends "speechdb/base_sidebar.html" %}
 
 {% block title %}Search{% endblock %}
 {% block sidebar_title %}Search{% endblock %}
@@ -7,7 +7,7 @@
 </p>
 {% endblock %}
 
-{% block results %}
+{% block content %}
 <form action="{% url 'speechdb:search' %}" method="GET">
   <div class="row">
     <div class="col-md-4">
@@ -36,11 +36,22 @@
   <div class="row">
     <div class="col-md-4">
       <div class="form-group">
-        <label for="sel_addr">Speech Cluster Type</label>
+        <label for="sel_type">Speech Cluster Type</label>
         <select class="form-control" id="sel_type" name="cluster_type">
           <option selected="selected"></option>
           {% for k, v in speech_types %}
           <option value="{{ k }}">{{ v }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="sel_work">Work</label>
+        <select class="form-control" id="sel_work" name="work_id">
+          <option selected="selected"></option>
+          {% for w in works %}
+          <option value="{{ w.pk }}">{{ w.get_long_name }}</option>
           {% endfor %}
         </select>
       </div>

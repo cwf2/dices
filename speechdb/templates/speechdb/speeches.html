@@ -14,9 +14,9 @@
     <tr><th>Locus</th><th>Speaker</th><th>Addressee</th><th>Type</th></tr>
   </thead>
   <tbody>
-    {% for s in speeches %}
+    {% for s in page %}
     <tr>
-      <td><a href="{{ reader }}{{ s.get_urn }}">{{ s.cluster.work.longname }} {{ s.l_fi }}—{{ s.l_la }}</a></td>
+      <td><a href="{{ reader }}{{ s.get_urn }}">{{ s.cluster.work.get_long_name }} {{ s.l_fi }}—{{ s.l_la }}</a></td>
       <td>{{ s.get_spkr_str }}</td>
       <td>{{ s.get_addr_str }}</td>
       <td>{{ s.get_short_type }}</td>

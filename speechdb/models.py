@@ -22,7 +22,7 @@ class Work(models.Model):
     def __str__(self):
         return f'{self.author.name} {self.title}'
     
-    def longname(self):
+    def get_long_name(self):
         '''Return common name as a string'''
         return f'{self.author.name} {self.title}'
 
@@ -34,6 +34,7 @@ class Character(models.Model):
         ('C', 'collective'),
         ('O', 'other'),
     ]
+    character_type_lookup = dict(character_type_choices)
     
     name = models.CharField(max_length=64)
     being = models.CharField(max_length=16, default='human')
@@ -42,10 +43,11 @@ class Character(models.Model):
     wd = models.CharField('WikiData ID', max_length=32, unique=True)
     manto = models.CharField('MANTO ID', max_length=32, blank=True)
 
-
     def __str__(self):
         return self.name
 
+    def get_long_type(self):
+        return Character.character_type_lookup[self.type]
 
 class CharacterInstance(models.Model):
     '''A character engaged in a speech'''
@@ -67,14 +69,15 @@ class CharacterInstance(models.Model):
 class SpeechCluster(models.Model):
     '''A group of related speeches'''
     
-    speech_types = [
+    speech_type_choices = [
         ('S', 'Soliloqy'),
         ('M', 'Monologue'),
         ('D', 'Dialogue'),
         ('G', 'General'),
     ]
+    speech_type_lookup = dict(speech_type_choices)
     
-    type = models.CharField(max_length=1, choices=speech_types)
+    type = models.CharField(max_length=1, choices=speech_type_choices)
     work = models.ForeignKey(Work, on_delete=models.PROTECT)
     
     # def __str__(self):
@@ -115,6 +118,9 @@ class SpeechCluster(models.Model):
             chars.extend([str(c) for c in speech.addr.all()])
         chars = sorted(set(chars))
         return ', '.join(chars)
+        
+    def get_long_type(self):
+        return SpeechCluster.speech_type_lookup[self.type]
 
 class Speech(models.Model):
     '''A direct speech instance'''
