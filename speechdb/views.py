@@ -100,7 +100,7 @@ def search(request):
     # pager
     page_size = int(request.GET.get('n', 25))
     page_num = int(request.GET.get('page', 1))
-    paged_results = Paginator(Speech.objects.all(), page_size)
+    paged_results = Paginator(results, page_size)
     page_nos = list(range(max(1, page_num-2), min(page_num+2, paged_results.num_pages)))
     
     # render template
