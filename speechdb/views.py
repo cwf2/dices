@@ -4,9 +4,80 @@ from django.urls import reverse
 from django.views import generic
 from django.core.paginator import Paginator
 from django.db.models import Q
-from .models import Character, Speech, SpeechCluster, Work
+from rest_framework import generics
+from django_filters import rest_framework as filters
+from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
+from .serializers import AuthorSerializer, WorkSerializer, CharacterSerializer, CharacterInstanceSerializer, SpeechSerializer, SpeechClusterSerializer
 
 CTS_READER = 'https://scaife.perseus.org/reader/'
+
+class AuthorList(generics.ListAPIView):
+    queryset = Author.objects.all()
+    serializer_class = AuthorSerializer
+
+
+class AuthorDetail(generics.RetrieveAPIView):
+    queryset = Author.objects.all()
+    serializer_class = AuthorSerializer
+
+
+class WorkList(generics.ListAPIView):
+    queryset = Work.objects.all()
+    serializer_class = WorkSerializer
+
+
+class WorkDetail(generics.RetrieveAPIView):
+    queryset = Work.objects.all()
+    serializer_class = WorkSerializer
+
+
+class CharacterList(generics.ListAPIView):
+    queryset = Character.objects.all()
+    serializer_class = CharacterSerializer
+
+
+class CharacterDetail(generics.RetrieveAPIView):
+    queryset = Character.objects.all()
+    serializer_class = CharacterSerializer
+
+
+class CharacterInstanceList(generics.ListAPIView):
+    queryset = Character.objects.all()
+    serializer_class = CharacterSerializer
+
+
+class CharacterInstanceDetail(generics.RetrieveAPIView):
+    queryset = CharacterInstance.objects.all()
+    serializer_class = CharacterInstanceSerializer
+
+
+class SpeechFilter(filters.FilterSet):
+    class Meta:
+        model = Speech
+        fields = ['spkr', 'addr']
+
+class SpeechList(generics.ListAPIView):
+    queryset = Speech.objects.all()
+    serializer_class = SpeechSerializer
+    filterset_class=SpeechFilter
+
+
+class SpeechDetail(generics.RetrieveAPIView):
+    queryset = Speech.objects.all()
+    serializer_class = SpeechSerializer
+
+
+class SpeechClusterList(generics.ListAPIView):
+    queryset = SpeechCluster.objects.all()
+    serializer_class = SpeechClusterSerializer
+
+
+class SpeechClusterDetail(generics.RetrieveAPIView):
+    queryset = SpeechCluster.objects.all()
+    serializer_class = SpeechClusterSerializer
+    
+
+
 
 def index(request):
     context = {

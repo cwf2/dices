@@ -20,7 +20,7 @@
 
     <div class="container-fluid">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{% url 'speechdb:index' %}">
+        <a class="navbar-brand" href="{% url 'app:index' %}">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -29,13 +29,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'speechdb:index' %}">Search</a>
+              <a class="nav-link" href="{% url 'app:index' %}">Search</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'speechdb:clusters' %}">Speech Clusters</a>
+              <a class="nav-link" href="{% url 'app:clusters' %}">Speech Clusters</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'speechdb:characters' %}">Characters</a>
+              <a class="nav-link" href="{% url 'app:characters' %}">Characters</a>
             </li>
           </ul>
         </div>
