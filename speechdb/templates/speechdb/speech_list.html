@@ -14,7 +14,7 @@
     <tr><th>Locus</th><th>Speaker</th><th>Addressee</th><th>Type</th></tr>
   </thead>
   <tbody>
-    {% for s in page %}
+    {% for s in page_obj %}
     <tr>
       <td><a href="{{ reader }}{{ s.get_urn }}">{{ s.cluster.work.get_long_name }} {{ s.l_fi }}—{{ s.l_la }}</a></td>
       <td>{{ s.get_spkr_str }}</td>

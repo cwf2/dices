@@ -1,0 +1,30 @@
+{% extends "speechdb/results.html" %}
+
+{% block title %}Authors{% endblock %}
+{% block sidebar_title %}Authors{% endblock %}
+{% block sidebar_desc %}
+<p>
+  Authors of ancient works in the corpus.
+</p>
+{% endblock %}
+
+{% block results %}
+<table class="table table-striped">
+  <thead>
+    <tr><th>Name</th><th>WikiData ID</th><th>CITE ID</tr>
+  </thead>
+  <tbody>
+    {% for rec in page %}
+    <tr>
+      <td>{{ rec.name }}</td>
+      <td><a href="https://www.wikidata.org/wiki/{{ rec.wd }}">{{ rec.wd }}</a></td>
+      <td>
+        {% if rec.urn %}
+        <a href="https://catalog.perseus.org/catalog/{{ rec.urn }}">{{ rec.urn }}</a>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

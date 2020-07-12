@@ -1,52 +1,59 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
-from django.views import generic
 from django.core.paginator import Paginator
 from django.db.models import Q
-from rest_framework import generics
+from django.views.generic import ListView, DetailView
+from django_filters.views import FilterView
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 from django_filters import rest_framework as filters
 from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
 from .serializers import AuthorSerializer, WorkSerializer, CharacterSerializer, CharacterInstanceSerializer, SpeechSerializer, SpeechClusterSerializer
 
 CTS_READER = 'https://scaife.perseus.org/reader/'
+PAGE_SIZE = 25
 
-class AuthorList(generics.ListAPIView):
+
+#
+# API class-based views
+#
+
+class AuthorList(ListAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
 
 
-class AuthorDetail(generics.RetrieveAPIView):
+class AuthorDetail(RetrieveAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
 
 
-class WorkList(generics.ListAPIView):
+class WorkList(ListAPIView):
     queryset = Work.objects.all()
     serializer_class = WorkSerializer
 
 
-class WorkDetail(generics.RetrieveAPIView):
+class WorkDetail(RetrieveAPIView):
     queryset = Work.objects.all()
     serializer_class = WorkSerializer
 
 
-class CharacterList(generics.ListAPIView):
+class CharacterList(ListAPIView):
     queryset = Character.objects.all()
     serializer_class = CharacterSerializer
 
 
-class CharacterDetail(generics.RetrieveAPIView):
+class CharacterDetail(RetrieveAPIView):
     queryset = Character.objects.all()
     serializer_class = CharacterSerializer
 
 
-class CharacterInstanceList(generics.ListAPIView):
+class CharacterInstanceList(ListAPIView):
     queryset = Character.objects.all()
     serializer_class = CharacterSerializer
 
 
-class CharacterInstanceDetail(generics.RetrieveAPIView):
+class CharacterInstanceDetail(RetrieveAPIView):
     queryset = CharacterInstance.objects.all()
     serializer_class = CharacterInstanceSerializer
 
@@ -56,28 +63,88 @@ class SpeechFilter(filters.FilterSet):
         model = Speech
         fields = ['spkr', 'addr']
 
-class SpeechList(generics.ListAPIView):
+
+class SpeechList(ListAPIView):
     queryset = Speech.objects.all()
     serializer_class = SpeechSerializer
     filterset_class=SpeechFilter
 
 
-class SpeechDetail(generics.RetrieveAPIView):
+class SpeechDetail(RetrieveAPIView):
     queryset = Speech.objects.all()
     serializer_class = SpeechSerializer
 
 
-class SpeechClusterList(generics.ListAPIView):
+class SpeechClusterList(ListAPIView):
     queryset = SpeechCluster.objects.all()
     serializer_class = SpeechClusterSerializer
 
 
-class SpeechClusterDetail(generics.RetrieveAPIView):
+class SpeechClusterDetail(RetrieveAPIView):
     queryset = SpeechCluster.objects.all()
     serializer_class = SpeechClusterSerializer
     
 
+#
+# Web frontend class-based views
+#
 
+class AppAuthorList(ListView):
+    model = Author
+    template_name = 'speechdb/author_list.html'
+    queryset = Author.objects.all()
+    paginate_by = PAGE_SIZE
+
+
+class AppWorkList(ListView):
+    model = Work
+    template_name = 'speechdb/work_list.html'
+    queryset = Work.objects.all()
+    paginate_by = PAGE_SIZE
+
+
+class AppCharacterList(ListView):
+    model = Character
+    template_name = 'speechdb/character_list.html'
+    queryset = Character.objects.all()
+    paginate_by = PAGE_SIZE
+
+
+class AppCharacterInstanceList(ListView):
+    model = CharacterInstance
+    template_name = 'speechdb/characterinstance_list.html'
+    queryset = CharacterInstance.objects.all()
+    paginate_by = PAGE_SIZE
+
+
+class AppSpeechList(ListView):
+    model = Speech
+    template_name = 'speechdb/speech_list.html'
+    queryset = Speech.objects.all()
+    paginate_by = PAGE_SIZE
+    
+    # def get_queryset(self):
+    #     qs = self.model.objects.all()
+    #     filtered_list = AppSpeechFilter(self.request.GET, queryset=qs)
+    #     return filtered_list.qs
+        
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['reader'] = CTS_READER
+        return context
+
+class AppSpeechClusterList(ListView):
+    model = SpeechCluster
+    template_name = 'speechdb/speechcluster_list.html'
+    queryset = SpeechCluster.objects.all()
+    paginate_by = PAGE_SIZE
+
+
+#
+# old, function-based views
+#
 
 def index(request):
     context = {
@@ -87,41 +154,7 @@ def index(request):
     }
     return render(request, 'speechdb/search.html', context)
 
-def characters(request):
-    page_size = int(request.GET.get('n', 25))
-    page_num = int(request.GET.get('page', 1))
-    paged_results = Paginator(Character.objects.all(), page_size)
-    page_nos = list(range(max(1, page_num-2), min(page_num+2, paged_results.num_pages)))
-    context = {
-        'page': paged_results.get_page(page_num),
-        'page_nos': page_nos,
-    }
-    return render(request, 'speechdb/characters.html', context)
-    
-def clusters(request):
-    page_size = int(request.GET.get('n', 25))
-    page_num = int(request.GET.get('page', 1))
-    paged_results = Paginator(SpeechCluster.objects.all(), page_size)
-    page_nos = list(range(max(1, page_num-2), min(page_num+2, paged_results.num_pages)))
-    context = {
-        'page': paged_results.get_page(page_num),
-        'page_nos': page_nos,
-        'reader':CTS_READER,
-    }
-    return render(request, 'speechdb/clusters.html', context)
 
-def speeches(request):
-    page_size = int(request.GET.get('n', 25))
-    page_num = int(request.GET.get('page', 1))
-    paged_results = Paginator(Speech.objects.all(), page_size)
-    page_nos = list(range(max(1, page_num-2), min(page_num+2, paged_results.num_pages)))
-    context = {
-        'page': paged_results.get_page(page_num),
-        'page_nos': page_nos,
-        'reader':CTS_READER,
-    }
-    return render(request, 'speechdb/speeches.html', context)
-    
 def search(request):
     '''Perform a search'''
     
