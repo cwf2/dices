@@ -19,7 +19,7 @@
       <td>{{ c.work.get_long_name }} {{ c.speech_set.first.l_fi }}—{{ c.speech_set.last.l_la }}</a></td>
       <td>{{ c.get_long_type }}</td>
       <td style="text-align:right">
-        <a href="{% url 'app:search' %}?cluster_id={{ c.pk }}">{{ c.speech_set.count }}</a>
+        <a href="{% url 'app:speeches' %}?cluster_id={{ c.pk }}">{{ c.speech_set.count }}</a>
       </td>
       <td>{{ c.get_chars_str }}</td>
     </tr>

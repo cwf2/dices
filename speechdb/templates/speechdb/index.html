@@ -1,4 +1,4 @@
-{% extends "speechdb/results.html" %}
+{% extends "speechdb/base_sidebar.html" %}
 
 {% block title %}Speeches{% endblock %}
 {% block sidebar_title %}Speeches{% endblock %}
@@ -46,20 +46,8 @@
 </form>
 {% endblock %}
 
-{% block results %}
-<table class="table table-striped">
-  <thead>
-    <tr><th>Locus</th><th>Speaker</th><th>Addressee</th><th>Type</th></tr>
-  </thead>
-  <tbody>
-    {% for s in page_obj %}
-    <tr>
-      <td><a href="{{ reader }}{{ s.get_urn }}">{{ s.cluster.work.get_long_name }} {{ s.l_fi }}—{{ s.l_la }}</a></td>
-      <td>{{ s.get_spkr_str }}</td>
-      <td>{{ s.get_addr_str }}</td>
-      <td>{{ s.get_short_type }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+{% block content %}
+<div class="jumbotron">
+  <p>Do a search already...</p>
+</div>
 {% endblock %}

@@ -2,14 +2,13 @@ from django.urls import path, include
 from . import views
 
 frontend_urls = ([
-    path('', views.index, name='index'),
+    path('', views.AppIndex.as_view(), name='index'),
     path('authors/', views.AppAuthorList.as_view(), name='authors'),
     path('works/', views.AppWorkList.as_view(), name='works'),
     path('characters/', views.AppCharacterList.as_view(), name='characters'),
     path('instances/', views.AppCharacterInstanceList.as_view(), name='instances'),
     path('clusters/', views.AppSpeechClusterList.as_view(), name='clusters'),
     path('speeches/', views.AppSpeechList.as_view(), name='speeches'),
-    path('search/', views.search, name='search'),
 ], 'app')
 
 api_urls = ([
