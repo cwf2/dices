@@ -1,0 +1,35 @@
+{% extends "speechdb/results.html" %}
+
+{% block title %}Character Instances{% endblock %}
+{% block sidebar_title %}Character Instances{% endblock %}
+{% block sidebar_desc %}
+<p>
+  Instantiations of core characters in specific contexts, potentially with attributes that temporarily vary from the default attributes of the core character.
+</p>
+{% endblock %}
+
+{% block results %}
+<table class="table table-striped">
+  <thead>
+    <tr><th>Name</th><th>Context</th><th>WikiData ID</th><th>MANTO ID</tr>
+  </thead>
+  <tbody>
+    {% for inst in page_obj %}
+    <tr>
+      <td>{{ inst.char.name }}</td>
+      <td>{{ inst.context }}</td>      
+      <td>
+        {% if inst.char.wd %}
+        <a href="https://www.wikidata.org/wiki/{{ inst.char.wd }}">{{ inst.char.wd }}</a>
+        {% endif %}
+      </td>
+      <td>
+        {% if inst.char.manto %}
+        <a href="https://yayalu.github.io/greekgraphs/#/datacards?id={{ inst.char.manto }}">{{ inst.char.manto }}</a>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

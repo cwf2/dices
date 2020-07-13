@@ -14,7 +14,7 @@
     <tr><th>Name</th><th>WikiData ID</th><th>MANTO ID</tr>
   </thead>
   <tbody>
-    {% for c in page %}
+    {% for c in page_obj %}
     <tr>
       <td>{{ c.name }}</td>
       <td><a href="https://www.wikidata.org/wiki/{{ c.wd }}">{{ c.wd }}</a></td>

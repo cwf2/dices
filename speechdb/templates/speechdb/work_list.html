@@ -1,0 +1,31 @@
+{% extends "speechdb/results.html" %}
+
+{% block title %}Works{% endblock %}
+{% block sidebar_title %}Works{% endblock %}
+{% block sidebar_desc %}
+<p>
+  Epic texts
+</p>
+{% endblock %}
+
+{% block results %}
+<table class="table table-striped">
+  <thead>
+    <tr><th>Author</th><th>Title</th><th>CTS URN</th><th>Wikidata ID</th></tr>
+  </thead>
+  <tbody>
+    {% for work in page_obj %}
+    <tr>
+      <td>{{ work.author.name }}</td>
+      <td>{{ work.title }}</td>      
+      <td>
+        {% if work.urn %}
+        <a href="https://catalog.perseus.org/catalog/{{ work.urn }}">{{ work.urn }}</a>
+        {% endif %}
+      </td>
+      <td><a href="https://www.wikidata.org/wiki/{{ work.wd }}">{{ work.wd }}</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
