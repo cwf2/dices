@@ -1,8 +1,11 @@
 from django.urls import path, include
+from django.contrib.auth import views as auth_views
 from . import views
 
 frontend_urls = ([
     path('', views.AppIndex.as_view(), name='index'),
+    path('login/', auth_views.LoginView.as_view(template_name='speechdb/login.html'), name='login'),
+    path('logout/', auth_views.logout_then_login, {'login_url':'app:index'}, name='logout'),
     path('characters/', views.AppCharacterList.as_view(), name='characters'),
     path('characters/search', views.AppCharacterSearch.as_view(), name='character_search'),
     path('instances/', views.AppCharacterInstanceList.as_view(), name='instances'),

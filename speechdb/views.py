@@ -1,6 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.db.models import Q, Count
 from django.views.generic import ListView, DetailView, TemplateView
@@ -122,7 +123,7 @@ class SpeechClusterDetail(RetrieveAPIView):
 #     paginate_by = PAGE_SIZE
 
 
-class AppCharacterList(ListView):
+class AppCharacterList(LoginRequiredMixin, ListView):
     model = Character
     template_name = 'speechdb/character_list.html'
     queryset = Character.objects.all()
@@ -130,6 +131,10 @@ class AppCharacterList(ListView):
     _valid_params = [
         ('name', str),
     ]
+    
+    # authentication
+    login_url = '/app/login/'
+    
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -161,7 +166,7 @@ class AppCharacterList(ListView):
         return qs
 
 
-class AppCharacterInstanceList(ListView):
+class AppCharacterInstanceList(LoginRequiredMixin, ListView):
     model = CharacterInstance
     template_name = 'speechdb/characterinstance_list.html'
     queryset = CharacterInstance.objects.all()
@@ -169,7 +174,10 @@ class AppCharacterInstanceList(ListView):
     _valid_params = [
         ('name', str),
     ]
-     
+    
+    # authentication
+    login_url = '/app/login/'
+    
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
@@ -200,7 +208,7 @@ class AppCharacterInstanceList(ListView):
         return qs
 
 
-class AppSpeechList(ListView):
+class AppSpeechList(LoginRequiredMixin, ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
     paginate_by = PAGE_SIZE
@@ -214,6 +222,8 @@ class AppSpeechList(ListView):
         ('work_id', int),
     ]
         
+    # authentication
+    login_url = '/app/login/'
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -262,12 +272,15 @@ class AppSpeechList(ListView):
         return Speech.objects.filter(*query)
         
 
-class AppSpeechClusterList(ListView):
+class AppSpeechClusterList(LoginRequiredMixin, ListView):
     model = SpeechCluster
     template_name = 'speechdb/speechcluster_list.html'
     queryset = SpeechCluster.objects.all()
     paginate_by = PAGE_SIZE
     _valid_params = []
+    
+    # authentication
+    login_url = '/app/login/'
     
     def get_queryset(self):
         # collect user search params
@@ -289,8 +302,11 @@ class AppSpeechClusterList(ListView):
         return context
 
 
-class AppIndex(TemplateView):
+class AppIndex(LoginRequiredMixin, TemplateView):
     template_name = 'speechdb/index.html'
+
+    # authentication
+    login_url = '/app/login/'
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -302,7 +318,7 @@ class AppIndex(TemplateView):
         return context
 
 
-class AppSpeechSearch(TemplateView):
+class AppSpeechSearch(LoginRequiredMixin, TemplateView):
     template_name = 'speechdb/speech_search.html'
     
     def get_context_data(self, **kwargs):
@@ -315,8 +331,12 @@ class AppSpeechSearch(TemplateView):
         return context
 
 
-class AppSpeechClusterSearch(TemplateView):
+class AppSpeechClusterSearch(LoginRequiredMixin, TemplateView):
     template_name = 'speechdb/speechcluster_search.html'
+    
+    # authentication
+    login_url = '/app/login/'
+    
     
     # def get_context_data(self, **kwargs):
     #     # Call the base implementation first to get a context
@@ -328,8 +348,11 @@ class AppSpeechClusterSearch(TemplateView):
     #     return context
 
 
-class AppCharacterSearch(TemplateView):
+class AppCharacterSearch(LoginRequiredMixin, TemplateView):
     template_name = 'speechdb/character_search.html'
+    
+    # authentication
+    login_url = '/app/login/'
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -337,6 +360,3 @@ class AppCharacterSearch(TemplateView):
         # add useful info
         context['characters'] = Character.objects.all()
         return context
-    
-
-    
