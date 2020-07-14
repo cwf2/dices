@@ -2,21 +2,27 @@
 
 {% block title %}Characters{% endblock %}
 {% block sidebar_title %}Characters{% endblock %}
-{% block sidebar_desc %}
-<p>
-  Core identities of speakers and addressees. External ID columns link to entries in the respective databases.
-</p>
-{% endblock %}
+
 
 {% block results %}
 <table class="table table-striped">
   <thead>
-    <tr><th>Name</th><th>WikiData ID</th><th>MANTO ID</tr>
+    <tr><th>Name</th><th>Speaker</th><th>Addressee</th><th>WikiData ID</th><th>MANTO ID</tr>
   </thead>
   <tbody>
     {% for c in page_obj %}
     <tr>
       <td>{{ c.name }}</td>
+      <td>
+        <a href="{% url 'app:speeches' %}?spkr_id={{ c.pk }}">
+        {{ c.instances__speeches__count }}
+        </a>
+      </td>
+      <td>
+        <a href="{% url 'app:speeches' %}?addr_id={{ c.pk }}">
+        {{ c.instances__addresses__count }}
+        </a>
+      </td>
       <td><a href="https://www.wikidata.org/wiki/{{ c.wd }}">{{ c.wd }}</a></td>
       <td>
         {% if c.manto %}

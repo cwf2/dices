@@ -2,54 +2,11 @@
 
 {% block title %}Speeches{% endblock %}
 {% block sidebar_title %}Speeches{% endblock %}
-{% block sidebar_desc %}
-<form action="{% url 'app:speeches' %}" method="GET">
-  <div class="form-group">
-    <label for="sel_spkr">Speaker</label>
-    <select class="form-control" id="sel_spkr" name="spkr_id">
-      <option value="" selected="selected"></option>
-      {% for c in characters %}
-      <option value="{{ c.pk }}">{{ c.name }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="sel_addr">Addressee</label>
-    <select class="form-control" id="sel_addr" name="addr_id">
-      <option selected="selected"></option>
-      {% for c in characters %}
-      <option value="{{ c.pk }}">{{ c.name }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="sel_type">Speech Cluster Type</label>
-    <select class="form-control" id="sel_type" name="cluster_type">
-      <option selected="selected"></option>
-      {% for k, v in speech_types %}
-      <option value="{{ k }}">{{ v }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="sel_work">Work</label>
-    <select class="form-control" id="sel_work" name="work_id">
-      <option selected="selected"></option>
-      {% for w in works %}
-      <option value="{{ w.pk }}">{{ w.get_long_name }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="col-md-2">
-    <button type="submit" class="btn btn-primary">Search</button>
-  </div>
-</form>
-{% endblock %}
 
 {% block results %}
 <table class="table table-striped">
   <thead>
-    <tr><th>Locus</th><th>Speaker</th><th>Addressee</th><th>Type</th></tr>
+    <tr><th>Locus</th><th>Speaker</th><th>Addressee</th><th>Cluster</th><th>Part</th></tr>
   </thead>
   <tbody>
     {% for s in page_obj %}
@@ -57,7 +14,8 @@
       <td><a href="{{ reader }}{{ s.get_urn }}">{{ s.cluster.work.get_long_name }} {{ s.l_fi }}—{{ s.l_la }}</a></td>
       <td>{{ s.get_spkr_str }}</td>
       <td>{{ s.get_addr_str }}</td>
-      <td>{{ s.get_short_type }}</td>
+      <td>{{ s.cluster.get_long_type }}</td>
+      <td>{{ s.part }}</td>      
     </tr>
     {% endfor %}
   </tbody>
