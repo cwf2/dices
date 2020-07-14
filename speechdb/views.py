@@ -1,8 +1,9 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
-from django.db.models import Q
+from django.db.models import Q, Count
 from django.views.generic import ListView, DetailView, TemplateView
 from django_filters.views import FilterView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
@@ -108,92 +109,121 @@ class SpeechClusterDetail(RetrieveAPIView):
 # Web frontend class-based views
 #
 
-class AppAuthorList(ListView):
-    model = Author
-    template_name = 'speechdb/author_list.html'
-    queryset = Author.objects.all()
-    paginate_by = PAGE_SIZE
+# class AppAuthorList(ListView):
+#     model = Author
+#     template_name = 'speechdb/author_list.html'
+#     queryset = Author.objects.all()
+#     paginate_by = PAGE_SIZE
+#
+#
+# class AppWorkList(ListView):
+#     model = Work
+#     template_name = 'speechdb/work_list.html'
+#     queryset = Work.objects.all()
+#     paginate_by = PAGE_SIZE
 
 
-class AppWorkList(ListView):
-    model = Work
-    template_name = 'speechdb/work_list.html'
-    queryset = Work.objects.all()
-    paginate_by = PAGE_SIZE
-
-
-class AppCharacterList(ListView):
+class AppCharacterList(LoginRequiredMixin, ListView):
     model = Character
     template_name = 'speechdb/character_list.html'
     queryset = Character.objects.all()
     paginate_by = PAGE_SIZE
-
-
-class AppCharacterInstanceList(ListView):
-    model = CharacterInstance
-    template_name = 'speechdb/characterinstance_list.html'
-    queryset = CharacterInstance.objects.all()
-    paginate_by = PAGE_SIZE
-
-
-class AppSpeechList(ListView):
-    model = Speech
-    template_name = 'speechdb/speech_list.html'
-    paginate_by = PAGE_SIZE
+    _valid_params = [
+        ('name', str),
+    ]
+    
+    # authentication
+    login_url = '/app/login/'
+    
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
-        context['reader'] = CTS_READER
-        context['works'] = Work.objects.all()
-        context['characters'] = Character.objects.all()
-        context['speech_types'] = SpeechCluster.speech_type_choices
+        context['search_params'] = self.params.items()
+       
         return context
-     
+    
     def get_queryset(self):
         # collect user search params
-        valid_params = [
-            ('spkr_id', int),
-            ('addr_id', int),
-            ('cluster_id', int),
-            ('cluster_type', str),
-            ('work_id', int),
-        ]
-        params = ValidateParams(self.request, valid_params)
+        self.params = ValidateParams(self.request, self._valid_params)
         
         # construct query
         query = []
         
         # speaker by id
-        if 'spkr_id' in params:
-            query.append(Q(spkr__char=params['spkr_id']) | Q(spkr__disg=params['spkr_id']))
-    
-        # addressee by id
-        if 'addr_id' in params:
-            query.append(Q(addr__char=params['addr_id']) | Q(addr__disg=params['addr_id']))
-    
-        if 'cluster_id' in params:
-            query.append(Q(cluster__pk=params['cluster_id']))
-    
-        if 'cluster_type' in params:
-            query.append(Q(cluster__type=params['cluster_type']))
-    
-        if 'work_id' in params:
-            query.append(Q(cluster__work__pk=params['work_id']))
-            
-        return Speech.objects.filter(*query)
+        if 'name' in self.params:
+            query.append(Q(name=self.params['name']))
         
+        qs = Character.objects.filter(*query).order_by('name')
+        
+        # calculate some useful counts
+        qs = qs.annotate(
+            Count('instances__speeches', distinct=True),
+            Count('instances__addresses', distinct=True),
+        )
+        
+        return qs
 
-class AppSpeechClusterList(ListView):
-    model = SpeechCluster
-    template_name = 'speechdb/speechcluster_list.html'
-    queryset = SpeechCluster.objects.all()
+
+class AppCharacterInstanceList(LoginRequiredMixin, ListView):
+    model = CharacterInstance
+    template_name = 'speechdb/characterinstance_list.html'
+    queryset = CharacterInstance.objects.all()
     paginate_by = PAGE_SIZE
+    _valid_params = [
+        ('name', str),
+    ]
+    
+    # authentication
+    login_url = '/app/login/'
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['search_params'] = self.params.items()
+       
+        return context
+    
+    def get_queryset(self):
+        # collect user search params
+        self.params = ValidateParams(self.request, self._valid_params)
+        
+        # construct query
+        query = []
+        
+        # speaker by id
+        if 'name' in self.params:
+            query.append(Q(char__name=self.params['name']))
+        
+        qs = CharacterInstance.objects.filter(*query).order_by('char__name')
+        
+        # calculate some useful counts
+        qs = qs.annotate(
+            Count('speeches', distinct=True),
+            Count('addresses', distinct=True),
+        )
+        
+        return qs
 
 
-class AppIndex(TemplateView):
-    template_name = 'speechdb/index.html'
+class AppSpeechList(LoginRequiredMixin, ListView):
+    model = Speech
+    template_name = 'speechdb/speech_list.html'
+    paginate_by = PAGE_SIZE
+    _valid_params = [
+        ('spkr_id', int),
+        ('addr_id', int),
+        ('spkr_inst', int),
+        ('addr_inst', int),
+        ('cluster_id', int),
+        ('cluster_type', str),
+        ('work_id', int),
+    ]
+        
+    # authentication
+    login_url = '/app/login/'
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -203,5 +233,130 @@ class AppIndex(TemplateView):
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
         context['speech_types'] = SpeechCluster.speech_type_choices
-        return context
+        context['search_params'] = self.params.items()
         
+        return context
+     
+    def get_queryset(self):
+        # collect user search params
+        self.params = ValidateParams(self.request, self._valid_params)
+        
+        # construct query
+        query = []
+        
+        # speaker by id
+        if 'spkr_id' in self.params:
+            query.append(Q(spkr__char=self.params['spkr_id']) | Q(spkr__disg=self.params['spkr_id']))
+
+        # speaker by instance
+        if 'spkr_inst' in self.params:
+            query.append(Q(spkr=self.params['spkr_inst']))
+    
+        # addressee by id
+        if 'addr_id' in self.params:
+            query.append(Q(addr__char=self.params['addr_id']) | Q(addr__disg=self.params['addr_id']))
+        
+        # addressee by instance
+        if 'addr_inst' in self.params:
+            query.append(Q(addr=self.params['addr_inst']))
+        
+        if 'cluster_id' in self.params:
+            query.append(Q(cluster__pk=self.params['cluster_id']))
+    
+        if 'cluster_type' in self.params:
+            query.append(Q(cluster__type=self.params['cluster_type']))
+    
+        if 'work_id' in self.params:
+            query.append(Q(cluster__work__pk=self.params['work_id']))
+            
+        return Speech.objects.filter(*query)
+        
+
+class AppSpeechClusterList(LoginRequiredMixin, ListView):
+    model = SpeechCluster
+    template_name = 'speechdb/speechcluster_list.html'
+    queryset = SpeechCluster.objects.all()
+    paginate_by = PAGE_SIZE
+    _valid_params = []
+    
+    # authentication
+    login_url = '/app/login/'
+    
+    def get_queryset(self):
+        # collect user search params
+        self.params = ValidateParams(self.request, self._valid_params)
+        
+        # construct query
+        query = []
+            
+        return SpeechCluster.objects.filter(*query)
+    
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['reader'] = CTS_READER
+        context['search_params'] = self.params.items()
+        
+        return context
+
+
+class AppIndex(LoginRequiredMixin, TemplateView):
+    template_name = 'speechdb/index.html'
+
+    # authentication
+    login_url = '/app/login/'
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['works'] = Work.objects.all()
+        context['characters'] = Character.objects.all()
+        context['speeches'] = Speech.objects.all()
+        return context
+
+
+class AppSpeechSearch(LoginRequiredMixin, TemplateView):
+    template_name = 'speechdb/speech_search.html'
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['works'] = Work.objects.all()
+        context['characters'] = Character.objects.all()
+        context['speech_types'] = SpeechCluster.speech_type_choices
+        return context
+
+
+class AppSpeechClusterSearch(LoginRequiredMixin, TemplateView):
+    template_name = 'speechdb/speechcluster_search.html'
+    
+    # authentication
+    login_url = '/app/login/'
+    
+    
+    # def get_context_data(self, **kwargs):
+    #     # Call the base implementation first to get a context
+    #     context = super().get_context_data(**kwargs)
+    #     # add useful info
+    #     context['works'] = Work.objects.all()
+    #     context['characters'] = Character.objects.all()
+    #     context['speech_types'] = SpeechCluster.speech_type_choices
+    #     return context
+
+
+class AppCharacterSearch(LoginRequiredMixin, TemplateView):
+    template_name = 'speechdb/character_search.html'
+    
+    # authentication
+    login_url = '/app/login/'
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['characters'] = Character.objects.all()
+        return context

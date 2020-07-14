@@ -60,6 +60,9 @@ class CharacterInstance(models.Model):
     context = models.CharField(max_length=128)
     
     def __str__(self):
+        return self.get_long_name()
+    
+    def get_long_name(self):
         name = self.char.name
         if self.disg is not None:
             name += '/' + self.disg.name

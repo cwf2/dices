@@ -1,0 +1,26 @@
+{% extends "speechdb/base_sidebar.html" %}
+
+{% block title %}Speech Clusters{% endblock %}
+{% block sidebar_title %}Speech Clusters{% endblock %}
+{% block sidebar_content %}
+<p>
+  Clusters group speeches related by a common continuous interaction between characters.
+</p>
+{% endblock %}
+
+{% block content %}
+<form action="{% url 'app:clusters' %}" method="GET">
+  <div class="alert alert-light">
+    <p>
+    I haven't written this form yet.
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <button disabled="disabled" type="submit" class="btn btn-primary">Search</button>
+    </div>
+    <div class="col-md-2">
+      <a class="btn btn-secondary" href="{% url 'app:clusters' %}">Show all</a>
+    </div>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "speechdb/base_sidebar.html" %}
+
+{% block title %}Characters{% endblock %}
+{% block sidebar_title %}Characters{% endblock %}
+
+{% block sidebar_content %}
+<p>
+  Core identities of speakers and addressees. External ID columns link to entries in the respective databases.
+</p>
+{% endblock %}
+
+{% block content %}
+<form action="{% url 'app:characters' %}" method="GET">
+  <div class="form-group">
+    <label for="sel_name">Name</label>
+    <select class="form-control" id="sel_name" name="name">
+      <option value="" selected="selected">-----</option>
+      {% for c in characters %}
+      <option value="{{ c.name }}">{{ c.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+    <div class="col-md-2">
+      <a class="btn btn-secondary" href="{% url 'app:characters' %}">Show all</a>
+    </div>
+  </div>
+</form>
+{% endblock %}

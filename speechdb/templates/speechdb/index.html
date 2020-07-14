@@ -1,53 +1,30 @@
 {% extends "speechdb/base_sidebar.html" %}
 
-{% block title %}Speeches{% endblock %}
-{% block sidebar_title %}Speeches{% endblock %}
-{% block sidebar_desc %}
-<form action="{% url 'app:speeches' %}" method="GET">
-  <div class="form-group">
-    <label for="sel_spkr">Speaker</label>
-    <select class="form-control" id="sel_spkr" name="spkr_id">
-      <option value="" selected="selected"></option>
-      {% for c in characters %}
-      <option value="{{ c.pk }}">{{ c.name }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="sel_addr">Addressee</label>
-    <select class="form-control" id="sel_addr" name="addr_id">
-      <option selected="selected"></option>
-      {% for c in characters %}
-      <option value="{{ c.pk }}">{{ c.name }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="sel_type">Speech Cluster Type</label>
-    <select class="form-control" id="sel_type" name="cluster_type">
-      <option selected="selected"></option>
-      {% for k, v in speech_types %}
-      <option value="{{ k }}">{{ v }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="sel_work">Work</label>
-    <select class="form-control" id="sel_work" name="work_id">
-      <option selected="selected"></option>
-      {% for w in works %}
-      <option value="{{ w.pk }}">{{ w.get_long_name }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="col-md-2">
-    <button type="submit" class="btn btn-primary">Search</button>
-  </div>
-</form>
+{% block title %}DICES{% endblock %}
+{% block sidebar_title %}DICES{% endblock %}
+{% block sidebar_content %}
+<p>Database prototype</p>
+<ul>
+  <li><strong>{{ speeches.count }}</strong> speeches</li>
+  <li><strong>{{ characters.count }}</strong> characters</li>
+  <li><strong>{{ works.count }}</strong> texts</li>
+</ul>
+
 {% endblock %}
 
 {% block content %}
 <div class="jumbotron">
-  <p>Do a search already...</p>
+  <h5>A Database of Direct Speech in Greek and Latin Epic from Homer to Late Antiquity</h5>
+  <p>
+    This prototype was built during the pandemic summer of 2020. Our work was supported by a President's Research and Creative Activity grant from Mount Allison University, including funding from the Crake Foundation.
+  </p>
+  <strong>Database and Interface</strong>
+    <p>Chris Forstall, Mount Allison University, Canada.</p>
+  <strong>Data</strong>
+    <p>Simone Finkmann, University of Rostock, Germany<br />
+      Berenice Verhelst, Ghent University, Belgium</p>
+  <strong>Student Research Assistants</strong>
+    <p>Dawson Fraser, Mount Allison University, Canada <br/>
+      Ava Waugh, Mount Allison University, Canada</p>
 </div>
 {% endblock %}
