@@ -29,11 +29,19 @@
         {% block navbar %}
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'app:speech_search' %}">Speeches</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="link-drpdn-speeches" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Speeches</a>
+              <div class="dropdown-menu" aria-labelledby="link-drpdn-speeches">
+                <a class="dropdown-item" href="{% url 'app:speech_search' %}">Search</a>
+                <a class="dropdown-item" href="{% url 'app:speeches' %}">Show all</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'app:character_search' %}">Characters</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="link-drpdn-chars" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Characters</a>
+              <div class="dropdown-menu" aria-labelledby="link-drpdn-chars">
+
+              <a class="dropdown-item" href="{% url 'app:character_search' %}">Search</a>
+              <a class="dropdown-item" href="{% url 'app:characters' %}">Show all</a>
             </li>
           </ul>
         </div>

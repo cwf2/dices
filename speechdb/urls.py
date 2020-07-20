@@ -7,12 +7,14 @@ frontend_urls = ([
     path('login/', auth_views.LoginView.as_view(template_name='speechdb/login.html'), name='login'),
     path('logout/', auth_views.logout_then_login, {'login_url':'app:index'}, name='logout'),
     path('characters/', views.AppCharacterList.as_view(), name='characters'),
-    path('characters/search', views.AppCharacterSearch.as_view(), name='character_search'),
+    path('characters/search/', views.AppCharacterSearch.as_view(), name='character_search'),
     path('instances/', views.AppCharacterInstanceList.as_view(), name='instances'),
+    path('instances/<int:pk>', views.AppCharacterInstanceDetail.as_view(), name='instance_detail'),    
     path('clusters/', views.AppSpeechClusterList.as_view(), name='clusters'),
-    path('clusters/search', views.AppSpeechClusterSearch.as_view(), name='cluster_search'),
+    path('clusters/<int:pk>/', views.AppSpeechClusterDetail.as_view(), name='cluster_detail'),
+    path('clusters/search/', views.AppSpeechClusterSearch.as_view(), name='cluster_search'),
     path('speeches/', views.AppSpeechList.as_view(), name='speeches'),
-    path('speeches/search', views.AppSpeechSearch.as_view(), name='speech_search'),
+    path('speeches/search/', views.AppSpeechSearch.as_view(), name='speech_search'),
 ], 'app')
 
 api_urls = ([

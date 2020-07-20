@@ -10,48 +10,107 @@
 
 {% block content %}
 <form action="{% url 'app:speeches' %}" method="GET">
-  <div class="form-group">
-    <label for="sel_spkr">Speaker</label>
-    <select class="form-control" id="sel_spkr" name="spkr_id">
-      <option value="" selected="selected">-----</option>
-      {% for c in characters %}
-      <option value="{{ c.pk }}">{{ c.name }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="sel_addr">Addressee</label>
-    <select class="form-control" id="sel_addr" name="addr_id">
-      <option value="" selected="selected">-----</option>
-      {% for c in characters %}
-      <option value="{{ c.pk }}">{{ c.name }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="sel_type">Speech Cluster Type</label>
-    <select class="form-control" id="sel_type" name="cluster_type">
-      <option value="" selected="selected">-----</option>
-      {% for k, v in speech_types %}
-      <option value="{{ k }}">{{ v }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="sel_work">Work</label>
-    <select class="form-control" id="sel_work" name="work_id">
-      <option value="" selected="selected">-----</option>
-      {% for w in works %}
-      <option value="{{ w.pk }}">{{ w.get_long_name }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="row">
-    <div class="col-md-2">
-      <button type="submit" class="btn btn-primary">Search</button>
+  <div class="card">
+    <div class="card-header" id="hdr_participants">
+      <span>Participants</span>
     </div>
-    <div class="col-md-2">
-      <a class="btn btn-secondary" href="{% url 'app:speeches' %}">Show all</a>
+    <div class="card-body" id="collapse_participants" aria-labelledby="hdr_participants">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="sel_spkr">Speaker</label>
+            <select class="form-control" id="sel_spkr" name="spkr_id">
+              <option value="" selected="selected">-----</option>
+              {% for c in characters %}
+              <option value="{{ c.pk }}">{{ c.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="sel_addr">Addressee</label>
+            <select class="form-control" id="sel_addr" name="addr_id">
+              <option value="" selected="selected">-----</option>
+              {% for c in characters %}
+              <option value="{{ c.pk }}">{{ c.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <!--
+        <div class="col">
+          <div class="form-group">
+            <label for="sel_char">Any participant</label>
+            <select class="form-control" id="sel_char" name="char_id">
+              <option value="" selected="selected">-----</option>
+              {% for c in characters %}
+              <option value="{{ c.pk }}">{{ c.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <span>Enclosing cluster (conversation)</span>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label for="sel_type">Cluster Type</label>
+        <select class="form-control" id="sel_type" name="cluster_type">
+          <option value="" selected="selected">-----</option>
+          {% for k, v in speech_types %}
+          <option value="{{ k }}">{{ v }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="sel_part">Position in cluster: </label>
+            <input type="number" id="sel_part" name="part" min="1" max="{{ max_parts }}">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="sel_n_parts">Total parts in cluster: </label>
+            <input type="number" id="sel_n_parts" name="n_parts" min="1" max="{{ max_parts }}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <span>Other criteria</span>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="sel_work">Work</label>
+            <select class="form-control" id="sel_work" name="work_id">
+              <option value="" selected="selected">-----</option>
+              {% for w in works %}
+              <option value="{{ w.pk }}">{{ w.get_long_name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </form>
