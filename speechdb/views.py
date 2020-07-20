@@ -69,8 +69,8 @@ class CharacterDetail(RetrieveAPIView):
 
 
 class CharacterInstanceList(ListAPIView):
-    queryset = Character.objects.all()
-    serializer_class = CharacterSerializer
+    queryset = CharacterInstance.objects.all()
+    serializer_class = CharacterInstanceSerializer
 
 
 class CharacterInstanceDetail(RetrieveAPIView):
