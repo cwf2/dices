@@ -14,14 +14,22 @@
     <tr>
       <td>{{ c.name }}</td>
       <td>
+        {% if c.instances__speeches__count > 0 %}
         <a href="{% url 'app:speeches' %}?spkr_id={{ c.pk }}">
         {{ c.instances__speeches__count }}
         </a>
+        {% else %}
+        —
+        {% endif %}
       </td>
       <td>
+        {% if c.instances__addresses__count > 0 %}
         <a href="{% url 'app:speeches' %}?addr_id={{ c.pk }}">
         {{ c.instances__addresses__count }}
         </a>
+        {% else %}
+        —
+        {% endif %}
       </td>
       <td><a href="https://www.wikidata.org/wiki/{{ c.wd }}">{{ c.wd }}</a></td>
       <td>

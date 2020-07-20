@@ -14,12 +14,12 @@
       <td>{{ inst.get_long_name }}</td>
       <td>{{ inst.context }}</td>      
       <td>
-        <a href="{% url 'app:speeches' %}?spkr_inst={{ inst.pk }}">
+        <a href="{% url 'app:speeches' %}?spkr_inst=inst.pk">
         {{ inst.speeches__count }}
         </a>
       </td>
       <td>
-        <a href="{% url 'app:speeches' %}?spkr_inst={{ inst.pk }}">
+        <a href="{% url 'app:speeches' %}?addr_inst=inst.pk">
         {{ inst.addresses__count }}
         </a>
       </td>

@@ -14,7 +14,15 @@
       <td><a href="{{ reader }}{{ s.get_urn }}">{{ s.cluster.work.get_long_name }} {{ s.l_fi }}—{{ s.l_la }}</a></td>
       <td>{{ s.get_spkr_str }}</td>
       <td>{{ s.get_addr_str }}</td>
-      <td>{{ s.cluster.get_long_type }}</td>
+      <td>
+        {% if s.cluster.speech_set.count > 1 %}
+        <a href="{% url 'app:cluster_detail' s.cluster.id %}">
+        {{ s.cluster.get_long_type }}
+        </a>
+        {% else %}
+        {{ s.cluster.get_long_type }}
+        {% endif %}
+      </td>
       <td>{{ s.part }}</td>      
     </tr>
     {% endfor %}
