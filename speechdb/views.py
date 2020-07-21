@@ -380,6 +380,9 @@ class AppIndex(LoginRequiredMixin, TemplateView):
 class AppSpeechSearch(LoginRequiredMixin, TemplateView):
     template_name = 'speechdb/speech_search.html'
     
+    # authentication
+    login_url = '/app/login/'    
+    
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
