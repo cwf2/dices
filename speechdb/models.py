@@ -7,6 +7,9 @@ class Author(models.Model):
     wd = models.CharField('WikiData ID', max_length=32)
     urn = models.CharField(max_length=64)
     
+    class Meta:
+        ordering = ['name']
+    
     def __str__(self):
         return self.name
 
@@ -18,6 +21,9 @@ class Work(models.Model):
     wd = models.CharField('WikiData ID', max_length=32)
     urn = models.CharField(max_length=128)
     author = models.ForeignKey(Author, on_delete=models.PROTECT)
+    
+    class Meta:
+        ordering = ['author', 'title']
     
     def __str__(self):
         return f'{self.author.name} {self.title}'
@@ -43,6 +49,9 @@ class Character(models.Model):
     wd = models.CharField('WikiData ID', max_length=32, unique=True)
     manto = models.CharField('MANTO ID', max_length=32, blank=True)
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 
@@ -58,6 +67,9 @@ class CharacterInstance(models.Model):
             blank=True, null=True, on_delete=models.PROTECT)
     #TODO tuple (char, context) should be unique
     context = models.CharField(max_length=128)
+    
+    class Meta:
+        ordering = ['char']
     
     def __str__(self):
         return self.get_long_name()
@@ -82,6 +94,9 @@ class SpeechCluster(models.Model):
     
     type = models.CharField(max_length=1, choices=speech_type_choices)
     work = models.ForeignKey(Work, on_delete=models.PROTECT)
+    
+    class Meta:
+        ordering = ['work', 'speech']
     
     # def __str__(self):
     #     if self.speech_set is not None:
@@ -137,6 +152,9 @@ class Speech(models.Model):
              blank=True)
     # TODO should be unique per cluster
     part = models.IntegerField()
+    
+    class Meta:
+        ordering = ['cluster__work', 'seq']
     
     def __str__(self):
         return f'{self.cluster.work} {self.l_fi}-{self.l_la}'

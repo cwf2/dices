@@ -33,6 +33,87 @@ def ValidateParams(request, valid_params):
                     pass
     return params
 
+#
+# API filters
+#
+
+class AuthorFilter(filters.FilterSet):
+    class Meta:
+        model = Author
+        fields = ['name', 'wd']
+
+
+class WorkFilter(filters.FilterSet):
+    author_id = filters.NumberFilter('author__id')
+    author_name = filters.CharFilter('author__name')
+    author_wd = filters.CharFilter('author__wd')
+    author_urn = filters.CharFilter('author__urn')    
+    
+    class Meta:
+        model = Work
+        fields = ['title', 'wd', 'urn', 'author_name', 'author_id', 'author_wd']
+
+
+class CharacterFilter(filters.FilterSet):
+    class Meta:
+        model = Character
+        fields = ['name', 'wd', 'manto']
+
+
+class CharacterInstanceFilter(filters.FilterSet):
+    char_id = filters.NumberFilter('char__id')
+    char_name = filters.CharFilter('char__name')
+    char_wd = filters.CharFilter('char__wd')
+    char_manto = filters.CharFilter('char__manto')
+    
+    class Meta:
+        model = Character
+        fields = ['char_id', 'char_name', 'char_wd', 'char_manto']
+
+
+class SpeechFilter(filters.FilterSet):
+    spkr_id = filters.NumberFilter('spkr__char__id')
+    spkr_name = filters.CharFilter('spkr__char__name')
+    spkr_manto = filters.CharFilter('spkr__char__manto')
+    spkr_wd = filters.CharFilter('spkr__char__wd')
+    
+    addr_id = filters.NumberFilter('addr__char__id')
+    addr_name = filters.CharFilter('addr__char__name')
+    addr_manto = filters.CharFilter('addr__char__manto')
+    addr_wd = filters.CharFilter('addr__char__wd')
+    
+    spkr_inst = filters.NumberFilter('spkr__id')
+    addr_inst = filters.NumberFilter('addr__id')
+    
+    cluster_id = filters.NumberFilter('cluster__id')
+    cluster_type = filters.CharFilter('cluster__type')
+    
+    work_id = filters.NumberFilter('cluster__work__id')
+    work_title = filters.CharFilter('cluster__work__title')
+    work_urn = filters.CharFilter('cluster__work__urn')
+    work_wd = filters.CharFilter('cluster__work__wd')
+    
+    author_id = filters.NumberFilter('cluster__work__author__id')
+    author_name = filters.CharFilter('cluster__work__author__name')
+    author_wd = filters.CharFilter('cluster__work__author__wd')
+    author_urn = filters.CharFilter('cluster__work__author__urn')
+        
+    class Meta:
+        model = Speech
+        fields = [
+            'spkr_id', 'spkr_name', 'spkr_manto', 'spkr_wd',
+            'addr_id', 'addr_name', 'addr_manto', 'addr_wd',
+            'spkr_inst', 'addr_inst',
+            'cluster_id', 'cluster_type',
+            'work_id', 'work_title', 'work_urn', 'work_wd',
+            'author_id', 'author_name', 'author_urn', 'author_wd',
+            'part']
+
+
+class SpeechClusterFilter(filters.FilterSet):
+    class Meta:
+        model = SpeechCluster
+        fields = ['type']
 
 #
 # API class-based views
@@ -41,7 +122,7 @@ def ValidateParams(request, valid_params):
 class AuthorList(ListAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
-
+    filterset_class=AuthorFilter
 
 class AuthorDetail(RetrieveAPIView):
     queryset = Author.objects.all()
@@ -51,7 +132,7 @@ class AuthorDetail(RetrieveAPIView):
 class WorkList(ListAPIView):
     queryset = Work.objects.all()
     serializer_class = WorkSerializer
-
+    filterset_class=WorkFilter
 
 class WorkDetail(RetrieveAPIView):
     queryset = Work.objects.all()
@@ -61,6 +142,7 @@ class WorkDetail(RetrieveAPIView):
 class CharacterList(ListAPIView):
     queryset = Character.objects.all()
     serializer_class = CharacterSerializer
+    filterset_class = CharacterFilter
 
 
 class CharacterDetail(RetrieveAPIView):
@@ -71,17 +153,12 @@ class CharacterDetail(RetrieveAPIView):
 class CharacterInstanceList(ListAPIView):
     queryset = CharacterInstance.objects.all()
     serializer_class = CharacterInstanceSerializer
+    filterset_class = CharacterInstanceFilter
 
 
 class CharacterInstanceDetail(RetrieveAPIView):
     queryset = CharacterInstance.objects.all()
     serializer_class = CharacterInstanceSerializer
-
-
-class SpeechFilter(filters.FilterSet):
-    class Meta:
-        model = Speech
-        fields = ['spkr', 'addr']
 
 
 class SpeechList(ListAPIView):
@@ -98,7 +175,7 @@ class SpeechDetail(RetrieveAPIView):
 class SpeechClusterList(ListAPIView):
     queryset = SpeechCluster.objects.all()
     serializer_class = SpeechClusterSerializer
-
+    filterset_class=SpeechClusterFilter    
 
 class SpeechClusterDetail(RetrieveAPIView):
     queryset = SpeechCluster.objects.all()
@@ -330,9 +407,8 @@ class AppSpeechClusterList(LoginRequiredMixin, ListView):
         
         # construct query
         query = []
-            
+        
         return SpeechCluster.objects.filter(*query)
-    
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
