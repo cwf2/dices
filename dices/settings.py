@@ -78,12 +78,8 @@ WSGI_APPLICATION = 'dices.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dices',
-        'USER': 'django',
-        'HOST': 'localhost',
-        'PASSWORD': os.environ.get('DJANGO_ADMIN_PW'),
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join('data', 'dices.db'),
     }
 }
 
