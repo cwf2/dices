@@ -35,19 +35,22 @@ class Work(models.Model):
 
 class Character(models.Model):
     '''An epic character'''
+    INDIVIDUAL = 'I'
+    COLLECTIVE = 'C'
+    OTHER = 'O'
+    
     character_type_choices = [
-        ('I', 'individual'),
-        ('C', 'collective'),
-        ('O', 'other'),
+        (INDIVIDUAL, 'individual'),
+        (COLLECTIVE, 'collective'),
+        (OTHER, 'other'),
     ]
-    character_type_lookup = dict(character_type_choices)
     
     name = models.CharField(max_length=64)
     being = models.CharField(max_length=16, default='human')
     type = models.CharField(max_length=1, choices=character_type_choices,
-            default='I', blank=False)
-    wd = models.CharField('WikiData ID', max_length=32, unique=True)
-    manto = models.CharField('MANTO ID', max_length=32, blank=True)
+            default='I')
+    wd = models.CharField('WikiData ID', max_length=32, null=True)
+    manto = models.CharField('MANTO ID', max_length=32, null=True)
 
     class Meta:
         ordering = ['name']
@@ -55,8 +58,6 @@ class Character(models.Model):
     def __str__(self):
         return self.name
 
-    def get_long_type(self):
-        return Character.character_type_lookup[self.type]
 
 class CharacterInstance(models.Model):
     '''A character engaged in a speech'''
@@ -83,14 +84,17 @@ class CharacterInstance(models.Model):
 
 class SpeechCluster(models.Model):
     '''A group of related speeches'''
+    SOLILOQUY = 'S'
+    MONOLOGUE = 'M'
+    DIALOGUE = 'D'
+    GENERAL = 'G'
     
     speech_type_choices = [
-        ('S', 'Soliloqy'),
-        ('M', 'Monologue'),
-        ('D', 'Dialogue'),
-        ('G', 'General'),
+        (SOLILOQUY, 'Soliloquy'),
+        (MONOLOGUE, 'Monologue'),
+        (DIALOGUE, 'Dialogue'),
+        (GENERAL, 'General'),
     ]
-    speech_type_lookup = dict(speech_type_choices)
     
     type = models.CharField(max_length=1, choices=speech_type_choices)
     work = models.ForeignKey(Work, on_delete=models.PROTECT)
@@ -137,8 +141,6 @@ class SpeechCluster(models.Model):
         chars = sorted(set(chars))
         return ', '.join(chars)
         
-    def get_long_type(self):
-        return SpeechCluster.speech_type_lookup[self.type]
 
 class Speech(models.Model):
     '''A direct speech instance'''

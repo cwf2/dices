@@ -6,7 +6,7 @@
   <div style="margin-top:1em;"><strong>Detail</strong></div>
     <div>Work: {{ cluster.work.get_long_name }}</div>
     <div>Loci: {{ cluster.speech_set.first.l_fi }}—{{ cluster.speech_set.last.l_la }}</div>
-    <div>Cluster Type: {{ cluster.get_long_type }}</div>
+    <div>Cluster Type: {{ cluster.get_type_display }}</div>
     <div>Parts: {{ cluster.speech_set.count }}</div>
     <div>Characters: {{ cluster.get_chars_str }}</div>
 {% endblock %}

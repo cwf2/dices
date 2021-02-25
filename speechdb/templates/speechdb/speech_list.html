@@ -17,10 +17,10 @@
       <td>
         {% if s.cluster.speech_set.count > 1 %}
         <a href="{% url 'app:cluster_detail' s.cluster.id %}">
-        {{ s.cluster.get_long_type }}
+        {{ s.cluster.get_type_display }}
         </a>
         {% else %}
-        {{ s.cluster.get_long_type }}
+        {{ s.cluster.get_type_display }}
         {% endif %}
       </td>
       <td>{{ s.part }}</td>      
