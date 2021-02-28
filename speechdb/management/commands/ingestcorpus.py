@@ -48,6 +48,8 @@ def addChars(file):
         if c.name is None:
             print(f'Character {c.id} has no name. Skipping')
             continue
+        if c.name == 'self':
+            continue
         if len(Character.objects.filter(name=c.name)) > 0:
             print(f'Adding duplicate char name {c.name}.')
         c.wd = rec.get('wd').strip() or None
@@ -155,7 +157,10 @@ def addSpeeches(file):
             continue
         else:
             for name in addr_str.split(' and '):
-                inst = addInst(name, s)
+                if name == 'self':
+                    inst = s.spkr.first()
+                else:
+                    inst = addInst(name, s)
                 if inst is not None:
                     s.addr.add(inst)
             if len(s.addr.all()) < 1:
