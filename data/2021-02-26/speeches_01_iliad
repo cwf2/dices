@@ -1,0 +1,699 @@
+orig_id	seq	work_id	work	book	from_line	to_line	s_ok	speaker	speaker_notes	a_ok	addressee	addressee_notes	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type
+1	1	1	Iliad	1	17	21	✅	Chryses		✅	Agamemnon		1001	1	dialogue	first part of dialogue	5		0			
+2	2	1	Iliad	1	26	32	✅	Agamemnon		✅	Chryses		1001	2	dialogue	second part of dialogue	7		0			
+3	3	1	Iliad	1	37	42	✅	Chryses		✅	Apollo	prayer	1002	1	monologue	soliloquy	6		0			
+4	4	1	Iliad	1	59	67	✅	Achilles		✅	Agamemnon		1003	1	dialogue	first part of dialogue	9		0			
+5	5	1	Iliad	1	74	83	✅	Calchas		✅	Achilles		1003	2	dialogue	second part of dialogue	10		0			
+6	6	1	Iliad	1	85	91	✅	Achilles		✅	Calchas		1003	3	dialogue	third part of dialogue	7		0			
+7	7	1	Iliad	1	93	100	✅	Calchas		✅	Achilles		1003	4	dialogue	fourth part of dialogue	8		0			
+8	8	1	Iliad	1	106	120	✅	Agamemnon		✅	Calchas		1003	5	dialogue	fifth part of dialogue	15		0			
+9	9	1	Iliad	1	122	129	✅	Achilles		✅	Agamemnon		1003	6	dialogue	sixth part of dialogue	8		0			
+10	10	1	Iliad	1	131	147	✅	Agamemnon		✅	Achilles		1003	7	dialogue	seventh part of dialogue	17		0			
+11	11	1	Iliad	1	149	171	✅	Achilles		✅	Agamemnon		1003	8	dialogue	eighth part of dialogue	23		0			
+12	12	1	Iliad	1	173	187	✅	Agamemnon		✅	Achilles		1003	9	dialogue	ninth part of dialogue	15		0			
+13	13	1	Iliad	1	202	205	✅	Achilles		✅	Athena		1004	1	dialogue	first part of dialogue	4		0			
+14	14	1	Iliad	1	207	214	✅	Athena		✅	Achilles		1004	2	dialogue	second part of dialogue	8		0			
+15	15	1	Iliad	1	216	218	✅	Achilles		✅	Athena		1004	3	dialogue	third part of dialogue	3		0			
+16	16	1	Iliad	1	225	244	✅	Achilles		✅	Agamemnon		1003	10	dialogue	tenth part of dialogue	20		0			
+17	17	1	Iliad	1	254	284	✅	Nestor		❌	Agamemnon and Achilles		1003	11	dialogue	eleventh part of dialogue	31		0			
+18	18	1	Iliad	1	286	291	✅	Agamemnon		✅	Nestor		1003	12	dialogue	twelfth part of dialogue	6		0			
+19	19	1	Iliad	1	293	303	✅	Achilles		✅	Agamemnon		1003	13	dialogue	thirteenth part of dialogue	11		0			
+20	20	1	Iliad	1	322	325	✅	Agamemnon		❌	Talthybius and Eurybates		1005	1	general	single speech	4		0			
+21	21	1	Iliad	1	334	344	✅	Achilles		❌	Talthybius and Eurybates and Patroclus		1006	1	general	single speech	11		0			
+22	22	1	Iliad	1	352	356	✅	Achilles		✅	Thetis		1007	1	dialogue	first part of dialogue	5		0			
+23	23	1	Iliad	1	362	363	✅	Thetis		✅	Achilles		1007	2	dialogue	second part of dialogue	2		0			
+24	24	1	Iliad	1	365	412	✅	Achilles		✅	Thetis		1007	3	dialogue	third part of dialogue	48		0			
+25	25	1	Iliad	1	414	427	✅	Thetis		✅	Achilles		1007	4	dialogue	fourth part of dialogue	14		0			
+26	26	1	Iliad	1	442	445	✅	Odysseus		✅	Chryses		1008	1	general	single speech	4		0			
+27	27	1	Iliad	1	451	456	✅	Chryses		✅	Apollo	prayer	1009	1	monologue	soliloquy	6		0			
+28	28	1	Iliad	1	503	510	✅	Thetis		✅	Zeus		1010	1	dialogue	first part of dialogue	8		0			
+29	29	1	Iliad	1	514	516	✅	Thetis		✅	Zeus		1010	2	dialogue	second part of dialogue	3		0			
+30	30	1	Iliad	1	518	527	✅	Zeus		✅	Thetis		1010	3	dialogue	third part of dialogue	10		0			
+31	31	1	Iliad	1	540	543	✅	Hera		✅	Zeus		1011	1	dialogue	first part of dialogue	4		0			
+32	32	1	Iliad	1	545	550	✅	Zeus		✅	Hera		1011	2	dialogue	second part of dialogue	6		0			
+33	33	1	Iliad	1	552	559	✅	Hera		✅	Zeus		1011	3	dialogue	third part of dialogue	8		0			
+34	34	1	Iliad	1	561	567	✅	Zeus		✅	Hera		1011	4	dialogue	fourth part of dialogue	7		0			
+35	35	1	Iliad	1	573	583	✅	Hephaestus		✅	gods		1012	1	general	single speech	11		0			
+36	36	1	Iliad	1	586	594	✅	Hephaestus		✅	Hera		1013	1	general	single speech	9		0			
+37	37	1	Iliad	2	8	15	✅	Zeus		❌	dream		1014	1	general	single speech	8		0			
+38	38	1	Iliad	2	23	34	❌	dream	disguise: Nestor	✅	Agamemnon		1015	1	general	single speech	12		0			
+39	39	1	Iliad	2	56	75	✅	Agamemnon		❌	leaders of the greeks		1016	1	dialogue	first part of dialogue	20		0			
+1	40	1	Iliad	2	60	70	❌	dream	disguise: Nestor	✅	Agamemnon		1355	1	general	single speech	11		1			
+40	41	1	Iliad	2	79	83	✅	Nestor		❌	leaders of the greeks		1016	2	dialogue	second part of dialogue	5		0			
+41	42	1	Iliad	2	110	141	✅	Agamemnon		✅	Greeks		1017	1	general	single speech	32		0			
+42	43	1	Iliad	2	157	165	✅	Hera		✅	Athena		1018	1	general	single speech	9		0			
+43	44	1	Iliad	2	173	181	✅	Athena		✅	Odysseus		1019	1	general	single speech	9		0			
+44	45	1	Iliad	2	190	197	✅	Odysseus		✅	Greeks		1020	1	general	single speech	8		0			
+45	46	1	Iliad	2	200	206	✅	Odysseus		✅	Greeks		1021	1	general	single speech	7		0			
+46	47	1	Iliad	2	225	242	✅	Thersites		✅	Agamemnon		1022	1	dialogue	first part of dialogue	18		0			
+47	48	1	Iliad	2	246	264	✅	Odysseus		✅	Thersites		1022	2	dialogue	second part of dialogue	19		0			
+48	49	1	Iliad	2	272	277	✅	Greeks		✅	Greeks		1022	3	dialogue	third part of dialogue	6		0			
+49	50	1	Iliad	2	284	332	✅	Odysseus		✅	Greeks		1023	1	dialogue	first part of dialogue	49		0			
+2	51	1	Iliad	2	323	329	✅	Calchas		✅	Greeks		1356	1	general	single speech	7		1			
+50	52	1	Iliad	2	337	368	✅	Nestor		✅	Greeks		1023	2	dialogue	second part of dialogue	32		0			
+51	53	1	Iliad	2	370	393	✅	Agamemnon		✅	Greeks		1023	3	dialogue	third part of dialogue	24		0			
+52	54	1	Iliad	2	412	418	✅	Agamemnon		✅	Zeus	prayer	1024	1	monologue	soliloquy	7		0			
+53	55	1	Iliad	2	434	440	✅	Nestor		✅	Agamemnon		1025	1	general	single speech	7		0			
+54	56	1	Iliad	2	796	806	✅	Iris	disguise: Polites	✅	Priam		1026	1	general	single speech	11		0			
+55	57	1	Iliad	3	39	57	✅	Hector		✅	Paris		1027	1	dialogue	first part of dialogue	19		0			
+56	58	1	Iliad	3	59	75	✅	Paris		✅	Hector		1027	2	dialogue	second part of dialogue	17		0			
+57	59	1	Iliad	3	82	83	✅	Agamemnon		❌	Greeks and Trojans		1028	1	dialogue	first part of dialogue	2		0			
+58	60	1	Iliad	3	86	94	✅	Hector		❌	Greeks and Trojans		1028	2	dialogue	second part of dialogue	9		0			
+59	61	1	Iliad	3	97	110	✅	Menelaus		❌	Greeks and Trojans		1028	3	dialogue	third part of dialogue	14		0			
+60	62	1	Iliad	3	130	138	✅	Iris	disguise: Laodice	✅	Helena		1029	1	general	single speech	9		0			
+61	63	1	Iliad	3	156	160	❌	Trojan old men		❌	Trojan old men		1030	1	general	single speech	5		0			
+62	64	1	Iliad	3	162	170	✅	Priam		✅	Helena		1031	1	dialogue	first part of dialogue	9		0			
+63	65	1	Iliad	3	172	180	✅	Helena		✅	Priam		1031	2	dialogue	second part of dialogue	9		0			
+64	66	1	Iliad	3	182	190	✅	Priam		✅	Helena		1031	3	dialogue	third part of dialogue	9		0			
+65	67	1	Iliad	3	192	198	✅	Priam		✅	Helena		1031	4	dialogue	fourth part of dialogue	7		0			
+66	68	1	Iliad	3	200	202	✅	Helena		✅	Priam		1031	5	dialogue	fifth part of dialogue	3		0			
+67	69	1	Iliad	3	204	224	✅	Antenor		✅	Helena		1031	6	dialogue	sixth part of dialogue	21		0			
+68	70	1	Iliad	3	226	227	✅	Priam		✅	Helena		1031	7	dialogue	seventh part of dialogue	2		0			
+69	71	1	Iliad	3	229	242	✅	Helena		✅	Priam		1031	8	dialogue	eighth part of dialogue	14		0			
+70	72	1	Iliad	3	250	258	✅	Idaeus		✅	Priam		1032	1	general	single speech	9		0			
+71	73	1	Iliad	3	276	291	✅	Agamemnon		✅	Zeus	prayer	1033	1	monologue	soliloquy	16		0			
+72	74	1	Iliad	3	298	301	✅	someone		✅	Zeus	prayer	1034	1	monologue	soliloquy	4		0			
+73	75	1	Iliad	3	304	309	✅	Priam		❌	Greeks and Trojans		1035	1	general	single speech	6		0			
+74	76	1	Iliad	3	320	323	✅	someone		✅	Zeus	prayer	1036	1	monologue	soliloquy	4		0			
+75	77	1	Iliad	3	351	354	✅	Menelaus		✅	Zeus	prayer	1037	1	monologue	soliloquy	4		0			
+76	78	1	Iliad	3	365	368	✅	Menelaus		✅	Zeus	prayer	1038	1	monologue	soliloquy	4		0			
+77	79	1	Iliad	3	390	394	✅	Aphrodite	disguise: old woman	✅	Helena		1039	1	dialogue	first part of dialogue	5		0			
+78	80	1	Iliad	3	399	412	✅	Helena		✅	Aphrodite		1039	2	dialogue	second part of dialogue	14		0			
+79	81	1	Iliad	3	414	417	✅	Aphrodite		✅	Helena		1039	3	dialogue	third part of dialogue	4		0			
+80	82	1	Iliad	3	428	436	✅	Helena		✅	Paris		1040	1	dialogue	first part of dialogue	9		0			
+81	83	1	Iliad	3	438	446	✅	Paris		✅	Helena		1040	2	dialogue	second part of dialogue	9		0			
+82	84	1	Iliad	3	456	460	✅	Agamemnon		❌	Greeks and Trojans		1041	1	general	single speech	5		0			
+83	85	1	Iliad	4	7	19	✅	Zeus		✅	gods		1042	1	dialogue	first part of dialogue	13		0			
+84	86	1	Iliad	4	25	29	✅	Hera		✅	Zeus		1042	2	dialogue	second part of dialogue	5		0			
+85	87	1	Iliad	4	31	49	✅	Zeus		✅	Hera		1042	3	dialogue	third part of dialogue	19		0			
+86	88	1	Iliad	4	51	67	✅	Hera		✅	Zeus		1042	4	dialogue	fourth part of dialogue	17		0			
+87	89	1	Iliad	4	70	72	✅	Zeus		✅	Athena		1042	5	dialogue	fifth part of dialogue	3		0			
+88	90	1	Iliad	4	82	84	✅	someone		✅	someone		1043	1	general	single speech	3		0			
+89	91	1	Iliad	4	93	103	✅	Athena	disguise: Laodocus	✅	Pandarus		1044	1	general	single speech	11		0			
+90	92	1	Iliad	4	155	182	✅	Agamemnon		✅	Menelaus		1045	1	dialogue	first part of dialogue	28		0			
+1	93	1	Iliad	4	178	181	✅	someone		✅	self		1363	1	monologue	soliloquy	4		1			
+91	94	1	Iliad	4	184	187	✅	Menelaus		✅	Agamemnon		1045	2	dialogue	second part of dialogue	4		0			
+92	95	1	Iliad	4	189	191	✅	Agamemnon		✅	Menelaus		1045	3	dialogue	third part of dialogue	3		0			
+93	96	1	Iliad	4	193	197	✅	Agamemnon		✅	Talthybius		1045	4	dialogue	fourth part of dialogue	5		0			
+94	97	1	Iliad	4	204	207	✅	Talthybius		✅	Machaon		1046	1	general	single speech	4		0			
+95	98	1	Iliad	4	234	239	✅	Agamemnon		✅	Greeks		1047	1	general	single speech	6		0			
+96	99	1	Iliad	4	242	249	✅	Agamemnon		✅	Greeks		1048	1	general	single speech	8		0			
+97	100	1	Iliad	4	257	264	✅	Agamemnon		✅	Idomeneus		1049	1	dialogue	first part of dialogue	8		0			
+98	101	1	Iliad	4	266	271	✅	Idomeneus		✅	Agamemnon		1049	2	dialogue	second part of dialogue	6		0			
+99	102	1	Iliad	4	285	291	✅	Agamemnon		❌	Aias (son of Telamon) and Aias (son of Oileus)		1050	1	general	single speech	7		0			
+100	103	1	Iliad	4	303	309	✅	Nestor		✅	Greeks		1051	1	dialogue	first part of dialogue	7		0			
+101	104	1	Iliad	4	313	316	✅	Agamemnon		✅	Nestor		1051	2	dialogue	second part of dialogue	4		0			
+102	105	1	Iliad	4	318	325	✅	Nestor		✅	Agamemnon		1051	3	dialogue	third part of dialogue	8		0			
+103	106	1	Iliad	4	338	348	✅	Agamemnon		✅	Menestheus		1052	1	dialogue	first part of dialogue	11		0			
+104	107	1	Iliad	4	350	355	✅	Odysseus		✅	Agamemnon		1052	2	dialogue	second part of dialogue	6		0			
+105	108	1	Iliad	4	358	363	✅	Agamemnon		✅	Odysseus		1052	3	dialogue	third part of dialogue	6		0			
+106	109	1	Iliad	4	370	400	✅	Agamemnon		✅	Diomedes		1053	1	dialogue	first part of dialogue	31		0			
+107	110	1	Iliad	4	404	410	✅	Sthenelus		✅	Agamemnon		1053	2	dialogue	second part of dialogue	7		0			
+108	111	1	Iliad	4	412	418	✅	Diomedes		✅	Sthenelus		1053	3	dialogue	third part of dialogue	7		0			
+109	112	1	Iliad	4	509	513	✅	Apollo		✅	Trojans		1054	1	general	single speech	5		0			
+110	113	1	Iliad	5	31	34	✅	Athena		✅	Ares		1055	1	general	single speech	4		0			
+111	114	1	Iliad	5	102	105	✅	Pandarus		✅	Trojans		1056	1	general	single speech	4		0			
+112	115	1	Iliad	5	109	110	✅	Diomedes		✅	Sthenelus		1057	1	dialogue	first part of dialogue	2		0			
+113	116	1	Iliad	5	115	120	✅	Diomedes		✅	Athena		1057	2	dialogue	second part of dialogue	6		0			
+114	117	1	Iliad	5	124	132	✅	Athena		✅	Diomedes		1057	3	dialogue	third part of dialogue	9		0			
+115	118	1	Iliad	5	171	178	✅	Aeneas		✅	Pandarus		1058	1	dialogue	first part of dialogue	8		0			
+116	119	1	Iliad	5	180	216	✅	Pandarus		✅	Aeneas		1058	2	dialogue	second part of dialogue	37		0			
+117	120	1	Iliad	5	218	228	✅	Aeneas		✅	Pandarus		1058	3	dialogue	third part of dialogue	11		0			
+118	121	1	Iliad	5	230	238	✅	Pandarus		✅	Aeneas		1058	4	dialogue	fourth part of dialogue	9		0			
+119	122	1	Iliad	5	243	250	✅	Sthenelus		✅	Diomedes		1059	1	dialogue	first part of dialogue	8		0			
+120	123	1	Iliad	5	252	273	✅	Diomedes		✅	Sthenelus		1059	2	dialogue	second part of dialogue	22		0			
+121	124	1	Iliad	5	277	279	✅	Pandarus		✅	Diomedes		1060	1	dialogue	first part of dialogue	3		0			
+122	125	1	Iliad	5	284	285	✅	Pandarus		✅	Diomedes		1060	2	dialogue	second part of dialogue	2		0			
+123	126	1	Iliad	5	287	289	✅	Diomedes		✅	Pandarus		1060	3	dialogue	third part of dialogue	3		0			
+124	127	1	Iliad	5	348	351	✅	Diomedes		✅	Aphrodite	prayer	1061	1	general	single speech	4		0			
+125	128	1	Iliad	5	359	362	✅	Aphrodite		✅	Ares		1062	1	general	single speech	4		0			
+126	129	1	Iliad	5	373	374	✅	Dione		✅	Aphrodite		1063	1	dialogue	first part of dialogue	2		0			
+127	130	1	Iliad	5	376	380	✅	Aphrodite		✅	Dione		1063	2	dialogue	second part of dialogue	5		0			
+128	131	1	Iliad	5	382	415	✅	Dione		✅	Aphrodite		1063	3	dialogue	third part of dialogue	34		0			
+129	132	1	Iliad	5	421	425	✅	Athena		✅	Zeus		1064	1	general	single speech	5		0			
+130	133	1	Iliad	5	428	430	✅	Zeus		✅	Aphrodite		1065	1	general	single speech	3		0			
+131	134	1	Iliad	5	440	442	✅	Apollo		✅	Diomedes		1066	1	general	single speech	3		0			
+132	135	1	Iliad	5	455	459	✅	Apollo		✅	Ares		1067	1	general	single speech	5		0			
+133	136	1	Iliad	5	464	469	✅	Ares	disguise: Acamas	✅	Trojans		1068	1	general	single speech	6		0			
+134	137	1	Iliad	5	472	492	✅	Sarpedon		✅	Hector		1069	1	general	single speech	21		0			
+135	138	1	Iliad	5	529	532	✅	Agamemnon		✅	Greeks		1070	1	general	single speech	4		0			
+136	139	1	Iliad	5	601	606	✅	Diomedes		✅	Greeks		1071	1	general	single speech	6		0			
+137	140	1	Iliad	5	633	646	✅	Tlepolemus		✅	Sarpedon		1072	1	dialogue	first part of dialogue	14		0			
+138	141	1	Iliad	5	648	654	✅	Sarpedon		✅	Tlepolemus		1072	2	dialogue	second part of dialogue	7		0			
+139	142	1	Iliad	5	684	688	✅	Sarpedon		✅	Hector		1073	1	general	single speech	5		0			
+140	143	1	Iliad	5	714	718	✅	Hera		✅	Athena		1074	1	general	single speech	5		0			
+141	144	1	Iliad	5	757	763	✅	Hera		✅	Zeus		1075	1	dialogue	first part of dialogue	7		0			
+142	145	1	Iliad	5	765	766	✅	Zeus		✅	Hera		1075	2	dialogue	second part of dialogue	2		0			
+143	146	1	Iliad	5	787	791	✅	Hera	disguise: Stentor	✅	Greeks		1076	1	general	single speech	5		0			
+144	147	1	Iliad	5	800	813	✅	Athena		✅	Diomedes		1077	1	dialogue	first part of dialogue	14		0			
+145	148	1	Iliad	5	815	824	✅	Diomedes		✅	Athena		1077	2	dialogue	second part of dialogue	10		0			
+146	149	1	Iliad	5	826	834	✅	Athena		✅	Diomedes		1077	3	dialogue	third part of dialogue	9		0			
+147	150	1	Iliad	5	872	887	✅	Ares		✅	Zeus		1078	1	dialogue	first part of dialogue	16		0			
+148	151	1	Iliad	5	889	898	✅	Zeus		✅	Ares		1078	2	dialogue	second part of dialogue	10		0			
+149	152	1	Iliad	6	46	50	✅	Adrastus		✅	Menelaus		1079	1	dialogue	first part of dialogue	5		0			
+150	153	1	Iliad	6	55	60	✅	Agamemnon		✅	Menelaus		1079	2	dialogue	second part of dialogue	6		0			
+151	154	1	Iliad	6	67	71	✅	Nestor		✅	Greeks		1080	1	general	single speech	5		0			
+152	155	1	Iliad	6	77	101	✅	Helenus		✅	Hector		1081	1	general	single speech	25		0			
+153	156	1	Iliad	6	111	115	✅	Hector		✅	Trojans		1082	1	general	single speech	5		0			
+154	157	1	Iliad	6	123	143	✅	Diomedes		✅	Glaucus		1083	1	dialogue	first part of dialogue	21		0			
+155	158	1	Iliad	6	145	211	✅	Glaucus		✅	Diomedes		1083	2	dialogue	second part of dialogue	67		0			
+3	159	1	Iliad	6	164	165	✅	Antea		✅	Proetus		1357	1	general	single speech	2		1			
+156	160	1	Iliad	6	215	231	✅	Diomedes		✅	Glaucus		1083	3	dialogue	third part of dialogue	17		0			
+157	161	1	Iliad	6	254	262	✅	Hecuba		✅	Hector		1084	1	dialogue	first part of dialogue	9		0			
+158	162	1	Iliad	6	264	285	✅	Hector		✅	Hecuba		1084	2	dialogue	second part of dialogue	22		0			
+159	163	1	Iliad	6	305	310	✅	Theano		✅	Athena	prayer	1085	1	monologue	soliloquy	6		0			
+160	164	1	Iliad	6	326	331	✅	Hector		✅	Paris		1086	1	dialogue	first part of dialogue	6		0			
+161	165	1	Iliad	6	333	341	✅	Paris		✅	Hector		1086	2	dialogue	second part of dialogue	9		0			
+162	166	1	Iliad	6	344	358	✅	Helena		✅	Hector		1086	3	dialogue	third part of dialogue	15		0			
+163	167	1	Iliad	6	360	368	✅	Hector		✅	Athena		1086	4	dialogue	fourth part of dialogue	9		0			
+164	168	1	Iliad	6	376	380	✅	Hector		❌	servant		1087	1	dialogue	first part of dialogue	5		0			
+165	169	1	Iliad	6	382	389	❌	female servant		✅	Hector		1087	2	dialogue	second part of dialogue	8		0			
+166	170	1	Iliad	6	407	439	✅	Andromache		✅	Hector		1088	1	dialogue	first part of dialogue	33		0			
+167	171	1	Iliad	6	441	465	✅	Hector		✅	Andromache		1088	2	dialogue	second part of dialogue	25		0			
+2	172	1	Iliad	6	460	461	✅	someone		✅	self		1364	1	monologue	soliloquy	2		1			
+168	173	1	Iliad	6	476	481	✅	Hector		✅	Zeus	prayer	1089	1	monologue	soliloquy	6		0			
+3	174	1	Iliad	6	479	479	✅	someone		✅	self		1365	1	monologue	soliloquy	1		1			
+169	175	1	Iliad	6	486	493	✅	Hector		✅	Andromache		1088	3	dialogue	third part of dialogue	8		0			
+170	176	1	Iliad	6	518	519	✅	Paris		✅	Hector		1090	1	dialogue	first part of dialogue	2		0			
+171	177	1	Iliad	6	521	529	✅	Hector		✅	Paris		1090	2	dialogue	second part of dialogue	9		0			
+172	178	1	Iliad	7	24	32	✅	Apollo		✅	Athena		1091	1	dialogue	first part of dialogue	9		0			
+173	179	1	Iliad	7	34	36	✅	Athena		✅	Apollo		1091	2	dialogue	second part of dialogue	3		0			
+174	180	1	Iliad	7	38	42	✅	Apollo		✅	Athena		1091	3	dialogue	third part of dialogue	5		0			
+175	181	1	Iliad	7	47	53	✅	Helenus		✅	Hector		1092	1	general	single speech	7		0			
+176	182	1	Iliad	7	67	91	✅	Hector		❌	Greeks and Trojans		1093	1	dialogue	first part of dialogue	25		0			
+4	183	1	Iliad	7	89	90	✅	someone		✅	self		1366	1	monologue	soliloquy	2		1			
+177	184	1	Iliad	7	96	102	✅	Menelaus		✅	Greeks		1093	2	dialogue	second part of dialogue	7		0			
+178	185	1	Iliad	7	109	119	✅	Agamemnon		✅	Menelaus		1093	3	dialogue	third part of dialogue	11		0			
+179	186	1	Iliad	7	124	160	✅	Nestor		✅	Greeks		1093	4	dialogue	fourth part of dialogue	37		0			
+180	187	1	Iliad	7	171	174	✅	Nestor		✅	Greeks		1093	5	dialogue	fifth part of dialogue	4		0			
+181	188	1	Iliad	7	179	180	✅	someone		✅	Zeus	prayer	1094	1	monologue	soliloquy	2		0			
+182	189	1	Iliad	7	191	199	✅	Aias (son of Telamon)		✅	Greeks		1093	6	dialogue	sixth part of dialogue	9		0			
+183	190	1	Iliad	7	202	205	✅	someone		✅	Zeus	prayer	1095	1	monologue	soliloquy	4		0			
+184	191	1	Iliad	7	226	232	✅	Aias (son of Telamon)		✅	Hector		1093	7	dialogue	seventh part of dialogue	7		0			
+185	192	1	Iliad	7	234	243	✅	Hector		✅	Aias (son of Telamon)		1093	8	dialogue	eighth part of dialogue	10		0			
+186	193	1	Iliad	7	279	282	✅	Idaeus		❌	Aias (son of Telamon) and Hector		1093	9	dialogue	ninth part of dialogue	4		0			
+187	194	1	Iliad	7	284	286	✅	Aias (son of Telamon)		✅	Idaeus		1093	10	dialogue	tenth part of dialogue	3		0			
+188	195	1	Iliad	7	288	302	✅	Hector		✅	Aias (son of Telamon)		1093	11	dialogue	eleventh part of dialogue	15		0			
+5	196	1	Iliad	7	301	302	✅	someone		✅	self		1367	1	monologue	soliloquy	2		1			
+189	197	1	Iliad	7	327	343	✅	Nestor		✅	Greeks		1095	1	general	single speech	17		0			
+190	198	1	Iliad	7	348	353	✅	Antenor		✅	Trojans		1096	1	dialogue	first part of dialogue	6		0			
+191	199	1	Iliad	7	357	364	✅	Paris		✅	Antenor		1096	2	dialogue	second part of dialogue	8		0			
+192	200	1	Iliad	7	368	378	✅	Priam		✅	Trojans		1096	3	dialogue	third part of dialogue	11		0			
+193	201	1	Iliad	7	385	397	✅	Idaeus		✅	Greeks		1097	1	dialogue	first part of dialogue	13		0			
+194	202	1	Iliad	7	400	402	✅	Diomedes		✅	Greeks		1097	2	dialogue	second part of dialogue	3		0			
+195	203	1	Iliad	7	406	411	✅	Agamemnon		✅	Idaeus		1097	3	dialogue	third part of dialogue	6		0			
+196	204	1	Iliad	7	446	453	✅	Poseidon		✅	Zeus		1098	1	dialogue	first part of dialogue	8		0			
+197	205	1	Iliad	7	455	463	✅	Zeus		✅	Zeus		1098	2	dialogue	second part of dialogue	9		0			
+198	206	1	Iliad	8	5	27	✅	Zeus		✅	gods		1099	1	dialogue	first part of dialogue	23		0			
+199	207	1	Iliad	8	31	37	✅	Athena		✅	Zeus		1099	2	dialogue	second part of dialogue	7		0			
+200	208	1	Iliad	8	39	40	✅	Zeus		✅	Athena		1099	3	dialogue	third part of dialogue	2		0			
+201	209	1	Iliad	8	93	96	✅	Diomedes		✅	Odysseus		1100	1	general	single speech	4		0			
+202	210	1	Iliad	8	102	111	✅	Diomedes		✅	Nestor		1101	1	general	single speech	10		0			
+203	211	1	Iliad	8	139	144	✅	Nestor		✅	Diomedes		1102	1	dialogue	first part of dialogue	6		0			
+204	212	1	Iliad	8	146	150	✅	Diomedes		✅	Nestor		1102	2	dialogue	second part of dialogue	5		0			
+6	213	1	Iliad	8	149	149	✅	Hector		✅	Trojans		1368	1	general	single speech	1		1			
+205	214	1	Iliad	8	152	156	✅	Nestor		✅	Diomedes		1102	3	dialogue	third part of dialogue	5		0			
+206	215	1	Iliad	8	161	166	✅	Hector		✅	Diomedes		1102	4	dialogue	fourth part of dialogue	6		0			
+207	216	1	Iliad	8	173	183	✅	Hector		✅	Trojans		1103	1	general	single speech	11		0			
+208	217	1	Iliad	8	185	197	✅	Hector		❌	Horses		1104	1	general	single speech	13		0			
+209	218	1	Iliad	8	201	207	✅	Hera		✅	Poseidon		1105	1	dialogue	first part of dialogue	7		0			
+210	219	1	Iliad	8	209	211	✅	Poseidon		✅	Hera		1105	2	dialogue	second part of dialogue	3		0			
+211	220	1	Iliad	8	228	244	✅	Agamemnon		✅	Greeks		1106	1	general	single speech	17		0			
+212	221	1	Iliad	8	281	291	✅	Agamemnon		✅	Teucrus		1107	1	dialogue	first part of dialogue	11		0			
+213	222	1	Iliad	8	293	299	✅	Teucrus		✅	Agamemnon		1107	2	dialogue	second part of dialogue	7		0			
+214	223	1	Iliad	8	352	356	✅	Hera		✅	Athena		1108	1	dialogue	first part of dialogue	5		0			
+215	224	1	Iliad	8	358	380	✅	Athena		✅	Hera		1108	2	dialogue	second part of dialogue	23		0			
+216	225	1	Iliad	8	399	408	✅	Zeus		✅	Iris		1109	1	general	single speech	10		0			
+217	226	1	Iliad	8	413	424	✅	Iris		❌	Hera and Athena		1110	1	dialogue	first part of dialogue	12		0			
+218	227	1	Iliad	8	427	431	✅	Hera		✅	Athena		1110	2	dialogue	second part of dialogue	5		0			
+219	228	1	Iliad	8	447	456	✅	Zeus		❌	Hera and Athena		1111	1	dialogue	first part of dialogue	10		0			
+220	229	1	Iliad	8	462	468	✅	Hera		✅	Zeus		1111	2	dialogue	second part of dialogue	7		0			
+221	230	1	Iliad	8	470	483	✅	Zeus		✅	Hera		1111	3	dialogue	third part of dialogue	14		0			
+222	231	1	Iliad	8	497	541	✅	Hector		✅	Trojans		1112	1	general	single speech	45		0			
+223	232	1	Iliad	9	17	28	✅	Agamemnon		✅	Greeks		1113	1	dialogue	first part of dialogue	12		0			
+224	233	1	Iliad	9	32	49	✅	Diomedes		✅	Agamemnon		1113	2	dialogue	second part of dialogue	18		0			
+225	234	1	Iliad	9	53	78	✅	Nestor		❌	Agamemnon and Diomedes		1113	3	dialogue	third part of dialogue	26		0			
+226	235	1	Iliad	9	96	113	✅	Nestor		✅	Greeks		1113	4	dialogue	fourth part of dialogue	18		0			
+227	236	1	Iliad	9	115	161	✅	Agamemnon		✅	Nestor		1113	5	dialogue	fifth part of dialogue	47		0			
+228	237	1	Iliad	9	163	172	✅	Nestor		✅	Agamemnon		1113	6	dialogue	sixth part of dialogue	10		0			
+229	238	1	Iliad	9	197	198	✅	Achilles		❌	Phoinix and Aias (son of Telamon) and Odysseus		1114	1	dialogue	first part of dialogue	2		0			
+230	239	1	Iliad	9	202	204	✅	Achilles		✅	Patroclus		1114	2	dialogue	second part of dialogue	3		0			
+231	240	1	Iliad	9	225	306	✅	Odysseus		✅	Achilles		1114	3	dialogue	third part of dialogue	82		0			
+4	241	1	Iliad	9	254	258	✅	Peleus		✅	Achilles		1358	1	general	single speech	5		1			
+232	242	1	Iliad	9	308	429	✅	Achilles		✅	Odysseus		1114	4	dialogue	fourth part of dialogue	122		0			
+233	243	1	Iliad	9	434	605	✅	Phoinix		✅	Achilles		1114	5	dialogue	fifth part of dialogue	172		0			
+234	244	1	Iliad	9	607	619	✅	Achilles		✅	Phoinix		1114	6	dialogue	sixth part of dialogue	13		0			
+235	245	1	Iliad	9	624	642	✅	Aias (son of Telamon)		✅	Odysseus		1114	7	dialogue	seventh part of dialogue	19		0			
+236	246	1	Iliad	9	644	655	✅	Achilles		✅	Aias (son of Telamon)		1114	8	dialogue	eighth part of dialogue	12		0			
+237	247	1	Iliad	9	673	675	✅	Agamemnon		✅	Odysseus		1115	1	dialogue	first part of dialogue	3		0			
+238	248	1	Iliad	9	677	692	✅	Odysseus		✅	Agamemnon		1115	2	dialogue	second part of dialogue	16		0			
+239	249	1	Iliad	9	697	709	✅	Diomedes		✅	Agamemnon		1115	3	dialogue	third part of dialogue	13		0			
+240	250	1	Iliad	10	37	41	✅	Menelaus		✅	Agamemnon		1116	1	dialogue	first part of dialogue	5		0			
+241	251	1	Iliad	10	43	59	✅	Agamemnon		✅	Menelaus		1116	2	dialogue	second part of dialogue	17		0			
+242	252	1	Iliad	10	61	63	✅	Menelaus		✅	Agamemnon		1116	3	dialogue	third part of dialogue	3		0			
+243	253	1	Iliad	10	65	71	✅	Agamemnon		✅	Menelaus		1116	4	dialogue	fourth part of dialogue	7		0			
+244	254	1	Iliad	10	82	85	✅	Nestor		✅	Agamemnon		1117	1	dialogue	first part of dialogue	4		0			
+245	255	1	Iliad	10	87	101	✅	Agamemnon		✅	Nestor		1117	2	dialogue	second part of dialogue	15		0			
+246	256	1	Iliad	10	103	118	✅	Nestor		✅	Agamemnon		1117	3	dialogue	third part of dialogue	16		0			
+247	257	1	Iliad	10	120	127	✅	Agamemnon		✅	Nestor		1117	4	dialogue	fourth part of dialogue	8		0			
+248	258	1	Iliad	10	129	130	✅	Nestor		✅	Agamemnon		1117	5	dialogue	fifth part of dialogue	2		0			
+249	259	1	Iliad	10	141	142	✅	Odysseus		✅	Nestor		1118	1	dialogue	first part of dialogue	2		0			
+250	260	1	Iliad	10	144	147	✅	Nestor		✅	Odysseus		1119	2	dialogue	second part of dialogue	4		0			
+251	261	1	Iliad	10	159	161	✅	Nestor		✅	Diomedes		1119	1	dialogue	first part of dialogue	3		0			
+252	262	1	Iliad	10	164	167	✅	Diomedes		✅	Nestor		1119	2	dialogue	second part of dialogue	4		0			
+253	263	1	Iliad	10	169	176	✅	Nestor		✅	Diomedes		1119	3	dialogue	third part of dialogue	8		0			
+254	264	1	Iliad	10	192	193	✅	Nestor		❌	guards		1120	1	general	single speech	2		0			
+255	265	1	Iliad	10	204	217	✅	Nestor		✅	Greeks		1121	1	dialogue	first part of dialogue	14		0			
+256	266	1	Iliad	10	220	226	✅	Diomedes		✅	Nestor		1121	2	dialogue	second part of dialogue	7		0			
+257	267	1	Iliad	10	234	239	✅	Agamemnon		✅	Diomedes		1121	3	dialogue	third part of dialogue	6		0			
+258	268	1	Iliad	10	242	247	✅	Diomedes		✅	Agamemnon		1121	4	dialogue	fourth part of dialogue	6		0			
+259	269	1	Iliad	10	249	253	✅	Odysseus		✅	Diomedes		1121	5	dialogue	fifth part of dialogue	5		0			
+260	270	1	Iliad	10	278	282	✅	Odysseus		✅	Athena	prayer	1122	1	monologue	soliloquy	5		0			
+261	271	1	Iliad	10	284	294	✅	Diomedes		✅	Athena	prayer	1123	1	monologue	soliloquy	11		0			
+262	272	1	Iliad	10	303	312	✅	Hector		✅	Trojans		1124	1	dialogue	first part of dialogue	10		0			
+263	273	1	Iliad	10	319	327	✅	Dolon		✅	Hector		1124	2	dialogue	second part of dialogue	9		0			
+264	274	1	Iliad	10	329	331	✅	Hector		✅	Dolon		1124	3	dialogue	third part of dialogue	3		0			
+265	275	1	Iliad	10	341	348	✅	Odysseus		✅	Diomedes		1125	1	general	single speech	8		0			
+266	276	1	Iliad	10	370	371	✅	Diomedes		✅	Dolon		1126	1	dialogue	first part of dialogue	2		0			
+267	277	1	Iliad	10	378	381	✅	Dolon		✅	Diomedes		1126	2	dialogue	second part of dialogue	4		0			
+268	278	1	Iliad	10	383	389	✅	Odysseus		✅	Dolon		1126	3	dialogue	third part of dialogue	7		0			
+269	279	1	Iliad	10	391	399	✅	Dolon		✅	Odysseus		1126	4	dialogue	fourth part of dialogue	9		0			
+270	280	1	Iliad	10	401	411	✅	Odysseus		✅	Dolon		1126	5	dialogue	fifth part of dialogue	11		0			
+271	281	1	Iliad	10	413	422	✅	Dolon		✅	Odysseus		1126	6	dialogue	sixth part of dialogue	10		0			
+272	282	1	Iliad	10	424	425	✅	Odysseus		✅	Dolon		1126	7	dialogue	seventh part of dialogue	2		0			
+273	283	1	Iliad	10	427	445	✅	Dolon		✅	Odysseus		1126	8	dialogue	eighth part of dialogue	19		0			
+274	284	1	Iliad	10	447	453	✅	Odysseus		✅	Dolon		1126	9	dialogue	ninth part of dialogue	7		0			
+275	285	1	Iliad	10	462	464	✅	Odysseus		✅	Athena	prayer	1127	1	monologue	soliloquy	3		0			
+276	286	1	Iliad	10	477	481	✅	Odysseus		✅	Diomedes		1128	1	general	single speech	5		0			
+277	287	1	Iliad	10	509	511	✅	Athena		✅	Diomedes		1129	1	general	single speech	3		0			
+278	288	1	Iliad	10	533	539	✅	Nestor		✅	Greeks		1130	1	general	single speech	7		0			
+279	289	1	Iliad	10	544	553	✅	Nestor		❌	Diomedes and Odysseus		1131	1	dialogue	first part of dialogue	10		0			
+280	290	1	Iliad	10	555	563	✅	Odysseus		✅	Nestor		1131	2	dialogue	second part of dialogue	9		0			
+281	291	1	Iliad	11	131	135	❌	Peisander and Hippolochus		✅	Agamemnon		1132	1	dialogue	first part of dialogue	5		0			
+282	292	1	Iliad	11	138	142	✅	Agamemnon		❌	Peisander and Hippolochus		1132	2	dialogue	second part of dialogue	5		0			
+283	293	1	Iliad	11	186	194	✅	Zeus		✅	Iris		1133	1	general	single speech	9		0			
+284	294	1	Iliad	11	200	209	✅	Iris		✅	Hector		1134	1	general	single speech	10		0			
+285	295	1	Iliad	11	276	279	✅	Agamemnon		✅	Greeks		1135	1	general	single speech	4		0			
+286	296	1	Iliad	11	286	290	✅	Hector		✅	Trojans		1136	1	general	single speech	5		0			
+287	297	1	Iliad	11	313	315	✅	Odysseus		✅	Diomedes		1137	1	dialogue	first part of dialogue	3		0			
+288	298	1	Iliad	11	317	319	✅	Diomedes		✅	Odysseus		1137	2	dialogue	second part of dialogue	3		0			
+289	299	1	Iliad	11	347	348	✅	Diomedes		✅	Odysseus		1138	1	general	single speech	2		0			
+290	300	1	Iliad	11	362	367	✅	Diomedes		✅	Hector		1138	1	general	single speech	6		0			
+291	301	1	Iliad	11	380	383	✅	Paris		✅	Diomedes		1139	1	dialogue	first part of dialogue	4		0			
+292	302	1	Iliad	11	385	395	✅	Diomedes		✅	Paris		1139	2	dialogue	second part of dialogue	11		0			
+293	303	1	Iliad	11	404	410	✅	Odysseus		✅	self		1140	1	monologue	soliloquy	7		0			
+294	304	1	Iliad	11	430	433	❌	Socus		✅	Odysseus		1141	1	dialogue	first part of dialogue	4		0			
+295	305	1	Iliad	11	441	445	✅	Odysseus		❌	Socus		1141	2	dialogue	second part of dialogue	5		0			
+296	306	1	Iliad	11	450	455	✅	Odysseus		❌	Socus		1141	3	dialogue	third part of dialogue	6		0			
+297	307	1	Iliad	11	465	471	✅	Menelaus		✅	Aias (son of Telamon)		1142	1	general	single speech	7		0			
+298	308	1	Iliad	11	511	515	✅	Idomeneus		✅	Nestor		1143	1	general	single speech	5		0			
+299	309	1	Iliad	11	523	530	✅	Cebriones		✅	Hector		1144	1	general	single speech	8		0			
+300	310	1	Iliad	11	587	591	✅	Eurypylus		✅	Greeks		1145	1	general	single speech	5		0			
+301	311	1	Iliad	11	606	606	✅	Patroclus		✅	Achilles		1146	1	dialogue	first part of dialogue	1		0			
+302	312	1	Iliad	11	608	615	✅	Achilles		✅	Patroclus		1146	2	dialogue	second part of dialogue	8		0			
+303	313	1	Iliad	11	648	654	✅	Patroclus		✅	Nestor		1147	1	dialogue	first part of dialogue	7		0			
+304	314	1	Iliad	11	656	803	✅	Nestor		✅	Patroclus		1147	2	dialogue	second part of dialogue	148		0			
+5	315	1	Iliad	11	786	789	✅	Menoetius		✅	Patroclus		1359	1	general	single speech	4		1			
+305	316	1	Iliad	11	816	821	✅	Patroclus		✅	Eurypylus		1148	1	dialogue	first part of dialogue	6		0			
+306	317	1	Iliad	11	823	836	✅	Eurypylus		✅	Patroclus		1148	2	dialogue	second part of dialogue	14		0			
+307	318	1	Iliad	11	838	841	✅	Patroclus		✅	Eurypylus		1148	3	dialogue	third part of dialogue	4		0			
+308	319	1	Iliad	12	61	79	✅	Polydamas		✅	Hector		1149	1	general	single speech	19		0			
+309	320	1	Iliad	12	164	172	✅	Asius		✅	Zeus		1150	1	monologue	soliloquy	9		0			
+310	321	1	Iliad	12	211	229	✅	Polydamas		✅	Hector		1151	1	dialogue	first part of dialogue	19		0			
+311	322	1	Iliad	12	231	250	✅	Hector		✅	Polydamas		1151	2	dialogue	second part of dialogue	20		0			
+312	323	1	Iliad	12	269	276	❌	Aias (son of Oileus) and Aias (son of Telamon)		✅	Greeks		1152	1	general	single speech	8		0			
+313	324	1	Iliad	12	310	328	✅	Sarpedon		✅	Glaucus		1153	1	general	single speech	19		0			
+7	325	1	Iliad	12	318	321	✅	someone		✅	self		1369	1	monologue	soliloquy	4		1			
+314	326	1	Iliad	12	343	350	✅	Menestheus		✅	Thootes		1154	1	general	single speech	8		0			
+315	327	1	Iliad	12	354	363	✅	Thootes		❌	Aias (son of Oileus) and Aias (son of Telamon)		1155	1	dialogue	first part of dialogue	10		0			
+316	328	1	Iliad	12	366	369	✅	Aias (son of Telamon)		✅	Aias (son of Oileus)		1155	2	dialogue	second part of dialogue	4		0			
+317	329	1	Iliad	12	409	412	✅	Sarpedon		❌	Lycians		1156	1	general	single speech	4		0			
+318	330	1	Iliad	12	440	441	✅	Hector		✅	Trojans		1157	1	general	single speech	2		0			
+319	331	1	Iliad	13	47	58	✅	Poseidon	disguise: Calchas	❌	Aias (son of Oileus) and Aias (son of Telamon)		1158	1	dialogue	first part of dialogue	12		0			
+320	332	1	Iliad	13	68	75	✅	Aias (son of Oileus)		✅	Aias (son of Telamon)		1158	2	dialogue	second part of dialogue	8		0			
+321	333	1	Iliad	13	77	80	✅	Aias (son of Telamon)		✅	Aias (son of Oileus)		1158	3	dialogue	third part of dialogue	4		0			
+322	334	1	Iliad	13	95	124	✅	Poseidon	disguise: still Chalchas?	✅	Greeks		1159	1	general	single speech	30		0			
+323	335	1	Iliad	13	150	154	✅	Hector		✅	Trojans		1160	1	general	single speech	5		0			
+324	336	1	Iliad	13	219	220	✅	Poseidon	disguise: Thoas	✅	Idomeneus		1161	1	dialogue	first part of dialogue	2		0			
+325	337	1	Iliad	13	222	230	✅	Idomeneus		✅	Poseidon	disguise: Thoas	1161	2	dialogue	second part of dialogue	9		0			
+326	338	1	Iliad	13	232	238	✅	Poseidon	disguise: Thoas	✅	Idomeneus		1161	3	dialogue	third part of dialogue	7		0			
+327	339	1	Iliad	13	249	253	✅	Idomeneus		✅	Meriones		1162	1	dialogue	first part of dialogue	5		0			
+328	340	1	Iliad	13	255	258	✅	Meriones		✅	Idomeneus		1162	2	dialogue	second part of dialogue	4		0			
+329	341	1	Iliad	13	260	265	✅	Idomeneus		✅	Meriones		1162	3	dialogue	third part of dialogue	6		0			
+330	342	1	Iliad	13	267	273	✅	Meriones		✅	Idomeneus		1162	4	dialogue	fourth part of dialogue	7		0			
+331	343	1	Iliad	13	275	294	✅	Idomeneus		✅	Meriones		1162	5	dialogue	fifth part of dialogue	20		0			
+332	344	1	Iliad	13	307	310	✅	Meriones		✅	Idomeneus		1162	6	dialogue	sixth part of dialogue	4		0			
+333	345	1	Iliad	13	312	327	✅	Idomeneus		✅	Meriones		1162	7	dialogue	seventh part of dialogue	16		0			
+334	346	1	Iliad	13	374	382	✅	Idomeneus		✅	Othryoneus		1163	1	general	single speech	9		0			
+335	347	1	Iliad	13	414	416	✅	Deiphobus		✅	Hypsenor		1164	1	general	single speech	3		0			
+336	348	1	Iliad	13	446	454	✅	Idomeneus		✅	Deiphobus		1165	1	general	single speech	9		0			
+337	349	1	Iliad	13	463	467	✅	Deiphobus		✅	Aeneas		1166	1	general	single speech	5		0			
+338	350	1	Iliad	13	481	486	✅	Idomeneus		✅	Greeks		1167	1	general	single speech	6		0			
+339	351	1	Iliad	13	620	639	✅	Menelaus		✅	Trojans		1168	1	general	single speech	20		0			
+340	352	1	Iliad	13	726	747	✅	Polydamas		✅	Hector		1169	1	dialogue	first part of dialogue	22		0			
+341	353	1	Iliad	13	751	753	✅	Hector		✅	Polydamas		1169	2	dialogue	second part of dialogue	3		0			
+342	354	1	Iliad	13	769	773	✅	Hector		✅	Paris		1170	1	dialogue	first part of dialogue	5		0			
+343	355	1	Iliad	13	775	787	✅	Paris		✅	Hector		1170	2	dialogue	second part of dialogue	13		0			
+344	356	1	Iliad	13	810	820	✅	Aias (son of Telamon)		✅	Hector		1171	1	dialogue	first part of dialogue	11		0			
+345	357	1	Iliad	13	824	832	✅	Hector		✅	Aias (son of Telamon)		1171	2	dialogue	second part of dialogue	9		0			
+346	358	1	Iliad	14	3	8	✅	Nestor		✅	Machaon		1172	1	general	single speech	6		0			
+347	359	1	Iliad	14	42	51	✅	Agamemnon		✅	Nestor		1173	1	dialogue	first part of dialogue	10		0			
+348	360	1	Iliad	14	53	63	✅	Nestor		✅	Agamemnon		1173	2	dialogue	second part of dialogue	11		0			
+349	361	1	Iliad	14	65	81	✅	Agamemnon		✅	Nestor		1173	3	dialogue	third part of dialogue	17		0			
+350	362	1	Iliad	14	83	102	✅	Odysseus		✅	Agamemnon		1173	4	dialogue	fourth part of dialogue	20		0			
+351	363	1	Iliad	14	104	108	✅	Agamemnon		✅	Odysseus		1173	5	dialogue	fifth part of dialogue	5		0			
+352	364	1	Iliad	14	110	132	✅	Diomedes		✅	Agamemnon		1173	6	dialogue	sixth part of dialogue	23		0			
+353	365	1	Iliad	14	139	146	✅	Poseidon	disguise: old man	✅	Agamemnon		1174	1	general	single speech	8		0			
+354	366	1	Iliad	14	190	192	✅	Hera		✅	Aphrodite		1175	1	dialogue	first part of dialogue	3		0			
+355	367	1	Iliad	14	194	196	✅	Aphrodite		✅	Hera		1175	2	dialogue	second part of dialogue	3		0			
+356	368	1	Iliad	14	198	210	✅	Hera		✅	Aphrodite		1175	3	dialogue	third part of dialogue	13		0			
+357	369	1	Iliad	14	212	213	✅	Aphrodite		✅	Hera		1175	4	dialogue	fourth part of dialogue	2		0			
+358	370	1	Iliad	14	219	221	✅	Aphrodite		✅	Hera		1175	5	dialogue	fifth part of dialogue	3		0			
+359	371	1	Iliad	14	233	241	✅	Hera		✅	Hypnus		1176	1	dialogue	first part of dialogue	9		0			
+360	372	1	Iliad	14	243	262	✅	Hypnus		✅	Hera		1176	2	dialogue	second part of dialogue	20		0			
+361	373	1	Iliad	14	264	268	✅	Hera		✅	Hypnus		1176	3	dialogue	third part of dialogue	5		0			
+362	374	1	Iliad	14	271	276	✅	Hypnus		✅	Hera		1176	4	dialogue	fourth part of dialogue	6		0			
+363	375	1	Iliad	14	298	299	✅	Zeus		✅	Hera		1177	1	dialogue	first part of dialogue	2		0			
+364	376	1	Iliad	14	301	311	✅	Hera		✅	Zeus		1177	2	dialogue	second part of dialogue	11		0			
+365	377	1	Iliad	14	313	328	✅	Zeus		✅	Hera		1177	3	dialogue	third part of dialogue	16		0			
+366	378	1	Iliad	14	330	340	✅	Hera		✅	Zeus		1177	4	dialogue	fourth part of dialogue	11		0			
+367	379	1	Iliad	14	342	345	✅	Zeus		✅	Hera		1177	5	dialogue	fifth part of dialogue	4		0			
+368	380	1	Iliad	14	357	360	✅	Hypnus		✅	Poseidon		1178	1	general	single speech	4		0			
+369	381	1	Iliad	14	364	377	✅	Poseidon		✅	Greeks		1179	1	general	single speech	14		0			
+370	382	1	Iliad	14	454	457	✅	Polydamas		✅	Protoenor		1180	1	dialogue	first part of dialogue	4		0			
+371	383	1	Iliad	14	470	474	✅	Aias (son of Telamon)		✅	Polydamas		1180	2	dialogue	second part of dialogue	5		0			
+372	384	1	Iliad	14	479	485	✅	Acamas		✅	Greeks		1180	3	dialogue	third part of dialogue	7		0			
+373	385	1	Iliad	14	501	505	✅	Peneleus		✅	Trojans		1180	4	dialogue	fourth part of dialogue	5		0			
+374	386	1	Iliad	15	14	33	✅	Zeus		✅	Hera		1181	1	dialogue	first part of dialogue	20		0			
+375	387	1	Iliad	15	36	46	✅	Hera		✅	Zeus		1181	2	dialogue	second part of dialogue	11		0			
+376	388	1	Iliad	15	49	77	✅	Zeus		✅	Hera		1181	3	dialogue	third part of dialogue	29		0			
+377	389	1	Iliad	15	90	91	✅	Themis		✅	Hera		1182	1	dialogue	first part of dialogue	2		0			
+378	390	1	Iliad	15	93	99	✅	Hera		✅	Themis		1182	2	dialogue	second part of dialogue	7		0			
+379	391	1	Iliad	15	104	112	✅	Hera		✅	gods		1183	1	dialogue	first part of dialogue	9		0			
+380	392	1	Iliad	15	115	118	✅	Ares		✅	gods		1183	2	dialogue	second part of dialogue	4		0			
+381	393	1	Iliad	15	128	141	✅	Athena		✅	Ares		1183	3	dialogue	third part of dialogue	14		0			
+382	394	1	Iliad	15	146	148	✅	Hera		❌	Iris and Apollo		1184	1	general	single speech	3		0			
+383	395	1	Iliad	15	158	167	✅	Zeus		✅	Iris		1185	1	general	single speech	10		0			
+384	396	1	Iliad	15	174	183	✅	Iris		✅	Poseidon		1186	1	dialogue	first part of dialogue	10		0			
+385	397	1	Iliad	15	185	199	✅	Poseidon		✅	Iris		1186	2	dialogue	second part of dialogue	15		0			
+386	398	1	Iliad	15	201	204	✅	Iris		✅	Poseidon		1186	3	dialogue	third part of dialogue	4		0			
+387	399	1	Iliad	15	206	217	✅	Poseidon		✅	Iris		1186	4	dialogue	fourth part of dialogue	12		0			
+388	400	1	Iliad	15	221	235	✅	Zeus		✅	Apollo		1187	1	general	single speech	15		0			
+389	401	1	Iliad	15	244	245	✅	Apollo		✅	Hector		1188	1	dialogue	first part of dialogue	2		0			
+390	402	1	Iliad	15	247	252	✅	Hector		✅	Apollo	prayer	1188	2	dialogue	second part of dialogue	6		0			
+391	403	1	Iliad	15	254	261	✅	Apollo		✅	Hector		1188	3	dialogue	third part of dialogue	8		0			
+392	404	1	Iliad	15	286	299	✅	Thoas		✅	Greeks		1188	4	dialogue	fourth part of dialogue	14		0			
+393	405	1	Iliad	15	347	351	✅	Hector		✅	Trojans		1189	1	general	single speech	5		0			
+394	406	1	Iliad	15	372	376	✅	Nestor		✅	Zeus	prayer	1190	1	monologue	soliloquy	5		0			
+395	407	1	Iliad	15	399	404	✅	Patroclus		✅	Eurypylus		1191	1	general	single speech	6		0			
+396	408	1	Iliad	15	425	428	✅	Hector		✅	Trojans		1192	1	general	single speech	4		0			
+397	409	1	Iliad	15	437	441	✅	Aias (son of Telamon)		✅	Teucrus		1193	1	dialogue	first part of dialogue	5		0			
+398	410	1	Iliad	15	467	470	✅	Teucrus		✅	Aias (son of Telamon)		1193	2	dialogue	second part of dialogue	4		0			
+399	411	1	Iliad	15	472	477	✅	Aias (son of Telamon)		✅	Teucrus		1193	3	dialogue	third part of dialogue	6		0			
+400	412	1	Iliad	15	486	499	✅	Hector		✅	Trojans		1194	1	general	single speech	14		0			
+401	413	1	Iliad	15	502	513	✅	Aias (son of Telamon)		✅	Greeks		1195	1	general	single speech	12		0			
+402	414	1	Iliad	15	553	558	✅	Hector		✅	Melanippus		1196	1	general	single speech	6		0			
+403	415	1	Iliad	15	561	564	✅	Aias (son of Telamon)		✅	Greeks		1197	1	general	single speech	4		0			
+404	416	1	Iliad	15	569	571	✅	Menelaus		✅	Antilochus		1198	1	general	single speech	3		0			
+405	417	1	Iliad	15	661	666	✅	Nestor		✅	Greeks		1199	1	general	single speech	6		0			
+406	418	1	Iliad	15	718	725	✅	Hector		✅	Trojans		1200	1	general	single speech	8		0			
+407	419	1	Iliad	15	733	741	✅	Aias (son of Telamon)		✅	Greeks		1201	1	general	single speech	9		0			
+408	420	1	Iliad	16	7	19	✅	Achilles		✅	Patroclus		1202	1	dialogue	first part of dialogue	13		0			
+409	421	1	Iliad	16	21	45	✅	Patroclus		✅	Achilles		1202	2	dialogue	second part of dialogue	25		0			
+410	422	1	Iliad	16	49	100	✅	Achilles		✅	Patroclus		1202	3	dialogue	third part of dialogue	52		0			
+411	423	1	Iliad	16	126	129	✅	Achilles		✅	Patroclus		1202	4	dialogue	fourth part of dialogue	4		0			
+412	424	1	Iliad	16	200	209	✅	Achilles		❌	Myrmydons		1203	1	general	single speech	10		0			
+6	425	1	Iliad	16	203	206	❌	Myrmidons		✅	Achilles		1360	1	general	single speech	4		1			
+413	426	1	Iliad	16	233	248	✅	Achilles		✅	Zeus	prayer	1204	1	monologue	soliloquy	16		0			
+414	427	1	Iliad	16	269	274	✅	Patroclus		❌	Myrmidons		1205	1	general	single speech	6		0			
+415	428	1	Iliad	16	422	425	✅	Sarpedon		❌	Lycians		1206	1	general	single speech	4		0			
+416	429	1	Iliad	16	433	438	✅	Zeus		✅	Hera		1207	1	dialogue	first part of dialogue	6		0			
+417	430	1	Iliad	16	440	457	✅	Hera		✅	Zeus		1207	2	dialogue	second part of dialogue	18		0			
+418	431	1	Iliad	16	492	502	✅	Sarpedon		✅	Glaucus		1208	1	general	single speech	11		0			
+419	432	1	Iliad	16	514	526	✅	Glaucus		✅	Apollo	prayer	1209	1	monologue	soliloquy	13		0			
+420	433	1	Iliad	16	538	547	✅	Glaucus		✅	Hector		1210	1	general	single speech	10		0			
+421	434	1	Iliad	16	556	561	✅	Patroclus		❌	Aias (son of Oileus) and Aias (son of Telamon)		1211	1	general	single speech	6		0			
+422	435	1	Iliad	16	617	618	✅	Aeneas		✅	Meriones		1212	1	dialogue	first part of dialogue	2		0			
+423	436	1	Iliad	16	627	631	✅	Meriones		✅	Aeneas		1212	2	dialogue	second part of dialogue	5		0			
+424	437	1	Iliad	16	627	631	✅	Patroclus		✅	Meriones		1212	3	dialogue	third part of dialogue	5		0			
+425	438	1	Iliad	16	667	675	✅	Zeus		✅	Apollo		1213	1	general	single speech	9		0			
+426	439	1	Iliad	16	707	709	✅	Apollo		✅	Patroclus		1214	1	general	single speech	3		0			
+427	440	1	Iliad	16	721	725	✅	Apollo	disguise: Asius	✅	Hector		1215	1	general	single speech	5		0			
+428	441	1	Iliad	16	745	750	✅	Patroclus		✅	Cebriones		1216	1	general	single speech	6		0			
+429	442	1	Iliad	16	830	842	✅	Hector		✅	Patroclus		1217	1	dialogue	first part of dialogue	13		0			
+8	443	1	Iliad	16	839	841	✅	Achilles		✅	Patroclus		1370	1	general	single speech	3		1			
+430	444	1	Iliad	16	844	854	✅	Patroclus		✅	Hector		1217	2	dialogue	second part of dialogue	11		0			
+431	445	1	Iliad	16	859	861	✅	Hector		✅	Patroclus		1217	3	dialogue	third part of dialogue	3		0			
+432	446	1	Iliad	17	12	17	✅	Euphorbus		✅	Menelaus		1218	1	dialogue	first part of dialogue	6		0			
+433	447	1	Iliad	17	19	32	✅	Menelaus		✅	Euphorbus		1218	2	dialogue	second part of dialogue	14		0			
+434	448	1	Iliad	17	34	42	✅	Euphorbus		✅	Menelaus		1218	3	dialogue	third part of dialogue	9		0			
+435	449	1	Iliad	17	75	81	✅	Apollo	disguise: Mentes	✅	Hector		1219	1	general	single speech	7		0			
+436	450	1	Iliad	17	91	105	✅	Menelaus		✅	self		1220	1	monologue	soliloquy	15		0			
+437	451	1	Iliad	17	120	122	✅	Menelaus		✅	Aias (son of Telamon)		1221	1	general	single speech	3		0			
+438	452	1	Iliad	17	142	168	✅	Glaucus		✅	Hector		1222	1	dialogue	first part of dialogue	27		0			
+439	453	1	Iliad	17	170	182	✅	Hector		✅	Glaucus		1222	2	dialogue	second part of dialogue	13		0			
+440	454	1	Iliad	17	184	187	✅	Hector		✅	Trojans		1222	3	dialogue	third part of dialogue	4		0			
+441	455	1	Iliad	17	201	208	✅	Zeus		✅	self		1223	1	monologue	soliloquy	8		0			
+442	456	1	Iliad	17	220	232	✅	Hector		✅	Trojans		1224	1	general	single speech	13		0			
+443	457	1	Iliad	17	238	245	✅	Aias (son of Telamon)		✅	Menelaus		1225	1	dialogue	first part of dialogue	8		0			
+444	458	1	Iliad	17	248	255	✅	Menelaus		✅	Greeks		1225	2	dialogue	second part of dialogue	8		0			
+445	459	1	Iliad	17	327	332	✅	Apollo	disguise: Periphas	✅	Aeneas		1226	1	general	single speech	6		0			
+446	460	1	Iliad	17	335	341	✅	Aeneas		✅	Trojans		1227	1	general	single speech	7		0			
+447	461	1	Iliad	17	415	419	✅	someone		✅	Greeks		1228	1	general	single speech	5		0			
+448	462	1	Iliad	17	421	422	✅	someone		✅	Trojans		1229	1	general	single speech	2		0			
+449	463	1	Iliad	17	443	455	✅	Zeus		❌	Horses		1230	1	general	single speech	13		0			
+450	464	1	Iliad	17	469	473	✅	Alcimedon		✅	Automedon		1231	1	dialogue	first part of dialogue	5		0			
+451	465	1	Iliad	17	475	480	✅	Automedon		✅	Alcimedon		1231	2	dialogue	second part of dialogue	6		0			
+452	466	1	Iliad	17	485	490	✅	Hector		✅	Aeneas		1232	1	general	single speech	6		0			
+453	467	1	Iliad	17	501	506	✅	Automedon		✅	Alcimedon		1231	3	dialogue	third part of dialogue	6		0			
+454	468	1	Iliad	17	508	515	✅	Automedon		❌	Aias (son of Oileus) and Aias (son of Telamon) and Menelaus		1233	1	general	single speech	8		0			
+455	469	1	Iliad	17	538	539	✅	Automedon		✅	self		1234	1	monologue	soliloquy	2		0			
+456	470	1	Iliad	17	556	559	✅	Athena	disguise: Phoenix	✅	Menelaus		1235	1	dialogue	first part of dialogue	4		0			
+457	471	1	Iliad	17	561	566	✅	Menelaus		✅	Athena	disguise: Phoenix	1235	2	dialogue	second part of dialogue	6		0			
+458	472	1	Iliad	17	586	590	✅	Apollo	disguise: Phaenops	✅	Hector		1236	1	general	single speech	5		0			
+459	473	1	Iliad	17	622	623	✅	Meriones		✅	Idomeneus		1237	1	general	single speech	2		0			
+460	474	1	Iliad	17	629	647	✅	Aias (son of Telamon)		✅	Greeks		1238	1	dialogue	first part of dialogue	19		0			
+461	475	1	Iliad	17	652	655	✅	Aias (son of Telamon)		✅	Menelaus		1238	2	dialogue	second part of dialogue	4		0			
+462	476	1	Iliad	17	669	672	✅	Menelaus		❌	Aias (son of Oileus) and Aias (son of Telamon) and Meriones		1238	3	dialogue	third part of dialogue	4		0			
+463	477	1	Iliad	17	685	693	✅	Menelaus		✅	Antilochus		1239	1	general	single speech	9		0			
+464	478	1	Iliad	17	708	714	✅	Menelaus		❌	Aias (son of Oileus) and Aias (son of Telamon)		1238	4	dialogue	fourth part of dialogue	7		0			
+465	479	1	Iliad	17	716	721	✅	Aias (son of Telamon)		✅	Menelaus		1238	5	dialogue	fifth part of dialogue	6		0			
+466	480	1	Iliad	18	6	14	✅	Achilles		✅	self		1240	1	monologue	soliloquy	9		0			
+467	481	1	Iliad	18	18	21	✅	Antilochus		✅	Achilles		1241	1	general	single speech	4		0			
+468	482	1	Iliad	18	52	64	✅	Thetis		✅	Nereids		1242	1	general	single speech	13		0			
+469	483	1	Iliad	18	73	77	✅	Thetis		✅	Achilles		1243	1	dialogue	first part of dialogue	5		0			
+470	484	1	Iliad	18	79	93	✅	Achilles		✅	Thetis		1243	2	dialogue	second part of dialogue	15		0			
+471	485	1	Iliad	18	95	96	✅	Thetis		✅	Achilles		1243	3	dialogue	third part of dialogue	2		0			
+472	486	1	Iliad	18	98	126	✅	Achilles		✅	Thetis		1243	4	dialogue	fourth part of dialogue	29		0			
+473	487	1	Iliad	18	128	137	✅	Thetis		✅	Achilles		1243	5	dialogue	fifth part of dialogue	10		0			
+474	488	1	Iliad	18	140	144	✅	Thetis		✅	Nereids		1244	1	general	single speech	5		0			
+475	489	1	Iliad	18	170	180	✅	Iris		✅	Achilles		1245	1	dialogue	first part of dialogue	11		0			
+476	490	1	Iliad	18	182	182	✅	Achilles		✅	Iris		1245	2	dialogue	second part of dialogue	1		0			
+477	491	1	Iliad	18	184	186	✅	Iris		✅	Achilles		1245	3	dialogue	third part of dialogue	3		0			
+478	492	1	Iliad	18	188	195	✅	Achilles		✅	Iris		1245	4	dialogue	fourth part of dialogue	8		0			
+479	493	1	Iliad	18	197	201	✅	Iris		✅	Achilles		1245	5	dialogue	fifth part of dialogue	5		0			
+480	494	1	Iliad	18	254	283	✅	Polydamas		✅	Hector		1246	1	dialogue	first part of dialogue	30		0			
+481	495	1	Iliad	18	285	309	✅	Hector		✅	Polydamas		1246	2	dialogue	second part of dialogue	25		0			
+482	496	1	Iliad	18	324	342	✅	Achilles		✅	self		1247	1	monologue	soliloquy	19		0			
+483	497	1	Iliad	18	357	359	✅	Zeus		✅	Hera		1248	1	dialogue	first part of dialogue	3		0			
+484	498	1	Iliad	18	361	367	✅	Hera		✅	Zeus		1248	2	dialogue	second part of dialogue	7		0			
+485	499	1	Iliad	18	385	387	✅	Charis		✅	Thetis		1249	1	dialogue	first part of dialogue	3		0			
+486	500	1	Iliad	18	392	392	✅	Charis		✅	Hephaestus		1249	2	dialogue	second part of dialogue	1		0			
+487	501	1	Iliad	18	394	409	✅	Hephaestus		✅	Charis		1249	3	dialogue	third part of dialogue	16		0			
+488	502	1	Iliad	18	424	427	✅	Hephaestus		✅	Thetis		1249	4	dialogue	fourth part of dialogue	4		0			
+489	503	1	Iliad	18	429	461	✅	Thetis		✅	Hephaestus		1249	5	dialogue	fifth part of dialogue	33		0			
+490	504	1	Iliad	18	463	467	✅	Hephaestus		✅	Thetis		1249	6	dialogue	sixth part of dialogue	5		0			
+491	505	1	Iliad	19	8	11	✅	Thetis		✅	Achilles		1250	1	dialogue	first part of dialogue	4		0			
+492	506	1	Iliad	19	21	27	✅	Achilles		✅	Thetis		1250	2	dialogue	second part of dialogue	7		0			
+493	507	1	Iliad	19	29	36	✅	Thetis		✅	Achilles		1250	3	dialogue	third part of dialogue	8		0			
+494	508	1	Iliad	19	56	73	✅	Achilles		✅	Agamemnon		1251	1	dialogue	first part of dialogue	18		0			
+495	509	1	Iliad	19	78	144	✅	Agamemnon		✅	Greeks		1251	2	dialogue	second part of dialogue	67		0			
+7	510	1	Iliad	19	101	105	✅	Zeus		✅	Hera		1361	1	dialogue	first part of dialogue	5		1			
+8	511	1	Iliad	19	107	111	✅	Hera		✅	Zeus		1361	2	dialogue	second part of dialogue	5		1			
+9	512	1	Iliad	19	121	124	✅	Hera		✅	Zeus		1362	1	general	single speech	4		1			
+496	513	1	Iliad	19	146	153	✅	Achilles		✅	Agamemnon		1251	3	dialogue	third part of dialogue	8		0			
+497	514	1	Iliad	19	155	183	✅	Odysseus		✅	Greeks		1251	4	dialogue	fourth part of dialogue	29		0			
+498	515	1	Iliad	19	185	197	✅	Agamemnon		✅	Odysseus		1251	5	dialogue	fifth part of dialogue	13		0			
+499	516	1	Iliad	19	199	214	✅	Achilles		✅	Agamemnon		1251	6	dialogue	sixth part of dialogue	16		0			
+500	517	1	Iliad	19	216	237	✅	Odysseus		✅	Achilles		1251	7	dialogue	seventh part of dialogue	22		0			
+501	518	1	Iliad	19	258	265	✅	Agamemnon		✅	Zeus	prayer	1251	8	dialogue	eighth part of dialogue	8		0			
+502	519	1	Iliad	19	270	275	✅	Achilles		✅	Zeus	prayer	1251	9	dialogue	ninth part of dialogue	6		0			
+503	520	1	Iliad	19	287	300	✅	Briseis		✅	Patroclus		1252	1	monologue	soliloquy	14		0			
+504	521	1	Iliad	19	305	308	✅	Achilles		✅	Greeks		1253	1	general	single speech	4		0			
+505	522	1	Iliad	19	315	337	✅	Achilles		✅	Patroclus		1254	1	monologue	soliloquy	23		0			
+506	523	1	Iliad	19	342	348	✅	Zeus		✅	Athena		1255	1	general	single speech	7		0			
+507	524	1	Iliad	19	400	403	✅	Achilles		❌	Horses		1256	1	dialogue	first part of dialogue	4		0			
+508	525	1	Iliad	19	408	417	❌	horses		✅	Achilles		1256	2	dialogue	second part of dialogue	10		0			
+509	526	1	Iliad	19	420	423	✅	Achilles		❌	Horses		1256	3	dialogue	third part of dialogue	4		0			
+510	527	1	Iliad	20	16	18	✅	Poseidon		✅	Zeus		1257	1	dialogue	first part of dialogue	3		0			
+511	528	1	Iliad	20	20	30	✅	Zeus		✅	Poseidon		1257	2	dialogue	second part of dialogue	11		0			
+512	529	1	Iliad	20	83	85	✅	Apollo	disguise: Lycaon	✅	Aeneas		1258	1	dialogue	first part of dialogue	3		0			
+513	530	1	Iliad	20	87	102	✅	Aeneas		✅	Apollo	disguise: Lycaon	1258	2	dialogue	second part of dialogue	16		0			
+514	531	1	Iliad	20	104	109	✅	Apollo	disguise: Lycaon	✅	Aeneas		1258	3	dialogue	third part of dialogue	6		0			
+515	532	1	Iliad	20	115	131	✅	Hera		❌	Athena and Poseidon		1259	1	dialogue	first part of dialogue	17		0			
+516	533	1	Iliad	20	133	143	✅	Poseidon		✅	Hera		1259	2	dialogue	second part of dialogue	11		0			
+517	534	1	Iliad	20	178	198	✅	Achilles		✅	Aeneas		1260	1	dialogue	first part of dialogue	21		0			
+518	535	1	Iliad	20	200	258	✅	Aeneas		✅	Achilles		1260	2	dialogue	second part of dialogue	59		0			
+519	536	1	Iliad	20	293	308	✅	Poseidon		✅	gods		1261	1	dialogue	first part of dialogue	16		0			
+520	537	1	Iliad	20	310	317	✅	Hera		✅	Poseidon		1261	2	dialogue	second part of dialogue	8		0			
+521	538	1	Iliad	20	332	339	✅	Poseidon		✅	Aeneas		1262	1	general	single speech	8		0			
+522	539	1	Iliad	20	344	352	✅	Achilles		✅	self		1263	1	monologue	soliloquy	9		0			
+523	540	1	Iliad	20	354	363	✅	Achilles		✅	Greeks		1263	1	general	single speech	10		0			
+524	541	1	Iliad	20	366	372	✅	Hector		✅	Trojans		1264	1	general	single speech	7		0			
+525	542	1	Iliad	20	376	378	✅	Apollo		✅	Hector		1265	1	general	single speech	3		0			
+526	543	1	Iliad	20	389	392	✅	Achilles		❌	Iphition		1266	1	general	single speech	4		0			
+527	544	1	Iliad	20	425	427	✅	Achilles		✅	self		1267	1	monologue	soliloquy	3		0			
+528	545	1	Iliad	20	429	429	✅	Achilles		✅	Hector		1268	1	dialogue	first part of dialogue	1		0			
+529	546	1	Iliad	20	431	437	✅	Hector		✅	Achilles		1268	2	dialogue	second part of dialogue	7		0			
+530	547	1	Iliad	20	449	454	✅	Achilles		✅	Hector		1268	3	dialogue	third part of dialogue	6		0			
+531	548	1	Iliad	21	54	63	✅	Achilles		✅	Lycaon		1269	1	dialogue	first part of dialogue	10		0			
+532	549	1	Iliad	21	74	96	✅	Lycaon		✅	Achilles		1269	2	dialogue	second part of dialogue	23		0			
+533	550	1	Iliad	21	99	113	✅	Achilles		✅	Lycaon		1269	3	dialogue	third part of dialogue	15		0			
+534	551	1	Iliad	21	122	135	✅	Achilles		✅	Lycaon		1269	4	dialogue	fourth part of dialogue	14		0			
+535	552	1	Iliad	21	150	151	✅	Achilles		✅	Asteropaeus		1270	1	dialogue	first part of dialogue	2		0			
+536	553	1	Iliad	21	153	160	✅	Asteropaeus		✅	Achilles		1270	2	dialogue	second part of dialogue	8		0			
+537	554	1	Iliad	21	184	199	✅	Achilles		✅	Asteropaeus		1270	3	dialogue	third part of dialogue	16		0			
+538	555	1	Iliad	21	214	221	✅	Scamander		✅	Achilles		1271	1	dialogue	first part of dialogue	8		0			
+539	556	1	Iliad	21	223	226	✅	Achilles		✅	Scamander		1271	2	dialogue	second part of dialogue	4		0			
+540	557	1	Iliad	21	229	232	✅	Scamander		✅	Apollo		1272	1	general	single speech	4		0			
+541	558	1	Iliad	21	273	283	✅	Achilles		✅	Zeus	prayer	1273	1	dialogue	first part of dialogue	11		0			
+542	559	1	Iliad	21	288	297	✅	Poseidon		✅	Achilles		1273	2	dialogue	second part of dialogue	10		0			
+543	560	1	Iliad	21	308	323	✅	Scamander		✅	Simoeis		1274	1	general	single speech	16		0			
+544	561	1	Iliad	21	331	341	✅	Hera		✅	Hephaestus		1275	1	general	single speech	11		0			
+545	562	1	Iliad	21	357	360	✅	Scamander		✅	Hephaestus		1276	1	general	single speech	4		0			
+546	563	1	Iliad	21	369	376	✅	Scamander		✅	Hera		1277	1	general	single speech	8		0			
+547	564	1	Iliad	21	379	380	✅	Hera		✅	Hephaestus		1278	1	general	single speech	2		0			
+548	565	1	Iliad	21	394	399	✅	Ares		✅	Athena		1279	1	dialogue	first part of dialogue	6		0			
+549	566	1	Iliad	21	410	414	✅	Athena		✅	Ares		1279	2	dialogue	second part of dialogue	5		0			
+550	567	1	Iliad	21	420	422	✅	Hera		✅	Athena		1280	1	general	single speech	3		0			
+551	568	1	Iliad	21	428	433	✅	Athena		❌	Ares and Aphrodite		1281	1	general	single speech	6		0			
+552	569	1	Iliad	21	436	460	✅	Poseidon		✅	Apollo		1282	1	dialogue	first part of dialogue	25		0			
+553	570	1	Iliad	21	462	467	✅	Apollo		✅	Poseidon		1282	2	dialogue	second part of dialogue	6		0			
+554	571	1	Iliad	21	472	477	✅	Artemis		✅	Apollo		1282	3	dialogue	third part of dialogue	6		0			
+555	572	1	Iliad	21	481	488	✅	Hera		✅	Artemis		1282	4	dialogue	fourth part of dialogue	8		0			
+556	573	1	Iliad	21	498	501	✅	Hermes		✅	Leto		1283	1	general	single speech	4		0			
+557	574	1	Iliad	21	509	510	✅	Zeus		✅	Artemis		1284	1	dialogue	first part of dialogue	2		0			
+558	575	1	Iliad	21	512	513	✅	Artemis		✅	Zeus		1284	2	dialogue	second part of dialogue	2		0			
+559	576	1	Iliad	21	531	536	✅	Priam		✅	Trojans		1285	1	general	single speech	6		0			
+560	577	1	Iliad	21	553	570	✅	Agenor		✅	self		1286	1	monologue	soliloquy	18		0			
+561	578	1	Iliad	21	583	589	✅	Agenor		✅	Achilles		1287	1	general	single speech	7		0			
+562	579	1	Iliad	22	8	13	✅	Apollo		✅	Achilles		1288	1	dialogue	first part of dialogue	6		0			
+563	580	1	Iliad	22	15	20	✅	Achilles		✅	Apollo		1288	2	dialogue	second part of dialogue	6		0			
+564	581	1	Iliad	22	38	76	✅	Priam		✅	Hector		1289	1	dialogue	first part of dialogue	39		0			
+565	582	1	Iliad	22	82	89	✅	Hecuba		✅	Hector		1289	2	dialogue	second part of dialogue	8		0			
+566	583	1	Iliad	22	99	130	✅	Hector		✅	self		1290	1	monologue	soliloquy	32		0			
+9	584	1	Iliad	22	107	107	✅	someone		✅	self		1371	1	monologue	soliloquy	1		1			
+567	585	1	Iliad	22	168	176	✅	Zeus		✅	gods		1291	1	dialogue	first part of dialogue	9		0			
+568	586	1	Iliad	22	178	181	✅	Athena		✅	Zeus		1291	2	dialogue	second part of dialogue	4		0			
+569	587	1	Iliad	22	183	185	✅	Zeus		✅	Athena		1291	3	dialogue	third part of dialogue	3		0			
+570	588	1	Iliad	22	216	223	✅	Athena		✅	Achilles		1292	1	general	single speech	8		0			
+571	589	1	Iliad	22	229	231	✅	Athena	disguise: Deiphobus	✅	Hector		1293	1	dialogue	first part of dialogue	3		0			
+572	590	1	Iliad	22	233	237	✅	Hector		✅	Athena	disguise: Deiphobus	1293	2	dialogue	second part of dialogue	5		0			
+573	591	1	Iliad	22	239	246	✅	Athena	disguise: Deiphobus	✅	Hector		1293	3	dialogue	third part of dialogue	8		0			
+574	592	1	Iliad	22	250	259	✅	Hector		✅	Achilles		1294	1	dialogue	first part of dialogue	10		0			
+575	593	1	Iliad	22	261	272	✅	Achilles		✅	Hector		1294	2	dialogue	second part of dialogue	12		0			
+576	594	1	Iliad	22	279	288	✅	Hector		✅	Achilles		1294	3	dialogue	third part of dialogue	10		0			
+577	595	1	Iliad	22	297	305	✅	Hector		✅	self		1295	1	monologue	soliloquy	9		0			
+578	596	1	Iliad	22	331	336	✅	Achilles		✅	Hector		1294	4	dialogue	fourth part of dialogue	6		0			
+579	597	1	Iliad	22	338	343	✅	Hector		✅	Achilles		1294	5	dialogue	fifth part of dialogue	6		0			
+580	598	1	Iliad	22	345	354	✅	Achilles		✅	Hector		1294	6	dialogue	sixth part of dialogue	10		0			
+581	599	1	Iliad	22	356	360	✅	Hector		✅	Achilles		1294	7	dialogue	seventh part of dialogue	5		0			
+582	600	1	Iliad	22	365	366	✅	Achilles		✅	Hector		1294	8	dialogue	eighth part of dialogue	2		0			
+583	601	1	Iliad	22	373	374	✅	someone		✅	Greeks		1296	1	general	single speech	2		0			
+584	602	1	Iliad	22	378	394	✅	Achilles		✅	Greeks		1297	1	general	single speech	17		0			
+585	603	1	Iliad	22	416	428	✅	Priam		✅	Trojans		1298	1	general	single speech	13		0			
+586	604	1	Iliad	22	431	436	✅	Hecuba		✅	self		1299	1	monologue	soliloquy	6		0			
+587	605	1	Iliad	22	450	459	✅	Andromache		✅	servants		1300	1	general	single speech	10		0			
+588	606	1	Iliad	22	477	514	✅	Andromache		✅	self		1301	1	monologue	soliloquy	38		0			
+10	607	1	Iliad	22	498	498	❌	children		✅	Astyanax		1372	1	general	single speech	1		1			
+589	608	1	Iliad	23	6	11	✅	Achilles		❌	Myrmidons		1302	1	general	single speech	6		0			
+590	609	1	Iliad	23	19	23	✅	Achilles		✅	Patroclus		1303	1	monologue	soliloquy	5		0			
+591	610	1	Iliad	23	43	53	✅	Achilles		✅	Agamemnon		1304	1	general	single speech	11		0			
+592	611	1	Iliad	23	69	92	✅	Patroclus		✅	Achilles		1305	1	dialogue	first part of dialogue	24		0			
+593	612	1	Iliad	23	94	98	✅	Achilles		✅	Patroclus		1305	2	dialogue	second part of dialogue	5		0			
+594	613	1	Iliad	23	103	107	✅	Achilles		✅	self		1306	1	monologue	soliloquy	5		0			
+595	614	1	Iliad	23	144	151	✅	Achilles		✅	Spercheius		1307	1	monologue	soliloquy	8		0			
+596	615	1	Iliad	23	156	160	✅	Achilles		✅	Agamemnon		1308	1	general	single speech	5		0			
+597	616	1	Iliad	23	179	183	✅	Achilles		✅	Patroclus		1309	1	monologue	soliloquy	5		0			
+598	617	1	Iliad	23	205	211	✅	Iris		❌	winds		1310	1	general	single speech	7		0			
+599	618	1	Iliad	23	236	248	✅	Achilles		✅	Agamemnon		1311	1	general	single speech	13		0			
+600	619	1	Iliad	23	272	286	✅	Achilles		✅	Greeks		1312	1	general	single speech	15		0			
+601	620	1	Iliad	23	306	348	✅	Nestor		✅	Antilochus		1313	1	general	single speech	43		0			
+602	621	1	Iliad	23	403	416	✅	Antilochus		❌	Horses		1314	1	general	single speech	14		0			
+603	622	1	Iliad	23	426	428	✅	Agamemnon		✅	Antilochus		1315	1	general	single speech	3		0			
+604	623	1	Iliad	23	439	441	✅	Menelaus		✅	Antilochus		1316	1	general	single speech	3		0			
+605	624	1	Iliad	23	443	445	✅	Menelaus		❌	Horses		1317	1	general	single speech	3		0			
+606	625	1	Iliad	23	457	472	✅	Idomeneus		✅	Greeks		1318	1	dialogue	first part of dialogue	16		0			
+607	626	1	Iliad	23	474	481	✅	Aias (son of Oileus)		✅	Idomeneus		1318	2	dialogue	second part of dialogue	8		0			
+608	627	1	Iliad	23	483	487	✅	Idomeneus		✅	Aias (son of Oileus)		1318	3	dialogue	third part of dialogue	5		0			
+609	628	1	Iliad	23	492	498	✅	Achilles		❌	Aias (son of Oileus) and Idomeneus		1318	4	dialogue	fourth part of dialogue	7		0			
+610	629	1	Iliad	23	536	538	✅	Achilles		✅	Greeks		1319	1	dialogue	first part of dialogue	3		0			
+611	630	1	Iliad	23	543	554	✅	Antilochus		✅	Achilles		1319	2	dialogue	second part of dialogue	12		0			
+612	631	1	Iliad	23	558	562	✅	Achilles		✅	Antilochus		1319	3	dialogue	third part of dialogue	5		0			
+613	632	1	Iliad	23	570	585	✅	Menelaus		✅	Antilochus		1319	4	dialogue	fourth part of dialogue	16		0			
+11	633	1	Iliad	23	576	578	✅	someone		✅	self		1373	1	monologue	soliloquy	3		1			
+614	634	1	Iliad	23	587	595	✅	Antilochus		✅	Menelaus		1319	5	dialogue	fifth part of dialogue	9		0			
+615	635	1	Iliad	23	602	611	✅	Menelaus		✅	Antilochus		1319	6	dialogue	sixth part of dialogue	10		0			
+616	636	1	Iliad	23	618	623	✅	Achilles		✅	Nestor		1319	7	dialogue	seventh part of dialogue	6		0			
+617	637	1	Iliad	23	626	650	✅	Nestor		✅	Achilles		1319	8	dialogue	eighth part of dialogue	25		0			
+618	638	1	Iliad	23	658	663	✅	Achilles		✅	Greeks		1320	1	dialogue	first part of dialogue	6		0			
+619	639	1	Iliad	23	667	675	✅	Epeius		✅	Greeks		1320	2	dialogue	second part of dialogue	9		0			
+620	640	1	Iliad	23	707	707	✅	Achilles		✅	Greeks		1321	1	general	single speech	1		0			
+621	641	1	Iliad	23	723	724	✅	Aias (son of Telamon)		✅	Odysseus		1322	1	general	single speech	2		0			
+622	642	1	Iliad	23	735	737	✅	Achilles		❌	Aias and Odysseus		1323	1	general	single speech	3		0			
+623	643	1	Iliad	23	753	753	✅	Achilles		✅	Greeks		1324	1	general	single speech	1		0			
+624	644	1	Iliad	23	770	770	✅	Odysseus		✅	Athena	prayer	1325	1	monologue	soliloquy	1		0			
+625	645	1	Iliad	23	782	783	✅	Aias (son of Oileus)		✅	Greeks		1326	1	dialogue	first part of dialogue	2		0			
+626	646	1	Iliad	23	787	792	✅	Antilochus		✅	Greeks		1326	2	dialogue	second part of dialogue	6		0			
+627	647	1	Iliad	23	795	796	✅	Achilles		✅	Antilochus		1326	3	dialogue	third part of dialogue	2		0			
+628	648	1	Iliad	23	802	810	✅	Achilles		✅	Greeks		1327	1	general	single speech	9		0			
+629	649	1	Iliad	23	831	835	✅	Achilles		✅	Greeks		1328	1	general	single speech	5		0			
+630	650	1	Iliad	23	855	858	✅	Achilles		✅	Greeks		1329	1	general	single speech	4		0			
+631	651	1	Iliad	23	890	894	✅	Achilles		✅	Agamemnon		1330	1	general	single speech	5		0			
+632	652	1	Iliad	24	33	54	✅	Apollo		✅	gods		1331	1	dialogue	first part of dialogue	22		0			
+633	653	1	Iliad	24	56	63	✅	Hera		✅	Apollo		1331	2	dialogue	second part of dialogue	8		0			
+634	654	1	Iliad	24	65	76	✅	Zeus		✅	Hera		1331	3	dialogue	third part of dialogue	12		0			
+635	655	1	Iliad	24	88	88	✅	Iris		✅	Thetis		1332	1	dialogue	first part of dialogue	1		0			
+636	656	1	Iliad	24	90	92	✅	Thetis		✅	Iris		1332	2	dialogue	second part of dialogue	3		0			
+637	657	1	Iliad	24	104	119	✅	Zeus		✅	Thetis		1333	1	general	single speech	16		0			
+638	658	1	Iliad	24	128	137	✅	Thetis		✅	Achilles		1334	1	dialogue	first part of dialogue	10		0			
+639	659	1	Iliad	24	139	140	✅	Achilles		✅	Thetis		1334	2	dialogue	second part of dialogue	2		0			
+640	660	1	Iliad	24	144	158	✅	Zeus		✅	Iris		1335	1	general	single speech	15		0			
+641	661	1	Iliad	24	171	187	✅	Iris		✅	Priam		1336	1	general	single speech	17		0			
+642	662	1	Iliad	24	194	199	✅	Priam		✅	Hecuba		1337	1	dialogue	first part of dialogue	6		0			
+643	663	1	Iliad	24	201	216	✅	Hecuba		✅	Priam		1337	2	dialogue	second part of dialogue	16		0			
+644	664	1	Iliad	24	218	227	✅	Priam		✅	Hecuba		1337	3	dialogue	third part of dialogue	10		0			
+645	665	1	Iliad	24	239	246	✅	Priam		✅	Trojans		1338	1	general	single speech	8		0			
+646	666	1	Iliad	24	253	264	✅	Priam		❌	Priam's sons		1339	1	general	single speech	12		0			
+647	667	1	Iliad	24	287	298	✅	Hecuba		✅	Priam		1340	1	dialogue	first part of dialogue	12		0			
+648	668	1	Iliad	24	300	301	✅	Priam		✅	Hecuba		1340	2	dialogue	second part of dialogue	2		0			
+649	669	1	Iliad	24	308	313	✅	Priam		✅	Zeus	prayer	1341	1	monologue	soliloquy	6		0			
+650	670	1	Iliad	24	334	338	✅	Zeus		✅	Hermes		1342	1	general	single speech	5		0			
+651	671	1	Iliad	24	354	357	✅	Idaeus		✅	Priam		1343	1	general	single speech	4		0			
+652	672	1	Iliad	24	362	371	✅	Hermes	disguise: young man	✅	Priam		1344	1	dialogue	first part of dialogue	10		0			
+653	673	1	Iliad	24	373	377	✅	Priam		✅	Hermes	disguise: young man	1344	2	dialogue	second part of dialogue	5		0			
+654	674	1	Iliad	24	379	385	✅	Hermes	disguise: young man	✅	Priam		1344	3	dialogue	third part of dialogue	7		0			
+655	675	1	Iliad	24	387	388	✅	Priam		✅	Hermes	disguise: young man	1344	4	dialogue	fourth part of dialogue	2		0			
+656	676	1	Iliad	24	390	404	✅	Hermes	disguise: young man	✅	Priam		1344	5	dialogue	fifth part of dialogue	15		0			
+657	677	1	Iliad	24	406	409	✅	Priam		✅	Hermes	disguise: young man	1344	6	dialogue	sixth part of dialogue	4		0			
+658	678	1	Iliad	24	411	423	✅	Hermes	disguise: young man	✅	Priam		1344	7	dialogue	seventh part of dialogue	13		0			
+659	679	1	Iliad	24	425	431	✅	Priam		✅	Hermes	disguise: young man	1344	8	dialogue	eighth part of dialogue	7		0			
+660	680	1	Iliad	24	433	439	✅	Hermes	disguise: young man	✅	Priam		1344	9	dialogue	ninth part of dialogue	7		0			
+661	681	1	Iliad	24	460	467	✅	Hermes		✅	Priam		1345	1	general	single speech	8		0			
+662	682	1	Iliad	24	486	506	✅	Priam		✅	Achilles		1346	1	dialogue	first part of dialogue	21		0			
+663	683	1	Iliad	24	518	551	✅	Achilles		✅	Priam		1346	2	dialogue	second part of dialogue	34		0			
+664	684	1	Iliad	24	553	558	✅	Priam		✅	Achilles		1346	3	dialogue	third part of dialogue	6		0			
+665	685	1	Iliad	24	560	570	✅	Achilles		✅	Priam		1346	4	dialogue	fourth part of dialogue	11		0			
+666	686	1	Iliad	24	592	595	✅	Achilles		✅	Patroclus		1347	1	monologue	soliloquy	4		0			
+667	687	1	Iliad	24	599	620	✅	Achilles		✅	Priam		1346	5	dialogue	fifth part of dialogue	22		0			
+668	688	1	Iliad	24	635	642	✅	Priam		✅	Achilles		1346	6	dialogue	sixth part of dialogue	8		0			
+669	689	1	Iliad	24	650	658	✅	Achilles		✅	Priam		1346	7	dialogue	seventh part of dialogue	9		0			
+670	690	1	Iliad	24	660	667	✅	Priam		✅	Achilles		1346	8	dialogue	eighth part of dialogue	8		0			
+671	691	1	Iliad	24	669	670	✅	Achilles		✅	Priam		1346	9	dialogue	ninth part of dialogue	2		0			
+672	692	1	Iliad	24	683	688	✅	Hermes		✅	Priam		1348	1	general	single speech	6		0			
+673	693	1	Iliad	24	704	706	✅	Cassandra		✅	Trojans		1349	1	general	single speech	3		0			
+674	694	1	Iliad	24	716	717	✅	Priam		✅	Trojans		1350	1	general	single speech	2		0			
+675	695	1	Iliad	24	725	745	✅	Andromache		✅	Hector		1351	1	monologue	soliloquy	21		0			
+676	696	1	Iliad	24	748	759	✅	Hecuba		✅	Hector		1352	1	monologue	soliloquy	12		0			
+677	697	1	Iliad	24	762	775	✅	Helena		✅	Hector		1353	1	monologue	soliloquy	14		0			
+678	698	1	Iliad	24	778	781	✅	Priam		✅	Trojans		1354	1	general	single speech	4		0			

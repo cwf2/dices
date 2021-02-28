@@ -7,7 +7,6 @@ import re
 from django.core import serializers
 
 
-
 def addAuthors(file):
     '''Parse the authors list from a TSV file'''
     f = open(file)
@@ -53,22 +52,20 @@ def addChars(file):
             print(f'Adding duplicate char name {c.name}.')
         c.wd = rec.get('wd').strip() or None
         if c.wd is None:
-            print(f'Character {c.id} ({c.name}) has no WikiData id.')
+            print(f'{c} has no WikiData id.')
         being = rec.get('being').strip() or None
         if being is None:
-            print(f'Character {c.id} ({c.name}) has no being.')  
+            print(f'{c} has no being.')  
         else:
             c.being = being
         char_type = rec.get('type').strip() or None
         if char_type is None:
-            print(f'Character {c.id} ({c.name}) has no type.')
+            print(f'{c} has no type.')
         else:
             c.type = char_type[0].upper()
         c.gender = rec.get('gender').strip() or None
         c.notes = rec.get('notes').strip() or None
-
         c.save()
-
 
 def addInst(name, speech):
     '''get or create character instance'''
@@ -99,28 +96,29 @@ def addSpeeches(file):
         s.seq = int(rec.get('seq'))
         book = rec.get('book').strip() or None
         if book is None:
-            print(f'speech has no book. skipping.')
+            print(f'{s} has no book. skipping.')
             continue
         line_from = rec.get('from_line').strip() or None
         if line_from is None:
-            print(f'speech has no from_line. skipping.')
+            print(f'{s} has no from_line. skipping.')
             continue
         line_to = rec.get('to_line').strip() or None
         if line_to is None:
-            print(f'speech has no to_line. skipping.')
+            print(f'{s} has no to_line. skipping.')
             continue
         s.l_fi = f'{book}.{line_from}'
         s.l_la = f'{book}.{line_to}'
         
         # cluster details
-        s.cluster_id = rec.get('cluster_id').strip() or None
-        if s.cluster_id is None:
-            print(f'Speech has no cluster ID: skipping.')
+        cluster_id = rec.get('cluster_id').strip() or None
+        if cluster_id is None:
+            print(f'{s} has no cluster ID: skipping.')
             continue
         try:
-            s.cluster = SpeechCluster.objects.get(id=int(s.cluster_id))
+            s.cluster = SpeechCluster.objects.get(id=int(cluster_id))
         except SpeechCluster.DoesNotExist:
             c = SpeechCluster()
+            c.id = cluster_id
             work_id = int(rec.get('work_id'))
             c.work = Work.objects.get(id=work_id)
             c.type = rec.get('simple_cluster_type')
@@ -129,7 +127,7 @@ def addSpeeches(file):
 
         part = rec.get('cluster_part').strip() or None
         if part is None:
-            print('speech has no part number.')
+            print(f'{s} has no part number.')
             part = 1
         s.part = int(part)
             
@@ -138,7 +136,7 @@ def addSpeeches(file):
         # character details
         spkr_str = rec.get('speaker').strip() or None
         if spkr_str is None:
-            print(f'Speech has no speakers: skipping.')
+            print(f'{s} has no speakers: skipping.')
             s.delete()
             continue
         else:
@@ -147,12 +145,12 @@ def addSpeeches(file):
                 if inst is not None:
                     s.spkr.add(inst)
             if len(s.spkr.all()) < 1:
-                print('speech has no valid speakers. skipping.')
+                print(f'{s} has no valid speakers. skipping.')
         s.spkr_notes = rec.get('speaker_notes').strip() or None
         
         addr_str = rec.get('addressee').strip() or None
         if addr_str is None:
-            print(f'Speech has no addressees: skipping.')
+            print(f'{s} has no addressees: skipping.')
             s.delete()
             continue
         else:
@@ -161,7 +159,7 @@ def addSpeeches(file):
                 if inst is not None:
                     s.addr.add(inst)
             if len(s.addr.all()) < 1:
-                print('speech has no valid addressees. skipping.')
+                print(f'{s} has no valid addressees. skipping.')
         s.addr_notes = rec.get('addressee_notes').strip() or None
         
         # other
@@ -169,6 +167,8 @@ def addSpeeches(file):
         if s.level is not None:
             s.level = int(s.level)
         s.notes = rec.get('misc_notes').strip() or None
+        
+        s.save()
 
 
 class Command(BaseCommand):
