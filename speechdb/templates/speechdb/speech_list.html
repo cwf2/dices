@@ -12,8 +12,24 @@
     {% for s in page_obj %}
     <tr>
       <td><a href="{{ reader }}{{ s.get_urn }}">{{ s.cluster.work.get_long_name }} {{ s.l_fi }}—{{ s.l_la }}</a></td>
-      <td>{{ s.get_spkr_str }}</td>
-      <td>{{ s.get_addr_str }}</td>
+      <td>
+        {% for inst in s.spkr.all %}
+        <div>
+          <a href="{% url 'app:instance_detail' inst.id %}">
+            {{ inst.char.name }}
+          </a>
+        </div>
+        {% endfor %}
+      </td>
+      <td>
+        {% for inst in s.addr.all %}
+        <div>
+          <a href="{% url 'app:instance_detail' inst.id %}">
+            {{ inst.char.name }}
+          </a>
+        </div>
+        {% endfor %}
+      </td>
       <td>
         {% if s.cluster.speech_set.count > 1 %}
         <a href="{% url 'app:cluster_detail' s.cluster.id %}">

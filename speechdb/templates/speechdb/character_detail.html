@@ -1,0 +1,15 @@
+{% extends "speechdb/base_nosidebar.html" %}
+
+{% block title %}Character Detail{% endblock %}
+  <div style="margin-top:1em;"><strong>Detail</strong></div>
+
+{% block content %}
+<div class="jumbotron">
+  <h2>Character detail</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <p>Character: <span class="badge badge-secondary">{{ char.name }}</span></p>
+    </div>
+  </div>
+</div>
+{% endblock %}

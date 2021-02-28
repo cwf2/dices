@@ -4,48 +4,47 @@
   <div style="margin-top:1em;"><strong>Detail</strong></div>
 
 {% block content %}
-<div class="jumbotron">
-  <h2>Character instance  detail</h2>
-  <div class="row">
-    <div class="col-md-3">
-      <p>Character: <span class="badge badge-secondary">{{ inst.char.name }}</span></p>
-    </div>
-    <div class="col">
-      <a id="btn_char" class="btn btn-outline-secondary btn-sm" href="{% url 'app:characters' inst.char.pk %}">Show Character</a></p>
-    </div>
-  </div>
-  {% if inst.disg %}
-  <div class="row">
-    <div class="col">
-      <p>Disguise: <span class="badge badge-secondary">{{ inst.disg.name }}</span></p>
-    </div>
-  </div>
-  {% endif %}
-  <div class="row">
-    <div class="col">
-      <p>Context: <span class="badge badge-secondary">{{ inst.context }}</span></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <p><strong>Speeches</strong></p>
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header">Character instance  detail</h2>
+    <div class="accordion-body">
+      <table>
+        <tbody>
+          <tr>
+            <th>Character:</th>
+            <td><a href="{% url 'app:character_detail' inst.char.pk %}">{{ inst.char.name }}</a></td>
+          </tr>
+          {% if inst.disg %}
+          <tr>
+            <th>Disguise:</th>
+            <td>{{ inst.disg.name }}</td>
+          </tr>
+          {% endif %}
+          <tr>
+            <th>Context:</th>
+            <td>{{ inst.context }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-3">
-      <p>Speaker: <span class="badge badge-secondary">{{ inst.speeches.count }}</span></p>
-    </div>
-    <div class="col">
-      <p><a id="btn_spkr" class="btn btn-outline-secondary btn-sm" href="{% url 'app:speeches' %}?spkr_inst={{ inst.pk }}">Show speeches</a></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-      <p>Addressee: <span class="badge badge-secondary">{{ inst.addresses.count }}</span></p>
-    </div>
-    <div class="col">
-      <p><a id="btn_addr" class="btn btn-outline-secondary btn-sm" href="{% url 'app:speeches' %}?addr_inst={{ inst.pk }}">Show speeches</a></p>
-    </div>
+  <div class="accordion-item">
+  <h2 class="accordion-header">Speeches</h2>
+  <div class="accordion-body">
+    <table>
+      <tbody>
+        <tr>
+          <th>Speaker:</th>
+          <td><span class="badge badge-secondary">{{ inst.speeches.count }}</span></td>
+          <td><a id="btn_spkr" class="btn btn-outline-secondary btn-sm" href="{% url 'app:speeches' %}?spkr_inst={{ inst.pk }}">Show speeches</a></td>
+        </tr>
+        <tr>
+          <th>Addressee:</th>
+          <td><span class="badge badge-secondary">{{ inst.addresses.count }}</span></td>
+          <td><a id="btn_addr" class="btn btn-outline-secondary btn-sm" href="{% url 'app:speeches' %}?addr_inst={{ inst.pk }}">Show speeches</a></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 {% endblock %}

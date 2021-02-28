@@ -294,6 +294,20 @@ class AppCharacterInstanceDetail(DetailView):
         return context
 
 
+class AppCharacterDetail(DetailView):
+    model = Character
+    template_name = 'speechdb/character_detail.html'
+    context_object_name = 'char'
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['reader'] = CTS_READER
+        
+        return context
+
+
 class AppSpeechList(ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
@@ -302,7 +316,7 @@ class AppSpeechList(ListView):
         ('spkr_id', int),
         ('addr_id', int),
         ('char_id', int),
-#        ('char_inst', int),
+        ('char_inst', int),
         ('spkr_inst', int),
         ('addr_inst', int),
         ('cluster_id', int),
