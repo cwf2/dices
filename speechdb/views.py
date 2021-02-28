@@ -123,6 +123,7 @@ class AuthorList(ListAPIView):
     serializer_class = AuthorSerializer
     filterset_class=AuthorFilter
 
+
 class AuthorDetail(RetrieveAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
@@ -132,6 +133,7 @@ class WorkList(ListAPIView):
     queryset = Work.objects.all()
     serializer_class = WorkSerializer
     filterset_class=WorkFilter
+
 
 class WorkDetail(RetrieveAPIView):
     queryset = Work.objects.all()
@@ -175,6 +177,7 @@ class SpeechClusterList(ListAPIView):
     queryset = SpeechCluster.objects.all()
     serializer_class = SpeechClusterSerializer
     filterset_class=SpeechClusterFilter    
+
 
 class SpeechClusterDetail(RetrieveAPIView):
     queryset = SpeechCluster.objects.all()
