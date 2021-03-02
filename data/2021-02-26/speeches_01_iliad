@@ -302,9 +302,9 @@ orig_id	seq	work_id	work	book	from_line	to_line	s_ok	speaker	speaker_notes	a_ok	
 291	301	1	Iliad	11	380	383	✅	Paris		✅	Diomedes		1139	1	dialogue	first part of dialogue	4		0			
 292	302	1	Iliad	11	385	395	✅	Diomedes		✅	Paris		1139	2	dialogue	second part of dialogue	11		0			
 293	303	1	Iliad	11	404	410	✅	Odysseus		✅	self		1140	1	monologue	soliloquy	7		0			
-294	304	1	Iliad	11	430	433	❌	Socus		✅	Odysseus		1141	1	dialogue	first part of dialogue	4		0			
-295	305	1	Iliad	11	441	445	✅	Odysseus		❌	Socus		1141	2	dialogue	second part of dialogue	5		0			
-296	306	1	Iliad	11	450	455	✅	Odysseus		❌	Socus		1141	3	dialogue	third part of dialogue	6		0			
+294	304	1	Iliad	11	430	433	✅	Socus		✅	Odysseus		1141	1	dialogue	first part of dialogue	4		0			
+295	305	1	Iliad	11	441	445	✅	Odysseus		✅	Socus		1141	2	dialogue	second part of dialogue	5		0			
+296	306	1	Iliad	11	450	455	✅	Odysseus		✅	Socus		1141	3	dialogue	third part of dialogue	6		0			
 297	307	1	Iliad	11	465	471	✅	Menelaus		✅	Aias (son of Telamon)		1142	1	general	single speech	7		0			
 298	308	1	Iliad	11	511	515	✅	Idomeneus		✅	Nestor		1143	1	general	single speech	5		0			
 299	309	1	Iliad	11	523	530	✅	Cebriones		✅	Hector		1144	1	general	single speech	8		0			
@@ -640,7 +640,7 @@ orig_id	seq	work_id	work	book	from_line	to_line	s_ok	speaker	speaker_notes	a_ok	
 619	639	1	Iliad	23	667	675	✅	Epeius		✅	Greeks		1320	2	dialogue	second part of dialogue	9		0			
 620	640	1	Iliad	23	707	707	✅	Achilles		✅	Greeks		1321	1	general	single speech	1		0			
 621	641	1	Iliad	23	723	724	✅	Aias (son of Telamon)		✅	Odysseus		1322	1	general	single speech	2		0			
-622	642	1	Iliad	23	735	737	✅	Achilles		❌	Aias and Odysseus		1323	1	general	single speech	3		0			
+622	642	1	Iliad	23	735	737	✅	Achilles		❌	Aias (son of Telamon) and Odysseus		1323	1	general	single speech	3		0			
 623	643	1	Iliad	23	753	753	✅	Achilles		✅	Greeks		1324	1	general	single speech	1		0			
 624	644	1	Iliad	23	770	770	✅	Odysseus		✅	Athena	prayer	1325	1	monologue	soliloquy	1		0			
 625	645	1	Iliad	23	782	783	✅	Aias (son of Oileus)		✅	Greeks		1326	1	dialogue	first part of dialogue	2		0			

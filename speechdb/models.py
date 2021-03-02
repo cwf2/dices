@@ -46,7 +46,7 @@ class Character(models.Model):
     ]
     
     name = models.CharField(max_length=64)
-    being = models.CharField(max_length=16, default='human')
+    being = models.CharField(max_length=32, default='human')
     type = models.CharField(max_length=1, choices=character_type_choices,
             default='I')
     wd = models.CharField('WikiData ID', max_length=32, null=True)
@@ -84,19 +84,14 @@ class CharacterInstance(models.Model):
 
 class SpeechCluster(models.Model):
     '''A group of related speeches'''
-    SOLILOQUY = 'S'
-    MONOLOGUE = 'M'
-    DIALOGUE = 'D'
-    GENERAL = 'G'
     
-    speech_type_choices = [
-        (SOLILOQUY, 'Soliloquy'),
-        (MONOLOGUE, 'Monologue'),
-        (DIALOGUE, 'Dialogue'),
-        (GENERAL, 'General'),
-    ]
-    
-    type = models.CharField(max_length=1, choices=speech_type_choices)
+    class ClusterType(models.TextChoices):
+        SOLILOQUY = ('S', 'Soliloquy')
+        MONOLOGUE = ('M', 'Monologue')
+        DIALOGUE = ('D', 'Dialogue')
+        GENERAL = ('G', 'General')
+        
+    type = models.CharField(max_length=1, choices=ClusterType.choices)
     work = models.ForeignKey(Work, on_delete=models.PROTECT)
     
     class Meta:
