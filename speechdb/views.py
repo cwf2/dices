@@ -124,6 +124,7 @@ class AuthorList(ListAPIView):
     serializer_class = AuthorSerializer
     filterset_class=AuthorFilter
 
+
 class AuthorDetail(RetrieveAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
@@ -133,6 +134,7 @@ class WorkList(ListAPIView):
     queryset = Work.objects.all()
     serializer_class = WorkSerializer
     filterset_class=WorkFilter
+
 
 class WorkDetail(RetrieveAPIView):
     queryset = Work.objects.all()
@@ -176,6 +178,7 @@ class SpeechClusterList(ListAPIView):
     queryset = SpeechCluster.objects.all()
     serializer_class = SpeechClusterSerializer
     filterset_class=SpeechClusterFilter    
+
 
 class SpeechClusterDetail(RetrieveAPIView):
     queryset = SpeechCluster.objects.all()
@@ -302,6 +305,22 @@ class AppCharacterInstanceDetail(LoginRequiredMixin, DetailView):
         return context
 
 
+
+class AppCharacterDetail(LoginRequiredMixin, DetailView):
+    model = Character
+    template_name = 'speechdb/character_detail.html'
+    context_object_name = 'char'
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['reader'] = CTS_READER
+        
+        return context
+
+
+
 class AppSpeechList(LoginRequiredMixin, ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
@@ -310,7 +329,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         ('spkr_id', int),
         ('addr_id', int),
         ('char_id', int),
-#        ('char_inst', int),
+        ('char_inst', int),
         ('spkr_inst', int),
         ('addr_inst', int),
         ('cluster_id', int),
