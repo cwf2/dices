@@ -123,7 +123,13 @@ def addSpeeches(file):
             c.id = cluster_id
             work_id = int(rec.get('work_id'))
             c.work = Work.objects.get(id=work_id)
-            c.type = rec.get('simple_cluster_type')
+            type_ = rec.get('simple_cluster_type').strip().upper()
+            if type_ in SpeechCluster.ClusterType.names:
+                c.type = SpeechCluster.ClusterType[type_]
+            elif type_ in SpeechCluster.ClusterType.values:
+                c.type = type_
+            else:
+                print(f'Bad cluster type: {type_}')
             c.save()
             s.cluster = c
 

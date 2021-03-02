@@ -274,6 +274,7 @@ Epeius	Q278930		human	individual	male
 Epimetheus' daughter				individual	female	
 Epytus						
 Erichtho	Q1227669		creature	individual	female	Witch: human? creature? god?
+Eros	Q121973		god	individual	male	
 Erysichthon	Q899184		human	individual	male	
 Eryx	Q430157	8188280	demi god	individual	male	
 Eteocles	Q506550	8188282	human	individual	male	
@@ -652,24 +653,23 @@ Pythagoras	Q10261		human	individual	male
 Q. Fulvius Flaccus	Q939456		human	individual	male	
 Queen of the Bacchantes						
 Quirites	Q636965		human	individual		A person of roman citizenship
-Raven	Q25357		creature			
-Regulus						Husband of Marcia
-Rhaebus						
+Raven	Q25357		creature	individual		
+Regulus				individual	male	Husband of Marcia
+Rhaebus				individual		
 Rhamnusia / Nemesis	Q185747	8189869	god	individual	female	
-Rhoetus (Ovid)						A centaur
-Rhoetus (Vergil)						
-Ripheus						
-River Acheloüs	Q203923		river			
-Roma						City: Q220, refers to Roman citizens
+Rhoetus (Ovid)				individual	male	A centaur
+Rhoetus (Vergil)				individual	male	
+Ripheus				individual		
+Roma			city	individual	female	City: Q220, refers to Roman citizens
 Romans			human	collective	mixed	
 Rutulians	Q579014		human	collective	mixed	Ethnic group
-Sabratha	Q192918		city			
-Saces						
+Sabratha	Q192918		city	individual		
+Saces				individual		
 Salii	Q366880		human (priests)	collective	male	
 Salmacis	Q828579		nymph	individual	female	
-same servant						
+same servant				individual		
 Sarpedon	Q762520		human	individual	male	
-Satricus						
+Satricus				individual		
 Scaeva			human	individual	male	
 Scaevola			human	individual	male	
 Scamander	Q1134694		river	individual	male	
@@ -679,35 +679,38 @@ Scipio's uncle			human	individual	male
 Scipio's son			human	individual	male	
 Scylla (Ovid Book 13)	Q193115	8189989	creature	individual	female	Nymph turned into a sea monster
 Scylla (Ovid Book 4)	Q1415180	8189990	human	individual	female	Daughter of Nisus
-self						
+self				individual		
 Semele	Q776139	8189994	human	individual	female	
 senate	Q2570643		human	collective	male	
-serpent			creature			Killed by Capaneus
+Serestus			human	individual	male	trojan captain in the aeneid
+Sergestus	Q1526637		human	individual	male	trojan captain in the aeneid
+serpent			creature	individual		Killed by Capaneus
 Serranus	Q3957984		human	individual	male	
 servants	Q464705		human	collective	mixed	
 Sextus Pompeius	Q1896383		human	individual	male	
 Sibyl	Q273320		god (oracle)	collective	female	Wikidata ID: group of oracles called the sibyls
-Sicoris						
+Sicoris				individual		
 Simoeis	Q2479077		river	individual	male	
 Sinon	Q663792	8189999	human	individual	male	
 sisters	Q595094			collective	female	
+Socus				individual	male	
 Sol	Q134270	8194729	god	individual	male	
 soldiers	Q4991371			collective	male	
 Solimus	Q7559062		demi god	individual	male	
 Somnus	Q21030618		god	individual	male	
-someone						
+someone				individual		
 Spercheius	Q426309		river	individual		Need another category for non-human entities? 
 Sthenelus	Q1060267		human	individual	male	
 suitors	Q1058631	9358838	human	collective	male	
 Sychaeus	Q2060196		human	individual	male	(Dido's husband acc to Virgil)
 Syphax	Q353141		human	individual	male	
 Syrinx	Q846129		nymph	individual	female	
-Syrticus						
+Syrticus				individual		
 Talthybius	Q1367860	8190056	human	individual	male	
 Tarchon	Q1194399		human	individual	male	
-Tarcondimotus						
+Tarcondimotus				individual		
 Tarquitus	Q3981176		demi god	individual	male	
-Taurea						
+Taurea				individual		
 Teiresias	Q656881	8190066	human	individual	male	
 Telamon	Q331327	8190067	human	individual	male	
 Telemachus	Q192482	8190074	human	individual	male	
@@ -725,13 +728,13 @@ Theban women			human	collective	female
 Thebes	Q5760			individual	female	
 Themis	Q159168	8188417	god	individual	female	
 Theoclymenus	Q2626787		human	individual	male	
-Theron						
+Theron				individual		
 Thersites	Q1045730		human	individual	male	
-Thesculus						
+Thesculus				individual		
 Theseus	Q1320718	8188822	human	individual	male	
 Thetis	Q184437	8190121	god	individual	female	
-Theutras						
-Thiodamas						
+Theutras				individual		
+Thiodamas				individual		
 Thisbe	Q10696861		human	individual	female	
 Thisbe's veil						
 Thoas	Q1367871	8190124	human	individual	male	
@@ -747,7 +750,7 @@ Titania
 Tlepolemus	Q690613	8190147	human	individual	male	
 Tmolus	Q17996944	8190148	human OR demi god	individual	male	
 Tolumnius	Q48800637		human	individual	male	
-Torquatus						
+Torquatus				individual		
 Toxeus	Q1237732	8190149	human	individual	male	
 Trebia						
 Triptolemus 	Q269243	8190154	human OR demi god	individual	male	
@@ -756,25 +759,25 @@ Trojans	Q47463094		human	collective	mixed
 Trojan women			human	collective	female	
 Turnus	Q633549		human OR demi god	individual	male	
 Tydeus	Q250506	8190161	human	individual	male	
-Tydeus' companions						
-Tydeus' horse						
+Tydeus' companions				collective		
+Tydeus' horse			creature	individual		
 Tyro	Q1126715		human	individual	female	
 Tyrrhenus	Q1400413		human	individual	male	
 Ulysses	Q47231		human	individual	male	same as: Odysseus
 Urania	Q104002	8189092	god	individual	female	Muse: same as god?
-Varro						
+Varro				individual	male	
 Venulus	Q4009778		human	individual	male	
 Venus	Q47652	8182231	god	individual	female	
 Vertumnus	Q374311		god	individual	male	
-Virgins						
-Virgo						
+Virgins				collective	female	
+Virgo				individual	female	
 Viriasius						
 Virrius						
 Virtus 	Q582177		god	individual	female	
 Volcens	Q4016094		human	individual	male	
 Voluptas	Q651660		god	individual	female	
 Vulcan	Q4640	8188476	god	individual	male	same as: Hephaestus
-Vulteius						
+Vulteius				individual		
 Water nymphs (Hydriades)	Q2160362		nymphs	collective	female	
 Zephyrus	Q467515		god	individual	male	
 Zeus	Q34201		god	individual	male	
