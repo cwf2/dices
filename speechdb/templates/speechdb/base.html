@@ -5,39 +5,33 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link href="{% static 'speechdb/bootstrap.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="{% static 'speechdb/style.css' %}" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{% static 'speechdb/dices.png' %}"/>
     <title>{% block title %}DICES{% endblock %}</title>
   </head>
   <body>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="{% static 'speechdb/bootstrap.js' %}"></script>
-
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+      <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'app:index' %}">
           DICES
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         {% block navbar %}
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="link-drpdn-speeches" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Speeches</a>
+              <a class="nav-link dropdown-toggle" id="link-drpdn-speeches" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Speeches</a>
               <div class="dropdown-menu" aria-labelledby="link-drpdn-speeches">
                 <a class="dropdown-item" href="{% url 'app:speech_search' %}">Search</a>
                 <a class="dropdown-item" href="{% url 'app:speeches' %}">Show all</a>
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="link-drpdn-chars" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Characters</a>
+              <a class="nav-link dropdown-toggle" id="link-drpdn-chars" href="#" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Characters</a>
               <div class="dropdown-menu" aria-labelledby="link-drpdn-chars">
 
               <a class="dropdown-item" href="{% url 'app:character_search' %}">Search</a>
@@ -46,11 +40,14 @@
           </ul>
         </div>
         {% endblock %}
-      </nav>
-    </div>
+      </div>
+    </nav>
     <div id="content" style="padding:20px;">
     {% block body %}
     {% endblock %}
     </div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
   </body>
 </html>
