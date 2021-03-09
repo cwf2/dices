@@ -69,8 +69,8 @@ orig_id	seq	work_id	work	book	from_line	to_line	s_ok	speaker	speaker_notes	a_ok	
 68	68	3	Argonautica	3	91	99	✅	Aphrodite		❌	Athena and Hera		3033	5	dialogue	fifth part of dialogue	9		0			
 69	69	3	Argonautica	3	102	105	✅	Aphrodite		❌	Athena and Hera		3033	6	dialogue	sixth part of dialogue	4		0			
 70	70	3	Argonautica	3	108	110	✅	Hera		✅	Aphrodite		3033	7	dialogue	seventh part of dialogue	3		0			
-71	71	3	Argonautica	3	129	144	✅	Aphrodite		❌	Eros		3034	1	dialogue	first part of dialogue	16		0			
-72	72	3	Argonautica	3	151	153	✅	Aphrodite		❌	Eros		3034	2	dialogue	second part of dialogue	3		0			
+71	71	3	Argonautica	3	129	144	✅	Aphrodite		✅	Eros		3034	1	dialogue	first part of dialogue	16		0			
+72	72	3	Argonautica	3	151	153	✅	Aphrodite		✅	Eros		3034	2	dialogue	second part of dialogue	3		0			
 73	73	3	Argonautica	3	171	193	✅	Jason		✅	Argonauts		3035	1	general	single speech	23		0			
 74	74	3	Argonautica	3	260	267	✅	Chalciope		❌	Argus (son of Phrixus) and Phrixus' sons		3036	1	general	single speech	8		0			
 75	75	3	Argonautica	3	304	316	✅	Aietes		❌	Argus (son of Phrixus) and Phrixus' sons		3037	1	dialogue	first part of dialogue	13		0			

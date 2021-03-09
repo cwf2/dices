@@ -1,0 +1,345 @@
+orig_id	seq	work_id	work	book	from_line	b	to_line	a	s_ok	speaker	speaker_notes	a_ok	addressee	addressee_notes	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	
+1	1	4	Aeneid	1	37	y	49	n	✅	Juno		✅	self		4001	1	S	S	12 3/4	80	0		S1	complaint; deliberation; story	
+2	2	4	Aeneid	1	65	n	75	n	✅	Juno		✅	Aeolus		4002	1	D	D	11	71	0		P1	rebuke, conditional offer; command	
+3	3	4	Aeneid	1	76	y	80	n	✅	Aeolus		✅	Juno		4002	2	D	D	4 7/12	30	0		R1	obey; praise, gratitude	
+4	4	4	Aeneid	1	94	y	101	n	✅	Aeneas		✅	Trojans	(dead) Trojans?	4003	1	S	S / M (no reply) ?	7 7/12	52	0		S2	complaint; lament, 	
+5	5	4	Aeneid	1	132	n	141	n	✅	Neptune		❌	Eurus and Zephyrus		4004	1	M	M (no reply)	10	67	0		C1	rebuke, threat, message to Aeolus	
+6	6	4	Aeneid	1	198	n	207	n	✅	Aeneas		❌	Aeneas' companions	socii	4005	1	M	M (no reply)	10	66	0		E1	exhortation, assurance, warning, prophecy	
+7	7	4	Aeneid	1	229	y	253	n	✅	Venus		✅	Jupiter		4006	1	D	D	24 2/3	162	0		P2	inquiry, rebuke; persuasion? 	
+8	8	4	Aeneid	1	257	n	296	n	✅	Jupiter		✅	Venus		4006	2	D	D	40	257	0		O1	prophecy, assurance	
+9	9	4	Aeneid	1	321	y	324	n	✅	Venus	disguise: virgo; but nearly recognised by Aeneas 	❌	Aeneas and Achates	(among them Aeneas)	4007	1	D	D	3 2/3	23	0		C2	question; simple inquiry	
+10	10	4	Aeneid	1	326	n	334	n	✅	Aeneas	(representative)	✅	Venus	disguise: virgo; she denies being a deity	4007	2	D	D	9	66	0		Pra1	prayer, inquiry, discovery	
+11	11	4	Aeneid	1	335	y	370	y	✅	Venus		❌	Aeneas and Achates	(pl., but primarily Aeneas)	4007	3	D	D	35 1/4	217	0		N1	story, reply and question	
+12	12	4	Aeneid	1	372	n	385	n	✅	Aeneas	(representative)	✅	Venus	disguise: virgo; denies being a deity, but is explicitly addressed by Aeneas as a goddess	4007	4	D	D	13 7/12	93      	0		N2	story, reply	
+13	13	4	Aeneid	1	387	n	401	n	✅	Venus		✅	Aeneas	(only: sgl.)	4007	5	D	D	15	102	0		O2	command, exhortation; omen and interpretation	
+14	14	4	Aeneid	1	407	n	409	n	✅	Aeneas		✅	Venus	(after her identity has been revealed)	4007	6	D	D	3	21	0		Q1	rebuke, inquiry, complaint	
+15	15	4	Aeneid	1	437	n	437	n	✅	Aeneas		✅	Carthaginians	Tyrii	4008	1	M	M / S	1	6	0		S3	outcry; exclamation, statement, praise	
+16	16	4	Aeneid	1	459	y	463	n	✅	Aeneas		✅	Achates		4009	1	M	M / S?	4 1/2	35    	0		P3	complaint? Lament? (self-exhortation?)	
+17	17	4	Aeneid	1	522	n	558	n	✅	Ilioneus	(ältester der Teukrer?Troer)	✅	Dido		4010	1	D	D	37	244	0	(but line 1.534: only a 4/12 line => 36 4/12) 	D1	entreaty, greeting, story, request	
+18	18	4	Aeneid	1	562	n	578	n	✅	Dido		✅	Trojans		4010	2	D	D	17	111	0		R2	welcome; greeting, offer	
+19	19	4	Aeneid	1	582	n	585	n	✅	Achates		✅	Aeneas		4010	3	D	D	4	26	0		P4	inquiry, exhortation	
+20	20	4	Aeneid	1	595	y	610	n	✅	Aeneas		✅	Dido		4010	4	D	D	15 1/6	106    	0		G1	greeting, praise, self-revelation	
+21	21	4	Aeneid	1	615	n	630	n	✅	Dido		✅	Aeneas	later invitation to all (iuvenes)	4010	5	D	D	16	103	0		G2	greeting, praise, invitation	
+22	22	4	Aeneid	1	664	n	688	n	✅	Venus		✅	Amor	(Cupido)	4011	1	M	M (no reply)	25	167	0		P5	entreaty, plan	
+23	23	4	Aeneid	1	731	n	735	n	✅	Dido		❌	Jupiter, Bacchus, Juno, Tyrii		4012	1	M	M (no reply)	5	33	0		Pra2	prayer, libation	
+24	24	4	Aeneid	1	753	n	756	n	✅	Dido		✅	Aeneas	?	4013	1	M	M (no reply)	3 5/6	26    	0		Q2	request, inquiry	
+	25	4	Aeneid	2	42	y	49	n	✅	Laocoon		✅	Trojans	Teucri	4014	1	M	M (no reply)	7 5/6	54    	1		P6	warning	
+	26	4	Aeneid	2	69	n	72	n	✅	Sinon	???	✅	self	? Surrounding group? 	4015	1	M	M (no reply)	3 5/6	31	1			lament; complaint	
+	27	4	Aeneid	2	77	n	104	n	✅	Sinon		❌	Priam and Trojans	Teucri	4016	1	M	M (no reply)	27 5/6	190	1			story	
+	28	4	Aeneid	2	108	n	144	n	✅	Sinon		❌	Priam and Trojans	Teucri	4017	1	M	M (no reply)	37	247	1			story+ bitte um Erbarmen?	
+	29	4	Aeneid	2	116	n	119	y	✅	Eurypylus		✅	Greeks	Danai	4018	1	M	M (no reply)	3 1/4	19	2			message / oracle (of Phoebus) request, warning	
+	30	4	Aeneid	2	148	n	151	n	✅	Priam		✅	Sinon		4019	1	D	D	4	30	1		Q3	inquiry, question	
+	31	4	Aeneid	2	154	n	194	n	✅	Sinon		❌	Priam and Trojans and Lichter, Altar, Messer 	Opfer/ Heiligengegenstände	4019	2	D	D	40 5/6	265	1			lament, complaint, story	
+	32	4	Aeneid	2	281	n	286	n	✅	Aeneas		✅	Hector	(dream)	4019	3	D	D	6	41	1		Q4	inquiry, question, lament	
+	33	4	Aeneid	2	289	n	295	n	✅	Hector	(dream)	✅	Aeneas		4019	4	D	D	6 11/12	48      	1		C3	prophecy & command	
+	34	4	Aeneid	2	322	n	322	n	✅	Aeneas		✅	Panthus	(Priest of Apollo)	4019	5	D	D	1	8	1		Q5	question	
+	35	4	Aeneid	2	324	n	335	n	✅	Panthus		✅	Aeneas		4019	6	D	D	12	72	1		N4	story; narration?	
+	36	4	Aeneid	2	348	y	354	n	✅	Aeneas		❌	Ripheus and Epytus and Hypanis and Dymas and Coroebus	iuvenes	4020	1	M	M (no reply)	6 7/12	41      	1		E2	exhortation?	
+	37	4	Aeneid	2	373	n	375	n	✅	Androgeos 	(Danaer?)	❌	Aeneas and Ripheus and Epytus and Hypanis and Dymas and Coroebus	disguise: Greeks	4021	1	M	M (no reply)	3	20	1		C4	exhortation; rebuke	
+	38	4	Aeneid	2	387	n	391	y	✅	Coroebus		❌	Aeneas and Ripheus and Epytus and Hypanis and Dymas		4022	1	M	M (no reply)	4 1/4	29    	1		P7	exhortation, plan	
+	39	4	Aeneid	2	519	y	524	y	✅	Hecuba		✅	Priam		4023	1	M	M (no reply)	5	38	1		P8	entreaty, complaint	
+	40	4	Aeneid	2	535	n	543	n	✅	Priam		✅	Neoptolemus		4024	1	D	D	8 3/4	63    	1		T1	threat; taunt, (prayer)	
+	41	4	Aeneid	2	547	y	550	y	✅	Neoptolemus	Pyrrhus	✅	Priam		4024	2	D	D	2 11/12	18      	1		T2	taunt, threat, command, ridicule	
+	42	4	Aeneid	2	577	n	587	n	✅	Aeneas		✅	self	(indirect: Venus)	4025	1	S 	S / D ?	11	65	1		S4	deliberation; 	
+	43	4	Aeneid	2	594	n	620	n	✅	Venus		✅	Aeneas		4026	1	D	D	27	171	1	(one of them a half-line)	N5	inquiry, description; narration, command??	
+	44	4	Aeneid	2	638	y	649	n	✅	Anchises		❌	iuvenes? Socii?		4026	2	D	D ~	11,5	73    	1	( my calculation: 11 5/12)	C5	exhortation; farewell; self-rebuke?	
+	45	4	Aeneid	2	657	n	670	n	✅	Aeneas		✅	Anchises	(später auch Venus und viri?)	4026	3	D	D	14	99	1		R3	complaint, inquiry, exhortation? Request	
+	46	4	Aeneid	2	675	n	678	n	✅	Creusa		✅	Aeneas		4027	1	M	M (no reply)	4	32	1		P9	request, complaint	
+	47	4	Aeneid	2	689	n 	691	n	✅	Anchises		✅	Jupiter		4028	1	M	M (no reply)	3	22	1		Pra3	prayer	
+	48	4	Aeneid	2	701	n	704	n	✅	Anchises		❌	gods and Aeneas	(et sidus)	4029	1	D	D	4	32	1		Pra4	prayer; and agreement	
+	49	4	Aeneid	2	707	n	720	y	✅	Aeneas		✅	Anchises		4029	2	D	D	14		1	(one is a half-line)	C6	exhortation; description?	
+	50	4	Aeneid	2	733	y	734	n	✅	Anchises		✅	Aeneas		4029	3	D	D?	1 1/2	10    	1		C7	outcry, warning, war cry?	
+	51	4	Aeneid	2	776	n	789	n	✅	Creusa		✅	Aeneas		4030	1	M	M (no reply)	14	95	1		O4	farewell speech, comfort	
+	52	4	Aeneid	3	41	n	46	n	✅	Polydorus		✅	Aeneas		4031	1	M	M (no reply)	6	43	1		C8	prayer, rebuke; question	
+	53	4	Aeneid	3	85	n	89	n	✅	Aeneas		❌	?	Thymbraeus? Templa? Altes Gemäuer/ gebaude, indirekt Gott Apollo (pater?)	4032	1	D	D ~	5	36	1		Pra5	prayer	
+	54	4	Aeneid	3	94	n	98	n	✅	Apollo		✅	Trojans	(Aeneas and co)	4032	2	D	D ~	5	33	1		O5	oracle, prophecy	
+	55	4	Aeneid	3	103	n	117	n	✅	Anchises		✅	proceres	 (?)	4033	1	M	M (no reply)	14 11/12	99      	1		O6	descriptive, exhortation, prophecy?, libation	
+	56	4	Aeneid	3	154	n	171	n	✅	Penates	(dream); uisi ante oculos astare iacentis / in somnis multo manifesti lumine,150f. 173 (nec sopor illud erat, )	✅	Aeneas		4034	1	M	M (no reply)	18	122	1		O7	Mittler Apolls; prophecy, oracle	
+	57	4	Aeneid	3	182	y	188	n	✅	Anchises		✅	Aeneas		4035	1	M	M (no reply)	6 3/4	77    	1		C9	prophecy (indirekt), exhortation	
+	58	4	Aeneid	3	247	n	257	n	✅	Celaeno (Harpy)		❌	Aeneas and Trojans	Sons of Laomedon	4036	1	M	M (no reply)	11	67	1		O8	prophecy; oracle (from Iupiter and Apollo)	
+	59	4	Aeneid	3	265	n	266	y	✅	Anchises		✅	gods	numina / di	4037	1	M	M (no reply)	1 7/12	11      	1		Pra6	prayer	
+	60	4	Aeneid	3	310	n	312	y	✅	Andromache		✅	Aeneas		4038	1	D	D	2 1/4	18    	1		Q6	inquiry, questions, request	
+	61	4	Aeneid	3	315	n	319	n	✅	Aeneas		✅	Andromache		4038	2	D	D	5	31	1	(darunter 1 halbzeile)	Q7	mitleid; complaint, lament, comfort, consolation?	
+	62	4	Aeneid	3	321	n	343	n	✅	Andromache		✅	Aeneas		4038	3	D	D	23	142	1	(1 Halbzeile)	N6	reply/ narration and inquiry	
+	63	4	Aeneid	3	359	n	368	n	✅	Aeneas		✅	Helenus	?	4038	4	D	D?	10	65	1		Q8	inquiry, questions	
+	64	4	Aeneid	3	374	n	462	n	✅	Helenus		✅	Aeneas		4038	5	D	D?	89	577    	1		O9	prophecy, oracle (Phoebus)	
+	65	4	Aeneid	3	475	n	481	n	✅	Helenus		✅	Anchises		4039	1	M	M (no reply)	691666666666667	45      	1	(bei mir 6 10/12)	F1	prophecy, request, oracle	
+	66	4	Aeneid	3	486	n	491	n	✅	Andromache		❌	Askanius; Astyanax; Aeneas	?	4040	1	M	M /D?	6	42	1		F2	request, description	
+	67	4	Aeneid	3	493	n	505	n	✅	Aeneas		❌	?	(Aenas und Gefährten)	4041	1	M	M /D?	13	82	1		F3	farewell	
+	68	4	Aeneid	3	528	n	529	n	✅	Anchises		✅	gods		4042	1	M	M (no reply)	2	13	1		Pra7	prayer	
+	69	4	Aeneid	3	539	y	543	y	✅	Anchises		❌	?	o terra hospita?	4043	1	M	M (no reply)	383333333333333	28    	1	(3 3/4 bei mir)	O10	oracle, prophecy	
+	70	4	Aeneid	3	558	y	560	n	✅	Anchises		✅	Trojans	socii	4044	1	M	M (no reply)	2 7/12	17      	1		C10	command, warning, descriptive	
+	71	4	Aeneid	3	599	y	606	n	✅	Achaemenides		✅	Trojans		4045	1	M	M (no reply)	7 5/12	52	1			entreaty, request, complaint	
+	72	4	Aeneid	3	613	n	654	n	✅	Achaemenides		✅	Trojans		4046	1	M	M (no reply)	42	266	1	(1 Halbzeile)	N7	narration	
+1	73	4	Aeneid	4	9	n	29	n	✅	Dido		✅	Anna Perenna		4047	1	D	D	21	144	0		N8	confession, narration; declaration	
+2	74	4	Aeneid	4	31	y	53	n	✅	Anna Perenna		✅	Dido		4047	2	D	D	22,75	141    	0	(one of them half-line)	D2	persuasion? Exhortation, deliberation?	
+3	75	4	Aeneid	4	93	n	104	n	✅	Juno	 (Saturnia)	✅	Venus	 (and cupido)	4047	3	D	D	12	79	0		P10	persuasion? Exhortation?	
+4	76	4	Aeneid	4	107	y	114	y	✅	Venus		✅	Juno		4047	4	D	D	6 2/3	44    	0		R4	reply, justification; command	
+5	77	4	Aeneid	4	115	n	127	y	✅	Juno		✅	Venus		4047	5	D	D	12 5/12	79      	0		P11	plan, persuasion	
+6	78	4	Aeneid	4	206	n	218	n	✅	Iarbas		✅	Jupiter		4047	6	D	D	13	82	0		Pra8	prayer	
+7	79	4	Aeneid	4	223	n	227	n	✅	Jupiter		✅	Mercury		4048	1	M	M (no reply)	15	103	0		C11	command, message (indirect speech)	
+8	80	4	Aeneid	4	265	y	276	y	✅	Mercury		✅	Aeneas		4049	1	M	M (no reply)	9 5/6	66    	0	(73 with omitted line) 	C12	rebuke, inquiry, command	
+	81	4	Aeneid	4	271	n	276	y	✅	Jupiter		✅	Aeneas	Mercury as messenger	4050	1	M	M (no reply)	4 1/4	29    	1	Iupiter (durch Merkur worte wiedergegeben); 276a (in Edition nicht als inserted speech gekennzeichnet); (with omitted line: 36)		request, inquiry, rebuke	
+9	82	4	Aeneid	4	305	n	330	n	✅	Dido		✅	Aeneas		4051	1	D	D	26	183	0		P12	rebuke, inquiry? farewell?	
+10	83	4	Aeneid	4	333	y	361	n	✅	Aeneas		✅	Dido		4051	2	D	D	285833333333333	188      	0	(1 halbzeile )	L1	justification / persuasion / vow/oath	
+11	84	4	Aeneid	4	365	n	387	n	✅	Dido		✅	Aeneas		4051	3	D	D	23	167	0		R5	rebuke, lament, complaint	
+12	85	4	Aeneid	4	416	n	436	n	✅	Dido		✅	Anna Perenna		4052	1	M	M (no reply)	21	141	0		P13	complaint; plan, persuasion, command	
+13	86	4	Aeneid	4	478	n	498	n	✅	Dido		✅	Anna Perenna		4053	1	M	M (no reply)	21	133	0		C13	persuasion, plan, command	
+14	87	4	Aeneid	4	534	n	552	n	✅	Dido		✅	self		4054	1	S	S	19	128	0		S5	deliberation; self-exhortation?	
+15	88	4	Aeneid	4	560	n	570	y	✅	Mercury	(dream); again; cf. Previous books;: omnia Mercurio similis, 558)	✅	Aeneas		4055	1	M	M (no reply)	10 1/6	70    	0		C14	rebuke, exhortation	
+16	89	4	Aeneid	4	573	y	579	y	✅	Aeneas		✅	soldiers	(viri) and Mercurius?	4056	1	M	M (no reply)	6	40	0		C15	exhortation + prayer	
+17	90	4	Aeneid	4	590	y	629	n	✅	Dido		❌	self and gods and Carthaginians		4057	1	S	S / M ?	39 1/3	261    	0		S6	lament, complaint, prayer, taunt, threat, command, exhortation	
+18	91	4	Aeneid	4	634	n	640	n	✅	Dido		✅	Barce	(nutrix Sychaei)	4058	1	M	M (no reply)	7	46	0		C16	command, message (indirect speech)	
+19	92	4	Aeneid	4	651	n	658	n	✅	Dido		✅	self	dulces exuuiae	4059	1	S 	S	8	53    	0			request, entreaty, farewell, complaint	
+19	93	4	Aeneid	4	659	y	662	n	✅	Dido		✅	self	bed	4060	1	S 	S	3 1/4	24    	0	(- ait problem)		farewell; declaration	
+20	94	4	Aeneid	4	675	n	685	y	✅	Anna Perenna		❌	Dido and women and self	?	4061	1	S 	S / M (no reply?)	10 1/4	72    	0		A1	lament, complaint, request	
+21	95	4	Aeneid	4	702	y	703	n	✅	Iris		✅	Dido	?	4062	1	M	M (no reply)	1 1/3	10    	0		N9	declaration; statement, comply?	
+1	96	4	Aeneid	5	13	n	14	y	✅	Palinurus		✅	Neptune	?	4063	1	M	M (no reply)	1 7/12	10      	0		A2	accusation, inquiry, questions	
+2	97	4	Aeneid	5	17	n	25	n	✅	Palinurus		✅	Aeneas		4064	1	D	D	9	59	0		P14	persuasion, suggestions	
+3	98	4	Aeneid	5	26		31		✅	Aeneas		✅	Palinurus		4064	2	D	D	5 7/12	38      	0		C 17	reply, command, rhetorical question	
+4	99	4	Aeneid	5	45	n	71	n	✅	Aeneas		✅	Trojans	(socii)	4065	1	M	M (no reply)	27		0		C18	command, exhortation	
+5	100	4	Aeneid	5	80	n	83	n	✅	Aeneas		✅	Anchises	sancte parens, cineres animaeque umbraeque paternae	4066	1	M	M (no reply)	4	24      	0		G3	Greeting, libation? Oratio funebris, lament?	
+6	101	4	Aeneid	5	162	n	164	y	✅	Gyas		✅	Menoetes		4067	1	M	M (no reply)	2 5/12	19	0	rather 2 speeches; new action, not interruption		command; rebuke	
+7	102	4	Aeneid	5	166	n	166	n	✅	Gyas		✅	Menoetes		4068	1	M	M (no reply)	 5/6	6    	0		C19	command	
+9	103	4	Aeneid	5	189	y	197	y	✅	Mnestheus		✅	Mnestheus' companions	(just Trojans?)	4069	1	M	M (no reply)	8	53	0		C20	exhortation, command	
+10	104	4	Aeneid	5	235	n	238	n	✅	Cloanthus		✅	gods	(di)	4070	1	M	M (no reply)	4	30	0		Pra9	prayer, vow	
+11	105	4	Aeneid	5	304	n	314	n	✅	Aeneas		❌	?	socii? Pueri? Wettkämpfer	4071	1	M	M (no reply)	11	67	0		C21	promise (prize), descriptive	
+12	106	4	Aeneid	5	348	y	350	n	✅	Aeneas		❌	pueri	(Wettkämpfer)	4072	1	D	D	2 5/12	17      	0		R6	assurance, promise, declaration	
+13	107	4	Aeneid	5	353	y	356	n	✅	Nisus		✅	Aeneas		4072	2	D	D	3 7/12	26      	0		Q9	inquiry, questions (rebuke)	
+14	108	4	Aeneid	5	363	n	364	n	✅	Aeneas		✅	Trojans	 (Wettkämpfer) ? Socii? 	4073	1	M	M (no reply)	2	14	0		C22	challenge, request	
+15	109	4	Aeneid	5	383	n	385	y	✅	Dares		✅	Aeneas		4074	1	M	M (no reply)	2 5/12	19      	0		P15	request, inquiry, 	
+16	110	4	Aeneid	5	389	n	393	n	✅	Acestes		✅	Entellus		4075	1	D	D	5	33      	0		P 16	inquiry, rebuke? Exhortation?	
+17	111	4	Aeneid	5	394	y	400	n	✅	Entellus		✅	Acestes		4075	2	D	D	633333333333333	45    	0	(bei mir 5 5/6)???	R7	reply, justification, explanation	
+19	112	4	Aeneid	5	410	n	420	n	✅	Entellus		✅	Aeneas	(?)	4076	1	M	M (no reply)	11	76      	0		P17	narration, explanation, request	
+20	113	4	Aeneid	5	465	n	467	y	✅	Aeneas		✅	Dares	?	4077	1	D	D	2 1/4	14    	0		C23	entreaty, command	
+21	114	4	Aeneid	5	474	n	476	n	✅	Entellus		❌	Aeneas and Teucri	?	4077	2	D	D~	2 5/6	21    	0		C24	command, rebuke? 	
+22	115	4	Aeneid	5	483	n	484	n	✅	Entellus		✅	Eryx		4078	1	M	M (no reply)	2	14    	0	continuation of the speech scene?	Pra10	prayer	
+23	116	4	Aeneid	5	533	n	538	n	✅	Aeneas		✅	Acestes		4079	1	M	M (no reply)	6	38    	0		C25	command, promise (verleiht preis)	
+24	117	4	Aeneid	5	548	n	551	y	✅	Aeneas		✅	Ascanius' companion	Egyptides	4080	1	M	M (no reply)	3 1/12	23      	0		C26	command	
+25a	118	4	Aeneid	5	623	n	640	n	✅	Iris	disguise: Beroe	❌	Trojan mothers	(Dardanidum matres)	4081	1	M	M (no reply)	17 5/6	127    	0		P 18	exhortation`? Complaint, lament?	
+25b	119	4	Aeneid	5	637	y	638	y	✅	Cassandra	(dream)	✅	Iris	disguise: Beroe	4082	1	M	M (no reply)	06-May	7	1	inserted speech	O11	outcry, oracle?	
+26	120	4	Aeneid	5	646	n	652	n	✅	Pyrgo		❌	Trojan mothers		4083	1	M	M (no reply)	7	44    	0		N10	persuasion, narration	
+27	121	4	Aeneid	5	670	n	673	y	✅	Ascanius		✅	Trojans	cives	4084	1	M	M (no reply)	3 1/12	23      	0		C27	rebuke, outcry, question, 	
+28	122	4	Aeneid	5	687	n	692	n	✅	Aeneas		✅	Jupiter		4085	1	M	M (no reply)	6	41    	0		Pra11	prayer	
+29	123	4	Aeneid	5	709	n	718	n	✅	Nautes		✅	Aeneas		4086	1	M	M (no reply)	10	67    	0		P19	prophecy	
+30	124	4	Aeneid	5	724	n	739	n	✅	Anchises	(dream)	✅	Aeneas		4087	1	D	D~	16	112    	0		C28	command, prophecy (zur Untersützung von Nautes / Iupiter; indirekte Antwort	
+31	125	4	Aeneid	5	741	y	742	n	✅	Aeneas		✅	Anchises	(dream)	4087	2	D	D~	1 7/12	13      	0		Q10	inquiry, question; complaint?	
+32	126	4	Aeneid	5	781	n	798	n	✅	Venus		✅	Neptune		4087	3	D	D	18	120    	0		P20	entreaty, narration, complaint	
+33	127	4	Aeneid	5	800	n	815	n	✅	Neptune		✅	Venus		4087	4	D	D	16	108    	0		R8	reply, promise, assurance, agreement?	
+34	128	4	Aeneid	5	843	n	846	n	✅	Somnus	disguise: Phorbas	✅	Palinurus		4087	5	D	D	4	26    	0		P21	command; advice?	
+35	129	4	Aeneid	5	848	n	851	n	✅	Palinurus		✅	Somnus		4087	6	D	D	4	24    	0		R9	reply, question, complaint?	
+36	130	4	Aeneid	5	870	n	871	n	✅	Aeneas		✅	Palinurus		4088	1	M	M (no reply)	2	13    	0		A3	lament?	
+1	131	4	Aeneid	6	37	n	39	n	✅	Deiphobe		✅	Aeneas		4089	1	M	M (no reply)	3	20	0		C29	prophecy, command	
+2	132	4	Aeneid	6	45	y	46	y	✅	Deiphobe		✅	Aeneas		4090	1	M	M (no reply)	04-Mar	6.	0	continuing scene	C30	command, prophecy?	
+3	133	4	Aeneid	6	51	y	53	y	✅	Deiphobe		✅	Aeneas		4091	1	M	M (no reply)	2 1/12	15      	0	continuing scene	C31	command, rebuke? prophecy	
+4	134	4	Aeneid	6	56	n	76	y	✅	Aeneas		❌	Phoebus and Deiphobe	(Deiphobe???) virgo	4092	1	M	M / D?	20 5/12	131      	0		Pra 12	prayer	
+5	135	4	Aeneid	6	83	n	97	n	✅	Deiphobe		✅	Aeneas	?	4093	1	M	M / D?	15	105	0	 (1 Halbzeile)	O 12	prophecy, oracle	
+6	136	4	Aeneid	6	103	y	123	n	✅	Aeneas		✅	Deiphobe	(Sibylle)	4094	1	M	M/ D`?	20 5/12	138      	0		P22	entreaty, ?	
+7	137	4	Aeneid	6	125	y	155	y	✅	Deiphobe		✅	Aeneas		4095	1	M	M (no reply)	296666666666667	202    	0	(bei mir 29 5/6)	C32	prophecy, oracle, command	
+8	138	4	Aeneid	6	187	n	189	n	✅	Aeneas		❌	self and Misenus	(dead?) Misenus und self?	4096	1	M	M (no reply)	3	23      	0		Pra13	prayer, wish	
+9	139	4	Aeneid	6	194	n	197	y	✅	Aeneas		❌	doves and Venus	(and her birds)	4097	1	M	M (no reply)	3 1/4	27    	0		Pra 14	prayer	
+10	140	4	Aeneid	6	258	y	261	n	✅	Deiphobe		✅	Aeneas		4098	1	M	M (no reply)	316666666666667	21    	0	(bei mir 2 10/12?)	C33	command, (Prophecy?)	
+11	141	4	Aeneid	6	318	n	320	n	✅	Aeneas		✅	Deiphobe	(Sibylle)	4099	1	D	D	2 11/12	22      	0		Q11	question, inquiry	
+12	142	4	Aeneid	6	322	n	330	n	✅	Deiphobe		✅	Aeneas		4099	2	D	D	9	60    	0		N11	narration, prophecy?	
+13	143	4	Aeneid	6	341	y	346	n	✅	Aeneas		✅	Palinurus	(dead/ shade of )	4099	3	D	D	5 7/12	38      	0		Q11	inquiry, questions, lament	
+14	144	4	Aeneid	6	347	y	371	n	✅	Palinurus		✅	Aeneas		4099	4	D	D	24 3/4	171    	0		N12	narration; request	
+15	145	4	Aeneid	6	373	n	381	n	✅	Deiphobe		✅	Palinurus	(dead/ shade of )	4100	1	M	M (no reply)	9	56      	0		C34	prophecy; promise?command	
+16	146	4	Aeneid	6	388	n	397	n	✅	Charon		✅	Deiphobe	(Sibylle)	4101	1	D	D	10	68    	0		C35	inquiry, command, narration	
+17	147	4	Aeneid	6	399	n	407	y	✅	Deiphobe		✅	Deiphobe	(Sibylle)	4101	2	D	D	7 1/2	49    	0		P23	reply, command; promise, assurance	
+18	148	4	Aeneid	6	456	n	466	n	✅	Aeneas		✅	Dido	(dead/ shade of) 	4102	1	M	M (no reply)	11	81    	0		P24	apology, lament; assurance of allegiance, vow, promise	
+19	149	4	Aeneid	6	500	n	508	n	✅	Aeneas		✅	Deiphobus	(dead, shade of) 	4103	1	D	D	9	61    	0		Q13	question, inquiry, lament	
+20	150	4	Aeneid	6	509	y	534	n	✅	Deiphobus		✅	Aeneas		4103	2	D	D	25 7/12	172      	0		N13	narration, inquiry	
+21	151	4	Aeneid	6	539	n	543	n	✅	Deiphobe		✅	Aeneas		4104	1	M	M / D?	5	38    	0		C36	command, descriptive	
+22	152	4	Aeneid	6	544	y	546	n	✅	Deiphobus		✅	Deiphobe	 (Sibylle) and Aeneas?	4105	1	M	M / D?	2 7/12	16      	0		F4	assurance, exhoration, farewell	
+23	153	4	Aeneid	6	560	n	561	n	✅	Aeneas		✅	Deiphobe	(Sibylle)	4106	1	D	D	2	14    	0		Q14	inquiry, question	
+24	154	4	Aeneid	6	562	y	627	n	✅	Deiphobe		✅	Aeneas		4106	2	D	D	65 5/12	407      	0	ohne inserted 64 5/12; 400 words	N 14	narration	
+24b	155	4	Aeneid	6	620	n	620	n	❌	Phlegyas 		❌	?	bystanders? Socii? Aeneas?	4107	1	M	M (no reply)	1	7    	1	inserted 	C37	outcry, warning, advice?	
+25	156	4	Aeneid	6	629	n	632	n	✅	Deiphobe		✅	Aeneas		4108	1	M	M (no reply)	3 11/12	26      	0	forführung der rede	C38	command, exhortation	
+26	157	4	Aeneid	6	669	n	671	n	✅	Deiphobe		❌	Musaeus	animae?	4109	1	D	D	3	20    	0		Q15	inquiry, question	
+27	158	4	Aeneid	6	673	n	676	n	✅	Musaeus 		✅	Deiphobe		4109	2	D	D	4	28      	0		R10	reply, promise, information	
+28	159	4	Aeneid	6	687	n	694	n	✅	Anchises		✅	Aeneas		4110	1	D	D	8	55    	0		G4	greeting, praise, inquiry	
+29	160	4	Aeneid	6	695	y	698	n	✅	Aeneas		✅	Anchises		4110	2	D	D	3 3/4	26    	0		G5	greeting, praise, entreaty	
+30	161	4	Aeneid	6	713	y	718	n	✅	Anchises		✅	Aeneas		4110	3	D	D	5 7/12	35      	0		N15	narration, information, advice	
+31	162	4	Aeneid	6	719	n	721	n	✅	Aeneas		✅	Anchises		4110	4	D	D	3	23    	0		Q16	inquiry, question	
+32	163	4	Aeneid	6	722	n	722	n	✅	Anchises		✅	Aeneas		4110	5	D	D	1	6    	0	one speech, only interrupted, together (29)? 		reply, narration	
+	164	4	Aeneid	6	724		751		✅	Anchises		✅	Aeneas		4110	6	D		29	187    	1	(28)????	N16		
+	165	4	Aeneid	6	756	n	853	n	✅	Anchises		✅	Aeneas	(und sekundär Deiphobe) ?	4110	7	D	D	98	628    	1	 (1 halbzeile?)		prophecy, oracle	
+	166	4	Aeneid	6	855	n	859	n	✅	Anchises		✅	Aeneas	(und sekundär Deiphobe) ?	4110	8	D	D	5	29    	1		O13	prophecy, oracle	
+	167	4	Aeneid	6	863	n	866	n	✅	Aeneas		✅	Anchises		4110	9	D	D	4	30    	1		Q17	question, inquiry	
+	168	4	Aeneid	6	868	n	886	n	✅	Anchises		✅	Aeneas		4110	10	D	D	18 1/6	124    	1		O14	complaint? Oracle???	
+1	169	4	Aeneid	7	68b	y	70	n	❌	Vates Latinorum 	68-70	✅	Latinus	?	4111	1	M	M (no reply) / S?	2 5/12	16      	0		O15	oracle, prophecy	
+2	170	4	Aeneid	7	96	n	101	n	✅	Faunus 		✅	Latinus		4112	1	M	M (no reply)	6	39	0		O16	oracle, prophecy	
+3	171	4	Aeneid	7	116	n	116	y	✅	Ascanius		❌	?	self? Socii? Father?	4113	1	M	M / D / S?	03-Feb	4.	0		N17	outcry; declaration, statement	
+4	172	4	Aeneid	7	120	y	134	n	✅	Aeneas		❌	?	self? Socii? Ascanius? Tellus and penates?	4114	1	M	M / D / S?	146666666666667	96    	0	(1 halfline)	O17	oracle, prophecy, command	
+	173	4	Aeneid	7	124	n	127	n	✅	Anchises	(shade of) Anchises?	✅	Aeneas		4115	1	M	M (no reply)	4	25	1	inserted	O18	oracle, 	
+5	174	4	Aeneid	7	195	n	211	n	✅	Latinus		✅	Trojans	(Dardanidae)	4116	1	D	D	17	113	0		Q18	inquiry, questions, greeting/persuasion	
+6	175	4	Aeneid	7	213	n	248	(n)	✅	Ilioneus		✅	Latinus		4116	2	D	D	36	234	0	(final line: half-line)	D3	reply; information, greeting, request, promise	
+7	176	4	Aeneid	7	259	y	273	n	✅	Latinus		✅	Trojans	(and sekundär di)	4116	3	D	D	14 7/12	103      	0		R11	reply, promise, command; invitation?	
+8	177	4	Aeneid	7	293	n	322	n	✅	Juno		✅	Aeneas	self?	4117	1	M	M / S??	30	207	0		S8	complaint? self?	
+9	178	4	Aeneid	7	331	n	340	n	✅	Juno		✅	Allecto		4118	1	M	M (no reply)	10	64	0		P25	exhortation, command, plan	
+10	179	4	Aeneid	7	359	n	372	n	✅	Amata		✅	Latinus		4119	1	M	M (no reply)	'14	92	0		P26	question, inquiry, request? Plan?	
+11	180	4	Aeneid	7	400	y	403	n	✅	Amata		✅	Latin mothers		4120	1	M	M (no reply)	3 11/12	25      	0	additional speech: 389-391?	C39	command, exhortation	
+12	181	4	Aeneid	7	421	n	434	n	✅	Allecto	 disguise: Calybe 	✅	Turnus		4121	1	D	D	14	95	0		P27	exhortation, command, plan, labels this Junos will	
+13	182	4	Aeneid	7	436	y	444	n	✅	Turnus		✅	Allecto	disguise: Calybe	4121	2	D	D	8,75	56    	0	(among them 1 half-line)	R12	reply, ridicule; command	
+14	183	4	Aeneid	7	452	n	455	n	✅	Allecto	 (not disguised anymore)	✅	Turnus		4121	3	D	D / M no reply)	4	26	0	(1 halfline?)	T3	taunt, threat, rebuke?	
+15	184	4	Aeneid	7	545	n	551	n	✅	Allecto		✅	Juno		4121	4	D	D	7	46	0		P28	pledge of allegiance, information; promise, question for instruction?	
+16	185	4	Aeneid	7	552	y	560	y	✅	Juno		✅	Allecto		4121	5	D	D	7 5/6	56    	0		R13	reply, decline of offer, command, advice	
+17	186	4	Aeneid	7	594	n	599	y	✅	Latinus		❌	di and Turnus	/ die?	4122	1	M	M (no reply)	5 5/12	35      	0		O19	prayer? Complaint? Oracle, prophecy	
+1	187	4	Aeneid	8	36	n	65	n	❌	Tiberinus 	 (= Thybris??)	✅	Aeneas		4123	1	D	D	29	195	0	(1 half-line)	O20	oracle, greeting, praise	
+2	188	4	Aeneid	8	71	n	78	n	✅	Aeneas		✅	Tiberinus	(primär), / Thybris?? Laurentes nymphae (sekundär)	4123	2	D	D	8	53	0		Pra15	prayer, grateful	
+3	189	4	Aeneid	8	112	y	114	n	✅	Pallas		❌	iuuenes		4123	3	D	D	2 5/12	18      	0		Q19	inquiry, question	
+4	190	4	Aeneid	8	117	n	120	n	✅	Aeneas		✅	Pallas		4123	4	D	D	4	25	0		C40	request, entreaty, reply	
+5	191	4	Aeneid	8	122	n	123	n	✅	Pallas		✅	Aeneas		4123	5	D	D	1 11/12	12      	0		C41	invitation, command, offer 	
+6	192	4	Aeneid	8	127	n	151	n	✅	Aeneas		✅	Evander	(rex)	4123	6	D	D	25	171	0		D4	request, entreaty, plea	
+7	193	4	Aeneid	8	154	y	174	n	✅	Evander		✅	Aeneas		4123	7	D	D	20 7/12	129      	0		R14	narration, reply, invitation	
+8	194	4	Aeneid	8	185	y	275	n	✅	Evander		❌	iuvenes	(primär Aeneas?)	4124	1	M	M (no reply)	90 7/12	553      	0		N18	narration and command	
+9	195	4	Aeneid	8	293	y	302	n	❌	Salii 		❌	?	Hercules? Aeneas?	4125	1	M	M / S 	9 3/4	66    	0		Pra16	praise, prayer?	
+10	196	4	Aeneid	8	314	n	336	n	✅	Evander		✅	Aeneas		4126	1	M	M (no reply)	23	151      	0		N19	narration	
+11	197	4	Aeneid	8	351	n	358	n	✅	Evander		✅	Aeneas		4127	1	M	M (no reply)	7 5/6	50    	0		N20	narration, descriptive	
+12	198	4	Aeneid	8	362	y	365	n	✅	Evander		✅	Aeneas		4128	1	M	M (no reply)	3 5/12	24      	0		P29	narration and invitation	
+13	199	4	Aeneid	8	374	n	386	n	✅	Venus		✅	Vulcan		4129	1	D	D	13	83    	0		P30	entreaty? Request? persuasion	
+14	200	4	Aeneid	8	395	n	404	y	✅	Vulcan		✅	Venus		4129	2	D	D	9 7/12	68      	0		R15	reply, assurance, agreement	
+15	201	4	Aeneid	8	439	n	443	y	✅	Vulcan		✅	Cyclopes	(Aetnaei) 	4130	1	M	M (no reply)	4 1/4	27    	0		C42	command	
+16	202	4	Aeneid	8	470	n	519	n	✅	Evander		❌	Aeneas and Pallas and Achates	Aeneas (primär), Pallas und Achates (sekundär?)	4131	1	M	M /D?	50	322      	0		N21	narration	
+	203	4	Aeneid	8	499	y	503	y	✅	Haruspex		❌	Maeoniae iuventus		4132	1	M	M /D?	4 1/3	28    	1	inserted	O21	oracle, prophecy	
+17	204	4	Aeneid	8	532	y	540	n	✅	Aeneas		✅	Evander	hospes (Evander?), Laurentes, Turnus, Thybri pater? 	4133	1	M	M / D?	8,75	57    	0	(1 half-line)	O22	oracle, prophecy, explanation, prayer?	
+18	205	4	Aeneid	8	560	n	583	y	✅	Evander		❌	Pallas and Jupiter and gods	Pallas (primär), superi and esp. Iupiter (sekundär)	4134	1	M	M (no reply)	23 1/6	159    	0		F5	farewell, prayer	
+19	206	4	Aeneid	8	612	n	614	n	✅	Venus		✅	Aeneas		4135	1	M	M (no reply)	3	20    	0				
+1	207	4	Aeneid	9	6	n	13	n	✅	Iris		✅	Turnus		4136	1	D	D	8	51	0		C43	prophecy, promise, command, exhortation	
+2	208	4	Aeneid	9	18	n	22	y	✅	Turnus		✅	Iris		4136	2	D	D	4 5/12	31      	0		Pra17	prayer, inquiry	
+3	209	4	Aeneid	9	36	n	38	y	✅	Caicus 		❌	cives		4137	1	M	M (no reply)	241666666666667	17      	0	(bei mir 4/12)	C44	exhortation, outcry, command	
+4	210	4	Aeneid	9	51	n	52	y	✅	Turnus		❌	iuvenes		4138	1	M	M (no reply)	1 1/12	9      	0		C45	question, exhortation, command	
+5	211	4	Aeneid	9	83	y	92	n	✅	Cybele	 (=  Berecyntia ? Mother of Jupiter)	✅	Jupiter		4139	1	D	D	'9 5/12	66      	0		P32	entreaty, (prayer,) request	
+6	212	4	Aeneid	9	94	n	103	n	✅	Jupiter		✅	Cybele	(Berencynthia)	4139	2	D	D	10	59      	0		R16	reply; question, rebuke, promise	
+7	213	4	Aeneid	9	114	n	117	y	✅	Cybele	(Mater?)	✅	Trojans		4140	1	M	M (no reply)	3 2/3	25    	0		C46	exhoration; command, promise, assurance	
+8	214	4	Aeneid	9	128	n	158	n	✅	Turnus		✅	Rutulians	viri / socii	4141	1	M	M (no reply)	31	216      	0		E3	exhortation	
+9	215	4	Aeneid	9	184	y	196	n	✅	Nisus		✅	Euryalus (Vergil)		4142	1	D	D	12 3/4	88    	0		P33	plan; persuasion?	
+10	216	4	Aeneid	9	199	n	206	n	✅	Euryalus (Vergil)		✅	Nisus		4142	2	D	D	8	54      	0		R17	reply, request, rebuke	
+11	217	4	Aeneid	9	207	y	218	n	✅	Nisus		✅	Euryalus (Vergil)		4142	3	D	D	11 3/4	86    	0		P34	persuasion	
+12	218	4	Aeneid	9	219	y	221	y	✅	Euryalus (Vergil)		✅	Nisus		4142	4	D	D	2	12      	0		R18	reply, denial, command, exhortation	
+13	219	4	Aeneid	9	234	y	245	n	✅	Nisus		❌	Aeneas' companions	Aeneadae / socii of Aeneas	4142	5	D	D?	11 7/12	72      	0		P35	persuasion? Narration? Plan?	
+14	220	4	Aeneid	9	247	n	250	y	❌	Aletes		❌	di patrii		4143	1	M	M (no reply)	3 1/6	23      	0			prayer, inquiry	
+15	221	4	Aeneid	9	252	n	256	n	❌	Aletes		❌	Nisus and Euryalus (Vergil)	?	4143	1	M	M (no reply)	5	33      	0			promise? Plan?	
+16	222	4	Aeneid	9	257	n	280	y	✅	Ascanius		❌	Nisus and Euryalus (Vergil)	?	4144	1	D	D?	23	152      	0		R20	request	
+17	223	4	Aeneid	9	281	y	292	y	✅	Euryalus (Vergil)		✅	Ascanius		4144	2	D	D?	11 1/6	79    	0		P36	reply, persuasion, plan? Promise	
+18	224	4	Aeneid	9	296	n	302	n	✅	Ascanius		✅	Iulus	?	4144	3	D	D?	7	46      	0		R21	promis? Reply?	
+19	225	4	Aeneid	9	320	n	323	n	✅	Nisus		✅	Euryalus (Vergil)		4145	1	M	M (no reply)	4	33    	0		C47	command, exhortation	
+20	226	4	Aeneid	9	355	n	356	n	✅	Nisus		✅	Euryalus (Vergil)	Euryalus? Rhoetus?	4146	1	M	M (no reply)	191666666666667	13      	0	(bie mir 1 10/12)	C48	exhortation? Command? Advice?	
+21	227	4	Aeneid	9	376	n	377	y	✅	Volcens		❌	Euryalus (Vergil) and Nisus	?	4147	1	M	M (no reply)	1 5/12	12      	0		C49	command, inquiry, veto, inhibition	
+22	228	4	Aeneid	9	390	n	391	y	✅	Nisus		✅	Euryalus (Vergil)		4148	1	M	M (no reply)	1 1/4	8    	0		A4	question; complaint	
+23	229	4	Aeneid	9	404	n	409	n	✅	Nisus		✅	Luna	(Goddess)	4149	1	M	M (no reply)	6	47      	0		Pra18	prayer	
+24	230	4	Aeneid	9	422	n	423	y	✅	Volcens		✅	Euryalus (Vergil)		4150	1	M	M / D ~	141666666666667	9      	0	 (auch bei mir aber sonst bei Highet anders)	T4	threat, 	
+25	231	4	Aeneid	9	427	n	430	n	✅	Nisus		✅	Volcens		4151	1	M	M / D ~	4	31      	0		P37	request, entreaty	
+26	232	4	Aeneid	9	481	n	497	n	✅	Euryalus' mother (Vergil)		❌	Euryalus (Vergil) and Rutulians and Jupiter		4152	1	M	M (no reply) / S?	17	121      	0		A5	lament, complaint, request	
+27	233	4	Aeneid	9	560	y	561	y	✅	Turnus		❌	Lykus	?	4153	1	M	M (no reply)	1 1/6	7    	0		T5	question, taunt, ridicule	
+28	234	4	Aeneid	9	598	n	620	n	✅	Numanus		✅	Trojans	Phryger /Phryges	4154	1	D	D~	23	150      	0		V1	ridicule, taunt, provocation	
+29	235	4	Aeneid	9	625	n	629	n	✅	Ascanius		✅	Jupiter		4154	2	D	D~	5	34      	0		Pra19	prayer	
+30	236	4	Aeneid	9	634	y	635	n	✅	Ascanius		✅	Numanus	(and indirectly Rutuli)	4155	1	M	M (no reply)	1 5/6	12    	0		T6	ridicule, taunt, provocation, command	
+31	237	4	Aeneid	9	641	n	644	y	✅	Apollo		✅	Iulus	? (Askanius)	4156	1	M	M (no reply)	3 5/12	26      	0		O23	praise; oracle, prophecy	
+32	238	4	Aeneid	9	653	n	656	y	✅	Apollo	disguise: Butes; (?)	✅	Iulus	? (Askanius)	4157	1	M	M (no reply)	3 7/12	24      	0		C50	command	
+33	239	4	Aeneid	9	737	y	739	n	✅	Pandarus		✅	Turnus		4158	1	D	D	2 3/4	19    	0		T7	taunt, threat	
+34	240	4	Aeneid	9	741	n	742	n	✅	Turnus		✅	Pandarus		4158	2	D	D	2	14      	0		T8	threat, command	
+35	241	4	Aeneid	9	747	n	748	n	✅	Turnus		✅	Pandarus		4159	1	M	M (no reply) / D?	2	17      	0		T9	threat, 	
+36	242	4	Aeneid	9	781	y	787	n	✅	Mnestheus		✅	Trojans	socii	4160	1	M	M (no reply)	6 7/12	43      	0		E4	rebuke, exhortation	
+	243	4	Aeneid	10	6	n	15	n	✅	Jupiter		✅	gods	caelicolae	4161	1	D	D~	10	63	0		C51	persuasion; exhortation, question, 	
+	244	4	Aeneid	10	18	n	62	n	✅	Venus		✅	Jupiter		4161	2	D	D~	44 7/12	290      	0		D5	request, entreaty	
+	245	4	Aeneid	10	63	y	95	n	✅	Juno		✅	Jupiter		4161	3	D	D~	32 7/12	217      	0		L2	persuasion?	
+	246	4	Aeneid	10	104	n	113	y	✅	Jupiter		✅	gods	caelicolae?	4161	4	D	D~	9 5/12	63      	0		C52	prophecy, command,declaration?	
+	247	4	Aeneid	10	228	y	245	n	✅	Cymodocea	(mother of Iupiter? nymph?)	✅	Aeneas		4162	5	D	D	17 5/12	119      	0		N22	narration	
+	248	4	Aeneid	10	252	n	255	n	✅	Aeneas		✅	Cymodocea		4162	6	D	D	4	27      	0		Pra20	prayer	
+	249	4	Aeneid	10	279	n	284	n (halbzeile)	✅	Turnus		✅	Rutulians	viri / socii	4163	1	M	M (no reply)	6	37      	0		E5	exhortation	
+	250	4	Aeneid	10	294	n	298	y	✅	Tarchon		❌	socii		4164	1	M	M (no reply)	4 7/12	29      	0		C53	exhortation, command	
+	251	4	Aeneid	10	333	n	335	y	✅	Aeneas		✅	Achates		4165	1	M	M (no reply)	2 5/12	17      	0		C54	command, 	
+	252	4	Aeneid	10	369	n	378	n	✅	Pallas		❌	socii		4166	1	M	M (no reply)	10	71      	0		E6	exhortation, persuasion, command	
+	253	4	Aeneid	10	421	n	423	n	✅	Pallas		❌	Thybri pater 		4167	1	M	M (no reply)	3	22      	0		Pra21	prayer	
+	254	4	Aeneid	10	441	y	443	n	✅	Turnus		❌	socii		4168	1	D	D~	2 7/12	17      	0		C55	command, plan, persuasion	
+	255	4	Aeneid	10	449	n	451	y	✅	Pallas		✅	Turnus		4168	2	D	D~	2 1/4	17    	0		T10	taunt, threat, reply	
+	256	4	Aeneid	10	460	n	463	n	✅	Pallas		✅	Heracles	Alcide	4169	1	D	D	4	26      	0		Pra22	prayer	
+	257	4	Aeneid	10	467	n	472	n	✅	Jupiter		✅	Heracles		4169	2	D	D	6	42      	0		P38	persuasion? Plan? Prophecy?	
+	258	4	Aeneid	10	481	n	481	n	✅	Turnus		✅	Pallas		4170	1	M	M (no reply)	1	7      	0		T11	threat	
+	259	4	Aeneid	10	491	n	495	y	✅	Turnus		✅	Arcades		4171	1	M	M (no reply)	408333333333333	25      	0	 (bei mir 4?)	T12	message, threat, 	
+	260	4	Aeneid	10	524	n	529	n	✅	Magus		✅	Aeneas		4172	1	D	D	6	40      	0		P39	entreaty, persuasion	
+	261	4	Aeneid	10	531	n	534	n	✅	Aeneas		✅	Magus		4172	2	D	D	4	27      	0		R22	reply, denial, warning?	
+	262	4	Aeneid	10	557	n	560	n	✅	Aeneas		✅	Tarquitus	?	4173	1	M	M (no reply)	4	26      	0		T13	threat, command	
+	263	4	Aeneid	10	581	y	583	n	✅	Liger		✅	Aeneas		4174	1	M	M (no reply)	2 5/12	18      	0		T14	threat, descriptive	
+	264	4	Aeneid	10	592	n	594	y	✅	Aeneas		✅	Lucagus		4175	1	M	M /D?	2 2/3	19      	0		T15	threat, ridicule, 	
+	265	4	Aeneid	10	597	n	598	n	✅	Liger		✅	Aeneas		4176	1	D	D	2	16      	0		P40	entreaty, prayer, 	
+	266	4	Aeneid	10	599	y	600	n	✅	Aeneas		❌	Liger 		4176	2	D	D	1 5/12	11      	0		T16	threat, taunt	
+	267	4	Aeneid	10	607	n	610	n	✅	Jupiter		✅	Juno		4177	1	D	D	4	26      	0		T17	inquiry, question? Rebuke?	
+	268	4	Aeneid	10	611	y	620	n	✅	Juno		✅	Jupiter		4177	2	D	D	9 7/12	66      	0		P41	gratitude? Persuasion, prayer?	
+	269	4	Aeneid	10	622	n	627	n	✅	Jupiter		✅	Juno		4177	3	D	D	6	39      	0		R23	reply, command, advice? 	
+	270	4	Aeneid	10	628	y	632	n	✅	Juno		✅	Jupiter		4177	4	D	D	4 7/12	38      	0		P42	reply? Wish? Persuasion?	
+	271	4	Aeneid	10	649	n	650	n	✅	Turnus		✅	Aeneas		4178	1	M	M (no reply)	2	14      	0		T18	threat, ridicule, 	
+	272	4	Aeneid	10	668	n	679	n	✅	Turnus		❌	Jupiter and stars and winds		4179	1	M	M (no reply)	12	87      	0		A6	complaint, question, deliberation	
+	273	4	Aeneid	10	737	n	737	n	✅	Mezentius		❌	Mezentius' companions		4180	1	M	M /D?	1	8    	0		T19	outcry, declaration, taunt, ridicule?	
+	274	4	Aeneid	10	739	y	741	n	✅	Orodes		✅	Mezentius		4181	1	D	D~	2 7/12	19      	0		O24	threat, oracle, prophecy, taunt	
+	275	4	Aeneid	10	743	n	744	y	✅	Mezentius		✅	Orodes		4181	2	D	D~	1 1/6	11    	0		T20	taunt, threat, ridicule	
+	276	4	Aeneid	10	773	n	776	y	✅	Mezentius		✅	self	dextra mihi deus et telum, 	4182	1	M	M /S ?	3 1/4	21    	0		Pra 23	promise, prayer	
+	277	4	Aeneid	10	811	n	812	y	✅	Aeneas		✅	Lausus		4183	1	M	M (no reply)	1 2/3	11    	0		T21	taunt, threat, rebuke	
+	278	4	Aeneid	10	825	n	830	y	✅	Aeneas		✅	Lausus	?	4184	1	M	M (no reply)	5 2/3	41    	0		A7	trost, assurance, promise	
+	279	4	Aeneid	10	846	n	856	y	✅	Mezentius		✅	Lausus	Son?	4185	1	M	M (no reply)	10 1/4	69    	0		A8	farewell; complaint? lament?	
+	280	4	Aeneid	10	861	n	866	n	✅	Mezentius		❌	horse	Rhaebus	4186	1	M	M (no reply)	6	44    	0		A9	exhortation, plan, persuasion, farewell?	
+	281	4	Aeneid	10	875	n	876	n	✅	Aeneas		❌	Jupiter and Apollo	(indirekt Mezentius)	4187	1	D	D	2	11    	0	(1 half-line)	T22	prayer, bzw. threat	
+	282	4	Aeneid	10	878	y	882	n	✅	Mezentius		✅	Aeneas		4187	2	D	D	4	30    	0		T23	threat, provocation, ask for murder	
+	283	4	Aeneid	10	897	y	898	y	✅	Aeneas		❌	Trojans and Latins		4187	3	D	D	1 1/6	9    	0		T24	inquiry, rebuke, provocation	
+	284	4	Aeneid	10	900	n	906	n	✅	Mezentius		✅	Aeneas		4187	4	D	D	7	52    	0		P43	request, entreaty	
+1	285	4	Aeneid	11	14	n	28	n	✅	Aeneas		✅	Trojans	viri / turba ducum	4188	1	M	M (no reply)	14 11/12	98      	0		C56	exhortation and command	
+2	286	4	Aeneid	11	42	n	58	n	✅	Aeneas		❌	Pallas and Evander and Ausonia and Iulus	(Dead) Pallas	4189	1	M	M (no reply)	16 5/6	111    	0		A10	lament, complaint, sympathy, assurance	
+3	287	4	Aeneid	11	96	n	98	y	✅	Aeneas		✅	Pallas	(dead) Pallas	4190	1	M	M (no reply)	2 5/12	17      	0		F6	farewell, lament	
+4	288	4	Aeneid	11	108	n	119	n	✅	Aeneas		❌	Latin envoys	oratores …ex urbe Latina	4191	1	D	D?	12	82	0		R24	reply, assurance, command, 	
+5	289	4	Aeneid	11	124	y	131	n	✅	Drances		✅	Aeneas		4191	2	D	D?	7 3/4	50    	0		R25	reply, praise, gratitude	
+6	290	4	Aeneid	11	152	n	181	n	✅	Evander	 (evtl. in Euander ändern)	❌	Pallas and Trojans and Aeneas	(Dead), Aeneas?	4191	3	D	D?	30	211	0		A11	lament, farewell, complaing, request, allegiance	
+7	291	4	Aeneid	11	243	n	295	n	✅	Venulus		❌	cives		4901	1	M	???	53	332	1		N23	narration	
+	292	4	Aeneid	11	252	n	293	n	✅	Diomedes		❌	gentes, Ausonierstamm	(cives)	4192	1	M	M (no reply)	42	262	1	inserted	D6	narration, message, command?	
+8	293	4	Aeneid	11	302	n	335	n	✅	Latinus		❌	Latini		4193	1	D	D~ /M?	34	223	0		D7	plan, persuasion?	
+9	294	4	Aeneid	11	343	n	375	n?	✅	Drances		✅	Turnus		4193	2	D	D~	33	223	0	(1 Half-line)	D8	request? Persuasion?	
+10	295	4	Aeneid	11	378	n	444	n	✅	Turnus		❌	Drances and pater	?	4193	3	D	D~	66	455 (449?)	0	(Omitting 11.404 as misplaced); (bzw. 67) (1 Half-line)	D9	persuasion, reply, justification?	
+11	296	4	Aeneid	11	459	n	461	n	✅	Turnus		❌	cives		4194	1	M	M (no reply)	1 11/12	14      	0		T25	outcry, command, taunt	
+12	297	4	Aeneid	11	463	n	467	n	✅	Turnus		✅	soldiers	(but addressed, partly, individually:Volusus, Messapus, Coras and his brother, cetera…)	4195	1	M	M (no reply)	4 11/12	33      	0		C57	command	
+13	298	4	Aeneid	11	483	n	485	n	❌	Matres Latinae		✅	Lavinia 		4196	1	M	M (no reply)	3	19	0		Pra24	command, exhortation, entreaty	
+14	299	4	Aeneid	11	502	n	506	n	✅	Camilla		✅	Turnus		4197	1	D	D	5	35	0		P44	request, plan	
+15	300	4	Aeneid	11	508	n	519	n	✅	Turnus		✅	Camilla		4197	2	D	D	12	77	0		C58	reply, command, plan	
+16	301	4	Aeneid	11	535	y	594	n	✅	Diana		✅	Opis	(alte Nymphe)	4198	1	M	M (no reply)	59 3/4	381    	1		N24	narration and entreaty / command	
+	302	4	Aeneid	11	557	n	560	n	✅	Amasenus		✅	Diana	? (alma, tibi hanc, nemorum cultrix, Latonia uirgo 557)	4199	1	M	M (no reply)	4	29	1	inserted	Pra25	prayer	
+17	303	4	Aeneid	11	686	n	689	n	✅	Camilla		✅	Ornytus	(venator) Ornytus (Tyrrhener?)	4200	1	M	M (no reply)	4	25	0		T26	threat, taunt, declaration	
+18	304	4	Aeneid	11	705	y	708	n	✅	Auni filius		✅	Camilla		4201	1	D	D	3 3/4	27    	0		T27	threat, taunt, rebuke?	
+19	305	4	Aeneid	11	715	n	717	n	✅	Camilla		✅	Auni filius		4201	2	D	D	3	18    	0		T28	threat, taunt, rebuke	
+20	306	4	Aeneid	11	732	n	740	n	✅	Tarchon		❌	Tyrrheni	(soldiers)	4202	1	M	M (no reply)	9	65    	0		E7	exhortation, rebuke, command	
+21	307	4	Aeneid	11	785	n	793	n	✅	Arruns		✅	Apollo	(Phoebus)	4203	1	M	M (no reply)	9	59    	0		Pra26	prayer	
+22	308	4	Aeneid	11	823	n	827	y	✅	Camilla		✅	Acca	 (f.)	4204	1	M	M (no reply)	4 1/4	27    	0		F7	farewell, command	
+23	309	4	Aeneid	11	841	n	849	y	✅	Opis		✅	Camilla	self bzw. (dead)	4205	1	M	M /S	8 5/12	56      	0		A12	farwell, lament, prophecy, promise	
+24	310	4	Aeneid	11	855	n	857	n	✅	Opis		✅	Arruns		4206	1	M	M (no reply)	2 5/6	19    	0		T29	threat, command, request	
+	311	4	Aeneid	12	11	n	17	n	✅	Turnus		✅	Latinus	(and Daunus?)	4207	1	D	D	7	46	0		C59	command, persuasion?	
+	312	4	Aeneid	12	19	n	45	y	✅	Latinus		✅	Turnus		4207	2	D	D	26 1/6	178    			D10	persuasion, justification, 	
+	313	4	Aeneid	12	48	n	53	n	✅	Turnus		❌	?	Latinus? Mein Vater?	4207	3	D	D	6	46			R26	persuasion, request, plan	
+	314	4	Aeneid	12	56	n	63	n	✅	Amata		✅	Turnus		4207	4	D	D	8	59			P45	request, entreaty, (farewell)	
+	315	4	Aeneid	12	72	n	80	n	✅	Turnus		❌	Amata and Idmon	Amata (72-74) and Idmon (75-80 seer)	4207	5	D	D	9	60			R27	entreaty bzw. command	
+	316	4	Aeneid	12	95	y	100	n	✅	Turnus		❌	hasta	(formerly Actor's) 	4208	1	M	M (no reply)	5 3/4	38    			A13	prayer, entreaty, request	
+	317	4	Aeneid	12	142	n	153	n	✅	Juno		✅	Juturna	(goddess of fountains)	4209	1	M	M (no reply)	12	79			P46	prayer, entreaty, request	
+	318	4	Aeneid	12	156	n	159	y	✅	Juno		✅	Juturna	(goddess of fountains)	4210	1	M	M (no reply)	2 5/6	22    			C60	command, exhortation	
+	319	4	Aeneid	12	176	n	194	n	✅	Aeneas		✅	gods	(long enumeration)	4211	1	M	M (no reply)	19	130			Pra 27	prayer	
+	320	4	Aeneid	12	197	n	211	n	✅	Latinus		❌	Aeneas and gods		4212	1	M	M (no reply)	14 1/4	100    			Pra28	prayer, vow, oath	
+	321	4	Aeneid	12	229	n	237	n	✅	Juturna		✅	Rutulians		4213	1	M	M (no reply)	9	61			E8	exhortation, rebuke	
+	322	4	Aeneid	12	259	n	265	n	✅	Tolumnius		✅	Rutulians	(o miseri)	4214	1	M	M (no reply)	6 5/6	47    			E9	prophecy, exhortation	
+	323	4	Aeneid	12	296	n	296	n	✅	Messapus		✅	Aulestes	?	4215	1	M	M (no reply)	1	8			T30	ridicule, threat	
+	324	4	Aeneid	12	313	n	317	n	✅	Aeneas		❌	Aeneas' companions		4216	1	M	M (no reply)	5	37    			C61	command, veto, plan, persuasion	
+	325	4	Aeneid	12	359	n	361	n	✅	Turnus		❌	Eumedes	?	4217	1	M	M (no reply)	3	21			T31	taunt, threat	
+	326	4	Aeneid	12	425	n	425	n	✅	Iapyx		❌	socii 		4218	1	M	M (no reply)	 3/4	6    			C62	command	
+	327	4	Aeneid	12	427		429		✅	Iapyx		✅	Aeneas		4902	1	M	???	3	22					
+	329	4	Aeneid	12	435	n	440	n	✅	Aeneas		✅	Ascanius		4219	1	M	M (no reply)	6	44    			F8	farewell, command?	
+	330	4	Aeneid	12	565	n	573	n	✅	Aeneas		❌	Mnestheus and Sergestus and Serestus and Trojans		4220	1	M	M (no reply)	9	64    			C63	command, plan	
+	331	4	Aeneid	12	620	n	621	n	✅	Turnus		✅	self		4221	1	S 	S	2	14    			Q20	question, outcry, complaint	
+	332	4	Aeneid	12	625	y	630	n	✅	Juturna	disguise: Metiscus; (m)	✅	Turnus		4222	1	D	D	5 5/12	36      			P47	exhortation, command, plan	
+	333	4	Aeneid	12	632	n	649	n	✅	Turnus		✅	Juturna	(Turnus has seen through her) and manes	4222	2	D	D	18	128    			R28	lament, question, inquiry, request	
+	334	4	Aeneid	12	653	n	664	n	✅	Saces		✅	Turnus		4222	3	D	D	12	80    			N25	narration, request	
+	335	4	Aeneid	12	676	n	680	n	✅	Turnus		✅	Juturna	(germana)	4223	1	M	M (no reply)	5	38    			P48	request, entreaty, prayer, 	
+	336	4	Aeneid	12	693	n	695	n	✅	Turnus		✅	Rutulians	(= oder and Latini)	4224	1	M	M (no reply)	3	23    			C64	command	
+	337	4	Aeneid	12	777	n	779	n	✅	Turnus		❌	Faunus and Terra		4225	1	M	M (no reply)	2 5/6	19    			Pra29	prayer	
+	338	4	Aeneid	12	793	n	806	n	✅	Jupiter		✅	Juno		4226	1	D	D	13 7/12	94      			C65	inquiry, command, persuasion	
+	339	4	Aeneid	12	808	n	828	n	✅	Juno		✅	Jupiter		4226	2	D	D	21	140    			P49	justification, apology, plan, request	
+	340	4	Aeneid	12	830	n	840	n	✅	Jupiter		✅	Juno		4226	3	D	D	11	71    			O25	reply, prophecy, promise, 	
+	341	4	Aeneid	12	872	n	884	n	✅	Juturna		✅	Turnus		4227	1	M	M (no reply)	13	94    			A14	lament, question, complaint, promise?	
+	342	4	Aeneid	12	889	n	893	n	✅	Aeneas		✅	Turnus		4228	1	D	D	5	40    			T32	taunt, threat	
+	343	4	Aeneid	12	894	y	895	n	✅	Turnus		✅	Aeneas		4228	2	D	D	1 7/12	13      			T33	taunt, threat	
+	344	4	Aeneid	12	931	y	938	y	✅	Turnus		✅	Aeneas		4228	3	D	D	7 1/6	49    			P50	entreaty, request, prayer	
+	345	4	Aeneid	12	947	y	949	n	✅	Aeneas		✅	Turnus		4228	4	D	D	2 3/4	19    			R29	threat, taunt	
