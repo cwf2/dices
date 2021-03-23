@@ -349,7 +349,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         context['reader'] = CTS_READER
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
-        context['speech_types'] = SpeechCluster.speech_type_choices
+        context['speech_types'] = SpeechCluster.ClusterType.choices
         context['search_params'] = self.params.items()
         
         return context
@@ -485,7 +485,7 @@ class AppSpeechSearch(LoginRequiredMixin, TemplateView):
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
         context['max_parts'] = Speech.objects.aggregate(Max('part'))['part__max']
-        context['speech_types'] = SpeechCluster.speech_type_choices
+        context['speech_types'] = SpeechCluster.ClusterType.choices
         return context
 
 
