@@ -151,7 +151,7 @@ class Speech(models.Model):
     part = models.IntegerField()
     
     class Meta:
-        ordering = ['cluster__work', 'seq']
+        ordering = ['cluster__work__id', 'seq']
     
     def __str__(self):
         return f'{self.cluster.work} {self.l_fi}-{self.l_la}'
