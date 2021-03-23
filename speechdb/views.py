@@ -325,6 +325,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
     paginate_by = PAGE_SIZE
+    ordering = ['cluster__work__id', 'seq']    
     _valid_params = [
         ('spkr_id', int),
         ('addr_id', int),
@@ -406,6 +407,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         
         qs = qs.filter(*query)
         qs = qs.order_by('seq')
+        qs = qs.order_by('cluster__work')
 
         return qs
         
