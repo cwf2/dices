@@ -1,0 +1,9 @@
+id	author	title	wd	urn
+1	1	Iliad	Q8275	urn:cts:greekLit:tlg0012.tlg001.perseus-grc2
+2	1	Odyssey	Q35160	urn:cts:greekLit:tlg0012.tlg002.perseus-grc2
+3	2	Argonautica	Q739529	urn:cts:greekLit:tlg0001.tlg001.perseus-grc2
+4	3	Aeneid	Q60220	urn:cts:latinLit:phi0690.phi003.perseus-lat2
+5	4	Metamorphoses	Q184742	urn:cts:latinLit:phi0959.phi006.perseus-lat1
+6	5	Civil War	Q678375	urn:cts:latinLit:phi0917.phi001.perseus-lat2
+7	6	Punica	Q1219433	urn:cts:latinLit:phi1345.phi001.perseus-lat2
+8	7	Thebaid	Q2708117	urn:cts:latinLit:phi1020.phi001.perseus-lat2
