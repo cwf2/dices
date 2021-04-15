@@ -21978,7 +21978,7 @@
  "model": "speechdb.speechcluster",
  "pk": 5068,
  "fields": {
-  "type": "S",
+  "type": "D",
   "work": 5
  }
 },
@@ -22290,7 +22290,7 @@
  "model": "speechdb.speechcluster",
  "pk": 5107,
  "fields": {
-  "type": "M",
+  "type": "D",
   "work": 5
  }
 },
@@ -22306,7 +22306,7 @@
  "model": "speechdb.speechcluster",
  "pk": 5109,
  "fields": {
-  "type": "M",
+  "type": "D",
   "work": 5
  }
 },
@@ -61372,7 +61372,7 @@
   "cluster": 5258,
   "seq": 324,
   "l_fi": "9.474",
-  "l_la": "9.519/520 (depending on which edition is used)",
+  "l_la": "9.519",
   "part": 1,
   "spkr": [
    479
