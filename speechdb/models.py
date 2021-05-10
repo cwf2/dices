@@ -1,5 +1,7 @@
 from django.db import models
 
+# Entity classes
+
 class Author(models.Model):
     '''An ancient author'''
     
@@ -35,20 +37,23 @@ class Work(models.Model):
 
 class Character(models.Model):
     '''An epic character'''
-    INDIVIDUAL = 'I'
-    COLLECTIVE = 'C'
-    OTHER = 'O'
     
-    character_type_choices = [
-        (INDIVIDUAL, 'individual'),
-        (COLLECTIVE, 'collective'),
-        (OTHER, 'other'),
-    ]
+    class CharacterType(models.TextChoices):
+        INDIVIDUAL = ('I', 'Individual')
+        COLLECTIVE = ('C', 'Collective')
+        OTHER = ('O', 'Other')
+        
+    class CharacterGender(models.TextChoices):
+        NONBINARY = ('N', 'Non-binary')
+        FEMALE = ('F', 'Female')
+        MALE = ('M', 'Male')
     
     name = models.CharField(max_length=64)
     being = models.CharField(max_length=32, default='human')
-    type = models.CharField(max_length=1, choices=character_type_choices,
-            default='I')
+    type = models.CharField(max_length=1, choices=CharacterType.choices,
+            default=CharacterType.INDIVIDUAL)
+    gender = models.CharField(max_length=1, choices=CharacterGender.choices,
+            null=True)
     wd = models.CharField('WikiData ID', max_length=32, null=True)
     manto = models.CharField('MANTO ID', max_length=32, null=True)
 
@@ -79,8 +84,8 @@ class CharacterInstance(models.Model):
         name = self.char.name
         if self.disg is not None:
             name += '/' + self.disg.name
-        return name
-
+        return name    
+    
 
 class SpeechCluster(models.Model):
     '''A group of related speeches'''
@@ -90,7 +95,7 @@ class SpeechCluster(models.Model):
         MONOLOGUE = ('M', 'Monologue')
         DIALOGUE = ('D', 'Dialogue')
         GENERAL = ('G', 'General')
-        
+            
     type = models.CharField(max_length=1, choices=ClusterType.choices)
     work = models.ForeignKey(Work, on_delete=models.PROTECT)
     
