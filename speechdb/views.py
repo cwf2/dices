@@ -67,7 +67,7 @@ class CharacterInstanceFilter(filters.FilterSet):
     char_manto = filters.CharFilter('char__manto')
     
     class Meta:
-        model = Character
+        model = CharacterInstance
         fields = ['char_id', 'char_name', 'char_wd', 'char_manto']
 
 
