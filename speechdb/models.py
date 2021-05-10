@@ -35,20 +35,16 @@ class Work(models.Model):
 
 class Character(models.Model):
     '''An epic character'''
-    INDIVIDUAL = 'I'
-    COLLECTIVE = 'C'
-    OTHER = 'O'
     
-    character_type_choices = [
-        (INDIVIDUAL, 'individual'),
-        (COLLECTIVE, 'collective'),
-        (OTHER, 'other'),
-    ]
+    class CharacterType(models.TextChoices):
+        INDIVIDUAL = ('I', 'Individual')
+        COLLECTIVE = ('C', 'Collective')
+        OTHER = ('O', 'Other')
     
     name = models.CharField(max_length=64)
     being = models.CharField(max_length=32, default='human')
-    type = models.CharField(max_length=1, choices=character_type_choices,
-            default='I')
+    type = models.CharField(max_length=1, choices=CharacterType.choices,
+            default=CharacterType.INDIVIDUAL)
     wd = models.CharField('WikiData ID', max_length=32, null=True)
     manto = models.CharField('MANTO ID', max_length=32, null=True)
 
