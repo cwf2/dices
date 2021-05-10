@@ -7,6 +7,22 @@ import re
 from django.core import serializers
 
 
+def parseGender(gender):
+    '''Try to match user-entered gender to allowable choices'''
+    
+    if gender is not None:
+        gender = gender.upper().strip()
+        if len(gender) > 0:
+            gender = gender[0]
+        else:
+            gender = None
+    
+    if gender not in ['M', 'F', None]:
+        gender = 'N'
+    
+    return gender
+
+
 def addAuthors(file):
     '''Parse the authors list from a TSV file'''
     f = open(file)
@@ -65,7 +81,7 @@ def addChars(file):
             print(f'{c} has no type.')
         else:
             c.type = char_type[0].upper()
-        c.gender = rec.get('gender').strip() or None
+        c.gender = parseGender(rec.get('gender'))
         c.notes = rec.get('notes').strip() or None
         c.save()
 

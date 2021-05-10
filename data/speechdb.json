@@ -108,7 +108,7 @@
  "fields": {
   "title": "Metamorphoses",
   "wd": "Q184742",
-  "urn": "urn:cts:latinLit:phi0959.phi006.perseus-lat1",
+  "urn": "urn:cts:latinLit:phi0959.phi006.perseus-lat2",
   "author": 4
  }
 },
@@ -149,6 +149,7 @@
   "name": "Abaris",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": "Q305570",
   "manto": null
  }
@@ -160,6 +161,7 @@
   "name": "Acamas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1782641",
   "manto": null
  }
@@ -171,6 +173,7 @@
   "name": "Acca",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q9143443",
   "manto": null
  }
@@ -182,6 +185,7 @@
   "name": "Acca's mother",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -193,6 +197,7 @@
   "name": "Acestes",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q404275",
   "manto": null
  }
@@ -204,6 +209,7 @@
   "name": "Achaean leaders",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -215,6 +221,7 @@
   "name": "Achaean warriors",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -226,6 +233,7 @@
   "name": "Achaeans",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -237,6 +245,7 @@
   "name": "Achaemenides",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -248,6 +257,7 @@
   "name": "Achates",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q555521",
   "manto": null
  }
@@ -259,6 +269,7 @@
   "name": "Acheloüs",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q391379",
   "manto": null
  }
@@ -270,6 +281,7 @@
   "name": "Achillas",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -281,6 +293,7 @@
   "name": "Achilles",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q41746",
   "manto": null
  }
@@ -292,6 +305,7 @@
   "name": "Acis",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q419156",
   "manto": null
  }
@@ -303,6 +317,7 @@
   "name": "Acmon of Pleuron",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q420259",
   "manto": null
  }
@@ -314,6 +329,7 @@
   "name": "Acoetes",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -325,6 +341,7 @@
   "name": "Acoetes' father",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -336,6 +353,7 @@
   "name": "Acoreus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -347,6 +365,7 @@
   "name": "Actaeon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q208531",
   "manto": null
  }
@@ -358,6 +377,7 @@
   "name": "Actaeon's companions",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -369,6 +389,7 @@
   "name": "Actor (Thebiad)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -380,6 +401,7 @@
   "name": "Adonis",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q163920",
   "manto": null
  }
@@ -391,6 +413,7 @@
   "name": "Adrastus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q21547912",
   "manto": null
  }
@@ -402,6 +425,7 @@
   "name": "Adrastus (Statius)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q223152",
   "manto": null
  }
@@ -413,6 +437,7 @@
   "name": "Aeacus",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q206187",
   "manto": null
  }
@@ -424,6 +449,7 @@
   "name": "Aegle",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q21272183",
   "manto": null
  }
@@ -435,6 +461,7 @@
   "name": "Aegyptius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3586215",
   "manto": null
  }
@@ -446,6 +473,7 @@
   "name": "Aegyptus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q404844",
   "manto": null
  }
@@ -457,6 +485,7 @@
   "name": "Aeneadae",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -468,6 +497,7 @@
   "name": "Aeneas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q82732",
   "manto": null
  }
@@ -479,6 +509,7 @@
   "name": "Aeolus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q172549",
   "manto": null
  }
@@ -490,6 +521,7 @@
   "name": "Aequanus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -501,6 +533,7 @@
   "name": "Aesacus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q409520",
   "manto": null
  }
@@ -512,6 +545,7 @@
   "name": "Aesculapius",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q83223",
   "manto": null
  }
@@ -523,6 +557,7 @@
   "name": "Aethalion",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q21548020",
   "manto": null
  }
@@ -534,6 +569,7 @@
   "name": "Afranius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": "Q4689434",
   "manto": null
  }
@@ -545,6 +581,7 @@
   "name": "Agamemnon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q128176",
   "manto": null
  }
@@ -556,6 +593,7 @@
   "name": "Agave",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q381459",
   "manto": null
  }
@@ -567,6 +605,7 @@
   "name": "Agelaus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q392384",
   "manto": null
  }
@@ -578,6 +617,7 @@
   "name": "Agenor",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2547185",
   "manto": null
  }
@@ -589,6 +629,7 @@
   "name": "Aglaurus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": "Q518265",
   "manto": null
  }
@@ -600,6 +641,7 @@
   "name": "Agreus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -611,6 +653,7 @@
   "name": "Aias (son of Oileus)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q242319",
   "manto": null
  }
@@ -622,6 +665,7 @@
   "name": "Aias (son of Telamon)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q172725",
   "manto": null
  }
@@ -633,6 +677,7 @@
   "name": "Aietes",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q241971",
   "manto": null
  }
@@ -644,6 +689,7 @@
   "name": "Alcimede",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q2718542",
   "manto": null
  }
@@ -655,6 +701,7 @@
   "name": "Alcimedon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3608994",
   "manto": null
  }
@@ -666,6 +713,7 @@
   "name": "Alcinous",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q496595",
   "manto": null
  }
@@ -677,6 +725,7 @@
   "name": "Alcithoë",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -688,6 +737,7 @@
   "name": "Alcmene",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q190543",
   "manto": null
  }
@@ -699,6 +749,7 @@
   "name": "Alcyone",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q912904",
   "manto": null
  }
@@ -710,6 +761,7 @@
   "name": "Aletes (Statius)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -721,6 +773,7 @@
   "name": "Aletes (Vergil)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q4716498",
   "manto": null
  }
@@ -732,6 +785,7 @@
   "name": "Alexander the Great",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q8409",
   "manto": null
  }
@@ -743,6 +797,7 @@
   "name": "Allecto",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q1643451",
   "manto": null
  }
@@ -754,6 +809,7 @@
   "name": "Alpheus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q911084",
   "manto": null
  }
@@ -765,6 +821,7 @@
   "name": "Althaea",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q440440",
   "manto": null
  }
@@ -776,6 +833,7 @@
   "name": "Amasenus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -787,6 +845,7 @@
   "name": "Amata",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q455503",
   "manto": null
  }
@@ -798,6 +857,7 @@
   "name": "Ammon",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q3575327",
   "manto": null
  }
@@ -809,6 +869,7 @@
   "name": "Amor",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q121973",
   "manto": null
  }
@@ -820,6 +881,7 @@
   "name": "Amphiaraus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q330584",
   "manto": null
  }
@@ -831,6 +893,7 @@
   "name": "Amphidamas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q16515491",
   "manto": null
  }
@@ -842,6 +905,7 @@
   "name": "Amphimedon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1841246",
   "manto": null
  }
@@ -853,6 +917,7 @@
   "name": "Amphinomus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2718734",
   "manto": null
  }
@@ -864,6 +929,7 @@
   "name": "Amphion",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q242835",
   "manto": null
  }
@@ -875,6 +941,7 @@
   "name": "Amyclas (Lucan)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -886,6 +953,7 @@
   "name": "Amycus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q697942",
   "manto": null
  }
@@ -897,6 +965,7 @@
   "name": "Anaxarete",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q488621",
   "manto": null
  }
@@ -908,6 +977,7 @@
   "name": "Ancaius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1606756",
   "manto": null
  }
@@ -919,6 +989,7 @@
   "name": "Anchises",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q211953",
   "manto": null
  }
@@ -930,6 +1001,7 @@
   "name": "Andraemon",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -941,6 +1013,7 @@
   "name": "Androgeos",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q512388",
   "manto": null
  }
@@ -952,6 +1025,7 @@
   "name": "Andromache",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q19376",
   "manto": null
  }
@@ -963,6 +1037,7 @@
   "name": "Andromeda",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q161582",
   "manto": null
  }
@@ -974,6 +1049,7 @@
   "name": "Anius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q374275",
   "manto": null
  }
@@ -985,6 +1061,7 @@
   "name": "Anius' daughters",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -996,6 +1073,7 @@
   "name": "Anna Perenna",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q539796",
   "manto": null
  }
@@ -1007,6 +1085,7 @@
   "name": "Antaeus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q272006",
   "manto": null
  }
@@ -1018,6 +1097,7 @@
   "name": "Antea",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q368423",
   "manto": null
  }
@@ -1029,6 +1109,7 @@
   "name": "Antenor",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q571969",
   "manto": null
  }
@@ -1040,6 +1121,7 @@
   "name": "Anticlea",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q576170",
   "manto": null
  }
@@ -1051,6 +1133,7 @@
   "name": "Antigone",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q131351",
   "manto": null
  }
@@ -1062,6 +1145,7 @@
   "name": "Antilochus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q577552",
   "manto": null
  }
@@ -1073,6 +1157,7 @@
   "name": "Antinous",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q579000",
   "manto": null
  }
@@ -1084,6 +1169,7 @@
   "name": "Antony",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q51673",
   "manto": null
  }
@@ -1095,6 +1181,7 @@
   "name": "Aonian warriors",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -1106,6 +1193,7 @@
   "name": "Aphidas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3606201",
   "manto": null
  }
@@ -1117,6 +1205,7 @@
   "name": "Aphrodite",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q35500",
   "manto": null
  }
@@ -1128,6 +1217,7 @@
   "name": "Apollo",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q37340",
   "manto": null
  }
@@ -1139,6 +1229,7 @@
   "name": "Appius (Lucan)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1150,6 +1241,7 @@
   "name": "Appius Claudius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q5759145",
   "manto": null
  }
@@ -1161,6 +1253,7 @@
   "name": "Arachne",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q190082",
   "manto": null
  }
@@ -1172,6 +1265,7 @@
   "name": "Aradus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1183,6 +1277,7 @@
   "name": "Arcades",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1194,6 +1289,7 @@
   "name": "Arcadian warriors",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -1205,6 +1301,7 @@
   "name": "Ares",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q40901",
   "manto": null
  }
@@ -1216,6 +1313,7 @@
   "name": "Arete",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q3622209",
   "manto": null
  }
@@ -1227,6 +1325,7 @@
   "name": "Arethusa",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q643456",
   "manto": null
  }
@@ -1238,6 +1337,7 @@
   "name": "Argia",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -1249,6 +1349,7 @@
   "name": "Argive warriors",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -1260,6 +1361,7 @@
   "name": "Argive widows",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -1271,6 +1373,7 @@
   "name": "Argo",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q317932",
   "manto": null
  }
@@ -1282,6 +1385,7 @@
   "name": "Argolic mothers",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -1293,6 +1397,7 @@
   "name": "Argonauts",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q165510",
   "manto": null
  }
@@ -1304,6 +1409,7 @@
   "name": "Argus (son of Phrixus)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q16169688",
   "manto": null
  }
@@ -1315,6 +1421,7 @@
   "name": "Argus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q649476",
   "manto": null
  }
@@ -1326,6 +1433,7 @@
   "name": "Arisbas",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1337,6 +1445,7 @@
   "name": "Arruns",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1348,6 +1457,7 @@
   "name": "Arsaces",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q313933",
   "manto": null
  }
@@ -1359,6 +1469,7 @@
   "name": "Arsippe",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1370,6 +1481,7 @@
   "name": "Artemis",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q39503",
   "manto": null
  }
@@ -1381,6 +1493,7 @@
   "name": "Asbolus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1392,6 +1505,7 @@
   "name": "Ascanius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q655566",
   "manto": null
  }
@@ -1403,6 +1517,7 @@
   "name": "Ascanius' companion",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -1414,6 +1529,7 @@
   "name": "Asilus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1425,6 +1541,7 @@
   "name": "Asius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2647181",
   "manto": null
  }
@@ -1436,6 +1553,7 @@
   "name": "Asopus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q622781",
   "manto": null
  }
@@ -1447,6 +1565,7 @@
   "name": "Asteropaeus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q748909",
   "manto": null
  }
@@ -1458,6 +1577,7 @@
   "name": "Astyanax",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q334787",
   "manto": null
  }
@@ -1469,6 +1589,7 @@
   "name": "Atalanta",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q190323",
   "manto": null
  }
@@ -1480,6 +1601,7 @@
   "name": "Athamas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q143880",
   "manto": null
  }
@@ -1491,6 +1613,7 @@
   "name": "Athena",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q37122",
   "manto": null
  }
@@ -1502,6 +1625,7 @@
   "name": "Atlas",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q130818",
   "manto": null
  }
@@ -1513,6 +1637,7 @@
   "name": "Atys",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q55965937",
   "manto": null
  }
@@ -1524,6 +1649,7 @@
   "name": "Aulestes",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1535,6 +1661,7 @@
   "name": "Auni filius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1546,6 +1673,7 @@
   "name": "Aurora",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q178831",
   "manto": null
  }
@@ -1557,6 +1685,7 @@
   "name": "Autnoe",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q94072",
   "manto": null
  }
@@ -1568,6 +1697,7 @@
   "name": "Autolycus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q463107",
   "manto": null
  }
@@ -1579,6 +1709,7 @@
   "name": "Automedon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q772808",
   "manto": null
  }
@@ -1590,6 +1721,7 @@
   "name": "Autonoe (Silius)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1601,6 +1733,7 @@
   "name": "Bacchus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q645312",
   "manto": null
  }
@@ -1612,6 +1745,7 @@
   "name": "Barce",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1623,6 +1757,7 @@
   "name": "Bato",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -1634,6 +1769,7 @@
   "name": "Battus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q791446",
   "manto": null
  }
@@ -1645,6 +1781,7 @@
   "name": "Baucis",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q2303498",
   "manto": null
  }
@@ -1656,6 +1793,7 @@
   "name": "Beroe (Nonnus)",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q2930007",
   "manto": null
  }
@@ -1667,6 +1805,7 @@
   "name": "Beroe (Ovid)",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q826972",
   "manto": null
  }
@@ -1678,6 +1817,7 @@
   "name": "Beroe (Vergil)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1689,6 +1829,7 @@
   "name": "Beryas",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1700,6 +1841,7 @@
   "name": "Boo",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1711,6 +1853,7 @@
   "name": "Boreas",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q109220",
   "manto": null
  }
@@ -1722,6 +1865,7 @@
   "name": "Bostar",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1733,6 +1877,7 @@
   "name": "Briseis",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q244318",
   "manto": null
  }
@@ -1744,6 +1889,7 @@
   "name": "Bruttians",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q994847",
   "manto": null
  }
@@ -1755,6 +1901,7 @@
   "name": "Brutus (Decimus)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": "Q1172185",
   "manto": null
  }
@@ -1766,6 +1913,7 @@
   "name": "Brutus (Marcus)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q172248",
   "manto": null
  }
@@ -1777,6 +1925,7 @@
   "name": "Butes",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1788,6 +1937,7 @@
   "name": "Byblis",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q855426",
   "manto": null
  }
@@ -1799,6 +1949,7 @@
   "name": "C. Claudius Nero",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1810,6 +1961,7 @@
   "name": "Cadmeius heros",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1821,6 +1973,7 @@
   "name": "Cadmus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q27613",
   "manto": null
  }
@@ -1832,6 +1985,7 @@
   "name": "Caeneus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1132772",
   "manto": null
  }
@@ -1843,6 +1997,7 @@
   "name": "Caenis",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1132772",
   "manto": null
  }
@@ -1854,6 +2009,7 @@
   "name": "Caicus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q56428127",
   "manto": null
  }
@@ -1865,6 +2021,7 @@
   "name": "Caieta",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q3649829",
   "manto": null
  }
@@ -1876,6 +2033,7 @@
   "name": "Calchas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q725527",
   "manto": null
  }
@@ -1887,6 +2045,7 @@
   "name": "Calliope",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q103975",
   "manto": null
  }
@@ -1898,6 +2057,7 @@
   "name": "Callisto",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q203673",
   "manto": null
  }
@@ -1909,6 +2069,7 @@
   "name": "Calypso",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q48961",
   "manto": null
  }
@@ -1920,6 +2081,7 @@
   "name": "Camilla",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": "Q535107",
   "manto": null
  }
@@ -1931,6 +2093,7 @@
   "name": "Capaneus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q833806",
   "manto": null
  }
@@ -1942,6 +2105,7 @@
   "name": "Carthage",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q6343",
   "manto": null
  }
@@ -1953,6 +2117,7 @@
   "name": "Carthaginians",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1964,6 +2129,7 @@
   "name": "Cassandra",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q170779",
   "manto": null
  }
@@ -1975,6 +2141,7 @@
   "name": "Cato",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -1986,6 +2153,7 @@
   "name": "Caunus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1647297",
   "manto": null
  }
@@ -1997,6 +2165,7 @@
   "name": "Cebriones",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q655184",
   "manto": null
  }
@@ -2008,6 +2177,7 @@
   "name": "Celaeno (Harpy)",
   "being": "monster",
   "type": "I",
+  "gender": "F",
   "wd": "Q753903",
   "manto": null
  }
@@ -2019,6 +2189,7 @@
   "name": "Cephalus",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q643504",
   "manto": null
  }
@@ -2030,6 +2201,7 @@
   "name": "Cepheus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q858116",
   "manto": null
  }
@@ -2041,6 +2213,7 @@
   "name": "Ceres",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q32102",
   "manto": null
  }
@@ -2052,6 +2225,7 @@
   "name": "Cerrinus Vibellius Taurea",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2063,6 +2237,7 @@
   "name": "Ceyx",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q578888",
   "manto": null
  }
@@ -2074,6 +2249,7 @@
   "name": "Chalciope",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q391010",
   "manto": null
  }
@@ -2085,6 +2261,7 @@
   "name": "Charaxus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2096,6 +2273,7 @@
   "name": "Chariclo",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q4358140",
   "manto": null
  }
@@ -2107,6 +2285,7 @@
   "name": "charioteers",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2118,6 +2297,7 @@
   "name": "Charis",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q1108130",
   "manto": null
  }
@@ -2129,6 +2309,7 @@
   "name": "Charon",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q6612",
   "manto": null
  }
@@ -2140,6 +2321,7 @@
   "name": "Chione",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q7382381",
   "manto": null
  }
@@ -2151,6 +2333,7 @@
   "name": "Chiron",
   "being": "monster",
   "type": "I",
+  "gender": "M",
   "wd": "Q183417",
   "manto": null
  }
@@ -2162,6 +2345,7 @@
   "name": "Chromis",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q5113806",
   "manto": null
  }
@@ -2173,6 +2357,7 @@
   "name": "Chryses",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q852301",
   "manto": null
  }
@@ -2184,6 +2369,7 @@
   "name": "Cicero",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1541",
   "manto": null
  }
@@ -2195,6 +2381,7 @@
   "name": "Ciconian women",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2206,6 +2393,7 @@
   "name": "Cilnius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2217,6 +2405,7 @@
   "name": "Cinna",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2228,6 +2417,7 @@
   "name": "Cinyps",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2239,6 +2429,7 @@
   "name": "Cinyras",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q878246",
   "manto": null
  }
@@ -2250,6 +2441,7 @@
   "name": "Cipus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2261,6 +2453,7 @@
   "name": "Circe",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q187602",
   "manto": null
  }
@@ -2272,6 +2465,7 @@
   "name": "Claudia",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2283,6 +2477,7 @@
   "name": "Claudius Asellus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2294,6 +2489,7 @@
   "name": "Cleopatra",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q635",
   "manto": null
  }
@@ -2305,6 +2501,7 @@
   "name": "Cloanthus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2316,6 +2513,7 @@
   "name": "Clymene",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q836792",
   "manto": null
  }
@@ -2327,6 +2525,7 @@
   "name": "Clytos",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2338,6 +2537,7 @@
   "name": "Cn. Pompeius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2349,6 +2549,7 @@
   "name": "Companions",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2360,6 +2561,7 @@
   "name": "Cordus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2371,6 +2573,7 @@
   "name": "Cornelia",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2382,6 +2585,7 @@
   "name": "Coroebus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1784620",
   "manto": null
  }
@@ -2393,6 +2597,7 @@
   "name": "Coronis",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q725286",
   "manto": null
  }
@@ -2404,6 +2609,7 @@
   "name": "corpus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2415,6 +2621,7 @@
   "name": "Corvinus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2426,6 +2633,7 @@
   "name": "Cotta",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2437,6 +2645,7 @@
   "name": "council of gods",
   "being": "god",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -2448,6 +2657,7 @@
   "name": "Council of Rivers",
   "being": "god",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -2459,6 +2669,7 @@
   "name": "Crantor",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2470,6 +2681,7 @@
   "name": "Crassus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2481,6 +2693,7 @@
   "name": "Crenaeus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2492,6 +2705,7 @@
   "name": "Creon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q732066",
   "manto": null
  }
@@ -2503,6 +2717,7 @@
   "name": "Creusa",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q375174",
   "manto": null
  }
@@ -2514,6 +2729,7 @@
   "name": "Crispinus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2525,6 +2741,7 @@
   "name": "Crista",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2536,6 +2753,7 @@
   "name": "Crixus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2547,6 +2765,7 @@
   "name": "Croton",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2558,6 +2777,7 @@
   "name": "crow",
   "being": "creature",
   "type": "I",
+  "gender": null,
   "wd": "Q43365",
   "manto": null
  }
@@ -2569,6 +2789,7 @@
   "name": "Ctesippus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q12879401",
   "manto": null
  }
@@ -2580,6 +2801,7 @@
   "name": "Cupencus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2591,6 +2813,7 @@
   "name": "Cupid",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q121973",
   "manto": null
  }
@@ -2602,6 +2825,7 @@
   "name": "Curio",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2613,6 +2837,7 @@
   "name": "Cyane",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q1423058",
   "manto": null
  }
@@ -2624,6 +2849,7 @@
   "name": "Cybele",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q188236",
   "manto": null
  }
@@ -2635,6 +2861,7 @@
   "name": "Cyclopes",
   "being": "monster",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -2646,6 +2873,7 @@
   "name": "Cycnus",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -2657,6 +2885,7 @@
   "name": "Cymodocea",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2668,6 +2897,7 @@
   "name": "Cynthia",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2679,6 +2909,7 @@
   "name": "Cyparissus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1056143",
   "manto": null
  }
@@ -2690,6 +2921,7 @@
   "name": "Cyrnus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2701,6 +2933,7 @@
   "name": "Daedalus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q134756",
   "manto": null
  }
@@ -2712,6 +2945,7 @@
   "name": "Danai",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2723,6 +2957,7 @@
   "name": "Daphne",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q194015",
   "manto": null
  }
@@ -2734,6 +2969,7 @@
   "name": "Dares",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2745,6 +2981,7 @@
   "name": "Dasius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2756,6 +2993,7 @@
   "name": "Daunus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q902517",
   "manto": null
  }
@@ -2767,6 +3005,7 @@
   "name": "Daunus' son-in-law",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2778,6 +3017,7 @@
   "name": "Decius Magius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q11916752",
   "manto": null
  }
@@ -2789,6 +3029,7 @@
   "name": "Deianira",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "F",
   "wd": "Q272000",
   "manto": null
  }
@@ -2800,6 +3041,7 @@
   "name": "Deiotarus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2811,6 +3053,7 @@
   "name": "Deiphobe",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q273320",
   "manto": null
  }
@@ -2822,6 +3065,7 @@
   "name": "Deiphobus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q736813",
   "manto": null
  }
@@ -2833,6 +3077,7 @@
   "name": "Delos",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2844,6 +3089,7 @@
   "name": "Delphic oracle",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2855,6 +3101,7 @@
   "name": "Demodocus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q844808",
   "manto": null
  }
@@ -2866,6 +3113,7 @@
   "name": "Deucalion",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q207715",
   "manto": null
  }
@@ -2877,6 +3125,7 @@
   "name": "Diana",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q132543",
   "manto": null
  }
@@ -2888,6 +3137,7 @@
   "name": "Dictys",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q905409",
   "manto": null
  }
@@ -2899,6 +3149,7 @@
   "name": "Dido",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q905162",
   "manto": null
  }
@@ -2910,6 +3161,7 @@
   "name": "Diomede (Silius)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2921,6 +3173,7 @@
   "name": "Diomedes",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q208256",
   "manto": null
  }
@@ -2932,6 +3185,7 @@
   "name": "Dione",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q199923",
   "manto": null
  }
@@ -2943,6 +3197,7 @@
   "name": "Dionysus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q645312",
   "manto": null
  }
@@ -2954,6 +3209,7 @@
   "name": "Dis",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2965,6 +3221,7 @@
   "name": "Dolius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q907854",
   "manto": null
  }
@@ -2976,6 +3233,7 @@
   "name": "Dolon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q854056",
   "manto": null
  }
@@ -2987,6 +3245,7 @@
   "name": "Domitius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -2998,6 +3257,7 @@
   "name": "Dorceus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3009,6 +3269,7 @@
   "name": "Dorylas",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3020,6 +3281,7 @@
   "name": "Drances",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3031,6 +3293,7 @@
   "name": "Dryope",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q910403",
   "manto": null
  }
@@ -3042,6 +3305,7 @@
   "name": "Dryope's son",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3053,6 +3317,7 @@
   "name": "Ducarius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3064,6 +3329,7 @@
   "name": "Durius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3075,6 +3341,7 @@
   "name": "Dymas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q12277794",
   "manto": null
  }
@@ -3086,6 +3353,7 @@
   "name": "Echo",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q207368",
   "manto": null
  }
@@ -3097,6 +3365,7 @@
   "name": "Egeria",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q582268",
   "manto": null
  }
@@ -3108,6 +3377,7 @@
   "name": "Eidothea",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q2024668",
   "manto": null
  }
@@ -3119,6 +3389,7 @@
   "name": "Elpenor",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q935433",
   "manto": null
  }
@@ -3130,6 +3401,7 @@
   "name": "Entellus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3141,6 +3413,7 @@
   "name": "Epaphus",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q675699",
   "manto": null
  }
@@ -3152,6 +3425,7 @@
   "name": "Epeius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q278930",
   "manto": null
  }
@@ -3163,6 +3437,7 @@
   "name": "Epimetheus' daughter",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -3174,6 +3449,7 @@
   "name": "Epytus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3185,6 +3461,7 @@
   "name": "Erichtho",
   "being": "creature",
   "type": "I",
+  "gender": "F",
   "wd": "Q1227669",
   "manto": null
  }
@@ -3196,6 +3473,7 @@
   "name": "Eros",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q121973",
   "manto": null
  }
@@ -3207,6 +3485,7 @@
   "name": "Erysichthon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q899184",
   "manto": null
  }
@@ -3218,6 +3497,7 @@
   "name": "Eryx",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q430157",
   "manto": null
  }
@@ -3229,6 +3509,7 @@
   "name": "Eteocles",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q506550",
   "manto": null
  }
@@ -3240,6 +3521,7 @@
   "name": "Eteocles' companions",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -3251,6 +3533,7 @@
   "name": "Eteoneus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q5402571",
   "manto": null
  }
@@ -3262,6 +3545,7 @@
   "name": "Etruscorum",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3273,6 +3557,7 @@
   "name": "Euagrus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3284,6 +3569,7 @@
   "name": "Eumaeus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1333846",
   "manto": null
  }
@@ -3295,6 +3581,7 @@
   "name": "Eumedes (son of Dolon)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -3306,6 +3593,7 @@
   "name": "Eunaeus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3317,6 +3605,7 @@
   "name": "Euphorbus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q599489",
   "manto": null
  }
@@ -3328,6 +3617,7 @@
   "name": "Eupithes",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q579000",
   "manto": null
  }
@@ -3339,6 +3629,7 @@
   "name": "Euralyus (Quintus)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3350,6 +3641,7 @@
   "name": "Eurus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q836518",
   "manto": null
  }
@@ -3361,6 +3653,7 @@
   "name": "Euryalus (Odyssey)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q12654169",
   "manto": null
  }
@@ -3372,6 +3665,7 @@
   "name": "Euryalus (Aeneid)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q16647668",
   "manto": null
  }
@@ -3383,6 +3677,7 @@
   "name": "Euryalus' mother (Aeneid)",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -3394,6 +3689,7 @@
   "name": "Eurybates",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2665082",
   "manto": null
  }
@@ -3405,6 +3701,7 @@
   "name": "Euryclea",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q615201",
   "manto": null
  }
@@ -3416,6 +3713,7 @@
   "name": "Eurydice",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q208588",
   "manto": null
  }
@@ -3427,6 +3725,7 @@
   "name": "Eurylochus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q993387",
   "manto": null
  }
@@ -3438,6 +3737,7 @@
   "name": "Eurymachus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3060909",
   "manto": null
  }
@@ -3449,6 +3749,7 @@
   "name": "Eurymedon (Nonnus)",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q61045445",
   "manto": null
  }
@@ -3460,6 +3761,7 @@
   "name": "Eurymedon (Silius)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -3471,6 +3773,7 @@
   "name": "Eurynome",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q61046076",
   "manto": null
  }
@@ -3482,6 +3785,7 @@
   "name": "Eurypylus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1588440",
   "manto": null
  }
@@ -3493,6 +3797,7 @@
   "name": "Eurypylus (Quintus)",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q1378543",
   "manto": null
  }
@@ -3504,6 +3809,7 @@
   "name": "Eurypylus (Vergil)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q18223316",
   "manto": null
  }
@@ -3515,6 +3821,7 @@
   "name": "Eurytus (Ovid)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q939149",
   "manto": null
  }
@@ -3526,6 +3833,7 @@
   "name": "Evadne (Statius)",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1142062",
   "manto": null
  }
@@ -3537,6 +3845,7 @@
   "name": "Evander",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q837699",
   "manto": null
  }
@@ -3548,6 +3857,7 @@
   "name": "Exadius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q12877108",
   "manto": null
  }
@@ -3559,6 +3869,7 @@
   "name": "Fabius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": "Q32979142",
   "manto": null
  }
@@ -3570,6 +3881,7 @@
   "name": "Fabius' son",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -3581,6 +3893,7 @@
   "name": "Falernus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3592,6 +3905,7 @@
   "name": "Fates",
   "being": "god",
   "type": "C",
+  "gender": "F",
   "wd": "Q180287",
   "manto": null
  }
@@ -3603,6 +3917,7 @@
   "name": "Faunus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q3089703",
   "manto": null
  }
@@ -3614,6 +3929,7 @@
   "name": "Fibrenus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3625,6 +3941,7 @@
   "name": "Fides",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q605139",
   "manto": null
  }
@@ -3636,6 +3953,7 @@
   "name": "Figulus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3647,6 +3965,7 @@
   "name": "Flaminius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3658,6 +3977,7 @@
   "name": "Fortuna",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q4654",
   "manto": null
  }
@@ -3669,6 +3989,7 @@
   "name": "Fulvius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3680,6 +4001,7 @@
   "name": "Furies",
   "being": "god",
   "type": "C",
+  "gender": "F",
   "wd": "Q180262",
   "manto": null
  }
@@ -3691,6 +4013,7 @@
   "name": "Galanthis",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1386394",
   "manto": null
  }
@@ -3702,6 +4025,7 @@
   "name": "Galatea",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q241070",
   "manto": null
  }
@@ -3713,6 +4037,7 @@
   "name": "Garganus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3724,6 +4049,7 @@
   "name": "Gestar",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3735,6 +4061,7 @@
   "name": "Glaucus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1081453",
   "manto": null
  }
@@ -3746,6 +4073,7 @@
   "name": "Gnaeus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3757,6 +4085,7 @@
   "name": "Gnaeus Pompeius Magnus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -3768,6 +4097,7 @@
   "name": "gods",
   "being": "god",
   "type": "C",
+  "gender": "M",
   "wd": "Q101609",
   "manto": null
  }
@@ -3779,6 +4109,7 @@
   "name": "Gods of Crime",
   "being": "god",
   "type": "C",
+  "gender": "N",
   "wd": null,
   "manto": null
  }
@@ -3790,6 +4121,7 @@
   "name": "Gods of the sea",
   "being": "god",
   "type": "C",
+  "gender": "M",
   "wd": "Q949919",
   "manto": null
  }
@@ -3801,6 +4133,7 @@
   "name": "gods of the underworld",
   "being": "god",
   "type": "C",
+  "gender": "M",
   "wd": "Q9876579",
   "manto": null
  }
@@ -3812,6 +4145,7 @@
   "name": "Gracchus the second",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3823,6 +4157,7 @@
   "name": "Greeks",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q539051",
   "manto": null
  }
@@ -3834,6 +4169,7 @@
   "name": "Gryneus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3845,6 +4181,7 @@
   "name": "guide",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3856,6 +4193,7 @@
   "name": "Gyas",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3867,6 +4205,7 @@
   "name": "Hades",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q41410",
   "manto": null
  }
@@ -3878,6 +4217,7 @@
   "name": "Halcyoneus of Bactria",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3889,6 +4229,7 @@
   "name": "Halitherses",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2915608",
   "manto": null
  }
@@ -3900,6 +4241,7 @@
   "name": "Hamilcar",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q185101",
   "manto": null
  }
@@ -3911,6 +4253,7 @@
   "name": "Hannibal",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q36456",
   "manto": null
  }
@@ -3922,6 +4265,7 @@
   "name": "Hanno",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3933,6 +4277,7 @@
   "name": "Harmonia",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q978079",
   "manto": null
  }
@@ -3944,6 +4289,7 @@
   "name": "Haruspex",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -3955,6 +4301,7 @@
   "name": "Hasdrubal",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q311702",
   "manto": null
  }
@@ -3966,6 +4313,7 @@
   "name": "Hebe",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q131125",
   "manto": null
  }
@@ -3977,6 +4325,7 @@
   "name": "Hector",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q159666",
   "manto": null
  }
@@ -3988,6 +4337,7 @@
   "name": "Hecuba",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q193433",
   "manto": null
  }
@@ -3999,6 +4349,7 @@
   "name": "Helena",
   "being": "demi god",
   "type": "I",
+  "gender": "F",
   "wd": "Q164061",
   "manto": null
  }
@@ -4010,6 +4361,7 @@
   "name": "Helenus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q729332",
   "manto": null
  }
@@ -4021,6 +4373,7 @@
   "name": "Heliads",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4032,6 +4385,7 @@
   "name": "Helius",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q134270",
   "manto": null
  }
@@ -4043,6 +4397,7 @@
   "name": "Hephaestus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q44384",
   "manto": null
  }
@@ -4054,6 +4409,7 @@
   "name": "Hera",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q38012",
   "manto": null
  }
@@ -4065,6 +4421,7 @@
   "name": "Heracles",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q122248",
   "manto": null
  }
@@ -4076,6 +4433,7 @@
   "name": "Hercules",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q122248",
   "manto": null
  }
@@ -4087,6 +4445,7 @@
   "name": "Hermaphroditus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q204146",
   "manto": null
  }
@@ -4098,6 +4457,7 @@
   "name": "Hermes",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q41484",
   "manto": null
  }
@@ -4109,6 +4469,7 @@
   "name": "Hersilia",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1402198",
   "manto": null
  }
@@ -4120,6 +4481,7 @@
   "name": "Hesperie",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4131,6 +4493,7 @@
   "name": "Hiberus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4142,6 +4505,7 @@
   "name": "Hippolochus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q16641866",
   "manto": null
  }
@@ -4153,6 +4517,7 @@
   "name": "Hippolytus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q338201",
   "manto": null
  }
@@ -4164,6 +4529,7 @@
   "name": "Hippomedon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q976463",
   "manto": null
  }
@@ -4175,6 +4541,7 @@
   "name": "Hippomenes",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1455747",
   "manto": null
  }
@@ -4186,6 +4553,7 @@
   "name": "Homer",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q6691",
   "manto": null
  }
@@ -4197,6 +4565,7 @@
   "name": "Hopleus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4208,6 +4577,7 @@
   "name": "Hostus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4219,6 +4589,7 @@
   "name": "Hyacinthus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q207273",
   "manto": null
  }
@@ -4230,6 +4601,7 @@
   "name": "Hymen",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q506770",
   "manto": null
  }
@@ -4241,6 +4613,7 @@
   "name": "Hypanis",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4252,6 +4625,7 @@
   "name": "Hypnus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q189347",
   "manto": null
  }
@@ -4263,6 +4637,7 @@
   "name": "Hypsenor",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q44417752",
   "manto": null
  }
@@ -4274,6 +4649,7 @@
   "name": "Hypseus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1179038",
   "manto": null
  }
@@ -4285,6 +4661,7 @@
   "name": "Hypsipyle",
   "being": "demi-god",
   "type": "I",
+  "gender": "F",
   "wd": "Q775296",
   "manto": null
  }
@@ -4296,6 +4673,7 @@
   "name": "Iapyx",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1180888",
   "manto": null
  }
@@ -4307,6 +4685,7 @@
   "name": "Iarbas",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q1655701",
   "manto": null
  }
@@ -4318,6 +4697,7 @@
   "name": "Icarus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q34041",
   "manto": null
  }
@@ -4329,6 +4709,7 @@
   "name": "Idaeus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3791819",
   "manto": null
  }
@@ -4340,6 +4721,7 @@
   "name": "Idas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1136130",
   "manto": null
  }
@@ -4351,6 +4733,7 @@
   "name": "Ide",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4362,6 +4745,7 @@
   "name": "Ide's sons",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -4373,6 +4757,7 @@
   "name": "Idmon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q748144",
   "manto": null
  }
@@ -4384,6 +4769,7 @@
   "name": "Idmon (Nonnus)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4395,6 +4781,7 @@
   "name": "Idomeneus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q570434",
   "manto": null
  }
@@ -4406,6 +4793,7 @@
   "name": "Ilioneus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4417,6 +4805,7 @@
   "name": "Imago Iuliae",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4428,6 +4817,7 @@
   "name": "Imago Patriae",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4439,6 +4829,7 @@
   "name": "Imilce",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4450,6 +4841,7 @@
   "name": "Inachus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q735623",
   "manto": null
  }
@@ -4461,6 +4853,7 @@
   "name": "Inhabitants of Arminium",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4472,6 +4865,7 @@
   "name": "inhabitants of Larisa",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4483,6 +4877,7 @@
   "name": "Inhabitants of Massilia",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4494,6 +4889,7 @@
   "name": "Inhabitants of Mytilene",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4505,6 +4901,7 @@
   "name": "Ino",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q223690",
   "manto": null
  }
@@ -4516,6 +4913,7 @@
   "name": "Ino's attendants",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4527,6 +4925,7 @@
   "name": "Invidia",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q3091027",
   "manto": null
  }
@@ -4538,6 +4937,7 @@
   "name": "Io",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q179014",
   "manto": null
  }
@@ -4549,6 +4949,7 @@
   "name": "Iole",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q744147",
   "manto": null
  }
@@ -4560,6 +4961,7 @@
   "name": "Iphis (of Cyprus)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1611657",
   "manto": null
  }
@@ -4571,6 +4973,7 @@
   "name": "Iphis (of Crete)",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1889919",
   "manto": null
  }
@@ -4582,6 +4985,7 @@
   "name": "Iris",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q184570",
   "manto": null
  }
@@ -4593,6 +4997,7 @@
   "name": "Irus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": "Q4794415",
   "manto": null
  }
@@ -4604,6 +5009,7 @@
   "name": "Isis",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q79876",
   "manto": null
  }
@@ -4615,6 +5021,7 @@
   "name": "Ismene",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q753902",
   "manto": null
  }
@@ -4626,6 +5033,7 @@
   "name": "Ismenis (Statius)",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q6085037",
   "manto": null
  }
@@ -4637,6 +5045,7 @@
   "name": "Ismenos (Statius)",
   "being": "river",
   "type": "I",
+  "gender": null,
   "wd": "Q2422308",
   "manto": null
  }
@@ -4648,6 +5057,7 @@
   "name": "Ismenus (Ovid)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q11714191",
   "manto": null
  }
@@ -4659,6 +5069,7 @@
   "name": "Italy",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q38",
   "manto": null
  }
@@ -4670,6 +5081,7 @@
   "name": "Ithacan women",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -4681,6 +5093,7 @@
   "name": "Itys",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1675360",
   "manto": null
  }
@@ -4692,6 +5105,7 @@
   "name": "Iulus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q655566",
   "manto": null
  }
@@ -4703,6 +5117,7 @@
   "name": "Juturna",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q139448",
   "manto": null
  }
@@ -4714,6 +5129,7 @@
   "name": "Jason",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q176758",
   "manto": null
  }
@@ -4725,6 +5141,7 @@
   "name": "Jocasta",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q131445",
   "manto": null
  }
@@ -4736,6 +5153,7 @@
   "name": "Julius Caesar",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1048",
   "manto": null
  }
@@ -4747,6 +5165,7 @@
   "name": "Juno",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q38012",
   "manto": null
  }
@@ -4758,6 +5177,7 @@
   "name": "Jupiter",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q34201",
   "manto": null
  }
@@ -4769,6 +5189,7 @@
   "name": "Kalaïs",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q893473",
   "manto": null
  }
@@ -4780,6 +5201,7 @@
   "name": "L. Aemilius Paulus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4791,6 +5213,7 @@
   "name": "Labicus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4802,6 +5225,7 @@
   "name": "Labienus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4813,6 +5237,7 @@
   "name": "Laelius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -4824,6 +5249,7 @@
   "name": "Laertes",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q748296",
   "manto": null
  }
@@ -4835,6 +5261,7 @@
   "name": "Laius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q463898",
   "manto": null
  }
@@ -4846,6 +5273,7 @@
   "name": "Lampetides",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4857,6 +5285,7 @@
   "name": "Laocoon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q22878",
   "manto": null
  }
@@ -4868,6 +5297,7 @@
   "name": "Laodamas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q5969992",
   "manto": null
  }
@@ -4879,6 +5309,7 @@
   "name": "Laomedon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q332324",
   "manto": null
  }
@@ -4890,6 +5321,7 @@
   "name": "Laomedon's sons",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -4901,6 +5333,7 @@
   "name": "Lateranus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q6495761",
   "manto": null
  }
@@ -4912,6 +5345,7 @@
   "name": "Latins",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -4923,6 +5357,7 @@
   "name": "Latin mothers",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -4934,6 +5369,7 @@
   "name": "Latinus",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q779406",
   "manto": null
  }
@@ -4945,6 +5381,7 @@
   "name": "Latona",
   "being": "demi god",
   "type": "I",
+  "gender": "F",
   "wd": "Q12958119",
   "manto": null
  }
@@ -4956,6 +5393,7 @@
   "name": "Latreus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4967,6 +5405,7 @@
   "name": "Laurentes",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -4978,6 +5417,7 @@
   "name": "Lausus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3219705",
   "manto": null
  }
@@ -4989,6 +5429,7 @@
   "name": "Lavinia",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1137364",
   "manto": null
  }
@@ -5000,6 +5441,7 @@
   "name": "Lelex",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q1419059",
   "manto": null
  }
@@ -5011,6 +5453,7 @@
   "name": "Lemnian crowd",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5022,6 +5465,7 @@
   "name": "Lemnian women",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -5033,6 +5477,7 @@
   "name": "Lemnos",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q192483",
   "manto": null
  }
@@ -5044,6 +5489,7 @@
   "name": "Lentulus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5055,6 +5501,7 @@
   "name": "Leodes",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3830290",
   "manto": null
  }
@@ -5066,6 +5513,7 @@
   "name": "Leonteus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -5077,6 +5525,7 @@
   "name": "Leto",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q103107",
   "manto": null
  }
@@ -5088,6 +5537,7 @@
   "name": "Leuconoe",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5099,6 +5549,7 @@
   "name": "Leucothea",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q1821610",
   "manto": null
  }
@@ -5110,6 +5561,7 @@
   "name": "Leucothoe",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5121,6 +5573,7 @@
   "name": "Leucothoe's attendants",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -5132,6 +5585,7 @@
   "name": "Lichas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q922330",
   "manto": null
  }
@@ -5143,6 +5597,7 @@
   "name": "Ligdus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5154,6 +5609,7 @@
   "name": "Liger",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5165,6 +5621,7 @@
   "name": "lions",
   "being": "creature",
   "type": "C",
+  "gender": "M",
   "wd": "Q140",
   "manto": null
  }
@@ -5176,6 +5633,7 @@
   "name": "Liriope",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q1815682",
   "manto": null
  }
@@ -5187,6 +5645,7 @@
   "name": "Livius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5198,6 +5657,7 @@
   "name": "Lord of Thymbra",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5209,6 +5669,7 @@
   "name": "Lucagus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5220,6 +5681,7 @@
   "name": "Lucina",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q604898",
   "manto": null
  }
@@ -5231,6 +5693,7 @@
   "name": "Luna",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q1235172",
   "manto": null
  }
@@ -5242,6 +5705,7 @@
   "name": "Lycabas",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5253,6 +5717,7 @@
   "name": "Lycaon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1331212",
   "manto": null
  }
@@ -5264,6 +5729,7 @@
   "name": "Lycormas",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5275,6 +5741,7 @@
   "name": "Lycormas' mother",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5286,6 +5753,7 @@
   "name": "Lycurgus",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q270117",
   "manto": null
  }
@@ -5297,6 +5765,7 @@
   "name": "Lycus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3268516",
   "manto": null
  }
@@ -5308,6 +5777,7 @@
   "name": "M. Claudius Marcellus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q312306",
   "manto": null
  }
@@ -5319,6 +5789,7 @@
   "name": "M. Minucius Rufus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q580979",
   "manto": null
  }
@@ -5330,6 +5801,7 @@
   "name": "Macareus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -5341,6 +5813,7 @@
   "name": "Machaon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q674319",
   "manto": null
  }
@@ -5352,6 +5825,7 @@
   "name": "Maeon",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5363,6 +5837,7 @@
   "name": "Mago",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q6732268",
   "manto": null
  }
@@ -5374,6 +5849,7 @@
   "name": "Magus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5385,6 +5861,7 @@
   "name": "Manto",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1332949",
   "manto": null
  }
@@ -5396,6 +5873,7 @@
   "name": "Maraxes",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5407,6 +5885,7 @@
   "name": "Marcellus' son",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5418,6 +5897,7 @@
   "name": "Marcia (Lucan)",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q270591",
   "manto": null
  }
@@ -5429,6 +5909,7 @@
   "name": "Marcia (Silius)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5440,6 +5921,7 @@
   "name": "Mars",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q40901",
   "manto": null
  }
@@ -5451,6 +5933,7 @@
   "name": "Marsyas",
   "being": "creature",
   "type": "I",
+  "gender": "M",
   "wd": "Q599737",
   "manto": null
  }
@@ -5462,6 +5945,7 @@
   "name": "Marus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5473,6 +5957,7 @@
   "name": "Masinissa",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q314685",
   "manto": null
  }
@@ -5484,6 +5969,7 @@
   "name": "Masinissa's mother",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5495,6 +5981,7 @@
   "name": "Medea",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "F",
   "wd": "Q174278",
   "manto": null
  }
@@ -5506,6 +5993,7 @@
   "name": "Medon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q15148979",
   "manto": null
  }
@@ -5517,6 +6005,7 @@
   "name": "Medon (Odyssey)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q15148979",
   "manto": null
  }
@@ -5528,6 +6017,7 @@
   "name": "Medon (Ovid)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5539,6 +6029,7 @@
   "name": "Megaera (Statius + Nonnus)",
   "being": "creature",
   "type": "I",
+  "gender": "F",
   "wd": "Q371545",
   "manto": null
  }
@@ -5550,6 +6041,7 @@
   "name": "Megareus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q6808829",
   "manto": null
  }
@@ -5561,6 +6053,7 @@
   "name": "Melampus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q602258",
   "manto": null
  }
@@ -5572,6 +6065,7 @@
   "name": "Melanippus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3854104",
   "manto": null
  }
@@ -5583,6 +6077,7 @@
   "name": "Melanthius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1299128",
   "manto": null
  }
@@ -5594,6 +6089,7 @@
   "name": "Melantho",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1862383",
   "manto": null
  }
@@ -5605,6 +6101,7 @@
   "name": "Meleager",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q321541",
   "manto": null
  }
@@ -5616,6 +6113,7 @@
   "name": "Menelaus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q171839",
   "manto": null
  }
@@ -5627,6 +6125,7 @@
   "name": "Menestheus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q781867",
   "manto": null
  }
@@ -5638,6 +6137,7 @@
   "name": "Menoeceus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5649,6 +6149,7 @@
   "name": "Menoetes",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5660,6 +6161,7 @@
   "name": "Menoetius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1920680",
   "manto": null
  }
@@ -5671,6 +6173,7 @@
   "name": "Mentor",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q214003",
   "manto": null
  }
@@ -5682,6 +6185,7 @@
   "name": "Mercury",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q1150",
   "manto": null
  }
@@ -5693,6 +6197,7 @@
   "name": "Meriones",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q367819",
   "manto": null
  }
@@ -5704,6 +6209,7 @@
   "name": "Messapus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q16386986",
   "manto": null
  }
@@ -5715,6 +6221,7 @@
   "name": "Mestra",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5726,6 +6233,7 @@
   "name": "Metellus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5737,6 +6245,7 @@
   "name": "Mezentius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5748,6 +6257,7 @@
   "name": "Midas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q308398",
   "manto": null
  }
@@ -5759,6 +6269,7 @@
   "name": "Milo",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5770,6 +6281,7 @@
   "name": "Minerva",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q126916",
   "manto": null
  }
@@ -5781,6 +6293,7 @@
   "name": "Minos",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q23168",
   "manto": null
  }
@@ -5792,6 +6305,7 @@
   "name": "Minucius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5803,6 +6317,7 @@
   "name": "Mnestheus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1163534",
   "manto": null
  }
@@ -5814,6 +6329,7 @@
   "name": "Mnestheus' companions",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -5825,6 +6341,7 @@
   "name": "Monychus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5836,6 +6353,7 @@
   "name": "Mopsus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1887300",
   "manto": null
  }
@@ -5847,6 +6365,7 @@
   "name": "Morpheus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q194012",
   "manto": null
  }
@@ -5858,6 +6377,7 @@
   "name": "Murranus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5869,6 +6389,7 @@
   "name": "Murrus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5880,6 +6401,7 @@
   "name": "Musaeus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5891,6 +6413,7 @@
   "name": "Muses",
   "being": "god",
   "type": "C",
+  "gender": "F",
   "wd": "Q66016",
   "manto": null
  }
@@ -5902,6 +6425,7 @@
   "name": "Myrrha",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q771366",
   "manto": null
  }
@@ -5913,6 +6437,7 @@
   "name": "Myrrha's mother",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5924,6 +6449,7 @@
   "name": "Myscelus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5935,6 +6461,7 @@
   "name": "Narcissus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q179256",
   "manto": null
  }
@@ -5946,6 +6473,7 @@
   "name": "Natura",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -5957,6 +6485,7 @@
   "name": "Nausicaa",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q135224",
   "manto": null
  }
@@ -5968,6 +6497,7 @@
   "name": "Nautes",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -5979,6 +6509,7 @@
   "name": "Nemesis",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q185747",
   "manto": null
  }
@@ -5990,6 +6521,7 @@
   "name": "Neoptolemus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q322639",
   "manto": null
  }
@@ -6001,6 +6533,7 @@
   "name": "Neptune",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q41127",
   "manto": null
  }
@@ -6012,6 +6545,7 @@
   "name": "Nereids",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q54230",
   "manto": null
  }
@@ -6023,6 +6557,7 @@
   "name": "Nessus",
   "being": "creature",
   "type": "I",
+  "gender": "M",
   "wd": "Q466866",
   "manto": null
  }
@@ -6034,6 +6569,7 @@
   "name": "Nestor",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q193267",
   "manto": null
  }
@@ -6045,6 +6581,7 @@
   "name": "Nileus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6056,6 +6593,7 @@
   "name": "Niobe",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q213621",
   "manto": null
  }
@@ -6067,6 +6605,7 @@
   "name": "Nisus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6078,6 +6617,7 @@
   "name": "Noemon",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6089,6 +6629,7 @@
   "name": "Nox",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q1651665",
   "manto": null
  }
@@ -6100,6 +6641,7 @@
   "name": "Numa",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q200031",
   "manto": null
  }
@@ -6111,6 +6653,7 @@
   "name": "Numanus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6122,6 +6665,7 @@
   "name": "numina",
   "being": "god",
   "type": "C",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6133,6 +6677,7 @@
   "name": "nurse",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6144,6 +6689,7 @@
   "name": "nymph",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q373916",
   "manto": null
  }
@@ -6155,6 +6701,7 @@
   "name": "Oceanus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q161419",
   "manto": null
  }
@@ -6166,6 +6713,7 @@
   "name": "Odysseus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q47231",
   "manto": null
  }
@@ -6177,6 +6725,7 @@
   "name": "Odysseus' men",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6188,6 +6737,7 @@
   "name": "Oedipus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q130890",
   "manto": null
  }
@@ -6199,6 +6749,7 @@
   "name": "Oeneus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q749966",
   "manto": null
  }
@@ -6210,6 +6761,7 @@
   "name": "Olympian gods",
   "being": "god",
   "type": "C",
+  "gender": "M",
   "wd": "Q7089008",
   "manto": null
  }
@@ -6221,6 +6773,7 @@
   "name": "Onetor",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q91109169",
   "manto": null
  }
@@ -6232,6 +6785,7 @@
   "name": "Onetor the Phocian",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6243,6 +6797,7 @@
   "name": "Opheltes",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1419140",
   "manto": null
  }
@@ -6254,6 +6809,7 @@
   "name": "Opis",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q12901294",
   "manto": null
  }
@@ -6265,6 +6821,7 @@
   "name": "Orchamus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6276,6 +6833,7 @@
   "name": "Orfitus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6287,6 +6845,7 @@
   "name": "Ornytus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q16328250",
   "manto": null
  }
@@ -6298,6 +6857,7 @@
   "name": "Orodes",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6309,6 +6869,7 @@
   "name": "Orpheus",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q174353",
   "manto": null
  }
@@ -6320,6 +6881,7 @@
   "name": "Othryoneus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2305436",
   "manto": null
  }
@@ -6331,6 +6893,7 @@
   "name": "Pacuvius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q314677",
   "manto": null
  }
@@ -6342,6 +6905,7 @@
   "name": "Palaemon",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q738007",
   "manto": null
  }
@@ -6353,6 +6917,7 @@
   "name": "Palinurus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6364,6 +6929,7 @@
   "name": "Pallas (son of Evander)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2048018",
   "manto": null
  }
@@ -6375,6 +6941,7 @@
   "name": "Pan",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q132582",
   "manto": null
  }
@@ -6386,6 +6953,7 @@
   "name": "Pandarus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1057384",
   "manto": null
  }
@@ -6397,6 +6965,7 @@
   "name": "Pandion",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1076578",
   "manto": null
  }
@@ -6408,6 +6977,7 @@
   "name": "Panemus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6419,6 +6989,7 @@
   "name": "Panthus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6430,6 +7001,7 @@
   "name": "Paris",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q167646",
   "manto": null
  }
@@ -6441,6 +7013,7 @@
   "name": "Parthenopaeus",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q1128942",
   "manto": null
  }
@@ -6452,6 +7025,7 @@
   "name": "Patroclus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q186271",
   "manto": null
  }
@@ -6463,6 +7037,7 @@
   "name": "Paulus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6474,6 +7049,7 @@
   "name": "Pedasus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6485,6 +7061,7 @@
   "name": "Pedianus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6496,6 +7073,7 @@
   "name": "Peisander",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q16670180",
   "manto": null
  }
@@ -6507,6 +7085,7 @@
   "name": "Peisistratus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1766777",
   "manto": null
  }
@@ -6518,6 +7097,7 @@
   "name": "Pelasgians",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q107822",
   "manto": null
  }
@@ -6529,6 +7109,7 @@
   "name": "Peleus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q178641",
   "manto": null
  }
@@ -6540,6 +7121,7 @@
   "name": "Pelias",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q182439",
   "manto": null
  }
@@ -6551,6 +7133,7 @@
   "name": "Pelias’s daughters",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6562,6 +7145,7 @@
   "name": "Pelorus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3898964",
   "manto": null
  }
@@ -6573,6 +7157,7 @@
   "name": "Penates",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6584,6 +7169,7 @@
   "name": "Peneleus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q254381",
   "manto": null
  }
@@ -6595,6 +7181,7 @@
   "name": "Penelope",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q165769",
   "manto": null
  }
@@ -6606,6 +7193,7 @@
   "name": "Peneus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": "Q1364612",
   "manto": null
  }
@@ -6617,6 +7205,7 @@
   "name": "Pentheus",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q391091",
   "manto": null
  }
@@ -6628,6 +7217,7 @@
   "name": "Perolla",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6639,6 +7229,7 @@
   "name": "Persephone",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q45967",
   "manto": null
  }
@@ -6650,6 +7241,7 @@
   "name": "Perserpine",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6661,6 +7253,7 @@
   "name": "Perseus",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q130832",
   "manto": null
  }
@@ -6672,6 +7265,7 @@
   "name": "Phaeacians",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q128693",
   "manto": null
  }
@@ -6683,6 +7277,7 @@
   "name": "Phaethon",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q203480",
   "manto": null
  }
@@ -6694,6 +7289,7 @@
   "name": "Phegeus",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q2329005",
   "manto": null
  }
@@ -6705,6 +7301,7 @@
   "name": "Phemius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1235168",
   "manto": null
  }
@@ -6716,6 +7313,7 @@
   "name": "Phemonoe",
   "being": "demi god",
   "type": "I",
+  "gender": "F",
   "wd": "Q2993240",
   "manto": null
  }
@@ -6727,6 +7325,7 @@
   "name": "Philemon",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6738,6 +7337,7 @@
   "name": "Philoetius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2277624",
   "manto": null
  }
@@ -6749,6 +7349,7 @@
   "name": "Philomela",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q115449",
   "manto": null
  }
@@ -6760,6 +7361,7 @@
   "name": "Phineus",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q641065",
   "manto": null
  }
@@ -6771,6 +7373,7 @@
   "name": "Phlegyas (Statius)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6782,6 +7385,7 @@
   "name": "Phlegyas (Vergil)",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q831583",
   "manto": null
  }
@@ -6793,6 +7397,7 @@
   "name": "Phocus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q836311",
   "manto": null
  }
@@ -6804,6 +7409,7 @@
   "name": "Phoebus Apollo",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q37340",
   "manto": null
  }
@@ -6815,6 +7421,7 @@
   "name": "Phoinix",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1061747",
   "manto": null
  }
@@ -6826,6 +7433,7 @@
   "name": "Phorbas (centaur)",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6837,6 +7445,7 @@
   "name": "Phorbas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q33193166",
   "manto": null
  }
@@ -6848,6 +7457,7 @@
   "name": "Phryx incola",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6859,6 +7469,7 @@
   "name": "Phylius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q26234944",
   "manto": null
  }
@@ -6870,6 +7481,7 @@
   "name": "Picus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q235724",
   "manto": null
  }
@@ -6881,6 +7493,7 @@
   "name": "Pierides",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": "Q3078974",
   "manto": null
  }
@@ -6892,6 +7505,7 @@
   "name": "Pietas",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q2643299",
   "manto": null
  }
@@ -6903,6 +7517,7 @@
   "name": "Pirithoüs",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q502156",
   "manto": null
  }
@@ -6914,6 +7529,7 @@
   "name": "Piso",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6925,6 +7541,7 @@
   "name": "plebs",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q104687",
   "manto": null
  }
@@ -6936,6 +7553,7 @@
   "name": "Pleminius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6947,6 +7565,7 @@
   "name": "Plexippus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -6958,6 +7577,7 @@
   "name": "Pluto",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q41410",
   "manto": null
  }
@@ -6969,6 +7589,7 @@
   "name": "Poeni",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -6980,6 +7601,7 @@
   "name": "Polites",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q838767",
   "manto": null
  }
@@ -6991,6 +7613,7 @@
   "name": "Polydamas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1205276",
   "manto": null
  }
@@ -7002,6 +7625,7 @@
   "name": "Polydectes",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q771241",
   "manto": null
  }
@@ -7013,6 +7637,7 @@
   "name": "Polydeuces",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q12046224",
   "manto": null
  }
@@ -7024,6 +7649,7 @@
   "name": "Polydorus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q346634",
   "manto": null
  }
@@ -7035,6 +7661,7 @@
   "name": "Polymestor",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2288153",
   "manto": null
  }
@@ -7046,6 +7673,7 @@
   "name": "Polynices",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q334817",
   "manto": null
  }
@@ -7057,6 +7685,7 @@
   "name": "Polyphemus",
   "being": "monster",
   "type": "I",
+  "gender": "M",
   "wd": "Q193567",
   "manto": null
  }
@@ -7068,6 +7697,7 @@
   "name": "Polyphemus (Argonaut)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2627407",
   "manto": null
  }
@@ -7079,6 +7709,7 @@
   "name": "Polyxena",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q750236",
   "manto": null
  }
@@ -7090,6 +7721,7 @@
   "name": "Polyxo",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q2103182",
   "manto": null
  }
@@ -7101,6 +7733,7 @@
   "name": "Pomona",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q171239",
   "manto": null
  }
@@ -7112,6 +7745,7 @@
   "name": "Pompeius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7123,6 +7757,7 @@
   "name": "Pomponia",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q11942281",
   "manto": null
  }
@@ -7134,6 +7769,7 @@
   "name": "Pontonous",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q7228335",
   "manto": null
  }
@@ -7145,6 +7781,7 @@
   "name": "Poseidon",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q41127",
   "manto": null
  }
@@ -7156,6 +7793,7 @@
   "name": "Pothinus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q471255",
   "manto": null
  }
@@ -7167,6 +7805,7 @@
   "name": "Priam",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q170473",
   "manto": null
  }
@@ -7178,6 +7817,7 @@
   "name": "Priestess",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7189,6 +7829,7 @@
   "name": "princes",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7200,6 +7841,7 @@
   "name": "proceres",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7211,6 +7853,7 @@
   "name": "Procne",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1231743",
   "manto": null
  }
@@ -7222,6 +7865,7 @@
   "name": "Procris",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1139470",
   "manto": null
  }
@@ -7233,6 +7877,7 @@
   "name": "Proetus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q644604",
   "manto": null
  }
@@ -7244,6 +7889,7 @@
   "name": "Prometheus' son (Deucalion)",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q207715",
   "manto": null
  }
@@ -7255,6 +7901,7 @@
   "name": "Proteus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q191481",
   "manto": null
  }
@@ -7266,6 +7913,7 @@
   "name": "Proteus (Ovid)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7277,6 +7925,7 @@
   "name": "Proteus (Silius + Odyssey)",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q191481",
   "manto": null
  }
@@ -7288,6 +7937,7 @@
   "name": "Protoenor",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2104755",
   "manto": null
  }
@@ -7299,6 +7949,7 @@
   "name": "Ptolemy",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7310,6 +7961,7 @@
   "name": "Pygmalion",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q192343",
   "manto": null
  }
@@ -7321,6 +7973,7 @@
   "name": "Pyramus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q13409873",
   "manto": null
  }
@@ -7332,6 +7985,7 @@
   "name": "Pyreneus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3411429",
   "manto": null
  }
@@ -7343,6 +7997,7 @@
   "name": "Pyrgo",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7354,6 +8009,7 @@
   "name": "Pyrrha",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q622809",
   "manto": null
  }
@@ -7365,6 +8021,7 @@
   "name": "Pyrrhus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7376,6 +8033,7 @@
   "name": "Pythagoras",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q10261",
   "manto": null
  }
@@ -7387,6 +8045,7 @@
   "name": "Q. Fulvius Flaccus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q939456",
   "manto": null
  }
@@ -7398,6 +8057,7 @@
   "name": "Queen of the Bacchantes",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7409,6 +8069,7 @@
   "name": "Quirites",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": "Q636965",
   "manto": null
  }
@@ -7420,6 +8081,7 @@
   "name": "Raven",
   "being": "creature",
   "type": "I",
+  "gender": null,
   "wd": "Q25357",
   "manto": null
  }
@@ -7431,6 +8093,7 @@
   "name": "Regulus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7442,6 +8105,7 @@
   "name": "Rhaebus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7453,6 +8117,7 @@
   "name": "Rhamnusia / Nemesis",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q185747",
   "manto": null
  }
@@ -7464,6 +8129,7 @@
   "name": "Rhoetus (Ovid)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7475,6 +8141,7 @@
   "name": "Rhoetus (Vergil)",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7486,6 +8153,7 @@
   "name": "Ripheus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7497,6 +8165,7 @@
   "name": "Roma",
   "being": "city",
   "type": "I",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -7508,6 +8177,7 @@
   "name": "Romans",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7519,6 +8189,7 @@
   "name": "Rutulians",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q579014",
   "manto": null
  }
@@ -7530,6 +8201,7 @@
   "name": "Sabratha",
   "being": "city",
   "type": "I",
+  "gender": null,
   "wd": "Q192918",
   "manto": null
  }
@@ -7541,6 +8213,7 @@
   "name": "Saces",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7552,6 +8225,7 @@
   "name": "Salii",
   "being": "human (priests)",
   "type": "C",
+  "gender": "M",
   "wd": "Q366880",
   "manto": null
  }
@@ -7563,6 +8237,7 @@
   "name": "Salmacis",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q828579",
   "manto": null
  }
@@ -7574,6 +8249,7 @@
   "name": "same servant",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7585,6 +8261,7 @@
   "name": "Sarpedon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q762520",
   "manto": null
  }
@@ -7596,6 +8273,7 @@
   "name": "Satricus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7607,6 +8285,7 @@
   "name": "Scaeva",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7618,6 +8297,7 @@
   "name": "Scaevola",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7629,6 +8309,7 @@
   "name": "Scamander",
   "being": "river",
   "type": "I",
+  "gender": "M",
   "wd": "Q1134694",
   "manto": null
  }
@@ -7640,6 +8321,7 @@
   "name": "Scipio",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2253",
   "manto": null
  }
@@ -7651,6 +8333,7 @@
   "name": "Scipio's father",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7662,6 +8345,7 @@
   "name": "Scipio's uncle",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7673,6 +8357,7 @@
   "name": "Scipio's son",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7684,6 +8369,7 @@
   "name": "Scylla (monster)",
   "being": "creature",
   "type": "I",
+  "gender": "F",
   "wd": "Q193115",
   "manto": null
  }
@@ -7695,6 +8381,7 @@
   "name": "Scylla (daughter of Nisus)",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1415180",
   "manto": null
  }
@@ -7706,6 +8393,7 @@
   "name": "Semele",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q776139",
   "manto": null
  }
@@ -7717,6 +8405,7 @@
   "name": "senate",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q2570643",
   "manto": null
  }
@@ -7728,6 +8417,7 @@
   "name": "Serestus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7739,6 +8429,7 @@
   "name": "Sergestus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1526637",
   "manto": null
  }
@@ -7750,6 +8441,7 @@
   "name": "serpent",
   "being": "creature",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7761,6 +8453,7 @@
   "name": "Serranus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q3957984",
   "manto": null
  }
@@ -7772,6 +8465,7 @@
   "name": "servants",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q464705",
   "manto": null
  }
@@ -7783,6 +8477,7 @@
   "name": "Sextus Pompeius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1896383",
   "manto": null
  }
@@ -7794,6 +8489,7 @@
   "name": "Sibyl",
   "being": "god (oracle)",
   "type": "C",
+  "gender": "F",
   "wd": "Q273320",
   "manto": null
  }
@@ -7805,6 +8501,7 @@
   "name": "Sicoris",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7816,6 +8513,7 @@
   "name": "Simoeis",
   "being": "river",
   "type": "I",
+  "gender": "M",
   "wd": "Q2479077",
   "manto": null
  }
@@ -7827,6 +8525,7 @@
   "name": "Sinon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q663792",
   "manto": null
  }
@@ -7838,6 +8537,7 @@
   "name": "sisters",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": "Q595094",
   "manto": null
  }
@@ -7849,6 +8549,7 @@
   "name": "Socus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -7860,6 +8561,7 @@
   "name": "Sol",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q134270",
   "manto": null
  }
@@ -7871,6 +8573,7 @@
   "name": "soldiers",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q4991371",
   "manto": null
  }
@@ -7882,6 +8585,7 @@
   "name": "Solimus",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q7559062",
   "manto": null
  }
@@ -7893,6 +8597,7 @@
   "name": "Somnus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q21030618",
   "manto": null
  }
@@ -7904,6 +8609,7 @@
   "name": "someone",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7915,6 +8621,7 @@
   "name": "Spercheius",
   "being": "river",
   "type": "I",
+  "gender": null,
   "wd": "Q426309",
   "manto": null
  }
@@ -7926,6 +8633,7 @@
   "name": "Sthenelus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1060267",
   "manto": null
  }
@@ -7937,6 +8645,7 @@
   "name": "suitors",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q1058631",
   "manto": null
  }
@@ -7948,6 +8657,7 @@
   "name": "Sychaeus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2060196",
   "manto": null
  }
@@ -7959,6 +8669,7 @@
   "name": "Syphax",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q353141",
   "manto": null
  }
@@ -7970,6 +8681,7 @@
   "name": "Syrinx",
   "being": "nymph",
   "type": "I",
+  "gender": "F",
   "wd": "Q846129",
   "manto": null
  }
@@ -7981,6 +8693,7 @@
   "name": "Syrticus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -7992,6 +8705,7 @@
   "name": "Talthybius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1367860",
   "manto": null
  }
@@ -8003,6 +8717,7 @@
   "name": "Tarchon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1194399",
   "manto": null
  }
@@ -8014,6 +8729,7 @@
   "name": "Tarcondimotus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8025,6 +8741,7 @@
   "name": "Tarquitus",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q3981176",
   "manto": null
  }
@@ -8036,6 +8753,7 @@
   "name": "Taurea",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8047,6 +8765,7 @@
   "name": "Teiresias",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q656881",
   "manto": null
  }
@@ -8058,6 +8777,7 @@
   "name": "Telamon",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q331327",
   "manto": null
  }
@@ -8069,6 +8789,7 @@
   "name": "Telemachus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q192482",
   "manto": null
  }
@@ -8080,6 +8801,7 @@
   "name": "Telemus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q2297463",
   "manto": null
  }
@@ -8091,6 +8813,7 @@
   "name": "Telethusa",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q3561222",
   "manto": null
  }
@@ -8102,6 +8825,7 @@
   "name": "Tellus",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q270867",
   "manto": null
  }
@@ -8113,6 +8837,7 @@
   "name": "Tereus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1138506",
   "manto": null
  }
@@ -8124,6 +8849,7 @@
   "name": "Tethys",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q184216",
   "manto": null
  }
@@ -8135,6 +8861,7 @@
   "name": "Teucrus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q878184",
   "manto": null
  }
@@ -8146,6 +8873,7 @@
   "name": "Theano",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1154473",
   "manto": null
  }
@@ -8157,6 +8885,7 @@
   "name": "Thebans",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -8168,6 +8897,7 @@
   "name": "Theban sentry",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -8179,6 +8909,7 @@
   "name": "Theban warriors",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -8190,6 +8921,7 @@
   "name": "Theban women",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -8201,6 +8933,7 @@
   "name": "Thebes",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q5760",
   "manto": null
  }
@@ -8212,6 +8945,7 @@
   "name": "Themis",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q159168",
   "manto": null
  }
@@ -8223,6 +8957,7 @@
   "name": "Theoclymenus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q2626787",
   "manto": null
  }
@@ -8234,6 +8969,7 @@
   "name": "Theron",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8245,6 +8981,7 @@
   "name": "Thersites",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1045730",
   "manto": null
  }
@@ -8256,6 +8993,7 @@
   "name": "Thesculus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8267,6 +9005,7 @@
   "name": "Theseus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1320718",
   "manto": null
  }
@@ -8278,6 +9017,7 @@
   "name": "Thetis",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q184437",
   "manto": null
  }
@@ -8289,6 +9029,7 @@
   "name": "Theutras",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8300,6 +9041,7 @@
   "name": "Thiodamas",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8311,6 +9053,7 @@
   "name": "Thisbe",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q10696861",
   "manto": null
  }
@@ -8322,6 +9065,7 @@
   "name": "Thisbe's veil",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8333,6 +9077,7 @@
   "name": "Thoas",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1367871",
   "manto": null
  }
@@ -8344,6 +9089,7 @@
   "name": "Thoas (Statius)",
   "being": "demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q1230535",
   "manto": null
  }
@@ -8355,6 +9101,7 @@
   "name": "Thootes",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1113257",
   "manto": null
  }
@@ -8366,6 +9113,7 @@
   "name": "Tiberinus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q937512",
   "manto": null
  }
@@ -8377,6 +9125,7 @@
   "name": "Tiburna",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8388,6 +9137,7 @@
   "name": "Tiburnia",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8399,6 +9149,7 @@
   "name": "Tiphys",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q654257",
   "manto": null
  }
@@ -8410,6 +9161,7 @@
   "name": "Tiresias",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q656881",
   "manto": null
  }
@@ -8421,6 +9173,7 @@
   "name": "Tisiphone",
   "being": "creature",
   "type": "I",
+  "gender": "F",
   "wd": "Q3991817",
   "manto": null
  }
@@ -8432,6 +9185,7 @@
   "name": "Titania",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8443,6 +9197,7 @@
   "name": "Tlepolemus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q690613",
   "manto": null
  }
@@ -8454,6 +9209,7 @@
   "name": "Tmolus",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q17996944",
   "manto": null
  }
@@ -8465,6 +9221,7 @@
   "name": "Tolumnius",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q48800637",
   "manto": null
  }
@@ -8476,6 +9233,7 @@
   "name": "Torquatus",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8487,6 +9245,7 @@
   "name": "Toxeus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1237732",
   "manto": null
  }
@@ -8498,6 +9257,7 @@
   "name": "Trebia",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8509,6 +9269,7 @@
   "name": "Triptolemus",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q269243",
   "manto": null
  }
@@ -8520,6 +9281,7 @@
   "name": "Triton",
   "being": "god",
   "type": "I",
+  "gender": null,
   "wd": "Q148030",
   "manto": null
  }
@@ -8531,6 +9293,7 @@
   "name": "Trojans",
   "being": "human",
   "type": "C",
+  "gender": "M",
   "wd": "Q47463094",
   "manto": null
  }
@@ -8542,6 +9305,7 @@
   "name": "Trojan women",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -8553,6 +9317,7 @@
   "name": "Turnus",
   "being": "human OR demi god",
   "type": "I",
+  "gender": "M",
   "wd": "Q633549",
   "manto": null
  }
@@ -8564,6 +9329,7 @@
   "name": "Tydeus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q250506",
   "manto": null
  }
@@ -8575,6 +9341,7 @@
   "name": "Tydeus' companions",
   "being": "human",
   "type": "C",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8586,6 +9353,7 @@
   "name": "Tydeus' horse",
   "being": "creature",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8597,6 +9365,7 @@
   "name": "Tyro",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": "Q1126715",
   "manto": null
  }
@@ -8608,6 +9377,7 @@
   "name": "Tyrrhenus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q1400413",
   "manto": null
  }
@@ -8619,6 +9389,7 @@
   "name": "Ulysses",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q47231",
   "manto": null
  }
@@ -8630,6 +9401,7 @@
   "name": "Urania",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q104002",
   "manto": null
  }
@@ -8641,6 +9413,7 @@
   "name": "Varro",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": null,
   "manto": null
  }
@@ -8652,6 +9425,7 @@
   "name": "Venulus",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q4009778",
   "manto": null
  }
@@ -8663,6 +9437,7 @@
   "name": "Venus",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q35500",
   "manto": null
  }
@@ -8674,6 +9449,7 @@
   "name": "Vertumnus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q374311",
   "manto": null
  }
@@ -8685,6 +9461,7 @@
   "name": "Virgins",
   "being": "human",
   "type": "C",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -8696,6 +9473,7 @@
   "name": "Virgo",
   "being": "human",
   "type": "I",
+  "gender": "F",
   "wd": null,
   "manto": null
  }
@@ -8707,6 +9485,7 @@
   "name": "Viriasius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8718,6 +9497,7 @@
   "name": "Virrius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8729,6 +9509,7 @@
   "name": "Virtus",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q582177",
   "manto": null
  }
@@ -8740,6 +9521,7 @@
   "name": "Volcens",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q4016094",
   "manto": null
  }
@@ -8751,6 +9533,7 @@
   "name": "Voluptas",
   "being": "god",
   "type": "I",
+  "gender": "F",
   "wd": "Q651660",
   "manto": null
  }
@@ -8762,6 +9545,7 @@
   "name": "Vulcan",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q44384",
   "manto": null
  }
@@ -8773,6 +9557,7 @@
   "name": "Vulteius",
   "being": "human",
   "type": "I",
+  "gender": null,
   "wd": null,
   "manto": null
  }
@@ -8784,6 +9569,7 @@
   "name": "Water nymphs (Hydriades)",
   "being": "nymphs",
   "type": "C",
+  "gender": "F",
   "wd": "Q2160362",
   "manto": null
  }
@@ -8795,6 +9581,7 @@
   "name": "Zephyrus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q467515",
   "manto": null
  }
@@ -8806,6 +9593,7 @@
   "name": "Zetes",
   "being": "human",
   "type": "I",
+  "gender": "M",
   "wd": "Q4024302",
   "manto": null
  }
@@ -8817,6 +9605,7 @@
   "name": "Zeus",
   "being": "god",
   "type": "I",
+  "gender": "M",
   "wd": "Q34201",
   "manto": null
  }
