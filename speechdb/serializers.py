@@ -37,3 +37,4 @@ class SpeechClusterSerializer(serializers.ModelSerializer):
     class Meta:
         model = SpeechCluster
         fields = ['id', 'type', 'work', ]
+        depth = 3
