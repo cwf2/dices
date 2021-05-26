@@ -23,6 +23,20 @@ def parseGender(gender):
     return gender
 
 
+def parseBeing(being):
+    '''Try to match user-entered "being" label to allowable choices'''
+    
+    if being is not None:
+        being = being.lower().strip()
+        if len(being) == 0:
+            being = None
+    
+    if being not in ['human', 'god', None]:
+        being = 'other'
+    
+    return being
+
+
 def addAuthors(file):
     '''Parse the authors list from a TSV file'''
     f = open(file)

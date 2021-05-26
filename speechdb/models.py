@@ -39,20 +39,26 @@ class Character(models.Model):
     '''An epic character'''
     
     class CharacterType(models.TextChoices):
-        INDIVIDUAL = ('I', 'Individual')
-        COLLECTIVE = ('C', 'Collective')
-        OTHER = ('O', 'Other')
+        INDIVIDUAL = ('individual', 'Individual')
+        COLLECTIVE = ('collective', 'Collective')
+        OTHER = ('other', 'Other')
+
+    class CharacterBeing(models.TextChoices):
+        HUMAN = ('human', 'Human')
+        GOD = ('god', 'God')
+        OTHER = ('other', 'Other')
         
     class CharacterGender(models.TextChoices):
-        NONBINARY = ('N', 'Non-binary')
-        FEMALE = ('F', 'Female')
-        MALE = ('M', 'Male')
+        NB = ('NB', 'Non-binary')
+        F = ('F', 'Female')
+        M = ('M', 'Male')
     
     name = models.CharField(max_length=64)
-    being = models.CharField(max_length=32, default='human')
-    type = models.CharField(max_length=1, choices=CharacterType.choices,
+    being = models.CharField(max_length=16, choices=CharacterBeing.choices,
+            default=CharacterBeing.HUMAN)
+    type = models.CharField(max_length=16, choices=CharacterType.choices,
             default=CharacterType.INDIVIDUAL)
-    gender = models.CharField(max_length=1, choices=CharacterGender.choices,
+    gender = models.CharField(max_length=2, choices=CharacterGender.choices,
             null=True)
     wd = models.CharField('WikiData ID', max_length=32, null=True)
     manto = models.CharField('MANTO ID', max_length=32, null=True)

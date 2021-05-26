@@ -75,11 +75,13 @@ class SpeechFilter(filters.FilterSet):
     spkr_name = filters.CharFilter('spkr__char__name')
     spkr_manto = filters.CharFilter('spkr__char__manto')
     spkr_wd = filters.CharFilter('spkr__char__wd')
+    spkr_gender = filters.CharFilter('spkr__char__gender')
     
     addr_id = filters.NumberFilter('addr__char__id')
     addr_name = filters.CharFilter('addr__char__name')
     addr_manto = filters.CharFilter('addr__char__manto')
     addr_wd = filters.CharFilter('addr__char__wd')
+    addr_gender = filters.CharFilter('addr__char__gender')
     
     spkr_inst = filters.NumberFilter('spkr__id')
     addr_inst = filters.NumberFilter('addr__id')
@@ -100,8 +102,8 @@ class SpeechFilter(filters.FilterSet):
     class Meta:
         model = Speech
         fields = [
-            'spkr_id', 'spkr_name', 'spkr_manto', 'spkr_wd',
-            'addr_id', 'addr_name', 'addr_manto', 'addr_wd',
+            'spkr_id', 'spkr_name', 'spkr_manto', 'spkr_wd', 'spkr_gender',
+            'addr_id', 'addr_name', 'addr_manto', 'addr_wd', 'addr_gender',
             'spkr_inst', 'addr_inst',
             'cluster_id', 'cluster_type',
             'work_id', 'work_title', 'work_urn', 'work_wd',
