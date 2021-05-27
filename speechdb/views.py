@@ -468,14 +468,14 @@ class AppSpeechSearch(TemplateView):
 class AppSpeechClusterSearch(TemplateView):
     template_name = 'speechdb/speechcluster_search.html'
     
-    # def get_context_data(self, **kwargs):
-    #     # Call the base implementation first to get a context
-    #     context = super().get_context_data(**kwargs)
-    #     # add useful info
-    #     context['works'] = Work.objects.all()
-    #     context['characters'] = Character.objects.all()
-    #     context['speech_types'] = SpeechCluster.speech_type_choices
-    #     return context
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['works'] = Work.objects.all()
+        context['characters'] = Character.objects.all()
+        context['speech_types'] = SpeechCluster.ClusterType.choices
+        return context
 
 
 class AppCharacterSearch(TemplateView):

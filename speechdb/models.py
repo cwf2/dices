@@ -107,22 +107,7 @@ class SpeechCluster(models.Model):
     
     class Meta:
         ordering = ['work', 'speech']
-    
-    # def __str__(self):
-    #     if self.speech_set is not None:
-    #         loc = '{w} {l}'.format(
-    #             w = self.work,
-    #             l = self.speech_set.order_by('part')[0].l_fi,
-    #         )
-    #         n = len(self.speech_set.all())
-    #         if n > 1:
-    #             parts = f'{n} parts'
-    #         else:
-    #             parts = '1 part'
-    #     else:
-    #         parts = 'empty'
-    #     return f'{loc} {self.type} [{parts}]'
-    
+        
     def get_spkr_str(self):
         '''Return speaker list as a string'''
         chars = []
