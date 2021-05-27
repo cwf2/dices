@@ -190,18 +190,18 @@ class SpeechClusterDetail(RetrieveAPIView):
 # Web frontend class-based views
 #
 
-# class AppAuthorList(ListView):
-#     model = Author
-#     template_name = 'speechdb/author_list.html'
-#     queryset = Author.objects.all()
-#     paginate_by = PAGE_SIZE
-#
-#
-# class AppWorkList(ListView):
-#     model = Work
-#     template_name = 'speechdb/work_list.html'
-#     queryset = Work.objects.all()
-#     paginate_by = PAGE_SIZE
+class AppAuthorList(ListView):
+    model = Author
+    template_name = 'speechdb/author_list.html'
+    queryset = Author.objects.all()
+    paginate_by = PAGE_SIZE
+
+
+class AppWorkList(ListView):
+    model = Work
+    template_name = 'speechdb/work_list.html'
+    queryset = Work.objects.all()
+    paginate_by = PAGE_SIZE
 
 
 class AppCharacterList(ListView):

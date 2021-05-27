@@ -14,13 +14,17 @@
     <tr><th>Name</th><th>WikiData ID</th><th>CITE ID</tr>
   </thead>
   <tbody>
-    {% for rec in page %}
+    {% for author in page_obj %}
     <tr>
-      <td>{{ rec.name }}</td>
-      <td><a href="https://www.wikidata.org/wiki/{{ rec.wd }}">{{ rec.wd }}</a></td>
+      <td>{{ author.name }}</td>
       <td>
-        {% if rec.urn %}
-        <a href="https://catalog.perseus.org/catalog/{{ rec.urn }}">{{ rec.urn }}</a>
+        {% if author.wd %}
+        <a href="https://www.wikidata.org/wiki/{{ author.wd }}">{{ author.wd }}</a>
+        {% endif %}
+      </td>
+      <td>
+        {% if author.urn %}
+        <a href="https://catalog.perseus.org/catalog/{{ author.urn }}">{{ author.urn }}</a>
         {% endif %}
       </td>
     </tr>
