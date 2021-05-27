@@ -90,11 +90,11 @@ def addChars(file):
             print(f'{c} has no being.')  
         else:
             c.being = being
-        char_type = rec.get('type').strip() or None
-        if char_type is None:
-            print(f'{c} has no type.')
+        number = rec.get('number').strip() or None
+        if number is None:
+            print(f'{c} has no number.')
         else:
-            c.type = char_type[0].upper()
+            c.number = number[0].upper()
         c.gender = parseGender(rec.get('gender'))
         c.notes = rec.get('notes').strip() or None
         c.save()

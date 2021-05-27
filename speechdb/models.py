@@ -38,7 +38,7 @@ class Work(models.Model):
 class Character(models.Model):
     '''An epic character'''
     
-    class CharacterType(models.TextChoices):
+    class CharacterNumber(models.TextChoices):
         INDIVIDUAL = ('individual', 'Individual')
         COLLECTIVE = ('collective', 'Collective')
         OTHER = ('other', 'Other')
@@ -56,8 +56,8 @@ class Character(models.Model):
     name = models.CharField(max_length=64)
     being = models.CharField(max_length=16, choices=CharacterBeing.choices,
             default=CharacterBeing.HUMAN)
-    type = models.CharField(max_length=16, choices=CharacterType.choices,
-            default=CharacterType.INDIVIDUAL)
+    number = models.CharField(max_length=16, choices=CharacterNumber.choices,
+            default=CharacterNumber.INDIVIDUAL)
     gender = models.CharField(max_length=2, choices=CharacterGender.choices,
             null=True)
     wd = models.CharField('WikiData ID', max_length=32, null=True)
