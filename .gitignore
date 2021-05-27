@@ -3,5 +3,4 @@ venv
 .env
 *.pyc
 __pycache__/
-speechdb/migrations/
 data/dices.db
