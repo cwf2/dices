@@ -101,7 +101,7 @@ class SpeechFilter(filters.FilterSet):
         
     class Meta:
         model = Speech
-        fields = [
+        fields = ['id',
             'spkr_id', 'spkr_name', 'spkr_manto', 'spkr_wd', 'spkr_gender',
             'addr_id', 'addr_name', 'addr_manto', 'addr_wd', 'addr_gender',
             'spkr_inst', 'addr_inst',
