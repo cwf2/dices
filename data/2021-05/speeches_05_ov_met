@@ -1,0 +1,508 @@
+author	work	work_id	orig_id	seq	book	from_line	to_line	s_ok	speaker	speaker_notes	disguise/metamorphosis	dead/vision	anonymous	collective	a_ok	addressee	addressee_notes	disguise/metamorphosis	dead/vision	anonymous	collective	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	words	length	embedded_level	misc_notes	short_speech_type	long_speech_type
+Ovid	Metamorphoses	5	1	1	1	182	198	✅	Jupiter						✅	gods	superi			y	y	5001	1	M	M (no reply)	115	17	0			threat
+Ovid	Metamorphoses	5	2	2	1	209	243	✅	Jupiter						✅	gods	superi			y	y	5002	1	M	M (no reply)	235	35	0			N
+Ovid	Metamorphoses	5		3	1	222	223	✅	someone	?; inserted					❌	vulgus	common people			y	y	5003	1	M	M (no reply)	12	1 5/6	1			prediction/ threat / plan
+Ovid	Metamorphoses	5	3	4	1	277	280	✅	Neptune						❌	council of river gods				y	y	5004	1	M	M (no reply)	22	3 1/2	0			command/exhortation
+Ovid	Metamorphoses	5	4	5	1	351	366	✅	Deucalion						✅	Pyrrha						5005	1	M	M (no reply)	112	16	0			Lament/ deliberation
+Ovid	Metamorphoses	5	5	6	1	377	380	❌	Deucalion and Pyrrha					Tandem	✅	Themis	(goddess)					5006	1	D	D	25	3  7/12	0			prayer
+Ovid	Metamorphoses	5	6	7	1	381	383	✅	Themis	(goddess)					❌	Deucalion and Pyrrha					Tandem	5006	2	D	D reply	15	2  5/12	0			oracle
+Ovid	Metamorphoses	5	7	8	1	391	394	✅	Deucalion	Prometheus' son					✅	Pyrrha	Epimetheus' daughter					5007	1	M	M (reply)	28	3  3/4 	0			Pyrrha, consolation/encouragement/advise
+Ovid	Metamorphoses	5	8	9	1	456	462	✅	Apollo						✅	Cupid						5008	1	D	D	45	6 3/4	0			ridicule/advise
+Ovid	Metamorphoses	5	9	10	1	463	465	✅	Cupid						✅	Apollo						5008	2	D	D reply	18	2  5/12	0			threat
+Ovid	Metamorphoses	5	10	11	1	481	481	✅	Peneus	repeated speech acts					✅	Daphne						5009	1	D	D	4	  7/12	0			general saying, request
+Ovid	Metamorphoses	5	11	12	1	482	482	✅	Peneus						✅	Daphne						5010	1	D	D	4	  7/12	0			general saying, request
+Ovid	Metamorphoses	5	12	13	1	486	487	✅	Daphne						✅	Peneus						5010	2	D	D reply	12	1 5/6	0			request, plea
+Ovid	Metamorphoses	5	13	14	1	498	498	✅	Apollo						✅	self	no direct addressee, remark about Daphne					5011	1	S 	S	3	3/4*	0			deliberation
+Ovid	Metamorphoses	5	14	15	1	504	524	✅	Apollo						✅	Daphne						5012	1	M	M (no reply)	149	21	0			entreaty, plea, request
+Ovid	Metamorphoses	5	15	16	1	545	546	✅	Daphne						✅	Peneus	(in divine function, thus rather prayer)					5013	1	M	M (no reply)	13	1 5/6*	0			entreaty, plea, prayer
+Ovid	Metamorphoses	5	16	17	1	557	565	✅	Apollo						✅	Daphne		laurel tree				5014	1	M	M (no reply)	60	8 5/6	0			oracle, promise/threat
+Ovid	Metamorphoses	5	17	18	1	589	597	✅	Jupiter						✅	Io						5015	1	M	M (no reply)	53	7 1/3	0			request, wooing, plea, persuasion
+Ovid	Metamorphoses	5	18	19	1	607	608	✅	Juno						✅	self						5016	1	S	S	6	 3/4	0			deliberation
+Ovid	Metamorphoses	5	19	20	1	651	663	✅	Inachus						✅	Io		heifer				5017	1	M	M no reply	81	11  7/12	0			lament, question
+Ovid	Metamorphoses	5	20	21	1	678	681	✅	Argus						✅	Mercury						5018	1	M	M (no reply)	21	2  7/12	0			invitation, offer, persuasion, encouragement
+Ovid	Metamorphoses	5	21	22	1	689	701	✅	Mercury	speech breaks off just when Pan addresses Syrinx in Mercury's story					✅	Argus						5019	1	M	M (reply)	70	11  1/6 	0			Narration
+Ovid	Metamorphoses	5	22	23	1	710	710	✅	Pan	the second half of Mercury's story is summarised/indirectly reported by the narrator; the embedded speech is inserted in this speech summary - highly unusual/rare technique!					✅	Syrinx	as reed					5020	1	M	M (no reply)	5	3/4*	1			promise/threat/prediction
+Ovid	Metamorphoses	5	23	24	1	735	737	✅	Jupiter						✅	Juno						5021	1	M	M (reply)	10	1 1/4*	0			promise /prediction/ consolation/calming
+Ovid	Metamorphoses	5	24	25	1	753	754	✅	Epaphus						✅	Phaethon						5022	1	M	M (reply)	10	1  1/2 	0			ridicule, reproach
+Ovid	Metamorphoses	5	25	26	1	757	761	✅	Phaethon						✅	Clymene						5023	1	D	D	36	4 5/6	0			request, inquiry, question
+Ovid	Metamorphoses	5	26	27	1	768	775	✅	Clymene						✅	Phaethon						5023	2	D	D reply	62	7 5/6	0			oath, promise
+Ovid	Metamorphoses	5	1	28	2	33	34	✅	Sol						✅	Phaethon						5024	1	D	D	13	1 5/6*	0			inquiry, question
+Ovid	Metamorphoses	5	2	29	2	35	39	✅	Phaethon						✅	Sol						5024	2	D	D reply	35	4 3/4	0			greeting, request, plea
+Ovid	Metamorphoses	5	3	30	2	42	46	✅	Sol						✅	Phaethon						5024	3	D	D reply	32	4 1/2	0			oath
+Ovid	Metamorphoses	5	4	31	2	50	102	✅	Sol						✅	Phaethon						5024	4	D	D reply	361	52 1/4	0			dissuasion, advise, lament, deliberation
+Ovid	Metamorphoses	5	5	32	2	126	149	✅	Sol						✅	Phaethon						5025	1	M	M no reply	164	24    	0			dissuasion, entreaty, warning, plea
+Ovid	Metamorphoses	5	6	33	2	279	300	✅	Tellus	Earth Mother					✅	Jupiter	king of the gods					5026	1	M	M no reply	147	21  7/12	0			complaint, plea, lament
+Ovid	Metamorphoses	5	7	34	2	361	363	✅	Heliades	every one shouts this (quaecumque); speech nearly as trees	during transformation into tree		y	y	✅	Clymene	Phaethon's and the Heliads' mother					5027	1	M	M (no reply)	12	1 2/3	0			dissuasion, farewell, plea
+Ovid	Metamorphoses	5	8	35	2	385	393	✅	Sol						✅	gods	all gods: omnia numina			y	y	5028	1	M	M no reply	57	8 1/3*	0			lament, complaint, challenge/ridicule
+Ovid	Metamorphoses	5	9	36	2	423	424	✅	Jupiter						✅	self						5029	1	S	S	14	1 5/6	0			deliberation
+Ovid	Metamorphoses	5	10	37	2	426	427	✅	Jupiter	disguised	Diana				✅	Callisto						5030	1	D	D	11	2    	0			question, inquiry
+Ovid	Metamorphoses	5	11	38	2	428	429	✅	Callisto						✅	Jupiter	disguised	Diana				5030	2	D	D reply	9	1 1/4	0			Greeting and praise
+Ovid	Metamorphoses	5	12	39	2	458	459	✅	Diana						✅	companions of Diana	virgins, band of huntresses, 			y	y	5031	1	M	M no reply	9	1 1/2	0			encouragement, proposal, invitation
+Ovid	Metamorphoses	5	13	40	2	464	464	✅	Diana						✅	Callisto						5032	1	M	M no reply	7	 5/6	0			command, threat
+Ovid	Metamorphoses	5	14	41	2	471	475	✅	Juno						✅	Callisto						5033	1	M	M no reply	31	4 5/6	0			threat
+Ovid	Metamorphoses	5	15	42	2	512	530	✅	Juno						❌	Tethys and Oceanus					Tandem	5034	1	M	M reply	124	19    	0			complaint, lament
+Ovid	Metamorphoses	5	16	43	2	549	595	✅	crow	animal			y		✅	raven	animal			y		5035	1	D	D	310	46 1/4	0			Narration, warning, 
+Ovid	Metamorphoses	5	17	44	2	596	597	✅	raven	animal			y		✅	crow	animal			y		5035	2	D	D	10	1 1/3	0			ridicule, disregard, prayer, threat
+Ovid	Metamorphoses	5	18	45	2	608	609	✅	Coronis	dying					✅	Apollo						5036	1	M	M no reply	13	1 3/4	0			complaint, lament, dying
+Ovid	Metamorphoses	5	19	46	2	642	654	✅	Ocyrhoe						❌	Aesculapius and Chiron					Tandem	5037	1	M	M no reply	83	12 1/3	0			oracle
+Ovid	Metamorphoses	5	20	47	2	656	664	✅	Ocyrhoe	or one speech with long interruption					✅	self						5038	1	S	S	51	7 2/3	0			lament/ description, describes changing
+Ovid	Metamorphoses	5	21	48	2	692	694	✅	Mercury		unclear, not explicit if already in a disguise; second speech in differnet apperance suggests that (mox redit et versa pariter cum voce figura)				✅	Battus						5039	1	D	D	20	2 5/6	0			promise, persuasion, command
+Ovid	Metamorphoses	5	22	49	2	696	696	✅	Battus						✅	Mercury						5039	2	D	D	8	1    	0			reply, confirmation, promise
+Ovid	Metamorphoses	5	23	50	2	699	701	✅	Mercury	in disguise as owner of cattle: rustice	countryman				✅	Battus						5039	3	D	D	20	2 5/6	0			inquiry, promise, persuasion,
+Ovid	Metamorphoses	5	24	51	2	702	703	✅	Battus						✅	Mercury	 in disguise					5039	4	D	D reply	11	7/12*	0			reply, information
+Ovid	Metamorphoses	5	25	52	2	704	705	✅	Mercury						✅	Battus						5039	5	D	D	7	 5/6	0			vituperation, threat
+Ovid	Metamorphoses	5	26	53	2	743	747	✅	Mercury						✅	Aglaurus	(fem)					5040	1	M	M reply	33	4  7/12	0			persuasion, entreaty, information
+Ovid	Metamorphoses	5	27	54	2	784	785	✅	Minerva						✅	Invidia	(Envy)					5041	1	M	M no reply	12	1  7/12	0			command
+Ovid	Metamorphoses	5	28	55	2	815	816	✅	Aglaurus						✅	Mercury						5042	1	D	D	10	1 1/6	0			dissuasion, warning
+Ovid	Metamorphoses	5	29	56	2	817	817	✅	Mercury						✅	Aglaurus						5042	2	D	D reply	3	 1/2	0			confirmation, information
+Ovid	Metamorphoses	5	30	57	2	837	842	✅	Jupiter						✅	Mercury						5043	1	M	M no reply	36	5 5/6*	0			command
+Ovid	Metamorphoses	5	1	58	3	10	13	✅	Apollo						✅	Cadmus						5044	1	M	M reply	26	3 3/4	0			oracle
+Ovid	Metamorphoses	5	2	59	3	58	59	✅	Cadmus						✅	companions	socii		y	y	y	5045	1	M	M no reply	9	1 1/3*	0			oath, promise, 
+Ovid	Metamorphoses	5	3	60	3	97	98	❌	vox	vox subito audita est; neque erat cognoscere promptum, / unde, sed audita est:			y		✅	Cadmus						5046	1	M	M no reply	10	1  7/12	0			oracle, threat?
+Ovid	Metamorphoses	5	4	61	3	116	117	❌	an earth-born soldier	long interruption: de populo, quem terra creaverat, unus / exclamat					✅	Cadmus						5047	1	M	M no reply	7	 11/12	0			command, threat, dissuasion
+Ovid	Metamorphoses	5	5	62	3	148	153	✅	Actaeon						✅	companions	comites			y	y	5048	1	M	M no reply	36	6	0			command, advise, persuasion
+Ovid	Metamorphoses	5	6	63	3	192	193	✅	Diana						✅	Actaeon						5049	1	M	M no reply	11	1  7/12	0			oracle, threat
+Ovid	Metamorphoses	5	7	64	3	201	201	✅	Actaeon	speech that is not: he tried to say this, but voice fails him because of metamorphosis into stag	stag				✅	self						5050	1	S	self	2	 1/3	0			lament
+Ovid	Metamorphoses	5	8	65	3	230	230	✅	Actaeon	speech that is not: he tried to say this, but voice fails him because of metamorphosis into stag	stag				❌	dogs	animals			y	y	5051	1	M	M (no reply)	6	1	0			information, plea for mercy/recognition
+Ovid	Metamorphoses	5	9	66	3	262	272	✅	Juno						✅	self						5052	1	S	S	82	10 5/6	0			deliberation, self-exhortation
+Ovid	Metamorphoses	5	10	67	3	280	286	✅	Juno	disguised as Beroe from Epidaurus (Semele's Epidaurian nurse)	Beroe				✅	Semele						5053	1	M	M no reply	30	6	0			persuasion, advise, deliberation
+Ovid	Metamorphoses	5	11	68	3	289	291	✅	Jupiter						✅	Semele						5054	1	D	D (reply)	31	2 3/4	0			confirmation, oath-like, promise
+Ovid	Metamorphoses	5	12	69	3	293	295	✅	Semele						✅	Jupiter						5054	2	D	D (reply)	13	1 5/6	0			request
+Ovid	Metamorphoses	5	13	70	3	320	321	✅	Jupiter						✅	Juno						5055	1	M	M no reply	9	1 1/3*	0			statement, information, proclamation
+Ovid	Metamorphoses	5	14	71	3	328	330	❌	Tiresias	as a woman (after sex change by snake)	female 				❌	two snakes	animals					5056	1	M	M no reply	16	2  1/12	0			announcement, threat
+Ovid	Metamorphoses	5	15	72	3	348	348	❌	Tiresias	as normal seer	male				✅	Liriope	 (Naiad, mother of Narcissus)					5057	1	M	M no reply	4	5//12	0			prophecy
+Ovid	Metamorphoses	5	16	73	3	366	367	✅	Juno						✅	Echo						5058	1	M	M no reply	12	1 5/6*	0			threat
+Ovid	Metamorphoses	5	17	74	3	380	380	✅	Narcissus	ecquis adest?					✅	Echo						5059	1	D	D 	2	 1/4	0			question
+Ovid	Metamorphoses	5	18	75	3	380	380	✅	Echo	adest					✅	Narcissus						5059	2	D	D reply/ Echo	1	1/6*	0			answer/echo
+Ovid	Metamorphoses	5	19	76	3	382	382	✅	Narcissus	with same reply (summarised)					✅	Echo						5060	1	M	M no reply	1	1/6*	0			command
+Ovid	Metamorphoses	5	20	77	3	383	384	✅	Narcissus	with same reply (summarised)					✅	Echo						5061	1	M	M no reply	3	 1/4	0			question
+Ovid	Metamorphoses	5	21	78	3	386	386	✅	Narcissus	huc coeamus!					✅	Echo						5062	1	D	D 	2	1/3*	0			encouragement, invitation
+Ovid	Metamorphoses	5	22	79	3	387	387	✅	Echo	coeamus					✅	Narcissus						5062	2	D	D reply/ Echo	1	 1/4	0			answer
+Ovid	Metamorphoses	5	23	80	3	390	391	✅	Narcissus	‘manus complexibus aufer! / ante’ ait ‘emoriar, quam sit tibi copia nostri!’					✅	Echo						5062	3	D	D 	10	1 1/2	0			plea, dissuasion
+Ovid	Metamorphoses	5	24	81	3	392	392	✅	Echo	sit tibi copia nostri!					✅	Narcissus						5062	4	D	D reply / Echo	4	 1/2	0			answer
+Ovid	Metamorphoses	5	25	82	3	405	405	❌	a rejected suitor of Narcissus 	(one of those who had been mocked)			y		✅	Nemesis	Rhamnusia, not directly addressed, but she grants the wish (goddess Nemesis)					5063	1	M	M no reply	8	1	0			wish, prayer, just request
+Ovid	Metamorphoses	5	26	83	3	442	473	✅	Narcissus						❌	silvae and self	eventually recognises himself					5064	1	S/M	S/M (no reply)	227	31 1/4	0			lament
+Ovid	Metamorphoses	5	27	84	3	477	479	✅	Narcissus						✅	self						5065	1	S/M	S or M (no reply)	19	2 3/4	0			request, lament, 
+Ovid	Metamorphoses	5	28	85	3	495	495	✅	Narcissus	eheu					✅	self	shout; addressee not clearly stated					5066	1	D	D	1	1//6	0			lament
+Ovid	Metamorphoses	5	29	86	3	496	496	✅	Echo	eheu					✅	Narcissus						5066	2	D	D reply/ Echo	1	1//6	0			lament
+Ovid	Metamorphoses	5	30	87	3	500	500	✅	Narcissus						✅	self						5067	1	S/M	S or M (no reply)	4	  7/12	0			lament
+Ovid	Metamorphoses	5	31	88	3	501	501	✅	Narcissus	vale					✅	self						5068	1	S/D	S or D	1	11//12*	0			farewell
+Ovid	Metamorphoses	5	32	89	3	501	501	✅	Echo	vale					✅	Narcissus						5068	2	D	D reply/ Echo	1	11//12*	0			
+Ovid	Metamorphoses	5	33	90	3	517	525	❌	Tiresias						✅	Pentheus						5069	1	M	M no reply	60	8 5/6	0			oracle /threat
+Ovid	Metamorphoses	5	34	91	3	531	562	✅	Pentheus						❌	turba	(turba ruit, mixtaeque viris matresque nurusque vulgusque proceres, 			y	y	5070	1	M	M no reply	206	31	0			persuasion, deliberation, 
+Ovid	Metamorphoses	5	35	92	3	562	563	✅	Pentheus	or one speech with servants added (only seperated by (famulis hoc imperat)					✅	servants	famuli			y	y	5071	1	M	M no reply	9	1 1/3	0			attendants, command
+Ovid	Metamorphoses	5	36	93	3	574	575	❌	Pentheus' servants				y	y	✅	Pentheus						5072	1	M	M no reply	6	11/12*	0			information, report
+Ovid	Metamorphoses	5	37	94	3	578	581	✅	Pentheus						✅	Acoetes						5073	1	D	D 	19	2 11/12	0			threat and inquiry/question
+Ovid	Metamorphoses	5	38	95	3	582	691	✅	Acoetes						✅	Pentheus						5073	2	D	D reply	784	109 1/2* 	0	(ohne inserted speeches: ca. 92 1/12)		long narration
+Ovid	Metamorphoses	5		96	3	589	590	✅	Acoetes' father						✅	Acoetes						5074	1	M	M no reply	8	1 1/6*	1			command, promise
+Ovid	Metamorphoses	5		97	3	605	605	✅	Opheltes	(best friend and head of companions (primus sociorum) 					✅	Acoetes						5075	1	M	M reply	2	 1/3	1			infromation,description, command
+Ovid	Metamorphoses	5		98	3	611	614	✅	Acoetes						❌	companions and Bacchus	socii			y	y	5076	1	G	G	24	2 3/4	1			information, prayer
+Ovid	Metamorphoses	5		99	3	614	614	✅	Dictys	representative speech					✅	Acoetes						5076	2	G	G reply	4	 2/3	1			ridicule, dissuasion
+Ovid	Metamorphoses	5		100	3	621	622	✅	Acoetes						✅	companions						5076	3	G	G reply	13	1 5/6	1			command, advise, oath, threat
+Ovid	Metamorphoses	5		101	3	632	633	✅	Bacchus						❌	Acoetes and his companions	nautae			y	y	5076	4	G	G reply	14	1 5/6*	1			inquiry
+Ovid	Metamorphoses	5		102	3	634	635	✅	Proreus						✅	Acoetes						5076	5	G	G reply	11	1 2/3	1			promise, confirmation, information
+Ovid	Metamorphoses	5		103	3	636	637	✅	Bacchus						❌	Proreus and Acoetes and companions				y	y	5076	6	G	G reply	12	1 2/3*	1			request, reply, information
+Ovid	Metamorphoses	5		104	3	641	642	✅	Opheltes						✅	Acoetes						5076	7	G	G reply	8	 11/12	1	collective		command, request, vituperation
+Ovid	Metamorphoses	5		105	3	642	642	❌	Acoetes' companions						✅	Acoetes						5076	8	G	G reply	2	 1/4	1			
+Ovid	Metamorphoses	5		106	3	644	644	✅	Acoetes						✅	companions				y	y	5076	9	G	G reply	3	  7/12	1			request, wish, exclamation
+Ovid	Metamorphoses	5		107	3	647	648	✅	Aethalion	representative speech					✅	Acoetes						5076	10	G	G reply	9	1	1	helmsman alone speech		threat, ridicule, vituperation
+Ovid	Metamorphoses	5		108	3	652	655	✅	Bacchus						❌	Acoetes and his companions	nautae			y	y	5076	11	M	M no reply	27	1 5/12*	1			inquiry
+Ovid	Metamorphoses	5		109	3	673	674	✅	Lycabas						✅	Medon	(first to turn black)					5077	1	M	M no reply	4	  7/12	1			question
+Ovid	Metamorphoses	5		110	3	689	690	✅	Bacchus						✅	Acoetes						5078	1	M	M no reply	5	 3/4	1			encouragement, command
+Ovid	Metamorphoses	5	38	111	3	692	695	✅	Pentheus						✅	servants				y	y	5079	1	M	M no reply	21	1 2/3*	0			command
+Ovid	Metamorphoses	5	39	112	3	713	715	✅	Agave	(Pentheus' mother)					❌	Autonoe and Ino	geminae ... sorores				Tandem	5080	1	M	M no reply	16	1 1/4*	0			exhortation, command
+Ovid	Metamorphoses	5	40	113	3	719	720	✅	Pentheus						✅	Autonoe						5081	1	M	M no reply	8	1  5/12	0			
+Ovid	Metamorphoses	5	41	114	3	725	725	✅	Pentheus						✅	Agave						5082	1	M	M no reply	2	1/3*	0			exclamation, description, command
+Ovid	Metamorphoses	5	42	115	3	728	728	✅	Agave						✅	Bacchantes	comites (or just sisters, but note change in address)					5083	1	M	M no reply	7	5/6*	0			exclamation, victory declaration
+Ovid	Metamorphoses	5	1	116	4	31	31	✅	Theban women	Ismenides			y	y	✅	Bacchus						5084	1	M	M no reply	3	5/12*	0			prayer
+Ovid	Metamorphoses	5	2	117	4	37	41	✅	Arsippe				y		❌	Minyas' daughters	her sisters			y	y	5085	1	M	M no reply	34	4 5/6	0			exhortation, 
+Ovid	Metamorphoses	5	3	118	4	55	166	✅	Arsippe						❌	Minyas' daughters	her sisters			y	y	5086	1	M	M reply	735	112    	0	(ohne inserted: 95 5/6)		long naration
+Ovid	Metamorphoses	5		119	4	73	77	❌	Pyramus and Thisbe	(at same time, often hear each others voice)				Tandem/both say these words indvidually to one another	✅	self	inter se / each other					5087	1	D or M	D or M (no reply) 	38	4 3/4	1			lament
+Ovid	Metamorphoses	5		120	4	79	79	❌	Pyramus and Thisbe	(at same time, often hear each others voice)				Tandem/both say these words indvidually	✅	self	animal, but esp. Self					5087	2	D or M	D or M (no reply) 	VALE	1/6*	1			farewell
+Ovid	Metamorphoses	5		121	4	108	115	✅	Pyramus						❌	self and lions				y	y	5088	1	S or M	S or M no reply	53	7 1/6*	1			lament, request, command
+Ovid	Metamorphoses	5		122	4	118	118	✅	Pyramus						✅	Thisbe's veil	velamina Thisbes, inanimate object			y		5089	1	M	M no reply	6	 5/6	1			request, announcement, lament
+Ovid	Metamorphoses	5		123	4	142	144	✅	Thisbe						✅	Pyramus	(dying)					5090	1	M	M no reply	17	2 3/4	1			command, request, lament, question
+Ovid	Metamorphoses	5		124	4	148	161	✅	Thisbe						❌	Pyramus and their parents and mulberry tree	(dying); o ... miseri ... Parentes; arbor			y	y	5091	1	M	M no reply	94	1/2*	1			lament, farewell, prediction
+Ovid	Metamorphoses	5	4	125	4	169	270	✅	Leuconoe						❌	Minyas' daughters and Sol	her sisters; son of Hyperion			y	y	5092	1	M	M no reply	647	102	0			long narration
+Ovid	Metamorphoses	5		126	4	223	224	✅	Sol	disguise	Eurynome (Leucothoe's mother)				❌	Leucothoë's maids				y	y	5093	1	M	M no reply	11	1 11/12	1			request, command (leave)
+Ovid	Metamorphoses	5		127	4	226	228	✅	Sol	(still in disguise, but revealing his real nature, while staying in female form)	Eurynome (Leucothoe's mother)				✅	Leucothoe						5094	1	M	M no reply	20	2  5/12	1			Greeting, introduction, wooing
+Ovid	Metamorphoses	5		128	4	238	239	✅	Leucothoe						✅	Orchamus	(Leucothoe's dad)					5095	1	M	M no reply	4	  7/12	1			lament, info, exclamation
+Ovid	Metamorphoses	5		129	4	251	251	✅	Sol						✅	Leucothoe	(dead)		y			5096	1	M	M no reply	3	  5/12	1			promise, prediction
+Ovid	Metamorphoses	5	5	130	4	276	388	✅	Alcithoë						❌	Minyas' daughters				y	y	5097	1	M	M no reply	756	113	0			narration, story
+Ovid	Metamorphoses	5		131	4	306	307	✅	naiads	sorores			y	y	✅	Salmacis	sola Naiadum					5098	1	M	M no reply	14	2	1			exhortation
+Ovid	Metamorphoses	5		132	4	320	328	✅	Salmacis						✅	Hermaphroditus						5099	1	D	D	69	8  5/12	1			persuasion, request
+Ovid	Metamorphoses	5		133	4	336	336	✅	Hermaphroditus	response to her repeatedly asking for kisses (summarised)					✅	Salmacis						5099	2	D	D reply	6	11/12*	1			command, dissuasion, question
+Ovid	Metamorphoses	5		134	4	337	338	✅	Salmacis						✅	Hermaphroditus						5099	3	D	D reply	6	 3/4	1			confirmation, promise
+Ovid	Metamorphoses	5		135	4	356	356	✅	Salmacis						✅	self						5100	1	S	S	4	  5/12	1			exclamation of victory
+Ovid	Metamorphoses	5		136	4	370	372	✅	Salmacis						❌	Hermaphroditus and gods	di			y	y	5101	1	M	M no reply	20	2  5/12	1			threat and prayer
+Ovid	Metamorphoses	5		137	4	383	386	✅	Hermaphroditus						❌	Mercury and Venus	(pater et genetrix)				Tandem	5102	1	M	M no reply	26	3  7/12	1			prayer
+Ovid	Metamorphoses	5	6	138	4	422	431	✅	Juno						✅	self						5103	1	S	self	67	9  7/12	0			lament (about Ino), deliberation
+Ovid	Metamorphoses	5	7	139	4	466	469	✅	Juno	second half of her speech is summarised					✅	Furies						5104	1	D	D	18	2  7/12	0			question, inquiry
+Ovid	Metamorphoses	5	8	140	4	476	478	❌	Tisiphone	(representative for furies)					✅	Juno						5105	1	D	D reply	18	2 2/3	0			confirmation, promise, assurance
+Ovid	Metamorphoses	5	9	141	4	513	514	✅	Athamas						❌	Athamas' companions	friends: comites			y	y	5106	1	M	M no reply	15	1 5/6	0			exclamation, information
+Ovid	Metamorphoses	5	10	142	4	523	523	✅	Ino						✅	Bacchus						5107	1	M or D	D or M no reply	2	 1/4	0			exclamation, lament
+Ovid	Metamorphoses	5	11	143	4	524	524	✅	Juno						✅	Ino						5107	2	M	M no reply or D reply	5	 2/3	0	reply??		ridicule
+Ovid	Metamorphoses	5	12	144	4	532	538	❌	Venus						✅	Neptune						5108	1	M	M no reply	47	6  5/12	0			prayer
+Ovid	Metamorphoses	5	13	145	4	549	550	✅	Juno						✅	Theban women	/Ino's Sidonian attendants			y	y	5109	1	M or D	M no reply or D	7	1 1/6	0			threat
+Ovid	Metamorphoses	5	14	146	4	551	552	✅	Ino's attendant	Ino's most faithful attendant (of Theban women) (f.)			y		✅	self						5109	2	S or D	S or D reply	4	  7/12	0	reply??		exclamation, promise, farewell, i will follow her / die with her
+Ovid	Metamorphoses	5	15	147	4	571	575	✅	Cadmus						✅	Harmonia	(his wife)					5110	1	M or D	M no reply or D	34	4 3/4	0			deliberation, explanation, information
+Ovid	Metamorphoses	5	16	148	4	583	585	✅	Cadmus						✅	Harmonia	(his wife)					5110	2	D	D or D reply	22	2 5/6	0	reply??		request, farewell
+Ovid	Metamorphoses	5	17	149	4	591	594	✅	Harmonia						❌	Cadmus and gods	caelestes			y	y	5110	3	D	D reply	33	4    	0			farewell, lament
+Ovid	Metamorphoses	5	18	150	4	639	642	✅	Perseus						✅	Atlas						5111	1	M	M no reply	20	3    	0			request, greeting, information, 
+Ovid	Metamorphoses	5	19	151	4	644	645	✅	Themis	Atlas remembers speech, which is directly presented (no indirect speech / inserted speech therefore, but different time /level -> which level?					✅	Atlas						5112	1	M	M no reply	15	2    	0			prophecy
+Ovid	Metamorphoses	5	20	152	4	649	650	✅	Atlas						✅	Perseus						5113	1	D	D 	12	1 2/3	0			command, threat
+Ovid	Metamorphoses	5	21	153	4	654	655	✅	Perseus						✅	Atlas						5113	2	D	D reply	9	1 1/6	0			threat, reaction, punishment
+Ovid	Metamorphoses	5	22	154	4	678	681	✅	Perseus						✅	Andromeda						5114	1	M	M no reply	50	3  1/12	0			inquiry
+Ovid	Metamorphoses	5	23	155	4	695	703	✅	Perseus						❌	Cepheus and Cassiope	Andromeda's parents				Tandem	5115	1	M	M no reply	59	8  7/12	0			contract, request, proposition,
+o	Metamorphoses	5	24	156	4	769	771	✅	Cepheus						✅	Perseus						5116	1	D	D 	15	2  5/12	0			inquiry to tell story
+Ovid	Metamorphoses	5	25	157	4	793	803	✅	Perseus						❌	one of the princes	ex numero procerum 			y		5116	2	D	D reply	52	10 3/4	0	(closes book)		narrative
+Ovid	Metamorphoses	5	1	158	5	10	12	✅	Phineus						✅	Perseus						5117	1	G or D	G or D	17	2 1/3	0			threat
+Ovid	Metamorphoses	5	2	159	5	13	29	✅	Cepheus						✅	Phineus						5117	2	G or D	G or D reply	125	16 3/4	0			information, calming down
+Ovid	Metamorphoses	5	3	160	5	64	66	✅	Lycabas	Assyrius ... iunctissimus illi / et comes et veri non dissimulator amoris					✅	Perseus						5118	1	M	M no reply	15	2 1/6	0			threat
+Ovid	Metamorphoses	5	4	161	5	93	94	✅	Idas						✅	Phineus						5119	1	M	M no reply	13	1 11/12	0			challenge
+Ovid	Metamorphoses	5	5	162	5	115	116	❌	Pedasus 	(other versions have Paetalus)					✅	Lampetides	musician at Cepheus' court					5120	1	M	M no reply	4	  7/12	0			ridicule, threat
+Ovid	Metamorphoses	5	6	163	5	135	136	❌	Halcyoneus	companion of Phineus from Bactria					✅	Dorylas			y			5121	1	M	M no reply	8	 11/12	0			ridicule, threat
+Ovid	Metamorphoses	5	7	164	5	178	180	✅	Perseus						✅	friends and enemies	large number of hostile soldiers/enemy and friends  - asks friends in crowd to turn gaze away so they are spared the Gorgo's head // Phineus' and Perseus' men			y	y	5122	1	D	D	15	2  1/12	0			warning, advise, threat
+Ovid	Metamorphoses	5	8	165	5	181	181	✅	Thesculus	companion of Phineus					✅	Perseus						5122	2	D	D reply	6	 11/12	0			ridicule, command
+Ovid	Metamorphoses	5	9	166	5	190	192	✅	Nileus	opponent of Perseus					✅	Perseus						5123	1	M	M no reply	16	2  5/12	0			ridicule, threat
+Ovid	Metamorphoses	5	10	167	5	195	197	✅	Eryx	opponent of Perseus					❌	comrades	Phineus' men			y	y	5124	1	M	M no reply	16	2  5/12	0			exhortation, vituperation
+Ovid	Metamorphoses	5	11	168	5	216	222	✅	Phineus						✅	Perseus						5125	1	D	D	47	6 5/6	0			plea, prayer, request
+Ovid	Metamorphoses	5	12	169	5	224	229	✅	Perseus						✅	Phineus						5125	2	D	D reply	34*	5 1/2	0			threat, announcement, ridicule
+Ovid	Metamorphoses	5	13	170	5	247	248	✅	Perseus						✅	Polydectes	king of island Seriphos who is turned to stone by Perseus					5126	1	M	M reply	6	1	0			threat to Polydectes and warning to friends
+Ovid	Metamorphoses	5	14	171	5	256	259	✅	Minerva						✅	Muses					y	5127	1	G	G	26	4	0			inquiry, request, informatin
+Ovid	Metamorphoses	5	15	172	5	260	263	❌	Urania						✅	Minerva						5127	2	G	G reply	22	2 3/4	0			greeting and information
+Ovid	Metamorphoses	5	16	173	5	269	293	✅	Muse	una sororum					✅	Minerva						5127	3	G	G reply	160	25    	0	total: 25; without inserted:21 7/12		narrative
+Ovid	Metamorphoses	5		174	5	280	283	✅	Pyreneus	king of Thrace					✅	Muses					y	5128	1	M	M no reply	17	2 2/3	1			invitation, greeting, offer
+Ovid	Metamorphoses	5		175	5	290	290	✅	Pyreneus						✅	Muses					y	5129	1	M	M no reply	8	 3/4	1			threat, exclamation
+Ovid	Metamorphoses	5	17	176	5	300	334	✅	Muse	cf. Bömer 302			y		✅	Minerva						5130	1	D	D	218	34 1/3	0	total: 34 1/3; without inserted: 22 1/2		Narrative (incl., but you probably dont want to hear more/ a repetition of our music)
+Ovid	Metamorphoses	5		177	5	308	314	✅	Pierides				y	y	❌	Muses and nymphs	no direct addressee (Muses are opponent in singing competitions, nymphs are judges)			y	y	5131	1	M	M no reply	58	7	1			Challenge
+Ovid	Metamorphoses	5		178	5	327	331	❌	The one of the Pierides who declared the challenge first, sings first						❌	Muses and Pierides and Nymphs	(Nymphs are judging the competition)			y	y	5132	1	M or D	M no reply or D	32	4 5/6	1			Narrative, Info
+Ovid	Metamorphoses	5	18	179	5	335	335	✅	Minerva						✅	Muse	(same)					5132	2	D	D reply	7	1	0			exhortation, encouragement, request
+Ovid	Metamorphoses	5	19	180	5	337	678	✅	Muse	(same one)					✅	Minerva						5132	3	D	D reply	2256	342	0			
+Ovid	Metamorphoses	5		181	5	341	661	✅	Calliope						❌	Muses and Pierides and Nymphs	(Nymphs are judging the competition)					5133	1	M or D	M no reply or D reply	2235	321	1	type? Reply?		Narrative, Song
+Ovid	Metamorphoses	5		182	5	365	379	❌	Venus						✅	Cupid						5134	1	M	M no reply	98	14 1/4	2			exhortation, request
+Ovid	Metamorphoses	5		183	5	414	418	✅	Cyane	best known Sicilian nymph					✅	Dis						5135	1	M	M no reply	31	4  5/12	2			
+Ovid	Metamorphoses	5		184	5	489	508	✅	Arethusa	A nymph of Elis, and attendant of Diana.					✅	Ceres						5136	1	M	M no reply	134	19 5/6	2			report, info
+Ovid	Metamorphoses	5		185	5	514	522	✅	Ceres						✅	Jupiter						5137	1	D	D	69	8 3/4	2			request, persuasion, plea
+Ovid	Metamorphoses	5		186	5	523	532	✅	Jupiter						✅	Ceres						5137	2	D	D reply	73	9  7/12	2			confirmation, condition, proposal, oath under a condition
+Ovid	Metamorphoses	5		187	5	577	641	✅	Arethusa						✅	Ceres						5138	1	M	M no reply	442	64 5/6	2			Narrative
+Ovid	Metamorphoses	5		188	5	599	599	✅	Alpheus	quo properas, Arethusa?					✅	Arethusa						5139	1	M	M no reply	3	1/2*	3			question, 
+Ovid	Metamorphoses	5		189	5	600	600	✅	Alpheus	renewed speech (repetition: quo properas?					✅	Arethusa						5140	1	M	M no reply	2	 1/4	3			question
+Ovid	Metamorphoses	5		190	5	618	620	✅	Arethusa						✅	Diana						5141	1	M	M no reply	15	2  5/12	3			prayer, plea, request for help
+Ovid	Metamorphoses	5		191	5	625	625	✅	Alpheus	et bis ... Vocavit (either 2 speeches: "io Arethusa", "io, Arethusa" or one					✅	Arethusa						5142	1	M	M no reply	2	1//3	3			lament, exclamation
+Ovid	Metamorphoses	5		192	5	625	625	✅	Alpheus						✅	Arethusa						5143	1	M	M no reply	2	1//3	3			lament, exclamation
+Ovid	Metamorphoses	5		193	5	652	656	❌	Triptolemus 						✅	Lyncus	King of Scythia					5144	1	M	M reply	34	4 2/3	2			reply, information, narration?
+Ovid	Metamorphoses	5		194	5	665	668	✅	Muse	(not Calliope again, cf. Bömer 390)			y		✅	Pierides				y	y	5145	1	M	M no reply	24	3  7/12	1			threat
+Ovid	Metamorphoses	5	1	195	6	3	4	✅	Minerva						✅	self						5146	1	S	self	13	1 3/4	0	Redeszene geht über Buchende hinaus		deliberation, wish, self-exhortation
+Ovid	Metamorphoses	5	2	196	6	25	25	✅	Arachne						✅	nymphs	 nymphs of Mount Tmolus and of the River Pactolus - not explicitly stated who is making assumptions					5147	1	M	M reply	7	5//6	0			indirect challenge / ridicule of Minerva
+Ovid	Metamorphoses	5	3	197	6	28	33	✅	Minerva	in disguise 	old woman				✅	Arachne						5148	1	D	D	37	5  7/12	0			advise, persuasion
+Ovid	Metamorphoses	5	4	198	6	37	42	✅	Arachne						✅	Minerva	in disguise 	old woman				5148	2	D	D	46	6	0			question, indirect ridicule of third party
+Ovid	Metamorphoses	5	5	199	6	43	43	✅	Minerva	in disguise 	old woman				✅	Arachne						5148	3	D	D	1	1//6	0			reply, information, 
+Ovid	Metamorphoses	5	6	200	6	136	138	✅	Minerva						✅	Arachne						5149	1	M	M no reply	18	2 2/3	0			warning, threat
+Ovid	Metamorphoses	5	7	201	6	159	162	✅	Manto						❌	Women of Thebes	 (Ismenides)			y	y	5150	1	M	M no reply	19	3 1/6	0			exhortation, command, message ("Latona commands it through my mouth")
+Ovid	Metamorphoses	5	8	202	6	170	202	✅	Niobe						❌	Women of Thebes				y	y	5151	1	M	M no reply	221	32	0			persuasion, command, narration
+Ovid	Metamorphoses	5		203	6	190	190	✅	Delos	(wandering island)					✅	Latona						5152	1	M	M no reply	7	5//6	1			Greeting, invite, statement
+Ovid	Metamorphoses	5	9	204	6	206	213	✅	Latona						❌	Apollo and Diana 	(her two twin children)				Tandem	5153	1	D	D	56	8	0			prayer, plea, narration,
+Ovid	Metamorphoses	5	10	205	6	215	215	✅	Apollo						✅	Latona						5153	2	D	D reply	6	3//4	0			command, exclamation
+Ovid	Metamorphoses	5	11	206	6	227	227	❌	Ismenus	ei mihi					✅	self						5154	1	S	self	2	1//6	0			lament
+Ovid	Metamorphoses	5	12	207	6	262	262	✅	Ilioneus						✅	gods	di...o communiter omnes			y	y	5155	1	M	M no reply	4	7//12	0			prayer
+Ovid	Metamorphoses	5	13	208	6	280	285	✅	Niobe						✅	Latona						5156	1	M	M no reply	37	5 2/3	0			challenge, ridicule
+Ovid	Metamorphoses	5	14	209	6	299	300	✅	Niobe						✅	Latona						5157	1	M	M no reply	9	1  5/12	0			prayer
+Ovid	Metamorphoses	5	15	210	6	317	381	❌	Theban	(one of all Theban men and women)			y		❌	Thebans	no direct addressee			y	y	5158	1	M	M no reply	427	65	0			
+Ovid	Metamorphoses	5		211	6	327	327	❌	Lycian guide	faveas mihi			y		✅	old altar	ara vetus; inanimate object			y		5159	1	M	m no reply	2	 1/4	1			prayer
+Ovid	Metamorphoses	5		212	6	328	328	❌	Theban	faveas (one of all men and women)			y		✅	old altar	ara vetus; inanimate object			y		5160	1	M	M no reply	1	1//6	1			prayer
+Ovid	Metamorphoses	5		213	6	331	381	❌	Lycian guide						❌	Theban	(one of all Theban men and women)					5161	1	M	M reply	340	51	1			information, description, Narration
+Ovid	Metamorphoses	5		214	6	349	359	✅	Latona						❌	Lycian rustics				y	y	5162	1	M	M no reply	75	10 1/6*	2			persuasion, entreaty, request
+Ovid	Metamorphoses	5		215	6	369	369	✅	Latona						❌	Lycian rustics	(ad sidera)			y	y	5163	1	M	M no reply	5	5//6	2	ends with frame speech		threat, command, prediction, 
+Ovid	Metamorphoses	5	16	216	6	385	386	✅	Marsyas	a satyr (embedded speech but frame speech has been omitted = technically 0, logically 1) 					✅	Apollo						5164	1	M	M no reply	11	1 1/6	1			lament
+Ovid	Metamorphoses	5	17	217	6	440	444	✅	Procne						✅	Tereus						5165	1	M	M no reply	27	3 5/6	0			request, entreaty
+Ovid	Metamorphoses	5	18	218	6	496	503	✅	Pandion	a king of Athens					❌	Tereus and Philomela	second part: Philomela				Tandem	5166	1	M	M no reply	60	8	0			request, entreaty, farewell
+Ovid	Metamorphoses	5	19	219	6	513	513	✅	Tereus	king of Thrace					✅	self						5167	1	S	S	5	3//4	0			exultation, exclamation of victory
+Ovid	Metamorphoses	5	20	220	6	533	548	✅	Philomela						✅	Tereus						5168	1	M	M no reply	107	15  5/12	0			lament, vituperatino, plea
+Ovid	Metamorphoses	5	21	221	6	611	619	✅	Procne						✅	Philomela						5169	1	M	M no reply	60	8  1/12	0			exhortation, vituperation
+Ovid	Metamorphoses	5	21	222	6	621	622	✅	Procne						✅	Itys						5170	1	M	M no reply	5	7//12	0			exlamation, lament, description
+Ovid	Metamorphoses	5	22	223	6	631	635	✅	Procne						✅	self						5171	1	S	self	31	4 1/4	0			deliberation, self-exhortation
+Ovid	Metamorphoses	5	23	224	6	640	640	✅	Itys	mater, mater.					✅	Procne						5172	1	M	M no reply	2	1//3	0			exclamation, plea
+Ovid	Metamorphoses	5	24	225	6	652	652	✅	Tereus						✅	servants				y	y	5173	1	M	M	3	5//12	0			command
+Ovid	Metamorphoses	5	25	226	6	655	655	✅	Procne	(indirectly reacts to his command to servants to get his son)					✅	Tereus						5174	1	M	M no reply	4	1//2	0			reply, information, exultation
+Ovid	Metamorphoses	5	26	227	6	687	701	✅	Boreas						✅	self						5175	1	S	S	97	14 5/6	0			self-exhortation, deliberation, self-vituperation
+Ovid	Metamorphoses	5		228	7	11	71	✅	Medea						✅	self						5176	1	S	self	427	60  5/12	0			deliberation, vituperation
+Ovid	Metamorphoses	5		229	7	92	94	✅	Medea						✅	Jason						5177	1	M	M reply	16	2  7/12	0			oath, promise, request, giving requested
+Ovid	Metamorphoses	5		230	7	164	168	✅	Jason						✅	Medea						5178	1	D	D	31	4  7/12	0			plea, request
+Ovid	Metamorphoses	5		231	7	171	178	✅	Medea						✅	Jason						5178	2	D	D reply	51	7  1/12	0			oath, promise, granting request
+Ovid	Metamorphoses	5		232	7	192	219	✅	Medea						❌	gods and personified elements	nox, astra, Hecate, Tellus, di ...nemorum, di...noctis, Luna			y	y	5179	1	M	M no reply	170	27 1/6	0			prayer / magic song
+Ovid	Metamorphoses	5		233	7	309	311	✅	Medea						❌	Pelias’ daughters 				y	y	5180	1	M	M reply	18	2  5/12	0			promise, oath, prophecy
+Ovid	Metamorphoses	5		234	7	332	338	✅	Medea						❌	Pelias’ daughters 				y	y	5181	1	M	M no reply	41	6 1/2	0			exhortation
+Ovid	Metamorphoses	5		235	7	346	347	✅	Pelias						❌	Pelias’ daughters 				y	y	5182	1	M	M no reply	9	1 1/6	0			inquiry, lament, plea, farewell
+Ovid	Metamorphoses	5		236	7	377	377	✅	Cycnus						✅	Phylius						5183	1	M	M no reply	2	1//4	0			threat, farewell before suicide
+Ovid	Metamorphoses	5		237	7	433	450	❌	Thebans				y	y	✅	Theseus						5184	1	M	M no reply	109	17  5/12	0	collective		praise
+Ovid	Metamorphoses	5		238	7	482	483	✅	Minos	The King of Crete, ruler of a hundred cities.					✅	Aeacus						5185	1	D	D	13	2	0			reply, denial, information
+Ovid	Metamorphoses	5		239	7	484	486	✅	Aeacus	 as the grandson of the river god Asopus.					✅	Minos						5185	2	D	D reply	18	2 1/2	0			
+Ovid	Metamorphoses	5		240	7	487	487	✅	Minos						✅	Aeacus						5185	3	D	D reply	5	3//4	0			threat
+Ovid	Metamorphoses	5		241	7	507	511	✅	Aeacus						✅	Cephalus						5186	1	D	D reply	37	4 5/6	0			encouragement, promise, prophecy, exhortation, positive reply
+Ovid	Metamorphoses	5		242	7	512	516	✅	Cephalus						✅	Aeacus						5186	2	D	D reply	34	4 3/4	0			wish, greeting, praise
+Ovid	Metamorphoses	5		243	7	518	659	✅	Aeacus						✅	Cephalus						5186	3	D	D reply	923	142    	0			
+Ovid	Metamorphoses	5		244	7	615	618	✅	Aeacus						✅	Jupiter						5187	1	M	M no reply	30	3 5/6	1			prayer
+Ovid	Metamorphoses	5		245	7	620	621	✅	Aeacus						✅	Jupiter						5188	1	M	M no reply	13	1 5/6	1			prophecy, oracle interpretation
+Ovid	Metamorphoses	5		246	7	627	628	✅	Aeacus						✅	Jupiter						5189	1	M	M no reply	11	1  5/12	1			prayer
+Ovid	Metamorphoses	5		247	7	648	649	✅	Telamon						✅	Aeacus						5190	1	M	M no reply	6	1    	1			exhortation, request, exclamation
+Ovid	Metamorphoses	5		248	7	675	680	✅	Phocus	son of Aeacus, king of Aegina.					❌	one of Pallas' sons	Clytos or Butes: Pallante sat/ Pallante creati					5191	1	D	D	37	5 5/6	0			praise, deliberation, indirect inquiry
+Ovid	Metamorphoses	5		249	7	681	684	❌	Athenian brother	Clytos or Butes: Actaeis e fratribus alter					✅	Phocus						5191	2	D	D reply	18	3    	0			description, information
+Ovid	Metamorphoses	5		250	7	690	793	✅	Cephalus						✅	Phocus						5192	1	D	D reply	682	104    	0			Narration
+Ovid	Metamorphoses	5		251	7	711	713	✅	Aurora						✅	Cephalus						5193	1	M	M no reply	15	1 11/12	1			warning, threat
+Ovid	Metamorphoses	5		252	7	735	736	✅	Procris						✅	Cephalus	in disguise 	kind of disguise not specified, most likely another mortal man				5194	1	M	M reply	8	1 1/4	1	(many times)		oath, promise
+Ovid	Metamorphoses	5		253	7	741	742	✅	Cephalus	(revealing disguise)					✅	Procris	silence/shock					5195	1	M	M no reply	11	1  7/12	1			exclamation, vituperation, revelation, information
+Ovid	Metamorphoses	5		254	7	755	755	✅	Diana						✅	Procris						5196	1	M	M no reply	3	2//3	1			prophecy, promise
+Ovid	Metamorphoses	5		255	7	794	794	✅	Phocus						✅	Cephalus						5196	2	D	D reply	6	7//12	0			inquiry, question
+Ovid	Metamorphoses	5		256	7	796	862	✅	Cephalus						✅	Phocus						5196	3	D	D reply	457	67	0			Narration
+Ovid	Metamorphoses	5		257	7	813	815	✅	Cephalus	(or long interruption)					✅	aura	(breeze), inanimate			y		5197	1	M	M no reply	15	2 1/3	1	i remember saying 		request, plea, praise
+Ovid	Metamorphoses	5		258	7	817	820	✅	Cephalus	but repeated speech act					✅	aura	(breeze), inanimate			y		5198	1	M	M no reply	24	2  7/12	1	i used to say		praise
+Ovid	Metamorphoses	5		259	7	837	837	✅	Cephalus						✅	aura	(breeze), inanimate			y		5199	1	M	M no reply	5	5//6	1			request, plea
+Ovid	Metamorphoses	5		260	7	839	839	✅	Cephalus	or continued speech: later addition					✅	aura	(breeze), inanimate			y		5200	1	M	M no reply	2	1//3	1			request, plea, praise
+Ovid	Metamorphoses	5		261	7	843	843	✅	Procris	ei mihi (dying)					✅	self						5201	1	S	S	2	1//6	1			lament, exclamation, (dying cry)
+Ovid	Metamorphoses	5		262	7	852	856	✅	Procris	(dying)					✅	Cephalus						5202	1	M	M no reply	33	4  7/12	1			request for oath/promise (by the gods/
+Ovid	Metamorphoses	5	1	263	8	44	80	✅	Scylla (daughter of Nisus)						✅	self						5203	1	S	S	258	36 5/6	0			deliberation, self-exhortation?
+Ovid	Metamorphoses	5	2	264	8	90	94	✅	Scylla (daughter of Nisus)						✅	Minos						5204	1	D	D	33	4  7/12	0			greeting and invitation, offer
+Ovid	Metamorphoses	5	3	265	8	97	100	✅	Minos						✅	Scylla (daughter of Nisus)						5204	2	D	D reply	27	4	0			vituperation
+Ovid	Metamorphoses	5	4	266	8	108	142	✅	Scylla (daughter of Nisus)						❌	Minos and Nisos	(second half, but mainly Minos)				Tandem	5205	1	M	M no reply	242	34 1/6	0			lament, vituperation, threat, plea
+Ovid	Metamorphoses	5	5	267	8	185	187	✅	Daedalus						✅	self	probably self (despite ibimus), Icarus is not addressed directly and his presence is only mentioned later 					5206	1	S	S	17	2 1/2*	0			deliberation, 
+Ovid	Metamorphoses	5	6	268	8	203	208	✅	Daedalus						✅	Icarus						5207	1	M	M no reply	34	4 5/6	0			command, instruction
+Ovid	Metamorphoses	5	7	269	8	231	231	✅	Daedalus						✅	Icarus						5208	1	M	M no reply	1	1//6	1			question, exclamation
+Ovid	Metamorphoses	5	8	270	8	232	232	✅	Daedalus						✅	Icarus						5209	1	M	M no reply	7	5//6	1			question, exclamation
+Ovid	Metamorphoses	5	9	271	8	233	233	✅	Daedalus						✅	Icarus						5210	1	M	M no reply	1	1//6	1			exclamation
+Ovid	Metamorphoses	5	10	272	8	279	280	✅	Diana						✅	self						5211	1	S	S	10	1  7/12	0			self-exhortation, threat
+Ovid	Metamorphoses	5	11	273	8	325	326	✅	Meleager						✅	self						5212	1	S	S	6	11//12	0			deliberation, exclamation,  praise of Atalanta
+Ovid	Metamorphoses	5	12	274	8	350	351	✅	Mopsus						✅	Apollo						5213	1	M	M no reply	12	1 2/3	0			prayer
+Ovid	Metamorphoses	5	13	275	8	387	387	✅	Meleager	Putatur.../...dixisse					✅	Atalanta						5214	1	M	M no reply	4	3//4	0			praise, promise
+Ovid	Metamorphoses	5	14	276	8	392	395	✅	Ancaeus (son of Lycurgus)						✅	heroes of Greece	o iuvenes			y	y	5215	1	M	M no reply	25	3 5/6	0			threat, exhortation, promise
+Ovid	Metamorphoses	5	15	277	8	405	407	✅	Theseus	Aegides					✅	Pirithoüs	 son of Ixion: Ixionis					5216	1	M	M no reply	17	2 1/2	0			warning,, request, plea
+Ovid	Metamorphoses	5	16	278	8	426	427	✅	Meleager						✅	Atalanta						5217	1	M	M no reply	12	1 5/6	0			request,plea, praise
+Ovid	Metamorphoses	5	17	279	8	433	436	❌	Plexippus and Toxeus	the sons of Thestius, Meleager’s uncles: Thestiadae				Tandem	✅	Atalanta						5218	1	M	M no reply	19	3  5/12	0			command, prohibition, request
+Ovid	Metamorphoses	5	18	280	8	438	439	✅	Meleager						❌	Plexippus and Toxeus	sons of Thestius				Tandem	5219	1	M	M no reply	8	1 1/2	0			threat
+Ovid	Metamorphoses	5	19	281	8	454	455	❌	Three Fates					y	✅	Meleager	as new born child of Althaea					5220	1	M	M no reply	8	1 1/6	0			
+Ovid	Metamorphoses	5	20	282	8	478	478	✅	Althaea						✅	self						5221	1	S	S	5	7//12	0			wish, request, prayer
+Ovid	Metamorphoses	5	21	283	8	481	511	✅	Althaea						✅	Furies	(Eumenides)					5222	1	M	M no reply	199	30  1/12	0			prayer request,
+Ovid	Metamorphoses	5	22	284	8	550	559	✅	Acheloüs	river					✅	Theseus	son of Aegeus.					5223	1	D	D	63	9 2/3	0			advise, invitation, request
+Ovid	Metamorphoses	5	23	285	8	560	561	✅	Theseus	son of Aegeus.					✅	Acheloüs	river					5223	2	D	D reply	5	1  1/12	0			acceptiong invitation, information, reply. 
+Ovid	Metamorphoses	5	24	286	8	574	576	✅	Theseus						✅	Acheloüs						5224	1	D	D	14	1 3/4	0			question, command
+Ovid	Metamorphoses	5	25	287	8	577	610	✅	Acheloüs						✅	Theseus						5224	2	D	D reply	156	33  7/12	0			Narration
+Ovid	Metamorphoses	5		288	8	595	602	✅	Acheloüs						✅	Neptune	 (Tridentifer)					5225	1	M	M no reply	22	3 1/4	1			prayer
+Ovid	Metamorphoses	5	26	289	8	614	615	✅	Pirithoüs	son of Ixion,					✅	Acheloüs						5226	1	G	G	12	2 5/6	0			ridicule
+Ovid	Metamorphoses	5	27	290	8	618	724	✅	Lelex						✅	Pirithoüs	son of Ixion, 					5226	2	G	G reply	650	106 5/6	0			Narration
+Ovid	Metamorphoses	5		291	8	689	693	❌	di	(gods)			y	y	❌	Baucis and Philemon					Tandem	5227	1	M	M no reply	27	3 11/12	1			command, prophecy, advise
+Ovid	Metamorphoses	5		292	8	704	705	✅	Jupiter	(Saturnius)					❌	Baucis and Philemon					Tandem	5228	1	G	G	10	1  5/12	1			question, grant wish
+Ovid	Metamorphoses	5		293	8	707	710	✅	Philemon	in representative speech (Joined request: iudicium ... commune)					✅	Jupiter						5228	2	G	G reply	4	26	1			request
+Ovid	Metamorphoses	5		294	8	717	718	❌	Philemon and Baucis	Philemon and Baucis say this to each other: count as two speeches?					❌	Baucis and Philemon	 (respective partner)					5229	1	D	D and D reply	3	1	1			farewell
+Ovid	Metamorphoses	5		295	8	724	724	✅	Lelex						✅	self	observation about fate of Philemon and Baucis					5230	1	S	S	8	1	1			wish / prayer
+Ovid	Metamorphoses	5	28	296	8	728	884	✅	Acheloüs	river-god					✅	Theseus						5231	1	M	M reply	1047	116      	0			Narration
+Ovid	Metamorphoses	5		297	8	755	756	✅	Erysichthon	son of Triopas, king of Thessaly.					✅	servants					y	5232	1	M	M no reply	15	2	1			threat, command, prophecy
+Ovid	Metamorphoses	5		298	8	767	767	✅	Erysichthon	son of Triopas king of Thessaly.					❌	one of the servants	, who tries to stop him			y		5233	1	M	M no reply	4	7//12*	1			threat
+Ovid	Metamorphoses	5		299	8	771	773	✅	nymph	inside holdy oak tree of Ceres			y		✅	Erysichthon						5234	1	M	M no reply	19	3	1			prophecy, threat
+Ovid	Metamorphoses	5		300	8	788	795	✅	Ceres						✅	one of the Oreads	, an Oread of wild places/mountain spirit			y		5235	1	M	M no reply	54	8	1			message for Famine, command
+Ovid	Metamorphoses	5		301	8	850	851	✅	Mestra	(daugther of Erysichthon)					✅	Neptune						5236	1	M	M no reply	7	1  5/12	1			prayer
+Ovid	Metamorphoses	5		302	8	855	861	❌	Mestra's dominus	buyer			y		✅	Mestra	 in male form and disguise of a fisherman	fisherman				5237	1	D	D	49	6  5/12	1			question
+Ovid	Metamorphoses	5		303	8	864	868	✅	Mestra	 in disguise as fisherman	fisherman				❌	Mestra's dominus	(dominus)			y		5237	2	D	D reply	36	5	1			reply, information
+Ovid	Metamorphoses	5	1	304	9	4	88	✅	Acheloüs						✅	Theseus						5238	1	M	M reply	562	85	0			Narration
+Ovid	Metamorphoses	5		305	9	9	12	✅	Acheloüs						✅	Oeneus						5239	1	M	M no reply	5	5//6	1			plea, request
+Ovid	Metamorphoses	5		306	9	16	26	✅	Acheloüs						✅	Oeneus						5240	1	M	M no  reply	74	10 1/4	1			vituperation
+Ovid	Metamorphoses	5		307	9	29	30	✅	Heracles						✅	Acheloüs						5241	1	M	M no  reply	10	7//12	1			reply, threat, reaction
+Ovid	Metamorphoses	5		308	9	67	76	✅	Heracles						✅	Acheloüs						5242	1	M	M no reply	67	9 5/6	1			threat, question
+Ovid	Metamorphoses	5	2	309	9	109	110	✅	Nessus						✅	Hercules						5243	1	D	D	12	1 5/6	0			suggestion, persuasion, command
+Ovid	Metamorphoses	5	3	310	9	115	115	✅	Hercules						✅	Nessus						5244	1	D	D reply	4	5//6	0			
+Ovid	Metamorphoses	5	4	311	9	120	126	✅	Hercules						✅	Nessus						5245	1	D	D	41	6  1/12	0			threat
+Ovid	Metamorphoses	5	5	312	9	131	132	✅	Nessus						✅	Hercules						5246	1	D	D reply	3	7//12??	0			threat, self-exhortation
+Ovid	Metamorphoses	5	6	313	9	143	151	✅	Deianira						❌	self and Melager			y (Meleager)			5247	1	S or M	S or M	54	8 1/6	0			
+Ovid	Metamorphoses	5	7	314	9	176	204	✅	Hercules						❌	Juno and Cerberus and manus (Pl.)				y	y	5248	1	M	M no  reply	181	28	0			lament, deliberation
+Ovid	Metamorphoses	5	8	315	9	213	214	✅	Hercules						✅	Lichas						5249	1	M	M no reply	10	1  5/12	0			question, vituperation
+Ovid	Metamorphoses	5	9	316	9	243	258	✅	Jupiter						❌	superi	gods			y	y	5250	1	M	M no reply	106	15  7/12	0			persuasion
+Ovid	Metamorphoses	5	10	317	9	281	323	✅	Alcmene						✅	Iole						5251	1	D	D	270	42  7/12	0			Narration (first part is wish)
+Ovid	Metamorphoses	5		318	9	312	313	✅	Galanthis	one Alcmene's servant-girls					✅	Lucina						5252	1	M	M no reply	11	1 3/4	1			information and exhortation
+Ovid	Metamorphoses	5	11	319	9	326	393	✅	Iole						✅	Alcmene	(in narration also Dryope)					5253	1	D	D reply	444	68      	0			Narration
+Ovid	Metamorphoses	5		320	9	371	391	✅	Dryope	(after transformation: as lotus tree)	(as lotus tree)				❌	Iole and Andraemon and Eurytus	Iole, husband Andraemon, and father Eurytus				y	5254	1	M	M no reply	159	21      	1			farewell lament
+Ovid	Metamorphoses	5		321	9	379	379	❌	Dryope's son	hyptothetical speech			y		❌	Dryope and self	as tree, no explcit addressee 	as tree				5255	1	M	M no reply	5	7//12	2			greeting, statement, description
+Ovid	Metamorphoses	5	12	322	9	403	417	✅	Themis						✅	Hebe	(daughter of Juno and wife of Hercules)					5256	1	M	M no reply	88	14  5/12	0			prophesy
+Ovid	Metamorphoses	5	13	323	9	428	438	✅	Jupiter						❌	dei	gods			y	y	5257	1	M	M no reply	71	10 2/3	0			persuasion, calming down
+Ovid	Metamorphoses	5	14	324	9	474	519	✅	Byblis	long interruption: 517-519 Hoc placet, haec dubiam vicit sententia mentem. / in latus erigitur cubitoque innixa sinistro / ... Inquit					✅	self						5258	1	S	S	319	45 5 /6	0	to_line: 519/520 (depending on which edition is used)		lament, deliberation, self-exhortation
+Ovid	Metamorphoses	5	16	325	9	530	563	✅	Byblis	letter/written words					✅	Caunus	 (brother)					5259	1	M	M no reply	237	34	0			plea, request, persuasion
+Ovid	Metamorphoses	5	17	326	9	569	570	✅	Byblis						❌	servant	(m)			y		5260	1	M	M no reply	5	3//4*	0			command
+Ovid	Metamorphoses	5	18	327	9	577	579	✅	Caunus						❌	servant	same male servant			y		5261	1	M	M no reply	21	2 5/6	0			threat, command
+Ovid	Metamorphoses	5	19	328	9	585	629	✅	Byblis						✅	self						5262	1	S	S	304	45	0			lament, deliberation, self-vituperation
+Ovid	Metamorphoses	5	20	329	9	675	679	✅	Ligdus	undistinguished, a native of the place, 					✅	Telethusa	 (pregnant wife)					5263	1	M	M no reply	34	5	0			request
+Ovid	Metamorphoses	5	21	330	9	696	701	✅	Isis	(deified Io)					✅	Telethusa						5264	1	M	M no reply	32	5	0			request, command, exhortation
+Ovid	Metamorphoses	5	22	331	9	725	763	✅	Iphis (of Crete)						❌	self and Juno and Hymen	mainly self					5265	1	M	M/S	280	38  5/12	0			lament, deliberation, self-vituperation
+Ovid	Metamorphoses	5	23	332	9	773	781	✅	Telethusa						✅	Isis						5266	1	M	M no reply	55	8 1/4	0			prayer
+Ovid	Metamorphoses	5	1	333	10	17	39	✅	Orpheus						❌	Persephone and Dis	(underworld: 'o positi sub terra numina mundi)					5267	1	M	M no reply	161	22 5/6	0			request, prayer
+Ovid	Metamorphoses	5	2	334	10	62	62b	✅	Eurydice	vale					✅	Orpheus						5268	1	M	M no reply	1 vale	1//6*	0			farewell
+Ovid	Metamorphoses	5	3	335	10	141	142	✅	Apollo						✅	Cyparissus	A youth					5269	1	M	M no reply	6	1 1/4	0			lament (dying, farewell)
+Ovid	Metamorphoses	5	4	336	10	148	739	✅	Orpheus						❌	Calliope and Hyacinthus and animals and birds. 						5270	1	M	M no reply	3924	592	0			
+Ovid	Metamorphoses	5		337	10	196	208	✅	Apollo						✅	Hyacinthus						5271	1	M	M no reply	592	13	1			lament, self-vituperation, farewell
+Ovid	Metamorphoses	5		338	10	230	234	❌	Venus						✅	self						5272	1	S	S	34	1  5/12	1			self-exhortation
+Ovid	Metamorphoses	5		339	10	274	276	✅	Pygmalion						❌	di	gods			y	y	5273	1	M	M no  reply	13	1 11/12	1	incl. sth he does not dare to say		prayer
+Ovid	Metamorphoses	5		340	10	320	355	✅	Myrrha						✅	self						5274	1	S	S	253	35  7/12	1			deliberation
+Ovid	Metamorphoses	5		341	10	364	364	✅	Myrrha						✅	Cinyras	 (father of Myrrha)					5275	1	D	D reply	2	1//4	1			statement, answer, reply, wish
+Ovid	Metamorphoses	5		342	10	365	366	✅	Cinyras						✅	Myrrha						5275	2	D	D reply	4	1//2	1			praise, wish
+Ovid	Metamorphoses	5		343	10	380	380	✅	Myrrha						✅	Cinyras	 (in absence)					5276	1	M	M no reply	6	1      	1			farewell (wanting to die)
+Ovid	Metamorphoses	5		344	10	395	401	✅	Myrrha's nurse	nutrix			y		✅	Myrrha						5277	1	M	M no reply	47	6 1/3	1			inquiry, question
+Ovid	Metamorphoses	5		345	10	408	410	✅	Myrrha's nurse	nutrix			y		✅	Myrrha						5278	1	D	D	17	2	1			persuasion, consolation, offer
+Ovid	Metamorphoses	5		346	10	411	413	✅	Myrrha						✅	Myrrha's nurse	nutrix			y		5278	2	D	D reply	16	2 1/4	1			command, request, plea
+Ovid	Metamorphoses	5		347	10	422	422	✅	Myrrha						✅	Myrrha's nurse	nutrix 			y		5278	3	D	D reply	4	2//3	1			lament, exclamation
+Ovid	Metamorphoses	5		348	10	429	429	✅	Myrrha's nurse	nutrix					✅	Myrrha						5278	4	D	D reply	4	7//12	1			exhortation, 
+Ovid	Metamorphoses	5		349	10	441	441	✅	Myrrha's nurse	nutrix					✅	Cinyras	(father of Myrrha)					5279	1	M	M reply	3	1//3	1			information, reply, description
+Ovid	Metamorphoses	5		350	10	442	443	✅	Myrrha's nurse	nutrix					✅	Myrrha						5280	1	M	M no reply	4	2//3	1			exclamation of victory, exhortation, 
+Ovid	Metamorphoses	5		351	10	463	464	✅	Myrrha's nurse	nutrix					✅	Cinyras	(father of Myrrha)					5281	1	M	M no reply	5	2//3	1			exhortation, command
+Ovid	Metamorphoses	5		352	10	467	467	✅	Cinyras	"filia"					✅	Myrrha						5282	1	D	D	1	1//6	1			greeting, exclamation
+Ovid	Metamorphoses	5		353	10	468	468	✅	Myrrha	"pater"					✅	Cinyras	(father of Myrrha)					5282	2	D	D reply	1	1//6	1			greeting, exclamation
+Ovid	Metamorphoses	5		354	10	483	487	✅	Myrrha						✅	gods	numina			y	y	5283	1	M	M no reply	25	4  5/12	1			prayer
+Ovid	Metamorphoses	5		355	10	543	552	❌	Venus						✅	Adonis						5284	1	M	D or M no  reply	61	8 11/12	1			warning/information
+Ovid	Metamorphoses	5		356	10	553	557	❌	Venus						✅	Adonis						5285	1	M	D or M no  reply	27	3  1/12	1			recommendation, invitation, suggestion, information, exhortation
+Ovid	Metamorphoses	5		357	10	560	707	❌	Venus						❌	Adonis 						5286	1	M	D or M no reply	976	148      	2			Narration, warning, persuasion
+Ovid	Metamorphoses	5		358	10	564	566	✅	Apollo	deus					✅	Atalanta						5287	1	M	M no reply	16	2 1/6	2			prophecy, 
+Ovid	Metamorphoses	5		359	10	569	572	✅	Atalanta						✅	suitors of Atalanta	turba procorum			y	y	5288	1	M	M no reply	22	3  5/12	2			challenge, conditions
+Ovid	Metamorphoses	5		360	10	576	576	✅	Hippomenes						✅	suitors of Atalanta				y	y	5289	1	M	M no  reply	6	11//12	2			question
+Ovid	Metamorphoses	5		361	10	580	582	✅	Hippomenes						✅	suitors of Atalanta				y	y	5290	1	M	M no reply	11	1 2/3	2			apology, praise
+Ovid	Metamorphoses	5		362	10	584	586	✅	Hippomenes						✅	self						5291	1	S	S	12	2	2			deliberatin, self-exhortation
+Ovid	Metamorphoses	5		363	10	600	608	✅	Hippomenes						✅	Atalanta						5292	1	M	M no reply	58	8 5/6	2			challenge
+Ovid	Metamorphoses	5		364	10	611	635	✅	Atalanta						✅	self						5293	1	S	S	179	24 3/4	2			deliberation, lament, self-exhortation
+Ovid	Metamorphoses	5		365	10	640	641	✅	Hippomenes						❌	Venus						5294	1	M	M no reply	10	1 5/12*	2			prayer
+Ovid	Metamorphoses	5		366	10	657	659	❌	crowd/spectators	clamor			y	y	✅	Hippomenes						5295	1	M	M no reply	13	2    	2			exhortation
+Ovid	Metamorphoses	5		367	10	673	673	✅	Hippomenes						❌	Venus						5296	1	M	M no reply	5	2//3	2			prayer
+Ovid	Metamorphoses	5		368	10	724	731	❌	Venus						❌	fata and Persephone	cum fatis			y	y	5297	1	M	M no reply	43	7    	1			lament, vituperation
+Ovid	Metamorphoses	5	1	369	11	7	7	✅	one of the Ciconian women				y		✅	Ciconian women				y	y	5298	1	M	M no reply	6	3//4	0			exclamation, description
+Ovid	Metamorphoses	5	2	370	11	102	103	✅	Midas						✅	Bacchus						5299	1	M	M no reply	8	1 1/3	0			request, command
+Ovid	Metamorphoses	5	3	371	11	132	133	✅	Midas						✅	Bacchus						5300	1	D	D	11	1 5/6	0			prayer
+Ovid	Metamorphoses	5	4	372	11	136	141	✅	Bacchus						✅	Midas						5300	2	D	D reply	38	5 2/3	0			command, prophecy
+Ovid	Metamorphoses	5	5	373	11	160	161	❌	Tmolus	the god of the mountain, as judge. 					✅	Pan						5301	1	M	M no reply	5	1//2	0			warning, threat, exclamation?
+Ovid	Metamorphoses	5	6	374	11	207	207	✅	Neptune	(in disguise as mortal or not anymore not clear, rahter no disguise)					✅	Laomedon						5302	1	M	M no reply	3	5//12	0			threat
+Ovid	Metamorphoses	5	7	375	11	221	223	✅	Proteus						✅	Thetis						5303	1	M	M no reply	15	2 1/4	0			prophecy, command
+Ovid	Metamorphoses	5	8	376	11	250	254	✅	Proteus	 the Carpathian seer 					✅	Peleus	son of Aeacus.					5304	1	M	M no reply	33	4 5/6	0			prophecy, command
+Ovid	Metamorphoses	5	9	377	11	263	263	✅	Thetis	in disguise/changing form					✅	Peleus						5305	1	M	M no reply	4	1//2	0			exclamation, conclusion, 
+Ovid	Metamorphoses	5	10	378	11	283	288	✅	Ceyx	king of Trachis 					✅	Peleus						5306	1	M	M reply	38	5  7/12	0			invitation, offer
+Ovid	Metamorphoses	5	11	379	11	291	345	✅	Ceyx	king of Trachis 					❌	Peleus and his companions 	Peleus, comites			y	y	5307	1	M	M reply	362	55	0			Narration
+Ovid	Metamorphoses	5		380	11	323	323	✅	Diana						✅	Chione	 (daughter of Daedalion)					5308	1	M	M no reply	2	5//12	1			threat
+Ovid	Metamorphoses	5	12	381	11	349	350	✅	Onetor	Peleus’s Phocian herdsman, 					✅	Peleus						5309	1	M or D	M no reply or D	7	1  1/12	0			exclamation, message, report
+Ovid	Metamorphoses	5	13	382	11	352	378	✅	Onetor						✅	Peleus						5310	1	M or D	M reply  or D	170	26 3/4	0			Narration, encouragement, report
+Ovid	Metamorphoses	5	14	383	11	389	392	✅	Peleus						✅	Alcyone	wife of Ceyx					5311	1	M	M no  reply	22	3 1/6	0			persuasion? , consolation, calming down
+Ovid	Metamorphoses	5	15	384	11	421	443	✅	Alcyone						✅	Ceyx						5312	1	D	D	165	22 5/6	0			farewell, request
+Ovid	Metamorphoses	5	16	385	11	451	453	✅	Ceyx						✅	Alcyone						5312	2	D	D reply	24	3    	0			oath, promise
+Ovid	Metamorphoses	5	17	386	11	460	460	✅	Alcyone						✅	Ceyx						5312	3	D	D reply	1 vale	1//6	0			farewell
+Ovid	Metamorphoses	5	18	387	11	482	483	✅	Ceyx' helmsman/captain	rector			y		❌	crew				y	y	5313	1	M	M no reply	9	1 2/3	0			command
+Ovid	Metamorphoses	5	19	388	11	585	588	✅	Juno						✅	Iris						5314	1	M	M no reply	21	3 5/6	0			command with message
+Ovid	Metamorphoses	5	20	389	11	623	629	✅	Iris						✅	Somnus	 (Somnus)					5315	1	M	M reply	39	6  5/12	0			message
+Ovid	Metamorphoses	5	21	390	11	658	670	✅	Morpheus	in disgise of Ceyx	Ceyx	y			✅	Alcyone						5316	1	D	D	83	12 5/6	0			request, report, farewell
+Ovid	Metamorphoses	5	22	391	11	676	676	✅	Alcyone						✅	Morpheus	 in disgise of Ceyx	Ceyx	y			5316	2	D	D	6	3//4	0			exclamation, farewell request
+Ovid	Metamorphoses	5	23	392	11	684	693	✅	Alcyone						✅	nurse	altrix					5317	1	M	M reply	58	9  1/12	0			report, information, lament
+Ovid	Metamorphoses	5	24	393	11	694	707	✅	Alcyone						✅	Ceyx			y			5318	1	S or M	S or M no reply	102	14	0			farewell lament
+Ovid	Metamorphoses	5	25	394	11	712	713	✅	Alcyone						✅	self						5319	1	S	S	9	1 1/3	0			lament, description
+Ovid	Metamorphoses	5	26	395	11	720	721	✅	Alcyone						✅	Ceyx	dead body (unrecognised)		y			5320	1	M	M no reply	9	5//6	0			exclamation, lament
+Ovid	Metamorphoses	5	27	396	11	725	725	✅	Alcyone						✅	self						5321	1	S	S	2	1//6	0			exclamation, conclusion, lament
+Ovid	Metamorphoses	5	28	397	11	727	728	✅	Alcyone						✅	Ceyx	dead 		y			5322	1	M	M no reply	9	1 1/6	0			question, lament
+Ovid	Metamorphoses	5	29	398	11	751	795	❌	aliquis senior ... proximus, aut idem, si fors tulit,	some old man, praised those affections maintained till the end. Someone near by, or the same man: 					✅	self						5323	1	S	S	282	43 1/3	0	aliquis senior  or proximus		Narration, description
+Ovid	Metamorphoses	5		399	11	778	782	✅	Aesacus						✅	Hesperie	River Cebren’s daughter, nymph					5324	1	M	M no reply	37	4 7/12*	1			lament, self-vituperatino
+Ovid	Metamorphoses	5	1	400	12	19	20	✅	Calchas						✅	Greeks	(Danai )			y	y	5325	1	M	M no reply	11	1 2/3	0			prophecy
+Ovid	Metamorphoses	5	2	401	12	80	81	✅	Achilles						✅	Cycnus						5326	1	D	D	13	1 5/6	0			threat, ridicule
+Ovid	Metamorphoses	5	3	402	12	86	94	✅	Cycnus						✅	Achilles						5326	2	D	D reply	62	8 1/4	0			ridicule, threat, info
+Ovid	Metamorphoses	5	4	403	12	106	114	✅	Achilles						✅	self						5327	1	S	S	58	8 1/2	0			deliberation, self-exhortation
+Ovid	Metamorphoses	5	5	404	12	120	121	✅	Achilles						✅	gods	but not addressed directly (indirectly Cycnus)			y	y	5328	1	S	S or M no reply	18	1 5/6	0			prayer, self-exhortation, threat, determination, description, announcement
+Ovid	Metamorphoses	5	6	405	12	169	175	✅	Nestor						❌	Achilles and Greeks 				y	y	5329	1	G	G	39	6    	0			narration, information
+Ovid	Metamorphoses	5	7	406	12	177	181	✅	Achilles						✅	Nestor						5329	2	G	G reply	37	5    	0			command with question, question
+Ovid	Metamorphoses	5	8	407	12	182	535	✅	Nestor						❌	Achilles and Greeks 						5329	3	G	G reply	ca. 2289	353 3/4	0			Narration
+Ovid	Metamorphoses	5		408	12	199	200	✅	Neptune						✅	Caenis	Elatus’s daughter					5330	1	D	D	9	1 1/4	1			offer, invitation, encouragement
+Ovid	Metamorphoses	5		409	12	201	203	✅	Caenis						✅	Neptune						5330	2	D	D reply	16	2 1/6	1			request, prayer
+Ovid	Metamorphoses	5		410	12	227	229	✅	Theseus						❌	Eurytus	 2, The centaur. 					5331	1	M	M no reply	15	2 1/4	1			question, vituperation
+Ovid	Metamorphoses	5		411	12	241	241	✅	Centaurs				y	y	❌	inter se	Centaurs					5332	1	S	S	2 arma, arma	1//4	1			exhortation, war cry
+Ovid	Metamorphoses	5		412	12	259	259	✅	Gryneus	centaur					✅	self						5333	1	S	S	4	1//2	1			deliberation, question
+Ovid	Metamorphoses	5		413	12	265	265	✅	Exadius	one of the Lapithae.					✅	Gryneus	centaur					5334	1	M	M no reply	7	1    	1			threat
+Ovid	Metamorphoses	5		414	12	285	286	❌	Rhoetus	2,  A centaur.					✅	Charaxus	one of the Lapithae					5335	1	M	M no reply	8	1 1/4	1			ridicule, wish
+Ovid	Metamorphoses	5		415	12	292	293	✅	Euagrus	One of the Lapithae. 					❌	Rhoetus 						5336	1	M	M no reply	7	5//6	1			question, vituperation
+Ovid	Metamorphoses	5		416	12	309	309	✅	Asbolus	 the augur,  A centaur with the power of prophecy. 					✅	Nessus	 centaur					5337	1	M	M no reply	6	5//6	1			prophecy, exhortation, command
+Ovid	Metamorphoses	5		417	12	321	322	❌	Phorbas	3, a centaur					✅	Aphidas	centaur					5338	1	M	M no reply	5	2//3	1	both centaurs?		threat, vituperation
+Ovid	Metamorphoses	5		418	12	367	368	✅	Peleus						✅	Crantor	the armour bearer of Peleus.					5339	1	M	M no reply	6	1	1			offer, request, praise, farewell
+Ovid	Metamorphoses	5		419	12	383	384	✅	Nestor						✅	Dorylas	2, a centaur 					5340	1	M	M no reply	7	1 1/6	1			threat, ridicule
+Ovid	Metamorphoses	5		420	12	470	476	✅	Latreus	 A centaur.					✅	Caeneus						5341	1	M	M no reply	49	6  5/12	1			ridicule, command
+Ovid	Metamorphoses	5		421	12	484	485	✅	Latreus	 A centaur.					✅	Caeneus						5342	1	D	D	10	1 1/2	1			threat
+Ovid	Metamorphoses	5		422	12	490	491	✅	Caeneus						✅	Latreus						5342	2	D	D reply	7	1	1			threat
+Ovid	Metamorphoses	5		423	12	498	509	✅	Monychus	 A centaur. 					✅	Centaurs				y	y	5343	1	M	M no  reply	79	11	1			self-exhortation, vituperation
+Ovid	Metamorphoses	5		424	12	530	531	✅	Mopsus						✅	Caeneus						5344	1	M	M no reply	13	1 5/6	1			greeting, praise
+Ovid	Metamorphoses	5	9	425	12	539	541	❌	Tlepolemus	son of Hercules, leader of the Rhodians, 					✅	Nestor						5345	1	D	D	19	2 5/6	0			vituperation
+Ovid	Metamorphoses	5	10	426	12	542	576	✅	Nestor						❌	Tlepolemus						5345	2	D	D reply	222	34  7/12	0			Narration, justification
+Ovid	Metamorphoses	5	11	427	12	586	596	✅	Neptune						✅	Apollo	Sminthean Apollo					5346	1	M	M no reply	75	11	0			request, prayer, persuasion
+Ovid	Metamorphoses	5	12	428	12	601	603	✅	Apollo						✅	Paris						5347	1	M	M no reply	16	2 1/4	0			command, prophecy
+Ovid	Metamorphoses	5	1	429	13	5	122	✅	Aias (son of Telamon)						✅	Achaeans	Achaean captains			y	y	5348	1	G	G	793	117  5/12	0			persuasion
+Ovid	Metamorphoses	5	2	430	13	128	381	✅	Odysseus						❌	Pelasgians and Achilles and Aias (son of Telamon) and Achaeans	Pelasgians (and Achilles and Ajax in particular)					5348	2	G	G reply	ca. 1684		0			Narration/persuasion
+Ovid	Metamorphoses	5		431	13	168	169	✅	Odysseus						✅	Achilles	(in girls' clothes)	(in girls' clothes, but recognised)				5349	1	M	M no reply	12	1 5/6	1			exhortation, question, persuasion
+Ovid	Metamorphoses	5		432	13	225	228	✅	Odysseus						❌	Odysseus' companions				y	y	5350	1	M	M no reply	18	2 2/3	1			exhoration, vituperation,
+Ovid	Metamorphoses	5	3	433	13	387	390	✅	Aias (son of Telamon)						✅	self						5351	1	S	S	32	3 5/6	0			final words before suicide, farewell, question, lament
+Ovid	Metamorphoses	5	4	434	13	420	420	❌	Trojan women				y	y	❌	Troy	(Troia)					5352	1	M	M no reply	3	5 //12	0			farewell, exclamation, description
+Ovid	Metamorphoses	5	5	435	13	445	448	✅	Achilles	As a ghost		y			✅	Achaeans	('Achivi)					5353	1	M	M no reply	24	3 3/4	0			persuasion, request; exhoration, vituperation
+Ovid	Metamorphoses	5	6	436	13	457	473	✅	Polyxena						❌	Neoptolemus and Trojans	(and in second part also crowd)			y	y	5354	1	M	M no reply	114	16  1/12	0			request, plea, entreaty, persuasion
+Ovid	Metamorphoses	5	7	437	13	494	532	✅	Hecuba						✅	Polyxena	(dead) 		y			5355	1	M	M no reply	263	39    	0			lament
+Ovid	Metamorphoses	5		438	13	502	502	✅	Hecuba						✅	self	no explicit addressee					5356	1	S	S	6	5//6	1	speech?		exclamation, deliberation, conclusion
+Ovid	Metamorphoses	5		439	13	512	513	✅	Penelope	hypothetical speech					❌	Women of Ithaca	(matribus...Ithacis 			y	y	5357	1	M	M no reply	10	1 2/3	1			description, explanatino, exclamation
+Ovid	Metamorphoses	5	8	440	13	534	534	✅	Hecuba						❌	Trojan women	(Troades, )			y	y	5358	1	M	M no reply	3	5//12	0			order, request, plea
+Ovid	Metamorphoses	5	9	441	13	556	558	✅	Polymestor	King of Thrace					✅	Hecuba						5359	1	M	M no reply	18	1 1/4	0			persuasion, oath
+Ovid	Metamorphoses	5	10	442	13	587	599	✅	Aurora						✅	Jupiter						5360	1	M	M no reply	93	13    	0			prayer, plea, request
+Ovid	Metamorphoses	5	11	443	13	640	642	✅	Anchises						✅	Anius	 priest of Apollo on Delos					5361	1	D	D	19	2  7/12	0			question
+Ovid	Metamorphoses	5	12	444	13	644	674	✅	Anius						✅	Anchises						5361	2	D	D reply	195	30  5/12	0			Narration
+Ovid	Metamorphoses	5		445	13	669	669	❌	Anius' daugthers						✅	Bacchus						5362	1	M	M no reply	4	1//2	1			prayer
+Ovid	Metamorphoses	5	13	446	13	740	745	✅	Galatea						✅	Scylla (monster)	(virgin)					5363	1	D	D	40	5 1/6	0			lament
+Ovid	Metamorphoses	5	14	447	13	747	748	✅	Scylla (monster)						✅	Galatea						5363	2	D	D reply	11		0			question, encouragement to tell story
+Ovid	Metamorphoses	5	15	448	13	750	897	✅	Galatea	(Nereid)					❌	Scylla (monster) and Venus and Polyphemus	Venus and Polyphemus are secondary					5363	3	D	D reply	726	148	0			Narration
+Ovid	Metamorphoses	5		449	13	772	773	✅	Telemus	the augur, Telemus, the son of Eurymus, 					✅	Polyphemus						5364	1	D	D	9	1 1/4	1			threat, prophecy
+Ovid	Metamorphoses	5		450	13	774	775	✅	Polyphemus						❌	Telemus 						5364	2	D	D reply	7	1  1/12	1			reply, vituperation, declaration, statement
+Ovid	Metamorphoses	5		451	13	789	869	✅	Polyphemus						✅	Galatea						5365	1	M	M no reply	538	81	1			praise, love declaration, lament
+Ovid	Metamorphoses	5		452	13	837	837	✅	Polyphemus						✅	self						5366	1	S	S	3	7//12	2			deliberation, conclusion, self-exhortation, announcement
+Ovid	Metamorphoses	5		453	13	874	875	✅	Polyphemus						❌	Acis and Galatea					Tandem	5367	1	M	M no reply	9	1  5/12	1			threat
+Ovid	Metamorphoses	5		454	13	880	881	✅	Acis						❌	Galatea and Faunus and Symaethis 	parentes; some commentators think parentes is not parents, but forefathers				y	5368	1	M	M no reply	12	1 3/4	1			plea, prayer, request
+Ovid	Metamorphoses	5	16	455	13	917	965	✅	Glaucus	(sea god)					✅	Scylla (monster)						5369	1	M	M no reply	337	49	0			narration, lament, persuasion
+Ovid	Metamorphoses	5		456	13	942	942	✅	Glaucus	while transforming					✅	self						5370	1	S	S	6	7//12	1			deliberation
+Ovid	Metamorphoses	5		457	13	947	948	✅	Glaucus	while transforming					✅	terra						5371	1	M	M no reply	4	2//3	1			farewell
+Ovid	Metamorphoses	5	1	458	14	12	24	✅	Glaucus						✅	Circe	(goddess)					5372	1	D	D	91	12 5/6	0			request, prayer, plea
+Ovid	Metamorphoses	5	2	459	14	28	36	✅	Circe						✅	Glaucus						5372	2	D	D reply	57	8  7/12	0			persuasion, advise, promise
+Ovid	Metamorphoses	5	3	460	14	37	39	✅	Glaucus						✅	Circe						5372	3	D	D reply	16	1 1/3	0			love oath to Scylla, refusal, determination, vituperation
+Ovid	Metamorphoses	5	4	461	14	108	113	✅	Deiphobe	Sibyl of Cumae					✅	Aeneas						5373	1	M	M no reply	36	1 1/2	0			prophecy, promise, encouragement
+Ovid	Metamorphoses	5	5	462	14	123	128	✅	Aeneas						✅	Deiphobe	Sibyl of Cumae					5374	1	D	D	43	5 5/6	0			request, oath, plea
+Ovid	Metamorphoses	5	6	463	14	130	153	✅	Deiphobe	Sibyl of Cumae					✅	Aeneas						5374	2	D	D reply	161	24    	0			Narration
+Ovid	Metamorphoses	5		464	14	135	136	✅	Apollo						✅	Deiphobe	Sibyl of Cumae					5375	1	M	M no reply	8	1  1/12	1			offer, promise
+Ovid	Metamorphoses	5	7	465	14	162	164	✅	Macareus (of Neritos)	a companion of Odysseus from Ithaca					✅	Achaemenides						5376	1	D	D	16	2  5/12	0			question
+Ovid	Metamorphoses	5	8	466	14	167	222	✅	Achaemenides						✅	Macareus (of Neritos)						5376	2	D	D reply	380	55  7/12	0			Narration and question at end
+Ovid	Metamorphoses	5		467	14	192	197	✅	Polyphemus						✅	Greeks	gens Achiva					5377	1	M	M no  reply	45	5 5/6	1			lament, wish, prayer
+Ovid	Metamorphoses	5	9	468	14	233	440	✅	Macareus (of Neritos)						✅	Achaemenides						5378	1	D	D reply	ca.1350	208      	0			Narration
+Ovid	Metamorphoses	5		469	14	318	434	❌	one of Circe's four female servants				y		✅	Macareus						5379	1	M	M reply	ca.762	117      	1			Narration
+Ovid	Metamorphoses	5		470	14	355	357	✅	Circe						✅	Picus						5380	1	M	M no reply	20	2 5/6	2			threat
+Ovid	Metamorphoses	5		471	14	372	376	✅	Circe						✅	Picus						5381	1	D	D	33	4  5/12	2			plea, love declaration, request
+Ovid	Metamorphoses	5		472	14	378	381	✅	Picus						✅	Circe						5381	2	D	D reply	27	3 3/4	2			oath to Canens (Janus' daughter), rejection of Circe
+Ovid	Metamorphoses	5		473	14	383	385	✅	Circe						✅	Picus						5381	3	D	D reply	24	2 5/6	2			threat and lament
+Ovid	Metamorphoses	5	10	474	14	443	444	✅	Caieta	 Epitaph for Aeneas’s nurse					✅	self						5382	1	S	S	12	2    	0	Epitaph		epitaph
+Ovid	Metamorphoses	5	11	475	14	464	511	❌	Diomede	 grandson of Oeneus of Calydon (Oenides)					❌	Venulus						5383	1	M	M no reply	313	47  7/12	0			narration, persuasion
+Ovid	Metamorphoses	5		476	14	486	493	❌	Acmon 	Acmon of Pleuron, companion of Diomedes					❌	Diomedes' companions	viri			y	y	5384	1	M	M no reply	59	7 5/6	1			exhortation, vituperation of Venus
+Ovid	Metamorphoses	5	12	477	14	539	541	✅	Cybele	the sacred mother of the gods, 					❌	Turnus						5385	1	M	M no reply	18	2 11/12	0			threat, vituperation
+Ovid	Metamorphoses	5	13	478	14	586	591	❌	Venus						✅	Jupiter						5386	1	D	D	38	5  5/12	0			prayer, persuasion
+Ovid	Metamorphoses	5	14	479	14	594	595	✅	Jupiter						❌	Venus						5386	2	D	D reply	13	1 3/4	0			allows, permission, promise
+Ovid	Metamorphoses	5	15	480	14	657	657	❌	Vertumnus	old woman (anus)	old woman				✅	Pomona						5387	1	M	M no reply	2	5//12	0			exclamation, praise, congratuation
+Ovid	Metamorphoses	5	16	481	14	663	764	❌	Vertumnus	old woman (anus)	old woman				✅	Pomona						5388	1	M	M no reply	692	102	0			persuasion with narration
+Ovid	Metamorphoses	5		482	14	718	732	✅	Iphis (of Cyprus)	(m.)					✅	Anaxarete						5389	1	M	M no reply	103	15	1			farewell, vituperation, lament
+Ovid	Metamorphoses	5		483	14	736	736	✅	Iphis (of Cyprus)	(m.)					✅	Anaxarete						5390	1	M	M no reply	7	5//6	1			farewell (suicide), vituperation
+Ovid	Metamorphoses	5		484	14	751	751	✅	Anaxarete						❌	self 	but adhortative/first person pl. Is used (videamus)					5391	1	S or M	S or M no reply	3	2//3	1			self-exhortation, determination
+Ovid	Metamorphoses	5	17	485	14	808	815	✅	Mars						✅	Jupiter						5392	1	M	M no reply	53	8	0			request, prayer
+Ovid	Metamorphoses	5		486	14	814	814	✅	Jupiter						❌	Mars and council of the gods 				y	y	5393	1	M	M no reply	8	1	1			prophecy
+Ovid	Metamorphoses	5	18	487	14	832	837	✅	Juno	message dictation					✅	Iris	(directly addressed to Hersilia)					5394	1	M	M no reply	44	6	0			message (order), verbatim
+Ovid	Metamorphoses	5	19	488	14	841	844	✅	Hersilia	response to omitted message delivery					✅	Iris						5395	1	M/D/G	M reply or D reply/G reply	33	3 5/6	0			prayer, request
+Ovid	Metamorphoses	5	1	489	15	12	57	❌	e senioribus unus	one of the older inhabitants			y		✅	Numa						5396	1	M	M reply	ca. 288?	46	0			
+Ovid	Metamorphoses	5		490	15	17	18	✅	Hercules						✅	Croton						5397	1	M	M no reply	6	5//6	1			promise, prediction
+Ovid	Metamorphoses	5		491	15	22	23	✅	Hercules	in sleep as god (revealed later)		y			✅	Myscelus	the son of Alemon of Argos					5398	1	M	M no reply	10	1  7/12	1			order
+Ovid	Metamorphoses	5		492	15	39	40	✅	Myscelus						✅	Hercules	as god					5399	1	M	M no reply	16	1 5/6	1			prayer
+Ovid	Metamorphoses	5	2	493	15	75	478	✅	Pythagoras						❌	unspecified public audience	coetusque silentum			y	y	5400	1	S	S	ca. 2644	404	0			self, instruction, description
+Ovid	Metamorphoses	5		494	15	439	449	✅	Helenus	son of Priam					✅	Aeneas						5401	1	M	M no reply	77	11	1			prophesy
+Ovid	Metamorphoses	5	3	495	15	493	546	✅	Hippolytus	Theseus' son					✅	Egeria	 Italian nymph, wife of Numa. 					5402	1	M	M no reply	338	54	0	repeatedly		Narration and persuasion
+Ovid	Metamorphoses	5		496	15	543	544	✅	Diana	Cynthia: Diana as the Moon goddess					✅	Hippolytus						5403	1	M	M no reply	7	1 1/6	1			order, request
+Ovid	Metamorphoses	5	4	497	15	571	573	✅	Cipus	after metamorphosis (he has grown horns)					❌	superi	gods			y	y	5404	1	M	M no reply	16	2 1/4	0			prayer
+Ovid	Metamorphoses	5	5	498	15	581	585	❌	Tyrrhenae gentis haruspex	Tyrrhenian seer: not Tages, cf. Galinsky (1967)			y		✅	Cipus						5405	1	M	M no  reply	36	5    	0			prophecy
+Ovid	Metamorphoses	5	6	499	15	587	589	✅	Cipus						❌	di				y	y	5406	1	M or S	M no reply or S	18	2  5/12	0			prayer to gods, indirect
+Ovid	Metamorphoses	5	7	500	15	594	602	✅	Cipus						❌	senators and people and Quirites	Quirites, populumque ... senatum			y	y	5407	1	G	G	64	8 11/12	0			prayer, persuasion
+Ovid	Metamorphoses	5	8	501	15	607	607	✅	someone	one member of the crowd: vulgi vox eminet una			y		❌	self and Cipus				y	y	5407	2	G	G reply	3	1//4	0			question
+Ovid	Metamorphoses	5	9	502	15	609	609	✅	Cipus						❌	senators and people and Quirites				y	y	5407	3	G	G reply	3	1//2	0			description, info, reply
+Ovid	Metamorphoses	5	10	503	15	637	640	✅	Delphic oracle	 literally. the tripod 			y		✅	senators	Romane; senatus (641) 			y	y	5408	1	M	M no reply	29	4	0			prophecy, advise, order
+Ovid	Metamorphoses	5	11	504	15	658	662	✅	Aesculapius						✅	Romans	(addressed as Romane again)			y	y	5409	1	M	M no  reply	35	5	0	sleep		prophecy command
+Ovid	Metamorphoses	5	12	505	15	677	679	✅	Aesculapius' priest				y		❌	Romans and Aesculapius	first crowd, after verb of speech, god			y	y	5409	2	M or D	M no  reply or D	19	2 3/4	0			prayer
+Ovid	Metamorphoses	5	13	506	15	765	778	❌	Venus						❌	divi	every god, in turn, all gods, cunctis...divis			y	y	5410	1	M or D	M no reply or D reply	87	13 3/4	0			lament, persuasion, request
+Ovid	Metamorphoses	5	14	507	15	807	842	✅	Jupiter						❌	Venus						5411	1	M	M no reply	221	35  7/12	0			prophecy, persuasion, request
