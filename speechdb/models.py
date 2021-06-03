@@ -38,21 +38,27 @@ class Work(models.Model):
 class Character(models.Model):
     '''An epic character'''
     
-    class CharacterType(models.TextChoices):
-        INDIVIDUAL = ('I', 'Individual')
-        COLLECTIVE = ('C', 'Collective')
-        OTHER = ('O', 'Other')
+    class CharacterNumber(models.TextChoices):
+        INDIVIDUAL = ('individual', 'Individual')
+        COLLECTIVE = ('collective', 'Collective')
+        OTHER = ('other', 'Other')
+
+    class CharacterBeing(models.TextChoices):
+        HUMAN = ('human', 'Human')
+        GOD = ('god', 'God')
+        OTHER = ('other', 'Other')
         
     class CharacterGender(models.TextChoices):
-        NONBINARY = ('N', 'Non-binary')
-        FEMALE = ('F', 'Female')
-        MALE = ('M', 'Male')
+        NB = ('NB', 'Non-binary')
+        F = ('F', 'Female')
+        M = ('M', 'Male')
     
     name = models.CharField(max_length=64)
-    being = models.CharField(max_length=32, default='human')
-    type = models.CharField(max_length=1, choices=CharacterType.choices,
-            default=CharacterType.INDIVIDUAL)
-    gender = models.CharField(max_length=1, choices=CharacterGender.choices,
+    being = models.CharField(max_length=16, choices=CharacterBeing.choices,
+            default=CharacterBeing.HUMAN)
+    number = models.CharField(max_length=16, choices=CharacterNumber.choices,
+            default=CharacterNumber.INDIVIDUAL)
+    gender = models.CharField(max_length=2, choices=CharacterGender.choices,
             null=True)
     wd = models.CharField('WikiData ID', max_length=32, null=True)
     manto = models.CharField('MANTO ID', max_length=32, null=True)
@@ -101,22 +107,7 @@ class SpeechCluster(models.Model):
     
     class Meta:
         ordering = ['work', 'speech']
-    
-    # def __str__(self):
-    #     if self.speech_set is not None:
-    #         loc = '{w} {l}'.format(
-    #             w = self.work,
-    #             l = self.speech_set.order_by('part')[0].l_fi,
-    #         )
-    #         n = len(self.speech_set.all())
-    #         if n > 1:
-    #             parts = f'{n} parts'
-    #         else:
-    #             parts = '1 part'
-    #     else:
-    #         parts = 'empty'
-    #     return f'{loc} {self.type} [{parts}]'
-    
+        
     def get_spkr_str(self):
         '''Return speaker list as a string'''
         chars = []

@@ -17,7 +17,7 @@ class WorkSerializer(serializers.ModelSerializer):
 class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character
-        fields = ['id', 'name', 'being', 'type', 'gender', 'wd', 'manto']
+        fields = ['id', 'name', 'being', 'number', 'gender', 'wd', 'manto']
 
 
 class CharacterInstanceSerializer(serializers.ModelSerializer):
