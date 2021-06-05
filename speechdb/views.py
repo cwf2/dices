@@ -39,7 +39,7 @@ def ValidateParams(request, valid_params):
 class AuthorFilter(filters.FilterSet):
     class Meta:
         model = Author
-        fields = ['name', 'wd']
+        fields = ['id', 'name', 'wd']
 
 
 class WorkFilter(filters.FilterSet):
@@ -50,13 +50,14 @@ class WorkFilter(filters.FilterSet):
     
     class Meta:
         model = Work
-        fields = ['title', 'wd', 'urn', 'author_name', 'author_id', 'author_wd']
+        fields = ['id', 'title', 'wd', 'urn', 
+                    'author_name', 'author_id', 'author_wd']
 
 
 class CharacterFilter(filters.FilterSet):
     class Meta:
         model = Character
-        fields = ['name', 'wd', 'manto']
+        fields = ['id', 'name', 'wd', 'manto', 'gender', 'number', 'being', 'anon']
 
 
 class CharacterInstanceFilter(filters.FilterSet):
@@ -64,10 +65,19 @@ class CharacterInstanceFilter(filters.FilterSet):
     char_name = filters.CharFilter('char__name')
     char_wd = filters.CharFilter('char__wd')
     char_manto = filters.CharFilter('char__manto')
+    char_gender = filters.ChoiceFilter('char__gender', 
+                    choices=Character.CharacterGender.choices)
+    char_number = filters.ChoiceFilter('char__number',
+                    choices=Character.CharacterNumber.choices)
+    char_being = filters.ChoiceFilter('char__being',
+                    choices=Character.CharacterBeing.choices)
+    char_anon = filters.BooleanFilter('char__anon')
+    
     
     class Meta:
         model = CharacterInstance
-        fields = ['char_id', 'char_name', 'char_wd', 'char_manto']
+        fields = ['id', 'char_id', 'char_name', 'char_wd', 'char_manto',
+                    'char_gender', 'char_number', 'char_being', 'char_anon']
 
 
 class SpeechFilter(filters.FilterSet):
@@ -75,19 +85,32 @@ class SpeechFilter(filters.FilterSet):
     spkr_name = filters.CharFilter('spkr__char__name')
     spkr_manto = filters.CharFilter('spkr__char__manto')
     spkr_wd = filters.CharFilter('spkr__char__wd')
-    spkr_gender = filters.CharFilter('spkr__char__gender')
+    spkr_gender = filters.ChoiceFilter('spkr__char__gender', 
+                    choices=Character.CharacterGender.choices)
+    spkr_number = filters.ChoiceFilter('spkr__char__number',
+                    choices=Character.CharacterNumber.choices)
+    spkr_being = filters.ChoiceFilter('spkr__char__being',
+                    choices=Character.CharacterBeing.choices)
+    spkr_anon = filters.BooleanFilter('spkr__char__anon')
     
     addr_id = filters.NumberFilter('addr__char__id')
     addr_name = filters.CharFilter('addr__char__name')
     addr_manto = filters.CharFilter('addr__char__manto')
     addr_wd = filters.CharFilter('addr__char__wd')
-    addr_gender = filters.CharFilter('addr__char__gender')
+    addr_gender = filters.ChoiceFilter('addr__char__gender', 
+                    choices=Character.CharacterGender.choices)
+    addr_number = filters.ChoiceFilter('addr__char__number',
+                    choices=Character.CharacterNumber.choices)
+    addr_being = filters.ChoiceFilter('addr__char__being',
+                    choices=Character.CharacterBeing.choices)
+    addr_anon = filters.BooleanFilter('addr__char__anon')
     
     spkr_inst = filters.NumberFilter('spkr__id')
     addr_inst = filters.NumberFilter('addr__id')
     
     cluster_id = filters.NumberFilter('cluster__id')
-    cluster_type = filters.CharFilter('cluster__type')
+    cluster_type = filters.ChoiceFilter('cluster__type', 
+                    choices=SpeechCluster.ClusterType.choices)
     
     work_id = filters.NumberFilter('cluster__work__id')
     work_title = filters.CharFilter('cluster__work__title')
@@ -103,7 +126,9 @@ class SpeechFilter(filters.FilterSet):
         model = Speech
         fields = ['id',
             'spkr_id', 'spkr_name', 'spkr_manto', 'spkr_wd', 'spkr_gender',
+            'spkr_number', 'spkr_being', 'spkr_anon',
             'addr_id', 'addr_name', 'addr_manto', 'addr_wd', 'addr_gender',
+            'addr_number', 'addr_being', 'addr_anon',
             'spkr_inst', 'addr_inst',
             'cluster_id', 'cluster_type',
             'work_id', 'work_title', 'work_urn', 'work_wd',
