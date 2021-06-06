@@ -7,34 +7,22 @@ import re
 from django.core import serializers
 
 
-def parseGender(gender):
-    '''Try to match user-entered gender to allowable choices'''
+def validate(s, choices, default=None, allow_none=True):
+    '''Validate user input'''
     
-    if gender is not None:
-        gender = gender.upper().strip()
-        if len(gender) > 0:
-            gender = gender[0]
-        else:
-            gender = None
+    if s is not None:
+        s = str(s).strip().lower()
+        if len(s) == 0:
+            s = None
     
-    if gender not in ['M', 'F', None]:
-        gender = 'N'
+    allowed = choices.values
+    if allow_none:
+        allowed.append(None)
     
-    return gender
-
-
-def parseBeing(being):
-    '''Try to match user-entered "being" label to allowable choices'''
+    if s not in allowed:
+        s = default.value
     
-    if being is not None:
-        being = being.lower().strip()
-        if len(being) == 0:
-            being = None
-    
-    if being not in ['human', 'god', None]:
-        being = 'other'
-    
-    return being
+    return s
 
 
 def addAuthors(file):
@@ -83,21 +71,22 @@ def addChars(file):
         if len(Character.objects.filter(name=c.name)) > 0:
             print(f'Adding duplicate char name {c.name}.')
         c.wd = rec.get('wd').strip() or None
-        if c.wd is None:
-            print(f'{c} has no WikiData id.')
-        being = rec.get('being').strip() or None
-        if being is None:
-            print(f'{c} has no being.')  
-        else:
-            c.being = being
-        number = rec.get('number').strip() or None
-        if number is None:
-            print(f'{c} has no number.')
-        else:
-            c.number = number[0].upper()
-        c.gender = parseGender(rec.get('gender'))
+        c.manto = rec.get('manto').strip() or None
+        c.anon = (rec.get('anon') is not None) and (
+                    len(rec.get('anon').strip()) > 0)
+        c.being = validate(rec.get('being'), Character.CharacterBeing,
+                    default=Character.CharacterBeing.MORTAL)
+        c.number = validate(rec.get('number'), Character.CharacterNumber,
+                    default=Character.CharacterNumber.INDIVIDUAL)
+        c.gender = validate(rec.get('gender'), Character.CharacterGender,
+                    default=Character.CharacterGender.MALE)
         c.notes = rec.get('notes').strip() or None
+        
+        if c.being is None:
+            print(f'Character {c} has no being')
+        
         c.save()
+
 
 def addInst(name, speech):
     '''get or create character instance'''

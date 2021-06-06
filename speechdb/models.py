@@ -44,22 +44,24 @@ class Character(models.Model):
         OTHER = ('other', 'Other')
 
     class CharacterBeing(models.TextChoices):
-        HUMAN = ('human', 'Human')
-        GOD = ('god', 'God')
+        MORTAL = ('mortal', 'Mortal')
+        DIVINE = ('divine', 'Divine')
+        CREATURE = ('creature', 'Mythical Creature')
         OTHER = ('other', 'Other')
         
     class CharacterGender(models.TextChoices):
-        NB = ('NB', 'Non-binary')
-        F = ('F', 'Female')
-        M = ('M', 'Male')
+        NB = ('non-binary', 'Non-binary')
+        FEMALE = ('female', 'Female')
+        MALE = ('male', 'Male')
     
     name = models.CharField(max_length=64)
     being = models.CharField(max_length=16, choices=CharacterBeing.choices,
-            default=CharacterBeing.HUMAN)
+            default=CharacterBeing.MORTAL)
     number = models.CharField(max_length=16, choices=CharacterNumber.choices,
             default=CharacterNumber.INDIVIDUAL)
-    gender = models.CharField(max_length=2, choices=CharacterGender.choices,
+    gender = models.CharField(max_length=16, choices=CharacterGender.choices,
             null=True)
+    anon = models.BooleanField(default=False)
     wd = models.CharField('WikiData ID', max_length=32, null=True)
     manto = models.CharField('MANTO ID', max_length=32, null=True)
 
