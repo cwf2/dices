@@ -128,7 +128,7 @@ orig_id	seq	work_id	work	book	from_line	to_line	s_ok	speaker	speaker_notes	a_ok	
 113	127	2	Odyssey	5	356	364	✅	Odysseus		✅	self		2039	1	monologue	soliloquy	9		0			
 114	128	2	Odyssey	5	377	379	✅	Poseidon		✅	self		2040	1	monologue	soliloquy	3		0			
 115	129	2	Odyssey	5	408	422	✅	Odysseus		✅	self		2041	1	monologue	soliloquy	15		0			
-116	130	2	Odyssey	5	445	450	✅	Odysseus		❌	river god		2042	1	monologue	soliloquy	6		0			
+116	130	2	Odyssey	5	445	450	✅	Odysseus		✅	river god		2042	1	monologue	soliloquy	6		0			
 117	131	2	Odyssey	5	465	473	✅	Odysseus		✅	self		2043	1	monologue	soliloquy	9		0			
 118	132	2	Odyssey	6	25	40	✅	Athena		✅	Nausicaa		2044	1	general	single speech	16		0			
 119	133	2	Odyssey	6	57	65	✅	Nausicaa		✅	Alcinous		2045	1	dialogue	first part of dialogue	9		0			

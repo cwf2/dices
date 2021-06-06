@@ -5,15 +5,15 @@ Lucan	Civil War	6	3	3	1	248	n	257	y	✅	Inhabitants of Arminium			y	y		❌	self 
 Lucan	Civil War	6	4	4	1	273	y	291	y	✅	Curio						✅	Julius Caesar						6003	1	M	M (no reply)	18		0			exhortation 
 Lucan	Civil War	6	5	5	1	299	n	351	n	✅	Julius Caesar						✅	soldiers			y	y	socii	6004	1	G	G	52 11/12		0			praise / exhortation
 Lucan	Civil War	6	6	6	1	359	n	386	y	✅	Laelius					(highest officer)	✅	Julius Caesar						6004	2	G	G (reply)	26 11/12		0			praise, exhortation; a
-Lucan	Civil War	6	7	7	1	631	y	637	y	✅	Arruns						❌	self and superi, esp. Jupiter				y	prayer + prophecy (superi, esp. summe ...Iuppiter)	6005	1	S	S	6 1/6		0			prophecy
+Lucan	Civil War	6	7	7	1	631	y	637	y	✅	Arruns (Lucan)						❌	self and gods and Jupiter				y	prayer + prophecy (superi, esp. summe ...Iuppiter)	6005	1	S	S	6 1/6		0			prophecy
 Lucan	Civil War	6	8	8	1	642	n	672	n	✅	Figulus						❌	self and Roma					Roma	6006	1	S	S	30 5/6		0			prophecy
 Lucan	Civil War	6	9	9	1	678	n	694	n	❌	Roman matron (matrona 1)			y			❌	self and Apollo					Paean, Phobe (x2)	6007	1	S	S	17		0			prophecy
 Lucan	Civil War	6	1	10	2	38	n	42	y	❌	Roman matrona (matrona 2)			y			❌	fellow Roman matrons 			y	y	anonymous, collective, miserae ... matres	6008	1	M	M (no reply)	4 1/6		0			command / exhortation / persuasion
-Lucan	Civil War	6	2	11	2	45	n	63	y	❌	Roman men (viri)			y	y	collective of men who are actively involved in the battle 	❌	superi and Roma 				y	superi (x 2)	6009	1	S 	S	18 1/4		0			lament/ prayer
+Lucan	Civil War	6	2	11	2	45	n	63	y	❌	Roman men (viri)			y	y	collective of men who are actively involved in the battle 	❌	gods and Roma 				y	superi (x 2)	6009	1	S 	S	18 1/4		0			lament/ prayer
 Lucan	Civil War	6	3	12	2	68	n	232	n	❌	elderly Roman man (aliquis)			y		aliquis; senectus	✅	self						6010	1	S	S	164  5/12		0			lament / report
 Lucan	Civil War	6	4	13	2	81	n	85	n	❌	di scelerum		y		y	they appear together with Marius, but are the only ones to speak	❌	one of the Cimbri (who is about to strike Marius), and the collective (Cimbri)			y	y	anonymous, collective, miserae ... matres	6012	1	M	M (no reply)	2  7/12		1			command
-Lucan	Civil War	6	5	14	2	242	n	284	y	❌	Marcus Iunius Brutus						✅	Cato Uticensis						6013	1	D	D	42  7/12		0			persuasion / praise
-Lucan	Civil War	6	6	15	2	286	n	323	y	✅	Cato Uticensis						❌	Marcus Iunius Brutus						6013	2	D	D reply	37  7/12		0			exhortation / persuasion
+Lucan	Civil War	6	5	14	2	242	n	284	y	✅	Brutus (Marcus)						✅	Cato Uticensis						6013	1	D	D	42  7/12		0			persuasion / praise
+Lucan	Civil War	6	6	15	2	286	n	323	y	✅	Cato Uticensis						✅	Brutus (Marcus)						6013	2	D	D reply	37  7/12		0			exhortation / persuasion
 Lucan	Civil War	6	7	16	2	338	n	349	n	❌	Marcia						✅	Cato Uticensis						6014	1	M	M (no reply)	12		0			persuasion rebuke
 Lucan	Civil War	6	8	17	2	483	y	490	y	✅	Domitius						✅	soldiers			y	y	socii	6015	1	M	M (no reply)	7 1/6		0			command / exhortation
 Lucan	Civil War	6	9	18	2	494	n	499	n	✅	Julius Caesar						❌	enemies and his own soldiers					ignavi, catervae, pedites	6016	1	M	S and M (no reply); 	6		0			outcry / rebuke/ threat
@@ -24,13 +24,13 @@ Lucan	Civil War	6	13	22	2	632	y	648	y	✅	Pompeius Magnus						❌	Gnaeus Pompei
 Lucan	Civil War	6	1	23	3	12	n	34	y	✅	Julia (daughter of Julius Caesar)		y			Imago Iuliae (dead in dream-vision)	✅	Pompeius Magnus						6021	1	M	M (no reply)	22  5/12		0			rebuke / threat / prophecy
 Lucan	Civil War	6	2	24	3	38	y	40	y	✅	Pompeius Magnus						✅	self					indirect response to Julia	6022	1	S	S	2 1/4		0			deliberation /exhortation
 Lucan	Civil War	6	3	25	3	91	n	97	y	✅	Julius Caesar						❌	self and Rome					deum sedes; Roma	6023	1	S	S	6  7/12		0			deliberation?
-Lucan	Civil War	6	4	26	3	123	n	133	y	✅	Metellus						✅	Julius Caesar						6024	1	D	D	10  5/12		0			command, curse, prophecy  exhortation
-Lucan	Civil War	6	5	27	3	134	y	140	n	✅	Julius Caesar						✅	Metellus						6024	2	D	D reply 	6  5/12		0			reidicule / curse /prophecy
-Lucan	Civil War	6	6	28	3	145	n	152	n	✅	Cotta						✅	Metellus						6025	1	M	M (no reply)	7 5/6		0			persuasion
-Lucan	Civil War	6	7	29	3	307	n	355	y	✅	Inhabitants of Massilia			y	y	collective	❌	Julius Caesar 					(and Pompeius & the Roman war parties in general)	6026	1	D	D	48  7/12		0			proposal / persuasion? Pledge?
+Lucan	Civil War	6	4	26	3	123	n	133	y	✅	Metellus (Lucan)						✅	Julius Caesar						6024	1	D	D	10  5/12		0			command, curse, prophecy  exhortation
+Lucan	Civil War	6	5	27	3	134	y	140	n	✅	Julius Caesar						✅	Metellus (Lucan)						6024	2	D	D reply 	6  5/12		0			reidicule / curse /prophecy
+Lucan	Civil War	6	6	28	3	145	n	152	n	✅	Cotta						✅	Metellus (Lucan)						6025	1	M	M (no reply)	7 5/6		0			persuasion
+Lucan	Civil War	6	7	29	3	307	n	355	y	✅	Inhabitants of Massilia			y	y	collective	✅	Julius Caesar					(and Pompeius & the Roman war parties in general)	6026	1	D	D	48  7/12		0			proposal / persuasion? Pledge?
 Lucan	Civil War	6	8	30	3	358	n	372	y	✅	Julius Caesar						❌	his soldiers and the Inhabitants of Massilia			y	y	cohortes	6026	2	D	D reply 	14  5/12		0			threat / curse / rebuke
 Lucan	Civil War	6	9	31	3	436	n	437	y	✅	Julius Caesar						✅	soldiers			y	y	cohortes	6027	1	M	M (no reply)	1  7/12		0			exhortation / command
-Lucan	Civil War	6	10	32	3	559	y	561	n	❌	Decimus Iunius Brutus Albinus						❌	helmsman 			y	y	captain of his ship: puppe magister	6028	1	M	M (no reply)	2 3/4		0			exhortation / command
+Lucan	Civil War	6	10	32	3	559	y	561	n	✅	Brutus (Decimus)						❌	helmsman 			y	y	captain of his ship: puppe magister	6028	1	M	M (no reply)	2 3/4		0			exhortation / command
 Lucan	Civil War	6	11	33	3	716	n	721	y	❌	Tyrrhenus						✅	soldiers			y	y	socii	6029	1	M	M (no reply)	5 1/2		0			exhortation / command
 Lucan	Civil War	6	12	34	3	742	y	747	n	❌	father of Argus (Massilian fighter)			y			❌	Argus (Massilian fighter)		(half-dead/dying)				6030	1	M	M (no reply)	5  5/12		0			lament / farewell
 Lucan	Civil War	6	1	35	4	162	y	166	n	✅	Julius Caesar						✅	soldiers			y	y	miles	6031	1	M	M (no reply)	4 1/6		0			exhortation, command
@@ -77,7 +77,7 @@ Lucan	Civil War	6	4	75	7	250	n	329	y	✅	Julius Caesar						✅	soldiers			y	y	m
 Lucan	Civil War	6	5	76	7	342	y	382	y	✅	Pompeius Magnus						✅	soldiers			y	y		6063	1	M	M (no reply)	79  7/12		0			persuasion, entreaty
 Lucan	Civil War	6	6	77	7	606	y	607	n	✅	Julius Caesar						✅	Domitius						6064	1	D	D 	1  7/12		0			rebuke? Threat / maltreat/ declaration
 Lucan	Civil War	6	7	78	7	610	n	615	y	✅	Domitius					dying	✅	Julius Caesar						6064	2	D	D reply			0			curse / threat / rebuke
-Lucan	Civil War	6	8	79	7	659	n	666	y	✅	Pompeius Magnus					prayer	❌	superi and Fortuna					gods	6065	1	M	M (no reply)			0			prayer, lament
+Lucan	Civil War	6	8	79	7	659	n	666	y	✅	Pompeius Magnus					prayer	❌	gods and Fortuna					superi	6065	1	M	M (no reply)			0			prayer, lament
 Lucan	Civil War	6	9	80	7	720	y	721	y	✅	Pompeius Magnus						❌	inhabitants of Larissa			y	y	cives	6066	1	M	M (no reply)			0			command; denial
 Lucan	Civil War	6	10	81	7	737	y	746	y	✅	Julius Caesar						✅	soldiers			y	y	viri	6067	1	M	M (no reply)			0			exhortation
 Lucan	Civil War	6	1	82	8	72	n	85	n	✅	Pompeius Magnus						✅	Cornelia						6068	1	D	D			0			reunion speech / rebuke / persuasion
@@ -96,8 +96,8 @@ Lucan	Civil War	6	11	94	8	579	y	582	y	✅	Pompeius Magnus						❌	Cornelia and 
 Lucan	Civil War	6	12	95	8	584	n	589	n	✅	Cornelia						❌	Pompeius						6074	2	D	D reply			0			rebuke, question
 Lucan	Civil War	6	13	96	8	622	n	635	y	✅	Pompeius Magnus						✅	self						6075	1	S	S			0			lament/ farewell, death speech
 Lucan	Civil War	6	14	97	8	639	y	661	y	✅	Cornelia						❌	Pompeius Magnus and Achillas					(both absent, too far away)	6076	1	S or M	S or M (no reply)			0			lament / rebuke / sorror
-Lucan	Civil War	6	15	98	8	729	n	742	n	✅	Cordus						❌	Fortuna and superi						6077	1	S	S or M (no reply)			0			prayer / lament
-Lucan	Civil War	6	16	99	8	746	y	751	n	✅	Cordus						✅	corpus			y		corpus nullo custode	6078	1	M	M (no reply)			0			apology, prayer
+Lucan	Civil War	6	15	98	8	729	n	742	n	✅	Cordus						❌	gods and Fortuna					superi	6077	1	S	S or M (no reply)			0			prayer / lament
+Lucan	Civil War	6	16	99	8	746	y	751	n	✅	Cordus						✅	corpse			y		corpus nullo custode	6078	1	M	M (no reply)			0			apology, prayer
 Lucan	Civil War	6	17	100	8	759	y	775	n	✅	Cordus						❌	Pompeius		y			mutilated late Pompey	6079	1	M	M (no reply)			0			praise, lament, farewell
 Lucan	Civil War	6	1	101	9	55	n	108	n	✅	Cornelia						❌	self and Sextus Pompeius and Fortuna						6080	1	S and M	S and M (no reply); 			0			lament, command
 Lucan	Civil War	6		102	9	87	n	97	n	✅	Pompeius Magnus					Testament, final message	❌	Sextus Pompeius and Gnaeus Pompeius						96004	1	M	M (no reply)			1			testament; command
@@ -114,7 +114,7 @@ Lucan	Civil War	6	11	112	9	550	y	563	n	✅	Labienus						✅	Cato Uticensis					
 Lucan	Civil War	6	12	113	9	566	n	584	n	✅	Cato Uticensis						✅	Labienus						6088	2	D	D reply			0			rebuke, reply, command
 Lucan	Civil War	6	13	114	9	612	y	616	y	✅	Cato Uticensis					ductor	✅	Soldiers			y	y		6089	1	M	M (no reply)			0			assurance, command, exhortation
 Lucan	Civil War	6	14	115	9	848	n	880	y	✅	Soldiers						✅	gods					di	6090	1	S	S			0			complaint, lament, outcry?
-Lucan	Civil War	6	15	116	9	979		979	n	✅	Phryx incola			y		naive Phrygian guide; (monstrator) 	✅	Julius Caesar						6091	1	M	M (no reply)			0			question
+Lucan	Civil War	6	15	116	9	979		979	n	✅	Phrygian guide			y		Phryx incola; naive Phrygian guide; (monstrator) 	✅	Julius Caesar						6091	1	M	M (no reply)			0			question
 Lucan	Civil War	6	16	117	9	990	n	999	n	✅	Julius Caesar					prayer	❌	Di cinerum, Lares				y		6092	1	M	M (no reply)			0			prayer
 Lucan	Civil War	6	17	118	9	1014	n	1032	n	✅	Achillas					satelles of Ptolemy, not named	✅	Julius Caesar						6093	1	D	D			0			greeting, present, explanation
 Lucan	Civil War	6	18	119	9	1064	n	1104	y	✅	Julius Caesar						❌	satelles					not named	6093	2	D	D reply			0			lament, rebuke

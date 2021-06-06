@@ -24,7 +24,7 @@ orig_id	seq	work_id	work	book	from_line	to_line	s_ok	speaker	speaker_notes	a_ok	
 23	23	3	Argonautica	1	1092	1102	✅	Mopsus		✅	Jason		3013	1	general	single speech	11		0			
 24	24	3	Argonautica	1	1257	1259	✅	Polyphemus (Argonaut)		✅	Heracles		3014	1	general	single speech	3		0			
 25	25	3	Argonautica	1	1290	1295	✅	Telamon		❌	Tiphys and Jason		3015	1	general	single speech	6		0			
-26	26	3	Argonautica	1	1315	1325	✅	Glaucus		✅	Argonauts		3016	1	general	single speech	11		0			
+26	26	3	Argonautica	1	1315	1325	✅	Glaucus (sea god)		✅	Argonauts		3016	1	general	single speech	11		0			
 27	27	3	Argonautica	1	1332	1335	✅	Telamon		✅	Jason		3017	1	dialogue	first part of dialogue	4		0			
 28	28	3	Argonautica	1	1337	1343	✅	Jason		✅	Telamon		3017	2	dialogue	second part of dialogue	7		0			
 29	29	3	Argonautica	2	11	18	✅	Amycus		✅	Argonauts		3018	1	dialogue	first part of dialogue	8		0			
