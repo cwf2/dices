@@ -36,6 +36,33 @@
  }
 },
 {
+ "model": "speechdb.author",
+ "pk": 5,
+ "fields": {
+  "name": "Lucan",
+  "wd": "Q188646",
+  "urn": "urn:cite:perseus:author.847"
+ }
+},
+{
+ "model": "speechdb.author",
+ "pk": 6,
+ "fields": {
+  "name": "Silius",
+  "wd": "Q316123",
+  "urn": "urn:cite:perseus:author.1288"
+ }
+},
+{
+ "model": "speechdb.author",
+ "pk": 7,
+ "fields": {
+  "name": "Statius",
+  "wd": "Q243203",
+  "urn": "urn:cite:perseus:author.1323"
+ }
+},
+{
  "model": "speechdb.work",
  "pk": 1,
  "fields": {
@@ -83,6 +110,36 @@
   "wd": "Q184742",
   "urn": "urn:cts:latinLit:phi0959.phi006.perseus-lat2",
   "author": 4
+ }
+},
+{
+ "model": "speechdb.work",
+ "pk": 6,
+ "fields": {
+  "title": "Civil War",
+  "wd": "Q678375",
+  "urn": "urn:cts:latinLit:phi0917.phi001.perseus-lat2",
+  "author": 5
+ }
+},
+{
+ "model": "speechdb.work",
+ "pk": 7,
+ "fields": {
+  "title": "Punica",
+  "wd": "Q1219433",
+  "urn": "urn:cts:latinLit:phi1345.phi001.perseus-lat2",
+  "author": 6
+ }
+},
+{
+ "model": "speechdb.work",
+ "pk": 8,
+ "fields": {
+  "title": "Thebaid",
+  "wd": "Q2708117",
+  "urn": "urn:cts:latinLit:phi1020.phi001.perseus-lat2",
+  "author": 7
  }
 },
 {
@@ -18052,6 +18109,456 @@
  }
 },
 {
+ "model": "speechdb.characterinstance",
+ "pk": 690,
+ "fields": {
+  "char": 470,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 691,
+ "fields": {
+  "char": 363,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 692,
+ "fields": {
+  "char": 256,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 693,
+ "fields": {
+  "char": 798,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 694,
+ "fields": {
+  "char": 478,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 695,
+ "fields": {
+  "char": 111,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 696,
+ "fields": {
+  "char": 375,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 697,
+ "fields": {
+  "char": 472,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 698,
+ "fields": {
+  "char": 361,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 699,
+ "fields": {
+  "char": 753,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 700,
+ "fields": {
+  "char": 92,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 701,
+ "fields": {
+  "char": 155,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 702,
+ "fields": {
+  "char": 175,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 703,
+ "fields": {
+  "char": 294,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 704,
+ "fields": {
+  "char": 716,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 705,
+ "fields": {
+  "char": 469,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 706,
+ "fields": {
+  "char": 568,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 707,
+ "fields": {
+  "char": 239,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 708,
+ "fields": {
+  "char": 154,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 709,
+ "fields": {
+  "char": 878,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 710,
+ "fields": {
+  "char": 36,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 711,
+ "fields": {
+  "char": 893,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 712,
+ "fields": {
+  "char": 405,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 713,
+ "fields": {
+  "char": 81,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 714,
+ "fields": {
+  "char": 497,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 715,
+ "fields": {
+  "char": 676,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 716,
+ "fields": {
+  "char": 93,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 717,
+ "fields": {
+  "char": 88,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 718,
+ "fields": {
+  "char": 68,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 719,
+ "fields": {
+  "char": 234,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 720,
+ "fields": {
+  "char": 764,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 721,
+ "fields": {
+  "char": 789,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 722,
+ "fields": {
+  "char": 316,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 723,
+ "fields": {
+  "char": 378,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 724,
+ "fields": {
+  "char": 198,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 725,
+ "fields": {
+  "char": 446,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 726,
+ "fields": {
+  "char": 277,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 727,
+ "fields": {
+  "char": 776,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 728,
+ "fields": {
+  "char": 243,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 729,
+ "fields": {
+  "char": 720,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 730,
+ "fields": {
+  "char": 735,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 731,
+ "fields": {
+  "char": 12,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 732,
+ "fields": {
+  "char": 233,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 733,
+ "fields": {
+  "char": 237,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 734,
+ "fields": {
+  "char": 373,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 735,
+ "fields": {
+  "char": 825,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 736,
+ "fields": {
+  "char": 477,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 737,
+ "fields": {
+  "char": 693,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 738,
+ "fields": {
+  "char": 209,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
+ "model": "speechdb.characterinstance",
+ "pk": 739,
+ "fields": {
+  "char": 18,
+  "disg": null,
+  "context": "Civil War"
+ }
+},
+{
  "model": "speechdb.speechcluster",
  "pk": 1001,
  "fields": {
@@ -28761,6 +29268,798 @@
  "fields": {
   "type": "M",
   "work": 5
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6001,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6002,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6003,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6004,
+ "fields": {
+  "type": "G",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6005,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6006,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6007,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6008,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6009,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6010,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6012,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6013,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6014,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6015,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6016,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6017,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6018,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6019,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6020,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6021,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6022,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6023,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6024,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6025,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6026,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6027,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6028,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6029,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6030,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6031,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6032,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6033,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6034,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6035,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6036,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6037,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6038,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6039,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6040,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6041,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6042,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6043,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6044,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6045,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6046,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6047,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6048,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6049,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6050,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6051,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6052,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6053,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6054,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6055,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6056,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6057,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6058,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6059,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6060,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6061,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6062,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6063,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6064,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6065,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6066,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6067,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6068,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6069,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6070,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6071,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6072,
+ "fields": {
+  "type": "G",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6073,
+ "fields": {
+  "type": "G",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6074,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6075,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6076,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6077,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6078,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6079,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6080,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6081,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6082,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6083,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6084,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6085,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6086,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6087,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6088,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6089,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6090,
+ "fields": {
+  "type": "S",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6091,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6092,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6093,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6094,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6095,
+ "fields": {
+  "type": "D",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 6096,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 96001,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 96002,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 96003,
+ "fields": {
+  "type": "M",
+  "work": 6
+ }
+},
+{
+ "model": "speechdb.speechcluster",
+ "pk": 96004,
+ "fields": {
+  "type": "M",
+  "work": 6
  }
 },
 {
@@ -68950,6 +70249,2028 @@
   ],
   "addr": [
    475
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2363,
+ "fields": {
+  "cluster": 6001,
+  "seq": 1,
+  "l_fi": "1.190",
+  "l_la": "1.192",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2364,
+ "fields": {
+  "cluster": 6001,
+  "seq": 2,
+  "l_fi": "1.195",
+  "l_la": "1.203",
+  "part": 2,
+  "spkr": [
+   690
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2365,
+ "fields": {
+  "cluster": 6002,
+  "seq": 3,
+  "l_fi": "1.248",
+  "l_la": "1.257",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   691
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2366,
+ "fields": {
+  "cluster": 6003,
+  "seq": 4,
+  "l_fi": "1.273",
+  "l_la": "1.291",
+  "part": 1,
+  "spkr": [
+   692
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2367,
+ "fields": {
+  "cluster": 6004,
+  "seq": 5,
+  "l_fi": "1.299",
+  "l_la": "1.351",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2368,
+ "fields": {
+  "cluster": 6004,
+  "seq": 6,
+  "l_fi": "1.359",
+  "l_la": "1.386",
+  "part": 2,
+  "spkr": [
+   694
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2369,
+ "fields": {
+  "cluster": 6005,
+  "seq": 7,
+  "l_fi": "1.631",
+  "l_la": "1.637",
+  "part": 1,
+  "spkr": [
+   695
+  ],
+  "addr": [
+   695,
+   697,
+   696
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2370,
+ "fields": {
+  "cluster": 6006,
+  "seq": 8,
+  "l_fi": "1.642",
+  "l_la": "1.672",
+  "part": 1,
+  "spkr": [
+   698
+  ],
+  "addr": [
+   698,
+   699
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2371,
+ "fields": {
+  "cluster": 6007,
+  "seq": 9,
+  "l_fi": "1.678",
+  "l_la": "1.694",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   700
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2372,
+ "fields": {
+  "cluster": 6008,
+  "seq": 10,
+  "l_fi": "2.38",
+  "l_la": "2.42",
+  "part": 1,
+  "spkr": [],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2373,
+ "fields": {
+  "cluster": 6009,
+  "seq": 11,
+  "l_fi": "2.45",
+  "l_la": "2.63",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   699,
+   696
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2374,
+ "fields": {
+  "cluster": 6010,
+  "seq": 12,
+  "l_fi": "2.68",
+  "l_la": "2.232",
+  "part": 1,
+  "spkr": [],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2375,
+ "fields": {
+  "cluster": 6012,
+  "seq": 13,
+  "l_fi": "2.81",
+  "l_la": "2.85",
+  "part": 1,
+  "spkr": [],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2376,
+ "fields": {
+  "cluster": 6013,
+  "seq": 14,
+  "l_fi": "2.242",
+  "l_la": "2.284",
+  "part": 1,
+  "spkr": [
+   701
+  ],
+  "addr": [
+   702
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2377,
+ "fields": {
+  "cluster": 6013,
+  "seq": 15,
+  "l_fi": "2.286",
+  "l_la": "2.323",
+  "part": 2,
+  "spkr": [
+   702
+  ],
+  "addr": [
+   701
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2378,
+ "fields": {
+  "cluster": 6014,
+  "seq": 16,
+  "l_fi": "2.338",
+  "l_la": "2.349",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   702
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2379,
+ "fields": {
+  "cluster": 6015,
+  "seq": 17,
+  "l_fi": "2.483",
+  "l_la": "2.490",
+  "part": 1,
+  "spkr": [
+   703
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2380,
+ "fields": {
+  "cluster": 6016,
+  "seq": 18,
+  "l_fi": "2.494",
+  "l_la": "2.499",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2381,
+ "fields": {
+  "cluster": 6017,
+  "seq": 19,
+  "l_fi": "2.512",
+  "l_la": "2.515",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   703
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2382,
+ "fields": {
+  "cluster": 6018,
+  "seq": 20,
+  "l_fi": "2.522",
+  "l_la": "2.525",
+  "part": 1,
+  "spkr": [
+   703
+  ],
+  "addr": [
+   703
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2383,
+ "fields": {
+  "cluster": 6019,
+  "seq": 21,
+  "l_fi": "2.531",
+  "l_la": "2.595",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2384,
+ "fields": {
+  "cluster": 6020,
+  "seq": 22,
+  "l_fi": "2.632",
+  "l_la": "2.648",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2385,
+ "fields": {
+  "cluster": 6021,
+  "seq": 23,
+  "l_fi": "3.12",
+  "l_la": "3.34",
+  "part": 1,
+  "spkr": [
+   705
+  ],
+  "addr": [
+   704
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2386,
+ "fields": {
+  "cluster": 6022,
+  "seq": 24,
+  "l_fi": "3.38",
+  "l_la": "3.40",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   704
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2387,
+ "fields": {
+  "cluster": 6023,
+  "seq": 25,
+  "l_fi": "3.91",
+  "l_la": "3.97",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2388,
+ "fields": {
+  "cluster": 6024,
+  "seq": 26,
+  "l_fi": "3.123",
+  "l_la": "3.133",
+  "part": 1,
+  "spkr": [
+   706
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2389,
+ "fields": {
+  "cluster": 6024,
+  "seq": 27,
+  "l_fi": "3.134",
+  "l_la": "3.140",
+  "part": 2,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   706
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2390,
+ "fields": {
+  "cluster": 6025,
+  "seq": 28,
+  "l_fi": "3.145",
+  "l_la": "3.152",
+  "part": 1,
+  "spkr": [
+   707
+  ],
+  "addr": [
+   706
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2391,
+ "fields": {
+  "cluster": 6026,
+  "seq": 29,
+  "l_fi": "3.307",
+  "l_la": "3.355",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2392,
+ "fields": {
+  "cluster": 6026,
+  "seq": 30,
+  "l_fi": "3.358",
+  "l_la": "3.372",
+  "part": 2,
+  "spkr": [
+   690
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2393,
+ "fields": {
+  "cluster": 6027,
+  "seq": 31,
+  "l_fi": "3.436",
+  "l_la": "3.437",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2394,
+ "fields": {
+  "cluster": 6028,
+  "seq": 32,
+  "l_fi": "3.559",
+  "l_la": "3.561",
+  "part": 1,
+  "spkr": [
+   708
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2395,
+ "fields": {
+  "cluster": 6029,
+  "seq": 33,
+  "l_fi": "3.716",
+  "l_la": "3.721",
+  "part": 1,
+  "spkr": [
+   709
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2396,
+ "fields": {
+  "cluster": 6030,
+  "seq": 34,
+  "l_fi": "3.742",
+  "l_la": "3.747",
+  "part": 1,
+  "spkr": [],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2397,
+ "fields": {
+  "cluster": 6031,
+  "seq": 35,
+  "l_fi": "4.162",
+  "l_la": "4.166",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2398,
+ "fields": {
+  "cluster": 6032,
+  "seq": 36,
+  "l_fi": "4.212",
+  "l_la": "4.235",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2399,
+ "fields": {
+  "cluster": 6033,
+  "seq": 37,
+  "l_fi": "4.273",
+  "l_la": "4.280",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2400,
+ "fields": {
+  "cluster": 6034,
+  "seq": 38,
+  "l_fi": "4.344",
+  "l_la": "4.362",
+  "part": 1,
+  "spkr": [
+   710
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2401,
+ "fields": {
+  "cluster": 6035,
+  "seq": 39,
+  "l_fi": "4.476",
+  "l_la": "4.520",
+  "part": 1,
+  "spkr": [
+   711
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2402,
+ "fields": {
+  "cluster": 6036,
+  "seq": 40,
+  "l_fi": "4.542",
+  "l_la": "4.544",
+  "part": 1,
+  "spkr": [
+   711
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2403,
+ "fields": {
+  "cluster": 6037,
+  "seq": 41,
+  "l_fi": "4.593",
+  "l_la": "4.660",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   692
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2404,
+ "fields": {
+  "cluster": 96001,
+  "seq": 42,
+  "l_fi": "4.646",
+  "l_la": "4.649",
+  "part": 1,
+  "spkr": [
+   712
+  ],
+  "addr": [
+   713
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2405,
+ "fields": {
+  "cluster": 6038,
+  "seq": 43,
+  "l_fi": "4.702",
+  "l_la": "4.710",
+  "part": 1,
+  "spkr": [
+   692
+  ],
+  "addr": [
+   692
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2406,
+ "fields": {
+  "cluster": 6039,
+  "seq": 44,
+  "l_fi": "5.17",
+  "l_la": "5.47",
+  "part": 1,
+  "spkr": [
+   714
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2407,
+ "fields": {
+  "cluster": 6040,
+  "seq": 45,
+  "l_fi": "5.130",
+  "l_la": "5.140",
+  "part": 1,
+  "spkr": [
+   715
+  ],
+  "addr": [
+   716
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2408,
+ "fields": {
+  "cluster": 6041,
+  "seq": 46,
+  "l_fi": "5.158",
+  "l_la": "5.161",
+  "part": 1,
+  "spkr": [
+   716
+  ],
+  "addr": [
+   715
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2409,
+ "fields": {
+  "cluster": 6042,
+  "seq": 47,
+  "l_fi": "5.194",
+  "l_la": "5.196",
+  "part": 1,
+  "spkr": [
+   715
+  ],
+  "addr": [
+   716
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2410,
+ "fields": {
+  "cluster": 6043,
+  "seq": 48,
+  "l_fi": "5.261",
+  "l_la": "5.295",
+  "part": 1,
+  "spkr": [
+   693
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2411,
+ "fields": {
+  "cluster": 6043,
+  "seq": 49,
+  "l_fi": "5.319",
+  "l_la": "5.364",
+  "part": 2,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2412,
+ "fields": {
+  "cluster": 6044,
+  "seq": 50,
+  "l_fi": "5.413",
+  "l_la": "5.423",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2413,
+ "fields": {
+  "cluster": 6045,
+  "seq": 51,
+  "l_fi": "5.481",
+  "l_la": "5.497",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   717
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2414,
+ "fields": {
+  "cluster": 6046,
+  "seq": 52,
+  "l_fi": "5.521",
+  "l_la": "5.523",
+  "part": 1,
+  "spkr": [
+   718
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2415,
+ "fields": {
+  "cluster": 6046,
+  "seq": 53,
+  "l_fi": "5.532",
+  "l_la": "5.537",
+  "part": 2,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   718
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2416,
+ "fields": {
+  "cluster": 6046,
+  "seq": 54,
+  "l_fi": "5.540",
+  "l_la": "5.559",
+  "part": 3,
+  "spkr": [
+   718
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2417,
+ "fields": {
+  "cluster": 6047,
+  "seq": 55,
+  "l_fi": "5.568",
+  "l_la": "5.576",
+  "part": 1,
+  "spkr": [
+   718
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2418,
+ "fields": {
+  "cluster": 6047,
+  "seq": 56,
+  "l_fi": "5.578",
+  "l_la": "5.593",
+  "part": 2,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   718
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2419,
+ "fields": {
+  "cluster": 6048,
+  "seq": 57,
+  "l_fi": "5.654",
+  "l_la": "5.671",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   691,
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2420,
+ "fields": {
+  "cluster": 6049,
+  "seq": 58,
+  "l_fi": "5.682",
+  "l_la": "5.699",
+  "part": 1,
+  "spkr": [
+   693
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2421,
+ "fields": {
+  "cluster": 6050,
+  "seq": 59,
+  "l_fi": "5.739",
+  "l_la": "5.759",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   719
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2422,
+ "fields": {
+  "cluster": 6050,
+  "seq": 60,
+  "l_fi": "5.762",
+  "l_la": "5.790",
+  "part": 2,
+  "spkr": [
+   719
+  ],
+  "addr": [
+   704
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2423,
+ "fields": {
+  "cluster": 6051,
+  "seq": 61,
+  "l_fi": "6.150",
+  "l_la": "6.165",
+  "part": 1,
+  "spkr": [
+   720
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2424,
+ "fields": {
+  "cluster": 6052,
+  "seq": 62,
+  "l_fi": "6.230",
+  "l_la": "6.235",
+  "part": 1,
+  "spkr": [
+   720
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2425,
+ "fields": {
+  "cluster": 6053,
+  "seq": 63,
+  "l_fi": "6.241",
+  "l_la": "6.246",
+  "part": 1,
+  "spkr": [
+   720
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2426,
+ "fields": {
+  "cluster": 6054,
+  "seq": 64,
+  "l_fi": "6.319",
+  "l_la": "6.329",
+  "part": 2,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2427,
+ "fields": {
+  "cluster": 6055,
+  "seq": 65,
+  "l_fi": "6.590",
+  "l_la": "6.603",
+  "part": 1,
+  "spkr": [
+   721
+  ],
+  "addr": [
+   722
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2428,
+ "fields": {
+  "cluster": 6055,
+  "seq": 66,
+  "l_fi": "6.605",
+  "l_la": "6.623",
+  "part": 2,
+  "spkr": [
+   722
+  ],
+  "addr": [
+   721
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2429,
+ "fields": {
+  "cluster": 6056,
+  "seq": 67,
+  "l_fi": "6.659",
+  "l_la": "6.666",
+  "part": 1,
+  "spkr": [
+   722
+  ],
+  "addr": [
+   721
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2430,
+ "fields": {
+  "cluster": 6057,
+  "seq": 68,
+  "l_fi": "6.695",
+  "l_la": "6.718",
+  "part": 1,
+  "spkr": [
+   722
+  ],
+  "addr": [
+   723
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2431,
+ "fields": {
+  "cluster": 6058,
+  "seq": 69,
+  "l_fi": "6.730",
+  "l_la": "6.749",
+  "part": 1,
+  "spkr": [
+   722
+  ],
+  "addr": [
+   723
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2432,
+ "fields": {
+  "cluster": 6059,
+  "seq": 70,
+  "l_fi": "6.762",
+  "l_la": "6.774",
+  "part": 1,
+  "spkr": [
+   722
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2433,
+ "fields": {
+  "cluster": 6059,
+  "seq": 71,
+  "l_fi": "6.777",
+  "l_la": "6.820",
+  "part": 2,
+  "spkr": [],
+  "addr": [
+   722
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2434,
+ "fields": {
+  "cluster": 6060,
+  "seq": 72,
+  "l_fi": "7.68",
+  "l_la": "7.85",
+  "part": 1,
+  "spkr": [
+   724
+  ],
+  "addr": [
+   704
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2435,
+ "fields": {
+  "cluster": 6060,
+  "seq": 73,
+  "l_fi": "7.87",
+  "l_la": "7.123",
+  "part": 2,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   724
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2436,
+ "fields": {
+  "cluster": 6061,
+  "seq": 74,
+  "l_fi": "7.195",
+  "l_la": "7.196",
+  "part": 1,
+  "spkr": [],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2437,
+ "fields": {
+  "cluster": 6062,
+  "seq": 75,
+  "l_fi": "7.250",
+  "l_la": "7.329",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2438,
+ "fields": {
+  "cluster": 6063,
+  "seq": 76,
+  "l_fi": "7.342",
+  "l_la": "7.382",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2439,
+ "fields": {
+  "cluster": 6064,
+  "seq": 77,
+  "l_fi": "7.606",
+  "l_la": "7.607",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   703
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2440,
+ "fields": {
+  "cluster": 6064,
+  "seq": 78,
+  "l_fi": "7.610",
+  "l_la": "7.615",
+  "part": 2,
+  "spkr": [
+   703
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2441,
+ "fields": {
+  "cluster": 6065,
+  "seq": 79,
+  "l_fi": "7.659",
+  "l_la": "7.666",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   691,
+   696
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2442,
+ "fields": {
+  "cluster": 6066,
+  "seq": 80,
+  "l_fi": "7.720",
+  "l_la": "7.721",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2443,
+ "fields": {
+  "cluster": 6067,
+  "seq": 81,
+  "l_fi": "7.737",
+  "l_la": "7.746",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2444,
+ "fields": {
+  "cluster": 6068,
+  "seq": 82,
+  "l_fi": "8.72",
+  "l_la": "8.85",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   719
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2445,
+ "fields": {
+  "cluster": 6068,
+  "seq": 83,
+  "l_fi": "8.88",
+  "l_la": "8.105",
+  "part": 2,
+  "spkr": [
+   719
+  ],
+  "addr": [
+   704
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2446,
+ "fields": {
+  "cluster": 6069,
+  "seq": 84,
+  "l_fi": "8.110",
+  "l_la": "8.127",
+  "part": 1,
+  "spkr": [
+   725
+  ],
+  "addr": [
+   704
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2447,
+ "fields": {
+  "cluster": 6069,
+  "seq": 85,
+  "l_fi": "8.129",
+  "l_la": "8.146",
+  "part": 2,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   725
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2448,
+ "fields": {
+  "cluster": 6070,
+  "seq": 86,
+  "l_fi": "8.172",
+  "l_la": "8.186",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   704
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2449,
+ "fields": {
+  "cluster": 6070,
+  "seq": 87,
+  "l_fi": "8.187",
+  "l_la": "8.192",
+  "part": 2,
+  "spkr": [
+   704
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2450,
+ "fields": {
+  "cluster": 6071,
+  "seq": 88,
+  "l_fi": "8.211",
+  "l_la": "8.238",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   726
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2451,
+ "fields": {
+  "cluster": 96002,
+  "seq": 89,
+  "l_fi": "8.218",
+  "l_la": "8.238",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2452,
+ "fields": {
+  "cluster": 6072,
+  "seq": 90,
+  "l_fi": "8.262",
+  "l_la": "8.327",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2453,
+ "fields": {
+  "cluster": 6072,
+  "seq": 91,
+  "l_fi": "8.331",
+  "l_la": "8.453",
+  "part": 2,
+  "spkr": [
+   714
+  ],
+  "addr": [
+   727
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2454,
+ "fields": {
+  "cluster": 96003,
+  "seq": 92,
+  "l_fi": "8.433",
+  "l_la": "8.435",
+  "part": 1,
+  "spkr": [
+   728
+  ],
+  "addr": [
+   704
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2455,
+ "fields": {
+  "cluster": 6073,
+  "seq": 93,
+  "l_fi": "8.484",
+  "l_la": "8.535",
+  "part": 1,
+  "spkr": [
+   729
+  ],
+  "addr": [
+   730
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2456,
+ "fields": {
+  "cluster": 6074,
+  "seq": 94,
+  "l_fi": "8.579",
+  "l_la": "8.582",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   719,
+   721
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2457,
+ "fields": {
+  "cluster": 6074,
+  "seq": 95,
+  "l_fi": "8.584",
+  "l_la": "8.589",
+  "part": 2,
+  "spkr": [
+   719
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2458,
+ "fields": {
+  "cluster": 6075,
+  "seq": 96,
+  "l_fi": "8.622",
+  "l_la": "8.635",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   704
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2459,
+ "fields": {
+  "cluster": 6076,
+  "seq": 97,
+  "l_fi": "8.639",
+  "l_la": "8.661",
+  "part": 1,
+  "spkr": [
+   719
+  ],
+  "addr": [
+   731,
+   704
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2460,
+ "fields": {
+  "cluster": 6077,
+  "seq": 98,
+  "l_fi": "8.729",
+  "l_la": "8.742",
+  "part": 1,
+  "spkr": [
+   732
+  ],
+  "addr": [
+   691,
+   696
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2461,
+ "fields": {
+  "cluster": 6078,
+  "seq": 99,
+  "l_fi": "8.746",
+  "l_la": "8.751",
+  "part": 1,
+  "spkr": [
+   732
+  ],
+  "addr": [
+   733
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2462,
+ "fields": {
+  "cluster": 6079,
+  "seq": 100,
+  "l_fi": "8.759",
+  "l_la": "8.775",
+  "part": 1,
+  "spkr": [
+   732
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2463,
+ "fields": {
+  "cluster": 6080,
+  "seq": 101,
+  "l_fi": "9.55",
+  "l_la": "9.108",
+  "part": 1,
+  "spkr": [
+   719
+  ],
+  "addr": [
+   719,
+   691,
+   721
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2464,
+ "fields": {
+  "cluster": 96004,
+  "seq": 102,
+  "l_fi": "9.87",
+  "l_la": "9.97",
+  "part": 1,
+  "spkr": [
+   704
+  ],
+  "addr": [
+   734,
+   721
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2465,
+ "fields": {
+  "cluster": 6081,
+  "seq": 103,
+  "l_fi": "9.123",
+  "l_la": "9.125",
+  "part": 1,
+  "spkr": [
+   734
+  ],
+  "addr": [
+   721
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2466,
+ "fields": {
+  "cluster": 6081,
+  "seq": 104,
+  "l_fi": "9.126",
+  "l_la": "9.145",
+  "part": 2,
+  "spkr": [
+   721
+  ],
+  "addr": [
+   734
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2467,
+ "fields": {
+  "cluster": 6082,
+  "seq": 105,
+  "l_fi": "9.148",
+  "l_la": "9.164",
+  "part": 1,
+  "spkr": [
+   734
+  ],
+  "addr": [
+   704,
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2468,
+ "fields": {
+  "cluster": 6083,
+  "seq": 106,
+  "l_fi": "9.190",
+  "l_la": "9.214",
+  "part": 1,
+  "spkr": [
+   702
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2469,
+ "fields": {
+  "cluster": 6084,
+  "seq": 107,
+  "l_fi": "9.222",
+  "l_la": "9.224",
+  "part": 1,
+  "spkr": [
+   702
+  ],
+  "addr": [
+   735
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2470,
+ "fields": {
+  "cluster": 6085,
+  "seq": 108,
+  "l_fi": "9.227",
+  "l_la": "9.251",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   702
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2471,
+ "fields": {
+  "cluster": 6085,
+  "seq": 109,
+  "l_fi": "9.256",
+  "l_la": "9.283",
+  "part": 2,
+  "spkr": [
+   702
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2472,
+ "fields": {
+  "cluster": 6086,
+  "seq": 110,
+  "l_fi": "9.379",
+  "l_la": "9.406",
+  "part": 1,
+  "spkr": [
+   702
+  ],
+  "addr": [
+   693
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2473,
+ "fields": {
+  "cluster": 6087,
+  "seq": 111,
+  "l_fi": "9.505",
+  "l_la": "9.509",
+  "part": 1,
+  "spkr": [
+   702
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2474,
+ "fields": {
+  "cluster": 6088,
+  "seq": 112,
+  "l_fi": "9.550",
+  "l_la": "9.563",
+  "part": 1,
+  "spkr": [
+   736
+  ],
+  "addr": [
+   702
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2475,
+ "fields": {
+  "cluster": 6088,
+  "seq": 113,
+  "l_fi": "9.566",
+  "l_la": "9.584",
+  "part": 2,
+  "spkr": [
+   702
+  ],
+  "addr": [
+   736
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2476,
+ "fields": {
+  "cluster": 6089,
+  "seq": 114,
+  "l_fi": "9.612",
+  "l_la": "9.616",
+  "part": 1,
+  "spkr": [
+   702
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2477,
+ "fields": {
+  "cluster": 6090,
+  "seq": 115,
+  "l_fi": "9.848",
+  "l_la": "9.880",
+  "part": 1,
+  "spkr": [],
+  "addr": [
+   696
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2478,
+ "fields": {
+  "cluster": 6091,
+  "seq": 116,
+  "l_fi": "9.979",
+  "l_la": "9.979",
+  "part": 1,
+  "spkr": [
+   737
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2479,
+ "fields": {
+  "cluster": 6092,
+  "seq": 117,
+  "l_fi": "9.990",
+  "l_la": "9.999",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2480,
+ "fields": {
+  "cluster": 6093,
+  "seq": 118,
+  "l_fi": "9.1014",
+  "l_la": "9.1032",
+  "part": 1,
+  "spkr": [
+   731
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2481,
+ "fields": {
+  "cluster": 6093,
+  "seq": 119,
+  "l_fi": "9.1064",
+  "l_la": "9.1104",
+  "part": 2,
+  "spkr": [
+   690
+  ],
+  "addr": []
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2482,
+ "fields": {
+  "cluster": 6094,
+  "seq": 120,
+  "l_fi": "10.85",
+  "l_la": "10.103",
+  "part": 1,
+  "spkr": [
+   738
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2483,
+ "fields": {
+  "cluster": 6095,
+  "seq": 121,
+  "l_fi": "10.176",
+  "l_la": "10.192",
+  "part": 1,
+  "spkr": [
+   690
+  ],
+  "addr": [
+   739
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2484,
+ "fields": {
+  "cluster": 6095,
+  "seq": 122,
+  "l_fi": "10.194",
+  "l_la": "10.331",
+  "part": 2,
+  "spkr": [
+   739
+  ],
+  "addr": [
+   690
+  ]
+ }
+},
+{
+ "model": "speechdb.speech",
+ "pk": 2485,
+ "fields": {
+  "cluster": 6096,
+  "seq": 123,
+  "l_fi": "10.353",
+  "l_la": "10.398",
+  "part": 1,
+  "spkr": [
+   729
+  ],
+  "addr": [
+   731
   ]
  }
 }
