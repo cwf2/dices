@@ -2,7 +2,6 @@ name	wd	manto	being	number	gender	anon	notes	appears_in	Iliad	Odyssey	Apollonius
 Abaris			mortal	individual	male		squire of Hannibal; not the Aeneid character	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Acamas	Q1782641	8182004	mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Acca	Q9143443		mortal	individual	female			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Acca's mother			mortal	individual	female	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Acestes	Q404275		mortal	individual	male		Son of a water diety	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Achaean leaders			mortal	collective	male	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Achaean warriors			mortal	collective	male	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
@@ -13,9 +12,8 @@ Acheloüs	Q391379		divine	individual	male		river, changes form into a variety of
 Achillas	Q656021		mortal	individual	male		murderer of Pompey	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Achilles	Q41746	8182012	mortal	individual	male		hero, son of Thetis and Peleus	Iliad, Odyssey, Ovid, Quintus	TRUE	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Acis	Q419156		mortal	individual	male		sons of Faunus and a Symaethian nymph, killed by Polyphemus and turned turned into a river god by Galatea	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Acmon	Q420259		mortal	individual	male		Acmon of Pleuron, a companion of Diomedes, turned into a bird by Venus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Acmon	Q420259		mortal	individual	male		Acmon of Pleuron, a companion of Diomedes, turned into a bird by Venus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Acoetes			mortal	individual	male			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Acoetes' father			mortal	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Acoreus			mortal	individual	male			Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Actaeon	Q208531	8182017	mortal	individual	male			Ovid, Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
 Actor (Thebiad)			mortal	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -51,11 +49,12 @@ Alcithoë			mortal	individual	female		daughter of Minyas, is changed into a bat 
 Alcmene	Q190543	8182112	mortal	individual	female		the mother of Heracles	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Alcyone	Q912904	8182116	mortal	individual	female		the wife of Ceyx, turns into a halcyon bird	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Aletes (Statius)			mortal	individual	male		old theban		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Aletes (Vergil)	Q4716498		mortal	individual	male		https://en.wikipedia.org/wiki/Aletes_(Aeneid_character)		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Aletes (Trojan)	Q4716498		mortal	individual	male		companion of Aeneas	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Alexander the Great	Q8409		mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 all present			mortal	collective	male	yes		Odyssey, Vergil	FALSE	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Allecto	Q1643451		divine	individual	female			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Alpheus	Q911084		divine	individual	male		river	Ovid, Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
+altars			other	collective		yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Althaea	Q440440	8182131	mortal	individual	female		mother of Meleager	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Amata	Q455503		mortal	individual	female			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Ammon	Q3575327	8182139	divine	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -65,7 +64,7 @@ Amphidamas	Q16515491		mortal	individual	male			Apollonius	FALSE	FALSE	TRUE	FALSE
 Amphimedon	Q1841246		mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Amphinomus	Q2718734		mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Amphion	Q242835	8182157	mortal	individual	male			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
-Amphissos			mortal	individual	male		the son of Dryope		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Amphissos			mortal	individual	male		the son of Dryope	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Amyclas			mortal	individual	male		boat captain	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Amycus	Q697942		mortal	individual	male			Apollonius, Val. Flac.	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE
 Anaxarete	Q488621		mortal	individual	female		a princess who scorns a young man and is turned to stone at his funeral	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -73,7 +72,7 @@ Ancaeus (son of Lycurgus)	Q2446902	8182176	mortal	individual	male		see Ancaeus (
 Ancaeus (son of Poseidon)	Q1606756	10034847	mortal	individual	male		there were two different Argonauts called Ancaeus and killed by the Calydonian boar!	Apollonius	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Anchises	Q211953	8182179	mortal	individual	male		father of Aeneas	Vergil, Ovid	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Andraemon	Q17516300		mortal	individual	male		Husband of Dryope		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Androgeos 	Q512388	8182187	mortal	individual	male		Son of Minos		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Androgeus	Q28036303		mortal	individual	male		Greek warrior; not the son of Minos	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Andromache	Q19376	8182188	mortal	individual	female			Iliad, Vergil, Quintus	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Andromeda	Q161582		mortal	individual	female			Ovid, Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
 animals			creature	collective	mixed	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -100,6 +99,7 @@ Ares	Q40901		divine	individual	male			Iliad, Odyssey, Nonnus	TRUE	TRUE	FALSE	FAL
 Arete	Q3622209	8182256	mortal	individual	female			Odyssey, Apollonius	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Arethusa	Q643456		divine	individual	female		nymph, later fountain	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Argia	Q644385	8182259	mortal	individual	female		daughter of Adrastus	Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
+Argive princes			mortal	collective	male	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Argive warriors			mortal	collective	male	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Argive widows			mortal	collective	female	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Argo	Q317932		divine	individual	female		boat	Val. Flac.	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE
@@ -116,6 +116,7 @@ Artemis	Q39503		divine	individual	female		same as: Diana	Iliad, Odyssey, Nonnus	
 Asbolus			creature	individual	male		a centaur with the gift of prophecy	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Ascanius	Q655566		mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Ascanius' companion			mortal	individual	male		son of Egyptus?		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+ashes of Anchises			other	individual			remains of Anchises as distinct from Anch. himself…?		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Asilus			mortal	individual	male		Tuscan soldier	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Asius	Q2647181		mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Asopus	Q622781	8187838	divine	individual	male			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
@@ -130,7 +131,7 @@ Atlas	Q130818	8187872	divine	individual	male		is changed to a mountain by gazing
 Atlas (charioteer)			mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Atys	Q55965937		mortal	individual	male		Statius: son of Agenor	Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Aulestes	Q4821765		mortal	individual	male		Tyrrhenian, also called Auletes	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Aura			other	individual	female		the personification of a breeze, not actually living	Ovid, Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
+aura			other	individual	female		the personification of a breeze, not actually living	Ovid, Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
 Aurora	Q178831	8188245	divine	individual	female		same as: Eos	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Autolycus	Q463107		mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Automedon	Q772808		mortal	individual	male			Iliad, Quintus	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
@@ -154,7 +155,7 @@ Briseis	Q244318		mortal	individual	female			Iliad, Quintus	TRUE	FALSE	FALSE	FALS
 Bruttians	Q994847		mortal	collective	mixed	yes	 (ancient Italic tribe people who inhabited the southern extremity of Italy)	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Brutus (Decimus)	Q1172185		mortal	individual	male		Decimus Iunius Brutus Albinus	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Brutus (Marcus)	Q172248		mortal	individual	male		Marcus Iunius Brutus	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
-buyer of Mestra			mortal	individual	male	yes	Mestra's Dominus', the man who buys Mestra as a slave		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+buyer of Mestra			mortal	individual	male	yes	Mestra's Dominus', the man who buys Mestra as a slave	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Byblis	Q855426		mortal	individual	female		sister of Caunus, is repulsed by him and turns into a fountain from her tears	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 C. Claudius Nero			mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Cadmus	Q27613	8187926	mortal	individual	male		is changed into a serpent	Ovid, Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
@@ -171,20 +172,20 @@ Camilla	Q535107		mortal	individual	female			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	
 Capaneus	Q833806	8187949	mortal	individual	male			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Carthage	Q6343		other	individual	female		personification?	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Carthaginians			mortal	collective	mixed	yes		Vergil, Silius	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
-Cassandra	Q170779	8187953	mortal	individual	female			Iliad, Quintus	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
+Cassandra	Q170779	8187953	mortal	individual	female			Iliad, Vergil, Quintus	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Cassiope			mortal	individual	female		mother of Andromeda		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cato Uticensis	Q193506		mortal	individual	male			Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Caunus	Q1647297		mortal	individual	male		brother of Byblis	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cebriones	Q655184		mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Celaeno	Q753903		creature	individual	female		harpy	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Celaeno (Harpy)	Q753903		creature	individual	female				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Centaurs			creature	individual	male	yes	a group of centaurs	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+centaurs			creature	individual	male	yes	a group of centaurs	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cephalus	Q643504		mortal	individual	male		Hero	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cepheus	Q858116	8187973	mortal	individual	male		father of Andromeda	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cerberus			other	individual	male	no	three-headed dog		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Ceres	Q32102	8188155	divine	individual	female		same as: Demeter	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cerrinus Vibellius Taurea			mortal	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Ceyx	Q578888	8187989	mortal	individual	male		Son of personification of Morning Star: demi god?, King of Trachis, turned into a halcyon bird after death	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Ceyx' helmsman/captain			mortal	individual	male	yes	the helmsman of King Ceyx	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Chalciope	Q391010	8187991	mortal	individual	female			Apollonius	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Charaxus			mortal	individual	male		a Lapithae	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Chariclo	Q4358140	8187997	mortal	individual	female				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -197,6 +198,7 @@ Chiron	Q183417	8188002	creature	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE
 Chromis			mortal	individual	male		son of Dryope	Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Chryses	Q852301	8188013	mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cicero	Q1541		mortal	individual	male			Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
+Ciconian woman			mortal	individual	female	yes	changed into an oak tree by Bacchus after contributing to the murder of Orpheus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Ciconian women			mortal	collective	female	yes	changed into oak trees by Bacchus after killing Orpheus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cilnius			mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Cinna			mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
@@ -212,25 +214,27 @@ Cloanthus			mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	F
 Clymene	Q836792		mortal	individual	female		Oceanid nymph	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companion of Ino			mortal	individual	female	yes	the most devoted companion of Ino, turned into a statue by Juno		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companion of Odysseus			mortal	individual	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-companions			mortal	collective		yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+companions			mortal	collective		yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companions of Acoetes			mortal	collective	male	yes	the sailor companions of Acoetes	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-companions of Actaeon			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-companions of Actaeon			mortal	collective	male	yes	the hunting companions of Actaeon		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+companions of Actaeon			mortal	collective	male	yes	the hunting companions of Actaeon	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companions of Aeneas			mortal	collective	male	yes		Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-companions of Athamas			mortal	collective	mixed	yes	the royal companions of Athamas		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-companions of Cadmus			mortal	collective	male	yes	the Phoenician companions of Cadmus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+companions of Athamas			mortal	collective	mixed	yes	the royal companions of Athamas	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+companions of Cadmus			mortal	collective	male	yes	the Phoenician companions of Cadmus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+companions of Ceyx			mortal	collective	male	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companions of Diana			mortal	collective	female	yes	the companions of Diana	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-companions of Diomedes			mortal	collective	male	yes	the companions of Diomedes		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-companions of Eryx			mortal	collective	male	yes	companions of Eryx, men fighting for Phineus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-companions of Eteocles			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-companions of Ino			mortal	collective	female	yes	Theban women who were the companions of Ino, turned into statues and birds by Juno		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+companions of Diomedes			mortal	collective	male	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+companions of Ino			mortal	collective	female	yes	Theban women who were the companions of Ino, turned into statues and birds by Juno	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companions of Medea			mortal	collective	female	yes		Apollonius	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companions of Mezentius			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companions of Mnestheus			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companions of Nausicaa			mortal	collective	female	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companions of Odysseus			mortal	collective	male	yes		Odyssey, Ovid	FALSE	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companions of Peleus			mortal	collective	male	yes	the companions of Peleus, gender not specified		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+companions of Perseus			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+companions of Phineus			mortal	collective	male	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 companions of Tydeus			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+contestants			mortal	collective	male	yes	participants in funeral games	Vergil, Silius	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
+Coras			mortal	individual	male		Argive expatriate in Italy		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cordus			mortal	individual	male		offers funeral for Pompey's corpse	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cornelia			mortal	individual	female			Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Coroebus	Q1784620		mortal	individual	male			Vergil, Thebaid	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
@@ -239,13 +243,11 @@ corpse			mortal	individual	male	yes		Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FA
 Corvinus			mortal	individual	male		seer	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Cotta			mortal	individual	male		Aurelius Cotta, tribune 49? L. Aurelius Cotta, consul 65?	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 council of gods			divine	collective	mixed	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-council of Rivers			divine	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Crantor			mortal	individual	male		the armour bearer of Peleus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Crassus	Q175121		mortal	individual	male		Marcus Licinius Crassus	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Crenaeus			mortal	individual	male		son of Faunus and Ismenis	Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Creon	Q732066	8188086	mortal	individual	male			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Creusa	Q375174		mortal	individual	female			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-crew of Ceyx			mortal	collective	male	yes	the crew of King Ceyx		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Crispinus	Q1672611		mortal	individual	male		T. Quinctius Crispinus, consul 208	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Crista			mortal	individual	male		aged Umbrian hero	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Crixus			mortal	individual	male		Umbrian hero	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
@@ -257,7 +259,7 @@ Cupid	Q121973		divine	individual	male		same as: Eros	Ovid	FALSE	FALSE	FALSE	FALS
 Curio	Q451516		mortal	individual	male		C. Scribonius Curio	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cyane	Q1423058		mortal	individual	female		nymph, turns to water from grief	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cybele	Q188236		divine	individual	female		the mother of the gods	Vergil, Ovid, Silius	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
-Cyclopes			creature	collective	male	yes		Odyssey, Vergil	FALSE	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+cyclopes			creature	collective	male	yes		Odyssey, Vergil	FALSE	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cycnus			mortal	individual	male		a boy who turns into a swan in anger	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cycnus (Neptune's son)			mortal	individual	male		son of Neptune, hero, near-invulnerable, is crushed/suffocated by Achilles and turned into a swan by Neptune		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Cyllarus			creature	individual	male		an exceptionally beautiful centaur		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -270,7 +272,7 @@ Dares	Q3702517		mortal	individual	male		Trojan boxer; Q3702517 conflates Iliad a
 Dasius			mortal	individual	male		Roman defector	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 daughters of Anius			mortal	collective	female	yes	the daughters of Anius, turned into white doves by Bacchus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 daughters of Minyas			mortal	collective	female	yes	the three daughters of Minyas, Leuconoe, Alcithoe, and Arsippe, they are turned into bats by Bacchus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-daughters of Pelias			mortal	collective	female	yes	the daughters of Pelias, who accidentally contribute to the killing of their father at Medea's instruction		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+daughters of Pelias			mortal	collective	female	yes	the daughters of Pelias, who accidentally contribute to the killing of their father at Medea's instruction	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Daunus	Q902517		mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Daunus' son-in-law			mortal	individual	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Decius Magius	Q11916752		mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
@@ -285,11 +287,11 @@ Deucalion	Q207715	8188163	mortal	individual	male		Son of Prometheus	Ovid	FALSE	F
 Diana	Q132543	8187829	divine	individual	female		same as: Artemis	Vergil, Ovid, Thebaid, Silius	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE
 Dictys	Q905409	8188167	mortal	individual	male			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Dido	Q905162		mortal	individual	female			Vergil, Silius	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
-Diomedes	Q208256	8188173	mortal	individual	male			Iliad, Vergil, Silius, Quintus	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	TRUE
+Diomedes	Q208256	8188173	mortal	individual	male			Iliad, Vergil, Ovid, Silius, Quintus	TRUE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	TRUE
 Dione	Q199923		divine	individual	female			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Dionysus	Q645312	8188175	divine	individual	male			Nonnus	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
 Dis			divine	individual	male		same as: Pluto same as: Hades	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-dogs of Actaeon			creature	collective	mixed	yes	the hunting dogs of Actaeon		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+dogs of Actaeon			creature	collective	mixed	yes	the hunting dogs of Actaeon	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Dolius	Q907854		mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Dolon	Q854056		mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Domitius	Q465212		mortal	individual	male		Domitius Ahenobarbus	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -304,7 +306,7 @@ Durius			mortal	individual	male		charioteer	Silius	FALSE	FALSE	FALSE	FALSE	FALSE
 Dymas	Q12277794		mortal	individual	male		Son of Dardanus (who is a demi-god)	Val. Flac., Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE
 eagle			creature	individual		yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Earth	Q270867		divine	individual	female		earth mother, same as: Tellus, same as: Terra		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-earth-born soldier			mortal	individual	male	yes	an earth-born soldier, born of the dragon's teeth sown by Cadmus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+earth-born soldier			mortal	individual	male	yes	an earth-born soldier, born of the dragon's teeth sown by Cadmus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Echeneus			mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Echo	Q207368		mortal	individual	female			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Egeria	Q582268		mortal	individual	female		nymph, wife of Numa, turns into a fountain from grief	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -314,13 +316,17 @@ Entellus	Q5380134		mortal	individual	male		Sicilian boxer	Vergil	FALSE	FALSE	FAL
 Epaphus	Q675699	8188246	mortal	individual	male		Son of Zeus and Io	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Epeius	Q278930		mortal	individual	male			Iliad, Quintus	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Epytus			mortal	individual	male		Trojan		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+equipment of Aeneas			other	collective		yes	addressed as spoils by Dido		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Erichtho	Q1227669		creature	individual	female		Witch: human? creature? god?	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Eros	Q121973		divine	individual	male			Apollonius, Nonnus	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
 Erysichthon	Q899184		mortal	individual	male		son of King Triopas of Thessaly	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Eryx	Q430157	8188280	mortal	individual	male			Vergil, Ovid	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Eteocles	Q506550	8188282	mortal	individual	male			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Eteoneus	Q5402571		mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+eternal fires			other	collective		yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Etoneus			mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Etruscan seer			mortal	individual	male	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Etruscans			mortal	collective	male	yes		Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Euagrus			mortal	individual	male		a Lapithae	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Eumaeus	Q1333846		mortal	individual	male		swineherd	Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Eumedes			mortal	individual	male		son of Dolon	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -344,8 +350,8 @@ Eurynome	Q61046076		mortal	individual	female			Odyssey, Val. Flac.	FALSE	TRUE	FA
 Eurypylus	Q1588440		mortal	individual	male			Iliad, Vergil, Quintus	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Eurypylus (Quintus)	Q1378543	8188362	mortal	individual	male		Son of Heracles- is H a god or demi god?		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Eurypylus (Vergil)	Q18223316		mortal	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Eurytus (centaur)			other	individual	male		centaur		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Eurytus (Ovid)	Q939149		mortal	individual	male		the father of Dryope		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Eurytus (centaur)			creature	individual	male		centaur	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Eurytus (King of Oechalia)	Q939149		mortal	individual	male		the father of Dryope		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Evadne (Statius)	Q1142062		mortal	individual	female				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Evander	Q837699		mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Exadius	Q12877108	9717139	mortal	individual	male		one of the Lapithae	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -385,9 +391,11 @@ guards			mortal	collective	male	yes		Iliad, Nonnus	TRUE	FALSE	FALSE	FALSE	FALSE	
 guests			mortal	collective	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Gyas			mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hades	Q41410	8188404	divine	individual	male		same as: Dis, same as: Pluto		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Halcyoneus			mortal	individual	male		a companion of Phineus from Bactria	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Halcyoneus of Bactria 			mortal	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Halitherses	Q2915608		mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hamilcar	Q185101		mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
+hands of Heracles			other	collective		yes	the hands of Hercules		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hannibal	Q36456		mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Hanno	Q313555		mortal	individual	male		Hanno the Great	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Harmonia	Q978079	8188460	mortal	individual	female		is changed into a serpent	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -400,13 +408,12 @@ Helena	Q164061		mortal	individual	female			Iliad, Odyssey, Quintus	TRUE	TRUE	FAL
 Helenus	Q729332	8188467	mortal	individual	male		son of Priam	Iliad, Vergil, Ovid, Quintus	TRUE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Heliades	Q836525		mortal	collective	female	yes	daughters of Clymene, turned into trees	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Helius	Q134270		divine	individual	male			Odyssey, Nonnus	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
-helmsman/captain of Ceyx			mortal	individual	male	yes	the helmsman of King Ceyx		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+helmsman of Ceyx			mortal	individual	male	yes	the helmsman of King Ceyx	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hephaestus	Q44384		divine	individual	male			Iliad, Odyssey, Nonnus	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
 Hera	Q38012		divine	individual	female			Iliad, Apollonius, Nonnus, Quintus	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	TRUE
 Heracles	Q122248	8188478	divine	individual	male		god? Demi-god?	Odyssey, Apollonius, Ovid, Lucan	FALSE	TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 herald			mortal	individual	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hercules	Q122248	8188478	divine	individual	male		same as: Heracles	Vergil, Ovid, Val. Flac., Thebaid, Silius	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	FALSE	FALSE
-Hercules' hands			other	collective		yes	the hands of Hercules		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hermaphroditus	Q204146		mortal	individual	male		is male until fused with Salmacis, henceforth male/female	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hermes	Q41484		divine	individual	male		same as: Mercury	Iliad, Odyssey, Nonnus	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
 heroes of Greece			mortal	collective	mixed	yes	a group of Greek heroes, including one woman (Atalanta)	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -422,6 +429,7 @@ Homer	Q6691		mortal	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hopleus			mortal	individual	male			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 horses			other	collective		yes		Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hostus			mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
+huntress			mortal	individual	female	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hyacinthus	Q207273	8188542	mortal	individual	male		a boy loved by Apollo, who changes his blood to Hyacinth flowers when he dies	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hymen	Q506770		divine	individual	male		the god of marriage ceremonies		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Hypanis			mortal	individual	male		Trojan warrior		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -458,11 +466,11 @@ Iris	Q184570	8188609	divine	individual	female		the gods' messenger	Iliad, Apollo
 Irus	Q4794415		mortal	individual	male		beggar at Odysseus' palace	Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Isis	Q79876	8188611	divine	individual	female			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Ismene	Q753902	8188614	mortal	individual	female			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
-Ismenis (Statius)	Q6085037		mortal	individual	female		Naiad, mother of Creaneus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Ismenos (Statius)	Q2422308		divine	individual	male		river		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Ismenus (Ovid)	Q11714191	8188616	mortal	individual	male		Son of Niobe (aka Ismenos)		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Italy	Q38		divine	individual	female				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Ithacan women			mortal	collective	female	yes	women of Ithaca		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Ismenis	Q6085037		mortal	individual	female		Naiad, mother of Creaneus	Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
+Ismenus (River)	Q2422308		divine	individual	male		river		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Ismenus (son of Niobe)	Q11714191	8188616	mortal	individual	male		Son of Niobe (aka Ismenos)	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Italy	Q38		divine	individual	female			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
+Ithacan women			mortal	collective	female	yes	women of Ithaca	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Itys	Q1675360	8188621	mortal	individual	male		son of Procne and Tereus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Iulus	Q655566		mortal	individual	male		same as: Ascanius		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Jason	Q176758	8188623	mortal	individual	male		Hero	Apollonius, Ovid, Val. Flac.	FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE
@@ -483,6 +491,8 @@ Lampetides			mortal	individual	male			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FA
 Laocoon	Q22878	8188632	mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Laodamas	Q5969992		mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Laomedon	Q332324		mortal	individual	male		King of Troy	Ovid, Val. Flac.	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE
+Latin envoys			mortal	collective	male	yes		Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Latin leaders			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Latin mothers			mortal	collective	female	yes		Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Latins			mortal	collective	mixed	yes		Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Latinus	Q779406		mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -517,9 +527,9 @@ Lucagus			mortal	individual	male		Latin warrior	Vergil	FALSE	FALSE	FALSE	TRUE	FA
 Lucina	Q604898		divine	individual	female		the Roman goddess of childbirth	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Luna	Q1235172		divine	individual	female		Goddess of the moon; same as: Selene	Vergil, Silius	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Lycabas			mortal	individual	male			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Lycaon	Q1331212		mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Lycaon	Q1331212		mortal	individual	male			Iliad, Ovid	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Lycian guide			mortal	individual	male	yes	a male Lycian guide	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Lycian peasants			mortal	collective	male	yes	men, turned to frogs by Latona		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Lycian peasants			mortal	collective	male	yes	men, turned to frogs by Latona	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Lycians			mortal	collective	male	yes		Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Lycormas			mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Lycurgus	Q270117		mortal	individual	male		of Thrace	Thebaid, Nonnus	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	TRUE	FALSE
@@ -566,6 +576,7 @@ Meriones	Q367819		mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FA
 Messapus	Q16386986		mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Mestra			mortal	individual	female		daughter of Erysichthon, changed briefly into a man by Neptune, then changes into a variety of animals	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Mestra's Buyer			mortal	individual	male	yes	the man who buys Mestra as a slave		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Metabus	Q1924715		mortal	individual	male		father of Camilla	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Metellus (Lucan)	Q1159589		mortal	individual	male		L. Caecilius Metellus, tribune 49	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Metellus (Silius)	Q359810		mortal	individual	male		Lucius Caecilius Metellus, consul 251 BCE		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Mezentius	Q717546		mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -573,6 +584,8 @@ Midas	Q308398		mortal	individual	male		king of Phrygia, given the golden touch b
 Milo			mortal	individual	male		son of Lanuvium	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Minerva	Q126916	8187870	divine	individual	female		same as: Athena	Vergil, Ovid, Val. Flac., Thebaid, Silius	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	FALSE	FALSE
 Minos	Q23168	8189835	mortal	individual	male		King of Crete	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Minucius	Q580979		mortal	individual	male		M. Minucius Rufus	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
+Misenus	Q1777717		mortal	individual	male		trumpeter of Hector, later of Aeneas		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Mnestheus	Q1163534		mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Monychus			creature	individual	male		a centaur	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Mopsus	Q1887300	8189848	mortal	individual	male		Hero, seer	Apollonius, Ovid, Val. Flac.	FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE
@@ -586,9 +599,8 @@ Muse			divine	individual	female		one of the Muses	Ovid	FALSE	FALSE	FALSE	FALSE	T
 Muses	Q66016	8189170	divine	collective	female	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Myrmidons	Q466830	8190259	mortal	collective	male	yes		Iliad, Quintus	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Myrrha	Q771366		mortal	individual	female		is turned into a Myrrh tree by the gods	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Myrrha's nurse			mortal	individual	female	yes	the nurse of Myrrha	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Myscelus			mortal	individual	male		the son of Alemon of Argos, founder of Crotona after a dream sent by Hercules	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Naiads			mortal	collective	female	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+naiads			mortal	collective	female	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 naiads of Diana			mortal	collective	female	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Narcissus	Q179256		mortal	individual	male			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Natura			other	individual	female			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
@@ -602,7 +614,8 @@ Nessus	Q466866	8189877	creature	individual	male		Centaur	Ovid	FALSE	FALSE	FALSE	
 Nestor	Q193267	8189878	mortal	individual	male		hero	Iliad, Odyssey, Ovid, Val. Flac., Quintus	TRUE	TRUE	FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	TRUE
 Nileus			mortal	individual	male			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Niobe	Q213621	8189888	mortal	individual	female		daughter of Tantalus, turns to stone with fountain	Ovid, Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
-Nisus		8189892	mortal	individual	male		a King of Megara, father of Scylla, turns into an osprey	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Nisus (Aeneid)	Q7134950		mortal	individual	male		lover of Euryalus	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Nisus (king)	Q1136201	8189892	mortal	individual	male		King of Megara		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Noemon			mortal	individual	male		Ithacan	Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Nox	Q1651665		divine	individual	female		Goddess of Night		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Numa	Q200031		mortal	individual	male		(Pompilius)	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -610,8 +623,8 @@ Numanus			mortal	individual	male		Rutulian warrior	Vergil	FALSE	FALSE	FALSE	TRUE
 numina			divine	collective	mixed	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 nurse			mortal	individual	female	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 nurse of Alcyone			mortal	individual	female	yes	the nurse of Alcyone		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-nurse of Myrrha			mortal	individual	female	yes	the nurse of Myrrha		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-nymph	Q373916		mortal	individual	female	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+nurse of Myrrha			mortal	individual	female	yes	the nurse of Myrrha	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+nymph	Q373916		mortal	individual	female	yes		Ovid, Quintus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 nymph of oak tree			mortal	individual	female	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 nymphs			mortal	collective	female	yes		Odyssey, Ovid	FALSE	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Oceanus	Q161419	8188399	divine	individual	male			Nonnus	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
@@ -620,13 +633,10 @@ Odysseus	Q47231	8189902	mortal	individual	male		hero	Iliad, Odyssey, Ovid, Quint
 Oedipus	Q130890	8190182	mortal	individual	male			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Oeneus	Q749966	8189910	mortal	individual	male		father of Deianira	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 old altar			other	individual		yes	an old altar to Latona	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-old man			mortal	individual	male	yes	an old man		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+old man			mortal	individual	male	yes	an old man	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Olympian gods	Q7089008		divine	collective	mixed	yes		Vergil, Thebaid	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
-one of the Ciconian Women			mortal	individual	female	yes	changed into an oak tree by Bacchus after contributing to the murder of Orpheus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 one of the Oreads			mortal	individual	female	yes	a nymph, minor mountain deity, a 'rustic oread'	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-one of the Pierides			mortal	individual	female	yes	a woman, is changed into a magpie by the Muses		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-one servant of Erysichthon			mortal	individual	male	yes	a male servant who is beheaded by Erysichthon when he tries to prevent the cutting of the nymph's tree		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-one Theban			mortal	individual	nonbinary	yes	one Theban person, gender unclear		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+one of the Pierides			mortal	individual	female	yes	a woman, is changed into a magpie by the Muses	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Onetor			mortal	individual	male		Peleus' Phocian herdsman	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Opheltes	Q1419140	8189928	mortal	individual	male			Ovid, Thebaid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Opis	Q12901294		mortal	individual	female			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -641,6 +651,7 @@ Palaemon	Q738007		divine	individual	male		(Melicertes)	Thebaid	FALSE	FALSE	FALSE
 Palinurus	Q679636		mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Pallas (son of Evander)	Q2048018		mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Pan	Q132582		divine	individual	male		Satyr, but a god	Ovid, Val. Flac., Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	FALSE	TRUE	FALSE
+Panchates (horse)			creature	individual	male		horse of Asturia	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Pandarus	Q1057384	8189109	mortal	individual	male			Iliad, Vergil	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Pandion	Q1076578	8189110	mortal	individual	male		King of Athens, father of Procne and Philomela	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Panemus			mortal	individual	male		Theban warrior	Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
@@ -651,7 +662,7 @@ Paris	Q167646		mortal	individual	male		hero, son of Priam	Iliad, Ovid, Quintus	T
 Parthenopaeus	Q1128942	8189121	mortal	individual	male			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Patroclus	Q186271	8189125	mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Paullus	Q432244		mortal	individual	male		L. Aemilius Paullus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Pedasus			mortal	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Pedasus			mortal	individual	male			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Pedianus			mortal	individual	male		imagined as the anceestor of Quintus Asconius Pedianus (Augoustakis/Bernstein)	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Peiraeus			mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Peisander	Q16670180		mortal	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -665,7 +676,7 @@ Peneleus	Q254381		mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FA
 Penelope	Q165769	8189173	mortal	individual	female		wife of Odysseus	Odyssey, Ovid	FALSE	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Peneus	Q1364612		mortal	individual	male		river god	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Pentheus	Q391091	8189175	mortal	individual	male		Son of Agave, sea goddess	Ovid, Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
-people			mortal	collective	mixed	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+people			mortal	collective	mixed	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Perolla			mortal	individual	male		son of Pacuvius	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Persephone	Q45967	8189204	divine	individual	female		wife of Dis	Nonnus	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
 Perseus	Q130832	8189209	mortal	individual	male		Hero	Ovid, Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE
@@ -680,15 +691,15 @@ Philoctetes			mortal	individual	male			Quintus	FALSE	FALSE	FALSE	FALSE	FALSE	FAL
 Philoetius	Q2277624		mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Philomela	Q115449	8189236	mortal	individual	female		daughter of Pandion, sister of Procne. Has her tongue cut out by Tereus and later transformers into a nightingale	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phineus	Q641065	8189241	mortal	individual	male			Apollonius, Ovid, Val. Flac.	FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE
-Phlegyas (Pisan)			mortal	individual	male		Pisan competitor in funeral games for Archemorus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phlegyas (Lapith)	Q831583	8189245	mortal	individual	male		father of Ixion	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Phlegyas (Pisan)			mortal	individual	male		Pisan competitor in funeral games for Archemorus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phocus	Q836311	8189246	mortal	individual	male			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phoebus Apollo	Q37340	8182233	divine	individual	male				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phoenician man			mortal	individual	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phoenician men			mortal	collective	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phoenician woman			mortal	individual	female	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phoinix	Q1061747		mortal	individual	male			Iliad, Quintus	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
-Phorbas (Ovid)			mortal	individual	male		one of the Lapithae		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Phorbas (Lapith)			mortal	individual	male		one of the Lapithae	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phorbas (Vergil)			mortal	individual	male		disguise of Somnus; otherwise unnoted member of Aeneas' crew		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phrontis	Q1862400		mortal	individual	male	yes	son of Phrixus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Phrygian guide			mortal	individual	male	yes		Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -723,7 +734,6 @@ Priam	Q170473	8189347	mortal	individual	male			Iliad, Vergil, Quintus	TRUE	FALSE
 priest of Aesculapius			mortal	individual	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Priestess			mortal	individual	female	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 prince of Cepheus' court			mortal	individual	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Argive princes			mortal	collective	male	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Procne	Q1231743	8189350	mortal	individual	female		daughter of Pandion, sister of Philomela. Transforms into a swallow	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Procris	Q1139470	8189351	mortal	individual	female		daughter of Erechtheus	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Proetus	Q644604		mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -743,18 +753,16 @@ Pyrrhus 		8189964	mortal	individual	male		Son of Achilles: demi god or human?		F
 Pythagoras	Q10261		mortal	individual	male		a philosopher	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Queen of the Bacchantes			mortal	individual	female	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 ram			creature	individual	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Raven	Q25357		creature	individual		yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+raven	Q25357		creature	individual		yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Regulus			mortal	individual	male		Husband of Marcia	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Rhaebus (horse)			creature	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Rhamnusia / Nemesis	Q185747	8189869	divine	individual	female				FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Rhoetus			creature	individual	male		A centaur	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Ripheus			mortal	individual	male		Trojan warrior		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 river god			divine	individual	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-river gods			divine	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+river gods			divine	collective	male	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Roma			other	individual	female		city	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Romans			mortal	collective	mixed	yes	the Roman people	Ovid, Silius	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
-Minucius	Q580979		mortal	individual	male		M. Minucius Rufus	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
-rustics of Lycia			mortal	collective	mixed	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Rutulians	Q579014		mortal	collective	mixed	yes	Ethnic group	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Sabratha			mortal	individual	male		Carthaginian warrior	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Saces			mortal	individual	male		Rutulian warrior	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -781,11 +789,12 @@ Serestus			mortal	individual	male		trojan captain in the aeneid		FALSE	FALSE	FAL
 Sergestus	Q1526637		mortal	individual	male		trojan captain in the aeneid		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 serpent			creature	individual		yes	Killed by Capaneus	Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Serranus	Q3957984		mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
-servant of Byblis			mortal	individual	male	yes	the male servant of Byblis		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-servant of Circe			mortal	individual	female	yes	a nymph who serves Circe, one of Circe's four female servants (all Nereids or nymphs)		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+servant of Byblis			mortal	individual	male	yes	the male servant of Byblis	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+servant of Circe			mortal	individual	female	yes	a nymph who serves Circe, one of Circe's four female servants (all Nereids or nymphs)	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+servant of Erysichthon			mortal	individual	male	yes	a male servant who is beheaded by Erysichthon when he tries to prevent the cutting of the nymph's tree	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 servants	Q464705		mortal	collective	mixed	yes		Iliad, Ovid	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-servants of Erysichthon			mortal	collective	nonbinary	yes	a group of Erysichthon's servants, gender unspecified		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-servants of Leucothoe			mortal	collective	female	yes	the female servants of Leucothoe		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+servants of Erysichthon			mortal	collective	nonbinary	yes	a group of Erysichthon's servants, gender unspecified	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+servants of Leucothoe			mortal	collective	female	yes	the female servants of Leucothoe	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 servants of Pentheus			mortal	collective	nonbinary	yes	the servents of Pentheus, King of Thebes	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 servants of Tereus			mortal	collective	nonbinary	yes	the servants of King Tereus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Sextus Pompeius	Q295228		mortal	individual	male			Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -794,7 +803,7 @@ Sicoris			mortal	individual	male		representative of Saguntine envoy	Silius	FALSE
 Simoeis	Q2479077		divine	individual	male		river	Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Sinon	Q663792	8189999	mortal	individual	male			Vergil, Quintus	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 siren			creature	individual	female	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-snakes			creature	collective	mixed	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+snakes			creature	collective	mixed	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Socus			mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Sol	Q134270	8194729	divine	individual	male			Ovid, Val. Flac.	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE
 soldiers	Q4991371		mortal	collective	male	yes		Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -803,6 +812,7 @@ someone			mortal	individual		yes		Iliad, Odyssey, Apollonius, Ovid, Nonnus, Quin
 Somnus	Q21030618		divine	individual	male		the god of sleep	Vergil, Ovid, Val. Flac., Thebaid, Silius	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	FALSE	FALSE
 son of Aunus			mortal	individual	male	yes		Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 son of Dolius			mortal	individual	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+son of Epytus			mortal	individual	male	yes	companion of Ascanius	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 son of Pallas			mortal	individual	male	yes	Clytos or Butes	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 sons of Aeolus			mortal	collective	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 sons of Laomedon			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -810,6 +820,7 @@ sons of Nestor			mortal	collective	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALS
 sons of Phrixus			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 sons of Priam			mortal	collective	male	yes		Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 sons of Thestius			mortal	collective	male	yes	Plexippus and Toxeus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+spear			other	individual		yes		Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Spercheius	Q426309		divine	individual	male		river	Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Sthenelus	Q1060267		mortal	individual	male			Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 suitor of Narcissus			mortal	individual	nonbinary	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -817,6 +828,7 @@ suitor of Penelope			mortal	individual	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	
 suitors of Atalanta			mortal	collective	male	yes	the suitors of Atalanta	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 suitors of Penelope	Q1058631	9358838	mortal	collective	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 swineherds			mortal	collective	male	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+swords without crime			other	collective		yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Sychaeus	Q2060196		mortal	individual	male		(Dido's husband acc to Virgil)	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Symaethis			mortal	individual	female		a river nymph, daughter of the river god Symaethus, mother of Acis by Faunus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Syphax	Q353141		mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
@@ -838,10 +850,11 @@ Terra			divine	individual	female		same as: Earth, same as: Tellus	Ovid	FALSE	FAL
 Tethys	Q184216	8188408	divine	individual	female		titan		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Teucrus	Q878184		mortal	individual	male			Iliad, Quintus	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Theano	Q1154473		mortal	individual	female			Iliad, Quintus	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
+Theban			mortal	individual	male	yes		Ovid, Thebaid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Theban sentry			mortal	individual	male	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Theban warriors			mortal	collective	male	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Theban women			mortal	collective	female	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Thebans 			mortal	collective	mixed	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
+Thebans			mortal	collective	mixed	yes		Ovid, Thebaid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 Thebes	Q5760		other	individual	female		city		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Themis	Q159168	8188417	divine	individual	female			Iliad, Ovid, Quintus	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Theoclymenus	Q2626787		mortal	individual	male			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
@@ -863,45 +876,46 @@ Tiphys	Q654257	8190139	mortal	individual	male			Apollonius, Val. Flac.	FALSE	FAL
 Tiresias	Q656881	8190066	mortal	individual	male/female		for seven years is changed into a woman by serpents, changes back in eighth	Ovid, Thebaid, Nonnus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	TRUE	FALSE	TRUE	FALSE
 Tisiphone	Q3991817	8188418	divine	individual	female		One of the Erinyes	Ovid, Thebaid, Silius	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE
 Tlepolemus	Q690613	8190147	mortal	individual	male		son of Hercules, leader of the Rhodians	Iliad, Ovid	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-Tmolus	Q17996944	8190148	other	individual	male		the embodiment of the Tmolus mountain	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Tmolus	Q17996944	8190148	other	individual	male		mountain	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Tolumnius	Q48800637		mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Torquatus			mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Toxeus			mortal	individual	male		son of Thestius		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Trebia			divine	individual	male		river god	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Triptolemus 	Q269243	8190154	mortal	individual	male			Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Triton	Q148030	8190155	divine	individual	male			Apollonius	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Trojan gods			divine	collective	mixed	yes		Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Trojan leaders			mortal	collective	male	yes		Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+Trojan mothers			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Trojan old men			mortal	collective	male	yes	the old men of Troy	Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Trojan women			mortal	collective	female	yes	the women of Troy	Ovid, Quintus	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Trojans	Q47463094		mortal	collective	mixed	yes		Iliad, Vergil, Quintus	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE
 Troy			other	individual	female		the city of Troy	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Turnus	Q633549		mortal	individual	male		King of the Rutuli	Vergil, Ovid	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+two doves			creature	collective		yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Tydeus	Q250506	8190161	mortal	individual	male			Val. Flac., Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE
 Tyro	Q1126715		mortal	individual	female			Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Tyrrhenus	Q1400413		mortal	individual	male			Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 Ulysses	Q47231		mortal	individual	male		same as: Odysseus		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+unknown land			other	individual	female	yes		Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Urania	Q104002	8189092	divine	individual	female		Muse: same as god?	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Varro			mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Venulus	Q4009778		mortal	individual	male		a messenger of Turnus	Vergil, Ovid	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Venus	Q35500	8182231	divine	individual	female		same as: Aphrodite	Vergil, Ovid, Val. Flac., Thebaid, Silius	FALSE	FALSE	FALSE	TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	FALSE	FALSE
 Vertumnus	Q374311		divine	individual	male		a god of the natural world, husband of Pomona	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-huntress			mortal	individual	female	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Viriasius			mortal	individual	male		Roman commander	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Virrius			mortal	individual	male			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
 Virtus 	Q582177		divine	individual	female			Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
-voice			other	individual	nonbinary	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+voice			other	individual	nonbinary	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Volcens	Q4016094		mortal	individual	male			Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Voluptas	Q651660		divine	individual	female			Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
+Volusus			mortal	individual	male		Rutulian warrior		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Vulcan	Q44384	8188476	divine	individual	male		same as: Hephaestus	Vergil	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Vulteius			mortal	individual	male		Caesarian captain	Lucan	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE
 water nymphs			mortal	collective	female	yes		Thebaid	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE
 winds			other	collective		yes		Iliad	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 woman			mortal	individual	female	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 women			mortal	collective	female	yes		Odyssey	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-women of Ithaca			mortal	collective	female	yes	women of Ithaca	Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
-women of Troy			mortal	collective	female	yes	the women of Troy		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+woods			other	collective		yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
 Zephyrus	Q467515		divine	individual	male		West Wind		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
 Zetes	Q4024302	8190179	mortal	individual	male			Apollonius, Val. Flac.	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE
 Zeus	Q34201	8188419	divine	individual	male			Iliad, Odyssey, Nonnus, Quintus	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	TRUE
-Panchates (horse)			creature	individual	male		horse of Asturia	Silius	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE
-companions of Perseus			mortal	collective	male	yes			FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	
-companions of Phineus			mortal	collective	male	yes		Ovid	FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	
