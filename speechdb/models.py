@@ -59,9 +59,8 @@ class Character(models.Model):
             default=CharacterBeing.MORTAL)
     number = models.CharField(max_length=16, choices=CharacterNumber.choices,
             default=CharacterNumber.INDIVIDUAL)
-    gender = models.CharField(max_length=16, choices=CharacterGender.choices,
-            null=True)
-    anon = models.BooleanField(default=False)
+    gender = models.CharField(max_length=16, null=True, blank=True,
+            choices=CharacterGender.choices)
     wd = models.CharField('WikiData ID', max_length=32, null=True)
     manto = models.CharField('MANTO ID', max_length=32, null=True)
 
@@ -75,25 +74,75 @@ class Character(models.Model):
 class CharacterInstance(models.Model):
     '''A character engaged in a speech'''
     
+    name = models.CharField(max_length=64, null=True, blank=True)
+    being = models.CharField(max_length=16, null=True, blank=True,
+            choices=Character.CharacterBeing.choices)
+    number = models.CharField(max_length=16, null=True, blank=True,
+            choices=Character.CharacterNumber.choices)
+    gender = models.CharField(max_length=16, null=True, blank=True,
+            choices=Character.CharacterGender.choices)
     char = models.ForeignKey(Character, related_name='instances', 
-            on_delete=models.PROTECT)
+            blank=True, null=True, on_delete=models.PROTECT)
     disg = models.ForeignKey(Character, related_name='disguises', 
             blank=True, null=True, on_delete=models.PROTECT)
+    anon = models.BooleanField(default=False)
     #TODO tuple (char, context) should be unique
     context = models.CharField(max_length=128)
+    tags = models.JSONField(default=dict)
     
     class Meta:
         ordering = ['char']
     
     def __str__(self):
         return self.get_long_name()
+
+    def get_name(self):
+        '''returns top-level name'''
+        if self.disg is not None:
+            name = self.disg.name
+        elif self.name is not None:
+            name = self.name
+        else:
+            name = self.char.name
+            
+        return name
+
+    def get_gender(self):
+        '''returns top-level gender'''
+        if self.disg is not None:
+            char_gender = self.disg.gender
+        else:
+            char_gender = self.char.gender
+        
+        return self.gender or char_gender
+
+    def get_being(self):
+        '''returns top-level being'''
+        if self.disg is not None:
+            char_being = self.disg.being
+        else:
+            char_being = self.char.being
+        
+        return self.being or char_being
+
+    def get_number(self):
+        '''returns top-level being'''
+        if self.disg is not None:
+            char_number = self.disg.number
+        else:
+            char_number = self.char.number
+        
+        return self.number or char_number
     
     def get_long_name(self):
-        name = self.char.name
-        if self.disg is not None:
-            name += '/' + self.disg.name
-        return name    
-    
+        '''returns char name, including instance name and/or disguise'''
+        name = self.get_name()
+        
+        if name != self.char.name:
+            name += '/' + self.char.name
+        
+        return name
+
 
 class SpeechCluster(models.Model):
     '''A group of related speeches'''

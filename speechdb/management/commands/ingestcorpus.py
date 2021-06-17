@@ -60,6 +60,11 @@ def addChars(file):
     f = open(file)
     reader = csv.DictReader(f, delimiter='\t')
     
+    # a container for anonymous instances and alternate identities
+    characters = {}
+    alt_chars = {}
+    anon_chars = {}
+    
     for rec in reader:
         c = Character()
         c.name = rec.get('name').strip() or None
@@ -80,32 +85,82 @@ def addChars(file):
                     default=Character.CharacterNumber.INDIVIDUAL)
         c.gender = validate(rec.get('gender'), Character.CharacterGender,
                     default=Character.CharacterGender.MALE)
+        c.same_as = rec.get('same_as').strip() or None
         c.notes = rec.get('notes').strip() or None
+        
+        c.tags = {}
+        for col in rec.keys():
+            if col.startswith('tag_'):
+                key = col[4:]
+                vals = []
+                for tag in rec.get(col).split(','):
+                    tag = tag.strip()
+                    if tag != '':
+                        vals.append(tag)
+                if len(vals) > 0:
+                    c.tags[key] = vals
         
         if c.being is None:
             print(f'Character {c} has no being')
         
-        c.save()
+        if c.name in characters or c.name in alt_chars or c.name in anon_chars:
+            print(f'Multiple records for name {c.name}!')
+        
+        if c.same_as is not None:
+            alt_chars[c.name] = c.same_as
+        elif c.anon:
+            anon_chars[c.name] = c
+        else:
+            characters[c.name] = c
+    
+    # put all the characters in the database
+    for name in characters:
+        characters[name].save()
+    
+    # link all the alt ids:
+    for name, same_as in alt_chars.items():
+        if same_as in characters:
+            alt_chars[name] = characters[same_as]
+        else:
+            print(f'Pseud {name} points to non-existent char {same_as}!')
+    
+    return characters, alt_chars, anon_chars
 
-
-def addInst(name, speech):
+    
+def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
     '''get or create character instance'''
     
-    char_query_set = Character.objects.filter(name=name)
-    if len(char_query_set) < 1:
-        print(f'failed to find character {name}')
+    # details of this instance
+    instance_params = {
+        'name': name,
+        'context': speech.cluster.work.title,
+    }
+
+    # look for the name in characters list, alt ids, anonymous chars
+    if name in characters:
+        instance_params['char'] = characters[name]
+    elif name in alt_chars:
+        instance_params['name'] = name
+        instance_params['char'] = alt_chars[name]
+    elif name in anon_chars:
+        c = anon_chars[name]
+        instance_params['name'] = c.name
+        instance_params['gender'] = c.gender
+        instance_params['being'] = c.being
+        instance_params['number'] = c.number
+        instance_params['anon'] = c.anon
+        instance_params['tags'] = c.tags
+    else:
+        print(f'Failed to find character {name}!')
         return None
-    if len(char_query_set) > 1:
-        print(f'Multiple characters named {name}!')
-    char = char_query_set.first()
     
-    context = speech.cluster.work.title
-    inst, created = CharacterInstance.objects.get_or_create(char=char, context=context)
+    #print(f'DEBUG: speech={speech}; params={instance_params}')
+    inst, created = CharacterInstance.objects.get_or_create(**instance_params)
     
     return inst
 
 
-def addSpeeches(file):
+def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
     '''Parse the speeches list from a TSV file'''
     f = open(file)
     reader = csv.DictReader(f, delimiter='\t')
@@ -168,7 +223,8 @@ def addSpeeches(file):
             continue
         else:
             for name in spkr_str.split(' and '):
-                inst = addInst(name, s)
+                inst = addInst(name, s, characters=characters, 
+                        alt_chars=alt_chars, anon_chars=anon_chars)
                 if inst is not None:
                     s.spkr.add(inst)
             if len(s.spkr.all()) < 1:
@@ -185,7 +241,8 @@ def addSpeeches(file):
                 if name == 'self':
                     inst = s.spkr.first()
                 else:
-                    inst = addInst(name, s)
+                    inst = addInst(name, s, characters=characters,
+                            alt_chars=alt_chars, anon_chars=anon_chars)
                 if inst is not None:
                     s.addr.add(inst)
             if len(s.addr.all()) < 1:
@@ -223,11 +280,12 @@ class Command(BaseCommand):
         # characters
         char_file = os.path.join(path, 'characters')
         self.stderr.write(f'Reading data from {char_file}')
-        addChars(char_file)
+        characters, alt_chars, anon_chars = addChars(char_file)
 
         # speeches, clusters, and char instances
         speech_files = [os.path.join(path, f) for f in sorted(os.listdir(path))
                         if f.startswith('speeches')]
         for speech_file in speech_files:
             self.stderr.write(f'Reading data from {speech_file}')
-            addSpeeches(speech_file)
+            addSpeeches(speech_file, characters=characters, alt_chars=alt_chars,
+                        anon_chars=anon_chars)
