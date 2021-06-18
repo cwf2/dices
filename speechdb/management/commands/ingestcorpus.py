@@ -7,7 +7,7 @@ import re
 from django.core import serializers
 
 
-def validate(s, choices, default=None, allow_none=False):
+def validate(s, choices, default=None, allow_none=True):
     '''Validate user input'''
     
     if s is not None:
@@ -84,7 +84,7 @@ def addChars(file):
         c.number = validate(rec.get('number'), Character.CharacterNumber,
                     default=Character.CharacterNumber.INDIVIDUAL)
         c.gender = validate(rec.get('gender'), Character.CharacterGender,
-                    default=Character.CharacterGender.NA)
+                    default=Character.CharacterGender.MALE)
         c.same_as = rec.get('same_as').strip() or None
         c.notes = rec.get('notes').strip() or None
         
@@ -107,13 +107,23 @@ def addChars(file):
             print(f'Multiple records for name {c.name}!')
         
         if c.same_as is not None:
-            alt_chars[c.name] = c
+            alt_chars[c.name] = c.same_as
         elif c.anon:
             anon_chars[c.name] = c
         else:
             characters[c.name] = c
-            c.save()
-            
+    
+    # put all the characters in the database
+    for name in characters:
+        characters[name].save()
+    
+    # link all the alt ids:
+    for name, same_as in alt_chars.items():
+        if same_as in characters:
+            alt_chars[name] = characters[same_as]
+        else:
+            print(f'Pseud {name} points to non-existent char {same_as}!')
+    
     return characters, alt_chars, anon_chars
 
     
@@ -128,24 +138,10 @@ def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
 
     # look for the name in characters list, alt ids, anonymous chars
     if name in characters:
-        c = characters[name]
-        instance_params['name'] = c.name
-        instance_params['gender'] = c.gender
-        instance_params['being'] = c.being
-        instance_params['number'] = c.number
-        instance_params['char'] = c
+        instance_params['char'] = characters[name]
     elif name in alt_chars:
-        c = alt_chars[name]
-        instance_params['name'] = c.name
-        instance_params['gender'] = c.gender
-        instance_params['being'] = c.being
-        instance_params['number'] = c.number
-        try:
-            instance_params['char'] = characters[c.same_as]
-        except KeyError:
-            print(f'Pseud {name} points to non-existent char {same_as}!'.format(
-                    name=name, same_as=alt_chars[name].same_as))
-            raise
+        instance_params['name'] = name
+        instance_params['char'] = alt_chars[name]
     elif name in anon_chars:
         c = anon_chars[name]
         instance_params['name'] = c.name
