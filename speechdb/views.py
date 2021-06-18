@@ -61,12 +61,12 @@ class CharacterFilter(filters.FilterSet):
 
 
 class CharacterInstanceFilter(filters.FilterSet):
-    name = filters.CharFilter('get_name')
-    gender = filters.ChoiceFilter('get_gender', 
+    name = filters.CharFilter('name')
+    gender = filters.ChoiceFilter('gender', 
                     choices=Character.CharacterGender.choices)
-    number = filters.ChoiceFilter('get_number',
+    number = filters.ChoiceFilter('number',
                     choices=Character.CharacterNumber.choices)
-    being = filters.ChoiceFilter('get_being',
+    being = filters.ChoiceFilter('being',
                     choices=Character.CharacterBeing.choices)
     anon = filters.BooleanFilter('anon')
     char_id = filters.NumberFilter('char__id')
@@ -89,26 +89,26 @@ class CharacterInstanceFilter(filters.FilterSet):
 
 class SpeechFilter(filters.FilterSet):
     spkr_id = filters.NumberFilter('spkr__char__id')
-    spkr_name = filters.CharFilter('spkr__get_name')
+    spkr_name = filters.CharFilter('spkr__name')
     spkr_manto = filters.CharFilter('spkr__char__manto')
     spkr_wd = filters.CharFilter('spkr__char__wd')
-    spkr_gender = filters.ChoiceFilter('spkr__get_gender', 
+    spkr_gender = filters.ChoiceFilter('spkr__gender', 
                     choices=Character.CharacterGender.choices)
-    spkr_number = filters.ChoiceFilter('spkr__get_number',
+    spkr_number = filters.ChoiceFilter('spkr__number',
                     choices=Character.CharacterNumber.choices)
-    spkr_being = filters.ChoiceFilter('spkr__get_being',
+    spkr_being = filters.ChoiceFilter('spkr__being',
                     choices=Character.CharacterBeing.choices)
     spkr_anon = filters.BooleanFilter('spkr__anon')
     
     addr_id = filters.NumberFilter('addr__char__id')
-    addr_name = filters.CharFilter('addr__get_name')
+    addr_name = filters.CharFilter('addr__name')
     addr_manto = filters.CharFilter('addr__char__manto')
     addr_wd = filters.CharFilter('addr__char__wd')
-    addr_gender = filters.ChoiceFilter('addr__get_gender', 
+    addr_gender = filters.ChoiceFilter('addr__gender', 
                     choices=Character.CharacterGender.choices)
-    addr_number = filters.ChoiceFilter('addr__get_number',
+    addr_number = filters.ChoiceFilter('addr__number',
                     choices=Character.CharacterNumber.choices)
-    addr_being = filters.ChoiceFilter('addr__get_being',
+    addr_being = filters.ChoiceFilter('addr__being',
                     choices=Character.CharacterBeing.choices)
     addr_anon = filters.BooleanFilter('addr__anon')
     
