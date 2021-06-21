@@ -18,17 +18,24 @@ class Author(models.Model):
 
 class Work(models.Model):
     '''An epic text'''
+
+    class Language(models.TextChoices):
+        GREEK = ('greek', 'Greek')
+        LATIN = ('latin', 'Latin')
     
     title = models.CharField(max_length=64)
     wd = models.CharField('WikiData ID', max_length=32)
     urn = models.CharField(max_length=128)
     author = models.ForeignKey(Author, on_delete=models.PROTECT)
+    lang = models.CharField(max_length=8, choices=Language.choices)
     
     class Meta:
         ordering = ['author', 'title']
-    
+
+
     def __str__(self):
         return f'{self.author.name} {self.title}'
+
     
     def get_long_name(self):
         '''Return common name as a string'''
@@ -43,17 +50,20 @@ class Character(models.Model):
         COLLECTIVE = ('collective', 'Collective')
         OTHER = ('other', 'Other')
 
+
     class CharacterBeing(models.TextChoices):
         MORTAL = ('mortal', 'Mortal')
         DIVINE = ('divine', 'Divine')
         CREATURE = ('creature', 'Mythical Creature')
         OTHER = ('other', 'Other')
         
+
     class CharacterGender(models.TextChoices):
         NA = ('none', 'Unknown/not-applicable')
         NB = ('non-binary', 'Mixed/non-binary')
         FEMALE = ('female', 'Female')
         MALE = ('male', 'Male')
+
     
     name = models.CharField(max_length=64)
     being = models.CharField(max_length=16, choices=CharacterBeing.choices,
@@ -65,8 +75,10 @@ class Character(models.Model):
     wd = models.CharField('WikiData ID', max_length=32, null=True)
     manto = models.CharField('MANTO ID', max_length=32, null=True)
 
+
     class Meta:
         ordering = ['name']
+
 
     def __str__(self):
         return self.name
@@ -114,17 +126,8 @@ class CharacterInstance(models.Model):
 class SpeechCluster(models.Model):
     '''A group of related speeches'''
     
-    class ClusterType(models.TextChoices):
-        SOLILOQUY = ('S', 'Soliloquy')
-        MONOLOGUE = ('M', 'Monologue')
-        DIALOGUE = ('D', 'Dialogue')
-        GENERAL = ('G', 'General')
-            
-    type = models.CharField(max_length=1, choices=ClusterType.choices)
-    work = models.ForeignKey(Work, on_delete=models.PROTECT)
-    
     class Meta:
-        ordering = ['work', 'speech']
+        ordering = ['speech']
         
     def get_spkr_str(self):
         '''Return speaker list as a string'''
@@ -154,7 +157,15 @@ class SpeechCluster(models.Model):
 class Speech(models.Model):
     '''A direct speech instance'''
     
+    class SpeechType(models.TextChoices):
+        SOLILOQUY = ('S', 'Soliloquy')
+        MONOLOGUE = ('M', 'Monologue')
+        DIALOGUE = ('D', 'Dialogue')
+        GENERAL = ('G', 'General')
+    
     cluster = models.ForeignKey(SpeechCluster, on_delete=models.CASCADE)
+    work = models.ForeignKey(Work, on_delete=models.PROTECT)
+    type = models.CharField(max_length=1, choices=SpeechType.choices)
     seq = models.IntegerField()
     l_fi = models.CharField('first line', max_length=8)
     l_la = models.CharField('last line', max_length=8)
@@ -165,14 +176,14 @@ class Speech(models.Model):
     part = models.IntegerField()
     
     class Meta:
-        ordering = ['cluster__work__id', 'seq']
+        ordering = ['work', 'seq']
     
     def __str__(self):
-        return f'{self.cluster.work} {self.l_fi}-{self.l_la}'
+        return f'{self.work} {self.l_fi}-{self.l_la}'
         
     def get_urn(self):
         '''Return CTS URN for the whole speech'''
-        return f'{self.cluster.work.urn}:{self.l_fi}-{self.l_la}'
+        return f'{self.work.urn}:{self.l_fi}-{self.l_la}'
         
     def get_spkr_str(self):
         '''Return speaker list as a string'''
@@ -184,7 +195,7 @@ class Speech(models.Model):
         
     def get_short_type(self):
         '''Return one-char type designation'''
-        t = self.cluster.type
-        if t == 'D':
+        t = self.type
+        if t == 'D' or t == 'G':
             t += str(self.part)
         return t

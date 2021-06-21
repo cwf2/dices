@@ -10,32 +10,33 @@ class AuthorSerializer(serializers.ModelSerializer):
 class WorkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Work
-        fields = ['id', 'title', 'wd', 'urn', 'author']
+        fields = ['id', 'title', 'wd', 'urn', 'author', 'lang']
         depth = 2
 
 
 class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character
-        fields = ['id', 'name', 'being', 'number', 'gender', 'anon', 'wd', 
-                    'manto']
+        fields = ['id', 'name', 'being', 'number', 'gender', 'wd', 'manto']
 
 
 class CharacterInstanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = CharacterInstance
-        fields = ['id', 'char', 'disg', 'context']
+        fields = ['id', 'name', 'being', 'number', 'gender', 'anon',
+                    'char', 'disg', 'context']
         depth = 1
 
 
 class SpeechSerializer(serializers.ModelSerializer):
     class Meta:
         model = Speech
-        fields = ['id', 'cluster', 'seq', 'l_fi', 'l_la', 'spkr', 'addr', 'part']
+        fields = ['id', 'work', 'l_fi', 'l_la', 'seq', 'spkr', 'addr', 
+                    'type', 'cluster', 'part']
         depth = 3
 
 class SpeechClusterSerializer(serializers.ModelSerializer):
     class Meta:
         model = SpeechCluster
-        fields = ['id', 'type', 'work', ]
+        fields = ['id']
         depth = 3
