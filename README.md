@@ -14,7 +14,7 @@ The database does not yet have a human-oriented web interface, but one day it wi
 
 ## Python client
 
-A python-based client for interacting programmatically with the API is under development. The code is available at [dices-client](https://github.com/cwf2/dices-client). There are a couple of Jupyter Notebooks giving examples of its use at [dices-examples](https://github.com/cwf2/dices-examples); the latter can be tested online using Binder.
+A python-based client for interacting programmatically with the API is under development. The code is available at [dices-client](https://github.com/cwf2/dices-client). There are a couple of Jupyter Notebooks giving examples of its use at [dices-examples](https://github.com/cwf2/dices-examples); the latter can be tested online via [Binder](https://mybinder.org/v2/gh/cwf2/dices-examples/main).
 
 ## API
 
@@ -44,11 +44,11 @@ Searchable parameters:
 - `author_urn` author's CITE ID
 - `author_wd` author's WikiData ID
 
-### `/clusters`
+#### `/clusters`
 Searchable parameters:
 - `id`: internal ID
 
-### `/instances`
+#### `/instances`
 
 Searchable parameters:
 - `id`: internal ID
@@ -64,7 +64,7 @@ Searchable parameters:
 - `manto`: MANTO ID for underlying character
 - `wd`: WikiData ID for underlying character
 
-### `/characters`
+#### `/characters`
 
 Searchable parameters:
 - `id`: internal ID
@@ -75,7 +75,7 @@ Searchable parameters:
 - `manto`: MANTO ID
 - `wd`: WikiData ID
 
-### `/works`
+#### `/works`
 
 Searchable parameters:
 - `id`: internal ID
@@ -86,9 +86,15 @@ Searchable parameters:
 - `author_wd`: WikiData ID of author
 - `author_urn`: CITE ID of author
 
-### `/authors`
+#### `/authors`
 
 Searchable parameters:
 - `id`: internal ID
 - `name`: (English) name
 - `urn`: CITE ID
+
+### Example
+
+This will get you all speeches by Achilles in the Iliad, as paged JSON:
+
+`https://fierce-ravine-99183.herokuapp.com/api/speeches?spkr_name=Achilles&work_title=Iliad`
