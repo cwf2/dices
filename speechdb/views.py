@@ -116,19 +116,19 @@ class SpeechFilter(filters.FilterSet):
     spkr_inst = filters.NumberFilter('spkr__id')
     addr_inst = filters.NumberFilter('addr__id')
     
+    type = filters.ChoiceFilter('type', choices=Speech.SpeechType.choices)
+
     cluster_id = filters.NumberFilter('cluster__id')
-    cluster_type = filters.ChoiceFilter('cluster__type', 
-                    choices=SpeechCluster.ClusterType.choices)
     
-    work_id = filters.NumberFilter('cluster__work__id')
-    work_title = filters.CharFilter('cluster__work__title')
-    work_urn = filters.CharFilter('cluster__work__urn')
-    work_wd = filters.CharFilter('cluster__work__wd')
+    work_id = filters.NumberFilter('work__id')
+    work_title = filters.CharFilter('work__title')
+    work_urn = filters.CharFilter('work__urn')
+    work_wd = filters.CharFilter('work__wd')
     
-    author_id = filters.NumberFilter('cluster__work__author__id')
-    author_name = filters.CharFilter('cluster__work__author__name')
-    author_wd = filters.CharFilter('cluster__work__author__wd')
-    author_urn = filters.CharFilter('cluster__work__author__urn')
+    author_id = filters.NumberFilter('work__author__id')
+    author_name = filters.CharFilter('work__author__name')
+    author_wd = filters.CharFilter('work__author__wd')
+    author_urn = filters.CharFilter('work__author__urn')
         
     class Meta:
         model = Speech
@@ -138,7 +138,8 @@ class SpeechFilter(filters.FilterSet):
             'addr_id', 'addr_name', 'addr_manto', 'addr_wd', 'addr_gender',
             'addr_number', 'addr_being', 'addr_anon',
             'spkr_inst', 'addr_inst',
-            'cluster_id', 'cluster_type',
+            'type', 
+            'cluster_id',
             'work_id', 'work_title', 'work_urn', 'work_wd',
             'author_id', 'author_name', 'author_urn', 'author_wd',
             'part']
@@ -147,7 +148,7 @@ class SpeechFilter(filters.FilterSet):
 class SpeechClusterFilter(filters.FilterSet):
     class Meta:
         model = SpeechCluster
-        fields = ['type']
+        fields = ['id']
 
 #
 # API class-based views
@@ -359,7 +360,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
     paginate_by = PAGE_SIZE
-    ordering = ['cluster__work__id', 'seq']    
+    ordering = ['work', 'seq']    
     _valid_params = [
         ('spkr_id', int),
         ('addr_id', int),
@@ -368,7 +369,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         ('spkr_inst', int),
         ('addr_inst', int),
         ('cluster_id', int),
-        ('cluster_type', str),
+        ('type', str),
         ('part', int),
         ('n_parts', int),
         ('work_id', int),
@@ -384,7 +385,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         context['reader'] = CTS_READER
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
-        context['speech_types'] = SpeechCluster.ClusterType.choices
+        context['speech_types'] = Speech.SpeechType.choices
         context['search_params'] = self.params.items()
         
         return context
@@ -427,8 +428,8 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         if 'cluster_id' in self.params:
             query.append(Q(cluster__pk=self.params['cluster_id']))
         
-        if 'cluster_type' in self.params:
-            query.append(Q(cluster__type=self.params['cluster_type']))
+        if 'type' in self.params:
+            query.append(Q(type=self.params['type']))
         
         if 'part' in self.params:
             query.append(Q(part=self.params['part']))
@@ -441,7 +442,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         
         qs = qs.filter(*query)
         qs = qs.order_by('seq')
-        qs = qs.order_by('cluster__work')
+        qs = qs.order_by('work')
 
         return qs
         
@@ -521,7 +522,7 @@ class AppSpeechSearch(LoginRequiredMixin, TemplateView):
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
         context['max_parts'] = Speech.objects.aggregate(Max('part'))['part__max']
-        context['speech_types'] = SpeechCluster.ClusterType.choices
+        context['speech_types'] = Speech.SpeechType.choices
         return context
 
 
@@ -537,7 +538,7 @@ class AppSpeechClusterSearch(LoginRequiredMixin, TemplateView):
         # add useful info
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
-        context['speech_types'] = SpeechCluster.ClusterType.choices
+        context['speech_types'] = Speech.SpeechType.choices
         return context
 
 

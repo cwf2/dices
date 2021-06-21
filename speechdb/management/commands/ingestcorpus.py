@@ -1,5 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
+import django.db.utils
 from speechdb.models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
 import csv
 import os
@@ -32,10 +33,10 @@ def addAuthors(file):
         
     for rec in reader:
         a = Author()
-        a.id = int(rec.get('id'))
-        a.name = rec.get('name')
-        a.wd = rec.get('wd')
-        a.urn = rec.get('urn')
+        a.id = int(rec.get('id').strip())
+        a.name = rec.get('name').strip()
+        a.wd = rec.get('wd').strip()
+        a.urn = rec.get('urn').strip()
         a.save()
 
 
@@ -46,12 +47,13 @@ def addWorks(file):
     
     for rec in reader:
         w = Work()
-        w.id = int(rec.get('id'))
-        auth_id = int(rec.get('author'))
+        w.id = int(rec.get('id').strip())
+        auth_id = int(rec.get('author').strip())
         w.author = Author.objects.get(id=auth_id)
-        w.title = rec.get('title')
-        w.wd = rec.get('wd')
-        w.urn = rec.get('urn')
+        w.title = rec.get('title').strip()
+        w.lang = rec.get('lang').strip()
+        w.wd = rec.get('wd').strip()
+        w.urn = rec.get('urn').strip()
         w.save()
 
 
@@ -123,7 +125,7 @@ def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
     # details of this instance
     instance_params = {
         'name': name,
-        'context': speech.cluster.work.title,
+        'context': speech.work.title,
     }
 
     # look for the name in characters list, alt ids, anonymous chars
@@ -188,28 +190,15 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
             continue
         s.l_fi = f'{book}.{line_from}'
         s.l_la = f'{book}.{line_to}'
+        s.type = rec.get('simple_cluster_type').strip()[0].upper()
+        s.work = Work.objects.get(id=int(rec.get('work_id')))
         
         # cluster details
         cluster_id = rec.get('cluster_id').strip() or None
         if cluster_id is None:
             print(f'{s} has no cluster ID: skipping.')
             continue
-        try:
-            s.cluster = SpeechCluster.objects.get(id=int(cluster_id))
-        except SpeechCluster.DoesNotExist:
-            c = SpeechCluster()
-            c.id = cluster_id
-            work_id = int(rec.get('work_id'))
-            c.work = Work.objects.get(id=work_id)
-            type_ = rec.get('simple_cluster_type').strip()[0].upper()
-            if type_ in SpeechCluster.ClusterType.names:
-                c.type = SpeechCluster.ClusterType[type_]
-            elif type_ in SpeechCluster.ClusterType.values:
-                c.type = type_
-            else:
-                print(f'Bad cluster type: {type_}')
-            c.save()
-            s.cluster = c
+        s.cluster, created = SpeechCluster.objects.get_or_create(id=cluster_id)
 
         part = rec.get('cluster_part').strip() or None
         if part is None:
