@@ -156,7 +156,7 @@ class SpeechClusterFilter(filters.FilterSet):
 class AuthorList(ListAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
-    filterset_class=AuthorFilter
+    filterset_class = AuthorFilter
 
 
 class AuthorDetail(RetrieveAPIView):
@@ -167,7 +167,7 @@ class AuthorDetail(RetrieveAPIView):
 class WorkList(ListAPIView):
     queryset = Work.objects.all()
     serializer_class = WorkSerializer
-    filterset_class=WorkFilter
+    filterset_class = WorkFilter
 
 
 class WorkDetail(RetrieveAPIView):
@@ -200,7 +200,7 @@ class CharacterInstanceDetail(RetrieveAPIView):
 class SpeechList(ListAPIView):
     queryset = Speech.objects.all()
     serializer_class = SpeechSerializer
-    filterset_class=SpeechFilter
+    filterset_class = SpeechFilter
 
 
 class SpeechDetail(RetrieveAPIView):
@@ -211,7 +211,7 @@ class SpeechDetail(RetrieveAPIView):
 class SpeechClusterList(ListAPIView):
     queryset = SpeechCluster.objects.all()
     serializer_class = SpeechClusterSerializer
-    filterset_class=SpeechClusterFilter    
+    filterset_class = SpeechClusterFilter    
 
 
 class SpeechClusterDetail(RetrieveAPIView):

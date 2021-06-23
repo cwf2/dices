@@ -176,20 +176,24 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
         
         # text details
         s.seq = int(rec.get('seq'))
-        book = rec.get('book').strip() or None
-        if book is None:
-            print(f'{s} has no book. skipping.')
+        book_fi = rec.get('from_book').strip()
+        if book_fi == '':
+            print(f'{s} has no from_book. skipping.')
             continue
-        line_from = rec.get('from_line').strip() or None
-        if line_from is None:
+        line_fi = rec.get('from_line').strip()
+        if line_fi == '':
             print(f'{s} has no from_line. skipping.')
             continue
-        line_to = rec.get('to_line').strip() or None
-        if line_to is None:
+        book_la = rec.get('from_book').strip()
+        if book_la == '':
+            print(f'{s} has no to_book. skipping.')
+            continue
+        line_la = rec.get('to_line').strip()
+        if line_la == '':
             print(f'{s} has no to_line. skipping.')
             continue
-        s.l_fi = f'{book}.{line_from}'
-        s.l_la = f'{book}.{line_to}'
+        s.l_fi = f'{book_fi}.{line_fi}'
+        s.l_la = f'{book_la}.{line_la}'
         s.type = rec.get('simple_cluster_type').strip()[0].upper()
         s.work = Work.objects.get(id=int(rec.get('work_id')))
         
