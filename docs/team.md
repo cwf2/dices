@@ -1,7 +1,7 @@
 ---
 title: Team
 layout: page
-permalink: /about/
+permalink: /team/
 ---
 
 <ul style="list-style-type: none">
