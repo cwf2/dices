@@ -1,2 +1,4 @@
 theme: minima
-email: cforstall@mta.ca
+author:
+	name: Chris Forstall
+	email: cforstall@mta.ca
