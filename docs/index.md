@@ -1,9 +1,8 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: page
 ---
+
+### Direct speech in Greek and Latin Epic, from Homer to Nonnus
 
 DICES is an international research collaboration for the study of direct speech in Greek and Latin epic poetry. Through the use of digital methods, we are able to approach the poetry of late antiquity from a diachronic perspective based on distant reading of the larger epic corpus.
 
