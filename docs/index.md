@@ -1,5 +1,7 @@
 ---
+title: ""
 layout: page
+permalink: /
 ---
 
 ### Direct speech in Greek and Latin Epic, from Homer to Nonnus
