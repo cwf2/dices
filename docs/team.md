@@ -12,11 +12,8 @@ permalink: /team/
 
 <h4>Student research assistants</h4>
 
-<ul style="list-style-type: none">
-  <li>2021: Mathijs Clement, Merle Kallet, Anne Lautenschlager, Wyatt Stragg, Vic Vandendriessche, Jarno Vercamer</li>
-  <li>2020: Jule Andreeßen, Dawson Fraser, Ava Waugh</li>
-</ul>
+<p>Mathijs Clement, Merle Kallet, Anne Lautenschlager, Wyatt Stragg, Vic Vandendriessche, Jarno Vercamer</p>
 
 <h4>Funding</h4>
 
-This work is supported by a President’s Research and Creative Activities grant from Mount Allison University, including funds from the [J. E. A. Crake Foundation](http://jeacrakefoundation.org/), and by a research grant from the Interdisciplinary Faculty at the University of Rostock, Department [WKT: Wissen-Kultur-Transformation](https://www.inf.uni-rostock.de/wkt/).
+This work is supported by a President’s Research and Creative Activities grant from Mount Allison University, including funds from the [J. E. A. Crake Foundation](http://jeacrakefoundation.org/), by a research grant from the Interdisciplinary Faculty at the University of Rostock, Department [WKT: Wissen-Kultur-Transformation](https://www.inf.uni-rostock.de/wkt/), and by the  [Research Foundation Flanders](https://www.fwo.be) (FWO), grant 12N6819N. 
