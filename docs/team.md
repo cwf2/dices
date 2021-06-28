@@ -13,7 +13,7 @@ permalink: /team/
 <h4>Student research assistants</h4>
 
 <ul style="list-style-type: none">
-  <li>2021: Anne Lautenschlager, Wyatt Stragg</li>
+  <li>2021: Mathijs Clement, Merle Kallet, Anne Lautenschlager, Wyatt Stragg, Vic Vandendriessche, Jarno Vercamer</li>
   <li>2020: Jule Andreeßen, Dawson Fraser, Ava Waugh</li>
 </ul>
 
