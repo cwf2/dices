@@ -6,7 +6,7 @@ permalink: /team/
 
 <ul style="list-style-type: none">
   <li><strong>Simone Finkmann</strong>, University of Rostock, Germany</li>
-  <li><strong>Berenice Verhelst</strong>, Ghent University, Belgium</li>
+  <li><strong>Berenice Verhelst</strong>, University of Amsterdam, Netherlands</li>
   <li><strong>Chris Forstall</strong>, Mount Allison University, Canada</li>
 </ul>
 
