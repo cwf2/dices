@@ -7,3 +7,5 @@ id	author	title	wd	urn	lang
 6	5	Civil War	Q678375	urn:cts:latinLit:phi0917.phi001.perseus-lat2	latin
 7	6	Punica	Q1219433	urn:cts:latinLit:phi1345.phi001.perseus-lat2	latin
 8	7	Thebaid	Q2708117	urn:cts:latinLit:phi1020.phi001.perseus-lat2	latin
+9	8	Dionysiaca	Q634519	urn:cts:greekLit:tlg2045.tlg001.perseus-grc1	greek
+10	9	Posthomerica	Q1998710	urn:cts:greekLit:tlg2046.tlg001.perseus-grc1	greek
