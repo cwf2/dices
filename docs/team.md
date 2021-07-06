@@ -19,4 +19,4 @@ permalink: /team/
 
 <h4>Funding</h4>
 
-This work is supported by a President’s Research and Creative Activities grant from Mount Allison University, including funds from the [J. E. A. Crake Foundation](http://jeacrakefoundation.org/), and by a research grant from the Interdisciplinary Faculty at the University of Rostock, Department [WKT: Wissen-Kultur-Transformation](https://www.inf.uni-rostock.de/wkt/).
+The initial work on a prototype of the database was supported by a President’s Research and Creative Activities grant from Mount Allison University, including funds from the [J. E. A. Crake Foundation](http://jeacrakefoundation.org/), and by a research grant from the Interdisciplinary Faculty at the University of Rostock, Department [WKT: Wissen-Kultur-Transformation](https://www.inf.uni-rostock.de/wkt/).
