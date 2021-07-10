@@ -14,10 +14,20 @@
   <div class="form-group">
     <label for="sel_name">Name</label>
     <select class="form-control" id="sel_name" name="name">
-      <option value="" selected="selected">-----</option>
+      <option value="" selected="selected">-----</option> 
       {% for c in characters %}
       <option value="{{ c.name }}">{{ c.name }}</option>
       {% endfor %}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="sel_gender">Gender</label>
+    <select class="form-control" id="sel_gender" name="gender">
+      <option value="" selected="selected">-----</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="non-binary">Non-Binary</option>
+      <option value="none">None</option>
     </select>
   </div>
   <div class="form-group">
