@@ -17,6 +17,7 @@ logger = logging.getLogger(__name__)
 CTS_READER = 'https://scaife.perseus.org/reader/'
 PAGE_SIZE = 25
 
+
 # parameter validation
 def ValidateParams(request, valid_params):
     '''collect valid parameters, check types'''
@@ -29,6 +30,7 @@ def ValidateParams(request, valid_params):
                 try:
                     params[param] = vtype(val)
                 except ValueError:
+                    print("Value Error")
                     pass
     return params
 
@@ -244,6 +246,7 @@ class AppCharacterList(ListView):
     paginate_by = PAGE_SIZE
     _valid_params = [
         ('name', str),
+        ('gender', str)
     ]
     
     def get_context_data(self, **kwargs):
@@ -265,6 +268,9 @@ class AppCharacterList(ListView):
         if 'name' in self.params:
             query.append(Q(name=self.params['name']))
         
+        if 'gender' in self.params:
+            query.append(Q(gender=self.params['gender']))
+        
         qs = Character.objects.filter(*query).order_by('name')
         
         # calculate some useful counts
@@ -283,6 +289,7 @@ class AppCharacterInstanceList(ListView):
     paginate_by = PAGE_SIZE
     _valid_params = [
         ('name', str),
+        ('gender', str)
     ]
     
     def get_context_data(self, **kwargs):
