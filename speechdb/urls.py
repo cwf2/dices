@@ -12,6 +12,7 @@ frontend_urls = ([
     path('characters/<int:pk>', views.AppCharacterDetail.as_view(), name='character_detail'),
     path('characters/search/', views.AppCharacterSearch.as_view(), name='character_search'),
     path('instances/', views.AppCharacterInstanceList.as_view(), name='instances'),
+    path('instances/search', views.AppCharacterInstanceSearch.as_view(), name='instances_search'),
     path('instances/<int:pk>', views.AppCharacterInstanceDetail.as_view(), name='instance_detail'),    
     path('clusters/', views.AppSpeechClusterList.as_view(), name='clusters'),
     path('clusters/<int:pk>/', views.AppSpeechClusterDetail.as_view(), name='cluster_detail'),
