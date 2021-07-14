@@ -466,7 +466,9 @@ class AppSpeechClusterList(ListView):
     template_name = 'speechdb/speechcluster_list.html'
     queryset = SpeechCluster.objects.all()
     paginate_by = PAGE_SIZE
-    _valid_params = []
+    _valid_params = [
+
+    ]
     
     def get_queryset(self):
         # collect user search params
@@ -535,6 +537,7 @@ class AppSpeechClusterSearch(TemplateView):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
+        context['clusters'] = SpeechCluster.objects.all()
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
         context['speech_types'] = Speech.SpeechType.choices

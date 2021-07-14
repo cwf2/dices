@@ -125,6 +125,7 @@ class CharacterInstance(models.Model):
 
 class SpeechCluster(models.Model):
     '''A group of related speeches'''
+
     
     class Meta:
         ordering = ['speech']
@@ -152,6 +153,25 @@ class SpeechCluster(models.Model):
             chars.extend([str(c) for c in speech.addr.all()])
         chars = sorted(set(chars))
         return ', '.join(chars)
+
+    @property
+    def speakers(self):
+        speakersSquares = [speech.spkr.all() for speech in self.speech_set.all()]
+        newlist = []
+        for speakerChunk in speakersSquares:
+            for speaker in speakerChunk:
+                newlist.append(speaker)
+        return set(newlist)
+    
+    @property
+    def addressees(self):
+        addressesSquares = [speech.addr.all() for speech in self.speech_set.all()]
+        newlist = []
+        for addresseeChunk in addressesSquares:
+            for addressee in addresseeChunk: 
+                newlist.append(addressee)
+        return set(newlist)
+        
         
 
 class Speech(models.Model):

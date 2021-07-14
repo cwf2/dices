@@ -13,7 +13,7 @@
 <form action="{% url 'app:instances' %}" method="GET">
   <div class="form-group">
     <label for="sel_name">Name</label>
-    <select class="form-control" id="sel_name" name="name" onClick="selectStuff(this.form);">
+    <select class="form-control" id="sel_name" name="name">
       <option value="" selected="selected">-----</option> 
       {% for c in names %}
       <option value="{{ c }}">{{ c }}</option>

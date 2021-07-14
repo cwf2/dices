@@ -31,6 +31,13 @@
               </div>
             </li>
             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="link-drpdn-chars" href="#" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Speech Clusters</a>
+              <div class="dropdown-menu" aria-labelledby="link-drpdn-chars">
+
+              <a class="dropdown-item" href="{% url 'app:cluster_search' %}">Search</a>
+              <a class="dropdown-item" href="{% url 'app:clusters' %}">Show all</a>
+            </li>
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="link-drpdn-chars" href="#" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Characters</a>
               <div class="dropdown-menu" aria-labelledby="link-drpdn-chars">
 
