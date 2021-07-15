@@ -1,5 +1,5 @@
 ---
-title: Posts
+title: News
 layout: default
 ---
 

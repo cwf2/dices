@@ -4,6 +4,9 @@ layout: page
 permalink: /team/
 ---
 
+<div>
+<h4>Project Team</h4>
+
 <ul style="list-style-type: none">
   <li><strong>Simone Finkmann</strong>, University of Rostock, Germany</li>
   <li><strong>Berenice Verhelst</strong>, University of Amsterdam, Netherlands</li>
@@ -12,7 +15,21 @@ permalink: /team/
 
 <h4>Student research assistants</h4>
 
-<p>Mathijs Clement, Merle Kallet, Anne Lautenschlager, Wyatt Stragg, Vic Vandendriessche, Jarno Vercamer</p>
+<ul style="list-style-type: none">
+  <li>Mathijs Clement</li>
+  <li>Merle Kallet</li>
+  <li>Anne Lautenschlager</li>
+  <li>Wyatt Stragg</li>
+  <li>Vic Vandendriessche</li>
+  <li>Jarno Vercamer</li>
+</ul>
+
+<h4>Technical Collaborators</h4>
+
+<ul style="list-style-type: none">
+  <li>Karsten Labahn, University of Rostock, Digital Library Division</li>
+  <li>Robert Stephan, University of Rostock, Digital Library Division</li>
+</ul>
 
 <h4>Funding</h4>
 

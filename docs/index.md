@@ -2,12 +2,35 @@
 title: ""
 layout: page
 permalink: /
+long_title: "Epic Speeches Network"
 ---
 
-<h3>Direct speech in Greek and Latin Epic, from Homer to Nonnus</h3>
+The <strong>Epic Speeches Network</strong> aims to generate innovative new research on Greco-Roman epic poetry, particularly its use of direct speech, by combining methods and theoretical models from narratology, discourse analysis, linguistics and digital humanities, bringing together scholars with complementary expertise in a collaborative environment. 
 
-DICES is an international research collaboration for the study of direct speech in Greek and Latin epic poetry. Through the use of digital methods, we are able to approach the poetry of late antiquity from a diachronic perspective based on distant reading of the larger epic corpus.
+The initiative for this new network was taken by the <a href="/dices/">DICES project</a>, but the founders warmly invite new members to take part in the network’s joint research agenda. As a first research project, we are working towards a peer-reviewed edited volume showcasing the potential of experimental digital methods (such as the DICES database) for diachronic analysis of speech in the Graeco-Roman epic tradition. To this end, the network is organizing a <a href="/cfp/">series of workshops</a> at the University of Rostock (Germany) 2022 and Mount Allison University (Canada) 2023.
 
-<h4>Linked open data for speeches</h4>
+<h4>Founders</h4>
 
-The heart of the project is an effort to construct a **comprehensive, authoritative database of direct speech in Greek and Latin epic**. Standard identifiers for characters and textual loci permit us to draw on (and contribute to) an extensive ecosystem of linked open data for Classics, further broadening the potential reach of our analysis.
+<ul style="list-style-type: none">
+  <li><strong>Simone Finkmann</strong>, University of Rostock</li>
+  <li><strong>Berenice Verhelst</strong>, University of Amsterdam</li>
+  <li><strong>Chris Forstall</strong>, Mount Allison University</li>
+</ul>
+
+
+<h4>Advisory Board</h4>
+
+<ul style="list-style-type: none">
+  <li><strong>Irene de Jong</strong>, University of Amsterdam</li>
+  <li><strong>William Dominik</strong>, University of Lisbon</li>
+  <li><strong>Greta Hawes</strong>, Australian National University</li>
+  <li><strong>Jacqueline Klooster</strong>, University of Groningen</li>
+  <li><strong>Damien Nelis</strong>, University of Geneva</li>
+  <li><strong>Matteo Romanello</strong>, Ecole Polytechnique Fédérale de Lausanne</li>
+  <li><strong>R. Scott Smith</strong>, University of New Hampshire</li>
+  <li><strong>Tim Whitmarsh</strong>, University of Cambridge</li>
+</ul>
+ 
+<h4>Joining the Epic Speeches Network?</h4>
+
+For more details see the call for contributors or contact <a href="mailto:info@epicspeeches.net">mailto:info@epicspeeches.net</a>.

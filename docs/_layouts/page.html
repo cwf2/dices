@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    {% if page.long_title %}
+    <h1 style="font-size:150%; font-weight: bold" class="post-title">{{ page.long_title | escape }}</h1>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>
