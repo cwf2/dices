@@ -7,7 +7,7 @@ long_title: "Epic Speeches Network"
 
 The <strong>Epic Speeches Network</strong> aims to generate innovative new research on Greco-Roman epic poetry, particularly its use of direct speech, by combining methods and theoretical models from narratology, discourse analysis, linguistics and digital humanities, bringing together scholars with complementary expertise in a collaborative environment. 
 
-The initiative for this new network was taken by the <a href="/dices/">DICES project</a>, but the founders warmly invite new members to take part in the network’s joint research agenda. As a first research project, we are working towards a peer-reviewed edited volume showcasing the potential of experimental digital methods (such as the DICES database) for diachronic analysis of speech in the Graeco-Roman epic tradition. To this end, the network is organizing a <a href="/cfp/">series of workshops</a> at the University of Rostock (Germany) 2022 and Mount Allison University (Canada) 2023.
+The initiative for this new network was taken by the <a href="/dices">DICES project</a>, but the founders warmly invite new members to take part in the network’s joint research agenda. As a first research project, we are working towards a peer-reviewed edited volume showcasing the potential of experimental digital methods (such as the DICES database) for diachronic analysis of speech in the Graeco-Roman epic tradition. To this end, the network is organizing a <a href="/cfp">series of workshops</a> at the University of Rostock (Germany) 2022 and Mount Allison University (Canada) 2023.
 
 <h4>Founders</h4>
 
