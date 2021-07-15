@@ -21,11 +21,13 @@ The heart of the project is an effort to construct a <strong>comprehensive, auth
 
 <ul style="list-style-type: none">
   <li>Mathijs Clement</li>
+  <li>Dawson Fraser</li>
   <li>Merle Kallet</li>
   <li>Anne Lautenschlager</li>
   <li>Wyatt Stragg</li>
   <li>Vic Vandendriessche</li>
   <li>Jarno Vercamer</li>
+  <li>Ava Waugh</li>
 </ul>
 
 <h4>Technical Collaborators</h4>
