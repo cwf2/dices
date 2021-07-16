@@ -1,7 +1,7 @@
 ---
 title: CFP
 layout: page
-permalink: /cfp/
+permalink: /cfp
 long_title: "Call for Contributors: Epic Speeches Network"
 ---
 

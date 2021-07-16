@@ -33,8 +33,8 @@ The heart of the project is an effort to construct a <strong>comprehensive, auth
 <h4>Technical Collaborators</h4>
 
 <ul style="list-style-type: none">
-  <li>Karsten Labahn, University of Rostock, Digital Library Division</li>
-  <li>Robert Stephan, University of Rostock, Digital Library Division</li>
+  <li><strong>Karsten Labahn</strong>, University of Rostock, Digital Library Division</li>
+  <li><strong>Robert Stephan</strong>, University of Rostock, Digital Library Division</li>
 </ul>
 
 
@@ -64,6 +64,6 @@ These benefits will, however, not only be limited to the field of discourse anal
 
 <h4>Funding</h4>
 
-The initial work on a prototype of the database was supported by a President’s Research and Creative Activities grant from Mount Allison University, including funds from the [J. E. A. Crake Foundation](http://jeacrakefoundation.org/), and by a research grant from the Interdisciplinary Faculty at the University of Rostock, Department [WKT: Wissen-Kultur-Transformation](https://www.inf.uni-rostock.de/wkt/).
-
-Ongoing development of the database for direct speeches in ancient and late antique Graeco-Roman epic is supported by an Insight Development Grant (1 June 2021 – 31 May 2023) of the Canadian Social Sciences and Humanities Research Council (SSHRC).
+The initial work on a prototype of the database was supported by a President’s Research and Creative Activities grant from Mount Allison University, including funds from the [J. E. A. Crake Foundation](http://jeacrakefoundation.org/), by a Mare Balticum Fellowship and a research grant from the Interdisciplinary Faculty (INF) at the University of Rostock, Department [WKT: Wissen-Kultur-Transformation](https://www.inf.uni-rostock.de/wkt/), by the [European Social Fund for Germany](https://www.esf.de/portal/EN/Home/home.html) (ESF), and by the [Research Foundation Flanders](https://www.fwo.be/en/) (FWO), grant 12N6819N.
+ 
+Ongoing development of the database for direct speeches in ancient and late antique Graeco-Roman epic is supported by an Insight Development Grant (1 June 2021 – 31 May 2023) of the Canadian [Social Sciences and Humanities Research Council](https://www.sshrc-crsh.gc.ca/) (SSHRC).

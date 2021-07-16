@@ -1,11 +1,12 @@
-title: Epic Speeches Network
-description: Direct speech in Greek and Latin epic, from Homer to Nonnus
+title: DICES
+description: Direct speech in Greek and Latin epic, from Homer to Late Antiquity
 theme: minima
 author:
   name: Chris Forstall
   email: cforstall@mta.ca
 contact_email: info@epicspeeches.net
 header_pages:
-  - dices.md
+  - index.md
+  - network.md
   - cfp.md
   - posts.md
