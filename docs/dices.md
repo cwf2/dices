@@ -1,5 +1,5 @@
 ---
-title: DICES
+title: "About DICES"
 layout: page
 permalink: /dices
 long_title: "Digital Initiative for Classics: Epic Speeches (DICES)"

@@ -1,7 +1,7 @@
 ---
 title: "About DICES"
 layout: page
-permalink: /dices
+permalink: /
 long_title: "Digital Initiative for Classics: Epic Speeches (DICES)"
 ---
 
