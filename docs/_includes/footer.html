@@ -9,7 +9,10 @@
       <div class="footer-col">
         <div style="font-weight:bold">{{ site.title | escape }}</div>
         <div>{{ site.description | escape }}</div>
-        <div><a class="u-email" href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></div>
+        <div>
+          <i class="far fa-envelope"></i>
+          <a class="u-email" href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
+        </div>
       </div>
     </div>
 
