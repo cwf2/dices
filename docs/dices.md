@@ -53,7 +53,7 @@ These benefits will not be limited to the field of discourse analysis and narrat
 
 <ul>
   <li>To generate a comprehensive and openly accessible authoritative data corpus that introduces a new standard for the study of direct speech in ancient and late antique epic</li>
-  <li>To develop an effective, freely and long-term accessible digital research tool and scalable analytical platform for storing, accessing, analysing, and visualising this data corpus and the complex heterogenous relationships between its individual entries, that will provide lasting benefits to students and scholars working in the field of discourse analysis and narratology in Graeco-Roman epic but also the national and international academic community at large.
+  <li>To develop an effective, freely and long-term accessible digital research tool and scalable analytical platform for storing, accessing, analysing, and visualising this data corpus and the complex heterogenous relationships between its individual entries, that will provide lasting benefits to students and scholars working in the field of discourse analysis and narratology in Graeco-Roman epic but also the national and international academic community at large.</li>
   <li>To render future quantitative work in this field more transparent, comparable, and easier to recreate through a unified system of calculation and speech classification</li>
   <li>To advance the study of discourse analysis and narratology in Graeco-Roman epic and help facilitate a great variety of synchronic and diachronic approaches to speech representation in epic poetry</li>
   <li>To help unite disparate data sets through national and international cooperation and transparency</li>
