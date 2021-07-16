@@ -20,6 +20,7 @@ The heart of the project is an effort to construct a <strong>comprehensive, auth
 <h4>Student research assistants</h4>
 
 <ul style="list-style-type: none">
+  <li>Jule Andreeßen</li>
   <li>Mathijs Clement</li>
   <li>Dawson Fraser</li>
   <li>Merle Kallet</li>
