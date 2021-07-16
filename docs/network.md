@@ -33,4 +33,4 @@ The initiative for this new network was taken by the <a href="/dices">DICES proj
  
 <h4>Joining the Epic Speeches Network?</h4>
 
-For more details see the call for contributors or contact <a href="mailto:info@epicspeeches.net">mailto:info@epicspeeches.net</a>.
+For more details see the call for contributors or contact <a href="mailto:info@epicspeeches.net">info@epicspeeches.net</a>.
