@@ -10,3 +10,4 @@ header_pages:
   - network.md
   - cfp.md
   - posts.md
+google_analytics: True
