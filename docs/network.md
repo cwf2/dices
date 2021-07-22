@@ -13,8 +13,8 @@ The initiative for this new network was taken by the <a href="/dices">DICES proj
 
 <ul style="list-style-type: none">
   <li><strong>Simone Finkmann</strong>, University of Rostock</li>
-  <li><strong>Berenice Verhelst</strong>, University of Amsterdam</li>
   <li><strong>Chris Forstall</strong>, Mount Allison University</li>
+  <li><strong>Berenice Verhelst</strong>, University of Amsterdam</li>
 </ul>
 
 
