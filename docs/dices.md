@@ -13,11 +13,11 @@ The heart of the project is an effort to construct a <strong>comprehensive, auth
 
 <ul style="list-style-type: none">
   <li><strong>Simone Finkmann</strong>, University of Rostock, Germany</li>
-  <li><strong>Berenice Verhelst</strong>, University of Amsterdam, Netherlands</li>
   <li><strong>Chris Forstall</strong>, Mount Allison University, Canada</li>
+  <li><strong>Berenice Verhelst</strong>, University of Amsterdam, Netherlands</li>
 </ul>
 
-<h4>Student research assistants</h4>
+<h4>Student Research Assistants</h4>
 
 <ul style="list-style-type: none">
   <li>Jule Andreeßen</li>
@@ -58,13 +58,13 @@ These benefits will not be limited to the field of discourse analysis and narrat
   <li>To advance the study of discourse analysis and narratology in Graeco-Roman epic and help facilitate a great variety of synchronic and diachronic approaches to speech representation in epic poetry</li>
   <li>To help unite disparate data sets through national and international cooperation and transparency</li>
   <li>To achieve a greater standardisation and connectivity of projects and data on direct speech in Graeco-Roman epic as well as digital initiatives in related fields</li>
-  <li>To contribute to a greater understanding of the poetic contributions of Late Antiquity and to the integration of Late Antique texts and Digital Humanities initiatives for Classics </li>
+  <li>To contribute to a greater understanding of the poetic contributions of Late Antiquity and to the integration of late antique texts and Digital Humanities initiatives for Classics </li>
   <li>To not simply recapitulate the traditional methods of philology, but to empower scholars to ask entirely new kinds of questions about large and diverse data corpora</li>
   <li>To train leading and emerging scholars in Classics and neighbouring disciplines in the use of digital technology and help them build a new expertise in humanities to encourage and support their approach to this strongly emerging discipline.</li>
 </ul>
 
 <h4>Funding</h4>
 
-The initial work on a prototype of the database was supported by a President’s Research and Creative Activities grant from Mount Allison University, including funds from the [J. E. A. Crake Foundation](http://jeacrakefoundation.org/), by a Mare Balticum Fellowship and a research grant from the Interdisciplinary Faculty (INF) at the University of Rostock, Department [WKT: Wissen-Kultur-Transformation](https://www.inf.uni-rostock.de/wkt/), by the [European Social Fund for Germany](https://www.esf.de/portal/EN/Home/home.html) (ESF), and by the [Research Foundation Flanders](https://www.fwo.be/en/) (FWO), grant 12N6819N.
+The initial work on a prototype of the database was supported by a President’s Research and Creative Activities grant from Mount Allison University, including funds from the [J. E. A. Crake Foundation](http://jeacrakefoundation.org/), by a Mare Balticum Fellowship and a research grant from the Interdisciplinary Faculty (INF) at the University of Rostock, Department [WKT: Wissen-Kultur-Transformation](https://www.inf.uni-rostock.de/wkt/), by the [European Social Fund for Germany](https://www.esf.de/portal/EN/Home/home.html) (ESF), and by the [Research Foundation Flanders](https://www.fwo.be/en/) (FWO).
  
 Ongoing development of the database for direct speeches in ancient and late antique Graeco-Roman epic is supported by an Insight Development Grant (1 June 2021 – 31 May 2023) of the Canadian [Social Sciences and Humanities Research Council](https://www.sshrc-crsh.gc.ca/home-accueil-eng.aspx) (SSHRC).
