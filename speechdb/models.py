@@ -1,5 +1,10 @@
 from django.db import models
 
+# Metadata about the database itself
+class Metadata(models.Model):
+    name = models.CharField(max_length=64, blank=False, unique=True)
+    value = models.TextField()
+
 # Entity classes
 
 class Author(models.Model):

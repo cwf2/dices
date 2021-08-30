@@ -6,6 +6,7 @@ frontend_urls = ([
     path('', views.AppIndex.as_view(), name='index'),
     path('login/', auth_views.LoginView.as_view(template_name='speechdb/login.html'), name='login'),
     path('logout/', auth_views.logout_then_login, {'login_url':'app:index'}, name='logout'),
+    path('meta/', views.AppMetadataList.as_view(), name='meta'),
     path('authors/', views.AppAuthorList.as_view(), name='authors'),
     path('works/', views.AppWorkList.as_view(), name='works'),
     path('characters/', views.AppCharacterList.as_view(), name='characters'),
@@ -22,6 +23,7 @@ frontend_urls = ([
 ], 'app')
 
 api_urls = ([
+    path('meta/', views.MetadataList.as_view()),
     path('authors/', views.AuthorList.as_view()),
     path('authors/<int:pk>/', views.AuthorDetail.as_view()),
     path('works/', views.WorkList.as_view()),

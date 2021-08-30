@@ -1,10 +1,12 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
 import django.db.utils
+from speechdb.models import Metadata
 from speechdb.models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
 import csv
 import os
 import re
+import time
 from django.core import serializers
 
 
@@ -286,3 +288,7 @@ class Command(BaseCommand):
             self.stderr.write(f'Reading data from {speech_file}')
             addSpeeches(speech_file, characters=characters, alt_chars=alt_chars,
                         anon_chars=anon_chars)
+        
+        # metadata
+        Metadata(name='version', value='0.1').save()
+        Metadata(name='date', value=time.strftime('%Y-%m-%d %H:%M:%S %z')).save()

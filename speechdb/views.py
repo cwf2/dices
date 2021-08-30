@@ -7,7 +7,9 @@ from django.views.generic import ListView, DetailView, TemplateView
 from django_filters.views import FilterView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from django_filters import rest_framework as filters
+from .models import Metadata
 from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
+from .serializers import MetadataSerializer
 from .serializers import AuthorSerializer, WorkSerializer, CharacterSerializer, CharacterInstanceSerializer, SpeechSerializer, SpeechClusterSerializer
 
 import logging
@@ -37,6 +39,12 @@ def ValidateParams(request, valid_params):
 #
 # API filters
 #
+
+class MetadataFilter(filters.FilterSet):
+    class Meta:
+        model = Metadata
+        fields = ['name']
+
 
 class AuthorFilter(filters.FilterSet):
     class Meta:
@@ -155,6 +163,11 @@ class SpeechClusterFilter(filters.FilterSet):
 # API class-based views
 #
 
+class MetadataList(ListAPIView):
+    queryset = Metadata.objects.all()
+    serializer_class = MetadataSerializer
+    filterset_class = MetadataFilter
+
 class AuthorList(ListAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
@@ -224,6 +237,12 @@ class SpeechClusterDetail(RetrieveAPIView):
 #
 # Web frontend class-based views
 #
+
+class AppMetadataList(ListView):
+    model = Metadata
+    template_name = 'speechdb/metadata_list.html'
+    queryset = Metadata.objects.all()
+
 
 class AppAuthorList(ListView):
     model = Author
