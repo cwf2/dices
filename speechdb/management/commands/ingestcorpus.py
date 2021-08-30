@@ -184,7 +184,7 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
         if line_fi == '':
             print(f'{s} has no from_line. skipping.')
             continue
-        book_la = rec.get('from_book').strip()
+        book_la = rec.get('to_book').strip()
         if book_la == '':
             print(f'{s} has no to_book. skipping.')
             continue
