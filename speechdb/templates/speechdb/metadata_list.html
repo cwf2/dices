@@ -1,0 +1,24 @@
+{% extends "speechdb/results.html" %}
+
+{% block title %}Database Information{% endblock %}
+{% block sidebar_title %}DB Info{% endblock %}
+{% block sidebar_content %}
+<p>
+  Version information for the database.
+</p>
+{% endblock %}
+
+{% block results %}
+<table class="table">
+  <thead>
+  </thead>
+  <tbody>
+    {% for rec in object_list %}
+    <tr>
+      <th>{{ rec.name }}</th>
+      <td>{{ rec.value }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
