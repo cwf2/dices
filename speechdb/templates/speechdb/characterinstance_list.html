@@ -6,13 +6,16 @@
 {% block results %}
 <table class="table table-striped">
   <thead>
-    <tr><th>Name</th><th>Context</th><th>Speaker</th><th>Addressee</th>
+    <tr><th>Name</th><th>Being</th><th>Disguise</th><th>Context</th><th>Anonymous</th><th>Speaker</th><th>Addressee</th>
   </thead>
   <tbody>
     {% for inst in page_obj %}
     <tr>
       <td>{{ inst.get_long_name }}</td>
+      <td>{{ inst.being }}</td>
+      <td>{{ inst.disg }}</td>
       <td>{{ inst.context }}</td>      
+      <td>{% if inst.anon %}Yes{% else %}No{% endif %}</td>
       <td>
         <a href="{% url 'app:speeches' %}?spkr_inst=inst.pk">
         {{ inst.speeches__count }}

@@ -7,7 +7,9 @@ from django.views.generic import ListView, DetailView, TemplateView
 from django_filters.views import FilterView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from django_filters import rest_framework as filters
+from .models import Metadata
 from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
+from .serializers import MetadataSerializer
 from .serializers import AuthorSerializer, WorkSerializer, CharacterSerializer, CharacterInstanceSerializer, SpeechSerializer, SpeechClusterSerializer
 
 import logging
@@ -16,6 +18,7 @@ logger = logging.getLogger(__name__)
 
 CTS_READER = 'https://scaife.perseus.org/reader/'
 PAGE_SIZE = 25
+
 
 # parameter validation
 def ValidateParams(request, valid_params):
@@ -29,12 +32,19 @@ def ValidateParams(request, valid_params):
                 try:
                     params[param] = vtype(val)
                 except ValueError:
+                    print("Value Error")
                     pass
     return params
 
 #
 # API filters
 #
+
+class MetadataFilter(filters.FilterSet):
+    class Meta:
+        model = Metadata
+        fields = ['name']
+
 
 class AuthorFilter(filters.FilterSet):
     class Meta:
@@ -153,6 +163,11 @@ class SpeechClusterFilter(filters.FilterSet):
 # API class-based views
 #
 
+class MetadataList(ListAPIView):
+    queryset = Metadata.objects.all()
+    serializer_class = MetadataSerializer
+    filterset_class = MetadataFilter
+
 class AuthorList(ListAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
@@ -223,6 +238,12 @@ class SpeechClusterDetail(RetrieveAPIView):
 # Web frontend class-based views
 #
 
+class AppMetadataList(ListView):
+    model = Metadata
+    template_name = 'speechdb/metadata_list.html'
+    queryset = Metadata.objects.all()
+
+
 class AppAuthorList(ListView):
     model = Author
     template_name = 'speechdb/author_list.html'
@@ -244,6 +265,9 @@ class AppCharacterList(ListView):
     paginate_by = PAGE_SIZE
     _valid_params = [
         ('name', str),
+        ('gender', str),
+        ('being', str),
+        ('number', str)
     ]
     
     def get_context_data(self, **kwargs):
@@ -265,6 +289,15 @@ class AppCharacterList(ListView):
         if 'name' in self.params:
             query.append(Q(name=self.params['name']))
         
+        if 'gender' in self.params:
+            query.append(Q(gender=self.params['gender']))
+        
+        if 'being' in self.params:
+            query.append(Q(being=self.params['being']))
+
+        if 'number' in self.params:
+            query.append(Q(number=self.params['number']))
+        
         qs = Character.objects.filter(*query).order_by('name')
         
         # calculate some useful counts
@@ -283,6 +316,10 @@ class AppCharacterInstanceList(ListView):
     paginate_by = PAGE_SIZE
     _valid_params = [
         ('name', str),
+        ('gender', str),
+        ('number', str),
+        ('being', str),
+        ('anon', bool)
     ]
     
     def get_context_data(self, **kwargs):
@@ -302,9 +339,21 @@ class AppCharacterInstanceList(ListView):
         
         # speaker by id
         if 'name' in self.params:
-            query.append(Q(char__name=self.params['name']))
+            query.append(Q(name=self.params['name']))
         
-        qs = CharacterInstance.objects.filter(*query).order_by('char__name')
+        if 'gender' in self.params:
+            query.append(Q(gender=self.params['gender']))
+        
+        if 'being' in self.params:
+            query.append(Q(being=self.params['being']))
+
+        if 'number' in self.params:
+            query.append(Q(number=self.params['number']))
+         
+        if 'anon' in self.params:
+            query.append(Q(anon=self.params['anon']))
+        
+        qs = CharacterInstance.objects.filter(*query).order_by('name')
         
         # calculate some useful counts
         qs = qs.annotate(
@@ -436,7 +485,9 @@ class AppSpeechClusterList(ListView):
     template_name = 'speechdb/speechcluster_list.html'
     queryset = SpeechCluster.objects.all()
     paginate_by = PAGE_SIZE
-    _valid_params = []
+    _valid_params = [
+
+    ]
     
     def get_queryset(self):
         # collect user search params
@@ -505,6 +556,7 @@ class AppSpeechClusterSearch(TemplateView):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
+        context['clusters'] = SpeechCluster.objects.all()
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
         context['speech_types'] = Speech.SpeechType.choices
@@ -519,4 +571,15 @@ class AppCharacterSearch(TemplateView):
         context = super().get_context_data(**kwargs)
         # add useful info
         context['characters'] = Character.objects.all()
+        return context
+
+class AppCharacterInstanceSearch(TemplateView):
+    template_name = 'speechdb/instances_search.html'
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['characters'] = Character.objects.all()
+        context['names'] = sorted(set([c.name for c in CharacterInstance.objects.all()]))
         return context

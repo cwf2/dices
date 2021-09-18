@@ -1,5 +1,12 @@
 from rest_framework import serializers
+from speechdb.models import Metadata
 from speechdb.models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
+
+class MetadataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Metadata
+        fields = '__all__'
+
 
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:

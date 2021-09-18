@@ -10,13 +10,13 @@
 {% endblock %}
 
 {% block content %}
-<form action="{% url 'app:characters' %}" method="GET">
+<form action="{% url 'app:instances' %}" method="GET">
   <div class="form-group">
     <label for="sel_name">Name</label>
     <select class="form-control" id="sel_name" name="name">
       <option value="" selected="selected">-----</option> 
-      {% for c in characters %}
-      <option value="{{ c.name }}">{{ c.name }}</option>
+      {% for c in names %}
+      <option value="{{ c }}">{{ c }}</option>
       {% endfor %}
     </select>
   </div>
@@ -47,6 +47,14 @@
       <option value="individual">Individual</option>
       <option value="collective">Collective</option>
       <option value="other">Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="sel_anon">Anonymous</label>
+    <select class="form-control" id="sel_anon" name="anon">
+      <option value="" selected="selected">-----</option>
+      <option value="true">Yes</option>
+      <option value="false">No</option>
     </select>
   </div>
   <div class="form-group">
