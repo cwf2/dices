@@ -112,7 +112,7 @@ def addChars(file):
             print(f'Character {c} has no being')
         
         if c.name in characters or c.name in alt_chars or c.name in anon_chars:
-            print(f'Multiple records for name {c.name}!')
+            print(f'Multiple records for name {c.name}.')
         
         if c.same_as is not None:
             alt_chars[c.name] = c
@@ -151,7 +151,7 @@ def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
         try:
             instance_params['char'] = characters[c.same_as]
         except KeyError:
-            print(f'Pseud {name} points to non-existent char {same_as}!'.format(
+            print(f'Pseud {name} points to non-existent char {same_as}.'.format(
                     name=name, same_as=alt_chars[name].same_as))
             raise
     elif name in anon_chars:
@@ -163,7 +163,7 @@ def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
         instance_params['anon'] = c.anon
         instance_params['tags'] = c.tags
     else:
-        print(f'Failed to find character {name}!')
+        print(f'Failed to find character {name}.')
         return None
     
     #print(f'DEBUG: speech={speech}; params={instance_params}')
@@ -178,44 +178,45 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
     reader = csv.DictReader(f, delimiter='\t')
     
     skipped = []
+    seq = 1
     
     for rec in reader:
         s = Speech()
         errs = []
         
         # seq
-        try:
-            s.seq = int(rec.get('seq').strip())
-        except:
-            errs.append('seq')
+        s.seq = seq
+        seq += 1
 
         # locus
         try:
             book_fi = rec.get('from_book').strip()
-            assert book_fi != ''
+            assert book_fi
+            book_fi += '.'
         except:
-            errs.append('from_book')
+            book_fi = ''
+            
+        try:
+            book_la = rec.get('to_book').strip()
+            assert book_la
+            book_la += '.'
+        except:
+            book_la = ''
 
         try:
             line_fi = rec.get('from_line').strip()
-            assert line_fi != ''
+            assert line_fi
         except:
             errs.append('from_line')
-        
-        try:
-            book_la = rec.get('to_book').strip()
-            assert book_la != ''
-        except:
-            errs.append('to_book')
 
         try:
             line_la = rec.get('to_line').strip()
-            assert line_la != ''
+            assert line_la
         except:
             errs.append('to_line')
     
-        s.l_fi = f'{book_fi}.{line_fi}'
-        s.l_la = f'{book_la}.{line_la}'
+        s.l_fi = book_fi + line_fi
+        s.l_la = book_la + line_la
         
         # work
         try:
@@ -226,7 +227,7 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
         # cluster type
         try:
             s.type = rec.get('simple_cluster_type')[0].upper()
-            assert s.type != ''
+            assert s.type
         except:
             errs.append('simple_cluster_type')
             # temp value: speech should be deleted
@@ -272,7 +273,10 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
             errs.append('speaker')
         
         # speaker notes
-        s.spkr_notes = rec.get('speaker_notes').strip() or None
+        try:
+            s.spkr_notes = rec.get('speaker_notes').strip() or None
+        except AttributeError:
+            s.spkr_notes = None
 
         # addressees
         try:
@@ -292,7 +296,10 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
             errs.append('addressee')
 
         # addressee notes
-        s.addr_notes = rec.get('addressee_notes').strip() or None
+        try:
+            s.addr_notes = rec.get('addressee_notes').strip() or None
+        except AttributeError:
+            s.addr_notes = None
         
         # embeddedness
         try:
