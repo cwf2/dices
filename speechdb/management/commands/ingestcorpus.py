@@ -1,8 +1,12 @@
+'''ingestcorpus - read full dataset from a directory of tsv files
+'''
+
+
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
 import django.db.utils
 from speechdb.models import Metadata
-from speechdb.models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
+from speechdb.models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster, SpeechScene
 import csv
 import os
 import re
@@ -125,7 +129,8 @@ def addChars(file):
     return characters, alt_chars, anon_chars
 
     
-def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
+def addInst(name, speech, characters, alt_chars={}, anon_chars={}, 
+            is_absent=False):
     '''get or create character instance'''
     
     # details of this instance
@@ -151,8 +156,7 @@ def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
         try:
             instance_params['char'] = characters[c.same_as]
         except KeyError:
-            print(f'Pseud {name} points to non-existent char {same_as}.'.format(
-                    name=name, same_as=alt_chars[name].same_as))
+            print(f'Pseud {name} points to non-existent char {c.same_as}.')
             raise
     elif name in anon_chars:
         c = anon_chars[name]
@@ -166,6 +170,8 @@ def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
         print(f'Failed to find character {name}.')
         return None
     
+    instance_params['absent'] = is_absent
+    
     #print(f'DEBUG: speech={speech}; params={instance_params}')
     inst, created = CharacterInstance.objects.get_or_create(**instance_params)
     
@@ -178,134 +184,253 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
     reader = csv.DictReader(f, delimiter='\t')
     
     skipped = []
-    seq = 1
+    
+    enclosed_and = re.compile(r'\[.+\sand\s.+\]')
+    name_with_modifiers = re.compile(r'(\S.+?)\s*\[(.*)\]')
+    
+    seq = 0
     
     for rec in reader:
         s = Speech()
         errs = []
         
         # seq
+        try:
+            seq = int(rec.get('seq').strip())
+            assert seq
+        except ValueError:
+            seq += 1
+            errs.append('seq')
         s.seq = seq
-        seq += 1
+        
+        # id
+        try:
+            speech_id = int(rec.get('speech_id').strip())
+        except ValueError:
+            speech_id = None
+            errs.append('speech_id')
+            
+        # alternate reading for an existing speech
+        is_alt = bool(rec.get('alt').strip())
+        
+        if is_alt:
+            # TODO: implement alternate records
+            continue
+            
+        # edition
+        edition = rec.get('edition').strip()
 
         # locus
-        try:
-            book_fi = rec.get('from_book').strip()
-            assert book_fi
-            book_fi += '.'
-        except:
-            book_fi = ''
+        prefix_fi = rec.get('from_prefix').strip()
+        if prefix_fi:
+            prefix_fi += '.'
+        else:
+            prefix_fi = ''
             
-        try:
-            book_la = rec.get('to_book').strip()
-            assert book_la
-            book_la += '.'
-        except:
-            book_la = ''
+        prefix_la = rec.get('to_prefix').strip()
+        if prefix_la:
+            prefix_la += '.'
+        else:
+            prefix_la = ''
 
-        try:
-            line_fi = rec.get('from_line').strip()
-            assert line_fi
-        except:
+        line_fi = rec.get('from_line').strip()
+        if not line_fi:
             errs.append('from_line')
 
-        try:
-            line_la = rec.get('to_line').strip()
-            assert line_la
-        except:
+        line_la = rec.get('to_line').strip()
+        if not line_la:
             errs.append('to_line')
     
-        s.l_fi = book_fi + line_fi
-        s.l_la = book_la + line_la
+        s.l_fi = prefix_fi + line_fi
+        s.l_la = prefix_la + line_la
+        
+        
+        # partial lines
+        part_b = rec.get('b')
+        if part_b is not None:
+            part_b = part_b.strip().lower()
+            if part_b.startswith('y') or part_b.startswith('b'):
+                s.partial_b = True
+        
+        part_a = rec.get('a')
+        if part_a is not None:
+            part_a = part_a.strip().lower()
+            if part_a.startswith('y') or part_a.startswith('a'):
+                s.partial_a = True
         
         # work
         try:
-            s.work = Work.objects.get(id=int(rec.get('work_id')))
-        except:
+            work_id = int(rec.get('work_id').strip())
+        except ValueError:
             errs.append('work')
+        s.work = Work.objects.get(id=work_id)
 
         # cluster type
-        try:
-            s.type = rec.get('simple_cluster_type')[0].upper()
-            assert s.type
-        except:
+        cluster_type = rec.get('simple_cluster_type').strip()
+        if len(cluster_type) > 0:
+            s.type = cluster_type[0].upper()
+        else:
             errs.append('simple_cluster_type')
             # temp value: speech should be deleted
             s.type='M'
+
+        # speech_scene
+        try:
+            scene_id = int(rec.get('speech_scene').strip())
+        except ValueError:
+            errs.append('scene_id')
+            scene_id = 999999
+            
+        scene_title = rec.get('scene').strip()
         
-        # cluster_id
+        s.scene, created = SpeechScene.objects.get_or_create(id=scene_id)
+        
+        # speech cluster
         try:
             cluster_id = int(rec.get('cluster_id').strip())
-            s.cluster, created = SpeechCluster.objects.get_or_create(id=cluster_id)
-        except:
+        except ValueError:
             errs.append('cluster_id')
-            # temp value: speech should be deleted
-            s.cluster, created = SpeechCluster.objects.get_or_create(id=999999)
+            # temp value: speech should be deleted            
+            cluster_id = 999999
+            
+        s.cluster, created = SpeechCluster.objects.get_or_create(id=cluster_id)
 
         # cluster part
         try:
-            part = rec.get('cluster_part').strip()
-            if 'or' in part:
-                m = re.search('\d+', part)
-                if m:
-                    part = m.group(0)
-            s.part = int(part)
-        except:
+            part = int(rec.get('cluster_part').strip())
+        except ValueError:
             errs.append('part')
             # temp value: speech should be deleted
             s.part = 1
+        s.part = part
+
+        # self-address
+        s.self_addr = rec.get('inter se/secum').strip()
+        
+        # manual length
+        s.manual_length = rec.get('length').strip()
+        
+        # frequency
+        s.freq_notes = rec.get('frequency').strip()
+        s.freq = bool(s.freq_notes)
             
+        # misc notes
+        s.notes = rec.get('misc_notes').strip()
+        
         # speech must be saved before adding character instances
         s.save()
         
         # speakers
-        try:
-            spkr_str = rec.get('speaker').strip()
-            assert spkr_str != ''
+        spkr_str = rec.get('speaker').strip()
+        if spkr_str:
+        
+            if enclosed_and.search(spkr_str):
+                print('Found "and" within square brackets!')
 
             for name in spkr_str.split(' and '):
+                if name_with_modifiers.search(name):
+                    name = name_with_modifiers.sub(r'\1', name)
                 inst = addInst(name, s, characters=characters, 
                         alt_chars=alt_chars, anon_chars=anon_chars)
                 if inst is not None:
                     s.spkr.add(inst)
-            assert len(s.spkr.all()) > 0
-        except:
+        if s.spkr.count() == 0:
             errs.append('speaker')
         
         # speaker notes
-        try:
-            s.spkr_notes = rec.get('speaker_notes').strip() or None
-        except AttributeError:
-            s.spkr_notes = None
+        s.spkr_notes = rec.get('speaker_notes').strip()
 
-        # addressees
-        try:
-            addr_str = rec.get('addressee').strip()
-            assert addr_str != ''
+        # addressees        
+        addr_str = rec.get('addressee').strip() 
+        if addr_str:
+            if enclosed_and.search(addr_str):
+                print('Found "and" within square brackets!')
+            
+            addr = [name.strip() for name in addr_str.split(' and ')]
+            
+        else:
+            addr = []
+            print('No addressees!')
+            
+        # get the absent list
+        absent_str = rec.get('absent_addressees').strip()
+        if absent_str:
+            absent = [name.strip() for name in absent_str.split(' and ')]
+        else:
+            absent = []
 
-            for name in addr_str.split(' and '):
-                if name == 'self':
-                    inst = s.spkr.first()
-                else:
-                    inst = addInst(name, s, characters=characters,
-                            alt_chars=alt_chars, anon_chars=anon_chars)
-                if inst is not None:
-                    s.addr.add(inst)
-            assert len(s.addr.all()) > 0
-        except:
-            errs.append('addressee')
+        # now check each addressee against absent
+
+        for name in addr:
+            if name == 'self':
+                inst = s.spkr.first()
+            else:
+                if name_with_modifiers.search(name):
+                    name = name_with_modifiers.sub(r'\1', name)
+                
+                inst = addInst(name, s, characters=characters,
+                        alt_chars=alt_chars, anon_chars=anon_chars, 
+                        is_absent=(name in absent))
+            s.addr.add(inst)
 
         # addressee notes
-        try:
-            s.addr_notes = rec.get('addressee_notes').strip() or None
-        except AttributeError:
-            s.addr_notes = None
+        s.addr_notes = rec.get('addressee_notes').strip()
+        
+        # manually entered number of addressees
+        addr_num = rec.get('addressee_number').strip()
+        if addr_num == '∞':
+            s.addr_num = Speech.CharacterNumber.MANY
+        elif int(addr_num) == 1:
+            s.addr_num = Speech.CharacterNumber.ONE
+        elif int(addr_num) > 1:
+            s.addr_num = Speech.CharacterNumber.MANY
+        else:
+            errs.append('addressee_number')
+
+        # manually entered number of absent addressees
+        absent_num = rec.get('absent_number')
+        if absent_num:
+            if absent_num == '∞':
+                s.absent_num = Speech.CharacterNumber.MANY
+            elif int(absent_num) == 1:
+                s.absent_num = Speech.CharacterNumber.ONE
+            elif int(absent_num) > 1:
+                s.absent_num = Speech.CharacterNumber.MANY
+            else:
+                errs.append('absent_number')
+        else:
+            absent_num = Speech.CharacterNumber.ZERO
+            
+        # bystanders
+        byst_str = rec.get('bystanders').strip()
+        if byst_str.lower() == 'unspecified':
+            s.bystanders_num = Speech.CharacterNumber.UNSPECIFIED
+        elif byst_str.lower() == 'none':
+            s.bystanders_num = Speech.CharacterNumber.ZERO
+        elif byst_str != '':
+            for name in byst_str.split(' and '):
+                inst = addInst(name, s, characters=characters,
+                        alt_chars=alt_chars, anon_chars=anon_chars)
+                if inst is not None:
+                    s.bystanders.add(inst)
+            if s.bystanders.count() == 1:
+                s.bystanders_num = Speech.CharacterNumber.ONE
+            elif s.bystanders.count() > 1:
+                s.bystanders_num = Speech.CharacterNumber.MANY
+        else:
+            errs.append('bystanders_num')
         
         # embeddedness
         try:
-            s.level = int(rec.get('embedded_level').strip())
-        except:
-            errs.append('embedded_level')
+            level = int(rec.get('embedded_level').strip())
+        except ValueError:
+            errs.append('invalid_embedded_level')
+            
+            if s.cluster.embedded_level is None:
+                s.cluster.embedded_level = level
+            else:
+                if s.cluster.embedded_level != level:
+                    errs.append('embedded_level_mismatch')
         
         # general notes
         s.notes = rec.get('misc_notes').strip() or None

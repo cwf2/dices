@@ -103,10 +103,15 @@ class CharacterInstance(models.Model):
             choices=Character.CharacterGender.choices,
             default=Character.CharacterGender.NA)
     char = models.ForeignKey(Character, related_name='instances', 
-            null=True, on_delete=models.PROTECT)
+            blank=True, null=True, on_delete=models.PROTECT)
     disg = models.ForeignKey(Character, related_name='disguises', 
-            null=True, on_delete=models.PROTECT)
+            blank=True, null=True, on_delete=models.PROTECT)
     anon = models.BooleanField(default=False)
+    possessed = models.ForeignKey(Character, related_name='possessions',
+            blank=True, null=True, on_delete=models.PROTECT)
+    dead = models.BooleanField(default=False)
+    absent = models.BooleanField(default=False)
+    absent_notes = models.CharField(max_length=128, blank=True)
     #TODO tuple (char, context) should be unique
     context = models.CharField(max_length=128)
     tags = models.JSONField(default=dict)
@@ -128,13 +133,31 @@ class CharacterInstance(models.Model):
         return name
 
 
+class SpeechScene(models.Model):
+    '''A group of speech clusters sharing location/characters'''
+    
+    title = models.CharField(max_length=64)
+    
+
 class SpeechCluster(models.Model):
     '''A group of related speeches'''
 
-    
     class Meta:
         ordering = ['speech']
-        
+
+    class ClusterType(models.TextChoices):
+        SOLILOQUY = ('S', 'Soliloquy')
+        MONOLOGUE = ('M', 'Monologue')
+        DIALOGUE = ('D', 'Dialogue')
+        GENERAL = ('G', 'General')
+
+    # embeddedness
+    embedded_in = models.ForeignKey('Speech', on_delete=models.CASCADE, null=True)
+    embedded_level = models.IntegerField(null=True)
+    
+    # type
+    type = models.CharField(max_length=1, choices=ClusterType.choices)
+                
     def get_spkr_str(self):
         '''Return speaker list as a string'''
         chars = []
@@ -182,23 +205,60 @@ class SpeechCluster(models.Model):
 class Speech(models.Model):
     '''A direct speech instance'''
     
-    class SpeechType(models.TextChoices):
-        SOLILOQUY = ('S', 'Soliloquy')
-        MONOLOGUE = ('M', 'Monologue')
-        DIALOGUE = ('D', 'Dialogue')
-        GENERAL = ('G', 'General')
-    
-    cluster = models.ForeignKey(SpeechCluster, on_delete=models.CASCADE)
-    work = models.ForeignKey(Work, on_delete=models.PROTECT)
-    type = models.CharField(max_length=1, choices=SpeechType.choices)
+    class CharacterNumber(models.TextChoices):
+        UNSPECIFIED = ('', 'Unspecified')        
+        ZERO = ('0', 'None')
+        ONE = ('1', 'Single')
+        MANY = ('∞', 'Group')
+        
     seq = models.IntegerField()
+
+    # cluster and part within cluster
+    cluster = models.ForeignKey(SpeechCluster, on_delete=models.CASCADE)
+    part = models.IntegerField()
+
+    # loci of first and last lines
+    work = models.ForeignKey('Work', on_delete=models.CASCADE)
     l_fi = models.CharField('first line', max_length=8)
     l_la = models.CharField('last line', max_length=8)
+    
+    # begins mid-line
+    partial_b = models.BooleanField(default=False)
+    # ends mid-line
+    partial_a = models.BooleanField(default=False)
+    
+    # speakers
     spkr = models.ManyToManyField(CharacterInstance, related_name='speeches')
+    spkr_num = models.CharField(max_length=1, choices=CharacterNumber.choices,
+        blank=True)
+    
+    # addressees
     addr = models.ManyToManyField(CharacterInstance, related_name='addresses',
              blank=True)
-    # TODO should be unique per cluster
-    part = models.IntegerField()
+    addr_num = models.CharField(max_length=1, choices=CharacterNumber.choices,
+        blank=True)
+    absent_num = models.CharField(max_length=1, choices=CharacterNumber.choices,
+        blank=True)
+        
+    # witnesses to speech
+    bystanders = models.ManyToManyField(CharacterInstance, 
+        related_name='addresses_as_bystander', blank=True)
+    bystanders_num = models.CharField(max_length=1, choices=CharacterNumber.choices,
+        blank=True)
+    
+    # phrase used for self address (inter se / secum)
+    self_addr = models.CharField(max_length=16, blank=True)
+    
+    # is the speech repeated or frequentative
+    freq = models.BooleanField(default=False)
+    freq_notes = models.CharField(max_length=128, blank=True)
+    
+    # manually-recorded length
+    manual_length = models.CharField(max_length=16, blank=True)
+    
+    # general notes for the speech
+    notes = models.TextField(blank=True, null=True)
+    
     
     class Meta:
         ordering = ['work', 'seq']
@@ -220,7 +280,7 @@ class Speech(models.Model):
         
     def get_short_type(self):
         '''Return one-char type designation'''
-        t = self.type
+        t = self.cluster.type
         if t == 'D' or t == 'G':
             t += str(self.part)
         return t

@@ -8,7 +8,7 @@ from django_filters.views import FilterView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from django_filters import rest_framework as filters
 from .models import Metadata
-from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
+from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster, SpeechScene
 from .serializers import MetadataSerializer
 from .serializers import AuthorSerializer, WorkSerializer, CharacterSerializer, CharacterInstanceSerializer, SpeechSerializer, SpeechClusterSerializer
 
@@ -72,27 +72,29 @@ class CharacterFilter(filters.FilterSet):
 
 class CharacterInstanceFilter(filters.FilterSet):
     name = filters.CharFilter('name')
-    gender = filters.ChoiceFilter('gender', 
-                    choices=Character.CharacterGender.choices)
-    number = filters.ChoiceFilter('number',
-                    choices=Character.CharacterNumber.choices)
     being = filters.ChoiceFilter('being',
                     choices=Character.CharacterBeing.choices)
+    number = filters.ChoiceFilter('number',
+                    choices=Character.CharacterNumber.choices)
+    gender = filters.ChoiceFilter('gender', 
+                    choices=Character.CharacterGender.choices)
     anon = filters.BooleanFilter('anon')
+    absent = filters.BooleanFilter('absent')
+                      
     char_id = filters.NumberFilter('char__id')
     char_name = filters.CharFilter('char__name')
     char_wd = filters.CharFilter('char__wd')
     char_manto = filters.CharFilter('char__manto')
-    char_gender = filters.ChoiceFilter('char__gender', 
-                    choices=Character.CharacterGender.choices)
-    char_number = filters.ChoiceFilter('char__number',
-                    choices=Character.CharacterNumber.choices)
     char_being = filters.ChoiceFilter('char__being',
                     choices=Character.CharacterBeing.choices)
+    char_number = filters.ChoiceFilter('char__number',
+                    choices=Character.CharacterNumber.choices)
+    char_gender = filters.ChoiceFilter('char__gender', 
+                    choices=Character.CharacterGender.choices)
     
     class Meta:
         model = CharacterInstance
-        fields = ['id', 'name', 'gender', 'number', 'being', 'anon', 
+        fields = ['id', 'name', 'gender', 'number', 'being', 'anon', 'absent',
                     'char_id', 'char_name', 'char_wd', 'char_manto',
                     'char_gender', 'char_number', 'char_being']
 
@@ -121,11 +123,17 @@ class SpeechFilter(filters.FilterSet):
     addr_being = filters.ChoiceFilter('addr__being',
                     choices=Character.CharacterBeing.choices)
     addr_anon = filters.BooleanFilter('addr__anon')
+    addr_absent = filters.BooleanFilter('addr__absent')
+    
+    absent_num = filters.ChoiceFilter('absent_num',
+                    choices=Speech.CharacterNumber.choices)
+    bystanders_num = filters.ChoiceFilter('bystanders_num',
+                    choices=Speech.CharacterNumber.choices)
     
     spkr_inst = filters.NumberFilter('spkr__id')
     addr_inst = filters.NumberFilter('addr__id')
     
-    type = filters.ChoiceFilter('type', choices=Speech.SpeechType.choices)
+    type = filters.ChoiceFilter('type', choices=SpeechCluster.ClusterType.choices)
 
     cluster_id = filters.NumberFilter('cluster__id')
     
@@ -145,7 +153,7 @@ class SpeechFilter(filters.FilterSet):
             'spkr_id', 'spkr_name', 'spkr_manto', 'spkr_wd', 'spkr_gender',
             'spkr_number', 'spkr_being', 'spkr_anon',
             'addr_id', 'addr_name', 'addr_manto', 'addr_wd', 'addr_gender',
-            'addr_number', 'addr_being', 'addr_anon',
+            'addr_number', 'addr_being', 'addr_anon', 'addr_absent',
             'spkr_inst', 'addr_inst',
             'type', 
             'cluster_id',
