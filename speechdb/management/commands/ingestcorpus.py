@@ -151,9 +151,8 @@ def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
         try:
             instance_params['char'] = characters[c.same_as]
         except KeyError:
-            print(f'Pseud {name} points to non-existent char {same_as}.'.format(
+            print('Pseud {name} points to non-existent char {same_as}.'.format(
                     name=name, same_as=alt_chars[name].same_as))
-            raise
     elif name in anon_chars:
         c = anon_chars[name]
         instance_params['name'] = c.name

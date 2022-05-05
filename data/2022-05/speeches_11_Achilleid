@@ -1,0 +1,36 @@
+author	work	work_id	seq	from_book	from_line	b	to_book	to_line	a	interrupted	s_ok	speaker	vision/dead	disguise	anonymous	collective	speaker_notes	a_ok	addressee	addressee_notes	vision/dead.1	disguise.1	anyonymous	collective.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	type	interruption	embedded_level	misc_notes
+Statius	Achilleid	10	1	1	31	n	1	51	y	y	✅	Thetis						✅	self	o dolor, o ... timores!					10001	1	S	S	20.083333333333332	132	Sol	ait (31)	0	
+Statius	Achilleid	10	2	1	61	y	1	76	n	n	✅	Thetis						✅	Neptune						10002	1	D	D	15.833333333333334	106	Del		0	
+Statius	Achilleid	10	3	1	80	n	1	94	n	n	✅	Neptune						✅	Thetis						10002	2	D	D (reply)	15.0	93	Res (to Del)		0	
+Statius	Achilleid	10	4	1	127	y	1	141	y	y	✅	Thetis						✅	Chiron						10003	1	D	D	13.666666666666666	97	Que	ait (128)	0	
+Statius	Achilleid	10	5	1	143	y	1	158	y	n	✅	Chiron						✅	Thetis						10003	2	D	D (reply)	14.666666666666666	100	O&P (Pro)		0	
+Statius	Achilleid	10	6	1	252	n	1	274	y	n	✅	Thetis						✅	Achilles						10004	1	M	M (no reply)	22.416666666666668	152	Del		0	
+Statius	Achilleid	10	7	1	319	n	1	322	n	n	✅	Thetis						✅	Achilles						10005	1	M	M (no reply)	3.0	29	Del		0	
+Statius	Achilleid	10	8	1	339	y	1	342	n	n	✅	Thetis						✅	Achilles						10006	1	M	M (no reply)	3.3333333333333335	25	Del		0	
+Statius	Achilleid	10	9	1	350	n	1	362	n	y	✅	Thetis						✅	Lycomedes						10007	1	M	M (no reply)	12.833333333333334	82	Com	ait (350)	0	
+Statius	Achilleid	10	10	1	384	n	1	396	n	y	✅	Thetis						✅	island of Scyros						10008	1	M	M (no reply)	13.0	85	Del		0	
+Statius	Achilleid	10	11	1	393	y	1	393	n	n	✅	island of Scyros					"not listed in Dominik: 393b ""Hic thiasi tantum et nihil utile bellis"" dictation/order to teach rumour to say this phrase to visitors (hoc famam narrare doce)"	❌	Fama/fama										0.8333333333333334	7			0	
+Statius	Achilleid	10	12	1	496	n	1	513	n	n	✅	Protesilaus						✅	Calchas						10009	1	M	M (no reply)	18.0	117	Del		0	
+Statius	Achilleid	10	13	1	526	n	1	535	n	n	✅	Calchas						❌	Thetis and Achilles						10010	1	M	M (no reply)	10.0	71	Del		0	
+Statius	Achilleid	10	14	1	539	n	1	545	y	n	✅	Diomedes						✅	Odysseus						10011	1	D	D	6.416666666666667	45	Del		0	
+Statius	Achilleid	10	15	1	546	n	1	552	n	n	✅	Odysseus						✅	Diomedes						10011	2	D	D (reply)	7.0	51	Res (to Del)		0	
+Statius	Achilleid	10	16	1	624	y	1	639	n	n	✅	Achilles						❌	self and Spercheius and Patroclus						10012	1	S	S	15.75	102	Sol		0	
+Statius	Achilleid	10	17	1	650	n	1	656	n	y	✅	Achilles						✅	Deidamia						10013	1	D	D 	7.0	51	Del	no real dialogue, rather brief interruption	0	
+Statius	Achilleid	10	18	1	657	n	1	657	y	n	✅	Deidamia					"meaning disputed (my/your father) cf. Heslin (Transvestite Achilles, p. 32f.); not in Dominik: ""Sed pater"" 657a; (in Dilke embedded speech)"	✅	Achilles						10013	2	D	D (reply)	0.16666666666666666	2		sed pater	0	
+Statius	Achilleid	10	19	1	657	y	1	660	n	n	✅	Achilles						✅	Deidamia						10013	3	D	D	3.8333333333333335	26			0	
+Statius	Achilleid	10	20	1	712	y	1	717	n	n	✅	Diomedes						✅	Odysseus						10014	1	D	D 	5.75	36	Que		0	
+Statius	Achilleid	10	21	1	719	n	1	725	n	n	✅	Odysseus						✅	Diomedes						10014	2	D	D (reply)	7.0	51	Res (to Que)		0	
+Statius	Achilleid	10	22	1	728	n	1	737	y	n	✅	Odysseus						✅	Lycomedes						10015	1	D	D 	9.25	62	Gre		0	
+Statius	Achilleid	10	23	1	738	n	1	740	y	n	✅	Lycomedes						✅	Odysseus						10015	2	D	D (reply)	1.25	14	Res (to Gre)		0	
+Statius	Achilleid	10	24	1	775	n	1	783	n	n	✅	Lycomedes						✅	Achaeans				y	y	10015	3	D	D (reply)	9.0	54	Enc (Coh)		0	
+Statius	Achilleid	10	25	1	785	n	1	811	n	y	✅	Odysseus					two long interruptions: 794-796a: aspicit intentum vigilique haec aure trahentem, / cum paveant aliae demissaque lumina flectant, / atque iterat. And 802b-807a: exisset stratis, ni provida signo / Deidamia dato cunctas hortata sorores / liquisset mensas ipsum complexa. sed haeret / respiciens Ithacum coetuque novissimus exit. /ille quoque incepto paulum ex sermone remittit, / pauca tamen iungens:	❌	Lycomedes and Achaeans 	indirectly Achilles					10015	4	D	D (reply)	19.5	130	Del		0	
+Statius	Achilleid	10	26	1	812	y	1	814	n	n	✅	Lycomedes						✅	Odysseus						10015	5	D	D (reply)	2.5833333333333335	18	Res		0	
+Statius	Achilleid	10	27	1	867	y	1	874	y	y	✅	Odysseus						✅	Achilles						10016	1	M	M (no reply)	6.083333333333333	46	Del	ait (868)	0	
+Statius	Achilleid	10	28	1	892	n	1	910	y	y	✅	Achilles					long interruption: 908b —natum ante pedes prostravit et addit— 	✅	Lycomedes						10017	1	M	M (no reply)	18.5	227	Del		0	
+Statius	Achilleid	10	29	1	931	n	1	955	n	n	✅	Deidamia						✅	Achilles						10018	1	M	M (no reply)	25.0	170	Del		0	
+Statius	Achilleid	10	30	2	17	n	2	19	y	n	✅	Achilles						✅	Thetis						10019	1	M	M (no reply)	2.5833333333333335	15	Pra		0	
+Statius	Achilleid	10	31	2	32	n	2	42	y	y	✅	Odysseus						✅	Achilles						10020	1	D	D	10.083333333333334	67	Del	inquit (32)	0	
+Statius	Achilleid	10	32	2	43	y	2	48	n	n	✅	Achilles						✅	Odysseus						10020	2	D	D (reply)	5.75	35	Del		0	
+Statius	Achilleid	10	33	2	50	n	2	83	n	n	✅	Odysseus						✅	Achilles						10020	3	D	D (reply)	34.0	214	Nar		0	
+Statius	Achilleid	10	34	2	86	y	2	93	n	n	✅	Diomedes						✅	Achilles	continued conversation: new D or all G?					10021	1	D	D 	7.583333333333333	50	Del		0	
+Statius	Achilleid	10	35	2	96	n	2	167	n	n	✅	Achilles					Book 2 ends with this speech	✅	Diomedes						10021	2	D	D (reply)	72.0	473	Nar		0	

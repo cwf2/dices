@@ -1,0 +1,8 @@
+work_id	seq	from_line	b	to_line	a	interrupted	s_ok	speaker	disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	disguise.1	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster	long_cluster	length	words	embedded_level	short_speech_type	long_speech_type	misc_notes
+20	1	74		83			✅	someone	no	no	yes	no	✅	self	no	no	yes	no	20001	1	soliloquy	S	10		0	Lau; Des		
+20	2	123		127			✅	Hero	no	no	no	no	✅	Leander	no	no	no	no	20002	1	dialogue	D1	5		0	Vit		
+20	3	135		157			✅	Leander	no	no	no	no	✅	Hero	no	no	no	no	20002	2	dialogue	D2	23		0	Lau; Per		
+20	4	174		193			✅	Hero	no	no	no	no	✅	Leander	no	no	no	no	20002	3	dialogue	D3	20		0	Del; Que		
+20	5	203		220			✅	Leander	no	no	no	no	✅	Hero	no	no	no	no	20002	4	dialogue	D4	18		0	Res; Vow		
+20	6	245		250			✅	Leander	no	no	no	no	✅	self	no	no	no	no	20001	1	soliloquy	S	6		0	Lam		
+20	7	268		271			✅	Hero	no	no	no	no	✅	Leander	no	no	no	no	20001	1	monologue	M (no reply)	4		0	Lau		
