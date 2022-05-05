@@ -1,0 +1,34 @@
+work_id	seq	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	disguise.1	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type	notes
+25	1	1	29		1	29		✅	Rhea		no	no	no	no	✅	Gaia		no	no	no	no	25001	1	monologue	M (no reply)	1.0		0		Com			
+25	2	2	106		2	106		✅	Fthonos		no	no	no	no	✅	Apollo		no	no	no	no	25002	1	dialogue	D1	1.0		0		Del			
+25	3	2	108		2	112		✅	Apollo		no	no	no	no	✅	Fthonos		no	no	no	no	25002	2	dialogue	D2	5.0		0		Del			
+25	4	3	6		3	25		✅	Artemis		no	no	no	no	✅	Zeus		no	no	no	no	25003	1	dialogue	D1	20.0		0		Req			
+25	5	3	29b		3	39b		✅	Zeus		no	no	no	no	✅	Artemis		no	no	no	no	25003	2	dialogue	D2	10.0		0		Del			
+25	6	3	81		3	85		✅	Artemis		no	no	no	no	✅	cyclopes		no	no	no	no	25004	1	monologue	M (no reply)	5.0		0		Inf			
+25	7	3	104		3	104		✅	Artemis		no	no	no	no	✅	self		no	no	no	no	25005	1	monologue	M (no reply)	1.0		0		Del			
+25	8	3	153		3	157		✅	Apollo		no	no	no	no	✅	Artemis		no	no	no	no	25006	1	monologue	M (no reply)	5.0		0		Exh; Com			
+25	9	4	88		4	98		✅	Apollo	in Leto's womb	no	no	no	no	✅	Thebe		no	no	collective	collective	25007	1	monologue	M (no reply)	11.0		0		Thr			
+25	10	4	109		4	120		✅	Leto		no	no	no	no	✅	Thessalian Nymphs		no	no	collective	collective	25008	1	general interlocution	G1	12.0		0		Com; Lam			
+25	11	4	122		4	132		✅	Peneus		no	no	no	no	✅	Leto		no	no	no	no	25008	2	general interlocution	G2	11.0		0		Inf; Del			
+25	12	4	149b		4	152		✅	Leto		no	no	no	no	✅	Peneus		no	no	no	no	25009	1	monologue	M (no reply)	2.5		0		Far			
+25	13	4	162b		4	195		✅	Apollo		no	no	no	no	✅	Leto		no	no	no	no	25010	1	monologue	M (no reply)	32.5		0		Del; Ora; Req; Per			
+25	14	4	203		4	204		✅	Leto		no	no	no	no	✅	Hera		no	no	no	no	25011	1	monologue	M (no reply)	2.0		0		Cha			
+25	15	4	213		4	215		✅	Leto		no	no	no	no	✅	Apollo	not yet born	no	no	no	no	25012	1	monologue	M (no reply)	3.0		0		Per			
+25	16	4	218		4	227		✅	Iris	such a messenger'	no	no	no	no	✅	Hera		no	no	no	no	25013	1	dialogue	D1	10.0		0		Inf			
+25	17	4	240		4	248		✅	Hera		no	no	no	no	✅	Iris		no	no	no	no	25013	2	dialogue	D2	9.0		0		Del			
+25	18	4	266		4	273		✅	Delos		no	no	no	no	✅	Gaia		no	no	no	no	25014	1	monologue	M (no reply)	8.0		0		Del; Vow			
+25	19	5	80		5	82		✅	Athena		no	no	no	no	✅	Tiresias		no	no	no	no	25015	1	monologue	M (no reply)	3.0		0		Que; Thr			
+25	20	5	65b		5	92		✅	Chariclo		no	no	no	no	❌	Athena and Tiresias		no	no	no	no	25016	1	general interlocution	G1	26.5		0		Lam			
+25	21	5	97		5	130		✅	Athena		no	no	no	no	✅	Chariclo		no	no	no	no	25016	2	general interlocution	G2	34.0		0		Del; Con; Ora			
+25	22	6	2		6	2		✅	women		no	no	collective	collective	✅	Demeter		no	no	no	no	25017	1	monologue	M (no reply)	1.0		0		Gre			
+25	23	6	41b		6	41b		✅	Demeter		no	no	no	no	✅	the ones present		no	no	collective	collective	25018	1	monologue	M (no reply)	0.5		0	speech cluster	Que			
+25	24	6	46		6	49		✅	Demeter		no	no	no	no	✅	Erysichthon	likeness of Nicippe	no	no	no	no	25018	2	dialogue	D1	4.0		0	speech cluster	Com; War			
+25	25	6	53		6	55		✅	Erysichthon	likeness of Nicippe	no	no	no	no	✅	Demeter		no	no	no	no	25018	3	dialogue	D2	3.0		0	speech cluster	Thr			
+25	26	6	63		6	64		✅	Demeter		no	no	no	no	✅	Erysichthon		no	no	no	no	25019	1	monologue	M (no reply)	2.0		0		Vit; Thr			
+25	27	6	76		6	77b		✅	mother of Erysichthon		no	no	no	no	✅	Ormenidae		no	no	no	no	25020	1	monologue	M (reply)	1.5		0		Inf; Res			
+25	28	6	81		6	82		✅	mother of Erysichthon		no	no	no	no	✅	Polyxo		no	no	no	no	25021	1	monologue	M (reply)	2.0		0		Inf; Res			
+25	29	6	84b		6	84b		✅	mother of Erysichthon		no	no	no	no	✅	someone	invitation	no	no	yes	no	25022	1	monologue	M (reply)	0.5		0		Inf; Res			
+25	30	6	85b		6	85b		✅	mother of Erysichthon		no	no	no	no	✅	someone	invitation	no	no	yes	no	25023	1	monologue	M (reply)	0.5		0		Inf; Res			
+25	31	6	86b		6	86b		✅	mother of Erysichthon		no	no	no	no	✅	someone	invitation	no	no	yes	no	25024	1	monologue	M (reply)	0.5		0		Inf; Res			
+25	32	6	98		6	106		✅	Triopas		no	no	no	no	✅	Poseidon		no	no	no	no	25025	1	monologue	M (no reply)	9.0		0		Lam; Pra			
+25	33	6	119		6	119		✅	women	maidens and mothers	no	no	no	no	✅	Demeter		no	no	no	no	25026	1	monologue	M (no reply)	1.0		0		Gre			
