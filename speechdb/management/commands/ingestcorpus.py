@@ -314,6 +314,7 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
             s.save()
         else:
             skipped.append((reader.line_num, str(s), errs))
+            s.cluster.delete()
             s.delete()
     
     if len(skipped) > 0:

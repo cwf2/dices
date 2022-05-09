@@ -11,7 +11,7 @@
 {% block results %}
 <table class="table table-striped">
   <thead>
-    <tr><th>Author</th><th>Title</th><th>CTS URN</th><th>Wikidata ID</th></tr>
+    <tr><th>Author</th><th>Title</th><th>CTS URN</th><th>Online Text</th><th>Wikidata ID</th></tr>
   </thead>
   <tbody>
     {% for work in page_obj %}
@@ -20,9 +20,16 @@
       <td>{{ work.title }}</td>      
       <td>
         {% if work.urn %}
-        <a href="https://catalog.perseus.org/catalog/{{ work.urn }}">{{ work.urn }}</a>
+        {{ work.urn }}
         {% endif %}
       </td>
+      <td>
+        {% if work.urn %}
+        <a style="margin-left: 1em" href="https://catalog.perseus.org/catalog/{{ work.urn }}">
+            <span class="badge bg-secondary"><i class="fa-solid fa-up-right-from-square"></i> Perseus</span>
+        </a>
+        {% endif %}
+      </td>      
       <td><a href="https://www.wikidata.org/wiki/{{ work.wd }}">{{ work.wd }}</a></td>
     </tr>
     {% endfor %}

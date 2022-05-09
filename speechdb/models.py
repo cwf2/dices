@@ -126,6 +126,15 @@ class CharacterInstance(models.Model):
                 name += '/' + self.char.name
         
         return name
+    
+    @property
+    def speeches_by_char(self):
+        '''returns set of speeches by all instances of underlying char'''
+        return Speech.objects.filter(spkr__char=self.char)
+        
+    def addresses_by_char(self):
+        '''returns set of speeches by all instances of underlying char'''
+        return Speech.objects.filter(addr__char=self.char)
 
 
 class SpeechCluster(models.Model):
@@ -158,6 +167,17 @@ class SpeechCluster(models.Model):
             chars.extend([str(c) for c in speech.addr.all()])
         chars = sorted(set(chars))
         return ', '.join(chars)
+        
+    def get_loc_str(self):
+        '''Return line range of conversation as a string'''
+        long_name = self.work.get_long_name()
+        l_fi = self.speech_set.first().l_fi
+        l_la = self.speech_set.last().l_la
+        return f'{long_name} {l_fi}–{l_la}'
+    
+    @property
+    def work(self):
+        return self.speech_set.first().work
 
     @property
     def speakers(self):
