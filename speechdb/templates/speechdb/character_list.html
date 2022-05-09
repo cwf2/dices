@@ -12,7 +12,12 @@
   <tbody>
     {% for c in page_obj %}
     <tr>
-      <td>{{ c.name }}</td>
+      <td>
+        {{ c.name }}
+        <a href="{% url 'app:character_detail' c.id %}">
+          <i class="fa-solid fa-circle-info"></i>
+        </a>
+      </td>
       <td>{{ c.gender }}</td>
       <td>{{ c.number }}</td>
       <td>{{ c.being }}</td>

@@ -11,17 +11,16 @@
             <table>
                 <tbody>
                     <tr>
-                        <th>Character:</th>
-                        <td><a href="{% url 'app:character_detail' inst.char.pk %}">{{ inst.char.name }}</a></td>
+                        <th>
+                          {{ inst.name }}                          
+                          {% if inst.char %}
+                            {% if inst.char.name != inst.name %}
+                            ({{ inst.char.name }})
+                            {% endif %}
+                          {% endif  %}
+                        </th>
                     </tr>
-                    {% if inst.disg %}
                     <tr>
-                        <th>Disguise:</th>
-                        <td>{{ inst.disg.name }}</td>
-                    </tr>
-                    {% endif %}
-                    <tr>
-                        <th>Context:</th>
                         <td>{{ inst.context }}</td>
                     </tr>
                 </tbody>
@@ -43,17 +42,38 @@
                     <tr>
                         <td>name</td>
                         <td>{{inst.name}}</td>
-                        <td>{{inst.char.name}}</td>
+                        <td>
+                          {% if inst.char %}
+                          {{inst.char.name}}
+                            <a style="margin-left: 0.5em" href="{% url 'app:character_detail' inst.char.pk %}">
+                              <i class="fa-solid fa-circle-info"></i>
+                            </a>                          
+                          {% else %}
+                          —
+                          {% endif %}
+                        </td>
                     </tr>
                     <tr>
                         <td>gender</td>
                         <td>{{inst.gender}}</td>
-                        <td>{{inst.char.gender}}</td>
+                        <td>
+                          {% if inst.char %}
+                          {{inst.char.gender}}
+                          {% else %}
+                          —
+                          {% endif %}
+                        </td>
                     </tr>
                     <tr>
-                        <td>name</td>
+                        <td>number</td>
                         <td>{{inst.number}}</td>
-                        <td>{{inst.char.number}}</td>
+                        <td>
+                          {% if inst.char %}                          
+                          {{inst.char.number}}
+                          {% else %}
+                          —
+                          {% endif %}
+                        </td>
                     </tr>
                     <tr>
                         <td>speeches as speaker:</td>
@@ -64,10 +84,14 @@
                             </a>
                         </td>
                         <td>
+                            {% if inst.char %}
                             {{ inst.speeches_by_char.count }}
                             <a style="margin-left: 1em" id="btn_spkr" href="{% url 'app:speeches' %}?spkr_id={{ inst.char.pk }}">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                          </a>
+                            </a>
+                          {% else %}
+                          —
+                          {% endif %}
                       </td>
                   </tr>
                   <tr>
@@ -79,10 +103,14 @@
                           </a>
                       </td>
                       <td>
+                          {% if inst.char %}                        
                           {{ inst.addresses_by_char.count }}
                           <a style="margin-left: 1em" id="btn_addr" href="{% url 'app:speeches' %}?addr_id={{ inst.char.pk }}">
                                 <i class="fa-solid fa-magnifying-glass"></i>                              
                           </a>
+                          {% else %}
+                          —
+                          {% endif %}
                       </td>
                     </tr>
                 </tbody>

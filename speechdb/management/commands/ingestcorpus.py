@@ -218,9 +218,12 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
         s.l_la = book_la + line_la
         
         # work
+        work_id = rec.get('work_id').strip()
         try:
-            s.work = Work.objects.get(id=int(rec.get('work_id')))
-        except:
+            work_id = int(work_id)
+            s.work = Work.objects.get(id=work_id)            
+        except ValueError:
+            work_id = 99
             errs.append('work')
 
         # cluster type
@@ -233,13 +236,14 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
             s.type='M'
         
         # cluster_id
+        cluster_id = rec.get('cluster_id').strip()
         try:
-            cluster_id = int(rec.get('cluster_id').strip())
-            s.cluster, created = SpeechCluster.objects.get_or_create(id=cluster_id)
-        except:
+            cluster_id = int(cluster_id)            
+
+            s.cluster, cluster_created = SpeechCluster.objects.get_or_create(pk=cluster_id)
+        except ValueError:
             errs.append('cluster_id')
-            # temp value: speech should be deleted
-            s.cluster, created = SpeechCluster.objects.get_or_create(id=999999)
+            cluster_created = False
 
         # cluster part
         try:
@@ -254,68 +258,66 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
             # temp value: speech should be deleted
             s.part = 1
             
-        # speech must be saved before adding character instances
-        s.save()
-        
-        # speakers
-        try:
-            spkr_str = rec.get('speaker').strip()
-            assert spkr_str != ''
-
-            for name in spkr_str.split(' and '):
-                inst = addInst(name, s, characters=characters, 
-                        alt_chars=alt_chars, anon_chars=anon_chars)
-                if inst is not None:
-                    s.spkr.add(inst)
-            assert len(s.spkr.all()) > 0
-        except:
-            errs.append('speaker')
-        
-        # speaker notes
-        try:
-            s.spkr_notes = rec.get('speaker_notes').strip() or None
-        except AttributeError:
-            s.spkr_notes = None
-
-        # addressees
-        try:
-            addr_str = rec.get('addressee').strip()
-            assert addr_str != ''
-
-            for name in addr_str.split(' and '):
-                if name == 'self':
-                    inst = s.spkr.first()
-                else:
-                    inst = addInst(name, s, characters=characters,
-                            alt_chars=alt_chars, anon_chars=anon_chars)
-                if inst is not None:
-                    s.addr.add(inst)
-            assert len(s.addr.all()) > 0
-        except:
-            errs.append('addressee')
-
-        # addressee notes
-        try:
-            s.addr_notes = rec.get('addressee_notes').strip() or None
-        except AttributeError:
-            s.addr_notes = None
-        
         # embeddedness
         try:
             s.level = int(rec.get('embedded_level').strip())
         except:
             errs.append('embedded_level')
         
+        # speaker notes
+        try:
+            s.spkr_notes = rec.get('speaker_notes').strip() or None
+        except AttributeError:
+            s.spkr_notes = None
+        
+        # addressee notes
+        try:
+            s.addr_notes = rec.get('addressee_notes').strip() or None
+        except AttributeError:
+            s.addr_notes = None
+        
         # general notes
         s.notes = rec.get('misc_notes').strip() or None
-        
-        # save speech or log errors
+
+        # speech must be saved before adding character instances
         if len(errs) == 0:
             s.save()
+                    
+            # speakers
+            try:
+                spkr_str = rec.get('speaker').strip()
+                assert spkr_str != ''
+
+                for name in spkr_str.split(' and '):
+                    inst = addInst(name, s, characters=characters, 
+                            alt_chars=alt_chars, anon_chars=anon_chars)
+                    if inst is not None:
+                        s.spkr.add(inst)
+                assert len(s.spkr.all()) > 0
+            except:
+                errs.append('speaker')
+
+            # addressees
+            try:
+                addr_str = rec.get('addressee').strip()
+                assert addr_str != ''
+
+                for name in addr_str.split(' and '):
+                    if name == 'self':
+                        inst = s.spkr.first()
+                    else:
+                        inst = addInst(name, s, characters=characters,
+                                alt_chars=alt_chars, anon_chars=anon_chars)
+                    if inst is not None:
+                        s.addr.add(inst)
+                assert len(s.addr.all()) > 0
+            except:
+                errs.append('addressee')
+                
         else:
             skipped.append((reader.line_num, str(s), errs))
-            s.cluster.delete()
-            s.delete()
+            if cluster_created:
+                s.cluster.delete()
     
     if len(skipped) > 0:
         print(f'skipped {len(skipped)} rows:')

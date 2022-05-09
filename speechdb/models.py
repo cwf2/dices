@@ -87,6 +87,12 @@ class Character(models.Model):
 
     def __str__(self):
         return self.name
+        
+    def get_speeches(self):
+        return Speech.objects.filter(spkr__char__id=self.id)
+
+    def get_addresses(self):
+        return Speech.objects.filter(addr__char__id=self.id)
 
 
 class CharacterInstance(models.Model):
@@ -139,7 +145,6 @@ class CharacterInstance(models.Model):
 
 class SpeechCluster(models.Model):
     '''A group of related speeches'''
-
     
     class Meta:
         ordering = ['speech']
@@ -167,6 +172,15 @@ class SpeechCluster(models.Model):
             chars.extend([str(c) for c in speech.addr.all()])
         chars = sorted(set(chars))
         return ', '.join(chars)
+        
+    def get_urn(self):
+        '''Return CTS URN for the whole cluster'''
+        urn = self.speech_set.first().work.urn
+        l_fi = self.speech_set.first().l_fi
+        l_la = self.speech_set.last().l_la
+        
+        if urn:
+            return f'{urn}:{l_fi}-{l_la}'
         
     def get_loc_str(self):
         '''Return line range of conversation as a string'''
@@ -228,7 +242,8 @@ class Speech(models.Model):
         
     def get_urn(self):
         '''Return CTS URN for the whole speech'''
-        return f'{self.work.urn}:{self.l_fi}-{self.l_la}'
+        if self.work.urn:
+            return f'{self.work.urn}:{self.l_fi}-{self.l_la}'
         
     def get_spkr_str(self):
         '''Return speaker list as a string'''

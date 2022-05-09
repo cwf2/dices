@@ -1,144 +1,144 @@
 orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_notes	disguise?	dead/vision	anonymous?	collective/tandem	a_ok	addressee	addressee_notes	disguise	dead/vision.1	anonymous	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical	speech/this speaker	mortal/god	anonymous?.1	disguise?.1
-1	1	3	Argonautica	1	242	1	246	✅	citizens				collective	yes	✅	self				collective	yes	6001	1	soliliquy	S	5		0		Del	deliberation		1 of 1	mortal	collective	
-2	2	3	Argonautica	1	251	1	259	✅	someone	(woman)			yes		✅	someone	"(another woman); talks about Alcimede (""poor Alcimede, to you too…"")"			yes		6002	1	soliliquy	S	9		0		Lam	lament		1 of 1	mortal		
-3	3	3	Argonautica	1	278	1	291	✅	Alcimede						✅	Jason						6003	1	dialogue	D1	14		0		Far; Lam	farewell speech; lament		1 of 1	mortal		
-4	4	3	Argonautica	1	295	1	305	✅	Jason						✅	Alcimede						6003	2	dialogue	D2	11		0		Far; Con	farewell speech; consolation		1 of 33	mortal		
-5	5	3	Argonautica	1	332	1	340	✅	Jason						✅	Argonauts				collective	yes	6004	1	general interlocution	G1	9		0		Per	persuasion		2 of 33	mortal		
-6	6	3	Argonautica	1	345	1	347	✅	Heracles						✅	Argonauts				collective	yes	6004	2	general interlocution	G2	3		0		Per	persuasion		1 of 2	mortal		
-7	7	3	Argonautica	1	351	1	362	✅	Jason						✅	Argonauts				collective	yes	6004	3	general interlocution	G3	12		0		Inf; Mes; Req	information; message; request		3 of 33	mortal		
-8	8	3	Argonautica	1	411	1	424	✅	Jason						✅	Apollo						6005	1	monologue	M	14		0		Pra	prayer		4 of 33	mortal		
-9	9	3	Argonautica	1	440	1	447	✅	Idmon						✅	Argonauts						6006	1	monologue	M	8		0		Ora	prophecy, oracular speech and interpretation		1 of 2	mortal		
-10	10	3	Argonautica	1	463	1	471	✅	Idas						✅	Jason						6007	1	general interlocution	G1	9		0		Vit; Thr	vituperation; threat		1 of 3	mortal		
-11	11	3	Argonautica	1	476	1	484	✅	Idmon						✅	Idas						6007	2	general interlocution	G2	9		0		Vit; Thr	vituperation; threat		2 of 2	mortal		
-12	12	3	Argonautica	1	487	1	491	✅	Idas						✅	Idmon						6007	3	general interlocution	G3	5		0		Vit; Thr	vituperation; threat		2 of 3	mortal		
-13	13	3	Argonautica	1	657	1	666	✅	Hypsipyle						✅	Lemnian women				collective	yes	6008	1	general interlocution	G1	10		0		Per; Req	persuasion; request		1 of 5	mortal		
-14	14	3	Argonautica	1	675	1	696	✅	Polyxo						✅	Lemnian women				collective	yes	6008	2	general interlocution	G2	22		0		Per	persuasion		1 of 1	mortal		
-15	15	3	Argonautica	1	700	1	701	✅	Hypsipyle						✅	Lemnian women				collective	yes	6008	3	general interlocution	G3	2		0		Inf; Per	information; persuasion		2 of 5	mortal		
-16	16	3	Argonautica	1	703	1	707	✅	Hypsipyle						✅	Iphinoe						6008	4	general interlocution	G4	5		0		Req; Mes	request; message		3 of 5	mortal		
-17	17	3	Argonautica	1	712	1	716	✅	Iphinoe						✅	Argonauts				collective	yes	6009	1	monologue	M	5		0		Mes	message		1 of 1	mortal		
-18	18	3	Argonautica	1	793	1	833	✅	Hypsipyle						✅	Jason						6010	1	dialogue	D1	41		0		Nar; Per; Inv	narration; persuasion; invitation		4 of 5	mortal		
-19	19	3	Argonautica	1	836	1	841	✅	Jason						✅	Hypsipyle						6010	2	dialogue	D2	6		0		Res	reply to question		5 of 33	mortal		
-20	20	3	Argonautica	1	865	1	874	✅	Heracles						✅	Argonauts				collective	yes	6011	1	monologue	M	10		0		Vit; Exh	vituperation; exhortation		2 of 2	mortal		
-21	21	3	Argonautica	1	888	1	898	✅	Hypsipyle						✅	Jason						6012	1	dialogue	D1	11		0		Far; Req	farewell speech; request		5 of 5	mortal		
-22	22	3	Argonautica	1	900	1	909	✅	Jason						✅	Hypsipyle						6012	2	dialogue	D2	10		0		Far; Vow; Req	farewell speech; promise or oath; request		6 of 33	mortal		
-23	23	3	Argonautica	1	1092	1	1102	✅	Mopsus (son of Ampyx)						✅	Jason						6013	1	monologue	M	11		0		Ora	prophecy, oracular speech and interpretation		1 of 3	mortal		
-24	24	3	Argonautica	1	1257	1	1259	✅	Polyphemus (Argonaut)						✅	Heracles						6014	1	monologue	M	3		0		Nar; Inf	narration; information and description		1 of 1	mortal		
-25	25	3	Argonautica	1	1290	1	1295	✅	Telamon						❌	Tiphys and Jason					tandem	6015	1	monologue	M	6		0		Vit	vituperation		1 of 2	mortal		
-26	26	3	Argonautica	1	1315	1	1325	✅	Glaucus (sea god)						✅	Argonauts				collective	yes	6016	1	monologue	M	11		0		Ora	prophecy, oracular speech and interpretation		1 of 1	god		
-27	27	3	Argonautica	1	1332	1	1335	✅	Telamon						✅	Jason						6017	1	dialogue	D1	4		0		Per; Req	persuasion; request		2 of 2	mortal		
-28	28	3	Argonautica	1	1337	1	1343	✅	Jason						✅	Telamon						6017	2	dialogue	D2	7		0		Res; Des	reply to question; desire and wish		7 of 33	mortal		
-29	29	3	Argonautica	2	11	2	18	✅	Amycus						✅	Argonauts				collective	yes	6018	1	dialogue	D1	8		0		Cha; Thr	challenge; threat		1 of 2	mortal		
-30	30	3	Argonautica	2	22	2	24	✅	Polydeuces						✅	Amycus						6018	2	dialogue	D2	3		0		Res	reply to question		1 of 1	mortal		
-31	31	3	Argonautica	2	55	2	59	✅	Amycus						✅	Polydeuces						6018	3	dialogue	D3	5		0		Cha; Tau	challenge; taunt		2 of 2	mortal		
-32	32	3	Argonautica	2	145	2	153	✅	someone	(Argonaut)			yes		✅	Argonauts				collective	yes	6018	4	soliliquy	S	9		0		Del; Lam	deliberation; lament		1 of 1	mortal	yes	
-33	33	3	Argonautica	2	209	2	239	✅	Phineus						✅	Argonauts				collective	yes	6019	1	dialogue	D1	31		0		Lam; Req; Ora	lament; request; prophecy, oracular speech and interpretation		1 of 6	mortal		
-34	34	3	Argonautica	2	244	2	253	✅	Zetes						✅	Phineus						6019	2	dialogue	D2	10		0		Res	reply to question		1 of 1	mortal		
-35	35	3	Argonautica	2	256	2	261	✅	Phineus						✅	Zetes						6019	3	dialogue	D3	6		0		Per; Vow	persuasion; promise and oath		2 of 6	mortal		
-36	36	3	Argonautica	2	288	2	290	✅	Iris						❌	Zetes and Kalaïs					tandem	6020	1	monologue	M	3		0		Vit; Vow	vituperation; promise and oath		1 of 1	god		
-37	37	3	Argonautica	2	311	2	407	✅	Phineus						✅	Argonauts				collective	yes	6021	1	general interlocution	G1	97		0		Ora	prophecy, oracular speech and interpretation		3 of 6	mortal		
-38	38	3	Argonautica	2	411	2	418	✅	Jason						✅	Phineus						6021	2	general interlocution	G2	8		0		Que	question		8 of 33	mortal		
-39	39	3	Argonautica	2	420	2	425	✅	Phineus						✅	Jason						6021	3	general interlocution	G3	6		0		Ora; Req	prophecy, oracular speech and interpretation; request		4 of 6	mortal		
-40	40	3	Argonautica	2	438	2	442	✅	Jason						✅	Phineus						6022	1	dialogue	D1	5		0		Per; Des	persuasion; desire and wish		9 of 33	mortal		
-41	41	3	Argonautica	2	444	2	447	✅	Phineus						✅	Jason						6022	2	dialogue	D2	4		0		Lam; Des	lament; desire and wish		5 of 6	mortal		
-42	42	3	Argonautica	2	468	2	489	✅	Phineus						✅	Argonauts				collective	yes	6023	1	monologue	M	22		0		Nar	narration		6 of 6	mortal		
-43	43	3	Argonautica	2	611	2	618	✅	Tiphys						✅	Argonauts				collective	yes	6024	1	general interlocution	G1	8		0		Exh	exhortation		1 of 1	mortal		
-44	44	3	Argonautica	2	622	2	637	✅	Jason						✅	Tiphys						6024	2	general interlocution	G2	16		0		Lam	lament		10 of 33	mortal		
-45	45	3	Argonautica	2	641	2	647	✅	Jason						✅	Argonauts				collective	yes	6024	3	general interlocution	G3	7		0	following a paraphrase of the heroes that shout in response to G2	Lau; Vow	laudation and praise; promise and oath		11 of 33	mortal		
-46	46	3	Argonautica	2	686	2	693	✅	Orpheus						✅	Argonauts				collective	yes	6025	1	monologue	M	8		0		Per; Des	persuasian; desire and wish		1 of 2	mortal		
-47	47	3	Argonautica	2	774	2	810	✅	Lycus						✅	Argonauts				collective	yes	6026	1	monologue	M	37		0		Nar	narration		1 of 1	mortal		
-48	48	3	Argonautica	2	869	2	877	✅	Ancaeus (son of Poseidon)						✅	Peleus						6027	1	general interlocution	G1	9		0		Per	persuasion		1 of 3	mortal		
-49	49	3	Argonautica	2	880	2	884	✅	Peleus						✅	Argonauts				collective	yes	6027	2	general interlocution	G2	5		0		Per; Exh	persuasion; exhortation		1 of 4	mortal		
-50	50	3	Argonautica	2	886	2	893	✅	Jason						✅	Peleus						6027	3	general interlocution	G3	8		0		Lam	lament		12 of 33	mortal		
-51	51	3	Argonautica	2	1047	2	1067	✅	Amphidamas						✅	Argonauts				collective	yes	6028	1	monologue	M	21		0		Per; Exh	persuasion; exhortation		1 of 1	mortal		
-52	52	3	Argonautica	2	1123	2	1133	✅	Argus (son of Phrixus)						✅	Argonauts				collective	yes	6029	1	general interlocution	G1	11		0		Gre; Req	greeting and reception; request		1 of 7	mortal		
-53	53	3	Argonautica	2	1136	2	1139	✅	Jason						✅	Argus (son of Phrixus)						6029	2	general interlocution	G2	4		0		Res	reply to question		13 of 33	mortal		
-54	54	3	Argonautica	2	1141	2	1156	✅	Argus (son of Phrixus)						✅	Jason						6029	3	general interlocution	G3	16		0		Res	reply to question		2 of 7	mortal		
-55	55	3	Argonautica	2	1160	2	1167	✅	Jason						✅	Argus (son of Phrixus)						6029	4	general interlocution	G4	8		0		Inf	information and description		14 of 33	mortal		
-56	56	3	Argonautica	2	1179	2	1195	✅	Jason						✅	Argus (son of Phrixus)						6030	1	general interlocution	G1	17		0		Per; Req	persuasion; request		15 of 33	mortal		
-57	57	3	Argonautica	2	1200	2	1215	✅	Argus (son of Phrixus)						✅	Jason						6030	2	general interlocution	G2	16		0		Res	reply to question		3 of 7	mortal		
-58	58	3	Argonautica	2	1219	2	1225	✅	Peleus						✅	Argus (son of Phrixus)						6030	3	general interlocution	G3	7		0		Exh	exhortation		16 of 33	mortal		
-59	59	3	Argonautica	2	1277	2	1280	✅	Ancaeus (son of Poseidon)						✅	Argonauts						6031	1	monologue	M	4		0		Exh; Que	exhortation; question		2 of 3	mortal		
-60	60	3	Argonautica	3	11	3	16	✅	Hera						✅	Athena						6032	1	dialogue	D1	6		0		Per; Que	persuasion; question		1 of 7	god		
-61	61	3	Argonautica	3	18	3	21	✅	Athena						✅	Hera						6032	2	dialogue	D2	5		0		Res	reply to question		1 of 2	god		
-62	62	3	Argonautica	3	25	3	29	✅	Hera						✅	Athena						6032	3	dialogue	D3	5		0		Per; Exh	persuasion; exhortation		2 of 7	god		
-63	63	3	Argonautica	3	32	3	35	✅	Athena						✅	Hera						6032	4	dialogue	D4	4		0		Res	reply to question		2 of 2	god		
-64	64	3	Argonautica	3	52	3	54	✅	Aphrodite						❌	Athena and Hera					tandem	6033	1	general interlocution	G1	3		0		Que	question		1 of 6	god		
-65	65	3	Argonautica	3	56	3	75	✅	Hera						✅	Aphrodite						6033	2	general interlocution	G2	20		0		Res	reply to question		3 of 7	god		
-66	66	3	Argonautica	3	79	3	82	✅	Aphrodite						✅	Hera						6033	3	general interlocution	G3	4		0		Res	reply to question		2 of 6	god		
-67	67	3	Argonautica	3	84	3	89	✅	Hera						✅	Aphrodite						6033	4	general interlocution	G4	6		0		Per; Req	persuasion; request		4 of 7	god		
-68	68	3	Argonautica	3	91	3	99	✅	Aphrodite						❌	Athena and Hera					tandem	6033	5	general interlocution	G5	9		0		Lam; Nar	lament; narration		3 of 6	god		
-69	69	3	Argonautica	3	102	3	105	✅	Aphrodite						❌	Athena and Hera					tandem	6033	6	general interlocution	G6	4		0		Lam; Vow	lament; promise and oath		4 of 6	god		
-70	70	3	Argonautica	3	108	3	110	✅	Hera						✅	Aphrodite						6033	7	general interlocution	G7	3		0		Exh; Req	exhortation; request		5 of 7	god		
-71	71	3	Argonautica	3	129	3	144	✅	Aphrodite						✅	Eros						6034	1	dialogue	D1	16		0	long, indirect speech interruption with what Cupid replies	Req; Vow	request; promise and oath		5 of 6	god		
-72	72	3	Argonautica	3	151	3	153	✅	Aphrodite						✅	Eros						6034	2	dialogue	D2	3		0		Vow	promise and oath		6 of 6	god		
-73	73	3	Argonautica	3	171	3	193	✅	Jason						✅	Argonauts				collective	yes	6035	1	monologue	M	23		0		Per; Req	persuasion; request		17 of 33	mortal		
-74	74	3	Argonautica	3	260	3	267	✅	Chalciope						❌	Argus (son of Phrixus) and sons of Phrixus						6036	1	monologue	M	8		0		Lam	lament		1 of 4	mortal		
-75	75	3	Argonautica	3	304	3	316	✅	Aietes						❌	Argus (son of Phrixus) and sons of Phrixus						6037	1	general interlocution	G1	13		0		Req	request		1 of 4	mortal		
-76	76	3	Argonautica	3	320	3	366	✅	Argus (son of Phrixus)						✅	Aietes						6037	2	general interlocution	G2	47		0		Nar	narration		4 of 7	mortal		
-77	77	3	Argonautica	3	372	3	381	✅	Aietes						✅	Argonauts				collective	yes	6037	3	general interlocution	G3	10		0		Vit; Thr	vituperation; threat		2 of 4	mortal		
-78	78	3	Argonautica	3	386	3	395	✅	Jason						✅	Aietes						6037	4	general interlocution	G4	10		0		Per; Req	persuasion; request		18 of 33	mortal		
-79	79	3	Argonautica	3	401	3	421	✅	Aietes						✅	Jason						6037	5	general interlocution	G5	21		0		Cha; Vow	challenge; promise and oath		3 of 4	mortal		
-80	80	3	Argonautica	3	427	3	431	✅	Jason						✅	Aietes						6037	6	general interlocution	G6	5		0		Res	reply to question		19 of 33	mortal		
-81	81	3	Argonautica	3	434	3	438	✅	Aietes						✅	Jason						6037	7	general interlocution	G7	5		0		Req; Tau	request; taunt		4 of 4	mortal		
-82	82	3	Argonautica	3	464	3	470	✅	Medea						✅	self						6038	1	soliliquy	S	7		0		Lam; Des	lament; desire and wish		1 of 17 	mortal		
-83	83	3	Argonautica	3	475	3	483	✅	Argus						✅	Jason						6039	1	dialogue	D1	9		0		Per	persuasion		5 of 7	mortal		
-84	84	3	Argonautica	3	485	3	488	✅	Jason						✅	Argus (son of Phrixus)						6039	2	dialogue	D2	4		0		Lam; Req	lament; request		20 of 33	mortal		
-85	85	3	Argonautica	3	492	3	501	✅	Jason						✅	Argonauts				collective	yes	6040	1	general interlocution	G1	10		0		Inf	information and description		21 of 33	mortal		
-86	86	3	Argonautica	3	506	3	514	✅	Peleus						✅	Jason						6040	2	general interlocution	G2	9		0		Per	persuasion		2 of 4	mortal		
-87	87	3	Argonautica	3	523	3	539	✅	Argus (son of Phrixus)						✅	Argonauts				collective	yes	6040	3	general interlocution	G3	17		0		Per	persuasion		6 of 7	mortal		
-88	88	3	Argonautica	3	545	3	554	✅	Mopsus (son of Ampyx)						✅	Jason						6040	4	general interlocution	G4	10		0		Ora	prophecy, oracular speech and interpretation		2 of 3	mortal		
-89	89	3	Argonautica	3	558	3	563	✅	Idas						✅	Argonauts				collective	yes	6040	5	general interlocution	G5	6		0		Vit	vituperation		3 of 3	mortal		
-90	90	3	Argonautica	3	568	3	571	✅	Jason						✅	Argonauts				collective	yes	6040	6	general interlocution	G6	4		0		Per; Req	persuasion; request		22 of 33	mortal		
-91	91	3	Argonautica	3	636	3	644	✅	Medea						✅	self						6041	1	soliliquy	S	9		0		Del	deliberation		2 of 17 	mortal		
-92	92	3	Argonautica	3	674	3	680	✅	Chalciope						✅	Medea						6042	1	dialogue	D1	7		0		Lam; Que	lament; question		2 of 4	mortal		
-93	93	3	Argonautica	3	688	3	692	✅	Medea						✅	Chalciope						6042	2	dialogue	D2	5		0		Lam; Des	lament; desire and wish		3 of 17 	mortal		
-94	94	3	Argonautica	3	697	3	704	✅	Chalciope						✅	Medea						6042	3	dialogue	D3	8		0		Req	request		3 of 4	mortal		
-95	95	3	Argonautica	3	711	3	717	✅	Medea						✅	Chalciope						6042	4	dialogue	D4	7		0		Res	reply to question		4 of 17 	mortal		
-96	96	3	Argonautica	3	719	3	723	✅	Chalciope						✅	Medea						6042	5	dialogue	D5	5		0		Per; Req	persuasion; request		4 of 4	mortal		
-97	97	3	Argonautica	3	727	3	739	✅	Medea						✅	Chalciope						6042	6	dialogue	D6	13		0		Res	reply to question		5 of 17 	mortal		
-98	98	3	Argonautica	3	771	3	801	✅	Medea						✅	self						6043	1	soliliquy	S	31		0		Lam; Del	lament; deliberation		6 of 17 	mortal		
-99	99	3	Argonautica	3	891	3	911	✅	Medea						✅	companions of Medea				collective	yes	6044	1	monologue	M	21		0		Per; Req	persuasion; request		7 of 17 	mortal		
-100	100	3	Argonautica	3	932	3	937	✅	crow	at Hera's devising			yes		✅	Mopsus (son of Ampyx)						6045	1	monologue	M	6		0		Vit; Tau	vituperation; taunt		1 of 1	animal	yes	
-101	101	3	Argonautica	3	940	3	946	✅	Mopsus (son of Ampyx)						❌	Jason and Argus					tandem	6046	1	monologue	M	7		0	Mopsus (son of Ampyx) does smile at the words of the crow before speaking to Jason and Argus	Ora	prophecy, oracular speech and interpretation		3 of 3	mortal		
-102	102	3	Argonautica	3	975	3	1007	✅	Jason						✅	Medea						6047	1	dialogue	D1	33		0		Per	persuasion		23 of 33	mortal		
-103	103	3	Argonautica	3	1026	3	1062	✅	Medea						✅	Jason						6047	2	dialogue	D2	37		0		Inf; Req	information and description; request		8 of 17 	mortal		
-104	104	3	Argonautica	3	1069	3	1076	✅	Medea						✅	Jason						6047	3	dialogue	D3	8		0		Req; Que	request; question		9 of 17 	mortal		
-105	105	3	Argonautica	3	1079	3	1101	✅	Jason						✅	Medea						6047	4	dialogue	D4	23		0		Inf; Vow	information and description; promise and oath		24 of 33	mortal		
-106	106	3	Argonautica	3	1105	3	1117	✅	Medea						✅	Jason						6047	5	dialogue	D5	13		0		Lam; Req	lament; request		10 of 17 	mortal		
-107	107	3	Argonautica	3	1120	3	1130	✅	Jason						✅	Medea						6047	6	dialogue	D6	11		0		Vow	promise and oath		25 of 33	mortal		
-108	108	3	Argonautica	3	1143	3	1145	✅	Jason						✅	Medea						6047	7	dialogue	D7	3		0		Far	farewell speech		26 of 33	mortal		
-109	109	3	Argonautica	4	30	4	33	✅	Medea						✅	self						6048	1	soliliquy	S	4		0		Far; Lam	farewell speech; lament		11 of 17 	mortal		
-110	110	3	Argonautica	4	57	4	65	✅	Selene						✅	self						6049	1	soliliquy	S	9		0		Del; Tau	deliberation; taunt		1 of 1	god		
-111	111	3	Argonautica	4	83	4	91	✅	Medea						❌	Jason and Argus (son of Phrixus) and Phrontis					yes	6050	1	general interlocution	G1	9		0		Per	persuasion		12 of 17 	mortal		
-112	112	3	Argonautica	4	95	4	98	✅	Jason						✅	Medea						6050	2	general interlocution	G2	4		0		Vow	promise and oath		27 of 33	mortal		
-113	113	3	Argonautica	4	190	4	205	✅	Jason						✅	Argonauts				collective	yes	6051	1	monologue	M	16		0		Per; Exh	persuasion; exhortation		28 of 33	mortal		
-114	114	3	Argonautica	4	257	4	293	✅	Argus (son of Phrixus)						✅	Argonauts				collective	yes	6052	1	monologue	M	37		0		Nar; Inf	narration; information and description		7 of 7	mortal		
-115	115	3	Argonautica	4	355	4	390	✅	Medea						✅	Jason						6053	1	dialogue	D1	36		0		Vit; Lam	vituperation; lament		13 of 17 	mortal		
-116	116	3	Argonautica	4	395	4	409	✅	Jason						✅	Medea						6053	2	dialogue	D2	15		0		Per	persuasion		29 of 33	mortal		
-117	117	3	Argonautica	4	411	4	420	✅	Medea						✅	Jason						6053	3	dialogue	D3	10		0		Per; Req	persuasion; request		14 of 17 	mortal		
-118	118	3	Argonautica	4	495	4	502	✅	Peleus						✅	Argonauts				collective	yes	6054	1	monologue	M	8		0		Per	persuasion		3 of 4	mortal		
-119	119	3	Argonautica	4	739	4	748	✅	Circe						✅	Medea						6055	1	monologue	M	10		0		Vit; Per	vituperation; persuasion		1 of 1	mortal		
-120	120	3	Argonautica	4	757	4	769	✅	Hera						✅	Iris						6056	1	monologue	M	13		0		Req; Mes	request; message		6 of 7	god		
-121	121	3	Argonautica	4	783	4	832	✅	Hera						✅	Thetis						6057	1	dialogue	D1	50		0		Nar; Req	narration; request		7 of 7	god		
-122	122	3	Argonautica	4	834	4	841	✅	Thetis						✅	Hera						6057	2	dialogue	D2	8		0		Res	reply to question		1 of 2	god		
-123	123	3	Argonautica	4	856	4	864	✅	Thetis						✅	Peleus						6058	1	monologue	M	9		0		Exh; Req	exhortation; request		2 of 2	god		
-124	124	3	Argonautica	4	1014	4	1028	✅	Medea						✅	Arete						6059	1	monologue	M	15		0	No response by Arete	Req	request		15 of 17 	mortal		
-125	125	3	Argonautica	4	1031	4	1052	✅	Medea						✅	Argonauts				collective	yes	6059	2	monologue	M	22		0	No response in direct speech by the Argonauts	Req	request		16 of 17 	mortal		
-126	126	3	Argonautica	4	1073	4	1095	✅	Arete						✅	Alcinous						6060	1	dialogue	D1	23		0		Per; Req	persuasion; request		1 of 1	mortal		
-127	127	3	Argonautica	4	1098	4	1109	✅	Alcinous						✅	Arete						6060	2	dialogue	D2	12		0		Res	reply to question		1 of 1	mortal		
-128	128	3	Argonautica	4	1251	4	1258	✅	someone	(Argonaut)			yes		✅	Argonauts				collective	yes	6061	1	general interlocution	G1	8		0		Lam; Del	lament; deliberation		1 of 1	mortal	yes	
-129	129	3	Argonautica	4	1261	4	1276	✅	Ancaeus (son of Poseidon)						✅	Argonauts				collective	yes	6061	2	general interlocution	G2	16		0		Lam	lament		3 of 3	mortal		
-130	130	3	Argonautica	4	1318	4	1329	✅	Libyan goddesses				collective		✅	Jason						6062	1	general interlocution	G1	12		0		Exh; Ora	exhortation; prophecy, oracular speech		1 of 1	god	collective	
-131	131	3	Argonautica	4	1333	4	1336	✅	Jason						✅	Libyan goddesses				collective	yes	6062	2	general interlocution	G2	4		0		Pra; Inf	prayer; information and decription		30 of 33	mortal		
-132	132	3	Argonautica	4	1347	4	1362	✅	Jason						✅	Argonauts				collective	yes	6063	1	general interlocution	G1	16		0		Nar; Mes	narration; message		31 of 33	mortal		
-133	133	3	Argonautica	4	1370	4	1379	✅	Peleus						✅	Argonauts				collective	yes	6063	2	general interlocution	G2	10		0		Ora; Inf	prophecy, oracular speech and interpretation; information and description		4 of 4	mortal		
-134	134	3	Argonautica	4	1411	4	1421	✅	Orpheus						✅	Hesperides				collective	yes	6064	1	monologue	M	11		0		Pra	prayer		2 of 2	mortal		
-135	135	3	Argonautica	4	1432	4	1449	✅	Aegle						✅	Argonauts				collective	yes	6065	1	general interlocution	G1	18		0		Nar; Inf	narration; information and description		1 of 1	god		
-136	136	3	Argonautica	4	1458	4	1460	✅	someone	(Argonaut)			yes		✅	Argonauts				collective	yes	6065	2	general interlocution	G2	3		0		Lau; Des	laudation and praise; desire and wish		1 of 1	mortal	yes	
-137	137	3	Argonautica	4	1554	4	1561	✅	Triton		youth				✅	Argonauts				collective	yes	6066	1	general interlocution	G1	8		0		Gre; Vow	greeting and reception; promise and oath		1 of 2	god		youth
-138	138	3	Argonautica	4	1564	4	1570	✅	Euphemus						✅	Triton		youth				6066	2	general interlocution	G2	7		0		Req; Que	request; question		1 of 1	mortal		
-139	139	3	Argonautica	4	1573	4	1600	✅	Triton		youth				✅	Argonauts						6066	3	general interlocution	G3	28		0		Inf; Exh	information and description; exhortation		2 of 2	god		youth
-140	140	3	Argonautica	4	1597	4	1600	✅	Jason						✅	Triton	Triton is gone, so probably no longer in disguise of youth					6067	1	monologue	M	4		0	happens after speeding away from Triton	Pra	prayer		32 of 33	mortal		
-141	141	3	Argonautica	4	1654	4	1658	✅	Medea						✅	Argonauts						6068	1	monologue	M	5		0		Per; Req	persuasion; request		17 of 17 	mortal		
-142	142	3	Argonautica	4	1741	4	1745	✅	Calliste	dream		yes			✅	Euphemus						6069	1	monologue	M	5		0	in indirect speech it says he recounts it to Jason afterwards	Ora; Req	prophecy, oracular speech and interpretation; request		1 of 1	god/natural element		
-143	143	3	Argonautica	4	1749	4	1754	✅	Jason						✅	Euphemus						6070	1	monologue	M	6		0		Res	reply to question		33 of 33	mortal		
+1	1	3	Argonautica	1	242	1	246	✅	citizens				collective	yes	✅	self				collective	yes	3001	1	soliliquy	S	5		0		Del	deliberation		1 of 1	mortal	collective	
+2	2	3	Argonautica	1	251	1	259	✅	someone	(woman)			yes		✅	someone	"(another woman); talks about Alcimede (""poor Alcimede, to you too…"")"			yes		3002	1	soliliquy	S	9		0		Lam	lament		1 of 1	mortal		
+3	3	3	Argonautica	1	278	1	291	✅	Alcimede						✅	Jason						3003	1	dialogue	D1	14		0		Far; Lam	farewell speech; lament		1 of 1	mortal		
+4	4	3	Argonautica	1	295	1	305	✅	Jason						✅	Alcimede						3003	2	dialogue	D2	11		0		Far; Con	farewell speech; consolation		1 of 33	mortal		
+5	5	3	Argonautica	1	332	1	340	✅	Jason						✅	Argonauts				collective	yes	3004	1	general interlocution	G1	9		0		Per	persuasion		2 of 33	mortal		
+6	6	3	Argonautica	1	345	1	347	✅	Heracles						✅	Argonauts				collective	yes	3004	2	general interlocution	G2	3		0		Per	persuasion		1 of 2	mortal		
+7	7	3	Argonautica	1	351	1	362	✅	Jason						✅	Argonauts				collective	yes	3004	3	general interlocution	G3	12		0		Inf; Mes; Req	information; message; request		3 of 33	mortal		
+8	8	3	Argonautica	1	411	1	424	✅	Jason						✅	Apollo						3005	1	monologue	M	14		0		Pra	prayer		4 of 33	mortal		
+9	9	3	Argonautica	1	440	1	447	✅	Idmon						✅	Argonauts						3006	1	monologue	M	8		0		Ora	prophecy, oracular speech and interpretation		1 of 2	mortal		
+10	10	3	Argonautica	1	463	1	471	✅	Idas						✅	Jason						3007	1	general interlocution	G1	9		0		Vit; Thr	vituperation; threat		1 of 3	mortal		
+11	11	3	Argonautica	1	476	1	484	✅	Idmon						✅	Idas						3007	2	general interlocution	G2	9		0		Vit; Thr	vituperation; threat		2 of 2	mortal		
+12	12	3	Argonautica	1	487	1	491	✅	Idas						✅	Idmon						3007	3	general interlocution	G3	5		0		Vit; Thr	vituperation; threat		2 of 3	mortal		
+13	13	3	Argonautica	1	657	1	666	✅	Hypsipyle						✅	Lemnian women				collective	yes	3008	1	general interlocution	G1	10		0		Per; Req	persuasion; request		1 of 5	mortal		
+14	14	3	Argonautica	1	675	1	696	✅	Polyxo						✅	Lemnian women				collective	yes	3008	2	general interlocution	G2	22		0		Per	persuasion		1 of 1	mortal		
+15	15	3	Argonautica	1	700	1	701	✅	Hypsipyle						✅	Lemnian women				collective	yes	3008	3	general interlocution	G3	2		0		Inf; Per	information; persuasion		2 of 5	mortal		
+16	16	3	Argonautica	1	703	1	707	✅	Hypsipyle						✅	Iphinoe						3008	4	general interlocution	G4	5		0		Req; Mes	request; message		3 of 5	mortal		
+17	17	3	Argonautica	1	712	1	716	✅	Iphinoe						✅	Argonauts				collective	yes	3009	1	monologue	M	5		0		Mes	message		1 of 1	mortal		
+18	18	3	Argonautica	1	793	1	833	✅	Hypsipyle						✅	Jason						3010	1	dialogue	D1	41		0		Nar; Per; Inv	narration; persuasion; invitation		4 of 5	mortal		
+19	19	3	Argonautica	1	836	1	841	✅	Jason						✅	Hypsipyle						3010	2	dialogue	D2	6		0		Res	reply to question		5 of 33	mortal		
+20	20	3	Argonautica	1	865	1	874	✅	Heracles						✅	Argonauts				collective	yes	3011	1	monologue	M	10		0		Vit; Exh	vituperation; exhortation		2 of 2	mortal		
+21	21	3	Argonautica	1	888	1	898	✅	Hypsipyle						✅	Jason						3012	1	dialogue	D1	11		0		Far; Req	farewell speech; request		5 of 5	mortal		
+22	22	3	Argonautica	1	900	1	909	✅	Jason						✅	Hypsipyle						3012	2	dialogue	D2	10		0		Far; Vow; Req	farewell speech; promise or oath; request		6 of 33	mortal		
+23	23	3	Argonautica	1	1092	1	1102	✅	Mopsus (son of Ampyx)						✅	Jason						3013	1	monologue	M	11		0		Ora	prophecy, oracular speech and interpretation		1 of 3	mortal		
+24	24	3	Argonautica	1	1257	1	1259	✅	Polyphemus (Argonaut)						✅	Heracles						3014	1	monologue	M	3		0		Nar; Inf	narration; information and description		1 of 1	mortal		
+25	25	3	Argonautica	1	1290	1	1295	✅	Telamon						❌	Tiphys and Jason					tandem	3015	1	monologue	M	6		0		Vit	vituperation		1 of 2	mortal		
+26	26	3	Argonautica	1	1315	1	1325	✅	Glaucus (sea god)						✅	Argonauts				collective	yes	3016	1	monologue	M	11		0		Ora	prophecy, oracular speech and interpretation		1 of 1	god		
+27	27	3	Argonautica	1	1332	1	1335	✅	Telamon						✅	Jason						3017	1	dialogue	D1	4		0		Per; Req	persuasion; request		2 of 2	mortal		
+28	28	3	Argonautica	1	1337	1	1343	✅	Jason						✅	Telamon						3017	2	dialogue	D2	7		0		Res; Des	reply to question; desire and wish		7 of 33	mortal		
+29	29	3	Argonautica	2	11	2	18	✅	Amycus						✅	Argonauts				collective	yes	3018	1	dialogue	D1	8		0		Cha; Thr	challenge; threat		1 of 2	mortal		
+30	30	3	Argonautica	2	22	2	24	✅	Polydeuces						✅	Amycus						3018	2	dialogue	D2	3		0		Res	reply to question		1 of 1	mortal		
+31	31	3	Argonautica	2	55	2	59	✅	Amycus						✅	Polydeuces						3018	3	dialogue	D3	5		0		Cha; Tau	challenge; taunt		2 of 2	mortal		
+32	32	3	Argonautica	2	145	2	153	✅	someone	(Argonaut)			yes		✅	Argonauts				collective	yes	3018	4	soliliquy	S	9		0		Del; Lam	deliberation; lament		1 of 1	mortal	yes	
+33	33	3	Argonautica	2	209	2	239	✅	Phineus						✅	Argonauts				collective	yes	3019	1	dialogue	D1	31		0		Lam; Req; Ora	lament; request; prophecy, oracular speech and interpretation		1 of 6	mortal		
+34	34	3	Argonautica	2	244	2	253	✅	Zetes						✅	Phineus						3019	2	dialogue	D2	10		0		Res	reply to question		1 of 1	mortal		
+35	35	3	Argonautica	2	256	2	261	✅	Phineus						✅	Zetes						3019	3	dialogue	D3	6		0		Per; Vow	persuasion; promise and oath		2 of 6	mortal		
+36	36	3	Argonautica	2	288	2	290	✅	Iris						❌	Zetes and Kalaïs					tandem	3020	1	monologue	M	3		0		Vit; Vow	vituperation; promise and oath		1 of 1	god		
+37	37	3	Argonautica	2	311	2	407	✅	Phineus						✅	Argonauts				collective	yes	3021	1	general interlocution	G1	97		0		Ora	prophecy, oracular speech and interpretation		3 of 6	mortal		
+38	38	3	Argonautica	2	411	2	418	✅	Jason						✅	Phineus						3021	2	general interlocution	G2	8		0		Que	question		8 of 33	mortal		
+39	39	3	Argonautica	2	420	2	425	✅	Phineus						✅	Jason						3021	3	general interlocution	G3	6		0		Ora; Req	prophecy, oracular speech and interpretation; request		4 of 6	mortal		
+40	40	3	Argonautica	2	438	2	442	✅	Jason						✅	Phineus						3022	1	dialogue	D1	5		0		Per; Des	persuasion; desire and wish		9 of 33	mortal		
+41	41	3	Argonautica	2	444	2	447	✅	Phineus						✅	Jason						3022	2	dialogue	D2	4		0		Lam; Des	lament; desire and wish		5 of 6	mortal		
+42	42	3	Argonautica	2	468	2	489	✅	Phineus						✅	Argonauts				collective	yes	3023	1	monologue	M	22		0		Nar	narration		6 of 6	mortal		
+43	43	3	Argonautica	2	611	2	618	✅	Tiphys						✅	Argonauts				collective	yes	3024	1	general interlocution	G1	8		0		Exh	exhortation		1 of 1	mortal		
+44	44	3	Argonautica	2	622	2	637	✅	Jason						✅	Tiphys						3024	2	general interlocution	G2	16		0		Lam	lament		10 of 33	mortal		
+45	45	3	Argonautica	2	641	2	647	✅	Jason						✅	Argonauts				collective	yes	3024	3	general interlocution	G3	7		0	following a paraphrase of the heroes that shout in response to G2	Lau; Vow	laudation and praise; promise and oath		11 of 33	mortal		
+46	46	3	Argonautica	2	686	2	693	✅	Orpheus						✅	Argonauts				collective	yes	3025	1	monologue	M	8		0		Per; Des	persuasian; desire and wish		1 of 2	mortal		
+47	47	3	Argonautica	2	774	2	810	✅	Lycus						✅	Argonauts				collective	yes	3026	1	monologue	M	37		0		Nar	narration		1 of 1	mortal		
+48	48	3	Argonautica	2	869	2	877	✅	Ancaeus (son of Poseidon)						✅	Peleus						3027	1	general interlocution	G1	9		0		Per	persuasion		1 of 3	mortal		
+49	49	3	Argonautica	2	880	2	884	✅	Peleus						✅	Argonauts				collective	yes	3027	2	general interlocution	G2	5		0		Per; Exh	persuasion; exhortation		1 of 4	mortal		
+50	50	3	Argonautica	2	886	2	893	✅	Jason						✅	Peleus						3027	3	general interlocution	G3	8		0		Lam	lament		12 of 33	mortal		
+51	51	3	Argonautica	2	1047	2	1067	✅	Amphidamas						✅	Argonauts				collective	yes	3028	1	monologue	M	21		0		Per; Exh	persuasion; exhortation		1 of 1	mortal		
+52	52	3	Argonautica	2	1123	2	1133	✅	Argus (son of Phrixus)						✅	Argonauts				collective	yes	3029	1	general interlocution	G1	11		0		Gre; Req	greeting and reception; request		1 of 7	mortal		
+53	53	3	Argonautica	2	1136	2	1139	✅	Jason						✅	Argus (son of Phrixus)						3029	2	general interlocution	G2	4		0		Res	reply to question		13 of 33	mortal		
+54	54	3	Argonautica	2	1141	2	1156	✅	Argus (son of Phrixus)						✅	Jason						3029	3	general interlocution	G3	16		0		Res	reply to question		2 of 7	mortal		
+55	55	3	Argonautica	2	1160	2	1167	✅	Jason						✅	Argus (son of Phrixus)						3029	4	general interlocution	G4	8		0		Inf	information and description		14 of 33	mortal		
+56	56	3	Argonautica	2	1179	2	1195	✅	Jason						✅	Argus (son of Phrixus)						3030	1	general interlocution	G1	17		0		Per; Req	persuasion; request		15 of 33	mortal		
+57	57	3	Argonautica	2	1200	2	1215	✅	Argus (son of Phrixus)						✅	Jason						3030	2	general interlocution	G2	16		0		Res	reply to question		3 of 7	mortal		
+58	58	3	Argonautica	2	1219	2	1225	✅	Peleus						✅	Argus (son of Phrixus)						3030	3	general interlocution	G3	7		0		Exh	exhortation		16 of 33	mortal		
+59	59	3	Argonautica	2	1277	2	1280	✅	Ancaeus (son of Poseidon)						✅	Argonauts						3031	1	monologue	M	4		0		Exh; Que	exhortation; question		2 of 3	mortal		
+60	60	3	Argonautica	3	11	3	16	✅	Hera						✅	Athena						3032	1	dialogue	D1	6		0		Per; Que	persuasion; question		1 of 7	god		
+61	61	3	Argonautica	3	18	3	21	✅	Athena						✅	Hera						3032	2	dialogue	D2	5		0		Res	reply to question		1 of 2	god		
+62	62	3	Argonautica	3	25	3	29	✅	Hera						✅	Athena						3032	3	dialogue	D3	5		0		Per; Exh	persuasion; exhortation		2 of 7	god		
+63	63	3	Argonautica	3	32	3	35	✅	Athena						✅	Hera						3032	4	dialogue	D4	4		0		Res	reply to question		2 of 2	god		
+64	64	3	Argonautica	3	52	3	54	✅	Aphrodite						❌	Athena and Hera					tandem	3033	1	general interlocution	G1	3		0		Que	question		1 of 6	god		
+65	65	3	Argonautica	3	56	3	75	✅	Hera						✅	Aphrodite						3033	2	general interlocution	G2	20		0		Res	reply to question		3 of 7	god		
+66	66	3	Argonautica	3	79	3	82	✅	Aphrodite						✅	Hera						3033	3	general interlocution	G3	4		0		Res	reply to question		2 of 6	god		
+67	67	3	Argonautica	3	84	3	89	✅	Hera						✅	Aphrodite						3033	4	general interlocution	G4	6		0		Per; Req	persuasion; request		4 of 7	god		
+68	68	3	Argonautica	3	91	3	99	✅	Aphrodite						❌	Athena and Hera					tandem	3033	5	general interlocution	G5	9		0		Lam; Nar	lament; narration		3 of 6	god		
+69	69	3	Argonautica	3	102	3	105	✅	Aphrodite						❌	Athena and Hera					tandem	3033	6	general interlocution	G6	4		0		Lam; Vow	lament; promise and oath		4 of 6	god		
+70	70	3	Argonautica	3	108	3	110	✅	Hera						✅	Aphrodite						3033	7	general interlocution	G7	3		0		Exh; Req	exhortation; request		5 of 7	god		
+71	71	3	Argonautica	3	129	3	144	✅	Aphrodite						✅	Eros						3034	1	dialogue	D1	16		0	long, indirect speech interruption with what Cupid replies	Req; Vow	request; promise and oath		5 of 6	god		
+72	72	3	Argonautica	3	151	3	153	✅	Aphrodite						✅	Eros						3034	2	dialogue	D2	3		0		Vow	promise and oath		6 of 6	god		
+73	73	3	Argonautica	3	171	3	193	✅	Jason						✅	Argonauts				collective	yes	3035	1	monologue	M	23		0		Per; Req	persuasion; request		17 of 33	mortal		
+74	74	3	Argonautica	3	260	3	267	✅	Chalciope						❌	Argus (son of Phrixus) and sons of Phrixus						3036	1	monologue	M	8		0		Lam	lament		1 of 4	mortal		
+75	75	3	Argonautica	3	304	3	316	✅	Aietes						❌	Argus (son of Phrixus) and sons of Phrixus						3037	1	general interlocution	G1	13		0		Req	request		1 of 4	mortal		
+76	76	3	Argonautica	3	320	3	366	✅	Argus (son of Phrixus)						✅	Aietes						3037	2	general interlocution	G2	47		0		Nar	narration		4 of 7	mortal		
+77	77	3	Argonautica	3	372	3	381	✅	Aietes						✅	Argonauts				collective	yes	3037	3	general interlocution	G3	10		0		Vit; Thr	vituperation; threat		2 of 4	mortal		
+78	78	3	Argonautica	3	386	3	395	✅	Jason						✅	Aietes						3037	4	general interlocution	G4	10		0		Per; Req	persuasion; request		18 of 33	mortal		
+79	79	3	Argonautica	3	401	3	421	✅	Aietes						✅	Jason						3037	5	general interlocution	G5	21		0		Cha; Vow	challenge; promise and oath		3 of 4	mortal		
+80	80	3	Argonautica	3	427	3	431	✅	Jason						✅	Aietes						3037	6	general interlocution	G6	5		0		Res	reply to question		19 of 33	mortal		
+81	81	3	Argonautica	3	434	3	438	✅	Aietes						✅	Jason						3037	7	general interlocution	G7	5		0		Req; Tau	request; taunt		4 of 4	mortal		
+82	82	3	Argonautica	3	464	3	470	✅	Medea						✅	self						3038	1	soliliquy	S	7		0		Lam; Des	lament; desire and wish		1 of 17 	mortal		
+83	83	3	Argonautica	3	475	3	483	✅	Argus						✅	Jason						3039	1	dialogue	D1	9		0		Per	persuasion		5 of 7	mortal		
+84	84	3	Argonautica	3	485	3	488	✅	Jason						✅	Argus (son of Phrixus)						3039	2	dialogue	D2	4		0		Lam; Req	lament; request		20 of 33	mortal		
+85	85	3	Argonautica	3	492	3	501	✅	Jason						✅	Argonauts				collective	yes	3040	1	general interlocution	G1	10		0		Inf	information and description		21 of 33	mortal		
+86	86	3	Argonautica	3	506	3	514	✅	Peleus						✅	Jason						3040	2	general interlocution	G2	9		0		Per	persuasion		2 of 4	mortal		
+87	87	3	Argonautica	3	523	3	539	✅	Argus (son of Phrixus)						✅	Argonauts				collective	yes	3040	3	general interlocution	G3	17		0		Per	persuasion		6 of 7	mortal		
+88	88	3	Argonautica	3	545	3	554	✅	Mopsus (son of Ampyx)						✅	Jason						3040	4	general interlocution	G4	10		0		Ora	prophecy, oracular speech and interpretation		2 of 3	mortal		
+89	89	3	Argonautica	3	558	3	563	✅	Idas						✅	Argonauts				collective	yes	3040	5	general interlocution	G5	6		0		Vit	vituperation		3 of 3	mortal		
+90	90	3	Argonautica	3	568	3	571	✅	Jason						✅	Argonauts				collective	yes	3040	6	general interlocution	G6	4		0		Per; Req	persuasion; request		22 of 33	mortal		
+91	91	3	Argonautica	3	636	3	644	✅	Medea						✅	self						3041	1	soliliquy	S	9		0		Del	deliberation		2 of 17 	mortal		
+92	92	3	Argonautica	3	674	3	680	✅	Chalciope						✅	Medea						3042	1	dialogue	D1	7		0		Lam; Que	lament; question		2 of 4	mortal		
+93	93	3	Argonautica	3	688	3	692	✅	Medea						✅	Chalciope						3042	2	dialogue	D2	5		0		Lam; Des	lament; desire and wish		3 of 17 	mortal		
+94	94	3	Argonautica	3	697	3	704	✅	Chalciope						✅	Medea						3042	3	dialogue	D3	8		0		Req	request		3 of 4	mortal		
+95	95	3	Argonautica	3	711	3	717	✅	Medea						✅	Chalciope						3042	4	dialogue	D4	7		0		Res	reply to question		4 of 17 	mortal		
+96	96	3	Argonautica	3	719	3	723	✅	Chalciope						✅	Medea						3042	5	dialogue	D5	5		0		Per; Req	persuasion; request		4 of 4	mortal		
+97	97	3	Argonautica	3	727	3	739	✅	Medea						✅	Chalciope						3042	6	dialogue	D6	13		0		Res	reply to question		5 of 17 	mortal		
+98	98	3	Argonautica	3	771	3	801	✅	Medea						✅	self						3043	1	soliliquy	S	31		0		Lam; Del	lament; deliberation		6 of 17 	mortal		
+99	99	3	Argonautica	3	891	3	911	✅	Medea						✅	companions of Medea				collective	yes	3044	1	monologue	M	21		0		Per; Req	persuasion; request		7 of 17 	mortal		
+100	100	3	Argonautica	3	932	3	937	✅	crow	at Hera's devising			yes		✅	Mopsus (son of Ampyx)						3045	1	monologue	M	6		0		Vit; Tau	vituperation; taunt		1 of 1	animal	yes	
+101	101	3	Argonautica	3	940	3	946	✅	Mopsus (son of Ampyx)						❌	Jason and Argus					tandem	3046	1	monologue	M	7		0	Mopsus (son of Ampyx) does smile at the words of the crow before speaking to Jason and Argus	Ora	prophecy, oracular speech and interpretation		3 of 3	mortal		
+102	102	3	Argonautica	3	975	3	1007	✅	Jason						✅	Medea						3047	1	dialogue	D1	33		0		Per	persuasion		23 of 33	mortal		
+103	103	3	Argonautica	3	1026	3	1062	✅	Medea						✅	Jason						3047	2	dialogue	D2	37		0		Inf; Req	information and description; request		8 of 17 	mortal		
+104	104	3	Argonautica	3	1069	3	1076	✅	Medea						✅	Jason						3047	3	dialogue	D3	8		0		Req; Que	request; question		9 of 17 	mortal		
+105	105	3	Argonautica	3	1079	3	1101	✅	Jason						✅	Medea						3047	4	dialogue	D4	23		0		Inf; Vow	information and description; promise and oath		24 of 33	mortal		
+106	106	3	Argonautica	3	1105	3	1117	✅	Medea						✅	Jason						3047	5	dialogue	D5	13		0		Lam; Req	lament; request		10 of 17 	mortal		
+107	107	3	Argonautica	3	1120	3	1130	✅	Jason						✅	Medea						3047	6	dialogue	D6	11		0		Vow	promise and oath		25 of 33	mortal		
+108	108	3	Argonautica	3	1143	3	1145	✅	Jason						✅	Medea						3047	7	dialogue	D7	3		0		Far	farewell speech		26 of 33	mortal		
+109	109	3	Argonautica	4	30	4	33	✅	Medea						✅	self						3048	1	soliliquy	S	4		0		Far; Lam	farewell speech; lament		11 of 17 	mortal		
+110	110	3	Argonautica	4	57	4	65	✅	Selene						✅	self						3049	1	soliliquy	S	9		0		Del; Tau	deliberation; taunt		1 of 1	god		
+111	111	3	Argonautica	4	83	4	91	✅	Medea						❌	Jason and Argus (son of Phrixus) and Phrontis					yes	3050	1	general interlocution	G1	9		0		Per	persuasion		12 of 17 	mortal		
+112	112	3	Argonautica	4	95	4	98	✅	Jason						✅	Medea						3050	2	general interlocution	G2	4		0		Vow	promise and oath		27 of 33	mortal		
+113	113	3	Argonautica	4	190	4	205	✅	Jason						✅	Argonauts				collective	yes	3051	1	monologue	M	16		0		Per; Exh	persuasion; exhortation		28 of 33	mortal		
+114	114	3	Argonautica	4	257	4	293	✅	Argus (son of Phrixus)						✅	Argonauts				collective	yes	3052	1	monologue	M	37		0		Nar; Inf	narration; information and description		7 of 7	mortal		
+115	115	3	Argonautica	4	355	4	390	✅	Medea						✅	Jason						3053	1	dialogue	D1	36		0		Vit; Lam	vituperation; lament		13 of 17 	mortal		
+116	116	3	Argonautica	4	395	4	409	✅	Jason						✅	Medea						3053	2	dialogue	D2	15		0		Per	persuasion		29 of 33	mortal		
+117	117	3	Argonautica	4	411	4	420	✅	Medea						✅	Jason						3053	3	dialogue	D3	10		0		Per; Req	persuasion; request		14 of 17 	mortal		
+118	118	3	Argonautica	4	495	4	502	✅	Peleus						✅	Argonauts				collective	yes	3054	1	monologue	M	8		0		Per	persuasion		3 of 4	mortal		
+119	119	3	Argonautica	4	739	4	748	✅	Circe						✅	Medea						3055	1	monologue	M	10		0		Vit; Per	vituperation; persuasion		1 of 1	mortal		
+120	120	3	Argonautica	4	757	4	769	✅	Hera						✅	Iris						3056	1	monologue	M	13		0		Req; Mes	request; message		6 of 7	god		
+121	121	3	Argonautica	4	783	4	832	✅	Hera						✅	Thetis						3057	1	dialogue	D1	50		0		Nar; Req	narration; request		7 of 7	god		
+122	122	3	Argonautica	4	834	4	841	✅	Thetis						✅	Hera						3057	2	dialogue	D2	8		0		Res	reply to question		1 of 2	god		
+123	123	3	Argonautica	4	856	4	864	✅	Thetis						✅	Peleus						3058	1	monologue	M	9		0		Exh; Req	exhortation; request		2 of 2	god		
+124	124	3	Argonautica	4	1014	4	1028	✅	Medea						✅	Arete						3059	1	monologue	M	15		0	No response by Arete	Req	request		15 of 17 	mortal		
+125	125	3	Argonautica	4	1031	4	1052	✅	Medea						✅	Argonauts				collective	yes	3059	2	monologue	M	22		0	No response in direct speech by the Argonauts	Req	request		16 of 17 	mortal		
+126	126	3	Argonautica	4	1073	4	1095	✅	Arete						✅	Alcinous						3060	1	dialogue	D1	23		0		Per; Req	persuasion; request		1 of 1	mortal		
+127	127	3	Argonautica	4	1098	4	1109	✅	Alcinous						✅	Arete						3060	2	dialogue	D2	12		0		Res	reply to question		1 of 1	mortal		
+128	128	3	Argonautica	4	1251	4	1258	✅	someone	(Argonaut)			yes		✅	Argonauts				collective	yes	3061	1	general interlocution	G1	8		0		Lam; Del	lament; deliberation		1 of 1	mortal	yes	
+129	129	3	Argonautica	4	1261	4	1276	✅	Ancaeus (son of Poseidon)						✅	Argonauts				collective	yes	3061	2	general interlocution	G2	16		0		Lam	lament		3 of 3	mortal		
+130	130	3	Argonautica	4	1318	4	1329	✅	Libyan goddesses				collective		✅	Jason						3062	1	general interlocution	G1	12		0		Exh; Ora	exhortation; prophecy, oracular speech		1 of 1	god	collective	
+131	131	3	Argonautica	4	1333	4	1336	✅	Jason						✅	Libyan goddesses				collective	yes	3062	2	general interlocution	G2	4		0		Pra; Inf	prayer; information and decription		30 of 33	mortal		
+132	132	3	Argonautica	4	1347	4	1362	✅	Jason						✅	Argonauts				collective	yes	3063	1	general interlocution	G1	16		0		Nar; Mes	narration; message		31 of 33	mortal		
+133	133	3	Argonautica	4	1370	4	1379	✅	Peleus						✅	Argonauts				collective	yes	3063	2	general interlocution	G2	10		0		Ora; Inf	prophecy, oracular speech and interpretation; information and description		4 of 4	mortal		
+134	134	3	Argonautica	4	1411	4	1421	✅	Orpheus						✅	Hesperides				collective	yes	3064	1	monologue	M	11		0		Pra	prayer		2 of 2	mortal		
+135	135	3	Argonautica	4	1432	4	1449	✅	Aegle						✅	Argonauts				collective	yes	3065	1	general interlocution	G1	18		0		Nar; Inf	narration; information and description		1 of 1	god		
+136	136	3	Argonautica	4	1458	4	1460	✅	someone	(Argonaut)			yes		✅	Argonauts				collective	yes	3065	2	general interlocution	G2	3		0		Lau; Des	laudation and praise; desire and wish		1 of 1	mortal	yes	
+137	137	3	Argonautica	4	1554	4	1561	✅	Triton		youth				✅	Argonauts				collective	yes	3066	1	general interlocution	G1	8		0		Gre; Vow	greeting and reception; promise and oath		1 of 2	god		youth
+138	138	3	Argonautica	4	1564	4	1570	✅	Euphemus						✅	Triton		youth				3066	2	general interlocution	G2	7		0		Req; Que	request; question		1 of 1	mortal		
+139	139	3	Argonautica	4	1573	4	1600	✅	Triton		youth				✅	Argonauts						3066	3	general interlocution	G3	28		0		Inf; Exh	information and description; exhortation		2 of 2	god		youth
+140	140	3	Argonautica	4	1597	4	1600	✅	Jason						✅	Triton	Triton is gone, so probably no longer in disguise of youth					3067	1	monologue	M	4		0	happens after speeding away from Triton	Pra	prayer		32 of 33	mortal		
+141	141	3	Argonautica	4	1654	4	1658	✅	Medea						✅	Argonauts						3068	1	monologue	M	5		0		Per; Req	persuasion; request		17 of 17 	mortal		
+142	142	3	Argonautica	4	1741	4	1745	✅	Calliste	dream		yes			✅	Euphemus						3069	1	monologue	M	5		0	in indirect speech it says he recounts it to Jason afterwards	Ora; Req	prophecy, oracular speech and interpretation; request		1 of 1	god/natural element		
+143	143	3	Argonautica	4	1749	4	1754	✅	Jason						✅	Euphemus						3070	1	monologue	M	6		0		Res	reply to question		33 of 33	mortal		

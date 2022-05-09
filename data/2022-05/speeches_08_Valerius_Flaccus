@@ -43,7 +43,7 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 42		7		2	557	n	2	566	n	n	✅	Laomedon						✅	Hercules						7036	1	D	D	11		0		Gre, Tau, Inv	
 43		7		2	574	n	2	576	y	y	✅	Hercules						✅	Laomedon						7036	2	D	D (reply)	2.0833333333333335		0		Inv	
 44		7		2	592	n	2	607	n	y	✅	Helle						✅	Jason						7037	1	D	D	16		0		Ora, Mes	
-45		7		2	601	n	2	607	n	n	✅	Helle					embedded	✅	Phrixus							1	M	M (no reply)	7		1			
+45		7		2	601	n	2	607	n	n	✅	Helle					embedded	✅	Phrixus						7900	1	M	M (no reply)	7		1			
 46		7		2	611	n	2	612	n	n	✅	Jason						✅	Helle						7037	2	D	D (reply)	2		0		Pra	
 47		7		2	639	y	2	648	n	n	✅	Cyzicus						✅	Argonauts				y		7038	1	M	M (no reply)	9.833333333333334		0		Gre, Acc	
 48		7		2	656	y	2	658	n	y	✅	Cyzicus						✅	Jason						7039	1	D	D	2.6666666666666665		0		Inf	
@@ -87,15 +87,15 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 86		7		4	327	n	4	329	n	y	✅	Argonauts				y		✅	Polydeuces						7070	1	M	M (no reply)	2.5833333333333335		0		Lau	
 87		7		4	335	y	4	336	n	y	✅	Castor						✅	Argo					personification	7071	1	M	M (no reply)	1.5		0		Pra	
 88		7		4	351	y	4	421	n	y	✅	Orpheus						✅	Argonauts				y		7072	1	M	M (no reply)	70.41666666666667		0		Nar	
-89		7		4	360	y	4	364	y	n	✅	Juno					embedded	✅	Jupiter							1	M	M (no reply)	4.166666666666667		1			
-90		7		4	387	n	4	387	n	y	✅	Mercury						✅	Argus							1	M	M (no reply)	0.9166666666667		1			que ait (387)
+89		7		4	360	y	4	364	y	n	✅	Juno					embedded	✅	Jupiter						7901	1	M	M (no reply)	4.166666666666667		1			
+90		7		4	387	n	4	387	n	y	✅	Mercury						✅	Argus						7902	1	M	M (no reply)	0.9166666666667		1			que ait (387)
 91		7		4	436	y	4	464	n	y	✅	Phineus						✅	Argonauts				y		7073	1	G	G	28.333333333333332		0		Gre, Req	
 92		7		4	466	y	4	472	n	y	✅	Zetes						✅	Phineus						7073	2	G	G (reply)	6.25		0		Res	
 93		7		4	474	n	4	484	n	y	✅	Phineus						❌	Argonauts and Jupiter				y		7073	3	G	G (reply)	10.916666666666666		0		Nar, Pra	
 94		7		4	519	n	4	526	n	n	✅	Typhon						❌	Kalaïs and Zetes				y	Tandem	7074	1	M	M (no reply)	8		0		Vit	
 95		7		4	538	n	4	546	n	n	✅	Jason						✅	Phineus						7075	1	G	G	9		0		Req	
 96		7		4	553	y	4	624	y	y	✅	Phineus						✅	Jason						7075	2	G	G (reply)	71.5		0		Nar, Ora	
-97		7		4	581	n	4	584	n	n	✅	Jupiter					embedded: vox	✅	Phineus							1	M	M (no reply)	4		1			
+97		7		4	581	n	4	584	n	n	✅	Jupiter					embedded: vox	✅	Phineus						7903	1	M	M (no reply)	4		1			
 98		7		4	629	y	4	635	n	y	✅	Phineus						❌	Kalaïs and Zetes					Tandem	7075	3	G	G (reply)	6.416666666666667		0		Lau, Req	
 99		7		4	649	y	4	653	y	n	✅	Jason						✅	Argonauts				y		7076	1	M	M (no reply)	4.25		0		Exh	
 100		7		4	674	y	4	675	y	y	✅	Jason						✅	Minerva						7077	1	M	M (no reply)	0.9166666666667		0		Pra	
@@ -165,7 +165,7 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 164		7		7	223	y	7	236	n	n	✅	Venus	Circe					✅	Medea						7122	2	D	D (reply)	13.583333333333334		0		Res, Per	
 165		7		7	238	n	7	250	n	n	✅	Medea						✅	Venus	Circe					7122	3	D	D (reply)	12.833333333333334		0		Inf, Req	
 166		7		7	257	y	7	283	n	y	✅	Venus	Circe					✅	Medea						7122	4	D	D (reply)	33.75		0		Res, Nar, Mes	
-167		7		7	266	n	7	287	y	y	✅	Jason					embedded	✅	Venus					Venus in disguise as Circe, falsely claims that Jason addressed Circe with a message for Medea		1	M	M (no reply)	13.166666666666666	ait (266)	1			
+167		7		7	266	n	7	287	y	y	✅	Jason					embedded	✅	Venus					Venus in disguise as Circe, falsely claims that Jason addressed Circe with a message for Medea	7904	1	M	M (no reply)	13.166666666666666	ait (266)	1			
 168		7		7	331	n	7	349	y	y	✅	Medea						✅	self						7123	1	S	S	13.5		0		Lam, Del	
 169		7		7	385	n	7	387	n	n	✅	Medea						✅	Venus	Circe					7124	1	M	M (no reply)	3		0		Que	
 170		7		7	413	n	7	430	n	y	✅	Jason						✅	Medea						7125	1	D	D	17.833333333333332		0		Per	

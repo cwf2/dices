@@ -1,11 +1,11 @@
 {% extends "speechdb/base_sidebar.html" %}
 
-{% block title %}Characters{% endblock %}
-{% block sidebar_title %}Characters{% endblock %}
+{% block title %}Character Instances{% endblock %}
+{% block sidebar_title %}Character Instances{% endblock %}
 
 {% block sidebar_content %}
 <p>
-  Core identities of speakers and addressees. External ID columns link to entries in the respective databases.
+  Context-specific realizations of characters, including anonymous characters.
 </p>
 {% endblock %}
 
@@ -24,29 +24,27 @@
     <label for="sel_gender">Gender</label>
     <select class="form-control" id="sel_gender" name="gender">
       <option value="" selected="selected">-----</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="non-binary">Non-Binary</option>
-      <option value="none">None</option>
+      {% for k, v in character_gender_choices %}
+      <option value="{{ k }}">{{ v }}</option>
+      {% endfor %}                                            
     </select>
   </div>
   <div class="form-group">
     <label for="sel_being">Being</label>
     <select class="form-control" id="sel_being" name="being">
       <option value="" selected="selected">-----</option>
-      <option value="mortal">Mortal</option>
-      <option value="divine">Divine</option>
-      <option value="creature">Creature</option>
-      <option value="other">Other</option>
+      {% for k, v in character_being_choices %}
+      <option value="{{ k }}">{{ v }}</option>
+      {% endfor %}                                            
     </select>
   </div>
   <div class="form-group">
     <label for="sel_number">Number</label>
     <select class="form-control" id="sel_number" name="number">
       <option value="" selected="selected">-----</option>
-      <option value="individual">Individual</option>
-      <option value="collective">Collective</option>
-      <option value="other">Other</option>
+      {% for k, v in character_number_choices %}
+      <option value="{{ k }}">{{ v }}</option>
+      {% endfor %}                                            
     </select>
   </div>
   <div class="form-group">
