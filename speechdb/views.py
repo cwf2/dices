@@ -406,7 +406,10 @@ class AppSpeechList(ListView):
         ('addr_inst', int),
         ('spkr_name', str),
         ('addr_name', str),
-        ('char_name', str),        
+        ('char_name', str), 
+        ('spkr_being', str),
+        ('addr_being', str),               
+        ('char_being', str),
         ('cluster_id', int),
         ('type', str),
         ('part', int),
@@ -421,7 +424,10 @@ class AppSpeechList(ListView):
         context['reader'] = CTS_READER
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
-        context['speech_types'] = Speech.SpeechType.choices
+        context['character_being_choices'] = Character.CharacterBeing.choices
+        context['character_number_choices'] = Character.CharacterNumber.choices
+        context['character_gender_choices'] = Character.CharacterGender.choices        
+        context['speech_type_choices'] = Speech.SpeechType.choices
         context['search_params'] = self.params.items()
         
         return context
@@ -451,6 +457,13 @@ class AppSpeechList(ListView):
                 Q(spkr__name=self.params['char_name']) |
                 Q(addr__name=self.params['char_name'])
             )
+
+        # any participant by being
+        if 'char_being' in self.params:
+            query.append(
+                Q(spkr__being=self.params['char_being']) |
+                Q(addr__being=self.params['char_being'])
+            )
         
         # speaker by id
         if 'spkr_id' in self.params:
@@ -463,6 +476,10 @@ class AppSpeechList(ListView):
         # speaker by name
         if 'spkr_name' in self.params:
             query.append(Q(spkr__name=self.params['spkr_name']))
+
+        # speaker by name
+        if 'spkr_being' in self.params:
+            query.append(Q(spkr__being=self.params['spkr_being']))
         
         # addressee by id
         if 'addr_id' in self.params:
@@ -474,7 +491,11 @@ class AppSpeechList(ListView):
 
         # addressee by name
         if 'addr_name' in self.params:
-            query.append(Q(spkr__name=self.params['addr_name']))
+            query.append(Q(addr__name=self.params['addr_name']))
+
+        # addressee by being
+        if 'addr_being' in self.params:
+            query.append(Q(addr__being=self.params['addr_being']))
 
         if 'cluster_id' in self.params:
             query.append(Q(cluster__pk=self.params['cluster_id']))
@@ -504,7 +525,22 @@ class AppSpeechClusterList(ListView):
     queryset = SpeechCluster.objects.all()
     paginate_by = PAGE_SIZE
     _valid_params = [
-
+        ('spkr_id', int),
+        ('addr_id', int),
+        ('char_id', int),
+        ('char_inst', int),
+        ('spkr_inst', int),
+        ('addr_inst', int),
+        ('spkr_name', str),
+        ('addr_name', str),
+        ('char_name', str), 
+        ('spkr_being', str),
+        ('addr_being', str),               
+        ('char_being', str),
+        ('cluster_id', int),
+        ('type', str),
+        ('n_parts', int),
+        ('work_id', int),        
     ]
     
     def get_queryset(self):
@@ -513,6 +549,72 @@ class AppSpeechClusterList(ListView):
         
         # construct query
         query = []
+        
+        # any participant
+        if 'char_id' in self.params:
+            query.append(
+                Q(speech__spkr__char=self.params['char_id']) | 
+                Q(speech__addr__char=self.params['char_id'])
+            )
+        
+        # any participant by name
+        if 'char_name' in self.params:
+            query.append(
+                Q(speech__spkr__name=self.params['char_name']) |
+                Q(speech__addr__name=self.params['char_name'])
+            )
+
+        # any participant by being
+        if 'char_being' in self.params:
+            query.append(
+                Q(speech__spkr__being=self.params['char_being']) |
+                Q(speech__addr__being=self.params['char_being'])
+            )
+        
+        # speaker by id
+        if 'spkr_id' in self.params:
+            query.append(Q(speech__spkr__char=self.params['spkr_id']))
+        
+        # speaker by instance
+        if 'spkr_inst' in self.params:
+            query.append(Q(speech__spkr=self.params['spkr_inst']))
+            
+        # speaker by name
+        if 'spkr_name' in self.params:
+            query.append(Q(speech__spkr__name=self.params['spkr_name']))
+
+        # speaker by name
+        if 'spkr_being' in self.params:
+            query.append(Q(speech__spkr__being=self.params['spkr_being']))
+        
+        # addressee by id
+        if 'addr_id' in self.params:
+            query.append(Q(speech__addr__char=self.params['addr_id']))
+        
+        # addressee by instance
+        if 'addr_inst' in self.params:
+            query.append(Q(speech__addr=self.params['addr_inst']))
+
+        # addressee by name
+        if 'addr_name' in self.params:
+            query.append(Q(speech__addr__name=self.params['addr_name']))
+
+        # addressee by being
+        if 'addr_being' in self.params:
+            query.append(Q(speech__addr__being=self.params['addr_being']))
+
+        if 'cluster_id' in self.params:
+            query.append(Q(pk=self.params['cluster_id']))
+        
+        if 'type' in self.params:
+            query.append(Q(speech__type=self.params['type']))
+                
+        if 'n_parts' in self.params:
+            query.append(Q(speech__count=self.params['n_parts']))
+        
+        if 'work_id' in self.params:
+            query.append(Q(speech__work__pk=self.params['work_id']))
+        
         
         return SpeechCluster.objects.filter(*query)
     
@@ -563,7 +665,11 @@ class AppSpeechSearch(TemplateView):
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
         context['max_parts'] = Speech.objects.aggregate(Max('part'))['part__max']
-        context['speech_types'] = Speech.SpeechType.choices
+        context['character_being_choices'] = Character.CharacterBeing.choices
+        context['character_number_choices'] = Character.CharacterNumber.choices
+        context['character_gender_choices'] = Character.CharacterGender.choices        
+        context['speech_type_choices'] = Speech.SpeechType.choices
+
         return context
 
 
@@ -577,7 +683,11 @@ class AppSpeechClusterSearch(TemplateView):
         context['clusters'] = SpeechCluster.objects.all()
         context['works'] = Work.objects.all()
         context['characters'] = Character.objects.all()
-        context['speech_types'] = Speech.SpeechType.choices
+        context['character_being_choices'] = Character.CharacterBeing.choices
+        context['character_number_choices'] = Character.CharacterNumber.choices
+        context['character_gender_choices'] = Character.CharacterGender.choices        
+        context['speech_type_choices'] = Speech.SpeechType.choices
+
         return context
 
 

@@ -13,13 +13,16 @@
     <tr>
       <td>
           {{ s.work.get_long_name }} {{ s.l_fi }}—{{ s.l_la }}
-          <a style="margin-left:1em" href="{{ reader }}{{ s.get_urn }}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>          
+          <a style="margin-left:1em" href="{{ reader }}{{ s.get_urn }}">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>          
       </td>
       <td>
         {% for inst in s.spkr.all %}
         <div>
-          <a href="{% url 'app:instance_detail' inst.id %}">
-            {{ inst.char.name }}
+          {{ inst.char.name }}
+          <a style="margin-left:0.5em" href="{% url 'app:instance_detail' inst.id %}">
+              <i class="fa-solid fa-circle-info"></i>
           </a>
         </div>
         {% endfor %}
@@ -27,9 +30,10 @@
       <td>
         {% for inst in s.addr.all %}
         <div>
-          <a href="{% url 'app:instance_detail' inst.id %}">
-            {{ inst.char.name }}
-          </a>
+            {{ inst.char.name }}            
+            <a href="{% url 'app:instance_detail' inst.id %}">
+                <i class="fa-solid fa-circle-info"></i>            
+            </a>
         </div>
         {% endfor %}
       </td>
