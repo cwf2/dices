@@ -417,6 +417,9 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         ('char_inst', int),
         ('spkr_inst', int),
         ('addr_inst', int),
+        ('spkr_name', str),
+        ('addr_name', str),
+        ('char_name', str),        
         ('cluster_id', int),
         ('type', str),
         ('part', int),
@@ -458,6 +461,13 @@ class AppSpeechList(LoginRequiredMixin, ListView):
                 Q(addr__disg=self.params['char_id'])
             )
         
+        # any participant by name
+        if 'char_name' in self.params:
+            query.append(
+                Q(spkr__name=self.params['char_name']) |
+                Q(addr__name=self.params['char_name'])
+            )
+        
         # speaker by id
         if 'spkr_id' in self.params:
             query.append(Q(spkr__char=self.params['spkr_id']) | Q(spkr__disg=self.params['spkr_id']))
@@ -465,6 +475,10 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         # speaker by instance
         if 'spkr_inst' in self.params:
             query.append(Q(spkr=self.params['spkr_inst']))
+            
+        # speaker by name
+        if 'spkr_name' in self.params:
+            query.append(Q(spkr__name=self.params['spkr_name']))
         
         # addressee by id
         if 'addr_id' in self.params:
@@ -473,7 +487,11 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         # addressee by instance
         if 'addr_inst' in self.params:
             query.append(Q(addr=self.params['addr_inst']))
-        
+
+        # addressee by name
+        if 'addr_name' in self.params:
+            query.append(Q(spkr__name=self.params['addr_name']))
+
         if 'cluster_id' in self.params:
             query.append(Q(cluster__pk=self.params['cluster_id']))
         
@@ -487,7 +505,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
             query.append(Q(cluster__speech__count=self.params['n_parts']))
         
         if 'work_id' in self.params:
-            query.append(Q(cluster__work__pk=self.params['work_id']))
+            query.append(Q(work__pk=self.params['work_id']))
         
         qs = qs.filter(*query)
         qs = qs.order_by('seq')

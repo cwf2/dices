@@ -5,46 +5,89 @@
 
 {% block content %}
 <div class="accordion">
-  <div class="accordion-item">
-    <h2 class="accordion-header">Character instance  detail</h2>
-    <div class="accordion-body">
-      <table>
-        <tbody>
-          <tr>
-            <th>Character:</th>
-            <td><a href="{% url 'app:character_detail' inst.char.pk %}">{{ inst.char.name }}</a></td>
-          </tr>
-          {% if inst.disg %}
-          <tr>
-            <th>Disguise:</th>
-            <td>{{ inst.disg.name }}</td>
-          </tr>
-          {% endif %}
-          <tr>
-            <th>Context:</th>
-            <td>{{ inst.context }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="accordion-item">
+        <h2 class="accordion-header">Character instance  detail</h2>
+        <div class="accordion-body">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Character:</th>
+                        <td><a href="{% url 'app:character_detail' inst.char.pk %}">{{ inst.char.name }}</a></td>
+                    </tr>
+                    {% if inst.disg %}
+                    <tr>
+                        <th>Disguise:</th>
+                        <td>{{ inst.disg.name }}</td>
+                    </tr>
+                    {% endif %}
+                    <tr>
+                        <th>Context:</th>
+                        <td>{{ inst.context }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-  </div>
-  <div class="accordion-item">
-  <h2 class="accordion-header">Speeches</h2>
-  <div class="accordion-body">
-    <table>
-      <tbody>
-        <tr>
-          <th>Speaker:</th>
-          <td><span class="badge badge-secondary">{{ inst.speeches.count }}</span></td>
-          <td><a id="btn_spkr" class="btn btn-outline-secondary btn-sm" href="{% url 'app:speeches' %}?spkr_inst={{ inst.pk }}">Show speeches</a></td>
-        </tr>
-        <tr>
-          <th>Addressee:</th>
-          <td><span class="badge badge-secondary">{{ inst.addresses.count }}</span></td>
-          <td><a id="btn_addr" class="btn btn-outline-secondary btn-sm" href="{% url 'app:speeches' %}?addr_inst={{ inst.pk }}">Show speeches</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="accordion-item">
+        <h4 class="accordion-header">Attributes</h4>
+        <div class="accordion-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <th>Instance</th>
+                        <th>Character</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>name</td>
+                        <td>{{inst.name}}</td>
+                        <td>{{inst.char.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>gender</td>
+                        <td>{{inst.gender}}</td>
+                        <td>{{inst.char.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>{{inst.number}}</td>
+                        <td>{{inst.char.number}}</td>
+                    </tr>
+                    <tr>
+                        <td>speeches as speaker:</td>
+                        <td>
+                            {{ inst.speeches.count }}
+                            <a style="margin-left: 1em" id="btn_spkr" href="{% url 'app:speeches' %}?spkr_inst={{ inst.pk }}">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </td>
+                        <td>
+                            {{ inst.speeches_by_char.count }}
+                            <a style="margin-left: 1em" id="btn_spkr" href="{% url 'app:speeches' %}?spkr_id={{ inst.char.pk }}">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                          </a>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>speeches as addressee:</td>
+                      <td>
+                          {{ inst.addresses.count }}
+                          <a style="margin-left: 1em" id="btn_addr" href="{% url 'app:speeches' %}?addr_inst={{ inst.pk }}">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                          </a>
+                      </td>
+                      <td>
+                          {{ inst.addresses_by_char.count }}
+                          <a style="margin-left: 1em" id="btn_addr" href="{% url 'app:speeches' %}?addr_id={{ inst.char.pk }}">
+                                <i class="fa-solid fa-magnifying-glass"></i>                              
+                          </a>
+                      </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 {% endblock %}
