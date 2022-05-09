@@ -13,14 +13,16 @@
     <tr>
       <td>
           {{ s.work.get_long_name }} {{ s.l_fi }}—{{ s.l_la }}
-          <a style="margin-left:1em" href="{{ reader }}{{ s.get_urn }}">
+          {% if s.get_urn %}
+          <a style="margin-left:0.5em" href="{{ reader }}{{ s.get_urn }}">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>          
+          {% endif %}
       </td>
       <td>
         {% for inst in s.spkr.all %}
         <div>
-          {{ inst.char.name }}
+          {{ inst.name }}
           <a style="margin-left:0.5em" href="{% url 'app:instance_detail' inst.id %}">
               <i class="fa-solid fa-circle-info"></i>
           </a>
@@ -30,8 +32,8 @@
       <td>
         {% for inst in s.addr.all %}
         <div>
-            {{ inst.char.name }}            
-            <a href="{% url 'app:instance_detail' inst.id %}">
+            {{ inst.name }}            
+            <a style="margin-left:0.5em" href="{% url 'app:instance_detail' inst.id %}">
                 <i class="fa-solid fa-circle-info"></i>            
             </a>
         </div>
@@ -43,7 +45,7 @@
       <td>
           {{ s.part }} of {{ s.cluster.speech_set.count }}
           <a style="margin-left: 1em" href="{% url 'app:cluster_detail' s.cluster.id %}">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-circle-info"></i>
           </a>
       </td>
     </tr>

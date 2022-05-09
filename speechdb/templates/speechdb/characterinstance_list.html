@@ -11,7 +11,12 @@
   <tbody>
     {% for inst in page_obj %}
     <tr>
-      <td>{{ inst.get_long_name }}</td>
+      <td>
+        {{ inst.name }}
+        <a href="{% url 'app:instance_detail' inst.pk %}">
+          <i class="fa-solid fa-circle-info"></i>
+        </a>
+      </td>
       <td>{{ inst.being }}</td>
       <td>{{ inst.disg }}</td>
       <td>{{ inst.context }}</td>      

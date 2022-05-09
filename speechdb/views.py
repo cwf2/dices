@@ -410,6 +410,12 @@ class AppSpeechList(ListView):
         ('spkr_being', str),
         ('addr_being', str),               
         ('char_being', str),
+        ('spkr_number', str),
+        ('addr_number', str),               
+        ('char_number', str),
+        ('spkr_gender', str),
+        ('addr_gender', str),               
+        ('char_gender', str),
         ('cluster_id', int),
         ('type', str),
         ('part', int),
@@ -477,9 +483,13 @@ class AppSpeechList(ListView):
         if 'spkr_name' in self.params:
             query.append(Q(spkr__name=self.params['spkr_name']))
 
-        # speaker by name
+        # speaker by being
         if 'spkr_being' in self.params:
             query.append(Q(spkr__being=self.params['spkr_being']))
+
+        # speaker by gender
+        if 'spkr_gender' in self.params:
+            query.append(Q(spkr__gender=self.params['spkr_gender']))
         
         # addressee by id
         if 'addr_id' in self.params:
@@ -496,6 +506,10 @@ class AppSpeechList(ListView):
         # addressee by being
         if 'addr_being' in self.params:
             query.append(Q(addr__being=self.params['addr_being']))
+
+        # addressee by gender
+        if 'addr_gender' in self.params:
+            query.append(Q(addr__gender=self.params['addr_gender']))
 
         if 'cluster_id' in self.params:
             query.append(Q(cluster__pk=self.params['cluster_id']))
@@ -699,6 +713,9 @@ class AppCharacterSearch(TemplateView):
         context = super().get_context_data(**kwargs)
         # add useful info
         context['characters'] = Character.objects.all()
+        context['character_being_choices'] = Character.CharacterBeing.choices
+        context['character_number_choices'] = Character.CharacterNumber.choices
+        context['character_gender_choices'] = Character.CharacterGender.choices        
         return context
 
 class AppCharacterInstanceSearch(TemplateView):
@@ -710,4 +727,7 @@ class AppCharacterInstanceSearch(TemplateView):
         # add useful info
         context['characters'] = Character.objects.all()
         context['names'] = sorted(set([c.name for c in CharacterInstance.objects.all()]))
+        context['character_being_choices'] = Character.CharacterBeing.choices
+        context['character_number_choices'] = Character.CharacterNumber.choices
+        context['character_gender_choices'] = Character.CharacterGender.choices        
         return context

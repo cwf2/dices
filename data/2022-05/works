@@ -13,18 +13,18 @@ id	author	title	wd	urn	lang
 12	11	Posthomerica	Q1998710	urn:cts:greekLit:tlg2046.tlg001.perseus-grc1	greek
 13	0	Orphic Argonautica	Q1230444		greek
 14	16	Idylls			greek
-15	2	Theogony			greek
+15	2	Theogony		urn:cts:greekLit:tlg0020.tlg001.perseus-grc2	greek
 16	12	Sack of Troy			greek
-17	13	Europa			greek
+17	13	Europa		urn:cts:greekLit:tlg0035.tlg002.perseus-grc2	greek
 18	14	Megara			greek
 19	17	Colluthus			greek
 20	18	Musaeus			greek
 21	15	Batrachomyomachia			greek
 22	19	Cynegetica			greek
-23	19	Halieutica			greek
+23	19	Halieutica		urn:cts:greekLit:tlg0023.tlg001.perseus-grc2	greek
 24	1	Homeric Hymns			greek
-25	20	Callimachean Hymns			greek
+25	20	Hymns			greek
 26	21	St. Cyprian			greek
 27	21	Homerocentones			greek
 28	22	D. Sanctae Sophiae			greek
-29	2	Works and Days			greek
+29	2	Works and Days		urn:cts:greekLit:tlg0020.tlg002.perseus-grc2	greek

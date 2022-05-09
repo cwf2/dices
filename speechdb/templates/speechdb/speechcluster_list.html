@@ -12,9 +12,14 @@
     {% for c in page_obj %}
     <tr>
       <td>{{ c.get_loc_str }}
-          <a style="margin-left:1em" href="">
+          <a style="margin-left:0.5em" href="{% url 'app:cluster_detail' c.pk %}">
+              <i class="fa-solid fa-circle-info"></i>
+          </a>
+         {% if c.get_urn %}          
+          <a style="margin-left:0.5em" href="{{ reader }}{{ c.get_urn }}">
               <i class="fa-solid fa-up-right-from-square"></i>
           </a>
+          {% endif %}          
       </td>
       <td style="text-align:right">
         {{ c.speech_set.count }}

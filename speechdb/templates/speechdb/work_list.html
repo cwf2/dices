@@ -11,7 +11,7 @@
 {% block results %}
 <table class="table table-striped">
   <thead>
-    <tr><th>Author</th><th>Title</th><th>CTS URN</th><th>Online Text</th><th>Wikidata ID</th></tr>
+    <tr><th>Author</th><th>Title</th><th>Speeches</th><th>CTS URN</th><th>Wikidata ID</th></tr>
   </thead>
   <tbody>
     {% for work in page_obj %}
@@ -19,18 +19,27 @@
       <td>{{ work.author.name }}</td>
       <td>{{ work.title }}</td>      
       <td>
-        {% if work.urn %}
-        {{ work.urn }}
-        {% endif %}
+        {{ work.speech_set.count }}
+        <a style="margin-left: 0.5em" href="{% url 'app:speeches' %}?work_id={{work.pk}}">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>        
       </td>
       <td>
         {% if work.urn %}
-        <a style="margin-left: 1em" href="https://catalog.perseus.org/catalog/{{ work.urn }}">
-            <span class="badge bg-secondary"><i class="fa-solid fa-up-right-from-square"></i> Perseus</span>
+        {{ work.urn }}
+        <a style="margin-left: 0.5em" href="https://catalog.perseus.org/catalog/{{ work.urn }}">
+            <i class="fa-solid fa-up-right-from-square"></i>
         </a>
         {% endif %}
-      </td>      
-      <td><a href="https://www.wikidata.org/wiki/{{ work.wd }}">{{ work.wd }}</a></td>
+      </td>
+      <td>
+        {% if work.wd %}
+          {{ work.wd }}
+          <a style="margin-left: 0.5em" href="https://www.wikidata.org/wiki/{{ work.wd }}">
+            <i class="fa-solid fa-up-right-from-square"></i>
+          </a>
+        {% endif %}
+      </td>
     </tr>
     {% endfor %}
   </tbody>
