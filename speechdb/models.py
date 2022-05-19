@@ -147,7 +147,7 @@ class SpeechCluster(models.Model):
     '''A group of related speeches'''
     
     class Meta:
-        ordering = ['speech']
+        ordering = ['id']
         
     def get_spkr_str(self):
         '''Return speaker list as a string'''
