@@ -240,7 +240,7 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
         try:
             cluster_id = int(cluster_id)            
 
-            s.cluster, cluster_created = SpeechCluster.objects.get_or_create(pk=cluster_id)
+            s.cluster, cluster_created = SpeechCluster.objects.get_or_create(id=cluster_id)
         except ValueError:
             errs.append('cluster_id')
             cluster_created = False
