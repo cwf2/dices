@@ -8,5 +8,5 @@ work_id	seq	from_line	b	to_line	a	interrupted	s_ok	speaker	vision/dead	disguise	
 21		147		159			✅	Physignathus	no	no	no	no	frog	✅	assembly of frogs	frogs	no	no	collective	collective	21004	2	general interlocution	G2	13		0	Del; Ins			y	y	4	2	G	G (reply)	5				
 21		174		176			✅	Zeus	no	no	no	no		✅	Athena	(in front of assembly)	no	no	no	no	21005	1	general interlocution	G1	3		0	Que					5	1	D	D	3				
 21		178		196			✅	Athena	no	no	no	no		✅	Zeus		no	no	no	no	21005	2	general interlocution	G2	19		0	Res; Del					5	2	D	D (reply)	13				
-21		272		276			✅	Zeus	no	no	no	no		❌	assembly of gods		no	no	collective	collective	21006	1	general interlocution	G1	5		0	Lam; Del				y	6	1	G	G	19				
-21		278		283			✅	Ares	no	no	no	no		❌	Zeus and assembly of gods		no	no	collective	collective	21006	2	general interlocution	G2	6		0	Del; Per				y	6	2	G	G (reply)	6				
+21		272		276			✅	Zeus	no	no	no	no		✅	Olympian gods	assembly of gods	no	no	collective	collective	21006	1	general interlocution	G1	5		0	Lam; Del				y	6	1	G	G	19				
+21		278		283			✅	Ares	no	no	no	no		❌	Zeus and Olympian gods	assembly of gods	no	no	collective	collective	21006	2	general interlocution	G2	6		0	Del; Per				y	6	2	G	G (reply)	6				
