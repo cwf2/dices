@@ -506,6 +506,10 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         # speaker by gender
         if 'spkr_gender' in self.params:
             query.append(Q(spkr__gender=self.params['spkr_gender']))
+
+        # speaker by number
+        if 'spkr_number' in self.params:
+            query.append(Q(spkr__number=self.params['spkr_number']))
         
         # addressee by id
         if 'addr_id' in self.params:
@@ -526,6 +530,10 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         # addressee by gender
         if 'addr_gender' in self.params:
             query.append(Q(addr__gender=self.params['addr_gender']))
+
+        # addressee by number
+        if 'addr_number' in self.params:
+            query.append(Q(addr__number=self.params['addr_number']))            
 
         if 'cluster_id' in self.params:
             query.append(Q(cluster__pk=self.params['cluster_id']))

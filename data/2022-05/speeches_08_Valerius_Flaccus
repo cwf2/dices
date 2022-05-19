@@ -20,9 +20,9 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 19		7		1	642	y	1	650	n	y	✅	Neptune						✅	self						7014	1	S	S	8.166666666666666		0		Lam, Thr	
 20		7		1	667	n	1	680	n	n	✅	Jason						❌	gods and Neptune				y		7015	1	M	M (no reply)	14		0		Pra	
 21		7		1	712	n	1	724	y	y	✅	Pelias						✅	self						7016	1	S	S	11.25		0		Del. Thr	
-22		7		1	741	n	1	751	n	n	❌	(ghost of) Cretheus		y 				❌	Aeson and Alcimede				y		7017	1	M	M (no reply)	11		0		Ora, Exh	
+22		7		1	741	n	1	751	n	n	✅	ghost of Cretheus		y 				❌	Aeson and Alcimede				y		7017	1	M	M (no reply)	11		0		Ora, Exh	
 23		7		1	763	n	1	766	n	y	✅	Alcimede						✅	Aeson						7018	1	M	M (no reply)	3.8333333333333335		0		Lam, Req	
-24		7		1	788	n	1	822	n	n	✅	Aeson						❌	(ghost of) Cretheus and ancestors and Astrea and Furies and Fas and Poena				y		7019	1	M	M (no reply)	28		0		Pra	
+24		7		1	788	n	1	822	n	n	✅	Aeson						❌	ghost of Cretheus and ancestors and Astrea and Furies and Fas and Poena				y		7019	1	M	M (no reply)	28		0		Pra	
 25		7		2	48	y	2	65	n	y	✅	Tiphys						✅	Argonauts				y		7020	1	M	M (no reply)	17.583333333333332		0		Inf, Exh	
 26		7		2	113	n	2	114	n	n	❌	Lemnian men				y		❌	Lemnian women and Lemnos				y	y (coniunx (representative)	7021	1	M	M (no reply)	2		0		Inf, Per	
 27		7		2	127	n	2	134	n	n	✅	Venus						❌	Fama						7022	1	M	M (no reply)	8		0		Req, Mes	
@@ -106,7 +106,7 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 105		7		5	37	y	5	59	n	y	✅	Jason						✅	self						7081	1	S	S	21.083333333333332		0		Lam, Des	
 106		7		5	129	n	5	131	y	y	✅	Jason						❌	Autolycus and Phlogius (son of Deimachus) and Deileon				y		7082	1	M	M (no reply)	2.3333333333333335		0		Req	
 107		7		5	194	n	5	213	y	y	✅	Jason						❌	ghost of Phrixus and Helle and Silvae and Phasis		Phrixus				7083	1	M	M (no reply)	16.833333333333332		0		Pra	
-108		7		5	233	y	5	240	n	n	❌	ghost of Phrixus		y				✅	Aeetes						7084	1	M	M (no reply)	7.75		0		Ora	
+108		7		5	233	y	5	240	n	n	✅	ghost of Phrixus		y				✅	Aeetes						7084	1	M	M (no reply)	7.75		0		Ora	
 109		7		5	246	n	5	252	n	n	✅	Aeetes						❌	Sol and Mars				y	Tandem	7085	1	M	M (no reply)	7		0		Pra	
 110		7		5	282	y	5	285	n	y	✅	Minerva						✅	Juno						7086	1	D	D	3.5833333333333335		0		Que	
 111		7		5	286	y	5	291	n	n	✅	Juno						✅	Minerva						7086	2	D	D (reply)	5.75		0		Res	
@@ -146,13 +146,13 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 145		7		6	482	n	6	487	n	y	✅	Juno	Chalciope				disguise	✅	Medea						7105	1	M	M (no reply)	5.833333333333333		0		Per	
 146		7		6	497	n	6	502	n	n	✅	Hecate						✅	self						7106	1	S	S	6		0		Lam	
 147		7		6	536	y	6	539	n	y	✅	Aron						✅	Armes						7107	1	M	M (no reply)	3.5833333333333335		0		Vit, Cha	
-148		7		6	547	n	6	549	n	y	✅	Jason						❌	Phrixus' sons (esp. Argus)				y		7108	1	M	M (no reply)	2.9166666666666665		0		Acc	
+148		7		6	547	n	6	549	n	y	✅	Jason						❌	sons of Phrixus and Argus				y		7108	1	M	M (no reply)	2.9166666666666665		0		Acc	
 149		7		6	588	n	6	590	y	n	✅	Medea						✅	Juno	Chalciope				disguise	7109	1	D	D	2.5833333333333335		0		Que	
 150		7		6	592	n	6	599	n	y	✅	Juno	Chalciope					✅	Medea						7110	2	D	D (reply)	7.916666666666667		0		Res	
 151		7		6	624	n	6	629	y	n	✅	Jupiter						✅	self						7111	1	S	S	5.166666666666667		0		Lam	
 152		7		6	647	n	6	648	y	n	✅	Colaxes						✅	Jason						7112	1	M	M (no reply)	1.4166666666666667		0		Tau, Cha	
 153		7		6	675	y	6	679	y	n	✅	Medea						✅	Juno	Chalciope					7113	1	M	M (no reply)	3.9166666666666665		0		Que	
-154		7		6	727	n	6	736	n	n	✅	Perses						❌	superi (esp. Jupiter)				y		7114	1	M	M (no reply)	10		0		Lam, Pra	
+154		7		6	727	n	6	736	n	n	✅	Perses						❌	gods and Jupiter				y	superi	7114	1	M	M (no reply)	10		0		Lam, Pra	
 155		7		6	741	y	6	744	n	y	✅	Minerva						✅	self						7115	1	S	S	3.75		0		Del	
 156		7		7	9	n	7	20	n	n	✅	Medea						✅	self						7116	1	S	S	12		0		Lam, Del	
 157		7		7	35	n	7	77	n	n	✅	Aeetes						❌	Phrixus and Jason and Argonauts		Phrixus			dead Phrixus	7117	1	D	D	43		0		Vit, Cha	
