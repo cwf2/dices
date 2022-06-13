@@ -24,7 +24,7 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 23		7		1	763	n	1	766	n	y	✅	Alcimede						✅	Aeson						7018	1	M	M (no reply)	3.8333333333333335		0		Lam, Req	
 24		7		1	788	n	1	822	n	n	✅	Aeson						❌	ghost of Cretheus and ancestors and Astrea and Furies and Fas and Poena				y		7019	1	M	M (no reply)	28		0		Pra	
 25		7		2	48	y	2	65	n	y	✅	Tiphys						✅	Argonauts				y		7020	1	M	M (no reply)	17.583333333333332		0		Inf, Exh	
-26		7		2	113	n	2	114	n	n	❌	Lemnian men				y		❌	Lemnian women and Lemnos				y	y (coniunx (representative)	7021	1	M	M (no reply)	2		0		Inf, Per	
+26		7		2	113	n	2	114	n	n	✅	Lemnian men				y		❌	Lemnian women and Lemnos				y	y (coniunx (representative)	7021	1	M	M (no reply)	2		0		Inf, Per	
 27		7		2	127	n	2	134	n	n	✅	Venus						❌	Fama						7022	1	M	M (no reply)	8		0		Req, Mes	
 28		7		2	142	y	2	160	y	y	❌	Fama	Neaera				disguise	✅	Eurynome						7023	1	M	M (no reply)	18.166666666666668		0		Mes, Lam	
 29		7		2	176	y	2	184	y	n	✅	Venus	Dryope				disguise	✅	Lemnian women				y		7024	1	M	M (no reply)	8.416666666666666		0		Lam, Del	
@@ -136,7 +136,7 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 135		7		6	267	y	6	269	n	y	✅	Anausis						✅	Styrus						7097	1	M	M (no reply)	2.75		0		Tau	
 136		7		6	274	n	6	276	n	y	✅	Anausis						✅	Styrus						7098	1	M	M (no reply)	2.8333333333333335		0		Tau	
 137		7		6	282	n	6	286	n	n	✅	Gesander						✅	Iazygians				y		7099	1	M	M (no reply)	5		0		Vit, Exh	
-138		7		6	288	n	6	291	n	n	✅	Gesander						❌	ghost of Voraptus		y				7100	1	M	M (no reply)	4		0		Pra	
+138		7		6	288	n	6	291	n	n	✅	Gesander						✅	ghost of Voraptus		y				7100	1	M	M (no reply)	4		0		Pra	
 139		7		6	305	n	6	307	y	y	✅	Aquites						✅	Gesander						7101	1	D	D	2.0833333333333335		0		Req	
 140		7		6	308	y	6	314	n	n	✅	Gesander						✅	Aquites						7101	2	D	D (reply)	6.75		0		Res	
 141		7		6	323	y	6	339	n	n	✅	Gesander						✅	Canthus						7102	1	M	M (no reply)	16.75		0		Inf, Thr	
