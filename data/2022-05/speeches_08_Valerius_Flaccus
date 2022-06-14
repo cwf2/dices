@@ -25,8 +25,8 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 24		7		1	788	n	1	822	n	n	✅	Aeson						❌	ghost of Cretheus and ancestors and Astrea and Furies and Fas and Poena				y		7019	1	M	M (no reply)	28		0		Pra	
 25		7		2	48	y	2	65	n	y	✅	Tiphys						✅	Argonauts				y		7020	1	M	M (no reply)	17.583333333333332		0		Inf, Exh	
 26		7		2	113	n	2	114	n	n	✅	Lemnian men				y		❌	Lemnian women and Lemnos				y	y (coniunx (representative)	7021	1	M	M (no reply)	2		0		Inf, Per	
-27		7		2	127	n	2	134	n	n	✅	Venus						❌	Fama						7022	1	M	M (no reply)	8		0		Req, Mes	
-28		7		2	142	y	2	160	y	y	❌	Fama	Neaera				disguise	✅	Eurynome						7023	1	M	M (no reply)	18.166666666666668		0		Mes, Lam	
+27		7		2	127	n	2	134	n	n	✅	Venus						✅	Fama						7022	1	M	M (no reply)	8		0		Req, Mes	
+28		7		2	142	y	2	160	y	y	✅	Fama	Neaera				disguise	✅	Eurynome						7023	1	M	M (no reply)	18.166666666666668		0		Mes, Lam	
 29		7		2	176	y	2	184	y	n	✅	Venus	Dryope				disguise	✅	Lemnian women				y		7024	1	M	M (no reply)	8.416666666666666		0		Lam, Del	
 30		7		2	213	y	2	214	y	y	✅	Venus	Dryope				disguise	✅	Lemnian women				y		7025	1	M	M (no reply)	1.1666666666666667		0		Inf, Exh	
 31		7		2	249	y	2	253	y	y	❌	Hypsipyle 						✅	Thoas						7026	1	M	M (no reply)	3.8333333333333335		0		Per, Req	
