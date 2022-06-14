@@ -342,8 +342,8 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 329	341	1	Iliad	13	260	n	13	265	n	✅	Idomeneus	no	no	no	no	no	✅	Meriones	no	no	no	no	no	1187	3	dialogue	D3	6	no	0	no	Inf	no	firstlevel	5 of 12	mortal	no	no	no	no	no	no
 330	342	1	Iliad	13	267	n	13	273	n	✅	Meriones	no	no	no	no	no	✅	Idomeneus	no	no	no	no	no	1187	4	dialogue	D4	7	no	0	no	Inf	no	firstlevel	2 of 5	mortal	no	no	no	no	no	no
 331	343	1	Iliad	13	275	n	13	294	n	✅	Idomeneus	no	no	no	no	no	✅	Meriones	no	no	no	no	no	1187	6	dialogue	D6	20	no	0	no	Nar; War; Del	no	firstlevel	6 of 12	mortal	no	no	no	no	no	no
-332	344	1	Iliad	13	307	n	13	310	n	✅	Meriones	no	no	no	no	no	✅	Idomeneus	no	no	no	no	no	1187	6	dialogue	D6	4	no	0	no	Que	no	firstlevel	3 of 5	mortal	no	no	no	no	no	no
-333	345	1	Iliad	13	312	n	13	327	n	✅	Idomeneus	no	no	no	no	no	✅	Meriones	no	no	no	no	no	1187	7	dialogue	D7	16	no	0	no	Res; Inf;Ins	no	firstlevel	7 of 12	mortal	no	no	no	no	no	no
+332	344	1	Iliad	13	307	n	13	310	n	✅	Meriones	no	no	no	no	no	✅	Idomeneus	no	no	no	no	no	1187	7	dialogue	D7	4	no	0	no	Que	no	firstlevel	3 of 5	mortal	no	no	no	no	no	no
+333	345	1	Iliad	13	312	n	13	327	n	✅	Idomeneus	no	no	no	no	no	✅	Meriones	no	no	no	no	no	1187	8	dialogue	D8	16	no	0	no	Res; Inf;Ins	no	firstlevel	7 of 12	mortal	no	no	no	no	no	no
 334	346	1	Iliad	13	374	n	13	382	n	✅	Idomeneus	no	no	no	no	no	✅	Othryoneus	no	no	no	no	no	1188	1	monologue	M (no reply)	9	no	0	no	Del; Com	no	firstlevel	8 of 12	mortal	no	no	no	no	no	no
 335	347	1	Iliad	13	414	n	13	416	n	✅	Deiphobus	no	no	no	no	no	✅	Hypsenor	no	no	no	no	no	1189	1	monologue	M (no reply)	3	no	0	no	Tau	no	firstlevel	1 of 2	mortal	no	no	no	no	no	no
 336	348	1	Iliad	13	446	n	13	454	n	✅	Idomeneus	no	no	no	no	no	✅	Deiphobus	no	no	no	no	no	1190	1	monologue	M (no reply)	9	no	0	no	Cha	no	firstlevel	9 of 12	mortal	no	no	no	no	no	no
