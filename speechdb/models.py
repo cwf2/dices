@@ -65,7 +65,7 @@ class Character(models.Model):
 
     class CharacterGender(models.TextChoices):
         NA = ('none', 'Unknown/not-applicable')
-        NB = ('non-binary', 'Mixed/non-binary')
+        NB = ('x', 'Mixed/non-binary')
         FEMALE = ('female', 'Female')
         MALE = ('male', 'Male')
 
