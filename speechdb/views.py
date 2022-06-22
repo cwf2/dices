@@ -43,13 +43,23 @@ def ValidateParams(request, valid_params):
 class MetadataFilter(filters.FilterSet):
     class Meta:
         model = Metadata
+        distinct = True        
         fields = ['name']
 
 
 class AuthorFilter(filters.FilterSet):
+    
+    lang = filters.CharFilter('work__lang')
+    
+    work_id = filters.NumberFilter('work__id')
+    work_title = filters.CharFilter('work__title')
+    work_urn = filters.CharFilter('work__urn')
+    work_wd = filters.CharFilter('work__wd')    
+    
     class Meta:
         model = Author
-        fields = ['id', 'name', 'wd']
+        distinct = True        
+        exclude = []
 
 
 class WorkFilter(filters.FilterSet):
@@ -60,14 +70,15 @@ class WorkFilter(filters.FilterSet):
     
     class Meta:
         model = Work
-        fields = ['id', 'title', 'wd', 'urn', 
-                    'author_name', 'author_id', 'author_wd']
+        exclude = []
 
 
 class CharacterFilter(filters.FilterSet):
+    inst_name = filters.CharFilter('instances__name', distinct=True)
+    
     class Meta:
         model = Character
-        fields = ['id', 'name', 'wd', 'manto', 'gender', 'number', 'being']
+        exclude = []
 
 
 class CharacterInstanceFilter(filters.FilterSet):
@@ -79,10 +90,10 @@ class CharacterInstanceFilter(filters.FilterSet):
     being = filters.ChoiceFilter('being',
                     choices=Character.CharacterBeing.choices)
     anon = filters.BooleanFilter('anon')
-    char_id = filters.NumberFilter('char__id')
+    id = filters.NumberFilter('char__id')
     char_name = filters.CharFilter('char__name')
-    char_wd = filters.CharFilter('char__wd')
-    char_manto = filters.CharFilter('char__manto')
+    wd = filters.CharFilter('char__wd')
+    manto = filters.CharFilter('char__manto')
     char_gender = filters.ChoiceFilter('char__gender', 
                     choices=Character.CharacterGender.choices)
     char_number = filters.ChoiceFilter('char__number',
@@ -92,38 +103,51 @@ class CharacterInstanceFilter(filters.FilterSet):
     
     class Meta:
         model = CharacterInstance
-        fields = ['id', 'name', 'gender', 'number', 'being', 'anon', 
-                    'char_id', 'char_name', 'char_wd', 'char_manto',
-                    'char_gender', 'char_number', 'char_being']
+        exclude = ['tags']
 
 
 class SpeechFilter(filters.FilterSet):
     spkr_id = filters.NumberFilter('spkr__char__id')
-    spkr_name = filters.CharFilter('spkr__name')
+    spkr_name = filters.CharFilter('spkr__char__name')
     spkr_manto = filters.CharFilter('spkr__char__manto')
     spkr_wd = filters.CharFilter('spkr__char__wd')
-    spkr_gender = filters.ChoiceFilter('spkr__gender', 
+    spkr_gender = filters.ChoiceFilter('spkr__char__gender', distinct=True,
                     choices=Character.CharacterGender.choices)
-    spkr_number = filters.ChoiceFilter('spkr__number',
+    spkr_number = filters.ChoiceFilter('spkr__char__number', distinct=True,
                     choices=Character.CharacterNumber.choices)
-    spkr_being = filters.ChoiceFilter('spkr__being',
+    spkr_being = filters.ChoiceFilter('spkr__char__being', distinct=True,
                     choices=Character.CharacterBeing.choices)
-    spkr_anon = filters.BooleanFilter('spkr__anon')
+
+    spkr_inst_id = filters.NumberFilter('spkr__id')
+    spkr_inst_name = filters.CharFilter('spkr__name', distinct=True)
+    spkr_inst_gender = filters.ChoiceFilter('spkr__gender', distinct=True,
+                    choices=Character.CharacterGender.choices)
+    spkr_inst_number = filters.ChoiceFilter('spkr__number', distinct=True,
+                    choices=Character.CharacterNumber.choices)
+    spkr_inst_being = filters.ChoiceFilter('spkr__being', distinct=True,
+                    choices=Character.CharacterBeing.choices)
+    spkr_anon = filters.BooleanFilter('spkr__anon', distinct=True)
     
     addr_id = filters.NumberFilter('addr__char__id')
-    addr_name = filters.CharFilter('addr__name')
+    addr_name = filters.CharFilter('addr__char__name')
     addr_manto = filters.CharFilter('addr__char__manto')
     addr_wd = filters.CharFilter('addr__char__wd')
-    addr_gender = filters.ChoiceFilter('addr__gender', 
+    addr_gender = filters.ChoiceFilter('addr__char__gender', distinct=True,
                     choices=Character.CharacterGender.choices)
-    addr_number = filters.ChoiceFilter('addr__number',
+    addr_number = filters.ChoiceFilter('addr__char__number', distinct=True,
                     choices=Character.CharacterNumber.choices)
-    addr_being = filters.ChoiceFilter('addr__being',
+    addr_being = filters.ChoiceFilter('addr__char__being', distinct=True,
                     choices=Character.CharacterBeing.choices)
-    addr_anon = filters.BooleanFilter('addr__anon')
-    
-    spkr_inst = filters.NumberFilter('spkr__id')
-    addr_inst = filters.NumberFilter('addr__id')
+                    
+    addr_inst_id = filters.NumberFilter('addr__id')
+    addr_inst_name = filters.CharFilter('addr__name', distinct=True)
+    addr_inst_gender = filters.ChoiceFilter('addr__gender', distinct=True,
+                    choices=Character.CharacterGender.choices)
+    addr_inst_number = filters.ChoiceFilter('addr__number', distinct=True,
+                    choices=Character.CharacterNumber.choices)
+    addr_inst_being = filters.ChoiceFilter('addr__being', distinct=True,
+                    choices=Character.CharacterBeing.choices)
+    addr_anon = filters.BooleanFilter('addr__anon', distinct=True)
     
     type = filters.ChoiceFilter('type', choices=Speech.SpeechType.choices)
 
@@ -141,23 +165,68 @@ class SpeechFilter(filters.FilterSet):
         
     class Meta:
         model = Speech
-        fields = ['id',
-            'spkr_id', 'spkr_name', 'spkr_manto', 'spkr_wd', 'spkr_gender',
-            'spkr_number', 'spkr_being', 'spkr_anon',
-            'addr_id', 'addr_name', 'addr_manto', 'addr_wd', 'addr_gender',
-            'addr_number', 'addr_being', 'addr_anon',
-            'spkr_inst', 'addr_inst',
-            'type', 
-            'cluster_id',
-            'work_id', 'work_title', 'work_urn', 'work_wd',
-            'author_id', 'author_name', 'author_urn', 'author_wd',
-            'part']
+        distinct = True        
+        exclude = []
 
 
 class SpeechClusterFilter(filters.FilterSet):
+    
+    work_id = filters.NumberFilter('speech__work__id', distinct=True)
+    work_title = filters.CharFilter('speech__work__title', distinct=True)
+    work_urn = filters.CharFilter('speech__work__urn', distinct=True)
+    work_wd = filters.CharFilter('speech__work__wd', distinct=True)
+
+    author_id = filters.NumberFilter('speech__work__author__id', distinct=True)
+    author_name = filters.CharFilter('speech__work__author__name', distinct=True)
+    author_wd = filters.CharFilter('speech__work__author__wd', distinct=True)
+    author_urn = filters.CharFilter('speech__work__author__urn', distinct=True)
+
+    spkr_id = filters.NumberFilter('speech__spkr__char__id', distinct=True)
+    spkr_name = filters.CharFilter('speech__spkr__char__name', distinct=True)
+    spkr_manto = filters.CharFilter('speech__spkr__char__manto', distinct=True)
+    spkr_wd = filters.CharFilter('speech__spkr__char__wd', distinct=True)
+    spkr_gender = filters.ChoiceFilter('speech__spkr__char__gender', 
+                    choices=Character.CharacterGender.choices, distinct=True)
+    spkr_number = filters.ChoiceFilter('speech__spkr__char__number',
+                    choices=Character.CharacterNumber.choices, distinct=True)
+    spkr_being = filters.ChoiceFilter('speech__spkr__char__being',
+                    choices=Character.CharacterBeing.choices, distinct=True)
+    
+    spkr_inst_id = filters.NumberFilter('speech__spkr__id', distinct=True)
+    spkr_inst_name = filters.CharFilter('speech__spkr__name', distinct=True)
+    spkr_inst_gender = filters.ChoiceFilter('speech__spkr__gender', 
+                    choices=Character.CharacterGender.choices, distinct=True)
+    spkr_inst_number = filters.ChoiceFilter('speech__spkr__number',
+                    choices=Character.CharacterNumber.choices, distinct=True)
+    spkr_inst_being = filters.ChoiceFilter('speech__spkr__being',
+                    choices=Character.CharacterBeing.choices, distinct=True)
+    spkr_anon = filters.BooleanFilter('speech__spkr__anon', distinct=True)
+
+    addr_id = filters.NumberFilter('speech__addr__char__id', distinct=True)
+    addr_name = filters.CharFilter('speech__addr__char__name', distinct=True)
+    addr_manto = filters.CharFilter('speech__addr__char__manto', distinct=True)
+    addr_wd = filters.CharFilter('speech__addr__char__wd', distinct=True)
+    addr_gender = filters.ChoiceFilter('speech__addr__char__gender', 
+                    choices=Character.CharacterGender.choices, distinct=True)
+    addr_number = filters.ChoiceFilter('speech__addr__char__number',
+                    choices=Character.CharacterNumber.choices, distinct=True)
+    addr_being = filters.ChoiceFilter('speech__addr__char__being',
+                    choices=Character.CharacterBeing.choices, distinct=True)
+                    
+    addr_inst_id = filters.NumberFilter('speech__addr__id', distinct=True)
+    addr_inst_name = filters.CharFilter('speech__addr__name', distinct=True)
+    addr_inst_name = filters.CharFilter('speech__addr__name', distinct=True)
+    addr_inst_gender = filters.ChoiceFilter('speech__addr__gender', 
+                    choices=Character.CharacterGender.choices, distinct=True)
+    addr_inst_number = filters.ChoiceFilter('speech__addr__number',
+                    choices=Character.CharacterNumber.choices, distinct=True)
+    addr_inst_being = filters.ChoiceFilter('speech__addr__being',
+                    choices=Character.CharacterBeing.choices, distinct=True)
+    addr_anon = filters.BooleanFilter('speech__addr__anon', distinct=True)
+    
     class Meta:
         model = SpeechCluster
-        fields = ['id']
+        exclude = []
 
 #
 # API class-based views
