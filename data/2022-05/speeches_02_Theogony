@@ -5,5 +5,5 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 	4	15	Theogony		543			544		✅	Zeus		no	no	no	no	✅	Prometheus		no	no	no	no	15003	1	dialogue	D1	2		0	says it mockingly, but Prometheus doesn't know that; hence Del rather than Tau	Del	
 	5	15	Theogony		548			549		✅	Prometheus		no	no	no	no	✅	Zeus		no	no	no	no	15003	2	dialogue	D2	2		0		Lau; Per	
 	6	15	Theogony		559			560		✅	Zeus		no	no	no	no	✅	Prometheus		no	no	no	no	15003	3	dialogue	D3	2		0		Del	
-	7	15	Theogony		664			653		✅	Zeus		no	no	no	no	❌	Cottus and Briareus and Gyes	Children of Earth and Heaven	no	no	collective	collective	15004	1	general interlocution	G1	10		0		Del; Inf	
+	7	15	Theogony		644			653		✅	Zeus		no	no	no	no	❌	Cottus and Briareus and Gyes	Children of Earth and Heaven	no	no	collective	collective	15004	1	general interlocution	G1	10		0		Del; Inf	
 	8	15	Theogony		655			663		✅	Cottus	(blameless), representative speech	no	no	no	no	✅	Zeus		no	no	no	no	15004	2	general interlocution	G2	9		0		Del; Vow	
