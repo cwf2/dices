@@ -75,7 +75,36 @@ class WorkFilter(filters.FilterSet):
 
 
 class CharacterFilter(filters.FilterSet):
+    
+    work_id = filters.CharFilter('instances__speeches__work__id',
+                    distinct=True)
+    work_title = filters.CharFilter('instances__speeches__work__title',
+                    distinct=True)
+    work_urn = filters.CharFilter('instances__speeches__work__urn',
+                    distinct=True)
+    work_wd = filters.CharFilter('instances__speeches__work__wd',
+                    distinct=True)
+
+    author_id = filters.CharFilter('instances__speeches__work__author__id',
+                    distinct=True)
+    author_name = filters.CharFilter('instances__speeches__work__author__name',
+                    distinct=True)
+    author_wd = filters.CharFilter('instances__speeches__work__author__wd',
+                    distinct=True)
+    author_urn = filters.CharFilter('instances__speeches__work__author__urn',
+                    distinct=True)
+
     inst_name = filters.CharFilter('instances__name', distinct=True)
+    inst_gender = filters.ChoiceFilter('instances__gender', distinct=True,
+                            choices=Character.CharacterGender.choices)
+    inst_number = filters.ChoiceFilter('instances__number', distinct=True,
+                            choices=Character.CharacterNumber.choices)
+    inst_being = filters.ChoiceFilter('instances__being', distinct=True,
+                            choices=Character.CharacterBeing.choices)
+
+    speech_type = filters.CharFilter('instances__speeches__type', distinct=True)
+    speech_part = filters.CharFilter('instances__speeches__part', distinct=True)
+
     
     class Meta:
         model = Character
@@ -101,6 +130,21 @@ class CharacterInstanceFilter(filters.FilterSet):
                     choices=Character.CharacterNumber.choices)
     char_being = filters.ChoiceFilter('char__being',
                     choices=Character.CharacterBeing.choices)
+
+    work_id = filters.CharFilter('speeches__work__id', distinct=True)
+    work_title = filters.CharFilter('speeches__work__title', distinct=True)
+    work_urn = filters.CharFilter('speeches__work__urn', distinct=True)
+    work_wd = filters.CharFilter('speeches__work__wd', distinct=True)
+
+    author_id = filters.CharFilter('speeches__work__author__id', distinct=True)
+    author_name = filters.CharFilter('speeches__work__author__name',
+                    distinct=True)
+    author_wd = filters.CharFilter('speeches__work__author__wd', distinct=True)
+    author_urn = filters.CharFilter('speeches__work__author__urn',
+                    distinct=True)
+
+    speech_type = filters.CharFilter('speeches__type', distinct=True)
+    speech_part = filters.CharFilter('speeches__part', distinct=True)
     
     class Meta:
         model = CharacterInstance
