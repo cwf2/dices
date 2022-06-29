@@ -8,7 +8,7 @@ seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_no
 	24		2	147		2	168		✅	Callidice		no	no	no	no	✅	Demeter	addressed as nurse (maia)	no	no	no	no	24004	3	general interlocution	G3	22		0		Lam; Res			
 	24		2	213		2	223		✅	Metaneira		no	no	no	no	✅	Demeter	more present	old	no	no	no	24005	1	general interlocution	G1	11		0		Gre; Lam; Inv			
 	24		2	225		2	230		✅	Demeter		old	no	no	no	✅	Metaneira	more present	no	no	no	no	24005	2	general interlocution	G2	6		0		Gre; Del			
-	24		2	248		2	249		✅	Metaneira		no	no	no	no	❌	Demophon		no	no	no	no	24006	1	monologue	M (no reply)	2		0		Lam			
+	24		2	248		2	249		✅	Metaneira		no	no	no	no	✅	Demophon (son of Celeus)		no	no	no	no	24006	1	monologue	M (no reply)	2		0		Lam			
 	24		2	256		2	274		✅	Demeter	with this threw her old age off	old	no	no	no	✅	Metaneira		no	no	no	no	24007	1	monologue	M (no reply)	19		0		Vit; Com; Ora; Inf			
 	24		2	321		2	323		✅	Iris		no	no	no	no	✅	Demeter		no	no	no	no	24008	1	monologue	M (no reply)	3		0		Mes			
 	24		2	347		2	356		✅	Hermes	Argusslayer	no	no	no	no	✅	Hades	Aidoneus	no	no	no	no	24009	1	monologue	M (no reply)	10		0	speech cluster	Mes; Com			

@@ -119,7 +119,7 @@ class CharacterInstanceFilter(filters.FilterSet):
     being = filters.ChoiceFilter('being',
                     choices=Character.CharacterBeing.choices)
     anon = filters.BooleanFilter('anon')
-    id = filters.NumberFilter('char__id')
+    char_id = filters.NumberFilter('char__id')
     char_name = filters.CharFilter('char__name')
     wd = filters.CharFilter('char__wd')
     manto = filters.CharFilter('char__manto')
@@ -209,7 +209,6 @@ class SpeechFilter(filters.FilterSet):
         
     class Meta:
         model = Speech
-        distinct = True        
         exclude = []
 
 
