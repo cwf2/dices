@@ -1,0 +1,4 @@
+orig_id	seq	work_id	work	book	from_line	b	book.1	to_line	a	s_ok	speaker	speaker_notes	disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	disguise.1	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type	notes
+	1	23	Halieutica	2	305	n	2	307	n	✅	muraena		no	no	yes	no	❌	poulpe		no	no	no	no	23001	1	M	M(no reply)	3		0		Tau		yes	no quotation marks
+	2	23	Halieutica	5	336	n	5	349	n	✅	fisherman	among comrades	no	no	yes	no	❌	Earth and Poseidon and Sea		no	no	no	collective	23002	1	M	M(no reply)	14		0		Pra; Req		yes	no quotation marks
+	3	23	Halieutica	5	560	n	5	564	n	✅	dolphin		no	no	yes	no	❌	child dolphin		no	no	yes	no	23003	1	M	M(no reply)	5		0		War		yes	
