@@ -1,0 +1,65 @@
+seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	disguise.1	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type	notes
+	24		1	C1		1	D3		✅	Zeus		no	no	no	no	✅	Hera		no	no	no	no	24001	1	*monologue	*M	/		0	holes	*Del			Very fragmentary; maybe put in the database with an asterisk
+	24		2	54		2	58		✅	Hecate		no	no	no	no	✅	Demeter		no	no	no	no	24002	1	monologue	M (reply)	5		0	not sure if Demeter asked first; but Hecate seems to rephrase a question	Res; Inf			
+	24		2	64		2	73		✅	Demeter		no	no	no	no	✅	Helius	Hecate is also present	no	no	no	no	24003	1	general interlocution	G1	10		0		Que; Lam			
+	24		2	75		2	87		✅	Helius		no	no	no	no	✅	Demeter	Hecate is also present	no	no	no	no	24003	2	general interlocution	G2	13		0		Lam; Res			
+	24		2	113		2	117		✅	daughters of Keleos	Unclear which one speaks	no	no	no	collective	✅	Demeter		no	no	no	no	24004	1	general interlocution	G1	5		0		Que			
+	24		2	119		2	144		✅	Demeter		mortal	no	no	no	✅	daughters of Keleos	not anonymous as the four names were mentioned	no	no	no	collective	24004	2	general interlocution	G2	26		0		Res; Nar; Que			
+	24		2	147		2	168		✅	Callidice		no	no	no	no	✅	Demeter	addressed as nurse (maia)	no	no	no	no	24004	3	general interlocution	G3	22		0		Lam; Res			
+	24		2	213		2	223		✅	Metaneira		no	no	no	no	✅	Demeter	more present	old	no	no	no	24005	1	general interlocution	G1	11		0		Gre; Lam; Inv			
+	24		2	225		2	230		✅	Demeter		old	no	no	no	✅	Metaneira	more present	no	no	no	no	24005	2	general interlocution	G2	6		0		Gre; Del			
+	24		2	248		2	249		✅	Metaneira		no	no	no	no	✅	Demophon (son of Celeus)		no	no	no	no	24006	1	monologue	M (no reply)	2		0		Lam			
+	24		2	256		2	274		✅	Demeter	with this threw her old age off	old	no	no	no	✅	Metaneira		no	no	no	no	24007	1	monologue	M (no reply)	19		0		Vit; Com; Ora; Inf			
+	24		2	321		2	323		✅	Iris		no	no	no	no	✅	Demeter		no	no	no	no	24008	1	monologue	M (no reply)	3		0		Mes			
+	24		2	347		2	356		✅	Hermes	Argusslayer	no	no	no	no	✅	Hades	Aidoneus	no	no	no	no	24009	1	monologue	M (no reply)	10		0	speech cluster	Mes; Com			
+	24		2	360		2	369		✅	Hades		no	no	no	no	✅	Persephone		no	no	no	no	24010	1	monologue	M (no reply)	10		0	speech cluster	Com			
+	24		2	393		2	404		✅	Demeter		no	no	no	no	✅	Persephone		no	no	no	no	24011	1	dialogue	D1	12		0		Que			
+	24		2	406		2	433		✅	Persephone		no	no	no	no	✅	Demeter		no	no	no	no	24011	2	dialogue	D2	28		0		Res; Nar			
+	24		2	460		2	469		✅	Rhea		no	no	no	no	✅	Demeter		no	no	no	no	24012	1	monologue	M (no reply)	10		0		Del; Com			
+	24		3	51		3	60		✅	Leto		no	no	no	no	✅	Delos	island	no	no	no	no	24013	1	dialogue	D1	10		0		Req			
+	24		3	62		3	82		✅	Delos	island	no	no	no	no	✅	Leto		no	no	no	no	24013	2	dialogue	D2	21		0		Inv; Req			
+	24		3	84		3	88		✅	Leto		no	no	no	no	✅	Delos	island	no	no	no	no	24013	3	dialogue	D3	5		0		Vow			
+	24		3	131		3	132		✅	Apollo		no	no	no	no	✅	godesses		no	no	no	no	24014	1	monologue	M (no reply)	2		0		Del			
+	24		3	169		3	170		✅	stranger	hypothetical	no	no	yes	no	✅	Maidens		no	no	collective	collective	24015	1	dialogue	D1	2		0		Que		yes	
+	24		3	172		3	173		✅	Maidens	hypothetical	no	no	collective	collective	✅	stranger		no	no	yes	no	24015	2	dialogue	D2	2		0		Res		yes	
+	24		3	247		3	253		✅	Apollo		no	no	no	no	✅	Telphousa		no	no	no	no	24016	1	dialogue	D1	7		0		Del			
+	24		3	257		3	274		✅	Telphousa		no	no	no	no	✅	Apollo		no	no	no	no	24016	2	dialogue	D2	18		0		Del; Per			
+	24		3	287		3	293		✅	Apollo		no	no	no	no	✅	self		no	no	no	no	24017	1	soliloquy	S	7		0		Del			
+	24		3	311		3	330		✅	Hera		no	no	no	no	✅	gods	Thetis is addressed	no	no	collective	collective	24018	1	monologue	M (no reply)	20		0		Del; Vit			
+	24		3	334		3	339		✅	Hera		no	no	no	no	❌	Gaia and Uranus and Titan gods		no	no	collective	collective	24019	1	monologue	M (no reply)	6		0		Pra; Req			
+	24		3	363		3	369		✅	Apollo		no	no	no	no	✅	Python		no	no	no	no	24020	1	monologue	M (no reply)	7		0		Tau; Vit			
+	24		3	379		3	381		✅	Apollo		no	no	no	no	✅	Telphousa		no	no	no	no	24021	1	monologue	M (no reply)	3		0		Del; Thr			
+	24		3	452		3	461		✅	Apollo	likeness of a sturdy ueoman in his first prime	yeoman	no	no	no	✅	Cretans		no	no	collective	collective	24022	1	general interlocution	G1	10		0		Que			
+	24		3	464		3	473		✅	leader of the Cretans		no	no	yes	no	✅	Apollo		yeoman	no	no	no	24022	2	general interlocution	G2	10		0		Req; Que; Inf			
+	24		3	475		3	501		✅	Apollo		no	no	no	no	✅	Cretans		no	no	no	no	24022	3	general interlocution	G3	27		0		Com; Ins			
+	24		3	526		3	530		✅	leader of the Cretans		no	no	no	no	✅	Apollo		no	no	no	no	24023	1	general interlocution	G1	5		0		Que			
+	24		3	531		3	544		✅	Apollo		no	no	no	no	✅	Cretans		no	no	no	no	24023	2	general interlocution	G2	14		0		Res; Ins; War			
+	24		4	30		4	38		✅	Hermes		no	no	no	no	✅	tortoise		no	no	yes	no	24024	1	monologue	M (no reply)	9		0		Gre; War			
+	24		4	90		4	93		✅	Hermes		no	no	no	no	✅	old man		no	no	yes	no	24025	1	monologue	M (no reply)	4		0		Del; Thr			
+	24		4	155		4	161		✅	Maia		no	no	no	no	✅	Hermes		no	no	no	no	24026	1	dialogue	D1	7		0		Que; Com			
+	24		4	163		4	181		✅	Hermes		no	no	no	no	✅	Maia		no	no	no	no	24026	2	dialogue	D2	19		0		Del; Del			
+	24		4	190		4	200		✅	Apollo		no	no	no	no	✅	old man		no	no	no	no	24027	1	dialogue	D1	11		0		Que			
+	24		4	202		4	211		✅	old man		no	no	no	no	✅	Apollo		no	no	no	no	24027	2	dialogue	D2	10		0		Res; Inf			
+	24		4	219		4	226		✅	Apollo		no	no	no	no	✅	self		no	no	no	no	24028	1	soliloquy	S	8		0		Del			
+	24		4	254		4	259		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	24029	1	dialogue	D1	6		0		Thr; Que			
+	24		4	261		4	277		✅	Hermes		no	no	no	no	✅	Apollo		no	no	no	no	24029	2	dialogue	D2	17		0		Res; Vow			
+	24		4	282		4	292		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	24029	3	dialogue	D3	11		0		Del			
+	24		4	301		4	303		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	24029	4	dialogue	D4	3		0		Del			
+	24		4	307		4	312		✅	Hermes		no	no	no	no	✅	Apollo		no	no	no	no	24029	5	dialogue	D5	6		0		Que; Del			
+	24		4	330		4	332		✅	Zeus		no	no	no	no	✅	Apollo		no	no	no	no	24030	1	general interlocution	G1	3		0		Que			
+	24		4	334		4	364		✅	Apollo		no	no	no	no	✅	Zeus		no	no	no	no	24030	2	general interlocution	G2	31		0		Nar; Res			
+	24		4	368		4	386		✅	Hermes		no	no	no	no	✅	Zeus	among other gods	no	no	no	no	24030	3	general interlocution	G3	19		0		Nar			
+	24		4	405		4	408		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	24031	1	monologue	M (no reply)	4		0		Que			
+	24		4	436		4	462		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	24032	1	dialogue	D1	27		0		Que; Per			
+	24		4	464		4	495		✅	Hermes		no	no	no	no	✅	Apollo		no	no	no	no	24032	2	dialogue	D2	32		0		Res; Com; Per; Del			
+	24		4	514		4	520		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	24033	1	monologue	M (no reply)	7		0		Del; Req			
+	24		4	526b		4	568		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	24034	1	monologue	M (no reply)	32.5		0		Vow; Del			
+	24		5	92		5	106		✅	Anchises		no	no	no	no	✅	Aphrodite	not recognised	no	no	no	no	24035	1	dialogue	D1	15		0		Que; Lau			
+	24		5	108		5	142		✅	Aphrodite	saying she's a mortal	mortal	no	no	no	✅	Anchises		no	no	no	no	24035	2	dialogue	D2	35		0		Res; Inf; Nar; Com			
+	24		5	145		5	154		✅	Anchises		no	no	no	no	✅	Aphrodite		mortal	no	no	no	24035	3	dialogue	D3	10		0		Per; Del			
+	24		5	177		5	179		✅	Aphrodite		no	no	no	no	✅	Anchises		no	no	no	no	24036	1	dialogue	D1	3		0		Que			
+	24		5	185		5	190		✅	Anchises		no	no	no	no	✅	Aphrodite		no	no	no	no	24036	2	dialogue	D2	6		0		Req			indirect speech in between the two (he responded promptly from out of his sleep)
+	24		5	192		5	290		✅	Aphrodite		no	no	no	no	✅	Anchises		no	no	no	no	24036	3	dialogue	D3	99		0		Con; Ora; War			
+	24		7	17		7	24		✅	helmsman (Tyrsenian pirat)		no	no	yes	no	✅	comrades (Tyrsenian pirats)		no	no	collective	collective	24037	1	general interlocution	G1	8		0		Del; War			
+	24		7	26		7	31		✅	captain (Tyrsenian pirat)		no	no	yes	no	✅	helmsman (Tyrsenian pirat)		no	no	yes	no	24037	2	general interlocution	G2	6		0		Com			
+	24		7	55		7	57		✅	Dionysus		no	no	no	no	✅	helmsman (Tyrsenian pirat)		no	no	no	no	24038	1	monologue	M (no reply)	3		0		Con; Inf			
