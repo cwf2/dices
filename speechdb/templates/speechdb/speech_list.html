@@ -6,7 +6,7 @@
 {% block results %}
 <table class="table table-striped">
   <thead>
-    <tr><th>Locus</th><th>Speaker</th><th>Addressee</th><th>Type</th><th>Move</th></tr>
+    <tr><th>Locus</th><th>Speaker</th><th>Addressee</th><th>Type</th><th>Turn</th><th>Embedded</th></tr>
   </thead>
   <tbody>
     {% for s in page_obj %}
@@ -47,6 +47,9 @@
           <a style="margin-left: 1em" href="{% url 'app:cluster_detail' s.cluster.id %}">
               <i class="fa-solid fa-circle-info"></i>
           </a>
+      </td>
+      <td>
+        {{ s.level }}
       </td>
     </tr>
     {% endfor %}
