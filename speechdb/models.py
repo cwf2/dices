@@ -233,6 +233,7 @@ class Speech(models.Model):
              blank=True)
     # TODO should be unique per cluster
     part = models.IntegerField()
+    level = models.IntegerField(default=0)
     
     class Meta:
         ordering = ['work', 'seq']
