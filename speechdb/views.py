@@ -8,7 +8,7 @@ from django_filters.views import FilterView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from django_filters import rest_framework as filters
 from .models import Metadata
-from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
+from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster, SpeechTag
 from .serializers import MetadataSerializer
 from .serializers import AuthorSerializer, WorkSerializer, CharacterSerializer, CharacterInstanceSerializer, SpeechSerializer, SpeechClusterSerializer
 
@@ -194,6 +194,7 @@ class SpeechFilter(filters.FilterSet):
     addr_anon = filters.BooleanFilter('addr__anon', distinct=True)
     
     type = filters.ChoiceFilter('type', choices=Speech.SpeechType.choices)
+    tags = filters.ChoiceFilter('tags__type', choices=SpeechTag.TagType.choices)
 
     cluster_id = filters.NumberFilter('cluster__id')
     
@@ -530,9 +531,12 @@ class AppSpeechList(ListView):
         ('char_gender', str),
         ('cluster_id', int),
         ('type', str),
+        ('tags', str),
         ('part', int),
         ('n_parts', int),
         ('work_id', int),
+        ('auth_id', int),
+        ('lang', str),
     ]
     
     def get_context_data(self, **kwargs):
@@ -645,7 +649,16 @@ class AppSpeechList(ListView):
         
         if 'work_id' in self.params:
             query.append(Q(work__pk=self.params['work_id']))
-        
+
+        if 'auth_id' in self.params:
+            query.append(Q(work__author__pk=self.params['auth_id']))
+            
+        if 'lang' in self.params:
+            query.append(Q(work__lang=self.params['lang']))
+
+        if 'tags' in self.params:
+            query.append(Q(tags__type=self.params['tags']))
+  
         qs = qs.filter(*query)
         qs = qs.order_by('seq')
         qs = qs.order_by('work')
@@ -796,13 +809,17 @@ class AppSpeechSearch(TemplateView):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
+        context['authors'] = Author.objects.all()        
         context['works'] = Work.objects.all()
+        context['lang_choices'] = Work.Language.choices        
         context['characters'] = Character.objects.all()
         context['max_parts'] = Speech.objects.aggregate(Max('part'))['part__max']
         context['character_being_choices'] = Character.CharacterBeing.choices
         context['character_number_choices'] = Character.CharacterNumber.choices
         context['character_gender_choices'] = Character.CharacterGender.choices        
         context['speech_type_choices'] = Speech.SpeechType.choices
+        context['tag_choices'] = SpeechTag.TagType.choices
+
 
         return context
 

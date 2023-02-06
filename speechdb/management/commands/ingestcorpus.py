@@ -2,7 +2,8 @@ from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
 import django.db.utils
 from speechdb.models import Metadata
-from speechdb.models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
+from speechdb.models import Author, Work, Character, CharacterInstance
+from speechdb.models import Speech, SpeechCluster, SpeechTag
 import csv
 import os
 import re
@@ -277,7 +278,7 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
             s.addr_notes = None
         
         # general notes
-        s.notes = rec.get('misc_notes').strip() or None
+        s.notes = rec.get('misc_notes').strip() or None    
 
         # speech must be saved before adding character instances
         if len(errs) == 0:
@@ -313,6 +314,19 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
                 assert len(s.addr.all()) > 0
             except:
                 errs.append('addressee')
+            
+            # speech type tags
+            tag_notes = rec.get('long_speech_type').strip() or None
+            tag_str = rec.get('short_speech_type').strip()
+            for tag in tag_str.split('; '):
+                tag = tag.strip()
+                doubt = tag.endswith('?')
+                tag = tag.strip(' ?')
+                if tag not in SpeechTag.TagType.values:
+                    tag = SpeechTag.TagType.UNDEFINED
+                t = SpeechTag(type=tag, speech=s, doubt=doubt, notes=tag_notes)
+                t.save()
+            
                 
         else:
             skipped.append((reader.line_num, str(s), errs))

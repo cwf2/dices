@@ -260,3 +260,42 @@ class Speech(models.Model):
         if t == 'D' or t == 'G':
             t += str(self.part)
         return t
+
+
+class SpeechTag(models.Model):
+    '''A category tag for speeches'''
+
+    class TagType(models.TextChoices):
+        CHALLENGE = ('cha', 'Challenge')
+        COMMAND = ('com', 'Command')
+        CONSOLATION = ('con', 'Consolation')
+        DELIBERATION = ('del', 'Deliberation')
+        DESIRE = ('des', 'Desire and Wish')
+        EXHORTATION = ('exh', 'Exhortation and Self-Exhortation')
+        FAREWELL = ('far', 'Farewell')
+        GREETING = ('gre', 'Greeting and Reception')
+        INFORMATION = ('inf', 'Information and Description')
+        INVITATION = ('inv', 'Invitation')
+        INSTRUCTION = ('ins', 'Instruction')
+        LAMENT = ('lam', 'Lament')
+        PRAISE = ('lau', 'Praise and Laudation')
+        MESSAGE = ('mes', 'Message')
+        NARRATION = ('nar', 'Narration')
+        PROPHESY = ('ora', 'Prophecy, Oracular Speech, and Interpretation')
+        PERSUASION = ('per', 'Persuasion')
+        PRAYER = ('pra', 'Prayer')
+        QUESTION = ('que', 'Question')
+        REQUEST = ('req', 'Request')
+        REPLY = ('res',	'Reply to Question')
+        TAUNT = ('tau', 'Taunt')
+        THREAT = ('thr', 'Threat')
+        VITUPERATION = ('vit', 'Vituperation')
+        VOW = ('vow', 'Promise and Oath')
+        WARNING = ('war', 'Warning')
+        UNDEFINED = ('und', 'Undefined')
+
+    type = models.CharField(max_length=3, choices=TagType.choices, 
+                                default=TagType.UNDEFINED)
+    doubt = models.BooleanField(default=False)
+    notes = models.CharField(max_length=64, null=True)
+    speech = models.ForeignKey(Speech, on_delete=models.CASCADE, related_name='tags')

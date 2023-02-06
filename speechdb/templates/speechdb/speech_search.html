@@ -131,6 +131,13 @@
               <option value="{{ k }}">{{ v }}</option>
               {% endfor %}
             </select>
+            <label for="sel_tags">Tags</label>
+            <select class="form-control" id="sel_tags" name="tags">
+              <option value="" selected="selected">-----</option>
+              {% for k, v in tag_choices %}
+              <option value="{{ k }}">{{ v }}</option>
+              {% endfor %}
+            </select>
           </div>
         </div>
         <div class="col">
@@ -156,6 +163,20 @@
       <div class="row">
         <div class="col">
           <div class="form-group">
+            <label for="sel_lang">Language</label>
+            <select class="form-control" id="sel_lang" name="lang">
+              <option value="" selected="selected">-----</option>
+              {% for k, v in lang_choices %}
+              <option value="{{ k }}">{{ v }}</option>
+              {% endfor %}
+            </select>
+            <label for="sel_auth">Author</label>
+            <select class="form-control" id="sel_auth" name="auth_id">
+              <option value="" selected="selected">-----</option>
+              {% for a in authors %}
+              <option value="{{ a.pk }}">{{ a.name }}</option>
+              {% endfor %}
+            </select>
             <label for="sel_work">Work</label>
             <select class="form-control" id="sel_work" name="work_id">
               <option value="" selected="selected">-----</option>
