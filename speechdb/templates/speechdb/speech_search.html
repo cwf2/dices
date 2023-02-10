@@ -20,11 +20,20 @@
           <div class="form-group">
             <div class="row">
               <div class="col">
-                <label for="sel_spkr">Name</label>
+                <label for="sel_spkr">Named Characters</label>
                 <select class="form-control" id="sel_spkr" name="spkr_id">
                   <option value="" selected="selected">-----</option>
                   {% for c in characters %}
                   <option value="{{ c.pk }}">{{ c.name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="col">
+                <label for="sel_spkr_inst">Anonymous/Collectives</label>
+                <select class="form-control" id="sel_spkr_inst" name="spkr_inst_name">
+                  <option value="" selected="selected">-----</option>
+                  {% for name in anons %}
+                  <option value="{{ name }}">{{ name }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -62,7 +71,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>  
   <div class="card">
     <div class="card-header" id="hdr_addressee">
       <span>Addressee</span>

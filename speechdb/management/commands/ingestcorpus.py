@@ -318,8 +318,8 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
             # speech type tags
             tag_notes = rec.get('long_speech_type').strip() or None
             tag_str = rec.get('short_speech_type').strip()
-            for tag in tag_str.split('; '):
-                tag = tag.strip()
+            for tag in tag_str.split(';'):
+                tag = tag.strip().lower()
                 doubt = tag.endswith('?')
                 tag = tag.strip(' ?')
                 if tag not in SpeechTag.TagType.values:

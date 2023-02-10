@@ -514,9 +514,9 @@ class AppSpeechList(ListView):
         ('spkr_id', int),
         ('addr_id', int),
         ('char_id', int),
-        ('char_inst', int),
-        ('spkr_inst', int),
-        ('addr_inst', int),
+        ('char_inst_name', int),
+        ('spkr_inst_name', int),
+        ('addr_inst_name', int),
         ('spkr_name', str),
         ('addr_name', str),
         ('char_name', str), 
@@ -674,16 +674,14 @@ class AppSpeechClusterList(ListView):
     _valid_params = [
         ('spkr_id', int),
         ('addr_id', int),
-        ('char_id', int),
-        ('char_inst', int),
-        ('spkr_inst', int),
-        ('addr_inst', int),
         ('spkr_name', str),
-        ('addr_name', str),
-        ('char_name', str), 
+        ('addr_name', str), 
+        ('spkr_inst_name', str),
+        ('addr_inst_name', int),
         ('spkr_being', str),
-        ('addr_being', str),               
-        ('char_being', str),
+        ('addr_being', str),
+        ('spkr_gender', str),
+        ('addr_gender', str),
         ('cluster_id', int),
         ('type', str),
         ('n_parts', int),
@@ -697,58 +695,45 @@ class AppSpeechClusterList(ListView):
         # construct query
         query = []
         
-        # any participant
-        if 'char_id' in self.params:
-            query.append(
-                Q(speech__spkr__char=self.params['char_id']) | 
-                Q(speech__addr__char=self.params['char_id'])
-            )
-        
-        # any participant by name
-        if 'char_name' in self.params:
-            query.append(
-                Q(speech__spkr__name=self.params['char_name']) |
-                Q(speech__addr__name=self.params['char_name'])
-            )
-
-        # any participant by being
-        if 'char_being' in self.params:
-            query.append(
-                Q(speech__spkr__being=self.params['char_being']) |
-                Q(speech__addr__being=self.params['char_being'])
-            )
-        
         # speaker by id
         if 'spkr_id' in self.params:
             query.append(Q(speech__spkr__char=self.params['spkr_id']))
         
-        # speaker by instance
-        if 'spkr_inst' in self.params:
-            query.append(Q(speech__spkr=self.params['spkr_inst']))
+        # speaker by instance name
+        if 'spkr_inst_name' in self.params:
+            query.append(Q(speech__spkr__name=self.params['spkr_inst_name']))
             
         # speaker by name
         if 'spkr_name' in self.params:
-            query.append(Q(speech__spkr__name=self.params['spkr_name']))
+            query.append(Q(speech__spkr__char__name=self.params['spkr_name']))
 
-        # speaker by name
+        # speaker by being
         if 'spkr_being' in self.params:
-            query.append(Q(speech__spkr__being=self.params['spkr_being']))
+            query.append(Q(speech__spkr__char__being=self.params['spkr_being']))
+
+        # speaker by gender
+        if 'spkr_gender' in self.params:
+            query.append(Q(speech__spkr__char__gender=self.params['spkr_gender']))
         
         # addressee by id
         if 'addr_id' in self.params:
             query.append(Q(speech__addr__char=self.params['addr_id']))
         
-        # addressee by instance
-        if 'addr_inst' in self.params:
-            query.append(Q(speech__addr=self.params['addr_inst']))
+        # addressee by instance name
+        if 'addr_inst_name' in self.params:
+            query.append(Q(speech__addr__name=self.params['addr_inst_name']))
 
         # addressee by name
         if 'addr_name' in self.params:
-            query.append(Q(speech__addr__name=self.params['addr_name']))
+            query.append(Q(speech__addr__char__name=self.params['addr_name']))
 
         # addressee by being
         if 'addr_being' in self.params:
-            query.append(Q(speech__addr__being=self.params['addr_being']))
+            query.append(Q(speech__addr__char__being=self.params['addr_being']))
+
+        # addressee by gender
+        if 'addr_gender' in self.params:
+            query.append(Q(speech__addr__char__gender=self.params['addr_gender']))
 
         if 'cluster_id' in self.params:
             query.append(Q(pk=self.params['cluster_id']))
@@ -813,6 +798,7 @@ class AppSpeechSearch(TemplateView):
         context['works'] = Work.objects.all()
         context['lang_choices'] = Work.Language.choices        
         context['characters'] = Character.objects.all()
+        context['anons'] = sorted(set(i.name for i in CharacterInstance.objects.filter(anon=True)))
         context['max_parts'] = Speech.objects.aggregate(Max('part'))['part__max']
         context['character_being_choices'] = Character.CharacterBeing.choices
         context['character_number_choices'] = Character.CharacterNumber.choices

@@ -56,9 +56,9 @@
               <i class="fa-solid fa-circle-info"></i>
           </a>
       </td>
-      <td>
+      <td class="small">
         {% for tag in s.tags.all %}
-          <span class="button badge-primary">{{ tag.type }}</span>
+          <span class="badge bg-secondary">{{ tag.get_type_display }}</span><br>
         {% endfor %}
       </td>
       <td>
