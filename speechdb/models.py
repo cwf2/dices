@@ -2,7 +2,7 @@ from django.db import models
 
 # Metadata about the database itself
 class Metadata(models.Model):
-    name = models.CharField(max_length=64, blank=False, unique=True)
+    name = models.CharField(max_length=128, blank=False, unique=True)
     value = models.TextField()
 
 # Entity classes
@@ -10,9 +10,9 @@ class Metadata(models.Model):
 class Author(models.Model):
     '''An ancient author'''
     
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=128)
     wd = models.CharField('WikiData ID', max_length=32)
-    urn = models.CharField(max_length=64)
+    urn = models.CharField(max_length=128)
     
     class Meta:
         ordering = ['name']
@@ -28,7 +28,7 @@ class Work(models.Model):
         GREEK = ('greek', 'Greek')
         LATIN = ('latin', 'Latin')
     
-    title = models.CharField(max_length=64)
+    title = models.CharField(max_length=128)
     wd = models.CharField('WikiData ID', max_length=32)
     urn = models.CharField(max_length=128)
     author = models.ForeignKey(Author, on_delete=models.PROTECT)
@@ -70,7 +70,7 @@ class Character(models.Model):
         MALE = ('male', 'Male')
 
     
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=128)
     being = models.CharField(max_length=16, choices=CharacterBeing.choices,
             default=CharacterBeing.MORTAL)
     number = models.CharField(max_length=16, choices=CharacterNumber.choices,
@@ -98,7 +98,7 @@ class Character(models.Model):
 class CharacterInstance(models.Model):
     '''A character engaged in a speech'''
     
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=128)
     being = models.CharField(max_length=16, 
             choices=Character.CharacterBeing.choices,
             default=Character.CharacterBeing.MORTAL)
@@ -297,5 +297,5 @@ class SpeechTag(models.Model):
     type = models.CharField(max_length=3, choices=TagType.choices, 
                                 default=TagType.UNDEFINED)
     doubt = models.BooleanField(default=False)
-    notes = models.CharField(max_length=64, null=True)
+    notes = models.CharField(max_length=128, null=True)
     speech = models.ForeignKey(Speech, on_delete=models.CASCADE, related_name='tags')
