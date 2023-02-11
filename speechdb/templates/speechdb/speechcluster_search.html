@@ -1,11 +1,11 @@
 {% extends "speechdb/base_sidebar.html" %}
 
 {% block title %}Speech Clusters{% endblock %}
-{% block sidebar_title %}Speech CLusters{% endblock %}
+{% block sidebar_title %}Speech Clusters{% endblock %}
 
 {% block sidebar_content %}
 <p>
-  Core identities of speakers and addressees. External ID columns link to entries in the respective databases.
+  Groups of speeches comprising a continuous interaction among participants.
 </p>
 {% endblock %}
 
@@ -23,11 +23,20 @@
           <div class="form-group">
             <div class="row">
               <div class="col">
-                <label for="sel_spkr">Name</label>
+                <label for="sel_spkr">Named Characters</label>
                 <select class="form-control" id="sel_spkr" name="spkr_id">
                   <option value="" selected="selected">-----</option>
                   {% for c in characters %}
                   <option value="{{ c.pk }}">{{ c.name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="col">
+                <label for="sel_spkr_inst">Anonymous/Collectives</label>
+                <select class="form-control" id="sel_spkr_inst" name="spkr_inst_name">
+                  <option value="" selected="selected">-----</option>
+                  {% for name in anons %}
+                  <option value="{{ name }}">{{ name }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -76,11 +85,20 @@
           <div class="form-group">
             <div class="row">
               <div class="col">              
-                <label for="sel_addr">Name</label>
+                <label for="sel_addr">Named Characters</label>
                 <select class="form-control" id="sel_addr" name="addr_id">
                   <option value="" selected="selected">-----</option>
                   {% for c in characters %}
                   <option value="{{ c.pk }}">{{ c.name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="col">
+                <label for="sel_addr_inst">Anonymous/Collectives</label>
+                <select class="form-control" id="sel_addr_inst" name="addr_inst_name">
+                  <option value="" selected="selected">-----</option>
+                  {% for name in anons %}
+                  <option value="{{ name }}">{{ name }}</option>
                   {% endfor %}
                 </select>
               </div>
