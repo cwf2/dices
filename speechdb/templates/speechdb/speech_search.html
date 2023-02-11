@@ -20,11 +20,20 @@
           <div class="form-group">
             <div class="row">
               <div class="col">
-                <label for="sel_spkr">Name</label>
+                <label for="sel_spkr">Named Characters</label>
                 <select class="form-control" id="sel_spkr" name="spkr_id">
                   <option value="" selected="selected">-----</option>
                   {% for c in characters %}
                   <option value="{{ c.pk }}">{{ c.name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="col">
+                <label for="sel_spkr_inst">Anonymous/Collectives</label>
+                <select class="form-control" id="sel_spkr_inst" name="spkr_inst_name">
+                  <option value="" selected="selected">-----</option>
+                  {% for name in anons %}
+                  <option value="{{ name }}">{{ name }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -62,7 +71,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>  
   <div class="card">
     <div class="card-header" id="hdr_addressee">
       <span>Addressee</span>
@@ -73,11 +82,20 @@
           <div class="form-group">
             <div class="row">
               <div class="col">              
-                <label for="sel_addr">Name</label>
+                <label for="sel_addr">Named Characters</label>
                 <select class="form-control" id="sel_addr" name="addr_id">
                   <option value="" selected="selected">-----</option>
                   {% for c in characters %}
                   <option value="{{ c.pk }}">{{ c.name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="col">
+                <label for="sel_addr_inst">Anonymous/Collectives</label>
+                <select class="form-control" id="sel_addr_inst" name="addr_inst_name">
+                  <option value="" selected="selected">-----</option>
+                  {% for name in anons %}
+                  <option value="{{ name }}">{{ name }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -125,9 +143,16 @@
         <div class="col">
           <div class="form-group">
             <label for="sel_type">Speech Type</label>
-            <select class="form-control" id="sel_type" name="cluster_type">
+            <select class="form-control" id="sel_type" name="type">
               <option value="" selected="selected">-----</option>
               {% for k, v in speech_type_choices %}
+              <option value="{{ k }}">{{ v }}</option>
+              {% endfor %}
+            </select>
+            <label for="sel_tags">Tags</label>
+            <select class="form-control" id="sel_tags" name="tags">
+              <option value="" selected="selected">-----</option>
+              {% for k, v in tag_choices %}
               <option value="{{ k }}">{{ v }}</option>
               {% endfor %}
             </select>
@@ -156,6 +181,20 @@
       <div class="row">
         <div class="col">
           <div class="form-group">
+            <label for="sel_lang">Language</label>
+            <select class="form-control" id="sel_lang" name="lang">
+              <option value="" selected="selected">-----</option>
+              {% for k, v in lang_choices %}
+              <option value="{{ k }}">{{ v }}</option>
+              {% endfor %}
+            </select>
+            <label for="sel_auth">Author</label>
+            <select class="form-control" id="sel_auth" name="auth_id">
+              <option value="" selected="selected">-----</option>
+              {% for a in authors %}
+              <option value="{{ a.pk }}">{{ a.name }}</option>
+              {% endfor %}
+            </select>
             <label for="sel_work">Work</label>
             <select class="form-control" id="sel_work" name="work_id">
               <option value="" selected="selected">-----</option>

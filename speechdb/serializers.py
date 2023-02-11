@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from speechdb.models import Metadata
-from speechdb.models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
+from speechdb.models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster, SpeechTag
 
 class MetadataSerializer(serializers.ModelSerializer):
     class Meta:
@@ -33,8 +33,15 @@ class CharacterInstanceSerializer(serializers.ModelSerializer):
         fields = '__all__'
         depth = 1
 
+class SpeechTagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SpeechTag
+        fields = ['type', 'doubt']
+        depth = 1
 
 class SpeechSerializer(serializers.ModelSerializer):
+    tags = SpeechTagSerializer(many=True)
+    
     class Meta:
         model = Speech
         fields = '__all__'
