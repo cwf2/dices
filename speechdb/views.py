@@ -11,6 +11,7 @@ from .models import Metadata
 from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster, SpeechTag
 from .serializers import MetadataSerializer
 from .serializers import AuthorSerializer, WorkSerializer, CharacterSerializer, CharacterInstanceSerializer, SpeechSerializer, SpeechClusterSerializer
+import csv
 
 import logging
 # Get an instance of a logger
@@ -346,7 +347,6 @@ class SpeechClusterDetail(RetrieveAPIView):
     queryset = SpeechCluster.objects.all()
     serializer_class = SpeechClusterSerializer
     
-
 #
 # Web frontend class-based views
 #
@@ -537,6 +537,7 @@ class AppSpeechList(ListView):
         ('work_id', int),
         ('auth_id', int),
         ('lang', str),
+        ('page_size', int),
     ]
     
     def get_context_data(self, **kwargs):
@@ -667,6 +668,13 @@ class AppSpeechList(ListView):
         qs = qs.filter(*query)
         qs = qs.order_by('seq')
         qs = qs.order_by('work')
+        
+        # pagination
+        if 'page_size' in self.params:
+            if self.params['page_size'] > 0:
+                self.paginate_by = self.params['page_size']
+            else:
+                self.paginate_by = qs.count() + 1
 
         return qs
         
