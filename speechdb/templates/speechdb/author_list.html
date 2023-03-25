@@ -1,12 +1,6 @@
 {% extends "speechdb/results.html" %}
 
 {% block title %}Authors{% endblock %}
-{% block sidebar_title %}Authors{% endblock %}
-{% block sidebar_content %}
-<p>
-  Authors of ancient works in the corpus.
-</p>
-{% endblock %}
 
 {% block results %}
 <table class="table table-striped">
@@ -19,16 +13,48 @@
       <td>{{ author.name }}</td>
       <td>
         {% if author.wd %}
-        <a href="https://www.wikidata.org/wiki/{{ author.wd }}">{{ author.wd }}</a>
+          {{ author.wd }}
+          <a style="margin-left: 0.5em" href="https://www.wikidata.org/wiki/{{ author.wd }}">
+            <i class="fa-solid fa-up-right-from-square"></i>
+          </a>
         {% endif %}
       </td>
       <td>
         {% if author.urn %}
-        <a href="https://catalog.perseus.org/catalog/{{ author.urn }}">{{ author.urn }}</a>
+          {{ author.urn }}
+          <a style="margin-left: 0.5em" href="https://catalog.perseus.org/catalog/{{ author.urn }}">
+            <i class="fa-solid fa-up-right-from-square"></i>
+          </a>
         {% endif %}
       </td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
+{% endblock %}
+
+{% block sidebar_content %}
+<form action="{% url 'app:authors' %}" method="GET">
+  <div class="card small">
+    <div class="card-header" id="hdr_author">
+      <span>Author</span>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label for="sel_lang">Language</label>
+        <select class="form-control form-control-sm" id="sel_lang" name="lang">
+          <option value="" selected="selected">-----</option>
+          {% for k,v in lang_choices %}
+          <option value="{{ k }}">{{ v }}</option>
+          {% endfor %}                                            
+        </select>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-sm">Search</button>
+      </div>
+    </div>
+</div>
+</form>
 {% endblock %}

@@ -23,32 +23,118 @@
       <td>{{ c.being }}</td>
       <td>
         {% if c.instances__speeches__count > 0 %}
-        <a href="{% url 'app:speeches' %}?spkr_id={{ c.pk }}">
         {{ c.instances__speeches__count }}
+        <a style="margin-left:1em" href="{% url 'app:speeches' %}?spkr_id={{ c.pk }}">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </a>
-        {% else %}
-        —
         {% endif %}
       </td>
       <td>
         {% if c.instances__addresses__count > 0 %}
-        <a href="{% url 'app:speeches' %}?addr_id={{ c.pk }}">
         {{ c.instances__addresses__count }}
+        <a style="margin-left:1em" href="{% url 'app:speeches' %}?addr_id={{ c.pk }}">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </a>
-        {% else %}
-        —
         {% endif %}
       </td>
-      <td><a href="https://www.wikidata.org/wiki/{{ c.wd }}">{{ c.wd }}</a></td>
+      <td>
+        {% if c.wd %}
+        {{ c.wd }}
+        <a style="margin-left: 0.5em" href="https://www.wikidata.org/wiki/{{ c.wd }}">
+          <i class="fa-solid fa-up-right-from-square"></i>
+        </a>
+        {% endif %}
+      </td>
       <td>
         {% if c.manto %}
-        <a href="https://yayalu.github.io/greekgraphs/#/datacards?id={{ c.manto }}">{{ c.manto }}</a>
-        {% else %}
         {{ c.manto }}
+        <a style="margin-left: 0.5em" href="https://resource.manto.unh.edu/{{ c.manto }}">
+          <i class="fa-solid fa-up-right-from-square"></i>
+        </a>
         {% endif %}
       </td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
+{% endblock %}
+
+{% block sidebar_content %}
+<form action="{% url 'app:characters' %}" method="GET">
+  <div class="form-group">
+    <div class="card small">
+      <div class="card-header" id="hdr_character">
+        <span>Character Properties</span>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="sel_gender">Gender</label>
+          <select class="form-control form-control-sm" id="sel_gender" name="gender">
+            <option value="" selected="selected">-----</option>
+            {% for k, v in character_gender_choices %}
+            <option value="{{ k }}">{{ v }}</option>
+            {% endfor %}                                            
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sel_being">Being</label>
+          <select class="form-control form-control-sm" id="sel_being" name="being">
+            <option value="" selected="selected">-----</option>
+            {% for k, v in character_being_choices %}
+            <option value="{{ k }}">{{ v }}</option>
+            {% endfor %}                                            
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sel_number">Number</label>
+          <select class="form-control form-control-sm" id="sel_number" name="number">
+            <option value="" selected="selected">-----</option>
+            {% for k, v in character_number_choices %}
+            <option value="{{ k }}">{{ v }}</option>
+            {% endfor %}                                            
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="card small">
+      <div class="card-header">
+        <span>Text properties</span>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="sel_lang">Language</label>
+              <select class="form-control form-control-sm" id="sel_lang" name="lang">
+                <option value="" selected="selected">-----</option>
+                {% for k, v in lang_choices %}
+                <option value="{{ k }}">{{ v }}</option>
+                {% endfor %}
+              </select>
+              <label for="sel_auth">Author</label>
+              <select class="form-control form-control-sm" id="sel_auth" name="auth_id">
+                <option value="" selected="selected">-----</option>
+                {% for a in authors %}
+                <option value="{{ a.pk }}">{{ a.name }}</option>
+                {% endfor %}
+              </select>
+              <label for="sel_work">Work</label>
+              <select class="form-control form-control-sm" id="sel_work" name="work_id">
+                <option value="" selected="selected">-----</option>
+                {% for w in works %}
+                <option value="{{ w.pk }}">{{ w.get_long_name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-sm">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
 {% endblock %}

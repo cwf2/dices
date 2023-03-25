@@ -1,50 +1,60 @@
-{% extends "speechdb/base_nosidebar.html" %}
+{% extends "speechdb/base_sidebar.html" %}
+
+{% block pagination %}
+
+<div class="btn-toolbar" role="toolbar">
+  <div class="btn-group btn-group-sm me-2" role="group">
+    <a class="btn btn-outline-secondary" role="button" data-bs-toggle="collapse" data-bs-target="#collapseSidebar" aria-expanded="true" aria-controls="collapseSidebar">
+    toggle filters
+    </a>
+  </div>
+</div>
+<div class="btn-toolbar" role="toolbar">
+  <div class="btn-group btn-group-sm" role="group">
+    <form class="row row-cols-lg-auto align-items-center">
+      <div class="col-12">
+        <div class="btn-group btn-group-sm">
+          <span class="btn btn-outline-secondary btn-sm disabled">
+            {{ page_obj.paginator.count }} results:
+          </span>
+        <select class="btn btn-outline-secondary btn-sm" id="sel_page_size">
+          <option value="10">10 per page</option>
+          <option value="50">50 per page</option>
+          <option value="100">100 per page</option>
+          <option value="0">view all</option>    
+        </select>
+        <button type="submit" class="btn btn-outline-secondary btn-sm">change</button>
+      </div>
+      </div>
+    </form>
+  </div>
+
+  {% if page_obj %}
+
+  <div class="btn-group btn-group-sm ms-5" role="group">
+    {% if page_obj.has_previous %}
+    <a class="btn btn-outline-secondary" href="?page={{ page_obj.previous_page_number }}{% if search_params %}{% for k, v in search_params %}&{{ k }}={{ v }}{% endfor %}{% endif %}">Prev</a>
+    {% else %}
+    <a href="#" class="btn btn-outline-secondary disabled">Prev</a>
+    {% endif %}
+    <a class="btn btn-outline-secondary disabled" href="#">Page <strong>{{ page_obj.number }}</strong> of {{ page_obj.paginator.num_pages }}</a>
+    {% if page_obj.has_next %}
+    <a class="btn btn-outline-secondary" href="?page={{ page_obj.next_page_number }}{% if search_params %}{% for k, v in search_params %}&{{ k }}={{ v }}{% endfor %}{% endif %}">Next</a>
+    {% else %}
+    <a href="#" class="btn btn-outline-secondary disabled">Next</a>
+    {% endif %}
+  </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
 
 {% block content %}
   {% if page_obj.paginator.count == 0 %}
   <div class="jumbotron">
     <p>Your search produced no results.</p>
   </div>
-  {% else %}
-    {% if page_obj %}
-    
-    <nav aria-label="Page navigation">
-      <div class="d-flex justify-content-between">
-          <div>
-              {% if search_params %}
-                {% for k, v in search_params %}
-                <span class="badge bg-secondary mx-6">{{ k }}: {{ v }}</span>
-                  {% endfor %}
-              {% endif %}
-              
-          </div>
-          <ul class="pagination">
-            {% if page_obj.has_previous %}
-            <li class="page-item">
-              <a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if search_params %}{% for k, v in search_params %}&{{ k }}={{ v }}{% endfor %}{% endif %}">Prev</a>
-            </li>
-            {% else %}
-            <li class="page-item disabled">
-              <a href="#" class="page-link">Prev</a>
-            </li>
-            {% endif %}
-            <li class="page-item disabled">
-              <a class="page-link" href="#">Page <strong>{{ page_obj.number }}</strong> of {{ page_obj.paginator.num_pages }}</a>
-            </li>
-            {% if page_obj.has_next %}
-            <li class="page-item">
-              <a class="page-link" href="?page={{ page_obj.next_page_number }}{% if search_params %}{% for k, v in search_params %}&{{ k }}={{ v }}{% endfor %}{% endif %}">Next</a>
-            </li>
-            {% else %}
-            <li class="page-item disabled">
-              <a href="#" class="page-link">Next</a>
-            </li>
-            {% endif %}
-        </ul>
-      </div>      
-    </nav>
-    {% endif %}
-    {% block results %}
-    {% endblock %}
   {% endif %}
+  {% block results %}
+  {% endblock %}
 {% endblock %}

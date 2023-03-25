@@ -22,17 +22,116 @@
       <td>{{ inst.context }}</td>      
       <td>{% if inst.anon %}Yes{% else %}No{% endif %}</td>
       <td>
-        <a href="{% url 'app:speeches' %}?spkr_inst=inst.pk">
+        {% if inst.speeches__count > 0 %}
         {{ inst.speeches__count }}
+        <a style="margin-left:1em" href="{% url 'app:speeches' %}?spkr_inst=inst.pk">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </a>
+        {% endif %}
       </td>
       <td>
-        <a href="{% url 'app:speeches' %}?addr_inst=inst.pk">
+        {% if inst.addresses__count > 0 %}
         {{ inst.addresses__count }}
+        <a style="margin-left:1em" href="{% url 'app:speeches' %}?addr_inst=inst.pk">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </a>
+        {% endif %}
       </td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
+{% endblock %}
+
+{% block sidebar_content %}
+<form action="{% url 'app:instances' %}" method="GET">
+  <div class="card small">
+    <div class="card-header" id="hdr_instance">
+      <span>Instance</span>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label for="sel_gender">Gender</label>
+        <select class="form-control form-control-sm" id="sel_gender" name="gender">
+          <option value="" selected="selected">-----</option>
+          {% for k, v in character_gender_choices %}
+          <option value="{{ k }}">{{ v }}</option>
+          {% endfor %}                                            
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel_being">Being</label>
+        <select class="form-control form-control-sm" id="sel_being" name="being">
+          <option value="" selected="selected">-----</option>
+          {% for k, v in character_being_choices %}
+          <option value="{{ k }}">{{ v }}</option>
+          {% endfor %}                                            
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel_number">Number</label>
+        <select class="form-control form-control-sm" id="sel_number" name="number">
+          <option value="" selected="selected">-----</option>
+          {% for k, v in character_number_choices %}
+          <option value="{{ k }}">{{ v }}</option>
+          {% endfor %}                                            
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel_anon">Anonymous</label>
+        <select class="form-control form-control-sm" id="sel_anon" name="anon">
+          <option value="" selected="selected">-----</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="card small">
+    <div class="card-header" id="hdr_addressee">
+      <span>Character</span>
+    </div>
+    <div class="card-body">
+      <label for="sel_char_name">Name</label>
+      <select class="form-control form-control-sm" id="sel_char_name" name="char_name">
+        <option value="" selected="selected">-----</option> 
+        {% for c in characters %}
+        <option value="{{ c.name }}">{{ c.name }}</option>
+        {% endfor %}
+      </select>
+      <div class="form-group">
+        <label for="sel_char_gender">Gender</label>
+        <select class="form-control form-control-sm" id="sel_char_gender" name="char_gender">
+          <option value="" selected="selected">-----</option>
+          {% for k, v in character_gender_choices %}
+          <option value="{{ k }}">{{ v }}</option>
+          {% endfor %}                                            
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel_char_being">Being</label>
+        <select class="form-control form-control-sm" id="sel_char_being" name="char_being">
+          <option value="" selected="selected">-----</option>
+          {% for k, v in character_being_choices %}
+          <option value="{{ k }}">{{ v }}</option>
+          {% endfor %}                                            
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel_char_number">Number</label>
+        <select class="form-control form-control-sm" id="sel_char_number" name="char_number">
+          <option value="" selected="selected">-----</option>
+          {% for k, v in character_number_choices %}
+          <option value="{{ k }}">{{ v }}</option>
+          {% endfor %}                                            
+        </select>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-sm">Search</button>
+      </div>
+    </div>
+  </div>
+</form>
 {% endblock %}
