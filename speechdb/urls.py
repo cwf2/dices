@@ -11,15 +11,11 @@ frontend_urls = ([
     path('works/', views.AppWorkList.as_view(), name='works'),
     path('characters/', views.AppCharacterList.as_view(), name='characters'),
     path('characters/<int:pk>', views.AppCharacterDetail.as_view(), name='character_detail'),
-    path('characters/search/', views.AppCharacterSearch.as_view(), name='character_search'),
     path('instances/', views.AppCharacterInstanceList.as_view(), name='instances'),
-    path('instances/search', views.AppCharacterInstanceSearch.as_view(), name='instances_search'),
     path('instances/<int:pk>', views.AppCharacterInstanceDetail.as_view(), name='instance_detail'),    
     path('clusters/', views.AppSpeechClusterList.as_view(), name='clusters'),
     path('clusters/<int:pk>/', views.AppSpeechClusterDetail.as_view(), name='cluster_detail'),
-    path('clusters/search/', views.AppSpeechClusterSearch.as_view(), name='cluster_search'),
     path('speeches/', views.AppSpeechList.as_view(), name='speeches'),
-    path('speeches/search/', views.AppSpeechSearch.as_view(), name='speech_search'),
 ], 'app')
 
 api_urls = ([

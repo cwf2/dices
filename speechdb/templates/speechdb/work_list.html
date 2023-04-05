@@ -1,12 +1,6 @@
 {% extends "speechdb/results.html" %}
 
 {% block title %}Works{% endblock %}
-{% block sidebar_title %}Works{% endblock %}
-{% block sidebar_desc %}
-<p>
-  Epic texts
-</p>
-{% endblock %}
 
 {% block results %}
 <table class="table table-striped">
@@ -17,7 +11,7 @@
     {% for work in page_obj %}
     <tr>
       <td>{{ work.author.name }}</td>
-      <td>{{ work.title }}</td>      
+      <td>{{ work.title }}</td>
       <td>
         {{ work.speech_set.count }}
         <a style="margin-left: 0.5em" href="{% url 'app:speeches' %}?work_id={{work.pk}}">
@@ -44,4 +38,36 @@
     {% endfor %}
   </tbody>
 </table>
+{% endblock %}
+
+{% block sidebar_content %}
+<form action="{% url 'app:works' %}" method="GET">
+  <div class="card small">
+    <div class="card-header" id="hdr_work">
+      <span>Work</span>
+    </div>
+    <div class="card-body">
+      <label for="sel_author">Author</label>
+      <select class="form-control form-control-sm" id="sel_auth_id" name="auth_id">
+        <option value="">-----</option> 
+        {% for a in authors %}
+        <option value="{{ a.id }}" {% if params.auth_id == a.id %} selected="selected" {% endif %}>{{ a.name }}</option>
+        {% endfor %}
+      </select>
+      <label for="sel_lang">Language</label>
+      <select class="form-control form-control-sm" id="sel_lang" name="lang">
+        <option value="">-----</option>
+        {% for k,v in lang_choices %}
+        <option value="{{ k }}" {% if params.lang == k %} selected="selected" {% endif %}>{{ v }}</option>
+        {% endfor %}                                            
+      </select>
+    </div>
+    <div class="card-footer">
+      <div class="row justify-content-around">
+          <button type="submit" class="btn btn-primary btn-sm w-25" >Search</button>
+          <a class="btn btn-secondary btn-sm w-25"  href="{% url 'app:works' %}">Reset</a>
+      </div>
+    </div>
+  </div>
+</form>
 {% endblock %}

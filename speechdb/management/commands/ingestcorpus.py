@@ -94,6 +94,11 @@ def addChars(file):
                     default=Character.CharacterNumber.INDIVIDUAL)
         c.gender = validate(rec.get('gender'), Character.CharacterGender,
                     default=Character.CharacterGender.NA)
+        c.disguise = rec.get('disguise')
+        if c.disguise is not None:
+            c.disguise = c.disguise.strip()
+            if c.disguise == '':
+                c.disguise = None
         c.same_as = rec.get('same_as').strip() or None
         c.notes = rec.get('notes').strip() or None
         
@@ -149,6 +154,8 @@ def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
         instance_params['gender'] = c.gender
         instance_params['being'] = c.being
         instance_params['number'] = c.number
+        instance_params['disguise'] = c.disguise
+        instance_params['anon'] = c.anon
         try:
             instance_params['char'] = characters[c.same_as]
         except KeyError:
@@ -295,6 +302,7 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
                     if inst is not None:
                         s.spkr.add(inst)
                 assert len(s.spkr.all()) > 0
+                                
             except:
                 errs.append('speaker')
 
@@ -312,6 +320,7 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
                     if inst is not None:
                         s.addr.add(inst)
                 assert len(s.addr.all()) > 0
+                
             except:
                 errs.append('addressee')
             
