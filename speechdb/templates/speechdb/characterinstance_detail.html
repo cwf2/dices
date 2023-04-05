@@ -79,7 +79,7 @@
                         <td>speeches as speaker:</td>
                         <td>
                             {{ inst.speeches.count }}
-                            <a style="margin-left: 1em" id="btn_spkr" href="{% url 'app:speeches' %}?spkr_inst={{ inst.pk }}">
+                            <a style="margin-left: 1em" id="btn_spkr" href="{% url 'app:speeches' %}?spkr_inst_id={{ inst.pk }}">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
                         </td>
@@ -98,7 +98,7 @@
                       <td>speeches as addressee:</td>
                       <td>
                           {{ inst.addresses.count }}
-                          <a style="margin-left: 1em" id="btn_addr" href="{% url 'app:speeches' %}?addr_inst={{ inst.pk }}">
+                          <a style="margin-left: 1em" id="btn_addr" href="{% url 'app:speeches' %}?addr_inst_id={{ inst.pk }}">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                           </a>
                       </td>

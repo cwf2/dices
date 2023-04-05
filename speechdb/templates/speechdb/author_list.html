@@ -43,16 +43,17 @@
       <div class="form-group">
         <label for="sel_lang">Language</label>
         <select class="form-control form-control-sm" id="sel_lang" name="lang">
-          <option value="" selected="selected">-----</option>
+          <option value="">-----</option>
           {% for k,v in lang_choices %}
-          <option value="{{ k }}">{{ v }}</option>
+          <option value="{{ k }}" {% if params.lang == k %} selected="selected" {% endif  %}>{{ v }}</option>
           {% endfor %}                                            
         </select>
       </div>
     </div>
     <div class="card-footer">
-      <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-sm">Search</button>
+      <div class="row justify-content-around">
+          <button type="submit" class="btn btn-primary btn-sm w-25" >Search</button>
+          <a class="btn btn-secondary btn-sm w-25"  href="{% url 'app:authors' %}">Reset</a>
       </div>
     </div>
 </div>

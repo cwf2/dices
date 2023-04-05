@@ -364,13 +364,14 @@ class AppAuthorList(ListView):
     
     _valid_params = [
         ('lang', str),
+        ('page_size', int),
     ]
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
-        context['search_params'] = self.params.items()
+        context['params'] = self.params
         context['lang_choices'] = Work.Language.choices
         
         return context
@@ -388,6 +389,13 @@ class AppAuthorList(ListView):
         
         # get query set
         qs = Author.objects.filter(*query).distinct()
+        
+        # pagination
+        if 'page_size' in self.params:
+            if self.params['page_size'] > 0:
+                self.paginate_by = self.params['page_size']
+            else:
+                self.paginate_by = qs.count() + 1
 
         return qs
 
@@ -399,14 +407,15 @@ class AppWorkList(ListView):
     
     _valid_params = [
         ('lang', str),
-        ('author', int),
+        ('auth_id', int),
+        ('page_size', int),
     ]
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
-        context['search_params'] = self.params.items()
+        context['params'] = self.params
         context['lang_choices'] = Work.Language.choices
         context['authors'] = Author.objects.all()
         
@@ -420,14 +429,21 @@ class AppWorkList(ListView):
         query = []
         
         # author by id
-        if 'author' in self.params:
-            query.append(Q(author=self.params['author']))
+        if 'auth_id' in self.params:
+            query.append(Q(author=self.params['auth_id']))
 
         if 'lang' in self.params:
             query.append(Q(lang=self.params['lang']))
         
         # get query set
         qs = Work.objects.filter(*query).distinct()
+        # pagination
+        if 'page_size' in self.params:
+            if self.params['page_size'] > 0:
+                self.paginate_by = self.params['page_size']
+            else:
+                self.paginate_by = qs.count() + 1
+          
 
         return qs
 
@@ -442,14 +458,15 @@ class AppCharacterList(ListView):
         ('number', str),
         ('lang', str),
         ('auth_id', int),
-        ('work_id', int),        
+        ('work_id', int),
+        ('page_size', int),  
     ]
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
-        context['search_params'] = self.params.items()
+        context['params'] = self.params
         context['lang_choices'] = Work.Language.choices
         context['authors'] = Author.objects.all()                
         context['works'] = Work.objects.all()        
@@ -495,6 +512,13 @@ class AppCharacterList(ListView):
             Count('instances__addresses', distinct=True),
         )
         
+        # pagination
+        if 'page_size' in self.params:
+            if self.params['page_size'] > 0:
+                self.paginate_by = self.params['page_size']
+            else:
+                self.paginate_by = qs.count() + 1        
+        
         return qs
 
 
@@ -504,6 +528,7 @@ class AppCharacterInstanceList(ListView):
     queryset = CharacterInstance.objects.all()
     paginate_by = PAGE_SIZE
     _valid_params = [
+        ('name', str),
         ('gender', str),
         ('number', str),
         ('being', str),
@@ -511,17 +536,19 @@ class AppCharacterInstanceList(ListView):
         ('char_name', str),
         ('char_gender', str),
         ('char_number', str),
-        ('char_being', str),        
+        ('char_being', str),
+        ('page_size', int),
     ]
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
-        context['search_params'] = self.params.items()
+        context['params'] = self.params
         context['lang_choices'] = Work.Language.choices
         context['authors'] = Author.objects.all()                
         context['works'] = Work.objects.all()
+        context['names'] = CharacterInstance.objects.values_list('name', flat=True).distinct()
         context['characters'] = Character.objects.all()
         context['character_being_choices'] = Character.CharacterBeing.choices
         context['character_number_choices'] = Character.CharacterNumber.choices
@@ -538,6 +565,9 @@ class AppCharacterInstanceList(ListView):
         query = []
         
         # instance properties        
+        if 'name' in self.params:
+            query.append(Q(name=self.params['name']))
+
         if 'gender' in self.params:
             query.append(Q(gender=self.params['gender']))
         
@@ -572,6 +602,14 @@ class AppCharacterInstanceList(ListView):
             Count('addresses', distinct=True),
         )
         
+        # pagination
+        if 'page_size' in self.params:
+            if self.params['page_size'] > 0:
+                self.paginate_by = self.params['page_size']
+            else:
+                self.paginate_by = qs.count() + 1
+          
+        
         return qs
 
 
@@ -584,6 +622,9 @@ class AppSpeechList(ListView):
         ('spkr_id', int),
         ('addr_id', int),
         ('char_id', int),
+        ('spkr_inst_id', int),
+        ('addr_inst_id', int),
+        ('char_inst_id', int),
         ('char_inst_name', str),
         ('spkr_inst_name', str),
         ('addr_inst_name', str),
@@ -600,10 +641,12 @@ class AppSpeechList(ListView):
         ('addr_gender', str),               
         ('char_gender', str),
         ('cluster_id', int),
+        ('spkr_disguised', bool),
         ('type', str),
         ('tags', str),
         ('part', int),
         ('n_parts', int),
+        ('level', int),
         ('work_id', int),
         ('auth_id', int),
         ('lang', str),
@@ -614,7 +657,8 @@ class AppSpeechList(ListView):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
-        context['search_params'] = self.params.items()
+        context['params'] = self.params
+        context['reader'] = CTS_READER
         context['lang_choices'] = Work.Language.choices        
         context['authors'] = Author.objects.all()          
         context['works'] = Work.objects.all()
@@ -670,6 +714,10 @@ class AppSpeechList(ListView):
         # speaker by id
         if 'spkr_id' in self.params:
             query.append(Q(spkr__char=self.params['spkr_id']))
+
+        # speaker by instance id
+        if 'spkr_inst_id' in self.params:
+            query.append(Q(spkr__id=self.params['spkr_inst_id']))
         
         # speaker by instance name
         if 'spkr_inst_name' in self.params:
@@ -691,9 +739,17 @@ class AppSpeechList(ListView):
         if 'spkr_number' in self.params:
             query.append(Q(spkr__number=self.params['spkr_number']))
         
+        # speaker disguised
+        if 'spkr_disguised' in self.params:
+            query.append(Q(spkr__disguise__isnull=not(self.params['spkr_disguised'])))
+                    
         # addressee by id
         if 'addr_id' in self.params:
             query.append(Q(addr__char=self.params['addr_id']))
+
+        # addressee by instance id
+        if 'addr_inst_id' in self.params:
+            query.append(Q(addr__id=self.params['addr_inst_id']))
         
         # addressee by instance name
         if 'addr_inst_name' in self.params:
@@ -726,6 +782,9 @@ class AppSpeechList(ListView):
         
         if 'n_parts' in self.params:
             query.append(Q(cluster__speech__count=self.params['n_parts']))
+
+        if 'level' in self.params:
+            query.append(Q(cluster__speech__level=self.params['level']))
         
         if 'work_id' in self.params:
             query.append(Q(work__pk=self.params['work_id']))
@@ -766,8 +825,8 @@ class AppSpeechClusterList(ListView):
         ('addr_name', str), 
         ('char_name', str), 
         ('spkr_inst_name', str),
-        ('addr_inst_name', int),
-        ('char_inst_name', int),
+        ('addr_inst_name', str),
+        ('char_inst_name', str),
         ('spkr_being', str),
         ('addr_being', str),
         ('char_being', str),
@@ -777,13 +836,19 @@ class AppSpeechClusterList(ListView):
         ('cluster_id', int),
         ('type', str),
         ('n_parts', int),
-        ('work_id', int),        
+        ('work_id', int),
+        ('auth_id', int),
+        ('lang', str),
+        ('page_size', int),        
     ]
     
     def get_queryset(self):
         # collect user search params
         self.params = ValidateParams(self.request, self._valid_params)
         
+        # initial set of objects plus annotations
+        qs = SpeechCluster.objects.annotate(Count('speech'))
+                
         # construct query
         query = []
         
@@ -868,15 +933,30 @@ class AppSpeechClusterList(ListView):
         
         if 'work_id' in self.params:
             query.append(Q(speech__work__pk=self.params['work_id']))
+
+        if 'auth_id' in self.params:
+            query.append(Q(speech__work__author__pk=self.params['auth_id']))
+            
+        if 'lang' in self.params:
+            query.append(Q(speech__work__lang=self.params['lang']))
         
+        # perform query
+        qs = qs.filter(*query).distinct()
+
+        # pagination
+        if 'page_size' in self.params:
+            if self.params['page_size'] > 0:
+                self.paginate_by = self.params['page_size']
+            else:
+                self.paginate_by = qs.count() + 1        
         
-        return SpeechCluster.objects.filter(*query).distinct()
+        return qs
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
-        context['search_params'] = self.params.items()
+        context['params'] = self.params
         context['lang_choices'] = Work.Language.choices
         context['authors'] = Author.objects.all()                
         context['works'] = Work.objects.all()

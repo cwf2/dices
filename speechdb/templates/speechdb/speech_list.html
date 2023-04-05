@@ -80,9 +80,9 @@
         <div class="col">
           <label for="sel_spkr">Named Characters</label>
           <select class="form-control form-control-sm" id="sel_spkr" name="spkr_id">
-            <option value="" selected="selected">-----</option>
+            <option value="">-----</option>
             {% for c in characters %}
-            <option value="{{ c.pk }}">{{ c.name }}</option>
+            <option value="{{ c.pk }}" {% if params.spkr_id == c.pk %} selected="selected" {% endif %} >{{ c.name }}</option>
             {% endfor %}
           </select>
         </div>
@@ -91,9 +91,9 @@
         <div class="col">
           <label for="sel_spkr_inst">Anonymous/Collectives</label>
           <select class="form-control form-control-sm" id="sel_spkr_inst" name="spkr_inst_name">
-            <option value="" selected="selected">-----</option>
+            <option value="">-----</option>
             {% for name in anons %}
-            <option value="{{ name }}">{{ name }}</option>
+            <option value="{{ name }}" {% if params.spkr_inst_name == name %} selected="selected" {% endif %} >{{ name }}</option>
             {% endfor %}
           </select>
         </div>
@@ -102,9 +102,9 @@
         <div class="col">
           <label for="sel_spkr_being">Being</label>
           <select class="form-control form-control-sm" id="sel_spkr_being" name="spkr_being">
-            <option value="" selected="selected">-----</option>
+            <option value="">-----</option>
             {% for k, v in character_being_choices %}
-            <option value="{{ k }}">{{ v }}</option>
+            <option value="{{ k }}" {% if params.spkr_being == v %} selected="selected" {% endif %} >{{ v }}</option>
             {% endfor %}                      
           </select>
         </div>
@@ -113,9 +113,9 @@
         <div class="col">
           <label for="sel_spkr_gender">Gender</label>
           <select class="form-control form-control-sm" id="sel_spkr_gender" name="spkr_gender">
-            <option value="" selected="selected">-----</option>
+            <option value="">-----</option>
             {% for k, v in character_gender_choices %}
-            <option value="{{ k }}">{{ v }}</option>
+            <option value="{{ k }}" {% if params.spkr_gender == k %} selected="selected" {% endif %} >{{ v }}</option>
             {% endfor %}                                            
           </select>
         </div>
@@ -124,9 +124,9 @@
         <div class="col">
           <label for="sel_spkr_number">Number</label>
           <select class="form-control form-control-sm" id="sel_spkr_number" name="spkr_number">
-            <option value="" selected="selected">-----</option>
+            <option value="">-----</option>
             {% for k, v in character_number_choices %}
-            <option value="{{ k }}">{{ v }}</option>
+            <option value="{{ k }}" {% if params.spkr_number == k %} selected="selected" {% endif %} >{{ v }}</option>
             {% endfor %}
           </select>
         </div>
@@ -142,9 +142,9 @@
         <div class="col">
           <label for="sel_addr">Named Characters</label>
           <select class="form-control form-control-sm" id="sel_addr" name="addr_id">
-            <option value="" selected="selected">-----</option>
+            <option value="">-----</option>
             {% for c in characters %}
-            <option value="{{ c.pk }}">{{ c.name }}</option>
+            <option value="{{ c.pk }}" {% if params.addr_id == c.pk %} selected="selected" {% endif %} >{{ c.name }}</option>
             {% endfor %}
           </select>
         </div>
@@ -155,7 +155,7 @@
           <select class="form-control form-control-sm" id="sel_addr_inst" name="addr_inst_name">
             <option value="" selected="selected">-----</option>
             {% for name in anons %}
-            <option value="{{ name }}">{{ name }}</option>
+            <option value="{{ name }}" {% if params.addr_inst_name == name %} selected="selected" {% endif %}>{{ name }}</option>
             {% endfor %}
           </select>
         </div>
@@ -164,9 +164,9 @@
         <div class="col">
           <label for="sel_addr_being">Being</label>
           <select class="form-control form-control-sm" id="sel_addr_being" name="addr_being">
-            <option value="" selected="selected">-----</option>
+            <option value="">-----</option>
             {% for k, v in character_being_choices %}
-            <option value="{{ k }}">{{ v }}</option>
+            <option value="{{ k }}" {% if params.addr_being == k %} selected="selected" {% endif %} >{{ v }}</option>
             {% endfor %}                                            
           </select>
         </div>
@@ -175,9 +175,9 @@
         <div class="col">
           <label for="sel_addr_gender">Gender</label>
           <select class="form-control form-control-sm" id="sel_addr_gender" name="addr_gender">
-            <option value="" selected="selected">-----</option>
+            <option value="">-----</option>
             {% for k, v in character_gender_choices %}
-            <option value="{{ k }}">{{ v }}</option>
+            <option value="{{ k }}" {% if params.addr_gender == k %} selected="selected" {% endif %} >{{ v }}</option>
             {% endfor %}
           </select>
         </div>
@@ -186,9 +186,9 @@
         <div class="col">
           <label for="sel_addr_number">Number</label>
           <select class="form-control form-control-sm" id="sel_addr_number" name="addr_number">
-            <option value="" selected="selected">-----</option>
+            <option value="">-----</option>
             {% for k, v in character_number_choices %}
-            <option value="{{ k }}">{{ v }}</option>
+            <option value="{{ k }}" {% if params.addr_number == k %} selected="selected" {% endif %} >{{ v }}</option>
             {% endfor %}                      
           </select>
         </div>
@@ -205,9 +205,9 @@
           <div class="form-group">
             <label for="sel_type">Speech Type</label>
             <select class="form-control form-control-sm" id="sel_type" name="type">
-              <option value="" selected="selected">-----</option>
+              <option value="">-----</option>
               {% for k, v in speech_type_choices %}
-              <option value="{{ k }}">{{ v }}</option>
+              <option value="{{ k }}" {% if params.type == k %} selected="selected" {% endif %} >{{ v }}</option>
               {% endfor %}
             </select>
           </div>
@@ -218,9 +218,9 @@
           <div class="form-group">
             <label for="sel_tags">Tags</label>
             <select class="form-control form-control-sm" id="sel_tags" name="tags">
-              <option value="" selected="selected">-----</option>
+              <option value="">-----</option>
               {% for k, v in tag_choices %}
-              <option value="{{ k }}">{{ v }}</option>
+              <option value="{{ k }}" {% if params.tags == k %} selected="selected" {% endif %} ">{{ v }}</option>
               {% endfor %}
             </select>
           </div>
@@ -231,7 +231,7 @@
           <label for="sel_part">Position in cluster: </label>
         </div>
         <div class="col-sm-5">
-          <input class="form-control form-control-sm" type="number" id="sel_part" name="part" min="1" max="{{ max_parts }}">
+          <input class="form-control form-control-sm" type="number" id="sel_part" name="part" min="1" max="{{ max_parts }}" {% if params.part %} value="{{ params.part }}" {% endif %} >
         </div>
       </div>
       <div class="row mt-2">
@@ -239,7 +239,7 @@
             <label for="sel_n_parts">Parts in cluster: </label>
         </div>
         <div class="col-sm-5">
-            <input class="form-control form-control-sm" type="number" id="sel_n_parts" name="n_parts" min="1" max="{{ max_parts }}">
+            <input class="form-control form-control-sm" type="number" id="sel_n_parts" name="n_parts" min="1" max="{{ max_parts }}"  {% if params.n_parts %} value="{{ params.n_parts }}" {% endif %} >
         </div>
       </div>
       <div class="row mt-2">
@@ -247,7 +247,7 @@
           <label for="sel_level">Embedded level: </label>
         </div>
         <div class="col-sm-5">
-          <input class="form-control form-control-sm" type="number" id="sel_level" name="level" min="1" max="{{ max_level }}">
+          <input class="form-control form-control-sm" type="number" id="sel_level" name="level" min="1" max="{{ max_level }}"  {% if params.level %} value="{{ params.level }}" {% endif %} >
         </div>
       </div>
     </div>
@@ -264,21 +264,21 @@
             <select class="form-control form-control-sm" id="sel_lang" name="lang">
               <option value="" selected="selected">-----</option>
               {% for k, v in lang_choices %}
-              <option value="{{ k }}">{{ v }}</option>
+              <option value="{{ k }}" {% if params.lang == k %} selected="selected" {% endif %}>{{ v }}</option>
               {% endfor %}
             </select>
             <label for="sel_auth">Author</label>
             <select class="form-control form-control-sm" id="sel_auth" name="auth_id">
               <option value="" selected="selected">-----</option>
               {% for a in authors %}
-              <option value="{{ a.pk }}">{{ a.name }}</option>
+              <option value="{{ a.pk }}" {% if params.auth_id == a.pk %} selected="selected" {% endif %}>{{ a.name }}</option>
               {% endfor %}
             </select>
             <label for="sel_work">Work</label>
             <select class="form-control form-control-sm" id="sel_work" name="work_id">
               <option value="" selected="selected">-----</option>
               {% for w in works %}
-              <option value="{{ w.pk }}">{{ w.get_long_name }}</option>
+              <option value="{{ w.pk }}" {% if params.work_id == w.pk %} selected="selected" {% endif %}>{{ w.get_long_name }}</option>
               {% endfor %}
             </select>
           </div>
@@ -286,12 +286,9 @@
       </div>
     </div>
     <div class="card-footer">
-      <div class="row">
-        <div class="col">
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Search</button>
-          </div>
-        </div>
+      <div class="row justify-content-around">
+          <button type="submit" class="btn btn-primary btn-sm w-25" >Search</button>
+          <a class="btn btn-secondary btn-sm w-25"  href="{% url 'app:speeches' %}">Reset</a>
       </div>
     </div>
   </div>

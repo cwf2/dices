@@ -110,8 +110,7 @@ class CharacterInstance(models.Model):
             default=Character.CharacterGender.NA)
     char = models.ForeignKey(Character, related_name='instances', 
             null=True, on_delete=models.PROTECT)
-    disg = models.ForeignKey(Character, related_name='disguises', 
-            null=True, on_delete=models.PROTECT)
+    disguise = models.CharField(max_length=128, null=True)
     anon = models.BooleanField(default=False)
     #TODO tuple (char, context) should be unique
     context = models.CharField(max_length=128)

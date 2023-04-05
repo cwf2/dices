@@ -97,13 +97,13 @@
               <td>{{ inst.context }}</td>
               <td>
                 {{ inst.speeches.count }}
-                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?spkr_inst={{ inst.id }}">
+                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?spkr_inst_id={{ inst.id }}">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
               </td>
               <td>
                 {{ inst.addresses.count }}
-                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?addr_inst={{ inst.id }}">
+                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?addr_inst_id={{ inst.id }}">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
               </td>
