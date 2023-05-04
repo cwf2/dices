@@ -61,6 +61,7 @@ def addWorks(file):
         w.lang = rec.get('lang').strip()
         w.wd = rec.get('wd').strip()
         w.urn = rec.get('urn').strip()
+        w.tlg = rec.get('tlg').strip()
         w.save()
 
 
