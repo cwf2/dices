@@ -1,5 +1,6 @@
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
+from django.views.generic.base import RedirectView
 from . import views
 
 frontend_urls = ([
@@ -11,11 +12,15 @@ frontend_urls = ([
     path('works/', views.AppWorkList.as_view(), name='works'),
     path('characters/', views.AppCharacterList.as_view(), name='characters'),
     path('characters/<int:pk>', views.AppCharacterDetail.as_view(), name='character_detail'),
+    path('characters/search/', RedirectView.as_view(pattern_name='app:characters'), name='character_search'),    
     path('instances/', views.AppCharacterInstanceList.as_view(), name='instances'),
-    path('instances/<int:pk>', views.AppCharacterInstanceDetail.as_view(), name='instance_detail'),    
+    path('instances/<int:pk>', views.AppCharacterInstanceDetail.as_view(), name='instance_detail'),
+    path('instances/search', RedirectView.as_view(pattern_name='app:instances'), name='instances_search'),    
     path('clusters/', views.AppSpeechClusterList.as_view(), name='clusters'),
     path('clusters/<int:pk>/', views.AppSpeechClusterDetail.as_view(), name='cluster_detail'),
+    path('clusters/search/', RedirectView.as_view(pattern_name='app:clusters'), name='cluster_search'),    
     path('speeches/', views.AppSpeechList.as_view(), name='speeches'),
+    path('speeches/search/', RedirectView.as_view(pattern_name='app:speeches'), name='speech_search'),    
 ], 'app')
 
 api_urls = ([
@@ -35,6 +40,7 @@ api_urls = ([
 ], 'api')
 
 urlpatterns = [
+    path('', RedirectView.as_view(pattern_name='app:index')),
     path('app/', include(frontend_urls)),
     path('api/', include(api_urls)),
 ]

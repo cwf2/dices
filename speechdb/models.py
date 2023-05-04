@@ -30,6 +30,7 @@ class Work(models.Model):
     
     title = models.CharField(max_length=128)
     wd = models.CharField('WikiData ID', max_length=32)
+    tlg = models.CharField(max_length=12, blank=True)
     urn = models.CharField(max_length=128)
     author = models.ForeignKey(Author, on_delete=models.PROTECT)
     lang = models.CharField(max_length=8, choices=Language.choices)

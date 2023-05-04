@@ -796,7 +796,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
             query.append(Q(cluster__speech__count=self.params['n_parts']))
 
         if 'level' in self.params:
-            query.append(Q(cluster__speech__level=self.params['level']))
+            query.append(Q(level=self.params['level']))
         
         if 'work_id' in self.params:
             query.append(Q(work__pk=self.params['work_id']))
