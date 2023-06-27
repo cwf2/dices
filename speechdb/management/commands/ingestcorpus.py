@@ -77,6 +77,8 @@ def addChars(file):
     
     for rec in reader:
         c = Character()
+        
+        # name
         c.name = rec.get('name').strip() or None
         if c.name is None:
             print(f'Character {c.id} has no name. Skipping')
@@ -85,16 +87,36 @@ def addChars(file):
             continue
         if len(Character.objects.filter(name=c.name)) > 0:
             print(f'Adding duplicate char name {c.name}.')
-        c.wd = rec.get('wd').strip() or None
-        c.manto = rec.get('manto').strip() or None
+            
+        # wikidata id
+        c.wd = rec.get('wd')
+        if c.wd is not None:
+            c.wd = c.wd.strip()
+            
+        # manto id
+        c.manto = rec.get('manto')
+        if c.manto is not None:
+            c.manto = c.manto.strip()
+            
+        # topostext id
+        c.tt = rec.get('topostext')
+        if c.tt is not None:
+            c.tt = c.tt.strip()
+            
+        # anonymous
         c.anon = (rec.get('anon') is not None) and (
                     len(rec.get('anon').strip()) > 0)
+        # being
         c.being = validate(rec.get('being'), Character.CharacterBeing,
                     default=Character.CharacterBeing.MORTAL)
+        # number
         c.number = validate(rec.get('number'), Character.CharacterNumber,
                     default=Character.CharacterNumber.INDIVIDUAL)
+        # gender
         c.gender = validate(rec.get('gender'), Character.CharacterGender,
                     default=Character.CharacterGender.NA)
+        
+        # disguise
         c.disguise = rec.get('disguise')
         if c.disguise is not None:
             c.disguise = c.disguise.strip()
@@ -103,6 +125,7 @@ def addChars(file):
         c.same_as = rec.get('same_as').strip() or None
         c.notes = rec.get('notes').strip() or None
         
+        # tags
         c.tags = {}
         for col in rec.keys():
             if col.startswith('tag_'):
@@ -115,6 +138,7 @@ def addChars(file):
                 if len(vals) > 0:
                     c.tags[key] = vals
         
+        # validation problems
         if c.being is None:
             print(f'Character {c} has no being')
         

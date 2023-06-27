@@ -85,6 +85,8 @@ class CharacterFilter(filters.FilterSet):
                     distinct=True)
     work_wd = filters.CharFilter('instances__speeches__work__wd',
                     distinct=True)
+    work_lang = filters.ChoiceFilter('instances__speeches__work__lang',
+                    distinct=True, choices=Work.Language.choices)
 
     author_id = filters.CharFilter('instances__speeches__work__author__id',
                     distinct=True)
@@ -105,7 +107,6 @@ class CharacterFilter(filters.FilterSet):
 
     speech_type = filters.CharFilter('instances__speeches__type', distinct=True)
     speech_part = filters.CharFilter('instances__speeches__part', distinct=True)
-
     
     class Meta:
         model = Character
@@ -136,6 +137,8 @@ class CharacterInstanceFilter(filters.FilterSet):
     work_title = filters.CharFilter('speeches__work__title', distinct=True)
     work_urn = filters.CharFilter('speeches__work__urn', distinct=True)
     work_wd = filters.CharFilter('speeches__work__wd', distinct=True)
+    work_lang = filters.ChoiceFilter('speeches__work__lang', distinct=True,
+                            choices=Work.Language.choices)    
 
     author_id = filters.CharFilter('speeches__work__author__id', distinct=True)
     author_name = filters.CharFilter('speeches__work__author__name',
@@ -157,6 +160,7 @@ class SpeechFilter(filters.FilterSet):
     spkr_name = filters.CharFilter('spkr__char__name')
     spkr_manto = filters.CharFilter('spkr__char__manto')
     spkr_wd = filters.CharFilter('spkr__char__wd')
+    spkr_tt = filters.CharFilter('spkr__char__tt')    
     spkr_gender = filters.ChoiceFilter('spkr__char__gender', distinct=True,
                     choices=Character.CharacterGender.choices)
     spkr_number = filters.ChoiceFilter('spkr__char__number', distinct=True,
@@ -178,6 +182,7 @@ class SpeechFilter(filters.FilterSet):
     addr_name = filters.CharFilter('addr__char__name')
     addr_manto = filters.CharFilter('addr__char__manto')
     addr_wd = filters.CharFilter('addr__char__wd')
+    addr_tt = filters.CharFilter('addr__char__tt')    
     addr_gender = filters.ChoiceFilter('addr__char__gender', distinct=True,
                     choices=Character.CharacterGender.choices)
     addr_number = filters.ChoiceFilter('addr__char__number', distinct=True,
@@ -204,6 +209,7 @@ class SpeechFilter(filters.FilterSet):
     work_title = filters.CharFilter('work__title')
     work_urn = filters.CharFilter('work__urn')
     work_wd = filters.CharFilter('work__wd')
+    work_lang = filters.ChoiceFilter('work__lang', choices=Work.Language.choices)
     
     author_id = filters.NumberFilter('work__author__id')
     author_name = filters.CharFilter('work__author__name')
@@ -232,6 +238,7 @@ class SpeechClusterFilter(filters.FilterSet):
     spkr_name = filters.CharFilter('speech__spkr__char__name', distinct=True)
     spkr_manto = filters.CharFilter('speech__spkr__char__manto', distinct=True)
     spkr_wd = filters.CharFilter('speech__spkr__char__wd', distinct=True)
+    spkr_tt = filters.CharFilter('speech__spkr__char__tt', distinct=True)    
     spkr_gender = filters.ChoiceFilter('speech__spkr__char__gender', 
                     choices=Character.CharacterGender.choices, distinct=True)
     spkr_number = filters.ChoiceFilter('speech__spkr__char__number',
@@ -253,6 +260,7 @@ class SpeechClusterFilter(filters.FilterSet):
     addr_name = filters.CharFilter('speech__addr__char__name', distinct=True)
     addr_manto = filters.CharFilter('speech__addr__char__manto', distinct=True)
     addr_wd = filters.CharFilter('speech__addr__char__wd', distinct=True)
+    addr_tt = filters.CharFilter('speech__addr__char__tt', distinct=True)    
     addr_gender = filters.ChoiceFilter('speech__addr__char__gender', 
                     choices=Character.CharacterGender.choices, distinct=True)
     addr_number = filters.ChoiceFilter('speech__addr__char__number',
@@ -461,6 +469,9 @@ class AppCharacterList(LoginRequiredMixin, ListView):
         ('lang', str),
         ('auth_id', int),
         ('work_id', int),
+        ('manto', str),        
+        ('wd', str),
+        ('tt', str),        
         ('page_size', int),  
     ]
     
@@ -497,6 +508,15 @@ class AppCharacterList(LoginRequiredMixin, ListView):
             
         if 'number' in self.params:
             query.append(Q(number=self.params['number']))
+
+        if 'manto' in self.params:
+            query.append(Q(manto=self.params['manto']))
+
+        if 'wd' in self.params:
+            query.append(Q(wd=self.params['wd']))
+
+        if 'tt' in self.params:
+            query.append(Q(tt=self.params['tt']))
 
         if 'auth_id' in self.params:
             query.append(Q(instances__speeches__work__author=self.params['auth_id'])|
@@ -543,6 +563,9 @@ class AppCharacterInstanceList(LoginRequiredMixin, ListView):
         ('char_gender', str),
         ('char_number', str),
         ('char_being', str),
+        ('char_manto', str),
+        ('char_wd', str),
+        ('char_tt', str),                        
         ('page_size', int),
     ]
     
@@ -601,8 +624,17 @@ class AppCharacterInstanceList(LoginRequiredMixin, ListView):
 
         if 'char_number' in self.params:
             query.append(Q(char__number=self.params['char_number']))
+
+        if 'char_manto' in self.params:
+            query.append(Q(char__manto=self.params['char_manto']))
+
+        if 'char_wd' in self.params:
+            query.append(Q(char__manto=self.params['char_wd']))
+
+        if 'char_tt' in self.params:
+            query.append(Q(char__manto=self.params['char_tt']))
         
-        
+        # perform query
         qs = CharacterInstance.objects.filter(*query).order_by('name')
         
         # calculate some useful counts
@@ -649,6 +681,15 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         ('spkr_gender', str),
         ('addr_gender', str),               
         ('char_gender', str),
+        ('spkr_manto', str),
+        ('addr_manto', str),               
+        ('char_manto', str),
+        ('spkr_wd', str),
+        ('addr_wd', str),               
+        ('char_wd', str),
+        ('spkr_tt', str),
+        ('addr_tt', str),               
+        ('char_tt', str),
         ('cluster_id', int),
         ('spkr_disguised', bool),
         ('type', str),
@@ -754,6 +795,18 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         # speaker disguised
         if 'spkr_disguised' in self.params:
             query.append(Q(spkr__disguise__isnull=not(self.params['spkr_disguised'])))
+
+        # speaker by manto
+        if 'spkr_manto' in self.params:
+            query.append(Q(spkr__char__manto=self.params['spkr_manto']))
+
+        # speaker by wikidata
+        if 'spkr_wd' in self.params:
+            query.append(Q(spkr__char__wd=self.params['spkr_wd']))
+
+        # speaker by topostext
+        if 'spkr_tt' in self.params:
+            query.append(Q(spkr__char__tt=self.params['spkr_tt']))
                     
         # addressee by id
         if 'addr_id' in self.params:
@@ -781,7 +834,20 @@ class AppSpeechList(LoginRequiredMixin, ListView):
 
         # addressee by number
         if 'addr_number' in self.params:
-            query.append(Q(addr__number=self.params['addr_number']))            
+            query.append(Q(addr__number=self.params['addr_number']))
+
+        # speaker by manto
+        if 'addr_manto' in self.params:
+            query.append(Q(addr__char__manto=self.params['addr_manto']))
+
+        # speaker by wikidata
+        if 'addr_wd' in self.params:
+            query.append(Q(addr__char__wd=self.params['addr_wd']))
+
+        # speaker by topostext
+        if 'addr_tt' in self.params:
+            query.append(Q(addr__char__tt=self.params['addr_tt']))
+                     
 
         if 'cluster_id' in self.params:
             query.append(Q(cluster__pk=self.params['cluster_id']))
