@@ -227,8 +227,8 @@ class Speech(models.Model):
     work = models.ForeignKey(Work, on_delete=models.PROTECT)
     type = models.CharField(max_length=1, choices=SpeechType.choices)
     seq = models.IntegerField()
-    l_fi = models.CharField('first line', max_length=8)
-    l_la = models.CharField('last line', max_length=8)
+    l_fi = models.CharField('first line', max_length=16)
+    l_la = models.CharField('last line', max_length=16)
     spkr = models.ManyToManyField(CharacterInstance, related_name='speeches')
     addr = models.ManyToManyField(CharacterInstance, related_name='addresses',
              blank=True)
