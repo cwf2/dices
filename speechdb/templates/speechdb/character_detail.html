@@ -68,6 +68,17 @@
                 {% endif %}
               </td>
             </tr>
+            <tr>
+              <td>ToposText</td>
+              <td>
+                {% if char.tt %}
+                {{ char.tt }}
+                <a style="margin-left:0.5em" href="https://topostext.org/people/{{ char.tt }}">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                {% endif %}
+              </td>
+            </tr>
             
           </tbody>
       </table>

@@ -80,6 +80,7 @@ class Character(models.Model):
             default=CharacterGender.NA)
     wd = models.CharField('WikiData ID', max_length=32, null=True)
     manto = models.CharField('MANTO ID', max_length=32, null=True)
+    tt = models.CharField('ToposText ID', max_length=32, null=True)
 
 
     class Meta:
