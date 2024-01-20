@@ -12,6 +12,7 @@ from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCl
 from .serializers import MetadataSerializer
 from .serializers import AuthorSerializer, WorkSerializer, CharacterSerializer, CharacterInstanceSerializer, SpeechSerializer, SpeechClusterSerializer
 import csv
+import re
 
 import logging
 # Get an instance of a logger
@@ -337,7 +338,17 @@ class CharacterInstanceDetail(RetrieveAPIView):
 class SpeechList(ListAPIView):
     queryset = Speech.objects.all()
     serializer_class = SpeechSerializer
-    filterset_class = SpeechFilter
+    filterset_class = SpeechFilter        
+    
+    def get_serializer(self, *args, **kwargs):
+        if self.request.query_params.get('min'):
+            kwargs['fields'] = ['id']
+        if 'depth' in self.request.query_params:
+            depth = self.request.query_params['depth']
+            m = re.fullmatch('\d+', depth)
+            if m:
+                kwargs['depth'] = int(depth)
+        return super().get_serializer(*args, **kwargs)
 
 
 class SpeechDetail(RetrieveAPIView):
@@ -349,6 +360,12 @@ class SpeechClusterList(ListAPIView):
     queryset = SpeechCluster.objects.all()
     serializer_class = SpeechClusterSerializer
     filterset_class = SpeechClusterFilter    
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        cluster = self.get_object()
+        context['speeches'] = [s.pk for s in cluster.speeches]
+        return context
 
 
 class SpeechClusterDetail(RetrieveAPIView):
