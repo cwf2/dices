@@ -223,7 +223,7 @@ class Speech(models.Model):
         DIALOGUE = ('D', 'Dialogue')
         GENERAL = ('G', 'General')
     
-    cluster = models.ForeignKey(SpeechCluster, on_delete=models.CASCADE)
+    cluster = models.ForeignKey(SpeechCluster, related_name='speeches', on_delete=models.CASCADE)
     work = models.ForeignKey(Work, on_delete=models.PROTECT)
     type = models.CharField(max_length=1, choices=SpeechType.choices)
     seq = models.IntegerField()
