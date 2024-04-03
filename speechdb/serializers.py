@@ -74,6 +74,7 @@ class SpeechSerializer(DynamicModelSerializer):
         depth = 3
 
 class SpeechClusterSerializer(DynamicModelSerializer):
+    speeches = SpeechSerializer(many=True, fields=['id'])
     
     class Meta:
         model = SpeechCluster
