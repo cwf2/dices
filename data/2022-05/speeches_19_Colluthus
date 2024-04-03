@@ -1,0 +1,17 @@
+work_id	seq	from_line	b	to_line	a	s_ok	speaker	disguise	dead/vision	anonymous	collective/tandem	speaker_notes	a_ok	addressee	addressee_notes	disguise.1	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	lenght	words	embedded_level	short_speech_type	long_speech_type	misc_notes
+19	1	71		77		✅	Zeus	no	no	no	no		✅	Hermes		no	no	no	no	19001	1	monologue	M (no reply)	7		0	Ins		
+19	2	86		98		✅	Aphrodite	no	no	no	no		❌	Erotes		no	no	no	no	19002	1	monologue	M (no reply)	13		0	Del		
+19	3	128		131		✅	Hermes	no	no	no	no		✅	Paris		no	no	no	no	19003	1	monologue	M (no reply)	4		0	Inv		
+19	4	139		145		✅	Athena	no	no	no	no		✅	Paris		no	no	no	no	19004	1	monologue	M (no reply)	7		0	Inv; Per		
+19	5	148		153		✅	Hera	no	no	no	no		✅	Paris		no	no	no	no	19005	1	monologue	M (no reply)	6		0	Per		
+19	6	160		166		✅	Aphrodite	no	no	no	no		✅	Paris		no	no	no	no	19006	1	monologue	M (no reply)	7		0	Per		
+19	7	172		189		✅	Aphrodite	no	no	no	no		❌	Hera and Athena		no	no	no	tandem	19007	1	monologue	M (no reply)	18		0	Tau		
+19	8	268		277		✅	Helena	no	no	no	no		✅	Paris		no	no	no	no	19008	1	dialogue	D1	10		0	Que		
+19	9	280		304		✅	Paris	no	no	no	no		✅	Helena		no	no	no	no	19008	2	dialogue	D2	25		0	Res; Inf		
+19	10	308		316		✅	Helena	no	no	no	no		✅	Paris		no	no	no	no	19008	3	dialogue	D3	9		0	Req		
+19	11	332		334		✅	Hermione	no	no	no	no		❌	paides		no	no	no	no	19009	1	general interlocution	G1	3		0	Que; Lam		
+19	12	338		347		❌	paides	no	no	collective	collective		✅	Hermione		no	no	no	no	19009	2	general interlocution	G2	10		0	Res; Con		
+19	13	349		364		✅	Hermione	no	no	no	no		❌	paides		no	no	collective	collective	19009	3	general interlocution	G3	16		0	Lam; Del		
+19	14	374		377		✅	Hermione	no	no	no	no	dreaming	✅	Helena	dream	no	dream	no	no	19010	1	dialogue	D1	3		0	Lam; Que		
+19	15	379		375		✅	Helena	no	dream	no	no		✅	Hermione	dreaming	no	no	no	no	19010	2	dialogue	D2	3		0	Lam		
+19	16	383		386		✅	Hermione	no	no	no	no		✅	birds		no	no	no	no	19011	1	monologue	M (no reply)	4		0	Com; Mes		385-386: the message Hermoine wants the birds to convey to Menelaos / Might be more of a lamentation: in that case soliloquy

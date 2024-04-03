@@ -1,15 +1,20 @@
 {% extends "speechdb/base.html" %}
 
 {% block body %}
+<nav aria-label="Page navigation">
+  <div class="d-flex justify-content-between">
+    {% block pagination %}
+    {% endblock %}
+  </div>
+</nav>
 <div class="row">
-  <div class="col-lg-3">
+  <div class="col-lg-3 collapse show" id="collapseSidebar">
     <div class="alert alert-secondary">
-      <h4>{% block sidebar_title %}{% endblock %}</h4>
       {% block sidebar_content %}
       {% endblock %}
     </div>
   </div>
-  <div class="col-lg-9">
+  <div class="col">
     {% block content %}
     {% endblock %}
   </div>

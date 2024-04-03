@@ -1,0 +1,6 @@
+orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	disguise.1	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type
+	1	29			54			58		✅	Zeus		no	no	no	no	✅	Prometheus		no	no	no	no	29001	1	monologue	M (no reply)	5.0		0		Thr; Del	
+	2	29			207			211		✅	Hawk		no	no	yes	no	✅	Nightingale		no	no	yes	no	29002	1	monologue	M (no reply)	5.0		0		Tau	
+	3	29			453	b		453		✅	farmer 1	Hypothetical speech	no	no	yes	no	✅	farmer 2	Hypothetical	no	no	yes	no	29003	1	dialogue	D1	0.5		0		Com	
+	4	29			454	b		454		✅	farmer 2	Hypothetical speech	no	no	yes	no	✅	farmer 1	Hypothetical	no	no	yes	no	29003	2	dialogue	D2	0.5		0		Del	
+	5	29			503			503		✅	Perseus	Hypothetical speech	no	no	no	no	✅	slaves	Hypothetical	no	no	collective	collective	29004	1	monologue	M (no reply)	1.0		0		com	

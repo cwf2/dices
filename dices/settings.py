@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get('DJANGO_HOSTNAME')]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_filters',
-    'rest_framework',    
+    'rest_framework',
+    'fontawesomefree', 
 ]
 
 MIDDLEWARE = [

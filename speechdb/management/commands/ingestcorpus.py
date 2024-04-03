@@ -1,10 +1,13 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
 import django.db.utils
-from speechdb.models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster
+from speechdb.models import Metadata
+from speechdb.models import Author, Work, Character, CharacterInstance
+from speechdb.models import Speech, SpeechCluster, SpeechTag
 import csv
 import os
 import re
+import time
 from django.core import serializers
 
 
@@ -48,12 +51,17 @@ def addWorks(file):
     for rec in reader:
         w = Work()
         w.id = int(rec.get('id').strip())
-        auth_id = int(rec.get('author').strip())
-        w.author = Author.objects.get(id=auth_id)
+        auth_id = rec.get('author').strip()
+        try:
+            w.author = Author.objects.get(id=int(auth_id))
+        except:
+            print(f'Skipping work {w.id}: Can\'t parse author id "{auth_id}".')
+            continue
         w.title = rec.get('title').strip()
         w.lang = rec.get('lang').strip()
         w.wd = rec.get('wd').strip()
         w.urn = rec.get('urn').strip()
+        w.tlg = rec.get('tlg').strip()
         w.save()
 
 
@@ -69,6 +77,8 @@ def addChars(file):
     
     for rec in reader:
         c = Character()
+        
+        # name
         c.name = rec.get('name').strip() or None
         if c.name is None:
             print(f'Character {c.id} has no name. Skipping')
@@ -77,19 +87,46 @@ def addChars(file):
             continue
         if len(Character.objects.filter(name=c.name)) > 0:
             print(f'Adding duplicate char name {c.name}.')
-        c.wd = rec.get('wd').strip() or None
-        c.manto = rec.get('manto').strip() or None
+            
+        # wikidata id
+        c.wd = rec.get('wd')
+        if c.wd is not None:
+            c.wd = c.wd.strip()
+            
+        # manto id
+        c.manto = rec.get('manto')
+        if c.manto is not None:
+            c.manto = c.manto.strip()
+            
+        # topostext id
+        c.tt = rec.get('topostext')
+        if c.tt is not None:
+            c.tt = c.tt.strip()
+            
+        # anonymous
         c.anon = (rec.get('anon') is not None) and (
                     len(rec.get('anon').strip()) > 0)
+        # being
         c.being = validate(rec.get('being'), Character.CharacterBeing,
                     default=Character.CharacterBeing.MORTAL)
+        # number
         c.number = validate(rec.get('number'), Character.CharacterNumber,
                     default=Character.CharacterNumber.INDIVIDUAL)
+        # gender
         c.gender = validate(rec.get('gender'), Character.CharacterGender,
-                    default=Character.CharacterGender.MALE)
+                    default=Character.CharacterGender.NA)
+        
+        # disguise
+        c.disguise = rec.get('disguise')
+        if c.disguise is not None:
+            c.disguise = c.disguise.strip()
+            if c.disguise == '':
+                c.disguise = None
+
         c.same_as = rec.get('same_as').strip() or None
         c.notes = rec.get('notes').strip() or None
         
+        # tags
         c.tags = {}
         for col in rec.keys():
             if col.startswith('tag_'):
@@ -102,11 +139,12 @@ def addChars(file):
                 if len(vals) > 0:
                     c.tags[key] = vals
         
+        # validation problems
         if c.being is None:
             print(f'Character {c} has no being')
         
         if c.name in characters or c.name in alt_chars or c.name in anon_chars:
-            print(f'Multiple records for name {c.name}!')
+            print(f'Multiple records for name {c.name}.')
         
         if c.same_as is not None:
             alt_chars[c.name] = c.same_as
@@ -142,8 +180,19 @@ def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
     if name in characters:
         instance_params['char'] = characters[name]
     elif name in alt_chars:
-        instance_params['name'] = name
-        instance_params['char'] = alt_chars[name]
+        c = alt_chars[name]
+        instance_params['name'] = c.name
+        instance_params['gender'] = c.gender
+        instance_params['being'] = c.being
+        instance_params['number'] = c.number
+        instance_params['disguise'] = c.disguise
+        instance_params['anon'] = c.anon
+        try:
+            instance_params['char'] = characters[c.same_as]
+        except KeyError:
+            print('Pseud {name} points to non-existent char {same_as}.'.format(
+                    name=name, same_as=alt_chars[name].same_as))
+
     elif name in anon_chars:
         c = anon_chars[name]
         instance_params['name'] = c.name
@@ -153,7 +202,7 @@ def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
         instance_params['anon'] = c.anon
         instance_params['tags'] = c.tags
     else:
-        print(f'Failed to find character {name}!')
+        print(f'Failed to find character {name}.')
         return None
     
     #print(f'DEBUG: speech={speech}; params={instance_params}')
@@ -167,88 +216,168 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
     f = open(file)
     reader = csv.DictReader(f, delimiter='\t')
     
+    skipped = []
+    seq = 1
+    
     for rec in reader:
         s = Speech()
+        errs = []
         
-        # text details
-        s.seq = int(rec.get('seq'))
-        book_fi = rec.get('from_book').strip()
-        if book_fi == '':
-            print(f'{s} has no from_book. skipping.')
-            continue
-        line_fi = rec.get('from_line').strip()
-        if line_fi == '':
-            print(f'{s} has no from_line. skipping.')
-            continue
-        book_la = rec.get('from_book').strip()
-        if book_la == '':
-            print(f'{s} has no to_book. skipping.')
-            continue
-        line_la = rec.get('to_line').strip()
-        if line_la == '':
-            print(f'{s} has no to_line. skipping.')
-            continue
-        s.l_fi = f'{book_fi}.{line_fi}'
-        s.l_la = f'{book_la}.{line_la}'
-        s.type = rec.get('simple_cluster_type').strip()[0].upper()
-        s.work = Work.objects.get(id=int(rec.get('work_id')))
-        
-        # cluster details
-        cluster_id = rec.get('cluster_id').strip() or None
-        if cluster_id is None:
-            print(f'{s} has no cluster ID: skipping.')
-            continue
-        s.cluster, created = SpeechCluster.objects.get_or_create(id=cluster_id)
+        # seq
+        s.seq = seq
+        seq += 1
 
-        part = rec.get('cluster_part').strip() or None
-        if part is None:
-            print(f'{s} has no part number.')
-            part = 1
-        s.part = int(part)
+        # locus
+        try:
+            book_fi = rec.get('from_book').strip()
+            assert book_fi
+            book_fi += '.'
+        except:
+            book_fi = ''
             
-        s.save()
+        try:
+            book_la = rec.get('to_book').strip()
+            assert book_la
+            book_la += '.'
+        except:
+            book_la = ''
+
+        try:
+            line_fi = rec.get('from_line').strip()
+            assert line_fi
+        except:
+            errs.append('from_line')
+
+        try:
+            line_la = rec.get('to_line').strip()
+            assert line_la
+        except:
+            errs.append('to_line')
+    
+        s.l_fi = book_fi + line_fi
+        s.l_la = book_la + line_la
         
-        # character details
-        spkr_str = rec.get('speaker').strip() or None
-        if spkr_str is None:
-            print(f'{s} has no speakers: skipping.')
-            s.delete()
-            continue
-        else:
-            for name in spkr_str.split(' and '):
-                inst = addInst(name, s, characters=characters, 
-                        alt_chars=alt_chars, anon_chars=anon_chars)
-                if inst is not None:
-                    s.spkr.add(inst)
-            if len(s.spkr.all()) < 1:
-                print(f'{s} has no valid speakers. skipping.')
-        s.spkr_notes = rec.get('speaker_notes').strip() or None
+        # work
+        work_id = rec.get('work_id').strip()
+        try:
+            work_id = int(work_id)
+            s.work = Work.objects.get(id=work_id)            
+        except ValueError:
+            work_id = 99
+            errs.append('work')
+
+        # cluster type
+        try:
+            s.type = rec.get('simple_cluster_type')[0].upper()
+            assert s.type
+        except:
+            errs.append('simple_cluster_type')
+            # temp value: speech should be deleted
+            s.type='M'
         
-        addr_str = rec.get('addressee').strip() or None
-        if addr_str is None:
-            print(f'{s} has no addressees: skipping.')
-            s.delete()
-            continue
-        else:
-            for name in addr_str.split(' and '):
-                if name == 'self':
-                    inst = s.spkr.first()
-                else:
-                    inst = addInst(name, s, characters=characters,
+        # cluster_id
+        cluster_id = rec.get('cluster_id').strip()
+        try:
+            cluster_id = int(cluster_id)            
+
+            s.cluster, cluster_created = SpeechCluster.objects.get_or_create(id=cluster_id)
+        except ValueError:
+            errs.append('cluster_id')
+            cluster_created = False
+
+        # cluster part
+        try:
+            part = rec.get('cluster_part').strip()
+            if 'or' in part:
+                m = re.search('\d+', part)
+                if m:
+                    part = m.group(0)
+            s.part = int(part)
+        except:
+            errs.append('part')
+            # temp value: speech should be deleted
+            s.part = 1
+            
+        # embeddedness
+        try:
+            s.level = int(rec.get('embedded_level').strip())
+        except:
+            errs.append('embedded_level')
+        
+        # speaker notes
+        try:
+            s.spkr_notes = rec.get('speaker_notes').strip() or None
+        except AttributeError:
+            s.spkr_notes = None
+        
+        # addressee notes
+        try:
+            s.addr_notes = rec.get('addressee_notes').strip() or None
+        except AttributeError:
+            s.addr_notes = None
+        
+        # general notes
+        s.notes = rec.get('misc_notes').strip() or None    
+
+        # speech must be saved before adding character instances
+        if len(errs) == 0:
+            s.save()
+                    
+            # speakers
+            try:
+                spkr_str = rec.get('speaker').strip()
+                assert spkr_str != ''
+
+                for name in spkr_str.split(' and '):
+                    inst = addInst(name, s, characters=characters, 
                             alt_chars=alt_chars, anon_chars=anon_chars)
-                if inst is not None:
-                    s.addr.add(inst)
-            if len(s.addr.all()) < 1:
-                print(f'{s} has no valid addressees. skipping.')
-        s.addr_notes = rec.get('addressee_notes').strip() or None
-        
-        # other
-        s.level = rec.get('embedded_level').strip() or None
-        if s.level is not None:
-            s.level = int(s.level)
-        s.notes = rec.get('misc_notes').strip() or None
-        
-        s.save()
+                    if inst is not None:
+                        s.spkr.add(inst)
+                assert len(s.spkr.all()) > 0
+                                
+            except:
+                errs.append('speaker')
+
+            # addressees
+            try:
+                addr_str = rec.get('addressee').strip()
+                assert addr_str != ''
+
+                for name in addr_str.split(' and '):
+                    if name == 'self':
+                        inst = s.spkr.first()
+                    else:
+                        inst = addInst(name, s, characters=characters,
+                                alt_chars=alt_chars, anon_chars=anon_chars)
+                    if inst is not None:
+                        s.addr.add(inst)
+                assert len(s.addr.all()) > 0
+                
+            except:
+                errs.append('addressee')
+            
+            # speech type tags
+            tag_notes = rec.get('long_speech_type').strip() or None
+            tag_str = rec.get('short_speech_type').strip()
+            for tag in tag_str.split(';'):
+                tag = tag.strip().lower()
+                doubt = tag.endswith('?')
+                tag = tag.strip(' ?')
+                if tag not in SpeechTag.TagType.values:
+                    tag = SpeechTag.TagType.UNDEFINED
+                t = SpeechTag(type=tag, speech=s, doubt=doubt, notes=tag_notes)
+                t.save()
+            
+                
+        else:
+            skipped.append((reader.line_num, str(s), errs))
+            if cluster_created:
+                s.cluster.delete()
+    
+    if len(skipped) > 0:
+        print(f'skipped {len(skipped)} rows:')
+        for line_num, speech, errs in skipped:
+            print(line_num, speech, errs)
 
 
 class Command(BaseCommand):
@@ -282,3 +411,7 @@ class Command(BaseCommand):
             self.stderr.write(f'Reading data from {speech_file}')
             addSpeeches(speech_file, characters=characters, alt_chars=alt_chars,
                         anon_chars=anon_chars)
+        
+        # metadata
+        Metadata(name='version', value='0.1').save()
+        Metadata(name='date', value=time.strftime('%Y-%m-%d %H:%M:%S %z')).save()

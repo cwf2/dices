@@ -1,0 +1,92 @@
+work_id	from_line	b	to_line	a	s_ok	speaker	speaker_notes	disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	disguise.1	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
+27	42		66b		❌	snake						❌	Eve														Per		
+27	98		174?		✅	God						✅	Jesus																
+27	176		201		✅	Jesus	φαίδιμος υιός					✅	God	πάτερ									26.0						
+27	226		239		❌	God's messenger	κήρυξ πεισήνωρ					❌	Mary								dialogue	D1	14.0				Mes		
+27	247		257		❌	Mary						❌	God's messenger								dialogue	D2	11.0				Que; Lam; Del		
+27	259		266		❌	God's messenger	κήρυξ πεισήνωρ					❌	Mary								dialogue	D3	8.0				Con; Com		
+27	379		435		❌							❌											57.0						
+27	438		439		❌							❌											3.0						
+27	467		511		✅	Jesus						❌											45.0						
+27	590		598		❌							❌											9.0						
+27	600		603		❌							❌											4.0						
+27	605		607		❌							❌											3.0				Com		
+27	650		650		❌							❌											1.0				Com		
+27	652		666		❌							❌											15.0						
+27	669		680		✅	Jesus						❌	paralytic	healed									12.0						
+27	682		684		❌							❌											3.0						
+27	691		692		❌							❌											2.0			Odysseus 2.303-4			
+27	704		710		❌							❌											7.0						
+27	713		713		❌							❌											1.0			Odysseus 11.80	Vow		
+27	723		727		❌							❌											5.0						
+27	752		761		❌							❌											10.0						
+27	763		769		❌							❌											7.0						
+27	793		798		❌							❌											6.0						
+27	803		803		❌							❌											1.0						
+27	806		807		❌							❌											2.0						
+27	826		845		❌							❌											20.0						
+27	860		883		❌	the blind person	όλοφυρόμενος					✅	Jesus										24.0						
+27	886		907		❌							❌											22.0						
+27	916		917		✅	Jesus	θεοκλύμενο θεοειδής					❌	not blind anymore								monologue	M (no reply)	2.0				Com		
+27	948		957		✅	Jesus						✅	demon										10.0				Que; War; Cha; Tau; Com		
+27	959		959		❌							❌											1.0						
+27	976		979		❌							❌											4.0						
+27	984		991		❌							❌											8.0						
+27	1004		1024		❌							❌											21.0						
+27	1030		1033		❌							❌											4.0						
+27	1045		1045		❌							❌											1.0			Il. 22.450	Com		
+27	1057		1064		❌							❌											8.0						
+27	1068		1068		❌							❌											1.0			Od. 6.178	Req		
+27	1073		1115		❌							❌	ξεΐνε	addressed as stranger									43.0						
+27	1122		1144		❌							❌											23.0						
+27	1176		1204		❌							❌	έτάροισιν										29.0			έκελεύσεν			
+27	1236		1246		❌							❌											11.0						
+27	1250		1265		❌							❌											16.0						
+27	1274		1274b		❌							❌											0.5			Il. 18.178/ Speech cluster	Com		
+27	1275		1275		❌							❌											1.0			Il. 19.192/ Speech cluster (interrupted sentence)	Com		
+27	1288		1296		❌							❌											9.0						
+27	1314		1326		❌							❌											13.0						
+27	1337		1340		❌							❌											4.0						
+27	1358		1382		❌							❌											25.0						
+27	1390				❌							❌																	
+27	1396		1406		❌							❌											11.0						
+27	1408		1425		❌							❌											18.0						
+27	1427		1430		❌							❌											4.0						
+27	1440		1444		❌							❌											5.0						
+27	1460		1469		❌							❌											10.0						
+27	1488		1506		❌							❌											19.0						
+27	1538		1573		❌							❌											36.0						
+27	1580		1596		❌							❌											17.0						
+27	1603		1607		❌							❌											5.0						
+27	1649		1653		✅	Jesus	θεοκλύμενο ς θεοειδής					❌											5.0						
+27	1667		1670		❌							❌		ώ φιλ'									4.0						
+27	1672		1724		✅	Jesus					Judas	❌											53.0						
+27	1737		1738		❌							❌											2.0						
+27	1743		1744b		❌							❌											1.5						
+27	1778		1780		❌							❌											3.0						
+27	1782		1783		❌							❌											2.0						
+27	1803		1804		❌							❌											2.0						
+27	1833		1841		❌							❌											9.0						
+27	1892		1910		❌							❌											19.0						
+27	1912		1915		❌							❌											4.0						
+27	1917		1929		❌							❌											13.0						
+27	1940		1955		❌							❌											16.0						
+27	1987		1987b		❌							❌											0.5				Lam		
+27	1992		1993		❌							❌											2.0						
+27	1996		2001		❌							❌											6.0				Del; Inf		
+27	2049		2054		❌	Mary						✅	Jesus	τέκνον έμόν		dead					monologue	M (no reply)	6.0			speech cluster	Lam		
+27	2058		2066		❌	Mary						✅	Jesus	τέκνον'		dead					monologue	M (no reply)	9.0			speech cluster	Lam		
+27	2088		2089		❌							❌											2.0						
+27	2112		2135		✅	Jesus					Aidoneus	❌											24.0				Req; Lau; Thr		
+27	2138		2146		❌	Aidoneus						❌											9.0						
+27	2177		2178		❌							❌											2.0				Lam		
+27	2194		2215		❌							❌											22.0						
+27	2218		2221		❌							❌											4.0						
+27	2234		2238		❌							❌											5.0						
+27	2255		2264		❌							❌											10.0						
+27	2277		2778		❌							❌											502.0						
+27	2284		2289		❌							❌											6.0						
+27	2291		2301		❌							❌											11.0						
+27	2304		2307		❌							❌											4.0						
+27	2311		2319		❌							❌											9.0						
+27	2331		2334		❌							❌											4.0						

@@ -1,0 +1,36 @@
+id	author	title	wd	urn	lang
+1	1	Iliad	Q8275	urn:cts:greekLit:tlg0012.tlg001.perseus-grc2	greek
+2	1	Odyssey	Q35160	urn:cts:greekLit:tlg0012.tlg002.perseus-grc2	greek
+3	3	Argonautica	Q739529	urn:cts:greekLit:tlg0001.tlg001.perseus-grc2	greek
+4	4	Aeneid	Q60220	urn:cts:latinLit:phi0690.phi003.perseus-lat2	latin
+5	5	Metamorphoses	Q184742	urn:cts:latinLit:phi0959.phi006.perseus-lat2	latin
+6	6	Civil War	Q678375	urn:cts:latinLit:phi0917.phi001.perseus-lat2	latin
+7	7	Argonautica	Q648918	urn:cts:latinLit:phi1035.phi001.perseus-lat2	latin
+8	8	Punica	Q1219433	urn:cts:latinLit:phi1345.phi001.perseus-lat2	latin
+9	9	Thebaid	Q2708117	urn:cts:latinLit:phi1020.phi001.perseus-lat2	latin
+10	9	Achilleid	Q302029	urn:cts:latinLit:phi1020.phi003.perseus-lat2	latin
+11	10	Dionysiaca	Q634519	urn:cts:greekLit:tlg2045.tlg001.perseus-grc1	greek
+12	11	Posthomerica	Q1998710	urn:cts:greekLit:tlg2046.tlg001.perseus-grc1	greek
+13	0	Orphic Argonautica	Q1230444		greek
+14	16	Idylls			greek
+15	2	Theogony		urn:cts:greekLit:tlg0020.tlg001.perseus-grc2	greek
+16	12	Sack of Troy			greek
+17	13	Europa		urn:cts:greekLit:tlg0035.tlg002.perseus-grc2	greek
+18	14	Megara			greek
+19	17	Colluthus			greek
+20	18	Hero and Leander			greek
+21	15	Batrachomyomachia			greek
+22	19	Cynegetica			greek
+23	19	Halieutica		urn:cts:greekLit:tlg0023.tlg001.perseus-grc2	greek
+24	0	Homeric Hymns			greek
+25	20	Hymns			greek
+26	21	St. Cyprian			greek
+27	21	Homerocentones			greek
+28	22	D. Sanctae Sophiae			greek
+29	2	Works and Days		urn:cts:greekLit:tlg0020.tlg002.perseus-grc2	greek
+30	10	Paraphrase			greek
+31	23	Panegyricus Probino et Olybrio			latin
+32	23	In Rufinum			latin
+33	23	De bello Gildonico			latin
+34	23	In Eutriopium			latin
+35	23	De consulatu Stilichonis			latin
