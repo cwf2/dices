@@ -1,2 +1,2 @@
 # for heroku
-python-3.11.8
+python-3.12.2
