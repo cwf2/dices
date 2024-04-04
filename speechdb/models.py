@@ -153,7 +153,7 @@ class SpeechCluster(models.Model):
     def get_spkr_str(self):
         '''Return speaker list as a string'''
         chars = []
-        for speech in self.speech_set.all():
+        for speech in self.speeches.all():
             chars.extend([str(c) for c in speech.spkr.all()])
         chars = sorted(set(chars))
         return ', '.join(chars)
@@ -161,14 +161,14 @@ class SpeechCluster(models.Model):
     def get_addr_str(self):
         '''Return addressee list as a string'''
         chars = []
-        for speech in self.speech_set.all():
+        for speech in self.speeches.all():
             chars.extend([str(c) for c in speech.addr.all()])
         chars = sorted(set(chars))
         return ', '.join(chars)
         
     def get_chars_str(self):
         chars = []
-        for speech in self.speech_set.all():
+        for speech in self.speeches.all():
             chars.extend([str(c) for c in speech.spkr.all()])
             chars.extend([str(c) for c in speech.addr.all()])
         chars = sorted(set(chars))
@@ -176,9 +176,9 @@ class SpeechCluster(models.Model):
         
     def get_urn(self):
         '''Return CTS URN for the whole cluster'''
-        urn = self.speech_set.first().work.urn
-        l_fi = self.speech_set.first().l_fi
-        l_la = self.speech_set.last().l_la
+        urn = self.speeches.first().work.urn
+        l_fi = self.speeches.first().l_fi
+        l_la = self.speeches.last().l_la
         
         if urn:
             return f'{urn}:{l_fi}-{l_la}'
@@ -186,17 +186,17 @@ class SpeechCluster(models.Model):
     def get_loc_str(self):
         '''Return line range of conversation as a string'''
         long_name = self.work.get_long_name()
-        l_fi = self.speech_set.first().l_fi
-        l_la = self.speech_set.last().l_la
+        l_fi = self.speeches.first().l_fi
+        l_la = self.speeches.last().l_la
         return f'{long_name} {l_fi}–{l_la}'
     
     @property
     def work(self):
-        return self.speech_set.first().work
+        return self.speeches.first().work
 
     @property
     def speakers(self):
-        speakersSquares = [speech.spkr.all() for speech in self.speech_set.all()]
+        speakersSquares = [speech.spkr.all() for speech in self.speeches.all()]
         newlist = []
         for speakerChunk in speakersSquares:
             for speaker in speakerChunk:
@@ -205,7 +205,7 @@ class SpeechCluster(models.Model):
     
     @property
     def addressees(self):
-        addressesSquares = [speech.addr.all() for speech in self.speech_set.all()]
+        addressesSquares = [speech.addr.all() for speech in self.speeches.all()]
         newlist = []
         for addresseeChunk in addressesSquares:
             for addressee in addresseeChunk: 
