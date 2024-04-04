@@ -21,7 +21,7 @@
           {% endif %}          
       </td>
       <td style="text-align:right; min-width:8em;">
-        {{ c.speech_set.count }}
+        {{ c.speeches.count }}
         <a style="margin-left:1em" href="{% url 'app:speeches' %}?cluster_id={{ c.pk }}">
             <i class="fa-solid fa-magnifying-glass"></i>
         </a>
@@ -121,7 +121,7 @@
                 <select class="form-control form-control-sm" id="sel_addr_inst" name="addr_inst_name">
                   <option value="">-----</option>
                   {% for name in anons %}
-                  <option value="{{ name }}" {% if params.addr_name == name %} selected="selected" {% endif %}>{{ name }}</option>
+                  <option value="{{ name }}" {% if params.addr_inst_name == name %} selected="selected" {% endif %}>{{ name }}</option>
                   {% endfor %}
                 </select>
               </div>

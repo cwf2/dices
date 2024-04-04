@@ -16,7 +16,7 @@
                 <tbody>
                     <tr>
                         <th>
-                          {{ cluster.work.get_long_name }} {{ cluster.speech_set.first.l_fi }}—{{ cluster.speech_set.last.l_la }}                      
+                          {{ cluster.work.get_long_name }} {{ cluster.speeches.first.l_fi }}—{{ cluster.speeches.last.l_la }}                      
                         </th>
                     </tr>
                 </tbody>
@@ -37,7 +37,7 @@
               </tr>
             </thead>
             <tbody>
-              {% for s in cluster.speech_set.all %}
+              {% for s in cluster.speeches.all %}
             <tr>
               <td>{{ s.part }}</td>
               <td>

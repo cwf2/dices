@@ -50,7 +50,7 @@
         {{ s.type }}
       </td>
       <td>
-          {{ s.part }} of {{ s.cluster.speech_set.count }}
+          {{ s.part }} of {{ s.cluster.speeches.count }}
           <a style="margin-left: 1em" href="{% url 'app:cluster_detail' s.cluster.id %}">
               <i class="fa-solid fa-circle-info"></i>
           </a>
@@ -104,7 +104,7 @@
           <select class="form-control form-control-sm" id="sel_spkr_being" name="spkr_being">
             <option value="">-----</option>
             {% for k, v in character_being_choices %}
-            <option value="{{ k }}" {% if params.spkr_being == v %} selected="selected" {% endif %} >{{ v }}</option>
+            <option value="{{ k }}" {% if params.spkr_being == k %} selected="selected" {% endif %} >{{ v }}</option>
             {% endfor %}                      
           </select>
         </div>

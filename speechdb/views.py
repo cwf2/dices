@@ -742,7 +742,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         self.params = ValidateParams(self.request, self._valid_params)
         
         # initial set of objects plus annotations
-        qs = Speech.objects.annotate(Count('cluster__speech'))
+        qs = Speech.objects.annotate(Count('cluster__speeches'))
         
         # construct query
         query = []
@@ -870,7 +870,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
             query.append(Q(part=self.params['part']))
         
         if 'n_parts' in self.params:
-            query.append(Q(cluster__speech__count=self.params['n_parts']))
+            query.append(Q(cluster__speeches__count=self.params['n_parts']))
 
         if 'level' in self.params:
             query.append(Q(level=self.params['level']))
@@ -919,11 +919,14 @@ class AppSpeechClusterList(LoginRequiredMixin, ListView):
         ('spkr_being', str),
         ('addr_being', str),
         ('char_being', str),
+        ('spkr_number', str),
+        ('addr_number', str),
+        ('char_number', str),
         ('spkr_gender', str),
         ('addr_gender', str),               
         ('char_gender', str),
         ('cluster_id', int),
-        ('type', str),
+        ('cluster_type', str),
         ('n_parts', int),
         ('work_id', int),
         ('auth_id', int),
@@ -939,7 +942,7 @@ class AppSpeechClusterList(LoginRequiredMixin, ListView):
         self.params = ValidateParams(self.request, self._valid_params)
         
         # initial set of objects plus annotations
-        qs = SpeechCluster.objects.annotate(Count('speech'))
+        qs = SpeechCluster.objects.annotate(Count('speeches'))
                 
         # construct query
         query = []
@@ -976,61 +979,69 @@ class AppSpeechClusterList(LoginRequiredMixin, ListView):
         
         # speaker by id
         if 'spkr_id' in self.params:
-            query.append(Q(speech__spkr__char=self.params['spkr_id']))
+            query.append(Q(speeches__spkr__char=self.params['spkr_id']))
         
         # speaker by instance name
         if 'spkr_inst_name' in self.params:
-            query.append(Q(speech__spkr__name=self.params['spkr_inst_name']))
+            query.append(Q(speeches__spkr__name=self.params['spkr_inst_name']))
             
         # speaker by name
         if 'spkr_name' in self.params:
-            query.append(Q(speech__spkr__char__name=self.params['spkr_name']))
+            query.append(Q(speeches__spkr__char__name=self.params['spkr_name']))
 
         # speaker by being
         if 'spkr_being' in self.params:
-            query.append(Q(speech__spkr__being=self.params['spkr_being']))
+            query.append(Q(speeches__spkr__being=self.params['spkr_being']))
+
+        # speaker by number
+        if 'spkr_number' in self.params:
+            query.append(Q(speeches__spkr__number=self.params['spkr_number']))
 
         # speaker by gender
         if 'spkr_gender' in self.params:
-            query.append(Q(speech__spkr__gender=self.params['spkr_gender']))
+            query.append(Q(speeches__spkr__gender=self.params['spkr_gender']))
         
         # addressee by id
         if 'addr_id' in self.params:
-            query.append(Q(speech__addr__char=self.params['addr_id']))
+            query.append(Q(speeches__addr__char=self.params['addr_id']))
         
         # addressee by instance name
         if 'addr_inst_name' in self.params:
-            query.append(Q(speech__addr__name=self.params['addr_inst_name']))
+            query.append(Q(speeches__addr__name=self.params['addr_inst_name']))
 
         # addressee by name
         if 'addr_name' in self.params:
-            query.append(Q(speech__addr__char__name=self.params['addr_name']))
+            query.append(Q(speeches__addr__char__name=self.params['addr_name']))
 
         # addressee by being
         if 'addr_being' in self.params:
-            query.append(Q(speech__addr__being=self.params['addr_being']))
+            query.append(Q(speeches__addr__being=self.params['addr_being']))
+
+        # addressee by number
+        if 'addr_number' in self.params:
+            query.append(Q(speeches__addr__number=self.params['addr_number']))
 
         # addressee by gender
         if 'addr_gender' in self.params:
-            query.append(Q(speech__addr__gender=self.params['addr_gender']))
+            query.append(Q(speeches__addr__gender=self.params['addr_gender']))
 
         if 'cluster_id' in self.params:
             query.append(Q(pk=self.params['cluster_id']))
         
-        if 'type' in self.params:
-            query.append(Q(speech__type=self.params['type']))
+        if 'cluster_type' in self.params:
+            query.append(Q(speeches__type=self.params['cluster_type']))
                 
         if 'n_parts' in self.params:
-            query.append(Q(speech__count=self.params['n_parts']))
+            query.append(Q(speeches__count=self.params['n_parts']))
         
         if 'work_id' in self.params:
-            query.append(Q(speech__work__pk=self.params['work_id']))
+            query.append(Q(speeches__work__pk=self.params['work_id']))
 
         if 'auth_id' in self.params:
-            query.append(Q(speech__work__author__pk=self.params['auth_id']))
+            query.append(Q(speeches__work__author__pk=self.params['auth_id']))
             
         if 'lang' in self.params:
-            query.append(Q(speech__work__lang=self.params['lang']))
+            query.append(Q(speeches__work__lang=self.params['lang']))
         
         # perform query
         qs = qs.filter(*query).distinct()
