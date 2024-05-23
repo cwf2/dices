@@ -1,0 +1,5 @@
+work_id	seq	from_book	from_line	b	to_book	to_line	a	interrupted	s_ok	speaker	speaker_disguise	vision/dead	anonymous	collective	speaker_notes	a_ok	addressee	addressee_notes	addressee_disguise	vision/dead.1	anyonymous	collective.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	embedded_level	length	words	short_speech_type	long_speech_type	misc_notes
+17	1		21			27			✅	Europa						✅	self						17001	1	soliloquy	S	0	7		Del; Des		
+17	2		102			107			✅	Europa						✅	Europa's maids	female compansions			collective	collective	17002	1	monologue	M (no reply)	0	6		Per		
+17	3		135			152			✅	Europa						✅	Zeus-bull		bull				17003	1	dialogue	D1	0	18		Que; Lam		
+17	4		154			161			✅	Zeus-bull	bull					✅	Europa						17003	2	dialogue	D2	0	8		Con		

@@ -1,4 +1,4 @@
-work_id	seq	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_ok	speaker	disguise	dead/vision	anonymous	collective	speaker_notes	a_ok	addressee	addressee_notes	disguise.1	dead/vision.1	anyonymous	collective.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	short_speech_type	long_speech_type	hypothetical	misc_notes
+work_id	seq	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_ok	speaker	speaker_disguise	dead/vision	anonymous	collective	speaker_notes	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anyonymous	collective.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	short_speech_type	long_speech_type	hypothetical	misc_notes
 14	1		13	52	n	13	52	n	n	✅	mariner	no	no	yes	no	one shipman shouts to another/the next	✅	mariner		no	no	yes	no	14001	1	monologue	M (no reply)	1.0		0	Com			
 14	2		13	72	y	13	72	y	n	✅	Heracles	no	no	no	no	"""Hylas"", just one worde (shouted 3x)"	✅	Hylas	his voice is too weak to pierce the water surface and reach Heracles	no	no	no	no	14002	1	monologue	M (no reply)	0.16666666666667		0	Del			Seems like it is indirect speech in the Loeb version (no quotation marks)
 14	3		24	7	n	24	9	n	n	✅	Alcmene		no	no	no		❌	Heracles and Iphicles		no	no	no	tandem	14001	1	monologue	M (no reply)	3.0		0	Con		no	
@@ -12,7 +12,7 @@ work_id	seq	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_ok	spe
 14	11	3.0	25	52	n	25	61	n	n	✅	old ploughman	no	no	yes	no		✅	Heracles	not recognised	no	no	no	no	14001	3	dialogue	D3	10.0		0	Del			
 14	12	4.0	25	78	n	25	83	n	n	✅	old ploughman	no	no	yes	no		✅	Heracles	(not addressed directly)	no	no	no	no	14002	1	monologue	M (no reply)	6.0		0	Del			exclamation
 14	13	5.0	25	162	n	25	188	n	y	✅	Phyleus	no	no	no	no		✅	Heracles		no	no	no	no	14003	1	dialogue	D	27.0		0	Nar; Del; Que			
-14	14	6.0	25	170	n	25	171	n	n	✅	Argive man/Achaean	no	no	yes	no	embedded: man from Argos	✅	Epeans	other Epean man	no	no	yes	no	14001	1	monologue	M (no reply)	2.0		1	Del			
+14	14	6.0	25	170	n	25	171	n	n	✅	Argive man	no	no	yes	no	embedded: man from Argos	✅	Epeans	other Epean man	no	no	yes	no	14001	1	monologue	M (no reply)	2.0		1	Del			
 14	15	7.0	25	193	n	25	281	n	n	✅	Heracles	no	no	no	no	end of poem	✅	Phyleus	son of Augeas	no	no	no	no	14003	2	dialogue	D (reply)	89.0		0	Res; Nar			
-14	16	1.0	26	18	y	26	18	n	n	✅	Pentheus	no	no	no	no		❌	Bacchants		no	no	collective	collective	14001	1	general interlocution	G1	1.0		0	Que			
+14	16	1.0	26	18	y	26	18	n	n	✅	Pentheus	no	no	no	no		✅	Bacchantes		no	no	collective	collective	14001	1	general interlocution	G1	1.0		0	Que			
 14	17	2.0	26	19	y	26	19	n	n	✅	Autonoe	no	no	no	no		✅	Pentheus		no	no	no	no	14001	2	general interlocution	G2	1.0		0	Res			

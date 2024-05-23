@@ -1,0 +1,3 @@
+work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
+36	1	33		38		✅	Theodosius		no	no	no	no	✅	Jupiter		no	no	no	no	36001	1	monologue	M (no reply)	5		0		Pra;		no
+36	2	144		162		✅	Theodosius		no	no	no	no	✅	Stilicho		no	no	no	no	36002	1	monologue	M (no reply)	18		0		Lau; Far		no

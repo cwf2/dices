@@ -1,0 +1,4 @@
+work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
+42	1	135		173		✅	Iustitia	Virginis	no	no	no	no	✅	Flavius Manlius Theodorus		no	no	no	no	42001	1	dialogue	D1	38		0		Lau; que; com; req		no
+42	2	174		197		✅	Flavius Manlius Theodorus		no	no	no	no	✅	Iustitia		no	no	yes	no	42001	2	dialogue	D2	23		0		Res; que; inf		no
+42	3	276		340		✅	Urania		no	no	no	no	✅	Muses		no	no	no	yes	42002	1	monologue	M1(no reply)	64		0		que; ins; com		no

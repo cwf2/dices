@@ -1,0 +1,34 @@
+work	work_id	seq	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type	notes
+Hymn to Zeus	50	1		29			29		✅	Rhea		no	no	no	no	✅	Gaia		no	no	no	no	50001	1	monologue	M (no reply)	1.0		0		Com			
+Hymn to Apollo	51	2		106			106		✅	Envy		no	no	no	no	✅	Apollo		no	no	no	no	51002	1	dialogue	D1	1.0		0		Del			
+Hymn to Apollo	51	3		108			112		✅	Apollo		no	no	no	no	✅	Envy		no	no	no	no	51002	2	dialogue	D2	5.0		0		Del			
+Hymn to Artemis	52	4		6			25		✅	Artemis		no	no	no	no	✅	Zeus		no	no	no	no	52003	1	dialogue	D1	20.0		0		Req			
+Hymn to Artemis	52	5		29	b		39	a	✅	Zeus		no	no	no	no	✅	Artemis		no	no	no	no	52003	2	dialogue	D2	10.0		0		Del			
+Hymn to Artemis	52	6		81			85		✅	Artemis		no	no	no	no	✅	cyclopes		no	no	no	no	52004	1	monologue	M (no reply)	5.0		0		Inf			
+Hymn to Artemis	52	7		104			104		✅	Artemis		no	no	no	no	✅	self		no	no	no	no	52005	1	monologue	M (no reply)	1.0		0		Del			
+Hymn to Artemis	52	8		153			157		✅	Apollo		no	no	no	no	✅	Artemis		no	no	no	no	52006	1	monologue	M (no reply)	5.0		0		Exh; Com			
+Hymn to Delos	53	9		88			98		✅	Apollo	in Leto's womb	no	no	no	no	✅	Thebe		no	no	collective	collective	53007	1	monologue	M (no reply)	11.0		0		Thr			
+Hymn to Delos	53	10		109			120		✅	Leto		no	no	no	no	✅	Thessalian Nymphs		no	no	collective	collective	53008	1	general interlocution	G1	12.0		0		Com; Lam			
+Hymn to Delos	53	11		122			132		✅	Peneus		no	no	no	no	✅	Leto		no	no	no	no	53008	2	general interlocution	G2	11.0		0		Inf; Del			
+Hymn to Delos	53	12		149	b		152		✅	Leto		no	no	no	no	✅	Peneus		no	no	no	no	53009	1	monologue	M (no reply)	2.5		0		Far			
+Hymn to Delos	53	13		162	b		195		✅	Apollo		no	no	no	no	✅	Leto		no	no	no	no	53010	1	monologue	M (no reply)	32.5		0		Del; Ora; Req; Per			
+Hymn to Delos	53	14		203			204		✅	Leto		no	no	no	no	✅	Hera		no	no	no	no	53011	1	monologue	M (no reply)	2.0		0		Cha			
+Hymn to Delos	53	15		213			215		✅	Leto		no	no	no	no	✅	Apollo	not yet born	no	no	no	no	53012	1	monologue	M (no reply)	3.0		0		Per			
+Hymn to Delos	53	16		218			227		✅	Iris	such a messenger'	no	no	no	no	✅	Hera		no	no	no	no	53013	1	dialogue	D1	10.0		0		Inf			
+Hymn to Delos	53	17		240			248		✅	Hera		no	no	no	no	✅	Iris		no	no	no	no	53013	2	dialogue	D2	9.0		0		Del			
+Hymn to Delos	53	18		266			273		✅	Delos		no	no	no	no	✅	Gaia		no	no	no	no	53014	1	monologue	M (no reply)	8.0		0		Del; Vow			
+Bath of Pallas	54	19		80			82		✅	Athena		no	no	no	no	✅	Tiresias		no	no	no	no	54015	1	monologue	M (no reply)	3.0		0		Que; Thr			
+Bath of Pallas	54	20		65	b		92		✅	Chariclo		no	no	no	no	❌	Athena and Tiresias		no	no	no	no	54016	1	general interlocution	G1	26.5		0		Lam			
+Bath of Pallas	54	21		97			130		✅	Athena		no	no	no	no	✅	Chariclo		no	no	no	no	54016	2	general interlocution	G2	34.0		0		Del; Con; Ora			
+Hymn to Demeter	55	22		2			2		✅	women		no	no	collective	collective	✅	Demeter		no	no	no	no	55017	1	monologue	M (no reply)	1.0		0		Gre			
+Hymn to Demeter	55	23		41	b		41	a	✅	Demeter		no	no	no	no	❌	Erysichthon and companions of Erysichthon		no	no	collective	collective	55018	1	monologue	M (no reply)	0.5		0	speech cluster	Que			
+Hymn to Demeter	55	24		46			49		✅	Demeter-Nicippe		no	no	no	no	✅	Erysichthon	likeness of Nicippe	no	no	no	no	55018	2	dialogue	D1	4.0		0	speech cluster	Com; War			
+Hymn to Demeter	55	25		53			55		✅	Erysichthon	likeness of Nicippe	no	no	no	no	✅	Demeter-Nicippe		no	no	no	no	55018	3	dialogue	D2	3.0		0	speech cluster	Thr			
+Hymn to Demeter	55	26		63			64		✅	Demeter		no	no	no	no	✅	Erysichthon		no	no	no	no	55019	1	monologue	M (no reply)	2.0		0		Vit; Thr			
+Hymn to Demeter	55	27		76			77	a	✅	mother of Erysichthon		no	no	no	no	✅	sons of Ormenus	Ormendiae	no	no	no	no	55020	1	monologue	M (reply)	1.5		0		Inf; Res			
+Hymn to Demeter	55	28		81			82		✅	mother of Erysichthon		no	no	no	no	✅	Polyxo		no	no	no	no	55021	1	monologue	M (reply)	2.0		0		Inf; Res			
+Hymn to Demeter	55	29		84	b		84	a	✅	mother of Erysichthon		no	no	no	no	✅	someone	invitation	no	no	yes	no	55022	1	monologue	M (reply)	0.5		0		Inf; Res			
+Hymn to Demeter	55	30		85	b		85	a	✅	mother of Erysichthon		no	no	no	no	✅	someone	invitation	no	no	yes	no	55023	1	monologue	M (reply)	0.5		0		Inf; Res			
+Hymn to Demeter	55	31		86	b		86	a	✅	mother of Erysichthon		no	no	no	no	✅	someone	invitation	no	no	yes	no	55024	1	monologue	M (reply)	0.5		0		Inf; Res			
+Hymn to Demeter	55	32		98			106		✅	Triopas		no	no	no	no	✅	Poseidon		no	no	no	no	55025	1	monologue	M (no reply)	9.0		0		Lam; Pra			
+Hymn to Demeter	55	33		119			119		✅	women	maidens and mothers	no	no	no	no	✅	Demeter		no	no	no	no	55026	1	monologue	M (no reply)	1.0		0		Gre			

@@ -1,0 +1,9 @@
+work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
+40	1	269	b	313		✅	Stilicho		no	no	no	no	✅	people of Rome		no	no	yes	yes	40001	1	monologue 	M1(no reply)	44		0				no
+40	2	380		399		✅	Stilicho		no	no	yes	no	✅	people of Rome		no	no	yes	yes	40002	1	monologue 	M1(no reply)	19		0				no
+40	3	461	b	461	b	✅	people of Rome		no	no	yes	yes	✅	people of Rome		no	no	yes	yes	40003	1	monologue 	M1(no reply)	0		0				no
+40	4	488		517		✅	oldest Getic leader		no	no	yes	no	❌	Senate of the Getes and Alaric		no	no	no	no	40004	1	dialogue	D1	29		0				no
+40	5	521		549		✅	Alaric		no	no	yes	no	❌	oldest Getic leader and Senate of the Getes		no	no	yes	no	40004	2	dialogue	D2	28		0				no
+40	6	546		547		✅	gods		no	no	yes	yes	✅	Alaric		no	no	no	no	40005	1	monologue 	M1(no reply)	2		1		ora		no
+40	7	560		578		✅	Stilicho		no	no	no	no	✅	soldiers of Stilicho		no	no	yes	yes	40006	1	monologue 	M1(no reply)	18		0				no
+40	8	645		647		❌							❌							40007	1	Inscription		2		0				yes

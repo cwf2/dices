@@ -1,4 +1,4 @@
-orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_notes	disguise?	dead/vision	anonymous?	collective/tandem	a_ok	addressee	addressee_notes	disguise	dead/vision.1	anonymous	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical	speech/this speaker	mortal/god	anonymous?.1	disguise?.1
+orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous?	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical	speech/this speaker	mortal/god	anonymous?.1	disguise?
 1	1	3	Argonautica	1	242	1	246	✅	citizens				collective	yes	✅	self				collective	yes	3001	1	soliliquy	S	5		0		Del	deliberation		1 of 1	mortal	collective	
 2	2	3	Argonautica	1	251	1	259	✅	someone	(woman)			yes		✅	someone	"(another woman); talks about Alcimede (""poor Alcimede, to you too…"")"			yes		3002	1	soliliquy	S	9		0		Lam	lament		1 of 1	mortal		
 3	3	3	Argonautica	1	278	1	291	✅	Alcimede						✅	Jason						3003	1	dialogue	D1	14		0		Far; Lam	farewell speech; lament		1 of 1	mortal		
@@ -10,7 +10,7 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 9	9	3	Argonautica	1	440	1	447	✅	Idmon						✅	Argonauts						3006	1	monologue	M	8		0		Ora	prophecy, oracular speech and interpretation		1 of 2	mortal		
 10	10	3	Argonautica	1	463	1	471	✅	Idas						✅	Jason						3007	1	general interlocution	G1	9		0		Vit; Thr	vituperation; threat		1 of 3	mortal		
 11	11	3	Argonautica	1	476	1	484	✅	Idmon						✅	Idas						3007	2	general interlocution	G2	9		0		Vit; Thr	vituperation; threat		2 of 2	mortal		
-12	12	3	Argonautica	1	487	1	491	✅	Idas						✅	Idmon						3007	3	general interlocution	G3	5		0		Vit; Thr	vituperation; threat		2 of 3	mortal		
+12	12	3	Argonautica	1	487	1	491	✅	Idas						✅	Idmon						3007	3	general interlocution	G3	5		0		Vit; Thr	threat		2 of 3	mortal		
 13	13	3	Argonautica	1	657	1	666	✅	Hypsipyle						✅	Lemnian women				collective	yes	3008	1	general interlocution	G1	10		0		Per; Req	persuasion; request		1 of 5	mortal		
 14	14	3	Argonautica	1	675	1	696	✅	Polyxo						✅	Lemnian women				collective	yes	3008	2	general interlocution	G2	22		0		Per	persuasion		1 of 1	mortal		
 15	15	3	Argonautica	1	700	1	701	✅	Hypsipyle						✅	Lemnian women				collective	yes	3008	3	general interlocution	G3	2		0		Inf; Per	information; persuasion		2 of 5	mortal		
@@ -63,9 +63,9 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 62	62	3	Argonautica	3	25	3	29	✅	Hera						✅	Athena						3032	3	dialogue	D3	5		0		Per; Exh	persuasion; exhortation		2 of 7	god		
 63	63	3	Argonautica	3	32	3	35	✅	Athena						✅	Hera						3032	4	dialogue	D4	4		0		Res	reply to question		2 of 2	god		
 64	64	3	Argonautica	3	52	3	54	✅	Aphrodite						❌	Athena and Hera					tandem	3033	1	general interlocution	G1	3		0		Que	question		1 of 6	god		
-65	65	3	Argonautica	3	56	3	75	✅	Hera						✅	Aphrodite						3033	2	general interlocution	G2	20		0		Res	reply to question		3 of 7	god		
-66	66	3	Argonautica	3	79	3	82	✅	Aphrodite						✅	Hera						3033	3	general interlocution	G3	4		0		Res	reply to question		2 of 6	god		
-67	67	3	Argonautica	3	84	3	89	✅	Hera						✅	Aphrodite						3033	4	general interlocution	G4	6		0		Per; Req	persuasion; request		4 of 7	god		
+65	65	3	Argonautica	3	56	3	75	✅	Hera						✅	Aphrodite						3033	2	general interlocution	G2	20		0		Res; vow; narr	reply to question; promise and oath; narration		3 of 7	god		
+66	66	3	Argonautica	3	79	3	82	✅	Aphrodite						✅	Hera						3033	3	general interlocution	G3	4		0		vow	promise and oath		2 of 6	god		
+67	67	3	Argonautica	3	84	3	89	✅	Hera						✅	Aphrodite						3033	4	general interlocution	G4	6		0		Req	request		4 of 7	god		
 68	68	3	Argonautica	3	91	3	99	✅	Aphrodite						❌	Athena and Hera					tandem	3033	5	general interlocution	G5	9		0		Lam; Nar	lament; narration		3 of 6	god		
 69	69	3	Argonautica	3	102	3	105	✅	Aphrodite						❌	Athena and Hera					tandem	3033	6	general interlocution	G6	4		0		Lam; Vow	lament; promise and oath		4 of 6	god		
 70	70	3	Argonautica	3	108	3	110	✅	Hera						✅	Aphrodite						3033	7	general interlocution	G7	3		0		Exh; Req	exhortation; request		5 of 7	god		
@@ -135,9 +135,9 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 134	134	3	Argonautica	4	1411	4	1421	✅	Orpheus						✅	Hesperides				collective	yes	3064	1	monologue	M	11		0		Pra	prayer		2 of 2	mortal		
 135	135	3	Argonautica	4	1432	4	1449	✅	Aegle						✅	Argonauts				collective	yes	3065	1	general interlocution	G1	18		0		Nar; Inf	narration; information and description		1 of 1	god		
 136	136	3	Argonautica	4	1458	4	1460	✅	someone	(Argonaut)			yes		✅	Argonauts				collective	yes	3065	2	general interlocution	G2	3		0		Lau; Des	laudation and praise; desire and wish		1 of 1	mortal	yes	
-137	137	3	Argonautica	4	1554	4	1561	✅	Triton		youth				✅	Argonauts				collective	yes	3066	1	general interlocution	G1	8		0		Gre; Vow	greeting and reception; promise and oath		1 of 2	god		youth
-138	138	3	Argonautica	4	1564	4	1570	✅	Euphemus						✅	Triton		youth				3066	2	general interlocution	G2	7		0		Req; Que	request; question		1 of 1	mortal		
-139	139	3	Argonautica	4	1573	4	1600	✅	Triton		youth				✅	Argonauts						3066	3	general interlocution	G3	28		0		Inf; Exh	information and description; exhortation		2 of 2	god		youth
+137	137	3	Argonautica	4	1554	4	1561	✅	Triton-youth		youth				✅	Argonauts				collective	yes	3066	1	general interlocution	G1	8		0		Gre; Vow	greeting and reception; promise and oath		1 of 2	god		youth
+138	138	3	Argonautica	4	1564	4	1570	✅	Euphemus						✅	Triton-youth		youth				3066	2	general interlocution	G2	7		0		Req; Que	request; question		1 of 1	mortal		
+139	139	3	Argonautica	4	1573	4	1600	✅	Triton-youth		youth				✅	Argonauts						3066	3	general interlocution	G3	28		0		Inf; Exh	information and description; exhortation		2 of 2	god		youth
 140	140	3	Argonautica	4	1597	4	1600	✅	Jason						✅	Triton	Triton is gone, so probably no longer in disguise of youth					3067	1	monologue	M	4		0	happens after speeding away from Triton	Pra	prayer		32 of 33	mortal		
 141	141	3	Argonautica	4	1654	4	1658	✅	Medea						✅	Argonauts						3068	1	monologue	M	5		0		Per; Req	persuasion; request		17 of 17 	mortal		
 142	142	3	Argonautica	4	1741	4	1745	✅	Calliste	dream		yes			✅	Euphemus						3069	1	monologue	M	5		0	in indirect speech it says he recounts it to Jason afterwards	Ora; Req	prophecy, oracular speech and interpretation; request		1 of 1	god/natural element		
