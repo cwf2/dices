@@ -1,0 +1,10 @@
+orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	intro	cap	interrupted
+	1	35	De consulatu Stilichonis	2	231	n	2	240	y	✅	Hispania		no	no	no	no	✅	gods		no	no	no	no	35001	1	general interlocution	G1	9.583333333333334	60	0						
+	2	35	De consulatu Stilichonis	2	243	n	2	246	n	✅	Gallia		no	no	no	no	✅	gods		no	no	no	no	35001	2	general interlocution	G2	4	26	0						
+	3	35	De consulatu Stilichonis	2	250	n	2	255	n	✅	Britannia		no	no	no	no	✅	gods		no	no	no	no	35001	3	general interlocution	G3	5.833333333333333	35	0						inquit
+	4	35	De consulatu Stilichonis	2	258	n	2	262	y	✅	Africa		no	no	no	no	✅	gods		no	no	no	no	35001	4	general interlocution	G4	4.333333333333333	26	0						
+	5	35	De consulatu Stilichonis	2	264	y	2	268	n	✅	Italy		no	no	no	no	✅	gods		no	no	no	no	35001	5	general interlocution	G5	4.66666666666667	27	0						ait
+	6	35	De consulatu Stilichonis	2	279	n	2	339	y	✅	Roma		no	no	no	no	✅	Stilicho		no	no	no	no	35002	1	monologue	M1	48.25	386	0						
+	7	35	De consulatu Stilichonis	2	378	n	2	407	n	✅	Roma		no	no	no	no	✅	Roma		no	no	no	no	35003	1	soliloquy	S	29 11//12	182	0	absent addressee: Stilicho; posessed by mortal: Vidit ut optato se consule Roma potitam;					ait
+	8	35	De consulatu Stilichonis	2	454	n	2	466	n	✅	Sol	Phoebus	no	no	no	no	✅	golden years		no	no	no	no	35004	1	monologue	M1	13	77	0						
+	9	35	De consulatu Stilichonis	3	202	n	3	284	n	✅	Diana		no	no	no	no	❌	companions of Diana and Lycaste and Opis		no	no	no	no	35005	1	soliloquy	S	25	182	0						

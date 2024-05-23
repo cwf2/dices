@@ -1,0 +1,9 @@
+work_id	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_notes	speaker_disguise	vision/dead	anonymous	collective	a_ok	addressee	addressee_notes	addressee_disguise	vision/dead.1	anonymous.1	collective.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type
+16	1		120		151	✅	Odysseus						✅	friends	φίλοι,			collective	collective	16001	1	monologue	M (no reply)	32		0		Del; Exh	
+16	2		265		282	✅	Sinon						✅	Priam						16002	1	dialogue	D1	18		0		Req; Lam; Per	
+16	3		284		290	✅	Priam						✅	Sinon	ξεῖνε					16002	2	dialogue	D2	7		0		Con; Inv; Que	
+16	4		292		303	✅	Sinon						✅	Priam						16002	3	dialogue	D3	12		0		Res; Inf; Per	
+16	5		376		416	✅	Cassandra						❌	Trojan men and Priam	ὦ μέλεοι			collective	collective	16003	1	general interlocution	G1	41		0		Lam; War	
+16	6		420		438	✅	Priam						✅	Cassandra						16003	2	general interlocution	G2	19		0	response to Cassandra's general warning	Vit; Tau	
+16	7		457		462	✅	Aphrodite-old woman		old woman				✅	Helena						16004	1	monologue	M (no reply)	6		0		Inf; Per	
+16	8		491		496	✅	Athena						✅	Helena						16005	1	monologue	M (no reply)	6		0		Vit; Thr	

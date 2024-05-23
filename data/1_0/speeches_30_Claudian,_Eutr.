@@ -1,0 +1,11 @@
+orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	intro	cap
+	1	34	In Eutropium	1	66	n	1	77	y	✅	Eutropius		no	no	no	no	✅	Ptolemaeus	a servant of the post-house, owner of slave Eutropius	no	no	no	no	34001	1	monologue	M1	11.583333333333334	70	0					
+	2	34	In Eutropium	1	350	y	1	357	n	✅	serious man		no	no	yes	no	✅	crowd in the cities		no	no	yes	yes	34002	1	dialogue	D1	7.416666666666667	47	0					
+	3	34	In Eutropium	1	359	n	1	370	n	✅	joking man		no	no	yes	no	❌	serious man and crowd in the cities		no	no	yes	yes	34002	2	dialogue	D2	12.0	76	0					
+	4	34	In Eutropium	1	373	n	1	374	n	✅	Roma		no	no	no	no	✅	Roma		no	no	no	no	34003	1	sololoquy	S	2.0	12	0					
+	5	34	In Eutropium	1	391	y	1	513	n	✅	Roma		no	no	no	no	❌	Honorius and Stilicho and Brutus and Decia gens and Torquatus and Fabricius and Serranus and Scipiones and Lutatius and Marcellus and Claudia gens and Marcus Porcius Cato Uticensis (Cato the Younger) and Bruti and Corvini	only Honorius and Stilicho are present	no	no	yes	yes	34004	1	monologue	M1	122.58333333333333	725	0					
+	6	34	In Eutropium	2	112	n	2	159	n	✅	Mars		no	no	no	no	❌	Bellona and people of Rome and consuls of Rome and Romulus 	o	no	no	yes	yes	34005	1	monologue	M1	48.0	290	0					
+	7	34	In Eutropium	2	194	y	2	229	y	✅	Bellona-wife of Tarbigilus		wife of Tarbigilus	no	no	no	✅	Tarbigilus		no	no	no	no	34006	1	monologue	M1	36.0	215	0					
+	8	34	In Eutropium	2	288	n	2	300	n	✅	Cybele		no	no	no	no	✅	Cybele	bystanders: Corybants and Attis	no	no	no	no	34007	1	sololoquy	S	13.0	76	0					
+	9	34	In Eutropium	2	391	n	2	401	n	✅	Leo		no	no	no	no	❌	Eutropius and council of Eutropius		no	no	yes	yes	34008	1	monologue	M1	11.0	67	0					
+	10	34	In Eutropium	2	534	n	2	602	n	✅	Aurora		no	no	no	no	✅	Stilicho		no	no	no	no	34009	1	monologue	M1	69.0	426	0					

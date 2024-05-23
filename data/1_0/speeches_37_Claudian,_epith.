@@ -1,0 +1,10 @@
+work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
+38	1	20		46		✅	Honorius		no	no	yes	no	✅	Honorius		no	no	yes	no	38001	1	monologue	M (no reply)	26		0		que; nar		no
+38	2	111		116		✅	Venus		no	no	yes	no	✅	Cupid		no	no	yes	no	38002	1	dialogue	D1	5		0		que; res		no
+38	3	117		122		✅	Cupid		no	no	yes	no	✅	Venus		no	no	yes	no	38002	2	dialogue	D2	5		0		res; inf; com		no
+38	4	128		134		✅	Venus	Cytherea	no	no	no	no	✅	Cupids	parvos alumnos	no	no	yes	yes	38003	1	monologue	M (no reply)	6		0		que; ins; vow		no
+38	5	140		144		✅	Cupids		no	no	yes	no	✅	Triton		no	no	yes	no	38004	1	monologue	M (no reply)	4		0		com		no
+38	6	173		179		✅	Nereids		no	no	yes	yes	✅	Venus		no	no	yes	no	38005	1	monologue	M (no reply)	6		0		pra; lau; inf		no
+38	7	190		227		✅	Venus		no	no	yes	no	❌	Hymen and Grace and Concordia and companions of Venus	nostri comites, names v. 202-3	no	no	yes	yes	38006	1	monologue	M (no reply)	37		0		com; inf		no
+38	8	252		281		✅	Venus	Cytherea	no	no	no	no	✅	Maria (daughter of Stilicho)		no	no	no	no	38007	1	monologue	M (no reply)	29		0		lau;		no
+38	9	300		341		✅	soldiers		no	no	yes	yes	✅	Jupiter	Dive parens	no	no	yes	no	38008	1	monologue	M (no reply)	41		0		lau; inf; que		no

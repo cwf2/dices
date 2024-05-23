@@ -1,0 +1,4 @@
+work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
+37	1	214		352	a	✅	Theodosius	fertur locutus	no	no	yes	no	✅	Honorius		no	no	yes	no	37001	1	dialogue	D1	138		0	fertur locutus	Inf; nar; com; ins		no
+37	2	353	b	369	a	✅	Honorius		no	no	yes	no	✅	Theodosius		no	no	yes	no	37001	2	dialogue	D2	16		0		Que; req; inf		no
+37	3	370	b	418		✅	Theodosius		no	no	yes	no	✅	Honorius		no	no	yes	no	37001	3	dialogue	D3	48		0		Res; ins; nar; inf		no

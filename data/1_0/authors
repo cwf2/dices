@@ -11,15 +11,17 @@ id	name	wd	urn
 9	Statius	Q243203	urn:cite:perseus:author.1323
 10	Nonnus	Q312916	urn:cite:perseus:author.997
 11	Quintus	Q352702	urn:cite:perseus:author.1212
-12	Triphiodorus	Q1371938	
-13	Moschus	Q957548	
+12	Triphiodorus	Q1371938	urn:cite:perseus:author.1428
+13	Moschus	Q957548	urn:cite:perseus:author.948
 14	Ps.-Moschus		
 15	Ps.-Homer		
-16	Theocritus	Q219484	
-17	Colluthus	Q1779484	
-18	Musaeus	Q1954009	
-19	Oppian	Q116508	
-20	Callimachus	Q192417	
+16	Theocritus	Q219484	urn:cite:perseus:author.1377
+17	Colluthus	Q1779484	urn:cite:perseus:author.393
+18	Musaeus	Q1954009	urn:cite:perseus:author.954
+19	Oppian	Q116508	urn:cite:perseus:author.1016
+20	Callimachus	Q192417	urn:cite:perseus:author.307
 21	Eudocia	Q229307	
-22	Paul the Silentiary		
-23	Claudian	Q205947	
+22	Paul the Silentiary		urn:cite:perseus:author.1049
+23	Claudian	Q205947	urn:cite:perseus:author.372
+24	Prudentius	Q347250	urn:cite:perseus:author.1189
+25	Homeric Hymns		urn:cite:perseus:author.1738

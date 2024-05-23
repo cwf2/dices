@@ -1,0 +1,65 @@
+seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type	notes
+	44	Homeric Hymn 1		C1			D3		✅	Zeus		no	no	no	no	✅	Hera		no	no	no	no	44001	1	monologue	M	/		0	holes	Del			Very fragmentary; maybe put in the database with an asterisk
+	45	Homeric Hymn 2		54			58		✅	Hecate		no	no	no	no	✅	Demeter		no	no	no	no	45002	1	monologue	M (reply)	5		0	not sure if Demeter asked first; but Hecate seems to rephrase a question	Res; Inf			
+	45	Homeric Hymn 2		64			73		✅	Demeter		no	no	no	no	✅	Helios	Hecate is also present	no	no	no	no	45003	1	general interlocution	G1	10		0		Que; Lam			
+	45	Homeric Hymn 2		75			87		✅	Helios		no	no	no	no	✅	Demeter	Hecate is also present	no	no	no	no	45003	2	general interlocution	G2	13		0		Lam; Res			
+	45	Homeric Hymn 2		113			117		✅	daughters of Keleos	Unclear which one speaks	no	no	no	collective	✅	Demeter		no	no	no	no	45004	1	general interlocution	G1	5		0		Que			
+	45	Homeric Hymn 2		119			144		✅	Demeter-Doso		mortal	no	no	no	✅	daughters of Keleos	not anonymous as the four names were mentioned	no	no	no	collective	45004	2	general interlocution	G2	26		0		Res; Nar; Que			
+	45	Homeric Hymn 2		147			168		✅	Callidice		no	no	no	no	✅	Demeter	addressed as nurse (maia)	no	no	no	no	45004	3	general interlocution	G3	22		0		Lam; Res			
+	45	Homeric Hymn 2		213			223		✅	Metaneira		no	no	no	no	✅	Demeter-Doso	more present	old	no	no	no	45005	1	general interlocution	G1	11		0		Gre; Lam; Inv			
+	45	Homeric Hymn 2		225			230		✅	Demeter-Doso		old	no	no	no	✅	Metaneira	more present	no	no	no	no	45005	2	general interlocution	G2	6		0		Gre; Del			
+	45	Homeric Hymn 2		248			249		✅	Metaneira		no	no	no	no	✅	Demophon (son of Celeus)		no	no	no	no	45006	1	monologue	M (no reply)	2		0		Lam			
+	45	Homeric Hymn 2		256			274		✅	Demeter	with this threw her old age off	old	no	no	no	✅	Metaneira		no	no	no	no	45007	1	monologue	M (no reply)	19		0		Vit; Com; Ora; Inf			
+	45	Homeric Hymn 2		321			323		✅	Iris		no	no	no	no	✅	Demeter		no	no	no	no	45008	1	monologue	M (no reply)	3		0		Mes			
+	45	Homeric Hymn 2		347			356		✅	Hermes	Argusslayer	no	no	no	no	✅	Hades	Aidoneus	no	no	no	no	45009	1	monologue	M (no reply)	10		0	speech cluster	Mes; Com			
+	45	Homeric Hymn 2		360			369		✅	Hades		no	no	no	no	✅	Persephone		no	no	no	no	45010	1	monologue	M (no reply)	10		0	speech cluster	Com			
+	45	Homeric Hymn 2		393			404		✅	Demeter		no	no	no	no	✅	Persephone		no	no	no	no	45011	1	dialogue	D1	12		0		Que			
+	45	Homeric Hymn 2		406			433		✅	Persephone		no	no	no	no	✅	Demeter		no	no	no	no	45011	2	dialogue	D2	28		0		Res; Nar			
+	45	Homeric Hymn 2		460			469		✅	Rhea		no	no	no	no	✅	Demeter		no	no	no	no	45012	1	monologue	M (no reply)	10		0		Del; Com			
+	46	Homeric Hymn 3		51			60		✅	Leto		no	no	no	no	✅	Delos	island	no	no	no	no	46013	1	dialogue	D1	10		0		Req			
+	46	Homeric Hymn 3		62			82		✅	Delos	island	no	no	no	no	✅	Leto		no	no	no	no	46013	2	dialogue	D2	21		0		Inv; Req			
+	46	Homeric Hymn 3		84			88		✅	Leto		no	no	no	no	✅	Delos	island	no	no	no	no	46013	3	dialogue	D3	5		0		Vow			
+	46	Homeric Hymn 3		131			132		✅	Apollo		no	no	no	no	✅	godesses		no	no	no	no	46014	1	monologue	M (no reply)	2		0		Del			
+	46	Homeric Hymn 3		169			170		✅	stranger	hypothetical	no	no	yes	no	✅	Maidens		no	no	collective	collective	46015	1	dialogue	D1	2		0		Que		yes	
+	46	Homeric Hymn 3		172			173		✅	Maidens	hypothetical	no	no	collective	collective	✅	stranger		no	no	yes	no	46015	2	dialogue	D2	2		0		Res		yes	
+	46	Homeric Hymn 3		247			253		✅	Apollo		no	no	no	no	✅	Telphousa		no	no	no	no	46016	1	dialogue	D1	7		0		Del			
+	46	Homeric Hymn 3		257			274		✅	Telphousa		no	no	no	no	✅	Apollo		no	no	no	no	46016	2	dialogue	D2	18		0		Del; Per			
+	46	Homeric Hymn 3		287			293		✅	Apollo		no	no	no	no	✅	self		no	no	no	no	46017	1	soliloquy	S	7		0		Del			
+	46	Homeric Hymn 3		311			330		✅	Hera		no	no	no	no	✅	gods	Thetis is addressed	no	no	collective	collective	46018	1	monologue	M (no reply)	20		0		Del; Vit			
+	46	Homeric Hymn 3		334			339		✅	Hera		no	no	no	no	❌	Gaia and Uranus and Titan gods		no	no	collective	collective	46019	1	monologue	M (no reply)	6		0		Pra; Req			
+	46	Homeric Hymn 3		363			369		✅	Apollo		no	no	no	no	✅	Python		no	no	no	no	46020	1	monologue	M (no reply)	7		0		Tau; Vit			
+	46	Homeric Hymn 3		379			381		✅	Apollo		no	no	no	no	✅	Telphousa		no	no	no	no	46021	1	monologue	M (no reply)	3		0		Del; Thr			
+	46	Homeric Hymn 3		452			461		✅	Apollo-young man	likeness of a sturdy ueoman in his first prime	yeoman	no	no	no	✅	Cretans		no	no	collective	collective	46022	1	general interlocution	G1	10		0		Que			
+	46	Homeric Hymn 3		464			473		✅	leader of the Cretans		no	no	yes	no	✅	Apollo-young man		yeoman	no	no	no	46022	2	general interlocution	G2	10		0		Req; Que; Inf			
+	46	Homeric Hymn 3		475			501		✅	Apollo		no	no	no	no	✅	Cretans		no	no	no	no	46022	3	general interlocution	G3	27		0		Com; Ins			
+	46	Homeric Hymn 3		526			530		✅	leader of the Cretans		no	no	no	no	✅	Apollo		no	no	no	no	46023	1	general interlocution	G1	5		0		Que			
+	46	Homeric Hymn 3		531			544		✅	Apollo		no	no	no	no	✅	Cretans		no	no	no	no	46023	2	general interlocution	G2	14		0		Res; Ins; War			
+	47	Homeric Hymn 4		30			38		✅	Hermes		no	no	no	no	✅	tortoise		no	no	yes	no	47024	1	monologue	M (no reply)	9		0		Gre; War			
+	47	Homeric Hymn 4		90			93		✅	Hermes		no	no	no	no	✅	old man		no	no	yes	no	47025	1	monologue	M (no reply)	4		0		Del; Thr			
+	47	Homeric Hymn 4		155			161		✅	Maia		no	no	no	no	✅	Hermes		no	no	no	no	47026	1	dialogue	D1	7		0		Que; Com			
+	47	Homeric Hymn 4		163			181		✅	Hermes		no	no	no	no	✅	Maia		no	no	no	no	47026	2	dialogue	D2	19		0		Del; Del			
+	47	Homeric Hymn 4		190			200		✅	Apollo		no	no	no	no	✅	old man		no	no	no	no	47027	1	dialogue	D1	11		0		Que			
+	47	Homeric Hymn 4		202			211		✅	old man		no	no	no	no	✅	Apollo		no	no	no	no	47027	2	dialogue	D2	10		0		Res; Inf			
+	47	Homeric Hymn 4		219			226		✅	Apollo		no	no	no	no	✅	self		no	no	no	no	47028	1	soliloquy	S	8		0		Del			
+	47	Homeric Hymn 4		254			259		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	47029	1	dialogue	D1	6		0		Thr; Que			
+	47	Homeric Hymn 4		261			277		✅	Hermes		no	no	no	no	✅	Apollo		no	no	no	no	47029	2	dialogue	D2	17		0		Res; Vow			
+	47	Homeric Hymn 4		282			292		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	47029	3	dialogue	D3	11		0		Ora; Thr			
+	47	Homeric Hymn 4		301			303		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	47029	4	dialogue	D4	3		0		War			
+	47	Homeric Hymn 4		307			312		✅	Hermes		no	no	no	no	✅	Apollo		no	no	no	no	47029	5	dialogue	D5	6		0		Que; Del			
+	47	Homeric Hymn 4		330			332		✅	Zeus		no	no	no	no	✅	Apollo		no	no	no	no	47030	1	general interlocution	G1	3		0		Que			
+	47	Homeric Hymn 4		334			364		✅	Apollo		no	no	no	no	✅	Zeus		no	no	no	no	47030	2	general interlocution	G2	31		0		Nar; Res			
+	47	Homeric Hymn 4		368			386		✅	Hermes		no	no	no	no	✅	Zeus	among other gods	no	no	no	no	47030	3	general interlocution	G3	19		0		Nar			
+	47	Homeric Hymn 4		405			408		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	47031	1	monologue	M (no reply)	4		0		Que			
+	47	Homeric Hymn 4		436			462		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	47032	1	dialogue	D1	27		0		Que; Per			
+	47	Homeric Hymn 4		464			495		✅	Hermes		no	no	no	no	✅	Apollo		no	no	no	no	47032	2	dialogue	D2	32		0		Res; Com; Per; Del			
+	47	Homeric Hymn 4		514			520		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	47033	1	monologue	M (no reply)	7		0		Del; Req			
+	47	Homeric Hymn 4		526b			568		✅	Apollo		no	no	no	no	✅	Hermes		no	no	no	no	47034	1	monologue	M (no reply)	32.5		0		Vow; Del			
+	48	Homeric Hymn 5		92			106		✅	Anchises		no	no	no	no	✅	Aphrodite	not recognised	no	no	no	no	48035	1	dialogue	D1	15		0		Que; Lau			
+	48	Homeric Hymn 5		108			142		✅	Aphrodite-maiden	saying she's a mortal	mortal	no	no	no	✅	Anchises		no	no	no	no	48035	2	dialogue	D2	35		0		Res; Inf; Nar; Com			
+	48	Homeric Hymn 5		145			154		✅	Anchises		no	no	no	no	✅	Aphrodite-maiden		mortal	no	no	no	48035	3	dialogue	D3	10		0		Per; Del			
+	48	Homeric Hymn 5		177			179		✅	Aphrodite		no	no	no	no	✅	Anchises		no	no	no	no	48036	1	dialogue	D1	3		0		Que			
+	48	Homeric Hymn 5		185			190		✅	Anchises		no	no	no	no	✅	Aphrodite		no	no	no	no	48036	2	dialogue	D2	6		0		Req			indirect speech in between the two (he responded promptly from out of his sleep)
+	48	Homeric Hymn 5		192			290		✅	Aphrodite		no	no	no	no	✅	Anchises		no	no	no	no	48036	3	dialogue	D3	99		0		Con; Ora; War			
+	49	Homeric Hymn 7		17			24		✅	helmsman (Tyrsenian pirat)		no	no	yes	no	✅	Tyrsenian pirats		no	no	collective	collective	49037	1	general interlocution	G1	8		0		Del; War			
+	49	Homeric Hymn 7		26			31		✅	captain (Tyrsenian pirat)		no	no	yes	no	✅	helmsman (Tyrsenian pirat)		no	no	yes	no	49037	2	general interlocution	G2	6		0		Com			
+	49	Homeric Hymn 7		55			57		✅	Dionysus		no	no	no	no	✅	helmsman (Tyrsenian pirat)		no	no	no	no	49038	1	monologue	M (no reply)	3		0		Con; Inf			
