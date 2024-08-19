@@ -8,7 +8,7 @@ work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	de
 43	7	427		431		✅	Sobrietas		no	no	no	no	✅	Luxuria		no	yes	no	no	43006	1	Monologue	M1 (no reply)	4		0		Far; vit; tau		no
 43	8	511		550		✅	Avaritia		no	no	no	no	✅	Vices		no	no	yes	yes	43007	1	Monologue	M1 (no reply)	39		0		Inf; des; que;		no
 43	9	606		628		✅	Operatio		no	no	no	no	✅	Virtues		no	no	yes	yes	43008	1	Monologue	M1 (no reply)	22		0		com; lau; inf		no
-43	10	694		699		✅	Concordia		no	no	no	no	✅	Virtues and Discordia-Virtue		no	no	yes	yes	43009	1	general interlocution	G1	5		0		que		no
+43	10	694		699		✅	Concordia		no	no	no	no	✅	Virtues		no	no	yes	yes	43009	1	general interlocution	G1	5		0		que		no
 43	11	709		714		✅	Discordia		no	no	no	no	✅	Virtues		no	no	yes	yes	43009	2	general interlocution	G2	5		0		res; inf		no
 43	12	750		797		✅	Concordia		no	no	no	no	✅	Virtues		no	no	yes	yes	43010	1	general interlocution	G1	47		0		lau; inf; com; war		no
-43	13	799		822		✅	Fides		no	no	no	no	✅	Virtues		no	no	yes	yes	43010	2	general interlocution	G2	23		0		lau; com		no
+43	13	799		822		✅	Fides		no	no	no	no	✅	Virtues		no	no	yes	yes	43010	2	Monologue	G2	23		0		lau; com		no

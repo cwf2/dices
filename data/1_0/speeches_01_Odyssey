@@ -161,11 +161,11 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 145	160	2	Odyssey	8	26	8	45	✅	Alcinous		no	no	no	no	✅	Phaeacians		no	no	collective	collective	2064	1	monologue	M (no reply)	20		0		Com; Del			firstlevel	6 of 16	mortal			
 146	161	2	Odyssey	8	97	8	103	✅	Alcinous		no	no	no	no	✅	Phaeacians		no	no	no	no	2065	1	monologue	M (no reply)	7		0		Cha; Del			firstlevel	7 of 16	mortal			
 147	162	2	Odyssey	8	133	8	139	✅	Laodamas		no	no	no	no	✅	Phaeacians		no	no	no	no	2066	1	general interlocution	G1	7		0		Del; Inf			firstlevel	1 of 2	mortal			
-148	163	2	Odyssey	8	141	8	142	✅	Euryalus (Phaeacian)		no	no	no	no	✅	Laodamas		no	no	no	no	2066	2	general interlocution	G2	2		0		Cha; Exh			firstlevel	1 of 4	mortal			
+148	163	2	Odyssey	8	141	8	142	✅	Euryalus (Odyssey)		no	no	no	no	✅	Laodamas		no	no	no	no	2066	2	general interlocution	G2	2		0		Cha; Exh			firstlevel	1 of 4	mortal			
 149	164	2	Odyssey	8	145	8	151	✅	Laodamas		no	no	no	no	✅	Odysseus		no	no	no	no	2066	3	general interlocution	G3	7		0		Cha			firstlevel	2 of 2	mortal			
 150	165	2	Odyssey	8	153	8	157	✅	Odysseus		no	no	no	no	✅	Laodamas		no	no	no	no	2066	4	general interlocution	G4	5		0		Res; Lam			firstlevel	18 of 130	mortal			
-151	166	2	Odyssey	8	159	8	164	✅	Euryalus (Phaeacian)		no	no	no	no	✅	Odysseus		no	no	no	no	2066	5	general interlocution	G5	6		0		Cha			firstlevel	2 of 4	mortal			
-152	167	2	Odyssey	8	166	8	185	✅	Odysseus		no	no	no	no	✅	Euryalus (Phaeacian)		no	no	no	no	2066	6	general interlocution	G6	20		0		Cha			firstlevel	19 of 130	mortal			
+151	166	2	Odyssey	8	159	8	164	✅	Euryalus (Odyssey)		no	no	no	no	✅	Odysseus		no	no	no	no	2066	5	general interlocution	G5	6		0		Cha			firstlevel	2 of 4	mortal			
+152	167	2	Odyssey	8	166	8	185	✅	Odysseus		no	no	no	no	✅	Euryalus (Odyssey)		no	no	no	no	2066	6	general interlocution	G6	20		0		Cha			firstlevel	19 of 130	mortal			
 153	168	2	Odyssey	8	195	8	198	✅	Athena-man		man	no	no	no	✅	Odysseus		no	no	no	no	2066	7	general interlocution	G7	4		0		Del			firstlevel	20 of 36	god		man	
 154	169	2	Odyssey	8	202	8	233	✅	Odysseus		no	no	no	no	✅	Phaeacians		no	no	collective	collective	2066	8	general interlocution	G8	32		0		Tau; Nar			firstlevel	20 of 130	mortal			
 155	170	2	Odyssey	8	236	8	255	✅	Alcinous		no	no	no	no	✅	Odysseus		no	no	no	no	2066	9	general interlocution	G9	20		0		Del			firstlevel	8 of 16	mortal			
@@ -180,9 +180,9 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 23	179	2	Odyssey	8	358	8	358	✅	Hephaestus		no	no	no	no	✅	Poseidon		no	no	no	no	2070	6	general interlocution	G6	1		1		Del			repreal	3 of 3	god			
 156	180	2	Odyssey	8	382	8	384	✅	Odysseus		no	no	no	no	✅	Alcinous		no	no	no	no	2071	1	general interlocution	G1	3		0		Lau			firstlevel	21 of 130	mortal			
 157	181	2	Odyssey	8	387	8	397	✅	Alcinous		no	no	no	no	✅	Phaeacians		no	no	no	no	2071	2	general interlocution	G2	11		0		Del; Com			firstlevel	9 of 16	mortal			
-158	182	2	Odyssey	8	401	8	405	✅	Euryalus (Phaeacian)		no	no	no	no	✅	Alcinous		no	no	no	no	2071	3	general interlocution	G3	5		0		Del			firstlevel	3 of 4	mortal			
-159	183	2	Odyssey	8	408	8	411	✅	Euryalus (Phaeacian)		no	no	no	no	✅	Odysseus		no	no	no	no	2071	4	general interlocution	G4	4		0		Del; Des			firstlevel	4 of 4	mortal			
-160	184	2	Odyssey	8	413	8	415	✅	Odysseus		no	no	no	no	✅	Euryalus (Phaeacian)		no	no	no	no	2071	5	general interlocution	G5	3		0		Del; Des			firstlevel	22 of 130	mortal			
+158	182	2	Odyssey	8	401	8	405	✅	Euryalus (Odyssey)		no	no	no	no	✅	Alcinous		no	no	no	no	2071	3	general interlocution	G3	5		0		Del			firstlevel	3 of 4	mortal			
+159	183	2	Odyssey	8	408	8	411	✅	Euryalus (Odyssey)		no	no	no	no	✅	Odysseus		no	no	no	no	2071	4	general interlocution	G4	4		0		Del; Des			firstlevel	4 of 4	mortal			
+160	184	2	Odyssey	8	413	8	415	✅	Odysseus		no	no	no	no	✅	Euryalus (Odyssey)		no	no	no	no	2071	5	general interlocution	G5	3		0		Del; Des			firstlevel	22 of 130	mortal			
 161	185	2	Odyssey	8	424	8	432	✅	Alcinous		no	no	no	no	✅	Arete		no	no	no	no	2072	1	monologue	M (no reply)	9		0		Com; Inf			firstlevel	10 of 16	mortal			
 162	186	2	Odyssey	8	443	8	445	✅	Arete		no	no	no	no	✅	Odysseus		no	no	no	no	2073	1	monologue	M (no reply)	3		0		War			firstlevel	2 of 3	mortal			
 163	187	2	Odyssey	8	461	8	462	✅	Nausicaa		no	no	no	no	✅	Odysseus		no	no	no	no	2074	1	dialogue	D1	2		0		Far			firstlevel	6 of 6	mortal			
@@ -204,7 +204,7 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 34	203	2	Odyssey	9	408	9	408	✅	Polyphemus		no	no	no	no	✅	cyclopes		no	no	collective	collective	2081	2	general interlocution	G2	1		1		Inf			repreal	5 of 8	mortal/god			
 35	204	2	Odyssey	9	410	9	412	✅	cyclopes		no	no	collective	collective	✅	Polyphemus		no	no	no	no	2081	3	general interlocution	G3	3		1		Del			repreal	2 of 2	mortal/god	collective		
 36	205	2	Odyssey	9	447	9	460	✅	Polyphemus		no	no	no	no	✅	ram		no	no	yes	no	2082	1	monologue	M (no reply)	14		1		Del; Des			repreal	6 of 8	mortal/god			
-37	206	2	Odyssey	9	475	9	479	✅	Odysseus		no	no	no	no	✅	Polyphemus		no	no	no	no	2083	1	dialogue	D1	5		1		Tau;			repreal	6 of 39	mortal			
+37	206	2	Odyssey	9	475	9	479	✅	Odysseus		no	no	no	no	✅	Polyphemus		no	no	no	no	2083	1	dialogue	D1	5		1		Tau; Vit			repreal	6 of 39	mortal			
 38	207	2	Odyssey	9	494	9	499	✅	companions of Odysseus		no	no	collective	collective	✅	Odysseus		no	no	no	no	2084	1	monologue	M (no reply)	6		1		Que			repreal	1 of 4	mortal	collective		
 39	208	2	Odyssey	9	502	9	505	✅	Odysseus		no	no	no	no	✅	Polyphemus		no	no	no	no	2083	2	dialogue	D2	4		1		Inf			repreal	7 of 39	mortal			
 40	209	2	Odyssey	9	507	9	521	✅	Polyphemus		no	no	no	no	✅	Odysseus		no	no	no	no	2083	3	dialogue	D3	15		1		Lam; Thr			repreal	7 of 8	mortal/god			
@@ -297,12 +297,12 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 185	296	2	Odyssey	13	200	13	216	✅	Odysseus		no	no	no	no	✅	self		no	no	no	no	2124	1	soliloquy	S	17		0		Lam			firstlevel	31 of 130	mortal			
 186	297	2	Odyssey	13	228	13	235	✅	Odysseus		no	no	no	no	✅	Athena-young shepherd		young shepherd	no	no	no	2125	1	dialogue	D1	8		0		Que			firstlevel	32 of 130	mortal			
 187	298	2	Odyssey	13	237	13	249	✅	Athena-young shepherd		young shepherd	no	no	no	✅	Odysseus		no	no	no	no	2125	2	dialogue	D2	13		0		Res; Inf			firstlevel	21 of 36	god		young shepherd	
-188	299	2	Odyssey	13	256	13	286	✅	Odysseus-Cretan		Cretan	no	no	no	✅	Athena-young shepherd		young shepherd	no	no	no	2125	3	dialogue	D3	31		0		Nar; Lam			firstlevel	33 of 130	mortal		Cretan	
-189	300	2	Odyssey	13	291	13	310	✅	Athena		no	no	no	no	✅	Odysseus		no	no	no	no	2125	4	dialogue	D4	20		0		Del			firstlevel	22 of 36	god			
-190	301	2	Odyssey	13	312	13	328	✅	Odysseus		no	no	no	no	✅	Athena		no	no	no	no	2125	5	dialogue	D5	17		0		Nar; Req			firstlevel	34 of 130	mortal			
-191	302	2	Odyssey	13	330	13	351	✅	Athena		no	no	no	no	✅	Odysseus		no	no	no	no	2125	6	dialogue	D6	22		0		Del; Inf			firstlevel	23 of 36	god			
-192	303	2	Odyssey	13	356	13	360	✅	Odysseus		no	no	no	no	✅	nymphs		no	no	collective	collective	2126	1	monologue	M (no reply)	5		0		Pra; Lau			firstlevel	35 of 130	mortal			
-193	304	2	Odyssey	13	362	13	365	✅	Athena		no	no	no	no	✅	Odysseus		no	no	no	no	2125	7	dialogue	D7	4		0		Del			firstlevel	24 of 36	god			
+188	299	2	Odyssey	13	256	13	286	✅	Odysseus-Cretan		Cretan	no	no	no	✅	Athena		no	no	no	no	2125	3	dialogue	D3	31		0		Nar; Lam			firstlevel	33 of 130	mortal		Cretan	
+189	300	2	Odyssey	13	291	13	310	✅	Athena		no	no	no	no	✅	Odysseus-Cretan		Cretan	no	no	no	2125	4	dialogue	D4	20		0		Del			firstlevel	22 of 36	god			
+190	301	2	Odyssey	13	312	13	328	✅	Odysseus-Cretan		Cretan	no	no	no	✅	Athena		no	no	no	no	2125	5	dialogue	D5	17		0		Del			firstlevel	34 of 130	mortal			
+191	302	2	Odyssey	13	330	13	351	✅	Athena		no	no	no	no	✅	Odysseus-Cretan		Cretan	no	no	no	2125	6	dialogue	D6	22		0		Del; Inf			firstlevel	23 of 36	god			
+192	303	2	Odyssey	13	356	13	360	✅	Odysseus-Cretan		Cretan	no	no	no	✅	nymphs		no	no	collective	collective	2126	1	monologue	M (no reply)	5		0		Pra; Lau			firstlevel	35 of 130	mortal			
+193	304	2	Odyssey	13	362	13	365	✅	Athena		no	no	no	no	✅	Odysseus-Cretan		Cretan	no	no	no	2125	7	dialogue	D7	4		0		Del			firstlevel	24 of 36	god			
 194	305	2	Odyssey	13	375	13	381	✅	Athena		no	no	no	no	✅	Odysseus		no	no	no	no	2127	1	dialogue	D1	7		0		Del			firstlevel	25 of 36	god			
 195	306	2	Odyssey	13	383	13	391	✅	Odysseus		no	no	no	no	✅	Athena		no	no	no	no	2127	2	dialogue	D2	9		0		Req; Del			firstlevel	36 of 130	mortal			
 196	307	2	Odyssey	13	393	13	415	✅	Athena		no	no	no	no	✅	Odysseus		no	no	no	no	2127	3	dialogue	D3	23		0		Del; Inf			firstlevel	26 of 36	god			
@@ -478,9 +478,9 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 356	477	2	Odyssey	18	313	18	319	✅	Odysseus-beggar		beggar	no	no	no	✅	female servants		no	no	collective	collective	2189	1	general interlocution	G1	7		0		Com			firstlevel	70 of 130	mortal		beggar	
 357	478	2	Odyssey	18	327	18	336	✅	Melantho		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2189	2	general interlocution	G2	10		0		Vit; War			firstlevel	1 of 2	mortal			
 358	479	2	Odyssey	18	338	18	339	✅	Odysseus-beggar		beggar	no	no	no	✅	Melantho		no	no	no	no	2189	3	general interlocution	G3	2		0		Thr			firstlevel	71 of 130	mortal		beggar	
-359	480	2	Odyssey	18	351	18	355	✅	Eurymachus		no	no	no	no	✅	suitors of Penelope		no	no	collective	collective	2190	1	general interlocution	G1	5		0		Vit			firstlevel	6 of 13	mortal			
-360	481	2	Odyssey	18	357	18	364	✅	Eurymachus		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2190	2	general interlocution	G2	8		0		Que; Vit			firstlevel	7 of 13	mortal			
-361	482	2	Odyssey	18	366	18	386	✅	Odysseus-beggar		beggar	no	no	no	✅	Eurymachus		no	no	no	no	2190	3	general interlocution	G3	21		0		Chal			firstlevel	72 of 130	mortal		beggar	
+359	480	2	Odyssey	18	351	18	355	✅	Eurymachus		no	no	no	no	✅	suitors of Penelope		no	no	collective	collective	2190	1	general interlocution	G1	5		0		Del			firstlevel	6 of 13	mortal			
+360	481	2	Odyssey	18	357	18	364	✅	Eurymachus		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2190	2	general interlocution	G2	8		0		Del; Per			firstlevel	7 of 13	mortal			
+361	482	2	Odyssey	18	366	18	386	✅	Odysseus-beggar		beggar	no	no	no	✅	Eurymachus		no	no	no	no	2190	3	general interlocution	G3	21		0		Vit; Des			firstlevel	72 of 130	mortal		beggar	
 362	483	2	Odyssey	18	389	18	393	✅	Eurymachus		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2190	4	general interlocution	G4	5		0		Vit; Thr			firstlevel	8 of 13	mortal			
 363	484	2	Odyssey	18	401	18	404	✅	suitor of Penelope		no	no	yes	no	✅	suitors of Penelope		no	no	collective	collective	2191	1	monologue	M (no reply)	4		0	More than one statement made to suitors of Penelope.	Del			firstlevel	1 of 1	mortal	yes		
 364	485	2	Odyssey	18	406	18	409	✅	Telemachus		no	no	no	no	✅	suitors of Penelope		no	no	collective	collective	2192	1	general interlocution	G1	4		0		Com			firstlevel	63 of 82	mortal			
@@ -534,7 +534,7 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 409	533	2	Odyssey	20	149	20	156	✅	Euryclea		no	no	no	no	✅	female servants		no	no	collective	collective	2209	1	monologue	M (no reply)	8		0		Com			firstlevel	9 of 15	mortal			
 410	534	2	Odyssey	20	166	20	167	✅	Eumaeus		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2210	1	dialogue	D1	2		0		Que			firstlevel	29 of 32	mortal			
 411	535	2	Odyssey	20	169	20	171	✅	Odysseus-beggar		beggar	no	no	no	✅	Eumaeus		no	no	no	no	2210	2	dialogue	D2	3		0		Res			firstlevel	89 of 130	mortal		beggar	
-412	536	2	Odyssey	20	178	20	182	✅	Melanthius		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2211	1	monologue	M (no reply)	5		0		Tau; Cha			firstlevel	4 of 5	mortal			
+412	536	2	Odyssey	20	178	20	182	✅	Melanthius		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2211	1	monologue	M (no reply)	5		0		Que; Cha			firstlevel	4 of 5	mortal			
 413	537	2	Odyssey	20	191	20	196	✅	Philoetius		no	no	no	no	✅	Eumaeus		no	no	no	no	2212	1	dialogue	D1	6		0		Que			firstlevel	1 of 5	mortal			
 414	538	2	Odyssey	20	199	20	225	✅	Philoetius		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2212	2	dialogue	D2	27		0		Nar; Lau			firstlevel	2 of 5	mortal			
 415	539	2	Odyssey	20	227	20	234	✅	Odysseus-beggar		beggar	no	no	no	✅	Philoetius		no	no	no	no	2212	3	dialogue	D3	8		0		Vow			firstlevel	90 of 130	mortal		beggar	
@@ -542,7 +542,7 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 417	541	2	Odyssey	20	245	20	246	✅	Amphinomus		no	no	no	no	✅	suitors of Penelope		no	no	collective	collective	2213	1	monologue	M (no reply)	2		0		Del			firstlevel	5 of 5	mortal			
 418	542	2	Odyssey	20	262	20	267	✅	Telemachus		no	no	no	no	❌	Odysseus and suitors of Penelope		no	no	no	no	2214	1	general interlocution	G1	6		0		Del; War			firstlevel	68 of 82	mortal			
 419	543	2	Odyssey	20	271	20	274	✅	Antinous		no	no	no	no	✅	Telemachus		no	no	no	no	2214	2	general interlocution	G2	4		0		Del			firstlevel	17 of 23	mortal			
-420	544	2	Odyssey	20	292	20	298	✅	Ctesippus		no	no	no	no	❌	suitors of Penelope and Odysseus-beggar		beggar	no	no	no	2215	1	general interlocution	G1	7		0		Tau			firstlevel	1 of 1	mortal			
+420	544	2	Odyssey	20	292	20	298	✅	Ctesippus		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2215	1	general interlocution	G1	7		0		Del			firstlevel	1 of 1	mortal			
 421	545	2	Odyssey	20	304	20	319	✅	Telemachus		no	no	no	no	✅	Ctesippus		no	no	no	no	2215	2	general interlocution	G2	16		0		Del; War			firstlevel	69 of 82	mortal			
 422	546	2	Odyssey	20	322	20	337	✅	Agelaus		no	no	no	no	✅	suitors of Penelope		no	no	collective	collective	2215	3	general interlocution	G3	16		0		Del; Exh			firstlevel	1 of 4	mortal			
 423	547	2	Odyssey	20	339	20	344	✅	Telemachus		no	no	no	no	✅	Agelaus		no	no	no	no	2215	4	general interlocution	G4	6		0		Del; War			firstlevel	70 of 82	mortal			
@@ -591,7 +591,7 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 465	590	2	Odyssey	22	154	22	159	✅	Telemachus		no	no	no	no	✅	Odysseus		no	no	no	no	2229	2	general interlocution	G2	6		0		Del			firstlevel	76 of 82	mortal			
 466	591	2	Odyssey	22	164	22	169	✅	Eumaeus		no	no	no	no	✅	Odysseus		no	no	no	no	2229	3	general interlocution	G3	6		0		Que			firstlevel	31 of 32	mortal			
 467	592	2	Odyssey	22	171	22	177	✅	Odysseus		no	no	no	no	❌	Eumaeus and Philoetius		no	no	no	tandem	2229	4	general interlocution	G4	7		0		Ins			firstlevel	101 of 130	mortal			
-468	593	2	Odyssey	22	195	22	199	✅	Eumaeus		no	no	no	no	✅	Melanthius		no	no	no	no	2230	1	monologue	M (no reply)	5		0		Tau			firstlevel	32 of 32	mortal			
+468	593	2	Odyssey	22	195	22	199	✅	Eumaeus		no	no	no	no	✅	Melanthius		no	no	no	no	2230	1	monologue	M (no reply)	5		0		Del			firstlevel	32 of 32	mortal			
 469	594	2	Odyssey	22	208	22	209	✅	Odysseus		no	no	no	no	✅	Athena-Mentor	as Mentor	Mentor	no	no	no	2231	1	general interlocution	G1	2		0		Com			firstlevel	102 of 130	mortal			
 470	595	2	Odyssey	22	213	22	223	✅	Agelaus		Mentor	no	no	no	✅	Athena-Mentor	as Mentor	Mentor	no	no	no	2231	2	general interlocution	G2	11		0		Per			firstlevel	3 of 4	mortal		Mentor	
 471	596	2	Odyssey	22	226	22	235	✅	Athena-Mentor		Mentor	no	no	no	✅	Odysseus		no	no	no	no	2232	1	monologue	M (no reply)	10		0		Exh; Vit			firstlevel	30 of 36	god		Mentor	
@@ -646,7 +646,7 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 123	645	2	Odyssey	24	131	24	137	✅	Penelope		no	no	no	no	✅	suitors of Penelope		no	no	collective	collective	2250	1	monologue	M (no reply)	7		1		Del			repreal	4 of 4	mortal			
 519	646	2	Odyssey	24	192	24	202	✅	Agamemnon		no	no	no	no	✅	Amphimedon		no	no	no	no	2248	5	general interlocution	G5	11		0		Del; Lau			firstlevel	3 of 3	mortal			
 520	647	2	Odyssey	24	214	24	218	✅	Odysseus		no	no	no	no	✅	all present		no	no	collective	collective	2251	1	monologue	M (no reply)	5		0		Com			firstlevel	120 of 130	mortal			
-521	648	2	Odyssey	24	244	24	279	✅	Odysseus-stranger		stranger	no	no	no	✅	Laertes		no	no	no	no	2252	1	dialogue	D1	36		0		Lau; Inf; Nar			firstlevel	121 of 130	mortal		stranger	
+521	648	2	Odyssey	24	244	24	279	✅	Odysseus-stranger		stranger	no	no	no	✅	Laertes		no	no	no	no	2252	1	dialogue	D1	36		0		Del; Inf; Nar			firstlevel	121 of 130	mortal		stranger	
 522	649	2	Odyssey	24	281	24	301	✅	Laertes		no	no	no	no	✅	Odysseus-stranger		stranger	no	no	no	2252	2	dialogue	D2	21		0		Que; Del			firstlevel	1 of 5	mortal			
 523	650	2	Odyssey	24	303	24	314	✅	Odysseus-stranger		stranger	no	no	no	✅	Laertes		no	no	no	no	2252	3	dialogue	D3	12		0		Res; Nar			firstlevel	122 of 130	mortal		stranger	
 524	651	2	Odyssey	24	321	24	326	✅	Odysseus		no	no	no	no	✅	Laertes		no	no	no	no	2252	4	dialogue	D4	6		0		Inf			firstlevel	123 of 130	mortal			
