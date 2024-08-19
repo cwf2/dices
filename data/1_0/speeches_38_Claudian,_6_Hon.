@@ -5,5 +5,5 @@ work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	de
 39	4	274		319		✅	Alaric		no	no	no	no	❌	Italy and Pollentia and Roma and spoils of war	Ausonium aethera	no	no	yes	no	39004	1	monologue	M1 (no reply)	45		0		Inf; nar; pra; far		no
 39	5	361		425		✅	Roma		no	no	no	no	✅	Honorius		no	no	no	no	39005	1	dialogue	D1	64		0		Nar; que; inf; lam		no
 39	6	427		493		✅	Honorius		no	no	no	no	✅	Roma		no	no	no	no	39005	2	dialogue	D2	66		0		Res; con; nar; com		no
-39	7	566		568		✅	young girl		no	no	yes	no	✅	nurse of young girl		no	no	yes	no	39006	1	monologue	M1	2		0		que;		no
-39	8	570		574		✅	young girl		no	no	yes	no	✅	nurse of young girl		no	no	yes	no	39006	2	monologue	M2	4		0		que;		no
+39	7	566		568		✅	Young girl		no	no	yes	no	✅	nurse		no	no	yes	no	39006	1	monologue	M1	2		0		que;		no
+39	8	570		574		✅	Young girl		no	no	yes	no	✅	nurse		no	no	yes	no	39006	2	monologue	M2	4		0		que;		no

@@ -13,5 +13,5 @@ work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_disguise	dead/vision	anon
 19	12	338		347		✅	female servants of Hermione	no	no	collective	collective		✅	Hermione		no	no	no	no	19009	2	general interlocution	G2	10		0	Res; Con		
 19	13	349		364		✅	Hermione	no	no	no	no		✅	female servants of Hermione		no	no	collective	collective	19009	3	general interlocution	G3	16		0	Lam; Del		
 19	14	374		377		✅	Hermione	no	no	no	no	dreaming	✅	dream-Helena	dream	no	dream	no	no	19010	1	dialogue	D1	3		0	Lam; Que		
-19	15	379		375		✅	dream-Helena	no	dream	no	no		✅	Hermione	dreaming	no	no	no	no	19010	2	dialogue	D2	3		0	Lam		
+19	15	379		380		✅	dream-Helena	no	dream	no	no		✅	Hermione	dreaming	no	no	no	no	19010	2	dialogue	D2	3		0	Lam		
 19	16	383		386		✅	Hermione	no	no	no	no		✅	birds		no	no	no	no	19011	1	monologue	M (no reply)	4		0	Com; Mes		385-386: the message Hermoine wants the birds to convey to Menelaos / Might be more of a lamentation: in that case soliloquy

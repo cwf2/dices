@@ -12,7 +12,7 @@ id	author	title	wd	urn	lang	tlg
 11	10	Dionysiaca	Q634519	urn:cts:greekLit:tlg2045.tlg001.perseus-grc1	greek	2045_001
 12	11	Posthomerica	Q1998710	urn:cts:greekLit:tlg2046.tlg001.perseus-grc1	greek	2046_001
 13	0	Orphic Argonautica	Q1230444		greek	
-14	16	Idylls	Q110739592	urn:cts:greekLit:tlg0005.tlg001.perseus-grc2	greek	0005_001
+14	16	Idylls	Q110739592		greek	
 15	2	Theogony	Q156498	urn:cts:greekLit:tlg0020.tlg001.perseus-grc2	greek	0020_001
 16	12	Sack of Troy			greek	
 17	13	Europa		urn:cts:greekLit:tlg0035.tlg002.perseus-grc2	greek	0035_002
@@ -20,7 +20,7 @@ id	author	title	wd	urn	lang	tlg
 19	17	Rape of Helen		urn:cts:greekLit:tlg4081.tlg001.perseus-grc2	greek	4081_001
 20	18	Hero and Leander			greek	
 21	15	Batrachomyomachia			greek	
-22	19	Cynegetica		urn:cts:greekLit:tlg0024.tlg001.perseus-grc2	greek	0024_001
+22	19	Cynegetica			greek	
 23	19	Halieutica		urn:cts:greekLit:tlg0023.tlg001.perseus-grc2	greek	0023_001
 44	25	1 To Dionysus	Q3798929	urn:cts:greekLit:tlg0013.tlg001.perseus-grc2	greek	0013_001
 45	25	2 To Demeter	Q3798927	urn:cts:greekLit:tlg0013.tlg002.perseus-grc2	greek	0013_002

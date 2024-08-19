@@ -49,7 +49,7 @@ work_id	seq	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	s
 26		1.2	267	b	1.2	269		✅	Isaiah		no	no	no	no	✅	Jacob		no	no	no	no					3.0							Seems to be written passages read aloud from the Bible?
 26		1.2	270	b	1.2	272	a	✅	Paul		no	no	no	no	❌			no	no	no	no					3.0							Seems to be written passages read aloud from the Bible?
 26			273	b		275	a	✅	David		no	no	no	no	❌											3.0							Seems to be written passages read aloud from the Bible?
-26		1.2	278		1.2	278		✅	priest of God		no	no	no	no	✅	attendees		no	no	no	no	26017	1	monologue	M (no reply)	1.0		0		Com			
+26		1.2	278		1.2	278		✅	priest (of God)		no	no	no	no	✅	attendees		no	no	no	no	26017	1	monologue	M (no reply)	1.0		0		Com			
 26		1.2	281		1.2	281	a	✅	Asterius		no	no	no	no	✅	Cyprian		no	no	no	no	26018	1	dialogue	D1	0.5		0		Com			
 26		1.2	282		1.2	283	a	✅	Cyprian		no	no	no	no	✅	Asterius		no	no	no	no	26018	2	dialogue	D2	1.5		0		Que			
 26		1.2	283	b	1.2	284		✅	Asterius		no	no	no	no	✅	Cyprian		no	no	no	no	26018	3	dialogue	D3	1.5		0		Del			

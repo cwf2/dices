@@ -52,7 +52,7 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 51		7		3	81	y	3	82	n	n	✅	Jason						❌	Aeson and Argonauts		y (Aeson: dead and absent)		y		7041	1	M	M (no reply)	1.75		0		Pra; Exh	
 52		7		3	103	y	3	105	y	y	✅	Tydeus						✅	Corythus						7042	1	M	M (no reply)	2.1666666666666665		0		Thr	
 53		7		3	143	n	3	155	y	y	✅	Nestor						✅	Argonauts				y		7043	1	M	M (no reply)	1.9166666666666665		0		Vit; Exh	
-54		7		3	169	y	3	170	n	y	✅	Hercules						✅	Admon						7044	1	M	M (no reply)	1.6666666666666665		0		Thr	
+54		7		3	169	y	3	170	n	y	✅	Hercules						✅	Admon/Hidmon						7044	1	M	M (no reply)	1.6666666666666665		0		Thr	
 55		7		3	201	n	3	203	y	n	✅	Telamon						✅	gods				y		7045	1	M	M (no reply)	2.25		0		Pra	
 56		7		3	230	y	3	234	n	n	✅	Cyzicus						✅	Cyzicans				y		7046	1	M	M (no reply)	4.75		0		Vit; Exh	
 57		7		3	259	n	3	261	n	y	✅	Tiphys						✅	gods of the sea				y		7047	1	M	M (no reply)	2.1666666666666665		0		Lam	
@@ -106,8 +106,8 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 105		7		5	37	y	5	59	n	y	✅	Jason						✅	self						7081	1	S	S	21.083333333333332		0		Lam; Des	
 106		7		5	129	n	5	131	y	y	✅	Jason						❌	Autolycus and Phlogius (son of Deimachus) and Deileon				y		7082	1	M	M (no reply)	2.3333333333333335		0		Req	
 107		7		5	194	n	5	213	y	y	✅	Jason						❌	ghost of Phrixus and Helle and woods and Phasis		Phrixus				7083	1	M	M (no reply)	16.833333333333332		0		Pra	
-108		7		5	233	y	5	240	n	n	✅	ghost of Phrixus		y				✅	Aietes						7084	1	M	M (no reply)	7.75		0		Ora	
-109		7		5	246	n	5	252	n	n	✅	Aietes						❌	Sol and Mars				y	Tandem	7085	1	M	M (no reply)	7		0		Pra	
+108		7		5	233	y	5	240	n	n	✅	ghost of Phrixus		y				✅	Aeetes						7084	1	M	M (no reply)	7.75		0		Ora	
+109		7		5	246	n	5	252	n	n	✅	Aeetes						❌	Sol and Mars				y	Tandem	7085	1	M	M (no reply)	7		0		Pra	
 110		7		5	282	y	5	285	n	y	✅	Minerva						✅	Juno						7086	1	D	D	3.5833333333333335		0		Que	
 111		7		5	286	y	5	291	n	n	✅	Juno						✅	Minerva						7086	2	D	D (reply)	5.75		0		Res	
 112		7		5	292	n	5	295	n	y	✅	Minerva						✅	Juno						7086	3	D	D (reply)	3.75		0		Res	
@@ -117,16 +117,16 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 116		7		5	378	n	5	390	n	y	✅	Jason						✅	Medea						7089	1	D	D	12.916666666666666		0		Gre; Req	
 117		7		5	393	n	5	396	n	n	✅	Medea						✅	Jason						7089	2	D	D (reply)	4		0		Res	
 118		7		5	403	y	5	406	n	y	✅	companion of Medea					Medea's maid	✅	Argonauts				y		7090	1	M	M (no reply)	3.5		0		Inf	
-119		7		5	471	n	5	518	n	n	✅	Jason						✅	Aietes						7091	1	D	D	48		0		Gre; Inf; Req	
-120		7		5	534	y	5	541	y	y	✅	Aietes						❌	Jason and Argonauts				y		7091	2	D	D (reply)	7.333333333333333		0		Res	
-121		7		5	542	n	5	546	y	y	✅	Jason						✅	Aietes						7091	3	D	D (reply)	4.166666666666667		0		Res	
+119		7		5	471	n	5	518	n	n	✅	Jason						✅	Aeetes						7091	1	D	D	48		0		Gre; Inf; Req	
+120		7		5	534	y	5	541	y	y	✅	Aeetes						❌	Jason and Argonauts				y		7091	2	D	D (reply)	7.333333333333333		0		Res	
+121		7		5	542	n	5	546	y	y	✅	Jason						✅	Aeetes						7091	3	D	D (reply)	4.166666666666667		0		Res	
 122		7		5	550	y	5	552	y	n	✅	Argonauts				y		✅	Castor						7092	1	D	D	1.4166666666666667		0		Req	
 123		7		5	553	n	5	557	n	n	✅	Castor						✅	Argonauts				y		7092	2	D	D (reply)	5		0		Mes; Req	
-124		7		5	578	n	5	580	n	n	✅	Jason						✅	Aietes						7093	1	D	D	3		0		Que	
-125		7		5	582	n	5	583	n	y	✅	Aietes						✅	Jason						7093	2	D	D (reply)	1.8333333333333335		0		Res	
-126		7		5	587	n	5	588	n	y	✅	Jason						✅	Aietes						7093	3	D	D (reply)	1.6666666666666665		0		Req	
-127		7		5	590	n	5	595	n	n	✅	Aietes						✅	Jason						7093	4	D	D (reply)	6		0		Res	
-128		7		5	599	y	5	614	n	y	✅	Aietes						✅	Jason						7093	5	D	D (reply)	18.5		0		Inf	
+124		7		5	578	n	5	580	n	n	✅	Jason						✅	Aeetes						7093	1	D	D	3		0		Que	
+125		7		5	582	n	5	583	n	y	✅	Aeetes						✅	Jason						7093	2	D	D (reply)	1.8333333333333335		0		Res	
+126		7		5	587	n	5	588	n	y	✅	Jason						✅	Aeetes						7093	3	D	D (reply)	1.6666666666666665		0		Req	
+127		7		5	590	n	5	595	n	n	✅	Aeetes						✅	Jason						7093	4	D	D (reply)	6		0		Res	
+128		7		5	599	y	5	614	n	y	✅	Aeetes						✅	Jason						7093	5	D	D (reply)	18.5		0		Inf	
 129		7		5	624	n	5	648	n	n	✅	Mars						✅	Jupiter						7094	1	G	G	25		0		Lam; Per	
 130		7		5	651	n	5	669	n	y	✅	Minerva						❌	Mars and Jupiter				y	Tandem	7094	2	G	G (reply)	18.833333333333332		0		Tau; Per; Req	
 131		7		5	670	n	5	670	y	n	✅	Mars						❌	Minerva and Jupiter				y	Tandem	7094	3	G	G (reply)	0.66666666666667		0		Tau	
@@ -147,7 +147,7 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 146		7		6	497	n	6	502	n	n	✅	Hecate						✅	self						7106	1	S	S	6		0		Lam	
 147		7		6	536	y	6	539	n	y	✅	Aron						✅	Armes						7107	1	M	M (no reply)	3.5833333333333335		0		Vit; Cha	
 148		7		6	547	n	6	549	n	y	✅	Jason						❌	sons of Phrixus and Argus				y		7108	1	M	M (no reply)	2.9166666666666665		0		Acc	
-149		7		6	588	n	6	590	y	n	✅	Medea						✅	Juno-Chalciope	Chalciope				disguise	7110	1	D	D	2.5833333333333335		0		Que	
+149		7		6	588	n	6	590	y	n	✅	Medea						✅	Juno-Chalciope	Chalciope				disguise	7109	1	D	D	2.5833333333333335		0		Que	
 150		7		6	592	n	6	599	n	y	✅	Juno-Chalciope	Chalciope					✅	Medea						7110	2	D	D (reply)	7.916666666666667		0		Res	
 151		7		6	624	n	6	629	y	n	✅	Jupiter						✅	self						7111	1	S	S	5.166666666666667		0		Lam	
 152		7		6	647	n	6	648	y	n	✅	Colaxes						✅	Jason						7112	1	M	M (no reply)	1.4166666666666667		0		Tau; Cha	
@@ -155,8 +155,8 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 154		7		6	727	n	6	736	n	n	✅	Perses						❌	gods and Jupiter				y	superi	7114	1	M	M (no reply)	10		0		Lam; Pra	
 155		7		6	741	y	6	744	n	y	✅	Minerva						✅	self						7115	1	S	S	3.75		0		Del	
 156		7		7	9	n	7	20	n	n	✅	Medea						✅	self						7116	1	S	S	12		0		Lam; Del	
-157		7		7	35	n	7	77	n	n	✅	Aietes						❌	Phrixus and Jason and Argonauts		Phrixus			dead Phrixus	7118	1	D	D	43		0		Vit; Cha	
-158		7		7	89	n	7	100	n	y	✅	Jason						✅	Aietes						7118	2	D	D (reply)	11.9166666666666		0		Res; Vit; Req	
+157		7		7	35	n	7	77	n	n	✅	Aeetes						❌	Phrixus and Jason and Argonauts		Phrixus			dead Phrixus	7117	1	D	D	43		0		Vit; Cha	
+158		7		7	89	n	7	100	n	y	✅	Jason						✅	Aeetes						7118	2	D	D (reply)	11.9166666666666		0		Res; Vit; Req	
 159		7		7	128	n	7	140	n	y	✅	Medea						✅	self						7119	1	S	S	12.833333333333334		0		Lam; Des	
 160		7		7	159	n	7	170	n	n	✅	Juno						✅	Venus						7120	1	D	D	12		0		Per; Req	
 161		7		7	172	n	7	186	y	n	✅	Venus						✅	Juno						7120	2	D	D (reply)	14.416666666666666		0		Res; Per; Req	
@@ -176,7 +176,7 @@ seq	work	work_id	orig_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 175		7		7	516	n	7	521	y	y	✅	Medea						✅	Jason						7127	3	D	D (reply)	7		0		Inf	
 176		7		7	529	n	7	529	n	n	✅	Jason						✅	Medea						7127	4	D	D (reply)	1		0		Que	
 177		7		7	532	n	7	537	y	n	✅	Medea						✅	Jason						7127	5	D	D (reply)	5.583333333333333		0		Res; Des	
-178		7		7	546	y	7	552	n	y	✅	Aietes						❌	bulls and Medea				y	animals	7128	1	M	M (no reply)	6.333333333333333		0		Des; Req	
+178		7		7	546	y	7	552	n	y	✅	Aeetes						❌	tauri and Medea				y	animals	7128	1	M	M (no reply)	6.333333333333333		0		Des; Req	
 179		7		8	10	n	8	15	n	n	✅	Medea						✅	self						7129	1	S	S	6		0		Far; Des	
 180		7		8	37	n	8	43	n	n	✅	Jason						✅	Medea						7130	1	D	D	7		0		Acc; Req	
 181		7		8	46	n	8	53	n	n	✅	Medea						❌	Jason and gods				y		7130	2	D	D (reply)	8		0		Res; Vow; Req	

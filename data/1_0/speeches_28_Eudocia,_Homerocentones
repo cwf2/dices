@@ -62,15 +62,15 @@ work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	de
 27	61	1674		1677		✅	Judas Iscariot		no	no	no	no	✅	Jesus	ώ φιλ'	no	no	no	no	27042	1	dialogue	D1	4.0		0		Req; Lau		no
 27	62	1679		1734		✅	Jesus		no	no	no	no	✅	Judas Iscariot		no	no	no	no	27042	2	dialogue	D2	56.0		0		Inf; Thr; War; Vit		no
 27	63	1747		1748		✅	Jews	οἱ δ'/τις (representative)	no	no	yes	yes	✅	Jesus		no	no	no	no	27043	1	monologue	M (no reply)	2.0		0		Tau; Que		no
-27	64	1753		1753		✅	insolent young Jew	 τις νέων ὑπερηνορεόντων; insolent young Jew 1	no	no	yes	no	✅	Jews		no	no	yes	yes	27044	1	monologue	M (no reply)	1.5		0		Ins		no
+27	64	1753		1753		✅	insolent young Jew 1	 τις νέων ὑπερηνορεόντων	no	no	yes	no	✅	Jews		no	no	yes	yes	27044	1	monologue	M (no reply)	1.5		0		Ins		no
 27	65	1788		1790		✅	woman in the courthouse		no	no	yes	no	✅	Simon			no	no	no	27045	1	dialogue	D1	3.0		0		Inf; Vit		no
 27	66	1792		1793		✅	woman in the courthouse		no	no	yes	no	✅	Simon			no	no	no	27045	2	dialogue	D2	2.0		0		Vit		no
 27	67	1813		1814		✅	Simon	denying		no	no	no	✅	Simon			no	no	no	27046	1	soliloquy	S	2.0		0		Lam; Vit		no
 27	68	1843		1851		✅	Pilate		no	no	no	no	✅	Jews	addressee is unclear	no	no	yes	yes	27047	1	monologue	M (no reply)	9.0		0		Lam; Que		no
-27	69	1902		1920		✅	insolent young Jew	arrogant young man; insolent young Jew 2	no	no	yes	no	✅	Jesus		no	no	no	no	27048	1	monologue	M (no reply)	19.0		0		Tau; Vit		no
+27	69	1902		1920		✅	insolent young Jew 2	arrogant young man	no	no	yes	no	✅	Jesus		no	no	no	no	27048	1	monologue	M (no reply)	19.0		0		Tau; Vit		no
 27	70	1922		1924		✅	pious man	τις 	no	no	yes	no	✅	pious man		no	no	yes	no	27049	1	soliloquy	s	3.0		0		Res; Lau		no
 27	71	1927		1939		✅	Jesus		no	no	no	no	✅	God	ὦ πάτερ	no	no		no	27050	1	monologue	M (no reply)	13.0		0		pra		no
-27	72	1950		1965		✅	insolent young Jew	ἄλλος νέων ὑπερηνορεόντων; insolent young Jew 3	no	no	yes	no	✅	Jesus		no	yes	no	no	27051	1	monologue	M (no reply)	16.0		0		Lam		no
+27	72	1950		1965		✅	insolent young Jew 3	ἄλλος νέων ὑπερηνορεόντων	no	no	yes	no	✅	Jesus		no	yes	no	no	27051	1	monologue	M (no reply)	16.0		0		Lam		no
 27	73	1997		1997		✅	Satan	 Ἀϊδωνεύς	no	no	no	no	✅	Jesus		no	yes	no	no	27052	1	monologue	M (no reply)	0.5		0		Com		no
 27	74	2003		2004		✅	Jesus		no	yes	no	no	✅	dead souls		no	yes	yes	yes	27053	1	monologue	M (no reply)	2.0		0		Del; Inf		no
 27	75	2006		2011		✅	dead souls	τις (representative)	no	yes	yes	no	✅	dead souls	πλησίον (each to his neighbour)	no	yes	yes	no	27054	1	monologue	M (no reply)	6.0		0		Lam		no
