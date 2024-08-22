@@ -7,4 +7,4 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 	6	35	De consulatu Stilichonis	2	279	n	2	339	y	✅	Roma		no	no	no	no	✅	Stilicho		no	no	no	no	35002	1	monologue	M1	48.25	386	0						
 	7	35	De consulatu Stilichonis	2	378	n	2	407	n	✅	Roma		no	no	no	no	✅	Roma		no	no	no	no	35003	1	soliloquy	S	29 11//12	182	0	absent addressee: Stilicho; posessed by mortal: Vidit ut optato se consule Roma potitam;					ait
 	8	35	De consulatu Stilichonis	2	454	n	2	466	n	✅	Sol	Phoebus	no	no	no	no	✅	golden years		no	no	no	no	35004	1	monologue	M1	13	77	0						
-	9	35	De consulatu Stilichonis	3	202	n	3	284	n	✅	Diana		no	no	no	no	❌	companions of Diana and Lycaste and Opis		no	no	no	no	35005	1	soliloquy	S	25	182	0						
+	9	35	De consulatu Stilichonis	3	262	n	3	284	n	✅	Diana		no	no	no	no	❌	companions of Diana and Lycaste and Opis		no	no	no	no	35005	1	soliloquy	S	25	182	0						

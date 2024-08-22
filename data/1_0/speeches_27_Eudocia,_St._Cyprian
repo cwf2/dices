@@ -57,7 +57,7 @@ work_id	seq	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	s
 26		2	1		2	478	a	✅	Cyprian		no	no	no	no	✅	friends		no	no	no	no	26019	1	monologue	M (no reply)	478.5		0	The response to the story seems to be lost	Nar; Inf; Del			
 26		2	228		2	228	a	✅	demon #1		no	no	no	no	✅	Cyprian		no	no	no	no	26020	1	monologue	M (no reply)	0.5		1		Lau			
 26		2	320	b	2	322		✅	Cyprian		no	no	no	no	✅	Beliar		no	no	no	no	26021	1	monologue	M (no reply)	1.5		1		Req			
-26		2			2			✅	Aglaidas		no	no	no	no	✅	those present		no	no	no	no	26022	1	monologue	M (no reply)	1.0		1		Del			
+26		2	351		2	351		✅	Aglaidas		no	no	no	no	✅	those present		no	no	no	no	26022	1	monologue	M (no reply)	1.0		1		Del			
 26		2	376	b	2	380	a	✅	Justa		no	no	no	no	❌	Cledonia and Aedesius		no	no	no	no	26023	1	monologue	M (no reply)	4.0		1		Con			
 26		2	387		2	388		✅	Justa		no	no	no	no	❌	Cledonia and Aedesius		no	no	no	no	26024	1	monologue	M (no reply)	2.0		1		Con			
 26		2	406		2	447		✅	Cyprian		no	no	no	no	✅	demon	which demon?	no	no	no	no	26025	1	monologue	M (no reply)	42.0		1		Del; Tau; Vit			

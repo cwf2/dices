@@ -17,10 +17,10 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 	16	41		3	92		3	96		✅	Ceres		no	no	yes	no	✅	Proserpina		no	yes	yes	no	41016	1	dialogue	D1	4		0		que	
 	17	41		3	97		3	108		✅	Proserpina		no	yes	yes	no	✅	Ceres		no	no	yes	no	41016	2	dialogue	D2	11		0		res; que; pra	
 	18	41		3	114		3	133		✅	Ceres		no	no	yes	no	✅	Cybele		no	no	no	no	41017	1	dialogue	D1	19		0		inf; lam	
-	19	41		3	134		3	137		✅	Cybele		no	no	no	no	✅	Ceres		no	no	yes	no	41017	2	dialogue	D2	3		0		inf; com	
+	19	41		3	133		3	136		✅	Cybele		no	no	no	no	✅	Ceres		no	no	yes	no	41017	2	dialogue	D2	3		0		inf; com	
 	20	41		3	180	b	3	192	a	✅	Ceres		no	no	yes	no	✅	Electra (Oceanid)		no	no	yes	no	41018	1	dialogue	D1	12		0		lam; que	
 	21	41		3	196	b	3	259		✅	Electra (Oceanid)		no	no	yes	no	✅	Ceres		no	no	yes	no	41018	1	dialogue	D2	63		0		lam; inf; mes?	
 	22	41		3	270		3	291		✅	Ceres		no	no	yes	no	✅	Olympian gods	no reaction, Ceres is only speaker in dialogue	no	no	yes	yes	41019	1	dialogue	D1	21		0		com; que; lam	
 	23	41		3	295		3	311		✅	Ceres		no	no	yes	no	✅	Olympian gods	no reaction, Ceres is only speaker in dialogue	no	no	yes	yes	41019	2	dialogue	D2	16		0		que; pra; lam	
 	24	41		3	312		3	329		✅	Ceres		no	no	yes	no	✅	Olympian gods	no reaction, Ceres is only speaker in dialogue	no	no	yes	yes	41019	3	dialogue	D3	17		0		que; inf; lam; tau	
-	25	41		3	407		3	435		✅	Ceres		no	no	yes	no	✅	Proserpina		no	no	no	no	41020	1	monologue	M1(no reply	28		0		Lau; lam; que; 	
+	25	41		3	407		3	437		✅	Ceres		no	no	yes	no	✅	Proserpina		no	no	no	no	41020	1	monologue	M1(no reply	30		0		Lau; lam; que; 	
