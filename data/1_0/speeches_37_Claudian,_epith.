@@ -7,5 +7,5 @@ work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	de
 38	6	173		179		✅	Nereids		no	no	yes	yes	✅	Venus		no	no	yes	no	38005	1	monologue	M (no reply)	6		0		pra; lau; inf		no
 38	7	190		227		✅	Venus		no	no	yes	no	❌	Hymen and Grace and Concordia and Cupids and companions of Venus	nostri comites, names v. 202-3	no	no	yes	yes	38006	1	monologue	M (no reply)	37		0		com; inf		no
 38	8	252		281		✅	Venus	Cytherea	no	no	no	no	✅	Maria (daughter of Stilicho)		no	no	no	no	38007	1	monologue	M (no reply)	29		0		lau;		no
-38	9	300		341		✅	soldiers		no	no	yes	yes	✅	Jupiter	Dive parens	no	no	yes	no	38008	1	monologue	M (no reply)	41		0		lau; inf; que		no
+38	9	300		341		✅	soldiers		no	no	yes	yes	❌	Jupiter and Stilicho	Dive parens	no	no	yes	no	38008	1	monologue	M (no reply)	41		0		lau; inf; que		no
 38	10	319		319		✅	someone				yes	no	✅	someone	i.e. to someone else?	no	no	yes		38009	1	monologue	M (no reply)	0		1		inf		
