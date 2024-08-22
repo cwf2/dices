@@ -44,7 +44,7 @@ work_id	seq	orig_id	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_not
 12	43	43	3	493	3	503	✅	Agamemnon		no	no	no	no	❌	Achilles and Zeus	Achilles is dead	no	Achilles is dead	no	no	12028	1	soliloquy	S	11		0		Lam			1 of 8	mortal			
 12	44	44	3	518	3	524	✅	Nestor		no	no	no	no	✅	Agamemnon		no	no	no	no	12029	1	monologue	M (no reply)	7		0		Exh			4 of 14	mortal			
 12	45	45	3	560	3	573	✅	Briseis		no	no	no	no	✅	Achilles	Dead	no	dead	no	no	12030	1	soliloquy	S	14		0		Lam			1 of 1	mortal			
-12	46	46	3	608	3	630	✅	Thetis		no	no	no	no	✅	Achilles	Dead	no	dead	no	no	12031	1	soliloquy	S	23		0		Lam; Inf			1 of 2	god			
+12	46	46	3	608	3	630	✅	Thetis		no	no	no	no	✅	self		no		no	no	12031	1	soliloquy	S	23		0		Lam; Inf			1 of 2	god			
 12	47	47	3	633	3	654	✅	Calliope		no	no	no	no	✅	Thetis		no	no	no	no	12032	1	monologue	M (no reply)	22		0		Con; Del			1 of 1	god			
 12	48	48	3	770	3	780	✅	Poseidon		no	no	no	no	✅	Thetis		no	no	no	no	12033	1	monologue	M (no reply)	11		0		Con; Inf			1 of 2	god			
 12	49	49	4	20	4	31	✅	someone	(Trojan)	no	no	yes	no	✅	Trojans		no	no	yes	collective	12034	1	general interlocution	G1	12		0		Des			1 of 1	mortal	yes		

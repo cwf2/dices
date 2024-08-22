@@ -43,12 +43,6 @@ work_id	seq	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	s
 26		1.2	230	b	1.2	239		✅	Cyprian		no	no	no	no	✅	Anthimus		no	no	no	no	26014	3	dialogue	D3	8.5		0		Del; Per			
 26		1.2	246	b	1.2	249		✅	Cyprian		no	no	no	no	✅	self		no	no	no	no	26015	1	soliloquy	S	2.5		0		Del			
 26		1.2	256		1.2	258		✅	Cyprian		no	no	no	no	✅	God		no	no	no	no	26016	1	monologue	M (no reply)	3.0		0		Pra; Req			
-26		1.2	260	b	1.2	261		✅	David		no	no	no	no	✅	God		no	no	no	no					2.0				Pra; Req			Seems to be written passages read aloud from the Bible?
-26		1.2	263	b	1.2	263	a	✅	Hosea		no	no	no	no	✅	God		no	no	no	no					1.0							Seems to be written passages read aloud from the Bible?
-26		1.2	264	b	1.2	266		✅	David		no	no	no	no	✅	God		no	no	no	no					3.0							Seems to be written passages read aloud from the Bible?
-26		1.2	267	b	1.2	269		✅	Isaiah		no	no	no	no	✅	Jacob		no	no	no	no					3.0							Seems to be written passages read aloud from the Bible?
-26		1.2	270	b	1.2	272	a	✅	Paul		no	no	no	no	❌			no	no	no	no					3.0							Seems to be written passages read aloud from the Bible?
-26			273	b		275	a	✅	David		no	no	no	no	❌											3.0							Seems to be written passages read aloud from the Bible?
 26		1.2	278		1.2	278		✅	priest (of God)		no	no	no	no	✅	attendees		no	no	no	no	26017	1	monologue	M (no reply)	1.0		0		Com			
 26		1.2	281		1.2	281	a	✅	Asterius		no	no	no	no	✅	Cyprian		no	no	no	no	26018	1	dialogue	D1	0.5		0		Com			
 26		1.2	282		1.2	283	a	✅	Cyprian		no	no	no	no	✅	Asterius		no	no	no	no	26018	2	dialogue	D2	1.5		0		Que			
