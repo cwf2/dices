@@ -148,8 +148,10 @@ class SpeechCluster(models.Model):
     '''A group of related speeches'''
     
     class Meta:
-        ordering = ['id']
-        
+        ordering = ['seq']
+
+    seq = models.IntegerField(default=0)
+                
     def get_spkr_str(self):
         '''Return speaker list as a string'''
         chars = []

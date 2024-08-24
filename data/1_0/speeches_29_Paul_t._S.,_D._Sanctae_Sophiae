@@ -1,4 +1,4 @@
-work_id	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
-28	91	b	98		✅	someone		no	no	yes	no	✅	Paul the Silentiary		no	no	no	no	28001	1	monologue	M (no reply)	7.5		0		Vit		yes
-28	220		242		✅	Roma	personified	no	city	no	no	✅	Justinian		no	no	no	no	28002	1	dialogue	D1	23.0		0		Lau; Exh		no
-28	248		254		✅	Justinian		no	no	no	no	✅	Roma	personification	no	city	no	no	28002	2	dialogue	D2	7.0		0		Con; Vow		no
+work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
+28	1	91	b	98		✅	someone		no	no	yes	no	✅	Paul the Silentiary		no	no	no	no	28001	1	monologue	M (no reply)	7.5		0		Vit		yes
+28	2	220		242		✅	Roma	personified	no	city	no	no	✅	Justinian		no	no	no	no	28002	1	dialogue	D1	23.0		0		Lau; Exh		no
+28	3	248		254		✅	Justinian		no	no	no	no	✅	Roma	personification	no	city	no	no	28002	2	dialogue	D2	7.0		0		Con; Vow		no

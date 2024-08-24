@@ -296,8 +296,8 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	254	295	44	283	44	318	✅	Dionysus		no	no	no	no	✅	Autonoe		no	no	no	no	11264	1	monologue	M (no reply)	36		0		Del; Inf; Exh			firstlevel	46 of 55	god									
 11	255	296	45	8	45	30	✅	Agave		no	no	no	no	❌	self and Dionysus	Dionysus is absent	no	no	no	no	11265	1	soliloquy	S	23		0		Del; Exh			firstlevel	2 of 5	mortal									
 11	256	297	45	66	45	94	✅	Pentheus		no	no	no	no	❌	Cadmus and Tiresias		no	no	no	tandem	11266	1	general interlocution	G1	29		0		Com; Exh; Del			firstlevel	2 of 6	mortal									
-11	257	298	45	96	45	215	✅	Tiresias		no	no	no	no	✅	Pentheus		no	no	no	no	11266	2	general interlocution	G2	120		0		Del; War; Nar; Per			firstlevel	1 of 1	mortal									
-11	29	299	45	92	45	93	✅	Tiresias		no	no	no	no	✅	someone	speaker of the speech in which it is embedded	no	no	yes	no	11267	1	monologue	M (no reply)	2		1		Inf			rephyp		mortal						procatalepsis	2nd		
+11	29	298	45	92	45	93	✅	Tiresias		no	no	no	no	✅	someone	speaker of the speech in which it is embedded	no	no	yes	no	11267	1	monologue	M (no reply)	2		1		Inf			firstlevel	1 of 1	mortal									
+11	257	299	45	96	45	215	✅	Tiresias		no	no	no	no	✅	Pentheus		no	no	no	no	11266	2	general interlocution	G2	120		0		Del; War; Nar; Per			rephyp		mortal						procatalepsis	2nd		
 11	30	300	45	170	45	171	✅	Pentheus		no	no	no	no	✅	someone	speaker of the speech in which it is embedded	no	no	yes	no	11268	1	monologue	M (no reply)	2		1		Cha			rephyp		mortal						procatalepsis	2nd		
 11	259	301	45	220	45	227	✅	Pentheus		no	no	no	no	✅	troops of Pentheus		no	no	collective	collective	11269	1	monologue	M (no reply)	8		0		Com			firstlevel	3 of 6	mortal			type 1*						
 11	258	302	45	246	45	251	✅	Dionysus-soldier	as soldier	soldier of Pentheus	no	no	no	✅	Pentheus		no	no	no	no	11270	1	general interlocution	G1	6		0		War; Exh			firstlevel	47 of 55	god		soldier of Pentheus		yes					

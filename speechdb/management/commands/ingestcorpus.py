@@ -210,16 +210,18 @@ def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
     reader = csv.DictReader(f, delimiter='\t')
     
     skipped = []
-    seq = 1
     
     for rec in reader:
         s = Speech()
         errs = []
         
-        # seq
-        s.seq = seq
-        seq += 1
-
+        # sequence
+        try:
+            s.seq = rec.get('seq').strip()
+            assert s.seq
+        except:
+            errs.append('seq')
+        
         # locus
         try:
             book_fi = rec.get('from_book').strip()
@@ -404,7 +406,19 @@ class Command(BaseCommand):
             self.stderr.write(f'Reading data from {speech_file}')
             addSpeeches(speech_file, characters=characters, alt_chars=alt_chars,
                         anon_chars=anon_chars)
+                        
+        # set sort-order for speech clusters
+        cluster_index = {}
+        sort_key = 0
+        for speech in Speech.objects.all():
+            cluster_id = speech.cluster.pk
+            if cluster_id not in cluster_index:
+                cluster_index[cluster_id] = sort_key
+                sort_key += 1
+        for cluster in SpeechCluster.objects.all():
+            cluster.seq = cluster_index[cluster.pk]
+            cluster.save()
         
         # metadata
-        Metadata(name='version', value='0.1').save()
+        Metadata(name='version', value='1.0b').save()
         Metadata(name='date', value=time.strftime('%Y-%m-%d %H:%M:%S %z')).save()

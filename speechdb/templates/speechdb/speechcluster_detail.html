@@ -1,11 +1,6 @@
 {% extends "speechdb/base_nosidebar.html" %}
 
 {% block title %}Speech Cluster Detail{% endblock %}
-{% block sidebar_content %}
-  <div style="margin-top:1em;"><strong>Detail</strong></div>
-    <div>Parts: {{ cluster.speech_set.count }}</div>
-    <div>Characters: {{ cluster.get_chars_str }}</div>
-{% endblock %}
 
 {% block content %}
 <div class="accordion">
@@ -15,9 +10,13 @@
             <table>
                 <tbody>
                     <tr>
-                        <th>
+                        <th colspan="2">
                           {{ cluster.work.get_long_name }} {{ cluster.speeches.first.l_fi }}—{{ cluster.speeches.last.l_la }}                      
                         </th>
+                    </tr>
+                    <tr>
+						<td>ID</td>
+						<td>{{ cluster.pk }}</td>
                     </tr>
                 </tbody>
             </table>

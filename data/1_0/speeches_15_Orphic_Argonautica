@@ -1,14 +1,14 @@
-author	work	work_id	orig_id	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_notes	speaker_disguise	a_ok	addressee	addressee_notes	addressee_disguise	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type
-anonymous	Orphic Argonautica	13	1		77		96	✅	Jason	(mit K)		✅	Orpheus			13001	1	D	D1	20		0		req	request, entreaty
-anonymous	Orphic Argonautica	13	2		98		113	✅	Orpheus			✅	Jason			13001	2	D	D2	16		0		res	confirmation of request
-anonymous	Orphic Argonautica	13	3		256		267	✅	Orpheus			❌	Argonauts and Argo			13002	1	M	M (reply)	12		0	in response to Jason's encouraging gesture to sing and provide the Argonauts with a distraction	nar	narrative, soothing?
-anonymous	Orphic Argonautica	13	4		283		294	✅	Jason			✅	Argonauts			13003	1	M	M (no reply)	12		0	response: collective muttering, NRSA	per	proposal (elect Heracles)
-anonymous	Orphic Argonautica	13	5		335		354	✅	Orpheus			✅	gods of the sea			13004	1	M	M (no reply)	20		0		pra	prayer, entreaty
-anonymous	Orphic Argonautica	13	6		544		557	✅	Athena			✅	Tiphys			13005	1	M	M (no reply)	14		0		ins	instruction, rebuke, advice
-anonymous	Orphic Argonautica	13	7		823		828	✅	Aeetes			✅	Argonauts			13006	1	D	D1	6		0		que; gre; thr	inquiry, greeting, threat
-anonymous	Orphic Argonautica	13	8		832		842	✅	Jason			✅	Aeetes			13006	2	D	D2	11		0		nar; req	narrative, entreaty for hospitality
-anonymous	Orphic Argonautica	13	9		847		856	✅	Aeetes			✅	Argonauts			13006	3	D	D3	10		0	grief and fear as response	cha; com	proposal, tasks to secure Fleece
-anonymous	Orphic Argonautica	13	10		1153		1159	✅	Ancaeus (son of Lycurgus)			✅	Argonauts			13007	1	M	M (no reply)	7		0		ins	instruction, soothing explanation
-anonymous	Orphic Argonautica	13	11		1164		1174	✅	Argo			✅	Argonauts			13008	1	M	M (no reply)	11		0	mixture of soliloquy and instruction	lam; war	lament and instruction/warning
-anonymous	Orphic Argonautica	13	12		1231		1243	✅	Circe	(mit K)		✅	Medea			13009	1	M	M (no reply)	13		0		ins	rebuke, instruction for purification
-anonymous	Orphic Argonautica	13	13		1329		1336	✅	Arete			✅	Alcinous			13010	1	M	M (no reply)	8		0	reaction in action	per	advise
+author	work	work_id	orig_id	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_notes	speaker_disguise	a_ok	addressee	addressee_notes	addressee_disguise	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type
+anonymous	Orphic Argonautica	13	1	1		77		96	✅	Jason	(mit K)		✅	Orpheus			13001	1	D	D1	20		0		req	request, entreaty
+anonymous	Orphic Argonautica	13	2	2		98		113	✅	Orpheus			✅	Jason			13001	2	D	D2	16		0		res	confirmation of request
+anonymous	Orphic Argonautica	13	3	3		256		267	✅	Orpheus			❌	Argonauts and Argo			13002	1	M	M (reply)	12		0	in response to Jason's encouraging gesture to sing and provide the Argonauts with a distraction	nar	narrative, soothing?
+anonymous	Orphic Argonautica	13	4	4		283		294	✅	Jason			✅	Argonauts			13003	1	M	M (no reply)	12		0	response: collective muttering, NRSA	per	proposal (elect Heracles)
+anonymous	Orphic Argonautica	13	5	5		335		354	✅	Orpheus			✅	gods of the sea			13004	1	M	M (no reply)	20		0		pra	prayer, entreaty
+anonymous	Orphic Argonautica	13	6	6		544		557	✅	Athena			✅	Tiphys			13005	1	M	M (no reply)	14		0		ins	instruction, rebuke, advice
+anonymous	Orphic Argonautica	13	7	7		823		828	✅	Aeetes			✅	Argonauts			13006	1	D	D1	6		0		que; gre; thr	inquiry, greeting, threat
+anonymous	Orphic Argonautica	13	8	8		832		842	✅	Jason			✅	Aeetes			13006	2	D	D2	11		0		nar; req	narrative, entreaty for hospitality
+anonymous	Orphic Argonautica	13	9	9		847		856	✅	Aeetes			✅	Argonauts			13006	3	D	D3	10		0	grief and fear as response	cha; com	proposal, tasks to secure Fleece
+anonymous	Orphic Argonautica	13	10	10		1153		1159	✅	Ancaeus (son of Lycurgus)			✅	Argonauts			13007	1	M	M (no reply)	7		0		ins	instruction, soothing explanation
+anonymous	Orphic Argonautica	13	11	11		1164		1174	✅	Argo			✅	Argonauts			13008	1	M	M (no reply)	11		0	mixture of soliloquy and instruction	lam; war	lament and instruction/warning
+anonymous	Orphic Argonautica	13	12	12		1231		1243	✅	Circe	(mit K)		✅	Medea			13009	1	M	M (no reply)	13		0		ins	rebuke, instruction for purification
+anonymous	Orphic Argonautica	13	13	13		1329		1336	✅	Arete			✅	Alcinous			13010	1	M	M (no reply)	8		0	reaction in action	per	advise

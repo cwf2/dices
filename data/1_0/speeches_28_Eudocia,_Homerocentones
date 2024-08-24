@@ -76,18 +76,18 @@ work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	de
 27	75	2006		2011		✅	dead souls	τις (representative)	no	yes	yes	no	✅	dead souls	πλησίον (each to his neighbour)	no	yes	yes	no	27054	1	monologue	M (no reply)	6.0		0		Lam		no
 27	76	2059		2064		✅	Maria		no	no	no	no	✅	Jesus	τέκνον έμόν	no	yes	no	no	27055	1	monologue	M (no reply)	6.0		0	speech cluster, soliloquy?	Lam		no
 27	77	2068		2076		✅	Maria		no	no	no	no	✅	Jesus	τέκνον'	no	yes	no	no	27056	1	monologue	M (no reply)	9.0		0	speech cluster, soliloquy?	Lam		no
-27	79	2107		2109		✅	guards		no	no	yes	yes	✅	guards		no	no	yes	yes	27058	1	monologue	M (no reply)			0		Req; Lau; Thr		no
-27	80	2122		2145		✅	Satan		no	no	no	no	✅	Jesus		no	yes	no	no	27059	1	dialogue	D1	24.0		0		Lau; Que; Con		no
-27	81	2148		2156		✅	Jesus		no		no	no	✅	Satan		no	no	no	no	27060	2	dialogue	D2	9.0		0		Lam		no
-27	82	2187		2188		✅	Maria		no	no	no	no	✅	Jesus		no	yes	no	no	27061	1	monologue	M (no reply)	2.0		0		Lam; Que		no
-27	83	2204		2225		✅	God's messenger	 ἄγγελος ὠκύς	no	no	yes	no	✅	Maria		no	no	no	no	27062	1	dialogue	D1	22.0		0		Ora; Com; Mes; Exh		no
-27	84	2228		2230		✅	Maria		no	no	no	no	✅	God's messenger		no	no	yes	no	27062	2	dialogue	D2	3.0		0		Exh; Ora		no
-27	85	2245		2249		✅	Jews	τις (representative of the city)	no	no	yes	no	✅	Jews	πλησίον (each to his neighbour	no	no	yes	no	27063	1	monologue	M (no reply)	5.0		0		Mes; Lau		no
-27	86	2266		2275		✅	Jesus	resurrected 	no	no	no	no	✅	Jesus' disciples	ἐρίηρας ἑταίρους	no	no	yes	yes	27064	1	monologue	M (no reply)	10.0		0		Mes; Ins; Com		no
-27	87	2288		2289		✅	Jesus		no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27065	2	monologue	M (no reply)	2.0		0		Inf		no
-27	88	2295		2300		✅	Thomas		no	no	no	no	✅	Jesus		no	no	no	no	27066	1	dialogue	D1	6.0		0		Req; Del; Des		no
-27	89	2302		2312		✅	Jesus		no	no	no	no	✅	Thomas		no	no	no	no	27066	2	dialogue	D2	11.0		0		Res		no
-27	90	2315		2317		✅	Jesus		no	no	no	no	✅	Thomas		no	no	no	no	27066	3	dialogue	D3	3.0		0		Inf; Res		no
-27	91	2321		2329		✅	Thomas		no	no	no	no	✅	Jesus		no	no	no	no	27066	4	dialogue	D4	9.0		0		Lau; Exh; Con		no
-27	92	2341		2344		✅	Jesus		no	no	no	no	✅	Jesus' disciples	μνηστῆρες	no	no	yes	yes	27067	1	monologue	M (no reply)	4.0		0		Inf		no
+27	78	2107		2109		✅	guards		no	no	yes	yes	✅	guards		no	no	yes	yes	27058	1	monologue	M (no reply)			0		Req; Lau; Thr		no
+27	79	2122		2145		✅	Satan		no	no	no	no	✅	Jesus		no	yes	no	no	27059	1	dialogue	D1	24.0		0		Lau; Que; Con		no
+27	80	2148		2156		✅	Jesus		no		no	no	✅	Satan		no	no	no	no	27060	2	dialogue	D2	9.0		0		Lam		no
+27	81	2187		2188		✅	Maria		no	no	no	no	✅	Jesus		no	yes	no	no	27061	1	monologue	M (no reply)	2.0		0		Lam; Que		no
+27	82	2204		2225		✅	God's messenger	 ἄγγελος ὠκύς	no	no	yes	no	✅	Maria		no	no	no	no	27062	1	dialogue	D1	22.0		0		Ora; Com; Mes; Exh		no
+27	83	2228		2230		✅	Maria		no	no	no	no	✅	God's messenger		no	no	yes	no	27062	2	dialogue	D2	3.0		0		Exh; Ora		no
+27	84	2245		2249		✅	Jews	τις (representative of the city)	no	no	yes	no	✅	Jews	πλησίον (each to his neighbour	no	no	yes	no	27063	1	monologue	M (no reply)	5.0		0		Mes; Lau		no
+27	85	2266		2275		✅	Jesus	resurrected 	no	no	no	no	✅	Jesus' disciples	ἐρίηρας ἑταίρους	no	no	yes	yes	27064	1	monologue	M (no reply)	10.0		0		Mes; Ins; Com		no
+27	86	2288		2289		✅	Jesus		no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27065	2	monologue	M (no reply)	2.0		0		Inf		no
+27	87	2295		2300		✅	Thomas		no	no	no	no	✅	Jesus		no	no	no	no	27066	1	dialogue	D1	6.0		0		Req; Del; Des		no
+27	88	2302		2312		✅	Jesus		no	no	no	no	✅	Thomas		no	no	no	no	27066	2	dialogue	D2	11.0		0		Res		no
+27	89	2315		2317		✅	Jesus		no	no	no	no	✅	Thomas		no	no	no	no	27066	3	dialogue	D3	3.0		0		Inf; Res		no
+27	90	2321		2329		✅	Thomas		no	no	no	no	✅	Jesus		no	no	no	no	27066	4	dialogue	D4	9.0		0		Lau; Exh; Con		no
+27	91	2341		2344		✅	Jesus		no	no	no	no	✅	Jesus' disciples	μνηστῆρες	no	no	yes	yes	27067	1	monologue	M (no reply)	4.0		0		Inf		no
 27	92	2341		2344		✅	Jesus		no	no	no	no	✅	Jesus' disciples	μνηστῆρες	no	no	yes	yes	27067	1	monologue	M (no reply)	4.0		0				

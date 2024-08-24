@@ -1,3 +1,3 @@
 work_id	seq	from_line	b	to_line	a	interrupted	s_ok	speaker	speaker_disguise	dead/vision	anonymous	collective	speaker_notes	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anyonymous	collective.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	short_speech_type	long_speech_type	misc_notes
-18		1		55			✅	Megara						✅	Alcmene						18001	1	dialogue	D1	55		0	Lam		
-18		62		125			✅	Alcmene						✅	Megara						18001	2	dialogue	D2	64		0	Con; Ora		talks about a dream she had
+18	1	1		55			✅	Megara						✅	Alcmene						18001	1	dialogue	D1	55		0	Lam		
+18	2	62		125			✅	Alcmene						✅	Megara						18001	2	dialogue	D2	64		0	Con; Ora		talks about a dream she had
