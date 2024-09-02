@@ -1,19 +1,19 @@
 work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
 27	1	42		66		✅	snake			no	yes	no	✅	Eve		no	no	no	no	27001	1	monologue	M (no reply)	25.0		0		Per		no
-27	2	100		176		✅	God	θεόν	no		no	no	✅	Jesus		no	no	no	no	27002	1	dialogue	D1	77.0		0	To send Jesus to earth	Com; Req; Ins		no
-27	3	178		203		✅	Jesus	φαίδιμος υιός	no	no	no	no	✅	God	πάτερ	no	no		no	27002	2	dialogue	D2	26.0		0	Jesus before he is born	vow		no
+27	2	100		176		✅	God (Christian)	θεόν	no		no	no	✅	Jesus		no	no	no	no	27002	1	dialogue	D1	77.0		0	To send Jesus to earth	Com; Req; Ins		no
+27	3	178		203		✅	Jesus	φαίδιμος υιός	no	no	no	no	✅	God (Christian)	πάτερ	no	no		no	27002	2	dialogue	D2	26.0		0	Jesus before he is born	vow		no
 27	4	230		245		✅	God's messenger	κήρυξ πεισήνωρ	no	no	yes	no	✅	Maria		no	no	no	no	27003	1	dialogue	D1	16.0		0		Mes		no
 27	5	253		263		✅	Maria		no	no	no	no	✅	God's messenger		no	no	yes	no	27003	2	dialogue	D2	11.0		0		Que; Lam; Del		no
 27	6	265		272		✅	God's messenger	κήρυξ πεισήνωρ	no	no	yes	no	✅	Maria		no	no	no	no	27003	3	dialogue	D3	8.0		0		Con; Com		no
 27	7	385		432		✅	John the Baptist		no	no	no	no	✅	Jews		no	no	yes	yes	27004	1	monologue	M (no reply)	48.0		0		Ora; Lau		no
 27	8	438		441		✅	John the Baptist		no	no	no	no	✅	Jews		no	no	yes	yes	27005	1	monologue	M (no reply)	3.0		0	To the same crowd but different topic	Nar; Lau		no
 27	9	444		446		✅	John the Baptist		no	no	no	no	✅	Jesus		no	no	no	no	27006	1	monologue	M (no reply)	3.0		0		Gre; Lau		no
-27	10	474		518		✅	Jesus		no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27007	1	monologue	M (no reply)	45.0		0		Inf		no
+27	10	474		518		✅	Jesus		no	no	no	no	✅	disciples of Jesus		no	no	yes	yes	27007	1	monologue	M (no reply)	45.0		0		Inf		no
 27	11	598		605		✅	Maria		no	no	no	no	✅	Jesus		no	no	no	no	27008	1	dialogue	D1	8.0		0		Req		no
 27	12	607		610		✅	Jesus		no	no	no	no	✅	Maria		no	no	no	no	27008	2	dialogue	D2	4.0		0		Res		no
 27	13	612		614		✅	Jesus		no	no	no	no	✅	servants in Cana		no	no	yes	yes	27009	1	monologue	M (no reply)	3.0		0		Com		no
 27	14	657		657		✅	paralytic		no	no	yes	no	✅	Jesus		no	no	no	no	27010	1	general interlocutions	G1	1.0		0		Com		no
-27	15	659		674		✅	Jesus		no	no	no	no	✅	God	χθιζός θεός	no	no	no	no	27010	2	general interlocutions	G2	16.0		0		Pra		no
+27	15	659		674		✅	Jesus		no	no	no	no	✅	God (Christian)	χθιζός θεός	no	no	no	no	27010	2	general interlocutions	G2	16.0		0		Pra		no
 27	16	676		687		✅	Jesus		no	no	no	no	✅	paralytic	κυλλοπόδιον	no	no	yes	no	27010	3	general interlocutions	G3	12.0		0		Res; Con		no
 27	17	689		691		✅	Jesus	κηρύκεσσι λιγυφθόγγοισιν	no	no	no	yes	✅	Pharisees		no	no	yes	yes	27011	1	monologue	M (no reply)	3.0		0		Com; Ins		no
 27	18	698		699		✅	Jesus	θεοκλύμενος θεοειδής	no	no	no	no	✅	paralytic	ὦ φὶλε	no	no	yes	no	27012	1	monologue	M (no reply)	2.0		0	Odysseus 2.303-4	Inf		no
@@ -23,8 +23,8 @@ work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	de
 27	22	759		768		✅	Jairus		no	no	no	no	✅	Jesus		no	no	no	no	27015	1	dialogue	D1	10.0		0		Pra; Req; Inf		no
 27	23	770		776		✅	Jesus	θεοκλύμενος θεοειδής	no	no	no	no	✅	Jairus		no	no	no	no	27016	2	dialogue	D2	7.0		0		Res		no
 27	24	800		805		✅	Jesus	θεοκλύμενος θεοειδής	no	no	no	no	✅	Jairus		no	no	no	no	27017	1	monologue	M (no reply)	6.0		0		Res; Vow		no
-27	25	810		810		✅	Jesus		no	no	no	no	✅	Jairus' daughter	still in a coma	no	no	no	no	27018	1	monologue	M (no reply)	1.0		0		Com		no
-27	26	813		814		✅	Jesus		no	no	no	no	❌	Jairus and Jairus' wife and servants of Jairus		no	no	yes	yes	27019	1	monologue	M (no reply)	2.0		0		Com; Ins		no
+27	25	810		810		✅	Jesus		no	no	no	no	✅	daughter of Jairus	still in a coma	no	no	no	no	27018	1	monologue	M (no reply)	1.0		0		Com		no
+27	26	813		814		✅	Jesus		no	no	no	no	❌	Jairus and wife of Jairus and servants of Jairus		no	no	yes	yes	27019	1	monologue	M (no reply)	2.0		0		Com; Ins		no
 27	27	833		852		✅	man with paralyzed hand		no	no	yes	no	✅	Jesus		no	no	no	no	27020	1	monologue	M (no reply)	20.0		0		Req; Pra		no
 27	28	867		890		✅	blind man	όλοφυρόμενος	no	no	yes	no	✅	Jesus		no	no	no	no	27020	1	dialogue	D1	24.0		0		Req; Pra		no
 27	29	893		914		✅	Jesus		no	no	no	no	✅	blind man		no	no	yes	no	27020	2	dialogue	D2	22.0		0		Com		no
@@ -40,37 +40,37 @@ work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	de
 27	39	1075		1075		✅	Jesus		no	no	no	no	✅	Samaritan woman		no	no	yes	no	27028	2	dialogue	D2	1.0		0		Req; Com		no
 27	40	1080		1122		✅	Samaritan woman		no	no	yes	no	✅	Jesus	addressed as stranger	no	no	no	no	27028	3	dialogue	D3	43.0		0		Res; Que		no
 27	41	1129		1152		✅	Samaritan woman		no	no	yes	no	✅	people in the city of Sicar		no	no	yes	yes	27029	1	monologue	M (no reply)	24.0		0	έκελεύσεν	Inf		no
-27	42	1184		1212		✅	Jesus		no	no	no	no	✅	Jesus' disciples	έτάροισιν	no	no	yes	yes	27030	1	monologue	M (no reply)	29.0		0		Com; Req; Ora		no
+27	42	1184		1212		✅	Jesus		no	no	no	no	✅	disciples of Jesus	έτάροισιν	no	no	yes	yes	27030	1	monologue	M (no reply)	29.0		0		Com; Req; Ora		no
 27	43	1243		1253		✅	sister of Lazarus	or Martha of Bethany	no	no	yes	yes	✅	Jesus		no	no	no	no	27031	1	dialogue	D1	11.0		0		Mes; Inf; Pra; Req		no
 27	44	1257		1272		✅	Jesus		no	no	no	no	✅	sister of Lazarus		no	no	yes	yes	27031	2	dialogue	D2	16.0		0	Il. 18.178/ Speech cluster	Com		no
 27	45	1281		1282		✅	Jesus		no	no	no	no	✅	Lazarus		no	no	no	no	27032	1	monologue	M (no reply)	2.0		0		Com		no
 27	46	1295		1303		✅	Jews	τις (representative)	no	no	yes	yes	✅	Jews	πλησίον (each to his neighbour	no	no	yes	yes	27033	1	monologue	M (no reply)	9.0		0		Inf		no
 27	47	1321		1330		✅	Jesus		no	no	no	no	✅	woman from Bethany		no	no	yes	no	27034	1	monologue	M (no reply)	10.0		0		Inf; Vow		no
 27	48	1344		1347		✅	Judas Iscariot		no	no	no	no	✅	Judas Iscariot	προτὶ ὃν μυθήσατο θυμόν	no	no	no	no	27035	1	soliloquy	S	4.0		0		Inf; Exh; Thr		
-27	49	1365		1389		✅	Jesus		no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27036	1	general interlocutions	G1	25.0		0		Inf; Ora; Far; Req		no
-27	50	1397		1397	a	✅	Jesus		no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27036	1	general interlocutions	G2	1.0		0		Com;		no
-27	51	1403		1413		✅	Jesus		no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27036	1	general interlocutions	G3	11.0		0		Com; Vow; Ins		no
-27	52	1415		1428		✅	Jesus		no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27036	1	general interlocutions	G4	14.0		0		Com; Ora		no
-27	53	1434		1437		✅	Jesus	θεοκλύμενος θεοειδής	no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27036	1	general interlocutions	G5	4.0		0		Com;		no
-27	54	1447		1451		✅	Jesus		no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27036	1	general interlocutions	G6	5.0		0		Con; Com; Far		no
-27	55	1468		1477		✅	Jesus	θεοκλύμενο ς θεοειδής	no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27036	1	general interlocutions	G7	10.0		0		Inf; Com		no
+27	49	1365		1389		✅	Jesus		no	no	no	no	✅	disciples of Jesus		no	no	yes	yes	27036	1	general interlocutions	G1	25.0		0		Inf; Ora; Far; Req		no
+27	50	1397		1397	a	✅	Jesus		no	no	no	no	✅	disciples of Jesus		no	no	yes	yes	27036	1	general interlocutions	G2	1.0		0		Com;		no
+27	51	1403		1413		✅	Jesus		no	no	no	no	✅	disciples of Jesus		no	no	yes	yes	27036	1	general interlocutions	G3	11.0		0		Com; Vow; Ins		no
+27	52	1415		1428		✅	Jesus		no	no	no	no	✅	disciples of Jesus		no	no	yes	yes	27036	1	general interlocutions	G4	14.0		0		Com; Ora		no
+27	53	1434		1437		✅	Jesus	θεοκλύμενος θεοειδής	no	no	no	no	✅	disciples of Jesus		no	no	yes	yes	27036	1	general interlocutions	G5	4.0		0		Com;		no
+27	54	1447		1451		✅	Jesus		no	no	no	no	✅	disciples of Jesus		no	no	yes	yes	27036	1	general interlocutions	G6	5.0		0		Con; Com; Far		no
+27	55	1468		1477		✅	Jesus	θεοκλύμενο ς θεοειδής	no	no	no	no	✅	disciples of Jesus		no	no	yes	yes	27036	1	general interlocutions	G7	10.0		0		Inf; Com		no
 27	56	1496		1514		✅	Judas Iscariot		no	no	no	no	✅	High Priests		no	no	yes	yes	27037	1	monologue	M (no reply)	19.0		0		Vit; Vow; Inf		no
-27	57	1546		1581		✅	Jesus		no	no	no	no	✅	Jesus' disciples	except Judas	no	no	yes	yes	27038	1	monologue	m (no reply)	36.0		0		Vit; Com; Con; War		no
-27	58	1587		1603		✅	Jesus		no	no	no	no	✅	God	ὦ πάτερ	no	no		no	27039	1	monologue	M (no reply)	17.0		0	reaction: angel comes from heaven	Pra		no
-27	59	1610		1614		✅	Jesus		no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27040	1	monologue	M (no reply)	5.0		0		Inf; Com; Exh		no
+27	57	1546		1581		✅	Jesus		no	no	no	no	✅	disciples of Jesus	except Judas	no	no	yes	yes	27038	1	monologue	m (no reply)	36.0		0		Vit; Com; Con; War		no
+27	58	1587		1603		✅	Jesus		no	no	no	no	✅	God (Christian)	ὦ πάτερ	no	no		no	27039	1	monologue	M (no reply)	17.0		0	reaction: angel comes from heaven	Pra		no
+27	59	1610		1614		✅	Jesus		no	no	no	no	✅	disciples of Jesus		no	no	yes	yes	27040	1	monologue	M (no reply)	5.0		0		Inf; Com; Exh		no
 27	60	1656		1660		✅	Jesus	θεοκλύμενο ς θεοειδής	no	no	no	no	✅	Jews		no	no	yes	yes	27041	1	monologue	M (no reply)	5.0		0		Que; Tau		no
 27	61	1674		1677		✅	Judas Iscariot		no	no	no	no	✅	Jesus	ώ φιλ'	no	no	no	no	27042	1	dialogue	D1	4.0		0		Req; Lau		no
 27	62	1679		1734		✅	Jesus		no	no	no	no	✅	Judas Iscariot		no	no	no	no	27042	2	dialogue	D2	56.0		0		Inf; Thr; War; Vit		no
 27	63	1747		1748		✅	Jews	οἱ δ'/τις (representative)	no	no	yes	yes	✅	Jesus		no	no	no	no	27043	1	monologue	M (no reply)	2.0		0		Tau; Que		no
-27	64	1753		1753		✅	insolent young Jew 1	 τις νέων ὑπερηνορεόντων	no	no	yes	no	✅	Jews		no	no	yes	yes	27044	1	monologue	M (no reply)	1.5		0		Ins		no
+27	64	1753		1753		✅	young Jew	 τις νέων ὑπερηνορεόντων	no	no	yes	no	✅	Jews		no	no	yes	yes	27044	1	monologue	M (no reply)	1.5		0		Ins		no
 27	65	1788		1790		✅	woman in the courthouse		no	no	yes	no	✅	Simon			no	no	no	27045	1	dialogue	D1	3.0		0		Inf; Vit		no
 27	66	1792		1793		✅	woman in the courthouse		no	no	yes	no	✅	Simon			no	no	no	27045	2	dialogue	D2	2.0		0		Vit		no
 27	67	1813		1814		✅	Simon	denying		no	no	no	✅	Simon			no	no	no	27046	1	soliloquy	S	2.0		0		Lam; Vit		no
 27	68	1843		1851		✅	Pilate		no	no	no	no	✅	Jews	addressee is unclear	no	no	yes	yes	27047	1	monologue	M (no reply)	9.0		0		Lam; Que		no
-27	69	1902		1920		✅	insolent young Jew 2	arrogant young man	no	no	yes	no	✅	Jesus		no	no	no	no	27048	1	monologue	M (no reply)	19.0		0		Tau; Vit		no
+27	69	1902		1920		✅	young Jew	arrogant young man	no	no	yes	no	✅	Jesus		no	no	no	no	27048	1	monologue	M (no reply)	19.0		0		Tau; Vit		no
 27	70	1922		1924		✅	pious man	τις 	no	no	yes	no	✅	pious man		no	no	yes	no	27049	1	soliloquy	s	3.0		0		Res; Lau		no
-27	71	1927		1939		✅	Jesus		no	no	no	no	✅	God	ὦ πάτερ	no	no		no	27050	1	monologue	M (no reply)	13.0		0		pra		no
-27	72	1950		1965		✅	insolent young Jew 3	ἄλλος νέων ὑπερηνορεόντων	no	no	yes	no	✅	Jesus		no	yes	no	no	27051	1	monologue	M (no reply)	16.0		0		Lam		no
+27	71	1927		1939		✅	Jesus		no	no	no	no	✅	God (Christian)	ὦ πάτερ	no	no		no	27050	1	monologue	M (no reply)	13.0		0		pra		no
+27	72	1950		1965		✅	young Jew	ἄλλος νέων ὑπερηνορεόντων	no	no	yes	no	✅	Jesus		no	yes	no	no	27051	1	monologue	M (no reply)	16.0		0		Lam		no
 27	73	1997		1997		✅	Satan	 Ἀϊδωνεύς	no	no	no	no	✅	Jesus		no	yes	no	no	27052	1	monologue	M (no reply)	0.5		0		Com		no
 27	74	2003		2004		✅	Jesus		no	yes	no	no	✅	dead souls		no	yes	yes	yes	27053	1	monologue	M (no reply)	2.0		0		Del; Inf		no
 27	75	2006		2011		✅	dead souls	τις (representative)	no	yes	yes	no	✅	dead souls	πλησίον (each to his neighbour)	no	yes	yes	no	27054	1	monologue	M (no reply)	6.0		0		Lam		no
@@ -83,11 +83,11 @@ work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	de
 27	82	2204		2225		✅	God's messenger	 ἄγγελος ὠκύς	no	no	yes	no	✅	Maria		no	no	no	no	27062	1	dialogue	D1	22.0		0		Ora; Com; Mes; Exh		no
 27	83	2228		2230		✅	Maria		no	no	no	no	✅	God's messenger		no	no	yes	no	27062	2	dialogue	D2	3.0		0		Exh; Ora		no
 27	84	2245		2249		✅	Jews	τις (representative of the city)	no	no	yes	no	✅	Jews	πλησίον (each to his neighbour	no	no	yes	no	27063	1	monologue	M (no reply)	5.0		0		Mes; Lau		no
-27	85	2266		2275		✅	Jesus	resurrected 	no	no	no	no	✅	Jesus' disciples	ἐρίηρας ἑταίρους	no	no	yes	yes	27064	1	monologue	M (no reply)	10.0		0		Mes; Ins; Com		no
-27	86	2288		2289		✅	Jesus		no	no	no	no	✅	Jesus' disciples		no	no	yes	yes	27065	2	monologue	M (no reply)	2.0		0		Inf		no
+27	85	2266		2275		✅	Jesus	resurrected 	no	no	no	no	✅	disciples of Jesus	ἐρίηρας ἑταίρους	no	no	yes	yes	27064	1	monologue	M (no reply)	10.0		0		Mes; Ins; Com		no
+27	86	2288		2289		✅	Jesus		no	no	no	no	✅	disciples of Jesus		no	no	yes	yes	27065	2	monologue	M (no reply)	2.0		0		Inf		no
 27	87	2295		2300		✅	Thomas		no	no	no	no	✅	Jesus		no	no	no	no	27066	1	dialogue	D1	6.0		0		Req; Del; Des		no
 27	88	2302		2312		✅	Jesus		no	no	no	no	✅	Thomas		no	no	no	no	27066	2	dialogue	D2	11.0		0		Res		no
 27	89	2315		2317		✅	Jesus		no	no	no	no	✅	Thomas		no	no	no	no	27066	3	dialogue	D3	3.0		0		Inf; Res		no
 27	90	2321		2329		✅	Thomas		no	no	no	no	✅	Jesus		no	no	no	no	27066	4	dialogue	D4	9.0		0		Lau; Exh; Con		no
-27	91	2341		2344		✅	Jesus		no	no	no	no	✅	Jesus' disciples	μνηστῆρες	no	no	yes	yes	27067	1	monologue	M (no reply)	4.0		0		Inf		no
-27	92	2341		2344		✅	Jesus		no	no	no	no	✅	Jesus' disciples	μνηστῆρες	no	no	yes	yes	27067	1	monologue	M (no reply)	4.0		0				
+27	91	2341		2344		✅	Jesus		no	no	no	no	✅	disciples of Jesus	μνηστῆρες	no	no	yes	yes	27067	1	monologue	M (no reply)	4.0		0		Inf		no
+27	92	2341		2344		✅	Jesus		no	no	no	no	✅	disciples of Jesus	μνηστῆρες	no	no	yes	yes	27067	1	monologue	M (no reply)	4.0		0				

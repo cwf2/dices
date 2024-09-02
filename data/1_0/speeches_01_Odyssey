@@ -161,11 +161,11 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 145	160	2	Odyssey	8	26	8	45	✅	Alcinous		no	no	no	no	✅	Phaeacians		no	no	collective	collective	2064	1	monologue	M (no reply)	20		0		Com; Del			firstlevel	6 of 16	mortal			
 146	161	2	Odyssey	8	97	8	103	✅	Alcinous		no	no	no	no	✅	Phaeacians		no	no	no	no	2065	1	monologue	M (no reply)	7		0		Cha; Del			firstlevel	7 of 16	mortal			
 147	162	2	Odyssey	8	133	8	139	✅	Laodamas		no	no	no	no	✅	Phaeacians		no	no	no	no	2066	1	general interlocution	G1	7		0		Del; Inf			firstlevel	1 of 2	mortal			
-148	163	2	Odyssey	8	141	8	142	✅	Euryalus (Odyssey)		no	no	no	no	✅	Laodamas		no	no	no	no	2066	2	general interlocution	G2	2		0		Cha; Exh			firstlevel	1 of 4	mortal			
+148	163	2	Odyssey	8	141	8	142	✅	Euryalus (Phaeacian)		no	no	no	no	✅	Laodamas		no	no	no	no	2066	2	general interlocution	G2	2		0		Cha; Exh			firstlevel	1 of 4	mortal			
 149	164	2	Odyssey	8	145	8	151	✅	Laodamas		no	no	no	no	✅	Odysseus		no	no	no	no	2066	3	general interlocution	G3	7		0		Cha			firstlevel	2 of 2	mortal			
 150	165	2	Odyssey	8	153	8	157	✅	Odysseus		no	no	no	no	✅	Laodamas		no	no	no	no	2066	4	general interlocution	G4	5		0		Res; Lam			firstlevel	18 of 130	mortal			
-151	166	2	Odyssey	8	159	8	164	✅	Euryalus (Odyssey)		no	no	no	no	✅	Odysseus		no	no	no	no	2066	5	general interlocution	G5	6		0		Cha			firstlevel	2 of 4	mortal			
-152	167	2	Odyssey	8	166	8	185	✅	Odysseus		no	no	no	no	✅	Euryalus (Odyssey)		no	no	no	no	2066	6	general interlocution	G6	20		0		Cha			firstlevel	19 of 130	mortal			
+151	166	2	Odyssey	8	159	8	164	✅	Euryalus (Phaeacian)		no	no	no	no	✅	Odysseus		no	no	no	no	2066	5	general interlocution	G5	6		0		Cha			firstlevel	2 of 4	mortal			
+152	167	2	Odyssey	8	166	8	185	✅	Odysseus		no	no	no	no	✅	Euryalus (Phaeacian)		no	no	no	no	2066	6	general interlocution	G6	20		0		Cha			firstlevel	19 of 130	mortal			
 153	168	2	Odyssey	8	195	8	198	✅	Athena-man		man	no	no	no	✅	Odysseus		no	no	no	no	2066	7	general interlocution	G7	4		0		Del			firstlevel	20 of 36	god		man	
 154	169	2	Odyssey	8	202	8	233	✅	Odysseus		no	no	no	no	✅	Phaeacians		no	no	collective	collective	2066	8	general interlocution	G8	32		0		Tau; Nar			firstlevel	20 of 130	mortal			
 155	170	2	Odyssey	8	236	8	255	✅	Alcinous		no	no	no	no	✅	Odysseus		no	no	no	no	2066	9	general interlocution	G9	20		0		Del			firstlevel	8 of 16	mortal			
@@ -180,9 +180,9 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 23	179	2	Odyssey	8	358	8	358	✅	Hephaestus		no	no	no	no	✅	Poseidon		no	no	no	no	2070	6	general interlocution	G6	1		1		Del			repreal	3 of 3	god			
 156	180	2	Odyssey	8	382	8	384	✅	Odysseus		no	no	no	no	✅	Alcinous		no	no	no	no	2071	1	general interlocution	G1	3		0		Lau			firstlevel	21 of 130	mortal			
 157	181	2	Odyssey	8	387	8	397	✅	Alcinous		no	no	no	no	✅	Phaeacians		no	no	no	no	2071	2	general interlocution	G2	11		0		Del; Com			firstlevel	9 of 16	mortal			
-158	182	2	Odyssey	8	401	8	405	✅	Euryalus (Odyssey)		no	no	no	no	✅	Alcinous		no	no	no	no	2071	3	general interlocution	G3	5		0		Del			firstlevel	3 of 4	mortal			
-159	183	2	Odyssey	8	408	8	411	✅	Euryalus (Odyssey)		no	no	no	no	✅	Odysseus		no	no	no	no	2071	4	general interlocution	G4	4		0		Del; Des			firstlevel	4 of 4	mortal			
-160	184	2	Odyssey	8	413	8	415	✅	Odysseus		no	no	no	no	✅	Euryalus (Odyssey)		no	no	no	no	2071	5	general interlocution	G5	3		0		Del; Des			firstlevel	22 of 130	mortal			
+158	182	2	Odyssey	8	401	8	405	✅	Euryalus (Phaeacian)		no	no	no	no	✅	Alcinous		no	no	no	no	2071	3	general interlocution	G3	5		0		Del			firstlevel	3 of 4	mortal			
+159	183	2	Odyssey	8	408	8	411	✅	Euryalus (Phaeacian)		no	no	no	no	✅	Odysseus		no	no	no	no	2071	4	general interlocution	G4	4		0		Del; Des			firstlevel	4 of 4	mortal			
+160	184	2	Odyssey	8	413	8	415	✅	Odysseus		no	no	no	no	✅	Euryalus (Phaeacian)		no	no	no	no	2071	5	general interlocution	G5	3		0		Del; Des			firstlevel	22 of 130	mortal			
 161	185	2	Odyssey	8	424	8	432	✅	Alcinous		no	no	no	no	✅	Arete		no	no	no	no	2072	1	monologue	M (no reply)	9		0		Com; Inf			firstlevel	10 of 16	mortal			
 162	186	2	Odyssey	8	443	8	445	✅	Arete		no	no	no	no	✅	Odysseus		no	no	no	no	2073	1	monologue	M (no reply)	3		0		War			firstlevel	2 of 3	mortal			
 163	187	2	Odyssey	8	461	8	462	✅	Nausicaa		no	no	no	no	✅	Odysseus		no	no	no	no	2074	1	dialogue	D1	2		0		Far			firstlevel	6 of 6	mortal			
