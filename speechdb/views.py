@@ -892,7 +892,6 @@ class AppSpeechList(ListView):
 class AppSpeechClusterList(ListView):
     model = SpeechCluster
     template_name = 'speechdb/speechcluster_list.html'
-    queryset = SpeechCluster.objects.all()
     paginate_by = PAGE_SIZE
     _valid_params = [
         ('spkr_id', int),
@@ -1029,7 +1028,7 @@ class AppSpeechClusterList(ListView):
             query.append(Q(speeches__work__lang=self.params['lang']))
         
         # perform query
-        qs = qs.filter(*query).distinct()
+        qs = qs.filter(*query).distinct().order_by('seq')
 
         # pagination
         if 'page_size' in self.params:
