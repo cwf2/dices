@@ -329,26 +329,26 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	283	328	48	15	48	30	✅	Gaea		no	no	no	no	✅	Giants		no	no	collective	collective	11293	1	monologue	M (no reply)	16		0		Com			firstlevel	2 of 2	god			type 1 = general to troops						
 11	284	329	48	205	48	233	✅	Dionysus		no	no	no	no	✅	Pallene		no	no	no	no	11294	1	monologue	M (no reply)	29		0		Con			firstlevel	53 of 55	god									
 11	285	330	48	279	48	283	✅	Eros		no	no	no	no	✅	Aphrodite		no	no	no	no	11295	1	monologue	M (no reply)	5		0		Ora			firstlevel	5 of 6	god									
-11	286	331	48	291	48	300	✅	Aura		no	no	no	no	✅	laurel tree		no	no	yes	no	11296	1	monologue	M (no reply)	10		0		Que			firstlevel	1 of 6	mortal									
-11	287	332	48	351	48	369	✅	Aura		no	no	no	no	✅	Artemis		no	no	no	no	11297	1	monologue	M (no reply)	19		0		Lau			firstlevel	2 of 6	mortal									
+11	286	331	48	291	48	300	✅	Aura (nymph)		no	no	no	no	✅	laurel tree		no	no	yes	no	11296	1	monologue	M (no reply)	10		0		Que			firstlevel	1 of 6	mortal									
+11	287	332	48	351	48	369	✅	Aura (nymph)		no	no	no	no	✅	Artemis		no	no	no	no	11297	1	monologue	M (no reply)	19		0		Lau			firstlevel	2 of 6	mortal									
 11	288	333	48	392	48	413	✅	Nemesis		no	no	no	no	✅	Artemis		no	no	no	no	11298	1	dialogue	D1	22		0		Que			firstlevel	1 of 2	god									
 11	289	334	48	416	48	438	✅	Artemis		no	no	no	no	✅	Nemesis		no	no	no	no	11298	2	dialogue	D2	23		0		Res			firstlevel	1 of 4	god									
 11	290	335	48	440	48	448	✅	Nemesis		no	no	no	no	✅	Artemis		no	no	no	no	11298	3	dialogue	D3	9		0		Con			firstlevel	2 of 2	god									
 11	291	336	48	489	48	513	✅	Dionysus		no	no	no	no	✅	self		no	no	no	no	11299	1	soliloquy	S	25		0		Lam			firstlevel	54 of 55	god									
-11	33	337	48	513	48	513	✅	Aura		no	no	no	no	✅	Dionysus		no	no	no	no	11300	1	monologue	M (no reply)	1		1		Com			rephyp		mortal						desired speech	2nd		
+11	33	337	48	513	48	513	✅	Aura (nymph)		no	no	no	no	✅	Dionysus		no	no	no	no	11300	1	monologue	M (no reply)	1		1		Com			rephyp		mortal						desired speech	2nd		
 11	292	338	48	522	48	526	✅	hamadryad		no	no	yes	no	✅	Dionysus		no	no	no	no	11301	1	monologue	M (no reply)	5		0		Inf			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
 11	293	339	48	533	48	562	✅	Ariadne		as a phantom after death	dead	no	no	✅	Dionysus		no	no	no	no	11302	1	monologue	M (no reply)	30		0		Lam			firstlevel	2 of 2	mortal		as a phantom after death							
 11	34	340	48	549	48	549	✅	someone		no	no	yes	no	✅	self		no	no	yes	no	11303	1	soliloquy	S	1		1		Inf			rephyp		unspecified	yes					potential τις-speech	2nd		
 11	35	341	48	559	48	560	✅	Ariadne		no	no	no	no	✅	Theseus		no	no	no	no	11304	1	monologue	M (no reply)	2		1		Mes			rephyp		mortal						messenger speech	2nd		
-11	294	342	48	597	48	598	✅	Peitho		no	no	no	no	✅	Aura		no	no	no	no	11305	1	monologue	M (no reply)	2		0		Inv			firstlevel	1 of 1	god									
-11	295	343	48	602	48	606	✅	Aura		no	no	no	no	✅	self		no	no	no	no	11306	1	soliloquy	S	5		0		Que			firstlevel	3 of 6	mortal									
+11	294	342	48	597	48	598	✅	Peitho		no	no	no	no	✅	Aura (nymph)		no	no	no	no	11305	1	monologue	M (no reply)	2		0		Inv			firstlevel	1 of 1	god									
+11	295	343	48	602	48	606	✅	Aura (nymph)		no	no	no	no	✅	self		no	no	no	no	11306	1	soliloquy	S	5		0		Que			firstlevel	3 of 6	mortal									
 11	296	344	48	616	48	616	✅	Eros		no	no	no	no	✅	Dionysus		no	no	no	no	11307	1	monologue	M (no reply)	1		0		Inf			firstlevel	6 of 6	god									
-11	297	345	48	703	48	722	✅	Aura		no	no	no	no	✅	self		no	no	no	no	11308	1	soliloquy	S	20		0		Lam			firstlevel	4 of 6	mortal									
+11	297	345	48	703	48	722	✅	Aura (nymph)		no	no	no	no	✅	self		no	no	no	no	11308	1	soliloquy	S	20		0		Lam			firstlevel	4 of 6	mortal									
 11	298	346	48	748	48	748	✅	someone		no	no	yes	no	✅	self		no	no	yes	no	11309	1	soliloquy	S	1		0		Inf			firstlevel	1 of 1	mortal	yes								
-11	299	347	48	752	48	782	✅	Artemis		no	no	no	no	✅	Aura		no	no	no	no	11310	1	monologue	M (no reply)	31		0		Del; Que			firstlevel	2 of 4	god									
-11	300	348	48	799	48	807	✅	Aura		no	no	no	no	✅	self		no	no	no	no	11311	1	soliloquy	S	9		0		Lam; Des			firstlevel	5 of 6	mortal									
+11	299	347	48	752	48	782	✅	Artemis		no	no	no	no	✅	Aura (nymph)		no	no	no	no	11310	1	monologue	M (no reply)	31		0		Del; Que			firstlevel	2 of 4	god									
+11	300	348	48	799	48	807	✅	Aura (nymph)		no	no	no	no	✅	self		no	no	no	no	11311	1	soliloquy	S	9		0		Lam; Des			firstlevel	5 of 6	mortal									
 11	36	349	48	803	48	803	✅	Horae		no	no	no	no	✅	Athena		no	no	no	no	11312	1	monologue	M (no reply)	1		1		Del			rephyp		god						messenger speech	2nd		
-11	301	350	48	814	48	826	✅	Nicaea		no	no	no	no	✅	Aura		no	no	no	no	11313	1	monologue	M (no reply)	13		0		Con			firstlevel	4 of 4	mortal									
-11	302	351	48	832	48	847	✅	Artemis		no	no	no	no	✅	Aura		no	no	no	no	11314	1	monologue	M (no reply)	16		0		Que; Vit			firstlevel	3 of 4	god									
-11	303	352	48	858	48	864	✅	Artemis		no	no	no	no	✅	Aura		no	no	no	no	11315	1	monologue	M (no reply)	7		0		Vit			firstlevel	4 of 4	god									
+11	301	350	48	814	48	826	✅	Nicaea		no	no	no	no	✅	Aura (nymph)		no	no	no	no	11313	1	monologue	M (no reply)	13		0		Con			firstlevel	4 of 4	mortal									
+11	302	351	48	832	48	847	✅	Artemis		no	no	no	no	✅	Aura (nymph)		no	no	no	no	11314	1	monologue	M (no reply)	16		0		Que; Vit			firstlevel	3 of 4	god									
+11	303	352	48	858	48	864	✅	Artemis		no	no	no	no	✅	Aura (nymph)		no	no	no	no	11315	1	monologue	M (no reply)	7		0		Vit			firstlevel	4 of 4	god									
 11	304	353	48	870	48	886	✅	Dionysus		no	no	no	no	✅	Nicaea		no	no	no	no	11316	1	monologue	M (no reply)	17		0		Del			firstlevel	55 of 55	god									
