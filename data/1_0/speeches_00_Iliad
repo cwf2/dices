@@ -10,7 +10,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 9	9	1	Iliad	1	122	n	1	129	n	✅	Achilles	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1003	6	general interlocution	G6	8	no	0	no	Lau; Del; Per	no	firstlevel	3 of 87	mortal	no	no	no	no	no	no
 10	10	1	Iliad	1	131	n	1	147	n	✅	Agamemnon	no	no	no	no	no	✅	Achilles	no	no	no	no	no	1003	7	general interlocution	G7	17	no	0	no	Que; Thr; Exh	no	firstlevel	3 of 47	mortal	no	no	no	no	no	no
 11	11	1	Iliad	1	149	n	1	171	n	✅	Achilles	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1003	8	general interlocution	G8	23	no	0	no	Vit; Inf	no	firstlevel	4 of 87	mortal	no	no	no	no	no	no
-12	12	1	Iliad	1	173	n	1	187	n	✅	Agamemnon	no	no	no	no	no	✅	Achilles	no	no	no	no	no	1003	9	general interlocution	G9	15	no	0	no	Exh; Thr?; Cha	no	firstlevel	4 of 47	mortal	no	no	no	no	no	no
+12	12	1	Iliad	1	173	n	1	187	n	✅	Agamemnon	no	no	no	no	no	✅	Achilles	no	no	no	no	no	1003	9	general interlocution	G9	15	no	0	no	Vit; Thr; Com	no	firstlevel	4 of 47	mortal	no	no	no	no	no	no
 13	13	1	Iliad	1	202	n	1	205	n	✅	Achilles	no	no	no	no	no	✅	Athena	no	no	no	no	no	1004	1	dialogue	D1	4	no	0	no	Que; Ora	no	firstlevel	5 of 87	mortal	no	no	no	no	no	no
 14	14	1	Iliad	1	207	n	1	214	n	✅	Athena	no	no	no	no	no	✅	Achilles	no	no	no	no	no	1004	2	dialogue	D2	8	no	0	no	Res; Inf; Ora; Com	no	firstlevel	1 of 20	god	no	no	no	no	no	no
 15	15	1	Iliad	1	216	n	1	218	n	✅	Achilles	no	no	no	no	no	✅	Athena	no	no	no	no	no	1004	3	dialogue	D3	3	no	0	no	Res	no	firstlevel	6 of 87	mortal	no	no	no	no	no	Response to command
@@ -29,7 +29,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 28	28	1	Iliad	1	503	n	1	510	n	✅	Thetis	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1010	1	dialogue	D1	8	no	0	no	Des; Req	no	firstlevel	3 of 14	god	no	no	no	no	no	no
 29	29	1	Iliad	1	514	n	1	516	n	✅	Thetis	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1010	2	dialogue	D2	3	no	0	no	Req	no	firstlevel	4 of 14	god	no	no	no	no	no	no
 30	30	1	Iliad	1	518	n	1	527	n	✅	Zeus	no	no	no	no	no	✅	Thetis	no	no	no	no	no	1010	3	dialogue	D3	10	no	0	no	Res; Com	no	firstlevel	1 of 39	god	no	no	no	no	no	no
-31	31	1	Iliad	1	540	n	1	543	n	✅	Hera	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1011	1	dialogue	D1	4	no	0	speech cluster	Que	no	firstlevel	1 of 31	god	no	no	no	no	no	no
+31	31	1	Iliad	1	540	n	1	543	n	✅	Hera	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1011	1	dialogue	D1	4	no	0	speech cluster	Que;Vit	no	firstlevel	1 of 31	god	no	no	no	no	no	no
 32	32	1	Iliad	1	545	n	1	550	n	✅	Zeus	no	no	no	no	no	✅	Hera	no	no	no	no	no	1011	2	dialogue	D2	6	no	0	speech cluster	Res	no	firstlevel	2 of 39	god	no	no	no	no	no	no
 33	33	1	Iliad	1	552	n	1	559	n	✅	Hera	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1011	3	dialogue	D3	8	no	0	speech cluster	Vit; Ora	no	firstlevel	2 of 31	god	no	no	no	no	no	guess of what had happened; interpretation
 34	34	1	Iliad	1	561	n	1	567	n	✅	Zeus	no	no	no	no	no	✅	Hera	no	no	no	no	no	1011	4	dialogue	D4	7	no	0	speech cluster	Com; Thr	no	firstlevel	3 of 39	god	no	no	no	no	no	no
@@ -45,13 +45,13 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 43	44	1	Iliad	2	173	n	2	181	n	✅	Athena	no	no	no	no	no	✅	Odysseus	no	no	no	no	no	1020	1	monologue	M (no reply)	9	no	0	no	Exh; Que	no	firstlevel	2 of 20	god	no	no	no	no	no	no
 44	45	1	Iliad	2	190	n	2	197	n	✅	Odysseus	no	no	no	no	no	✅	leaders of the Greeks (Greek soldiers)	no	no	no	yes	yes	1021	1	monologue	M (no reply)	8	no	0	no	Per; Com; War	no	firstlevel	2 of 27	mortal	no	no	no	no	no	no
 45	46	1	Iliad	2	200	n	2	206	n	✅	Odysseus	no	no	no	no	no	✅	Greeks	common soldiers	no	no	yes	yes	1022	1	monologue	M (no reply)	7	no	0	no	Com; Del	no	firstlevel	3 of 27	mortal	no	no	no	no	no	no
-46	47	1	Iliad	2	225	n	2	242	n	✅	Thersites	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1023	1	general interlocution	G1	18	no	0	no	Que; War; Vit	no	firstlevel	1 of 1	mortal	no	no	no	no	no	no
+46	47	1	Iliad	2	225	n	2	242	n	✅	Thersites	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1023	1	general interlocution	G1	18	no	0	no	Que; Vit; Thr	no	firstlevel	1 of 1	mortal	no	no	no	no	no	no
 47	48	1	Iliad	2	246	n	2	264	n	✅	Odysseus	no	no	no	no	no	✅	Thersites	no	no	no	no	no	1023	2	general interlocution	G2	19	no	0	no	Vit; Thr	no	firstlevel	4 of 27	mortal	no	no	no	no	no	no
 48	49	1	Iliad	2	272	n	2	277	n	✅	Greeks	tis as representative of collective	no	no	yes	yes	✅	Greeks	no	no	no	yes	yes	1024	1	monologue	M (no reply)	6	no	0	no	Del	no	firstlevel	1 of 1	mortal	collective	no	no	no	no	no
 49	50	1	Iliad	2	284	n	2	332	n	✅	Odysseus	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1025	1	general interlocution	G1	49	no	0	no	Cha; Nar; Del	no	firstlevel	5 of 27	mortal	no	no	no	no	no	no
 2	51	1	Iliad	2	323	n	2	329	n	✅	Calchas	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1026	1	monologue	M (no reply)	7	no	1	no	Que; Del; Ora	no	repreal	no	mortal	no	no	no	no	no	no
 50	52	1	Iliad	2	337	n	2	368	n	✅	Nestor	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1025	2	general interlocution	G2	32	no	0	no	Vit; Del; Com; Ins	no	firstlevel	3 of 33	mortal	no	no	no	no	no	no
-51	53	1	Iliad	2	370	n	2	393	n	✅	Agamemnon	no	no	no	no	no	❌	Greeks and Nestor and Apollo and Zeus and Athena	Apollo and Zeus and Athena secundary addresseee	no	no	yes	yes	1025	3	general interlocution	G3	24	no	0	no	Lau; Pra; Thr; Exh	no	firstlevel	9 of 47	mortal	no	no	type 1: general to troops	no	no	no
+51	53	1	Iliad	2	370	n	2	393	n	✅	Agamemnon	no	no	no	no	no	❌	Greeks and Nestor and Apollo and Zeus and Athena	Apollo and Zeus and Athena secundary addresseee	no	no	yes	yes	1025	3	general interlocution	G3	24	no	0	no	Lau; Des; Thr; Exh; Ins	no	firstlevel	9 of 47	mortal	no	no	type 1: general to troops	no	no	no
 52	54	1	Iliad	2	412	n	2	418	n	✅	Agamemnon	no	no	no	no	no	✅	Zeus	prayer	no	no	no	no	1027	1	monologue	M (no reply)	7	no	0	no	Pra; Req	no	firstlevel	10 of 47	mortal	no	no	no	no	no	no
 53	55	1	Iliad	2	434	n	2	440	n	✅	Nestor	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1028	1	monologue	M (no reply)	7	no	0	no	Del	no	firstlevel	4 of 33	mortal	no	no	no	no	no	no
 54	56	1	Iliad	2	796	n	2	806	n	✅	Iris-Polites	no	Polites	no	no	no	✅	Priam	no	no	no	no	no	1029	1	monologue	M (no reply)	11	no	0	no	War; Mes; Ins	no	firstlevel	1 of 12	god	no	Polites	no	no	no	no
@@ -98,7 +98,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 94	97	1	Iliad	4	204	n	4	207	n	✅	Talthybius	no	no	no	no	no	✅	Machaon	no	no	no	no	no	1052	1	monologue	M (no reply)	4	no	0	no	Mes	no	firstlevel	1 of 1	mortal	no	no	no	no	no	no
 95	98	1	Iliad	4	234	n	4	239	n	✅	Agamemnon	no	no	no	no	no	✅	Greeks	those that were eager to fight	no	no	yes	yes	1053	1	monologue	M (no reply)	6	no	0	no	Del; War	no	firstlevel	17 of 47	mortal	no	no	type 1: general to troops	no	no	no
 96	99	1	Iliad	4	242	n	4	249	n	✅	Agamemnon	no	no	no	no	no	✅	Greeks	those that were reluctant to fight	no	no	yes	yes	1054	1	monologue	M (no reply)	8	no	0	no	Del; Que	no	firstlevel	18 of 47	mortal	no	no	type 1: general to troops	no	no	no
-97	100	1	Iliad	4	257	n	4	264	n	✅	Agamemnon	no	no	no	no	no	✅	Idomeneus	no	no	no	no	no	1055	1	dialogue	D1	8	no	0	no	Lau; Com	no	firstlevel	19 of 47	mortal	no	no	type 3: general to individual	no	no	no
+97	100	1	Iliad	4	257	n	4	264	n	✅	Agamemnon	no	no	no	no	no	✅	Idomeneus	no	no	no	no	no	1055	1	dialogue	D1	8	no	0	no	Lau; Exh	no	firstlevel	19 of 47	mortal	no	no	type 3: general to individual	no	no	no
 98	101	1	Iliad	4	266	n	4	271	n	✅	Idomeneus	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1055	2	dialogue	D2	6	no	0	no	Com	no	firstlevel	1 of 12	mortal	no	no	no	no	no	no
 99	102	1	Iliad	4	285	n	4	291	n	✅	Agamemnon	no	no	no	no	no	❌	Aias (son of Telamon) and Aias (son of Oileus)	no	no	no	no	yes	1056	1	monologue	M (no reply)	7	no	0	no	Des	no	firstlevel	20 of 47	mortal	no	no	exhortative?	no	no	no
 100	103	1	Iliad	4	303	n	4	309	n	✅	Nestor	no	no	no	no	no	✅	Greeks	particularly Nestor's own comrades	no	no	yes	yes	1057	1	monologue	M (no reply)	7	no	0	no	War	no	firstlevel	5 of 33	mortal	no	no	type 1: general to troops	no	no	no
@@ -130,7 +130,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 126	129	1	Iliad	5	373	n	5	374	n	✅	Dione	no	no	no	no	no	✅	Aphrodite	no	no	no	no	no	1071	1	dialogue	D1	2	no	0	no	Que	no	firstlevel	1 of 2	god	no	no	no	no	no	no
 127	130	1	Iliad	5	376	n	5	380	n	✅	Aphrodite	no	no	no	no	no	✅	Dione	no	no	no	no	no	1071	2	dialogue	D2	5	no	0	no	Res	no	firstlevel	4 of 7	god	no	no	no	no	no	no
 128	131	1	Iliad	5	382	n	5	415	n	✅	Dione	no	no	no	no	no	✅	Aphrodite	no	no	no	no	no	1071	3	dialogue	D3	34	no	0	no	Del; Nar	no	firstlevel	2 of 2	god	no	no	no	no	no	no
-129	132	1	Iliad	5	421	n	5	425	n	✅	Athena	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1072	1	dialogue	D1	5	no	0	no	Que; Del	no	firstlevel	6 of 20	god	no	no	no	no	no	no
+129	132	1	Iliad	5	421	n	5	425	n	✅	Athena	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1072	1	dialogue	D1	5	no	0	no	Que; Nar	no	firstlevel	6 of 20	god	no	no	no	no	no	no
 130	133	1	Iliad	5	428	n	5	430	n	✅	Zeus	no	no	no	no	no	✅	Aphrodite	no	no	no	no	no	1072	2	dialogue	D2	3	no	0	no	Res; Per	no	firstlevel	8 of 39	god	no	no	no	no	no	no
 131	134	1	Iliad	5	440	n	5	442	n	✅	Apollo	no	no	no	no	no	✅	Diomedes	no	no	no	no	no	1073	1	monologue	M (no reply)	3	no	0	no	Per	no	firstlevel	2 of 18	god	no	no	no	no	no	no
 132	135	1	Iliad	5	455	n	5	459	n	✅	Apollo	no	no	no	no	no	✅	Ares	no	no	no	no	no	1074	1	monologue	M (no reply)	5	no	0	no	Per	no	firstlevel	3 of 18	god	no	no	no	no	no	no
@@ -182,15 +182,15 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 175	181	1	Iliad	7	47	n	7	53	n	✅	Helenus	no	no	no	no	no	✅	Hector	no	no	no	no	no	1102	1	monologue	M (no reply)	7	no	0	no	Per	no	firstlevel	2 of 2	mortal	no	no	no	no	no	no
 176	182	1	Iliad	7	67	n	7	91	n	✅	Hector	no	no	no	no	no	❌	Greeks and Trojans	no	no	no	yes	yes	1103	1	general interlocution	G1	25	no	0	no	Del	no	firstlevel	12 of 49	mortal	no	no	also in Fingerle's Feldhernreden	no	no	no
 4	183	1	Iliad	7	89	n	7	90	n	✅	someone	no	no	no	yes	no	✅	self	no	no	no	no	no	1104	1	soliloquy	S	2	no	1	no	Inf	no	rephyp	no	mortal	no	no	no	yes	hypothetical: potential τις-speech	no
-177	184	1	Iliad	7	96	n	7	102	n	✅	Menelaus	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1103	2	general interlocution	G2	7	no	0	no	Del	no	firstlevel	5 of 22	mortal	no	no	no	no	no	no
+177	184	1	Iliad	7	96	n	7	102	n	✅	Menelaus	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1103	2	general interlocution	G2	7	no	0	no	Vit	no	firstlevel	5 of 22	mortal	no	no	no	no	no	no
 178	185	1	Iliad	7	109	n	7	119	n	✅	Agamemnon	no	no	no	no	no	✅	Menelaus	no	no	no	no	no	1105	1	monologue	M (no reply)	11	no	0	in private; aside during the 	Per	no	firstlevel	27 of 47	mortal	no	no	no	no	no	no
 179	186	1	Iliad	7	124	n	7	160	n	✅	Nestor	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1103	3	general interlocution	G3	37	no	0	no	Nar; Del	no	firstlevel	8 of 33	mortal	no	no	no	no	no	no
 180	187	1	Iliad	7	171	n	7	174	n	✅	Nestor	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1103	4	general interlocution	G4	4	no	0	no	Del; Com	no	firstlevel	9 of 33	mortal	no	no	no	no	no	no
 181	188	1	Iliad	7	179	n	7	180	n	✅	someone	no	no	no	yes	no	✅	Zeus	prayer	no	no	no	no	1106	1	monologue	M (no reply)	2	no	0	no	Pra; Req	no	firstlevel	1 of 1	mortal	yes	no	no	no	no	no
 182	189	1	Iliad	7	191	n	7	199	n	✅	Aias (son of Telamon)	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1103	5	general interlocution	G5	9	no	0	no	Del	no	firstlevel	1 of 19	mortal	no	no	no	no	no	no
 183	190	1	Iliad	7	202	n	7	205	n	✅	someone	no	no	no	yes	no	✅	Zeus	prayer	no	no	no	no	1107	1	monologue	M (no reply)	4	no	0	no	Pra; Req	no	firstlevel	1 of 1	mortal	yes	no	no	no	no	no
-184	191	1	Iliad	7	226	n	7	232	n	✅	Aias (son of Telamon)	no	no	no	no	no	✅	Hector	no	no	no	no	no	1103	6	general interlocution	G6	7	no	0	no	Del	no	firstlevel	2 of 19	mortal	no	no	no	no	no	no
-185	192	1	Iliad	7	234	n	7	243	n	✅	Hector	no	no	no	no	no	✅	Aias (son of Telamon)	no	no	no	no	no	1103	7	general interlocution	G7	10	no	0	no	Del	no	firstlevel	13 of 49	mortal	no	no	no	no	no	no
+184	191	1	Iliad	7	226	n	7	232	n	✅	Aias (son of Telamon)	no	no	no	no	no	✅	Hector	no	no	no	no	no	1103	6	general interlocution	G6	7	no	0	no	Cha	no	firstlevel	2 of 19	mortal	no	no	no	no	no	no
+185	192	1	Iliad	7	234	n	7	243	n	✅	Hector	no	no	no	no	no	✅	Aias (son of Telamon)	no	no	no	no	no	1103	7	general interlocution	G7	10	no	0	no	Cha	no	firstlevel	13 of 49	mortal	no	no	no	no	no	no
 186	193	1	Iliad	7	279	n	7	282	n	✅	Idaeus	no	no	no	no	no	❌	Aias (son of Telamon) and Hector	no	no	no	no	yes	1103	8	general interlocution	G8	4	no	0	no	Per	no	firstlevel	2 of 4	mortal	no	no	no	no	no	no
 187	194	1	Iliad	7	284	n	7	286	n	✅	Aias (son of Telamon)	no	no	no	no	no	✅	Idaeus	no	no	no	no	no	1103	9	general interlocution	G9	3	no	0	no	Com; Per	no	firstlevel	3 of 19	mortal	no	no	no	no	no	no
 188	195	1	Iliad	7	288	n	7	302	n	✅	Hector	no	no	no	no	no	✅	Aias (son of Telamon)	no	no	no	no	no	1103	10	general interlocution	G10	15	no	0	no	Del; Per	no	firstlevel	14 of 49	mortal	no	no	no	no	no	no
@@ -213,7 +213,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 204	212	1	Iliad	8	146	n	8	150	n	✅	Diomedes	no	no	no	no	no	✅	Nestor	no	no	no	no	no	1116	2	dialogue	D2	5	no	0	no	Del	no	firstlevel	14 of 26	mortal	no	no	no	no	no	no
 6	213	1	Iliad	8	149	n	8	149	n	✅	Hector	no	no	no	no	no	✅	Trojans	no	no	no	yes	yes	1117	1	monologue	M (no reply)	1	no	1	no	Nar	no	rephyp	no	mortal	no	no	no	no	hypothetical speech: other	no
 205	214	1	Iliad	8	152	n	8	156	n	✅	Nestor	no	no	no	no	no	✅	Diomedes	no	no	no	no	no	1116	3	dialogue	D3	5	no	0	no	Del	no	firstlevel	12 of 33	mortal	no	no	no	no	no	no
-206	215	1	Iliad	8	161	n	8	166	n	✅	Hector	no	no	no	no	no	✅	Diomedes	no	no	no	no	no	1118	1	monologue	M (no reply)	6	no	0	no	Vit; Com	no	firstlevel	15 of 49	mortal	no	no	no	no	no	no
+206	215	1	Iliad	8	161	n	8	166	n	✅	Hector	no	no	no	no	no	✅	Diomedes	no	no	no	no	no	1118	1	monologue	M (no reply)	6	no	0	no	Tau	no	firstlevel	15 of 49	mortal	no	no	no	no	no	no
 207	216	1	Iliad	8	173	n	8	183	n	✅	Hector	no	no	no	no	no	✅	Trojans	no	no	no	yes	yes	1119	1	monologue	M (no reply)	11	no	0	no	Exh	no	firstlevel	16 of 49	mortal	no	no	type 1: general to troops	no	no	no
 208	217	1	Iliad	8	185	n	8	197	n	✅	Hector	no	no	no	no	no	✅	horses of Hector	animal	no	no	yes	yes	1120	1	monologue	M (no reply)	13	no	0	no	Exh; Com	no	firstlevel	17 of 49	mortal	no	no	exhortative?	no	no	no
 209	218	1	Iliad	8	201	n	8	207	n	✅	Hera	no	no	no	no	no	✅	Poseidon	no	no	no	no	no	1121	1	dialogue	D1	7	no	0	no	Del	no	firstlevel	9 of 31	god	no	no	no	no	no	no
@@ -230,11 +230,11 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 220	229	1	Iliad	8	462	n	8	468	n	✅	Hera	no	no	no	no	no	✅	Zeus	Athena is still present but not explicitly addressed	no	no	no	no	1128	2	general interlocution	G2	7	no	0	no	Del; Res	no	firstlevel	12 of 31	god	no	no	no	no	no	no
 221	230	1	Iliad	8	470	n	8	483	n	✅	Zeus	no	no	no	no	no	✅	Hera	Athena is still present but not explicitly addressed	no	no	no	no	1128	3	general interlocution	G3	14	no	0	no	Ora; Del	no	firstlevel	16 of 39	god	no	no	no	no	no	no
 222	231	1	Iliad	8	497	n	8	541	n	✅	Hector	no	no	no	no	no	✅	Trojans	no	no	no	yes	yes	1129	1	monologue	M (no reply)	45	no	0	no	Del; Com	no	firstlevel	18 of 49	mortal	no	no	type 1: general to troops	no	no	no
-223	232	1	Iliad	9	17	n	9	28	n	✅	Agamemnon	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1130	1	general interlocution	G1	12	no	0	no	Ora; Del	no	firstlevel	31 of 47	mortal	no	no	no	no	no	no
+223	232	1	Iliad	9	17	n	9	28	n	✅	Agamemnon	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1130	1	general interlocution	G1	12	no	0	no	Nar; Com	no	firstlevel	31 of 47	mortal	no	no	no	no	no	no
 224	233	1	Iliad	9	32	n	9	49	n	✅	Diomedes	no	no	no	no	no	✅	Agamemnon	Greeks are also still listening, but not explicitly addressed	no	no	no	no	1130	2	general interlocution	G2	18	no	0	no	Del; Per	no	firstlevel	15 of 26	mortal	no	no	no	no	no	no
 225	234	1	Iliad	9	53	n	9	78	n	✅	Nestor	no	no	no	no	no	❌	Agamemnon and Diomedes	Greeks are also still listening, but not explicitly addressed	no	no	no	yes	1130	3	general interlocution	G3	26	no	0	no	Del; Per	no	firstlevel	14 of 33	mortal	no	no	no	no	no	no
 226	235	1	Iliad	9	96	n	9	113	n	✅	Nestor	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1131	1	general interlocution	G1	18	no	0	no	Del	no	firstlevel	15 of 33	mortal	no	no	no	no	no	no
-227	236	1	Iliad	9	115	n	9	161	n	✅	Agamemnon	no	no	no	no	no	✅	Nestor	no	no	no	no	no	1131	2	general interlocution	G2	47	no	0	no	Del; Per; Com	no	firstlevel	32 of 47	mortal	no	no	no	no	no	no
+227	236	1	Iliad	9	115	n	9	161	n	✅	Agamemnon	no	no	no	no	no	✅	Nestor	no	no	no	no	no	1131	2	general interlocution	G2	47	no	0	no	Del; Vow; Com	no	firstlevel	32 of 47	mortal	no	no	no	no	no	no
 228	237	1	Iliad	9	163	n	9	172	n	✅	Nestor	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1131	3	general interlocution	G3	10	no	0	no	Del	no	firstlevel	16 of 33	mortal	no	no	no	no	no	no
 229	238	1	Iliad	9	197	n	9	198	n	✅	Achilles	no	no	no	no	no	❌	Phoinix and Aias (son of Telamon) and Odysseus	no	no	no	no	yes	1132	1	monologue	M (no reply)	2	no	0	no	Gre	no	firstlevel	12 of 87	mortal	no	no	no	no	no	no
 230	239	1	Iliad	9	202	n	9	204	n	✅	Achilles	no	no	no	no	no	✅	Patroclus	no	no	no	no	no	1133	1	monologue	M (no reply)	3	no	0	no	Com	no	firstlevel	13 of 87	mortal	no	no	no	no	no	no
@@ -344,9 +344,9 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 331	343	1	Iliad	13	275	n	13	294	n	✅	Idomeneus	no	no	no	no	no	✅	Meriones	no	no	no	no	no	1187	6	dialogue	D6	20	no	0	no	Nar; War; Del	no	firstlevel	6 of 12	mortal	no	no	no	no	no	no
 332	344	1	Iliad	13	307	n	13	310	n	✅	Meriones	no	no	no	no	no	✅	Idomeneus	no	no	no	no	no	1187	7	dialogue	D7	4	no	0	no	Que	no	firstlevel	3 of 5	mortal	no	no	no	no	no	no
 333	345	1	Iliad	13	312	n	13	327	n	✅	Idomeneus	no	no	no	no	no	✅	Meriones	no	no	no	no	no	1187	8	dialogue	D8	16	no	0	no	Res; Inf;Ins	no	firstlevel	7 of 12	mortal	no	no	no	no	no	no
-334	346	1	Iliad	13	374	n	13	382	n	✅	Idomeneus	no	no	no	no	no	✅	Othryoneus	no	no	no	no	no	1188	1	monologue	M (no reply)	9	no	0	no	Del; Com	no	firstlevel	8 of 12	mortal	no	no	no	no	no	no
+334	346	1	Iliad	13	374	n	13	382	n	✅	Idomeneus	no	no	no	no	no	✅	Othryoneus	no	no	no	no	no	1188	1	monologue	M (no reply)	9	no	0	no	Tau	no	firstlevel	8 of 12	mortal	no	no	no	no	no	no
 335	347	1	Iliad	13	414	n	13	416	n	✅	Deiphobus	no	no	no	no	no	✅	Hypsenor	no	no	no	no	no	1189	1	monologue	M (no reply)	3	no	0	no	Tau	no	firstlevel	1 of 2	mortal	no	no	no	no	no	no
-336	348	1	Iliad	13	446	n	13	454	n	✅	Idomeneus	no	no	no	no	no	✅	Deiphobus	no	no	no	no	no	1190	1	monologue	M (no reply)	9	no	0	no	Cha	no	firstlevel	9 of 12	mortal	no	no	no	no	no	no
+336	348	1	Iliad	13	446	n	13	454	n	✅	Idomeneus	no	no	no	no	no	✅	Deiphobus	no	no	no	no	no	1190	1	monologue	M (no reply)	9	no	0	no	Cha; Tau	no	firstlevel	9 of 12	mortal	no	no	no	no	no	no
 337	349	1	Iliad	13	463	n	13	467	n	✅	Deiphobus	no	no	no	no	no	✅	Aeneas	no	no	no	no	no	1191	1	monologue	M (no reply)	5	no	0	no	Del	no	firstlevel	2 of 2	mortal	no	no	type 4: other	no	no	no
 338	350	1	Iliad	13	481	n	13	486	n	✅	Idomeneus	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1192	1	monologue	M (no reply)	6	no	0	no	Req; Lam	no	firstlevel	10 of 12	mortal	no	no	also in Fingerle's Feldhernreden	no	no	no
 339	351	1	Iliad	13	620	n	13	639	n	✅	Menelaus	no	no	no	no	no	❌	Trojans and Zeus	Zeus as secundary addressee	no	no	yes	yes	1193	1	monologue	M (no reply)	20	no	0	no	Cha; Thr; Pra	no	firstlevel	9 of 22	mortal	no	no	no	no	no	no
@@ -359,7 +359,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 346	358	1	Iliad	14	3	n	14	8	n	✅	Nestor	no	no	no	no	no	✅	Machaon	no	no	no	no	no	1197	1	monologue	M (no reply)	6	no	0	no	Del	no	firstlevel	28 of 33	mortal	no	no	no	no	no	no
 347	359	1	Iliad	14	42	n	14	51	n	✅	Agamemnon	no	no	no	no	no	✅	Nestor	no	no	no	no	no	1198	1	general interlocution	G1	10	no	0	no	Que; War	no	firstlevel	41 of 47	mortal	no	no	no	no	no	no
 348	360	1	Iliad	14	53	n	14	63	n	✅	Nestor	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1198	2	general interlocution	G2	11	no	0	no	Res; Del; Per	no	firstlevel	29 of 33	mortal	no	no	no	no	no	no
-349	361	1	Iliad	14	65	n	14	81	n	✅	Agamemnon	no	no	no	no	no	✅	Nestor	no	no	no	no	no	1198	3	general interlocution	G3	17	no	0	no	Del; Per	no	firstlevel	42 of 47	mortal	no	no	no	no	no	no
+349	361	1	Iliad	14	65	n	14	81	n	✅	Agamemnon	no	no	no	no	no	✅	Nestor	no	no	no	no	no	1198	3	general interlocution	G3	17	no	0	no	Del; Com	no	firstlevel	42 of 47	mortal	no	no	no	no	no	no
 350	362	1	Iliad	14	83	n	14	102	n	✅	Odysseus	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1198	4	general interlocution	G4	20	no	0	no	Del; Vit; War	no	firstlevel	24 of 27	mortal	no	no	no	no	no	no
 351	363	1	Iliad	14	104	n	14	108	n	✅	Agamemnon	no	no	no	no	no	✅	Odysseus	no	no	no	no	no	1198	5	general interlocution	G5	5	no	0	no	Des	no	firstlevel	43 of 47	mortal	no	no	no	no	no	no
 352	364	1	Iliad	14	110	n	14	132	n	✅	Diomedes	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1198	6	general interlocution	G6	23	no	0	no	Del; Nar; Exh	no	firstlevel	26 of 26	mortal	no	no	exhortative?	no	no	no
@@ -385,7 +385,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 372	384	1	Iliad	14	479	n	14	485	n	✅	Acamas (son of Antenor)	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1207	1	monologue	M (no reply)	7	no	0	no	War	no	firstlevel	1 of 1	mortal	no	no	no	no	no	no
 373	385	1	Iliad	14	501	n	14	505	n	✅	Peneleus	no	no	no	no	no	✅	Trojans	no	no	no	yes	yes	1208	1	monologue	M (no reply)	5	no	0	no	Req	no	firstlevel	1 of 1	mortal	no	no	no	no	no	no
 374	386	1	Iliad	15	14	n	15	33	n	✅	Zeus	no	no	no	no	no	✅	Hera	no	no	no	no	no	1209	1	dialogue	D1	20	no	0	no	Vit; Nar	no	firstlevel	21 of 39	god	no	no	no	no	no	no
-375	387	1	Iliad	15	36	n	15	46	n	✅	Hera	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1209	2	dialogue	D2	11	no	0	no		no	firstlevel	19 of 31	god	no	no	no	no	no	no
+375	387	1	Iliad	15	36	n	15	46	n	✅	Hera	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1209	2	dialogue	D2	11	no	0	no	Vow	no	firstlevel	19 of 31	god	no	no	no	no	no	no
 376	388	1	Iliad	15	49	n	15	77	n	✅	Zeus	no	no	no	no	no	✅	Hera	no	no	no	no	no	1209	3	dialogue	D3	29	no	0	no	Del; Com; Ins	no	firstlevel	22 of 39	god	no	no	no	no	no	no
 377	389	1	Iliad	15	90	n	15	91	n	✅	Themis	no	no	no	no	no	✅	Hera	no	no	no	no	no	1210	1	dialogue	D1	2	no	0	no	Que	no	firstlevel	1 of 1	god	no	no	no	no	no	no
 378	390	1	Iliad	15	93	n	15	99	n	✅	Hera	no	no	no	no	no	✅	Themis	no	no	no	no	no	1210	2	dialogue	D2	7	no	0	no	Mes; Com; Res	no	firstlevel	20 of 31	god	no	no	no	no	no	no
@@ -439,11 +439,11 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 425	438	1	Iliad	16	667	n	16	675	n	✅	Zeus	no	no	no	no	no	✅	Apollo	no	no	no	no	no	1244	1	monologue	M (no reply)	9	no	0	no	Com; Ins	no	firstlevel	26 of 39	god	no	no	no	no	no	no
 426	439	1	Iliad	16	707	n	16	709	n	✅	Apollo	no	no	no	no	no	✅	Patroclus	no	no	no	no	no	1245	1	monologue	M (no reply)	3	no	0	no	Com	no	firstlevel	8 of 18	god	no	no	no	no	no	no
 427	440	1	Iliad	16	721	n	16	725	n	✅	Apollo-Asius	no	Asius	no	no	no	✅	Hector	no	no	no	no	no	1246	1	monologue	M (no reply)	5	no	0	no	Del; Exh	no	firstlevel	9 of 18	god	no	Asius	type 2: god to mortals	no	no	no
-428	441	1	Iliad	16	745	n	16	750	n	✅	Patroclus	no	no	no	no	no	✅	Cebriones	no	no	yes	no	no	1247	1	monologue	M (no reply)	6	no	0	no	Del	no	firstlevel	10 of 12	mortal	no	no	no	no	no	no
+428	441	1	Iliad	16	745	n	16	750	n	✅	Patroclus	no	no	no	no	no	✅	Cebriones	no	no	yes	no	no	1247	1	monologue	M (no reply)	6	no	0	no	Tau	no	firstlevel	10 of 12	mortal	no	no	no	no	no	no
 429	442	1	Iliad	16	830	n	16	842	n	✅	Hector	no	no	no	no	no	✅	Patroclus	no	no	no	no	no	1248	1	dialogue	D1	13	no	0	no	Tau	no	firstlevel	34 of 49	mortal	no	no	no	no	no	no
 8	443	1	Iliad	16	839	n	16	841	n	✅	Achilles	no	no	no	no	no	✅	Patroclus	no	no	no	no	no	1249	1	monologue	M (no reply)	3	no	1	no	Com	no	rephyp	no	mortal	no	no	no	no	hypothetical: other	no
-430	444	1	Iliad	16	844	n	16	854	n	✅	Patroclus	no	no	no	no	no	✅	Hector	no	no	no	no	no	1248	2	dialogue	D2	11	no	0	no	Cha?; Tau?	no	firstlevel	11 of 12	mortal	no	no	no	no	no	no
-431	445	1	Iliad	16	859	n	16	861	n	✅	Hector	no	no	no	no	no	✅	Patroclus	no	no	yes	no	no	1248	3	dialogue	D3	3	no	0	no	Del	no	firstlevel	35 of 49	mortal	no	no	no	no	no	rhetoric questions
+430	444	1	Iliad	16	844	n	16	854	n	✅	Patroclus	no	no	no	no	no	✅	Hector	no	no	no	no	no	1248	2	dialogue	D2	11	no	0	no	Del; Thr	no	firstlevel	11 of 12	mortal	no	no	no	no	no	no
+431	445	1	Iliad	16	859	n	16	861	n	✅	Hector	no	no	no	no	no	✅	Patroclus	no	no	yes	no	no	1248	3	dialogue	D3	3	no	0	no	Que	no	firstlevel	35 of 49	mortal	no	no	no	no	no	rhetoric questions
 432	446	1	Iliad	17	12	n	17	17	n	✅	Euphorbus	no	no	no	no	no	✅	Menelaus	no	no	no	no	no	1250	1	dialogue	D1	6	no	0	no	Req	no	firstlevel	1 of 2	mortal	no	no	no	no	no	no
 433	447	1	Iliad	17	19	n	17	32	n	✅	Menelaus	no	no	no	no	no	✅	Euphorbus	no	no	no	no	no	1250	2	dialogue	D2	14	no	0	no	Del; Thr	no	firstlevel	11 of 22	mortal	no	no	no	no	no	no
 434	448	1	Iliad	17	34	n	17	42	n	✅	Euphorbus	no	no	no	no	no	✅	Menelaus	no	no	no	no	no	1250	3	dialogue	D3	9	no	0	no	Thr?; Cha?	no	firstlevel	2 of 2	mortal	no	no	no	no	no	no
@@ -507,7 +507,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 492	506	1	Iliad	19	21	n	19	27	n	✅	Achilles	no	no	no	no	no	✅	Thetis	no	no	no	no	no	1287	2	dialogue	D2	7	no	0	no	Lau; Del	no	firstlevel	29 of 87	mortal	no	no	no	no	no	no
 493	507	1	Iliad	19	29	n	19	36	n	✅	Thetis	no	no	no	no	no	✅	Achilles	no	no	no	no	no	1287	3	dialogue	D3	8	no	0	no	Del; Com	no	firstlevel	12 of 14	god	no	no	no	no	no	no
 494	508	1	Iliad	19	56	n	19	73	n	✅	Achilles	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1288	1	general interlocution	G1	18	no	0	no	Del; Per	no	firstlevel	30 of 87	mortal	no	no	no	no	no	no
-495	509	1	Iliad	19	78	n	19	144	n	✅	Agamemnon	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1288	2	general interlocution	G2	67	no	0	no	Del; Nar; Exh	no	firstlevel	44 of 47	mortal	no	no	no	no	no	no
+495	509	1	Iliad	19	78	n	19	144	n	✅	Agamemnon	no	no	no	no	no	✅	Greeks	no	no	no	yes	yes	1288	2	general interlocution	G2	67	no	0	no	Nar; Vow	no	firstlevel	44 of 47	mortal	no	no	no	no	no	no
 7	510	1	Iliad	19	101	n	19	105	n	✅	Zeus	no	no	no	no	no	✅	Hera	no	no	no	no	no	1289	1	dialogue	D1	5	no	1	no	Ora	no	repreal	no	god	no	no	no	no	no	no
 8	511	1	Iliad	19	107	n	19	111	n	✅	Hera	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1289	2	dialogue	D2	5	no	1	no	Cha; Vit; Req	no	repreal	no	god	no	no	no	no	no	no
 9	512	1	Iliad	19	121	n	19	124	n	✅	Hera	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1290	1	monologue	M (no reply)	4	no	1	no	Inf	no	repreal	no	god	no	no	no	no	no	no
@@ -532,8 +532,8 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 514	531	1	Iliad	20	104	n	20	109	n	✅	Apollo-Lycaon	no	Lycaon	no	no	no	✅	Aeneas	no	no	no	no	no	1299	3	dialogue	D3	6	no	0	no	Exh	no	firstlevel	14 of 18	god	no	Lycaon	type 2: god to mortals	no	no	no
 515	532	1	Iliad	20	115	n	20	131	n	✅	Hera	no	no	no	no	no	❌	Athena and Poseidon	no	no	no	no	no	1300	1	general interlocution	G1	17	no	0	no	Inf; War; Del	no	firstlevel	25 of 31	god	no	no	no	no	no	no
 516	533	1	Iliad	20	133	n	20	143	n	✅	Poseidon	no	no	no	no	no	✅	Hera	no	no	no	no	no	1300	2	general interlocution	G2	11	no	0	no	Del	no	firstlevel	12 of 16	god	no	no	no	no	no	no
-517	534	1	Iliad	20	178	n	20	198	n	✅	Achilles	no	no	no	no	no	✅	Aeneas	no	no	no	no	no	1301	1	dialogue	D1	21	no	0	no	Que; Nar; War	no	firstlevel	38 of 87	mortal	no	no	no	no	no	no
-518	535	1	Iliad	20	200	n	20	258	n	✅	Aeneas	no	no	no	no	no	✅	Achilles	no	no	no	no	no	1301	2	dialogue	D2	59	no	0	no	Nar; Del	no	firstlevel	6 of 6	mortal	no	no	no	no	no	no
+517	534	1	Iliad	20	178	n	20	198	n	✅	Achilles	no	no	no	no	no	✅	Aeneas	no	no	no	no	no	1301	1	dialogue	D1	21	no	0	no	Que; Nar; Thr	no	firstlevel	38 of 87	mortal	no	no	no	no	no	no
+518	535	1	Iliad	20	200	n	20	258	n	✅	Aeneas	no	no	no	no	no	✅	Achilles	no	no	no	no	no	1301	2	dialogue	D2	59	no	0	no	Nar; Cha	no	firstlevel	6 of 6	mortal	no	no	no	no	no	no
 519	536	1	Iliad	20	293	n	20	308	n	✅	Poseidon	no	no	no	no	no	✅	gods	no	no	no	no	no	1302	1	general interlocution	G1	16	no	0	no	Lam; Per	no	firstlevel	13 of 16	god	no	no	no	no	no	no
 520	537	1	Iliad	20	310	n	20	317	n	✅	Hera	no	no	no	no	no	✅	Poseidon	no	no	no	no	no	1302	2	general interlocution	G2	8	no	0	no	Del	no	firstlevel	26 of 31	god	no	no	no	no	no	no
 521	538	1	Iliad	20	332	n	20	339	n	✅	Poseidon	no disguise!	no	no	no	no	✅	Aeneas	no	no	no	no	no	1303	1	monologue	M (no reply)	8	no	0	no	Que; Exh	no	firstlevel	14 of 16	god	no	no	no	no	no	no
@@ -542,8 +542,8 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 524	541	1	Iliad	20	366	n	20	372	n	✅	Hector	no	no	no	no	no	✅	Trojans	no	no	no	yes	yes	1306	1	monologue	M (no reply)	7	no	0	no	Del	no	firstlevel	41 of 49	mortal	no	no	type 1: general to troops	no	no	no
 525	542	1	Iliad	20	376	n	20	378	n	✅	Apollo	no	no	no	no	no	✅	Hector	no	no	no	no	no	1307	1	monologue	M (no reply)	3	no	0	no	Ins	no	firstlevel	15 of 18	god	no	no	no	no	no	no
 526	543	1	Iliad	20	389	n	20	392	n	✅	Achilles	no	no	no	no	no	✅	Iphition	no	no	yes	no	no	1308	1	monologue	M (no reply)	4	no	0	no	Tau	no	firstlevel	41 of 87	mortal	no	no	no	no	no	no
-527	544	1	Iliad	20	425	n	20	427	n	✅	Achilles	no	no	no	no	no	✅	self	no	no	no	no	no	1309	1	soliloquy	S	3	no	0	no	Cha	no	firstlevel	42 of 87	mortal	no	no	no	no	no	no
-528	545	1	Iliad	20	429	n	20	429	n	✅	Achilles	no	no	no	no	no	✅	Hector	no	no	no	no	no	1310	1	dialogue	D1	1	no	0	no	Cha	no	firstlevel	43 of 87	mortal	no	no	no	no	no	no
+527	544	1	Iliad	20	425	n	20	427	n	✅	Achilles	no	no	no	no	no	✅	self	no	no	no	no	no	1309	1	soliloquy	S	3	no	0	no	Exh	no	firstlevel	42 of 87	mortal	no	no	no	no	no	no
+528	545	1	Iliad	20	429	n	20	429	n	✅	Achilles	no	no	no	no	no	✅	Hector	no	no	no	no	no	1310	1	dialogue	D1	1	no	0	no	Cha;Thr	no	firstlevel	43 of 87	mortal	no	no	no	no	no	no
 529	546	1	Iliad	20	431	n	20	437	n	✅	Hector	no	no	no	no	no	✅	Achilles	no	no	no	no	no	1310	2	dialogue	D2	7	no	0	no	Cha	no	firstlevel	42 of 49	mortal	no	no	no	no	no	no
 530	547	1	Iliad	20	449	n	20	454	n	✅	Achilles	no	no	no	no	no	✅	Hector	no	no	no	no	no	1310	3	dialogue	D3	6	no	0	no	Thr	no	firstlevel	44 of 87	mortal	no	no	no	no	no	no
 531	548	1	Iliad	21	54	n	21	63	n	✅	Achilles	no	no	no	no	no	✅	Lycaon	no	no	no	no	no	1311	1	dialogue	D1	10	no	0	no	Lau; Del	no	firstlevel	45 of 87	mortal	no	no	no	no	no	no
@@ -687,7 +687,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 666	686	1	Iliad	24	592	n	24	595	n	✅	Achilles	no	no	no	no	no	✅	Patroclus	no	no	yes	no	no	1392	1	soliloquy	S	4	no	0	no	Req	no	firstlevel	84 of 87	mortal	no	no	no	no	no	no
 667	687	1	Iliad	24	599	n	24	620	n	✅	Achilles	no	no	no	no	no	✅	Priam	no	no	no	no	no	1391	5	dialogue	D5	22	no	0	no	Inf; Nar	no	firstlevel	85 of 87	mortal	no	no	no	no	no	resumes ongoing dialogue or new dialogue??
 668	688	1	Iliad	24	635	n	24	642	n	✅	Priam	no	no	no	no	no	✅	Achilles	no	no	no	no	no	1391	6	dialogue	D6	8	no	0	no	Del; Req	no	firstlevel	22 of 25	mortal	no	no	no	no	no	no
-669	689	1	Iliad	24	650	n	24	658	n	✅	Achilles	no	no	no	no	no	✅	Priam	no	no	no	no	no	1391	7	dialogue	D7	9	no	0	no	Req; Del; Res	no	firstlevel	86 of 87	mortal	no	no	no	no	no	no
+669	689	1	Iliad	24	650	n	24	658	n	✅	Achilles	no	no	no	no	no	✅	Priam	no	no	no	no	no	1391	7	dialogue	D7	9	no	0	no	Ins; Que	no	firstlevel	86 of 87	mortal	no	no	no	no	no	no
 670	690	1	Iliad	24	660	n	24	667	n	✅	Priam	no	no	no	no	no	✅	Achilles	no	no	no	no	no	1391	8	dialogue	D8	8	no	0	no	Res; Inf	no	firstlevel	23 of 25	mortal	no	no	no	no	no	no
 671	691	1	Iliad	24	669	n	24	670	n	✅	Achilles	no	no	no	no	no	✅	Priam	no	no	no	no	no	1391	9	dialogue	D9	2	no	0	no	Inf	no	firstlevel	87 of 87	mortal	no	no	no	no	no	no
 672	692	1	Iliad	24	683	n	24	688	n	✅	Hermes	no	no	no	no	no	✅	Priam	no	no	no	no	no	1393	1	monologue	M (no reply)	6	no	0	no	Del	no	firstlevel	8 of 8	god	no	no	no	no	no	no
