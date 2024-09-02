@@ -3,17 +3,17 @@ work_id	seq	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	s
 26	2	1.1	51	b	1.1	52	a	✅	Cledonia		no	no	no	no	✅	Justa		no	no	no	no	26001	2	dialogue	D2	1.0		0		Del			
 26	3	1.1	53		1.1	57		✅	Justa		no	no	no	no	✅	Cledonia		no	no	no	no	26001	3	dialogue	D3	5.0		0		Del			
 26	4	1.1	69	b	1.1	70		✅	Christ		no	dream	no	no	❌	Cledonia and Aedesius		no	no	no	tandem	26002	1	monologue	M (no reply)	1.5		0		Com; Per			
-26	5	1.2	24	b	1.2	24	a	✅	demon #1		no	no	no	no	✅	Cyprian		no	no	no	no	26003	1	dialogue	D1	0.5		0		Que			
-26	6	1.2	25	b	1.2	27		✅	Cyprian		no	no	no	no	✅	demon #1		no	no	no	no	26003	2	dialogue	D2	2.5		0		Res; Que			
-26	7	1.2	30		1.2	30		✅	Cyprian		no	no	no	no	✅	demon #1		no	no	no	no	26003	3	dialogue	D3	1.0		0	Response indirect speech in between	Que			
-26	8	1.2	31	b	1.2	51		✅	demon #1		no	no	no	no	✅	Cyprian		no	no	no	no	26003	4	dialogue	D4	18.5		0		Res; Nar; Inf			
-26	9	1.2	53		1.2	56		✅	Cyprian		no	no	no	no	✅	demon #1		no	no	no	no	26003	5	dialogue	D5	4.0		0		Ins			
-26	10	1.2	64		1.2	92		✅	Justa		no	no	no	no	✅	God		no	no	no	no	26004	1	monologue	M (no reply)	29.0		0		Pra; Lau; Req			
-26	11	1.2	98	b	1.2	99		✅	Cyprian		no	no	no	no	✅	demon #1		no	no	no	no	26005	1	dialogue	D1	1.5		0		Que			
-26	12	1.2	100	b	1.2	101		✅	demon #1		no	no	no	no	✅	Cyprian		no	no	no	no	26005	2	dialogue	D2	1.5		0		Res			
+26	5	1.2	24	b	1.2	24	a	✅	demon		no	no	no	no	✅	Cyprian		no	no	no	no	26003	1	dialogue	D1	0.5		0		Que			
+26	6	1.2	25	b	1.2	27		✅	Cyprian		no	no	no	no	✅	demon		no	no	no	no	26003	2	dialogue	D2	2.5		0		Res; Que			
+26	7	1.2	30		1.2	30		✅	Cyprian		no	no	no	no	✅	demon		no	no	no	no	26003	3	dialogue	D3	1.0		0	Response indirect speech in between	Que			
+26	8	1.2	31	b	1.2	51		✅	demon		no	no	no	no	✅	Cyprian		no	no	no	no	26003	4	dialogue	D4	18.5		0		Res; Nar; Inf			
+26	9	1.2	53		1.2	56		✅	Cyprian		no	no	no	no	✅	demon		no	no	no	no	26003	5	dialogue	D5	4.0		0		Ins			
+26	10	1.2	64		1.2	92		✅	Justa		no	no	no	no	✅	God (Christian)		no	no	no	no	26004	1	monologue	M (no reply)	29.0		0		Pra; Lau; Req			
+26	11	1.2	98	b	1.2	99		✅	Cyprian		no	no	no	no	✅	demon		no	no	no	no	26005	1	dialogue	D1	1.5		0		Que			
+26	12	1.2	100	b	1.2	101		✅	demon		no	no	no	no	✅	Cyprian		no	no	no	no	26005	2	dialogue	D2	1.5		0		Res			
 26	13	1.2	104	b	1.2	106	a	✅	Beliar	demon #2	no	no	no	no	✅	Cyprian		no	no	no	no	26006	1	dialogue	D1	2.0		0		Del			
 26	14	1.2	107	b	1.2	109	a	✅	Cyprian		no	no	no	no	✅	Beliar		no	no	no	no	26006	2	dialogue	D2	2.0		0		Ins			
-26	15	1.2	112		1.2	131		✅	Justa		no	no	no	no	✅	God		no	no	no	no	26007	1	monologue	M (no reply)	20.0		0		Pra; Lau; Req			
+26	15	1.2	112		1.2	131		✅	Justa		no	no	no	no	✅	God (Christian)		no	no	no	no	26007	1	monologue	M (no reply)	20.0		0		Pra; Lau; Req			
 26	16	1.2	135	b	1.2	126	a	✅	Cyprian		no	no	no	no	✅	Beliar		no	no	no	no	26008	1	dialogue	D1	1.0		0		Que			
 26	17	1.2	137		1.2	138		✅	Beliar		no	no	no	no	✅	Cyprian		no	no	no	no	26008	2	dialogue	D2	2.0		0		Res			
 26	18	1.2	141	b	1.2	141	a	✅	Cyprian		no	no	no	no	✅	Satan		no	no	no	no	26009	1	dialogue	D1	0.5		0		Que; Cha			
@@ -42,19 +42,19 @@ work_id	seq	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	speaker_notes	s
 26	41	1.2	226	b	1.2	229		✅	Anthimus		no	no	no	no	✅	Cyprian		no	no	no	no	26014	2	dialogue	D2	2.5		0		Com			
 26	42	1.2	230	b	1.2	239		✅	Cyprian		no	no	no	no	✅	Anthimus		no	no	no	no	26014	3	dialogue	D3	8.5		0		Del; Per			
 26	43	1.2	246	b	1.2	249		✅	Cyprian		no	no	no	no	✅	self		no	no	no	no	26015	1	soliloquy	S	2.5		0		Del			
-26	44	1.2	256		1.2	258		✅	Cyprian		no	no	no	no	✅	God		no	no	no	no	26016	1	monologue	M (no reply)	3.0		0		Pra; Req			
-26	45	1.2	278		1.2	278		✅	priest (of God)		no	no	no	no	✅	attendees		no	no	no	no	26017	1	monologue	M (no reply)	1.0		0		Com			
+26	44	1.2	256		1.2	258		✅	Cyprian		no	no	no	no	✅	God (Christian)		no	no	no	no	26016	1	monologue	M (no reply)	3.0		0		Pra; Req			
+26	45	1.2	278		1.2	278		✅	priest (Christian)		no	no	no	no	✅	attendees		no	no	no	no	26017	1	monologue	M (no reply)	1.0		0		Com			
 26	46	1.2	281		1.2	281	a	✅	Asterius		no	no	no	no	✅	Cyprian		no	no	no	no	26018	1	dialogue	D1	0.5		0		Com			
 26	47	1.2	282		1.2	283	a	✅	Cyprian		no	no	no	no	✅	Asterius		no	no	no	no	26018	2	dialogue	D2	1.5		0		Que			
 26	48	1.2	283	b	1.2	284		✅	Asterius		no	no	no	no	✅	Cyprian		no	no	no	no	26018	3	dialogue	D3	1.5		0		Del			
 26	49	1.2	285	b	1.2	289		✅	Cyprian		no	no	no	no	✅	Asterius		no	no	no	no	26018	4	dialogue	D4	3.5		0		Del			
 26	50	2	1		2	478	a	✅	Cyprian		no	no	no	no	✅	friends		no	no	no	no	26019	1	monologue	M (no reply)	478.5		0	The response to the story seems to be lost	Nar; Inf; Del			
-26	51	2	228		2	228	a	✅	demon #1		no	no	no	no	✅	Cyprian		no	no	no	no	26020	1	monologue	M (no reply)	0.5		1		Lau			
+26	51	2	228		2	228	a	✅	demon		no	no	no	no	✅	Cyprian		no	no	no	no	26020	1	monologue	M (no reply)	0.5		1		Lau			
 26	52	2	320	b	2	322		✅	Cyprian		no	no	no	no	✅	Beliar		no	no	no	no	26021	1	monologue	M (no reply)	1.5		1		Req			
 26	53	2	351		2	351		✅	Aglaidas		no	no	no	no	✅	those present		no	no	no	no	26022	1	monologue	M (no reply)	1.0		1		Del			
 26	54	2	376	b	2	380	a	✅	Justa		no	no	no	no	❌	Cledonia and Aedesius		no	no	no	no	26023	1	monologue	M (no reply)	4.0		1		Con			
 26	55	2	387		2	388		✅	Justa		no	no	no	no	❌	Cledonia and Aedesius		no	no	no	no	26024	1	monologue	M (no reply)	2.0		1		Con			
 26	56	2	406		2	447		✅	Cyprian		no	no	no	no	✅	demon	which demon?	no	no	no	no	26025	1	monologue	M (no reply)	42.0		1		Del; Tau; Vit			
-26	57	2	454	b	2	455	a	✅	Cyprian		no	no	no	no	✅	God		no	no	no	no	26026	1	monologue	M (no reply)	1.0		1		Pra; Req			
-26	58	2	460	b	2	460	a	✅	Cyprian		no	no	no	no	✅	God		no	no	no	no	26027	1	monologue	M (no reply)	0.5		1	iterative	Del			
+26	57	2	454	b	2	455	a	✅	Cyprian		no	no	no	no	✅	God (Christian)		no	no	no	no	26026	1	monologue	M (no reply)	1.0		1		Pra; Req			
+26	58	2	460	b	2	460	a	✅	Cyprian		no	no	no	no	✅	God (Christian)		no	no	no	no	26027	1	monologue	M (no reply)	0.5		1	iterative	Del			
 26	59	2	462	b	2	470	a	✅	demon	which demon?	no	no	no	no	✅	Christ		no	no	no	no	26028	1	monologue	M (no reply)	8.0		1		Per; Del			

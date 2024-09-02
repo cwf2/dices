@@ -1,8 +1,8 @@
 work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
-39	1	85		87		❌	Honorius		no	no	no	no	❌	Theodosius	genitor regni	no	no	no	no	39001	1	monologue	M1 (no reply)	2		0		Pra; req		no
-39	2	154		158		❌	Naiad of Eridanus		no	no	yes	no	❌	Eridanus		no	no	no	no	39002	1	monologue	M1 (no reply)	4		0		Inf; con		no
-39	3	180		192		❌	Eridanus		no	no	no	no	❌	Alaric		no	no	no	no	39003	1	monologue	M1 (no reply)	12		0		Que; inf		no
-39	4	274		319		❌	Alaric		no	no	no	no	❌	Italy and Pollentia and Roma and spoils of war	Ausonium aethera	no	no	yes	no	39004	1	monologue	M1 (no reply)	45		0		Inf; nar; pra; far		no
-39	5	361		425		❌	Roma		no	no	no	no	❌	Honorius		no	no	no	no	39005	1	dialogue	D1	64		0		Nar; que; inf; lam		no
-39	6	427		493		❌	Honorius		no	no	no	no	❌	Roma		no	no	no	no	39005	2	dialogue	D2	66		0		Res; con; nar; com		no
-39	8	570		574		❌	Young girl		no	no	yes	no	❌	nurse		no	no	yes	no	39006	1	monologue	M2	4		0		que;		no
+39	1	85		87		✅	Honorius		no	no	no	no	✅	Theodosius	genitor regni	no	no	no	no	39001	1	monologue	M1 (no reply)	2		0		Pra; req		no
+39	2	154		158		✅	naiad of Eridanus		no	no	yes	no	✅	Eridanus		no	no	no	no	39002	1	monologue	M1 (no reply)	4		0		Inf; con		no
+39	3	180		192		✅	Eridanus		no	no	no	no	✅	Alaric		no	no	no	no	39003	1	monologue	M1 (no reply)	12		0		Que; inf		no
+39	4	274		319		✅	Alaric		no	no	no	no	❌	Italy and Pollentia and Roma and spoils of war	Ausonium aethera	no	no	yes	no	39004	1	monologue	M1 (no reply)	45		0		Inf; nar; pra; far		no
+39	5	361		425		✅	Roma		no	no	no	no	✅	Honorius		no	no	no	no	39005	1	dialogue	D1	64		0		Nar; que; inf; lam		no
+39	6	427		493		✅	Honorius		no	no	no	no	✅	Roma		no	no	no	no	39005	2	dialogue	D2	66		0		Res; con; nar; com		no
+39	8	570		574		✅	Young girl		no	no	yes	no	✅	nurse		no	no	yes	no	39006	1	monologue	M2	4		0		que;		no

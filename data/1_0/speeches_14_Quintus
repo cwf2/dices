@@ -3,7 +3,7 @@ work_id	seq	orig_id	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_not
 12	2	2	1	186	1	197	✅	Priam		no	no	no	no	✅	Zeus		no	no	no	no	12002	1	monologue	M (no reply)	12		0		Pra; Req			1 of 5	mortal			
 12	3	3	1	212	1	219	✅	Greeks		no	no	yes	collective	✅	self		no	no	yes	collective	12003	1	monologue	M (no reply)	8		0		Del			1 of 1	mortal	collective		
 12	4	4	1	326	1	334	✅	Penthesilea		no	no	no	no	✅	Greeks		no	no	no	no	12004	1	monologue	M (no reply)	9		0		Thr; Vit			1 of 2	mortal			
-12	5	5	1	358	1	372	✅	Trojan (Quintus)		no	no	yes	no	✅	Trojans	O friends'	no	no	yes	collective	12005	1	monologue	M (no reply)	15		0		Del; Exh			1 of 1	mortal	collective		
+12	5	5	1	358	1	372	✅	Trojan		no	no	yes	no	✅	Trojans	O friends'	no	no	yes	collective	12005	1	monologue	M (no reply)	15		0		Del; Exh			1 of 1	mortal	collective		
 12	6	6	1	409	1	435	✅	Hippodamea		no	no	no	no	✅	Trojan women		no	no	yes	collective	12006	1	general interlocution	G1	27		0		Exh; Per; Del			1 of 1	mortal			type 1: general to troops
 12	7	7	1	451	1	474	✅	Theano		no	no	no	no	✅	Trojan women		no	no	yes	collective	12006	2	general interlocution	G2	24		0		Lam; Inf			1 of 1	mortal			
 12	8	8	1	497	1	507	✅	Aias (son of Telamon)		no	no	no	no	✅	Achilles		no	no	no	no	12007	1	monologue	M (no reply)	11		0		Del; Exh			1 of 8	mortal			type 4: other
@@ -70,7 +70,7 @@ work_id	seq	orig_id	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_not
 12	69	69	5	415	5	427	✅	Menelaus		no	no	no	no	✅	Agamemnon		no	no	yes	collective	12046	1	dialogue	D1	13		0		Del			1 of 5	mortal			
 12	70	70	5	428	5	431	✅	Agamemnon		no	no	no	no	✅	Menelaus		no	no	no	no	12046	2	dialogue	D2	4		0		Del			4 of 8	mortal			
 12	71	71	5	465	5	481	✅	Aias (son of Telamon)		no	no	no	no	✅	self		no	no	no	no	12047	1	soliloquy	S	17		0		Lam			8 of 8	mortal			
-12	72	72	5	509	5	520	✅	Teucrus		no	no	no	no	✅	Aias (son of Telamon)	Dead	no	no	no	no	12048	1	soliloquy	S	12		0		Lam			1 of 2	mortal			
+12	72	72	5	509	5	520	✅	Teucer		no	no	no	no	✅	Aias (son of Telamon)	Dead	no	no	no	no	12048	1	soliloquy	S	12		0		Lam			1 of 2	mortal			
 12	73	73	5	532	5	558	✅	Tecmessa		no	no	no	no	✅	Aias (son of Telamon)	Dead	no	no	no	no	12049	1	soliloquy	S	27		0		Lam			1 of 1	mortal			
 12	74	74	5	560	5	567	✅	Agamemnon		no	no	no	no	✅	Tecmessa		no	no	no	no	12049	2	monologue	M (reply)	8		0	Seems to be a reply to Tecmessa's lament; speech cluster	Con			5 of 8	mortal			
 12	75	75	5	574	5	597	✅	Odysseus		no	no	no	no	✅	Greeks		no	no	yes	collective	12050	1	general interlocution	G1	24		0		Del			3 of 8	mortal			
@@ -86,7 +86,7 @@ work_id	seq	orig_id	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_not
 12	85	85	6	414	6	424	✅	Eurypylus		no	no	no	no	✅	Machaon		no	no	no	no	12054	1	dialogue	D1	11		0		Tau			3 of 7	mortal			
 12	86	86	6	426	6	428	✅	Machaon		no	no	no	no	✅	Eurypylus		no	no	no	no	12054	2	dialogue	D2	3		0		Ora			1 of 1	mortal			
 12	87	87	6	431	6	434	✅	Eurypylus		no	no	no	no	✅	Machaon		no	no	no	no	12054	3	dialogue	D3	4		0		Tau			4 of 7	mortal			
-12	88	88	6	443	6	451	✅	Teucrus		no	no	no	no	✅	Greeks		no	no	yes	collective	12055	1	monologue	M (no reply)	9		0		Exh			2 of 2	mortal			type 1: general to troops
+12	88	88	6	443	6	451	✅	Teucer		no	no	no	no	✅	Greeks		no	no	yes	collective	12055	1	monologue	M (no reply)	9		0		Exh			2 of 2	mortal			type 1: general to troops
 12	89	89	6	604	6	608	✅	Eurypylus		no	no	no	no	✅	Trojans		no	no	no	no	12056	1	monologue	M (no reply)	5		0		Exh			5 of 7	mortal			type 1: general to troops
 12	90	90	7	38	7	55	✅	Nestor		no	no	no	no	✅	Podaleirus		no	no	no	no	12057	1	dialogue	D1	18		0		Con			9 of 14	mortal			
 12	91	91	7	58	7	65	✅	Podaleirus		no	no	no	no	✅	Nestor		no	no	no	no	12057	2	dialogue	D2	8		0		Lam			1 of 1	mortal			

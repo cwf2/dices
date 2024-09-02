@@ -53,7 +53,7 @@ orig_id	seq	work	work_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 51.0	52	Val. Flacc.	7	3	81	y	3	82	n	n	✅	Jason						❌	Aeson and Argonauts		y (Aeson: dead and absent)		y		7041	1	M	M (no reply)	1.75		0		Pra; Exh	
 52.0	53	Val. Flacc.	7	3	103	y	3	105	y	y	✅	Tydeus						✅	Corythus						7042	1	M	M (no reply)	2.1666666666666665		0		Thr	
 53.0	54	Val. Flacc.	7	3	143	n	3	145	y	y	✅	Nestor						✅	Argonauts				y		7043	1	M	M (no reply)	1.9166666666666665		0		Vit; Exh	
-54.0	55	Val. Flacc.	7	3	169	y	3	170	n	y	✅	Hercules						✅	Admon/Hidmon						7044	1	M	M (no reply)	1.6666666666666665		0		Thr	
+54.0	55	Val. Flacc.	7	3	169	y	3	170	n	y	✅	Hercules						✅	Admon						7044	1	M	M (no reply)	1.6666666666666665		0		Thr	
 55.0	56	Val. Flacc.	7	3	201	n	3	203	y	n	✅	Telamon						✅	gods				y		7045	1	M	M (no reply)	2.25		0		Pra	
 56.0	57	Val. Flacc.	7	3	230	y	3	234	n	n	✅	Cyzicus						✅	Cyzicans				y		7046	1	M	M (no reply)	4.75		0		Vit; Exh	
 57.0	58	Val. Flacc.	7	3	259	n	3	261	n	y	✅	Tiphys						✅	gods of the sea				y		7047	1	M	M (no reply)	2.1666666666666665		0		Lam	

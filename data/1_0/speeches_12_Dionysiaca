@@ -1,14 +1,14 @@
 work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	Unnamed: 31	berenice_level	speech/this speaker	mortal/god	anonymous.2	disguise	exhortation (ch. 2)	ruse (ch. 4)	internal observer (ch. 5)	hypothetical_type	narrative_level	where?	real/hypothetical
 11	1	1	1	93	1	124	✅	sailor		no	no	yes	no	✅	self		no	no	yes	no	11001	1	soliloquy	S	32		0	Lots of questions, but more in a rhetoric way	Del			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
 11	2	2	1	128	1	136	✅	Europa		no	no	no	no	❌	self and waves and Boreas		no	no	no	collective	11002	1	monologue	M (no reply)	9		0		Com			firstlevel	1 of 1	mortal									
-11	1	3	1	129	1	129	✅	waves		no	no	yes	collective	✅	bull (Zeus)		no	no	no	no	11003	1	monologue	M (no reply)	1		1		Com			rephyp		natural element	yes					messenger speech	2nd		
+11	1	3	1	129	1	129	✅	waves		no	no	yes	collective	✅	Zeus-bull		no	no	no	no	11003	1	monologue	M (no reply)	1		1		Com			rephyp		natural element	yes					messenger speech	2nd		
 11	3	4	1	326	1	343	✅	Hera		no	no	no	no	❌	self and Apollo and Zeus		no	no	no	collective	11004	1	monologue	M (no reply)	18		0		Com; Des; Lam			firstlevel	1 of 12	god					type 3 = divine				
 11	2	5	1	330	1	330	✅	Hera		no	no	no	no	✅	self		no	no	no	no	11005	1	soliloquy	S	1		1		Com			rephyp		god						first person potential speech	2nd		
 11	4	6	1	378	1	407	✅	Zeus		no	no	no	no	❌	Cadmus and Eros		no	no	no	tandem	11006	1	monologue	M (no reply)	30		0		War; Ins			firstlevel	1 of 12	god									
 11	5	7	1	427	1	500	✅	Typhon		no	no	no	no	✅	Cadmus		no	no	no	no	11007	1	dialogue	D1	74		0		Cha; Lau; Vow; Com			firstlevel	1 of 2	god									
 11	6	8	1	486	1	506	✅	Cadmus		shepherd	no	no	no	✅	Typhon		no	no	no	no	11007	2	dialogue	D2	21		0		Req; Vow			firstlevel	1 of 3	mortal		shepherd		yes					
-11	7	9	2	98	2	108	✅	Hamadryad 1		no	no	yes	no	✅	Hamadryad 2		no	no	no	no	11008	1	dialogue	D1	11		0		Des; Req			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
-11	8	10	2	113	2	162	✅	Hamadryad 2		no	no	yes	no	✅	Hamadryad 1	Feels more introspective?	no	no	no	no	11008	2	dialogue	D2	50		0		Del; Des			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
+11	7	9	2	98	2	108	✅	hamadryad		no	no	yes	no	✅	hamadryad		no	no	no	no	11008	1	dialogue	D1	11		0		Des; Req			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
+11	8	10	2	113	2	162	✅	hamadryad		no	no	yes	no	✅	hamadryad	Feels more introspective?	no	no	no	no	11008	2	dialogue	D2	50		0		Del; Des			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
 11	9	11	2	209	2	236	✅	Nike		Leto	no	no	no	✅	Zeus		no	no	no	no	11009	1	monologue	M (no reply)	28		0	Questions seem to be rhetorical	Req; Inf; Des; Del			firstlevel	1 of 1	god		Leto	type 2 = god to mortals	yes					
 11	10	12	2	258	2	355	✅	Typhon		no	no	no	no	✅	self	his hands and his bulls	no	no	no	no	11010	1	monologue	M (no reply)	98		0		Exh			firstlevel	2 of 2	god			type 1 = general to troops						
 11	3	13	2	304	2	304	✅	someone		no	no	yes	no	✅	self		no	no	yes	no	11011	1	soliloquy	S	1		1		Inf			rephyp		unspecified	yes					potential τις-speech	2nd		
@@ -18,17 +18,17 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	14	17	3	248	3	319	✅	Cadmus		no	no	no	no	✅	Electra (Pleiad)		no	no	no	no	11015	1	dialogue	D1	72		0	reply to indirect speech; could be just a dialogue as well	Res; Nar			firstlevel	2 of 3	mortal									
 11	15	18	3	326	3	371	✅	Electra (Pleiad)		no	no	no	no	✅	Cadmus		no	no	no	no	11015	2	dialogue	D2	46		0		Con			firstlevel	1 of 1	mortal/god									
 11	16	19	3	425	3	444	✅	Hermes		no	no	no	no	✅	Electra (Pleiad)		no	no	no	no	11016	1	monologue	M (no reply)	20		0		Mes			firstlevel	1 of 7	god									
-11	17	20	4	36	4	63	✅	Harmonia (wife of Cadmus)		no	no	no	no	✅	Electra (Pleiad)		no	no	no	no	11017	1	monologue	M (no reply)	28		0	questions seem to be rhetorical --> del?	Nar; Lam; Que			firstlevel	1 of 2	mortal									
-11	18	21	4	77	4	176	✅	Aphrodite		Peisinoe	no	no	no	✅	Harmonia (wife of Cadmus)		no	no	no	no	11018	1	monologue	M (no reply)	100		0		Del			firstlevel	1 of 9	god		Peisinoe		yes					
-11	19	22	4	182	4	196	✅	Harmonia (wife of Cadmus)		no	no	no	no	❌	Samothrace and Artemis		no	no	no	no	11019	1	monologue	M (no reply)	15		0		Far			firstlevel	2 of 2	mortal									
-11	20	23	4	216	4	225	✅	Selene		no	no	no	no	❌	self and Harmonia (wife of Cadmus) and Aphrodite		no	no	no	collective	11020	1	monologue	M (no reply)	10		0		Tau			firstlevel	1 of 2	god					type 3 = divine				
-11	4	24	4	220	4	221	✅	Harmonia (wife of Cadmus)		no	no	no	no	✅	Aphrodite		no	no	no	no	11021	1	monologue	M (no reply)	2		1		Inf			rephyp		mortal						messenger speech	2nd		
+11	17	20	4	36	4	63	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	✅	Electra (Pleiad)		no	no	no	no	11017	1	monologue	M (no reply)	28		0	questions seem to be rhetorical --> del?	Nar; Lam; Que			firstlevel	1 of 2	mortal									
+11	18	21	4	77	4	176	✅	Aphrodite		Peisinoe	no	no	no	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	11018	1	monologue	M (no reply)	100		0		Del			firstlevel	1 of 9	god		Peisinoe		yes					
+11	19	22	4	182	4	196	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	❌	Samothrace and Artemis		no	no	no	no	11019	1	monologue	M (no reply)	15		0		Far			firstlevel	2 of 2	mortal									
+11	20	23	4	216	4	225	✅	Selene		no	no	no	no	❌	self and Harmonia (daughter of Aphrodite) and Aphrodite		no	no	no	collective	11020	1	monologue	M (no reply)	10		0		Tau			firstlevel	1 of 2	god					type 3 = divine				
+11	4	24	4	220	4	221	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	✅	Aphrodite		no	no	no	no	11021	1	monologue	M (no reply)	2		1		Inf			rephyp		mortal						messenger speech	2nd		
 11	21	25	4	238	4	246	✅	passenger on Cadmus’ ship		no	no	yes	no	❌	self and Aphrodite		no	no	no	no	11022	1	monologue	M (no reply)	9		0		Del; Req			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
 11	22	26	4	293	4	306	✅	Delphic oracle		no	no	no	no	✅	Cadmus		no	no	no	no	11023	1	monologue	M (no reply)	14		0		Ins; Ora			firstlevel	1 of 1	god									
 11	23	27	4	393	4	405	✅	Athena		no	no	no	no	✅	Cadmus		no	no	no	no	11024	1	monologue	M (no reply)	13		0		Exh; Ins			firstlevel	1 of 4	god			type 2 = god to mortals						
-11	24	28	5	337	5	365	✅	Actaeon		no	no	no	no	❌	self and the hills (Cithairon) and the beasts	also Teiresias and Cithairon, but more in function of self	no	no	yes	collective	11025	1	soliloquy	S	29		0		Nar; Lam; Req			firstlevel	1 of 3	mortal									
+11	24	28	5	337	5	365	✅	Actaeon		no	no	no	no	❌	self and hills of Cithairon and beasts	also Teiresias and Cithairon, but more in function of self	no	no	yes	collective	11025	1	soliloquy	S	29		0		Nar; Lam; Req			firstlevel	1 of 3	mortal									
 11	25	29	5	415	5	532	✅	ghost of Actaeon	ghost	as a phantom after death	dead	no	no	❌	Aristaeus and Autonoe		no	no	no	no	11026	1	monologue	M (no reply)	118		0		Req; Lam			firstlevel	2 of 3	mortal		as a phantom after death							
-11	1	30	5	459	5	460	✅	dogs of Actaeon		no	no	collective	collective	❌	rocks 1 and nymphs		no	no	collective	collective	11027	1	general interlocution	G1	2		0		Que			repreal		animal	collective								
+11	1	30	5	459	5	460	✅	dogs of Actaeon		no	no	collective	collective	❌	rocks and nymphs		no	no	collective	collective	11027	1	general interlocution	G1	2		0		Que			repreal		animal	collective								
 11	2	31	5	462	5	466	✅	Mount Citheron		no	no	no	no	✅	dogs of Actaeon		no	no	collective	collective	11027	2	general interlocution	G2	5		0		Res; Inf			repreal		god									
 11	3	32	5	469	5	472	✅	Artemis		no	no	no	no	✅	dogs of Actaeon		no	no	collective	collective	11028	1	monologue	M (no reply)	4		0		Tau			repreal		god									
 11	26	33	6	90	6	102	✅	Astraeus		no	no	no	no	✅	Demeter		no	no	no	no	11029	1	monologue	M (no reply)	13		0		Ora			firstlevel	1 of 1	god									
@@ -37,7 +37,7 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	29	36	6	346	6	365	✅	Alpheus		no	no	no	no	❌	Nile and Pyramus		no	no	no	tandem	11031	1	monologue	M (no reply)	20		0		Lam; Del			firstlevel	1 of 1	god					type 2 = mythological				
 11	30	37	7	29	7	66	✅	Aeon		no	no	no	no	✅	Zeus		no	no	no	no	11032	1	dialogue	D1	38		0		Del; Que; Lam			firstlevel	1 of 1	god									
 11	31	38	7	73	7	105	✅	Zeus		no	no	no	no	✅	Aeon		no	no	no	no	11032	2	dialogue	D2	33		0		Del			firstlevel	4 of 12	god									
-11	32	39	7	226	7	254	✅	Naiad 1		no	no	yes	no	✅	self		no	no	no	no	11033	1	soliloquy	S	29		0	Questions seem to be rhetorical	Del			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
+11	32	39	7	226	7	254	✅	naiad		no	no	yes	no	✅	self		no	no	no	no	11033	1	soliloquy	S	29		0	Questions seem to be rhetorical	Del			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
 11	33	40	7	286	7	307	✅	Zeus		no	no	no	no	❌	Night and Helios and Selene		no	no	yes	no	11034	1	monologue	M (no reply)	22		0		Que; Req			firstlevel	5 of 12	god									
 11	34	41	7	352	7	368	✅	Zeus		no	no	no	no	✅	Semele		no	no	no	no	11035	1	monologue	M (no reply)	17		0		Per			firstlevel	6 of 12	god									
 11	35	42	8	50	8	102	✅	Phthonus		Ares	no	no	no	❌	Hera and Athena		no	no	no	no	11036	1	monologue	M (no reply)	53		0		Inf; Far; Del			firstlevel	1 of 1	god		Ares		yes					
@@ -53,10 +53,10 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	43	52	9	61	9	91	✅	Hermes		no	no	no	no	✅	Ino		no	no	no	no	11045	1	monologue	M (no reply)	31		0		Req			firstlevel	2 of 7	god									
 11	44	53	9	149	9	154	✅	Hermes		no	no	no	no	✅	Rhea		no	no	no	no	11046	1	monologue	M (no reply)	6		0		Com; Req			firstlevel	3 of 7	god									
 11	45	54	9	208	9	242	✅	Semele		no	no	no	no	❌	self and Hera		no	no	no	no	11047	1	soliloquy	S	35		0		Tau			firstlevel	3 of 4	god					type 3 = divine				
-11	46	55	10	85	10	119	✅	Ino		no	no	no	no	❌	self and Sea		no	no	no	no	11048	1	soliloquy	S	35		0		War; Lau; Req			firstlevel	1 of 1	mortal									
+11	46	55	10	85	10	119	✅	Ino		no	no	no	no	❌	self and sea		no	no	no	no	11048	1	soliloquy	S	35		0		War; Lau; Req			firstlevel	1 of 1	mortal									
 11	47	56	10	129	10	136	✅	Semele		no	no	no	no	✅	self		no	no	no	no	11049	1	soliloquy	S	8		0		Tau			firstlevel	4 of 4	god					type 3 = divine				
 11	48	57	10	196	10	216	✅	Dionysus		no	no	no	no	✅	Ampelus		no	no	no	no	11050	1	monologue	M (no reply)	21		0		Que			firstlevel	1 of 55	god				yes					
-11	49	58	10	280	10	286	✅	Satyr 1		no	no	yes	no	✅	Peitho		no	no	no	no	11051	1	monologue	M (no reply)	7		0		Req			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
+11	49	58	10	280	10	286	✅	satyr		no	no	yes	no	✅	Peitho		no	no	no	no	11051	1	monologue	M (no reply)	7		0		Req			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
 11	50	59	10	292	10	320	✅	Dionysus		no	no	no	no	✅	Zeus		no	no	no	no	11052	1	monologue	M (no reply)	29		0		Req; Nar			firstlevel	2 of 55	god									
 11	51	60	11	7	11	42	✅	Dionysus		no	no	no	no	✅	Ampelus		no	no	no	no	11053	1	monologue	M (no reply)	36		0		Exh; Vow; Del			firstlevel	3 of 55	god									
 11	7	61	11	30	11	31	✅	Dionysus		no	no	no	no	✅	self		no	no	no	no	11054	1	soliloquy	S	2		1		Que			rephyp		god						first person potential speech	2nd		
@@ -79,7 +79,7 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	65	78	13	485	13	485	✅	priest		no	no	yes	no	✅	Typhon		no	no	no	no	11070	1	monologue	M (no reply)	1		0		Com			firstlevel	1 of 1	mortal	yes								
 11	67	79	14	274	14	282	✅	Niobe		no	no	no	no	✅	Indian soldiers		no	no	no	no	11071	1	monologue	M (no reply)	9		0		War			firstlevel	1 of 1	mortal					type 2 = mythological				
 11	66	80	14	309	14	314	✅	Hera		Melaneus	no	no	no	❌	Astraeis and Celaineus		no	no	no	tandem	11072	1	monologue	M (no reply)	6		0		Cha			firstlevel	5 of 12	god		Melaneus	type 2 = god to mortals						
-11	68	81	14	419	14	437	✅	Indian soldier 1		no	no	yes	no	❌	self and Indian soldiers		no	no	collective	collective	11073	1	soliloquy	S	19		0		Del; Lau			firstlevel	1 of 1	mortal	yes								
+11	68	81	14	419	14	437	✅	Indian soldier		no	no	yes	no	❌	self and Indian soldiers		no	no	collective	collective	11073	1	soliloquy	S	19		0		Del; Lau			firstlevel	1 of 1	mortal	yes								
 11	69	82	15	121	15	131	✅	Dionysus		no	no	no	no	✅	troops of Dionysus		no	no	collective	collective	11074	1	monologue	M (no reply)	11		0		Com			firstlevel	8 of 55	god			type 1 = general to troops						
 11	70	83	15	258	15	286	✅	Hymnus		no	no	no	no	❌	self and Nicaea		no	no	no	no	11075	1	soliloquy	S	29		0		Del; Inv			firstlevel	1 of 3	mortal									
 11	9	84	15	286	15	286	✅	someone		no	no	yes	no	✅	self		no	no	no	no	11076	1	soliloquy	S	1		1		Inf			rephyp		unspecified	yes					potential τις-speech	2nd		
@@ -96,12 +96,12 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	79	95	16	145	16	145	✅	Dionysus		no	no	no	no	✅	Nicaea		no	no	no	no	11086	1	dialogue	D1	1		0	Though maybe more request as she is mad?	Com			firstlevel	11 of 55	god									
 11	80	96	16	148	16	182	✅	Nicaea		no	no	no	no	✅	Dionysus		no	no	no	no	11086	2	dialogue	D2	35		0		Com; Thr			firstlevel	2 of 4	mortal									
 11	81	97	16	191	16	227	✅	Dionysus		no	no	no	no	❌	dog of Dionysus and Pan		no	no	no	tandem	11087	1	monologue	M (no reply)	37		0		Ins; Del			firstlevel	12 of 55	god									
-11	11	98	16	225	16	225	✅	rocks 2		no	no	yes	no	✅	self		no	no	yes	no	11088	1	soliloquy	S	1		1		Vit			rephyp		natural element	yes					messenger speech	2nd		
+11	11	98	16	225	16	225	✅	rocks		no	no	yes	no	✅	self		no	no	yes	no	11088	1	soliloquy	S	1		1		Vit			rephyp		natural element	yes					messenger speech	2nd		
 11	82	99	16	231	16	243	✅	Melie		no	no	no	no	✅	Dionysus		no	no	no	no	11089	1	monologue	M (no reply)	13		0		Nar; Com			firstlevel	1 of 1	mortal					type 2 = mythological				
 11	83	100	16	291	16	291	✅	fir tree		no	no	yes	no	✅	fir tree		no	no	no	no	11090	1	soliloquy	S	1		0	exclamation	Del			firstlevel	1 of 1	natural element	yes								
 11	84	101	16	294	16	301	✅	ghost of Hymnus	soul	soul	dead	no	no	✅	Nicaea		no	no	no	no	11091	1	monologue	M (no reply)	8		0		Tau			firstlevel	3 of 3	mortal									
-11	85	102	16	312	16	319	✅	Satyr 2		no	no	yes	no	✅	Pan		no	no	no	no	11092	1	dialogue	D1	8		0		Que; Com			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
-11	86	103	16	321	16	338	✅	Pan		no	no	no	no	✅	Satyr 2		no	no	no	no	11092	2	dialogue	D2	18		0		Des; Lam			firstlevel	2 of 3	god					type 2 = mythological				
+11	85	102	16	312	16	319	✅	satyr		no	no	yes	no	✅	Pan		no	no	no	no	11092	1	dialogue	D1	8		0		Que; Com			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
+11	86	103	16	321	16	338	✅	Pan		no	no	no	no	✅	satyr		no	no	no	no	11092	2	dialogue	D2	18		0		Des; Lam			firstlevel	2 of 3	god					type 2 = mythological				
 11	87	104	16	354	16	364	✅	Nicaea		no	no	no	no	✅	self		no	no	no	no	11093	1	soliloquy	S	11		0		Lam			firstlevel	3 of 4	mortal									
 11	12	105	16	364	16	364	❌	Pitys and Daphne		no	no	no	tandem	✅	Nicaea		no	no	no	no	11094	1	monologue	M (no reply)	1		1		War			rephyp		natural element						desired speech	2nd		
 11	89	106	17	74	17	80	✅	Dionysus		no	no	no	no	✅	Brongos		no	no	no	no	11095	1	monologue	M (no reply)	7		0		Per			firstlevel	13 of 55	god									
@@ -125,26 +125,26 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	105	124	19	303	19	345	✅	Maron		no	no	no	no	✅	Seleinus		no	no	no	no	11113	1	soliloquy	S	43		0		Per; Vit; Tau			firstlevel	2 of 2	mortal									
 11	106	125	20	44	20	98	✅	Eris-Rhea	in the shape of Rhea	Rhea	no	no	no	✅	Dionysus		no	no	no	no	11114	1	monologue	M (no reply)	55		0		Vit; Nar			firstlevel	1 of 1	god		Rhea & Attis	type 2 = god to mortals						
 11	107	126	20	137	20	141	✅	Pithus-wine jar	object	after his metamorphosis into a wine-jar	object	no	no	✅	self		no	no	no	no	11115	1	soliloquy	S	5		0		Inf			firstlevel	1 of 1	mortal		after his metamorphosis into a wine-jar				"Yes (""if it had human voice"")"			
-11	108	127	20	196	20	221	✅	Iris-Ares	mimicking the voice of Enyalios	Ares	no	no	no	✅	Lycurgos		no	no	no	no	11116	1	general interlocution	D1	26		0		Del; Exh			firstlevel	2 of 4	god		Ares	type 2 = god to mortals	yes					
+11	108	127	20	196	20	221	✅	Iris-Ares	mimicking the voice of Enyalios	Ares	no	no	no	✅	Lycurgus		no	no	no	no	11116	1	general interlocution	D1	26		0		Del; Exh			firstlevel	2 of 4	god		Ares	type 2 = god to mortals	yes					
 11	109	128	20	222	20	250	✅	Lycurgus		no	no	no	no	✅	Iris-Ares		Iris	no	no	tandem	11116	2	general interlocution	D2	29		0		Del; Req			firstlevel	1 of 5	mortal									
 11	110	129	20	266	20	288	✅	Iris		Hermes	no	no	no	✅	Dionysus		no	no	no	no	11117	1	monologue	M (no reply)	23		0		Del			firstlevel	3 of 4	god		Hermes	type 2*	yes					
 11	111	130	20	311	20	324	✅	Lycurgus		no	no	no	no	✅	Dionysus		no	no	no	no	11118	1	monologue	M (no reply)	14		0		Thr			firstlevel	2 of 5	mortal									
 11	112	131	20	358	20	368	✅	Nereus		no	no	no	no	✅	Dionysus		no	no	no	no	11119	1	monologue	M (no reply)	11		0		Que; Con			firstlevel	1 of 1	god									
 11	113	132	20	372	20	393	✅	Lycurgus		no	no	no	no	❌	self and fishermen		no	no	yes	no	11120	1	soliloquy	S	22		0		Des; Req			firstlevel	3 of 5	mortal									
-11	114	133	20	397	20	402	✅	Zeus		no	no	no	no	✅	Lycurgos		no	no	no	no	11121	1	monologue	M (no reply)	6		0		Com			firstlevel	8 of 12	god									
+11	114	133	20	397	20	402	✅	Zeus		no	no	no	no	✅	Lycurgus		no	no	no	no	11121	1	monologue	M (no reply)	6		0		Com			firstlevel	8 of 12	god									
 11	115	134	21	11	21	16	✅	Lycurgus		no	no	no	no	✅	Ares		no	no	no	no	11122	1	monologue	M (no reply)	6		0		Del			firstlevel	4 of 5	mortal									
-11	116	135	21	36	21	52	✅	Ambrosia		no	no	no	no	✅	Lycurgos		no	no	no	no	11123	1	monologue	M (no reply)	17		0		Vow; Del; Cha			firstlevel	1 of 1	mortal									
+11	116	135	21	36	21	52	✅	Ambrosia		no	no	no	no	✅	Lycurgus		no	no	no	no	11123	1	monologue	M (no reply)	17		0		Vow; Del; Cha			firstlevel	1 of 1	mortal									
 11	14	136	21	40	21	40	✅	someone		no	no	yes	no	✅	self		no	no	yes	no	11124	1	soliloquy	S	1		1	Saying/exclamation	Del			rephyp		unspecified	yes					potential τις-speech	2nd		
-11	117	137	21	135	21	146	✅	Lycurgus		no	no	no	no	✅	troops of Lycurgos	unclear whether addressee is present or not	no	no	collective	collective	11125	1	monologue	M (no reply)	12		0		Del; Exh			firstlevel	5 of 5	mortal			type 1*						
+11	117	137	21	135	21	146	✅	Lycurgus		no	no	no	no	✅	troops of Lycurgus	unclear whether addressee is present or not	no	no	collective	collective	11125	1	monologue	M (no reply)	12		0		Del; Exh			firstlevel	5 of 5	mortal			type 1*						
 11	118	138	21	216	21	226	✅	Deriades		no	no	no	no	✅	Pherespondus		no	no	no	no	11126	1	dialogue	D1	11		0		Tau			firstlevel	1 of 9	mortal									
 11	119	139	21	233	21	239	✅	Pherespondus		no	no	no	no	✅	Deriades		no	no	no	no	11126	2	dialogue	D2	7		0		Per; Del			firstlevel	1 of 1	mortal									
 11	120	140	21	241	21	273	✅	Deriades		no	no	no	no	✅	Pherespondus		no	no	no	no	11126	3	dialogue	D3	33		0		Del; Per; Com; Thr			firstlevel	2 of 9	mortal									
-11	121	141	22	90	22	113	✅	Hamadryad 3		Bacchante	no	yes	no	✅	Dionysus		no	no	no	no	11127	1	monologue	M (no reply)	24		0		Lau; Inf; Del; War			firstlevel	1 of 1	mortal	yes	Bacchante							
+11	121	141	22	90	22	113	✅	hamadryad		Bacchante	no	yes	no	✅	Dionysus		no	no	no	no	11127	1	monologue	M (no reply)	24		0		Lau; Inf; Del; War			firstlevel	1 of 1	mortal	yes	Bacchante							
 11	122	142	22	276	22	283	✅	Gaea		no	no	no	no	✅	Aeacus		no	no	no	no	11128	1	monologue	M (no reply)	8		0		Lam; Vit			firstlevel	1 of 2	god									
-11	123	143	22	392	22	401	✅	Naiad 2		no	no	yes	no	✅	Dionysus		no	no	no	no	11129	1	monologue	M (no reply)	10		0		Per			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
+11	123	143	22	392	22	401	✅	naiad		no	no	yes	no	✅	Dionysus		no	no	no	no	11129	1	monologue	M (no reply)	10		0		Per			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
 11	124	144	23	65	23	69	✅	Menoecus		no	no	no	no	✅	self		no	no	no	no	11130	1	soliloquy	S	5		0		Del			firstlevel	1 of 1	mortal									
-11	125	145	23	79	23	103	✅	Indian soldier 2		no	no	yes	no	✅	Hydaspes		no	no	no	no	11131	1	monologue	M (no reply)	25		0		Vit			firstlevel	1 of 1	mortal	yes								
-11	126	146	23	165	23	191	✅	Hydaspes		no	no	no	no	✅	other river		no	no	yes	no	11132	1	monologue	M (no reply)	27		0		Vow; Req			firstlevel	1 of 2	god									
+11	125	145	23	79	23	103	✅	Indian soldier		no	no	yes	no	✅	Hydaspes		no	no	no	no	11131	1	monologue	M (no reply)	25		0		Vit			firstlevel	1 of 1	mortal	yes								
+11	126	146	23	165	23	191	✅	Hydaspes		no	no	no	no	✅	river god		no	no	yes	no	11132	1	monologue	M (no reply)	27		0		Vow; Req			firstlevel	1 of 2	god									
 11	127	147	23	226	23	251	✅	Dionysus		no	no	no	no	✅	Hydaspes		no	no	no	no	11133	1	monologue	M (no reply)	26		0		War			firstlevel	20 of 55	god									
 11	128	148	23	284	23	319	✅	Oceanus		no	no	no	no	✅	Thetis		no	no	no	no	11134	1	monologue	M (no reply)	36		0		Del			firstlevel	1 of 1	god									
 11	129	149	24	10	24	61	✅	Hydaspes		no	no	no	no	✅	Dionysus		no	no	no	no	11135	1	monologue	M (no reply)	52		0		Req; Per; Nar			firstlevel	2 of 2	god									
@@ -166,13 +166,13 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	142	165	28	144	28	149	✅	Athenian soldier (army of Dionysus)		no	no	yes	no	✅	self		no	no	yes	no	11149	1	soliloquy	S	6		0		Exh			firstlevel	1 of 1	mortal	yes								
 11	143	166	29	39	29	44	✅	Dionysus		no	no	no	no	✅	Hymenaeus		no	no	no	no	11150	1	monologue	M (no reply)	6		0		Exh			firstlevel	23 of 55	god			type 3 = general to individual						
 11	16	167	29	43	29	44	✅	someone		no	no	yes	no	✅	self		no	no	yes	no	11151	1	soliloquy	S	2		1		Inf			rephyp		unspecified	yes					potential τις-speech	2nd		
-11	144	168	29	52	29	67	✅	Indian soldier 3		no	no	yes	no	✅	Melanias		no	no	no	no	11152	1	monologue	M (no reply)	16		0		Exh			firstlevel	1 of 1	mortal	yes		type 4 = other						
+11	144	168	29	52	29	67	✅	Indian soldier		no	no	yes	no	✅	Melanias		no	no	no	no	11152	1	monologue	M (no reply)	16		0		Exh			firstlevel	1 of 1	mortal	yes		type 4 = other						
 11	145	169	29	108	29	150	✅	Dionysus		no	no	no	no	✅	self		no	no	no	no	11153	1	soliloquy	S	43		0		Del; Lam			firstlevel	24 of 55	god									
 11	146	170	29	304	29	310	✅	Dionysus		no	no	no	no	✅	Deriades		no	no	no	no	11154	1	monologue	M (no reply)	7		0		Tau			firstlevel	25 of 55	god									
-11	147	171	29	328	29	361	✅	vision sent by Rhea		dream	no	no	no	✅	Ares		no	no	no	no	11155	1	monologue	M (no reply)	34		0		Com; Ins			firstlevel	1 of 1	god		dream	type 2*	yes					
+11	147	171	29	328	29	361	✅	vision		dream	no	no	no	✅	Ares		no	no	no	no	11155	1	monologue	M (no reply)	34		0		Com; Ins			firstlevel	1 of 1	god		dream	type 2*	yes					
 11	149	172	30	16	30	37	✅	Morrheus		no	no	no	no	✅	Deriades		no	no	no	no	11156	1	dialogue	D1	22		0		Del; Req			firstlevel	1 of 13	mortal									
 11	150	173	30	41	30	42	✅	Deriades		no	no	no	no	✅	Morrheus		no	no	no	no	11156	2	dialogue	D2	2		0		Tau			firstlevel	4 of 9	mortal									
-11	151	174	30	66	30	75	✅	Eurymedon (Nonnus)		no	no	no	no	✅	Hephaestus		no	no	no	no	11157	1	monologue	M (no reply)	10		0		Req; Pra			firstlevel	1 of 1	mortal									
+11	151	174	30	66	30	75	✅	Eurymedon (son of Hephaestus)		no	no	no	no	✅	Hephaestus		no	no	no	no	11157	1	monologue	M (no reply)	10		0		Req; Pra			firstlevel	1 of 1	mortal									
 11	152	175	30	118	30	125	✅	Morrheus		no	no	no	no	✅	Phlogius (son of Strophius)		no	dead	no	no	11158	1	soliloquy	S	8		0		Tau			firstlevel	2 of 13	mortal									
 11	153	176	30	150	30	159	✅	Tectaphus		no	no	no	no	✅	Eeria		no	no	no	no	11159	1	monologue	M (no reply)	10		0		Lam			firstlevel	1 of 1	mortal									
 11	154	177	30	167	30	185	✅	Eeria		no	no	no	no	✅	Tectaphus		no	no	no	no	11160	1	monologue	M (no reply)	19		0		Del; Lam			firstlevel	2 of 2	mortal									
@@ -206,11 +206,11 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	179	205	34	103	34	121	✅	Morrheus		no	no	no	no	❌	self and Chalcomede	Chalcomede not present, but he addresses her	no	no	no	no	11181	1	soliloquy	S	19		0		Del			firstlevel	8 of 13	mortal									
 11	180	206	34	196	34	197	✅	Morrheus		no	no	no	no	✅	Deriades		no	no	no	no	11182	1	dialogue	D1	2		0		Per			firstlevel	9 of 13	mortal									
 11	181	207	34	199	34	220	✅	Deriades		no	no	no	no	✅	Morrheus		no	no	no	no	11182	2	dialogue	D2	22		0		Del			firstlevel	5 of 9	mortal									
-11	182	208	34	236	34	246	✅	Bacchante 1		no	no	yes	no	✅	self		no	no	yes	no	11183	1	soliloquy	S	11		0		Lam			firstlevel	1 of 1	mortal	yes								
+11	182	208	34	236	34	246	✅	bacchante		no	no	yes	no	✅	self		no	no	yes	no	11183	1	soliloquy	S	11		0		Lam			firstlevel	1 of 1	mortal	yes								
 11	183	209	34	292	34	296	✅	Morrheus		no	no	no	no	✅	Chalcomede		no	no	no	no	11184	1	monologue	M (no reply)	5		0		Del			firstlevel	10 of 13	mortal									
 11	184	210	34	316	34	337	✅	Morrheus		no	no	no	no	✅	Chalcomede		no	no	no	no	11185	1	monologue	M (no reply)	22		0		Req; Del			firstlevel	11 of 13	mortal									
-11	186	211	35	37	35	77	✅	Indian soldier 4		no	no	yes	no	✅	Bacchante 2		no	dead	yes	no	11186	1	soliloquy	S	41		0		Lam			firstlevel	1 of 1	mortal	yes								
-11	19	212	35	49	35	53	✅	Bacchante 2		no	no	yes	no	✅	Indian soldier 4		no	no	yes	no	11187	1	monologue	M (no reply)	5		1		Vit			rephyp		mortal	yes					desired speech	2nd		
+11	186	211	35	37	35	77	✅	Indian soldier		no	no	yes	no	✅	bacchante		no	dead	yes	no	11186	1	soliloquy	S	41		0		Lam			firstlevel	1 of 1	mortal	yes								
+11	19	212	35	49	35	53	✅	bacchante		no	no	yes	no	✅	Indian soldier		no	no	yes	no	11187	1	monologue	M (no reply)	5		1		Vit			rephyp		mortal	yes					desired speech	2nd		
 11	187	213	35	111	35	138	✅	Chalcomede		no	no	no	no	✅	Morrheus		no	no	no	no	11188	1	dialogue	D1	28		0		Del; Per			firstlevel	2 of 2	mortal				yes					
 11	188	214	35	141	35	154	✅	Morrheus		no	no	no	no	✅	Chalcomede		no	no	no	no	11188	2	dialogue	D2	14		0		Inf; Del			firstlevel	12 of 13	mortal									
 11	190	215	35	164	35	183	✅	Aphrodite		no	no	no	no	✅	Ares		no	no	no	no	11189	1	monologue	M (no reply)	20		0		Tau			firstlevel	6 of 9	god					type 3 = divine				
@@ -241,10 +241,10 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	213	240	38	58	38	69	✅	Idmon		no	no	no	no	✅	Erechtheus		no	no	no	no	11214	1	monologue	M (no reply)	12		0		Inf; Con			firstlevel	1 of 1	mortal									
 11	214	241	38	78	38	95	✅	Hermes		no	no	no	no	✅	Dionysus		no	no	no	no	11215	1	monologue	M (no reply)	18		0		Con; Ora			firstlevel	5 of 7	god									
 11	215	242	38	105	38	434	✅	Hermes		no	no	no	no	✅	Dionysus		no	no	no	no	11216	1	monologue	M (reply)	330		0	reply to indirect speech	Nar; Res			firstlevel	6 of 7	god									
-11	9	243	38	196	38	211	✅	Helios		no	no	no	no	✅	Phaeton		no	no	no	no	11217	1	monologue	M (no reply)	16		0		Del			repreal		god									
-11	20	244	38	209	38	209	✅	Phaeton		no	no	no	no	✅	someone	speaker of the speech in which it is embedded	no	no	yes	no	11218	1	monologue	M (no reply)	1		2		Inf			rephyp		mortal						procatalepsis	3rd		
-11	10	245	38	222	38	290	✅	Helios		no	no	no	no	✅	Phaeton		no	no	no	no	11219	1	monologue	M (no reply)	69		0		Inf; Nar; War			repreal		god									
-11	11	246	38	333	38	346	✅	Phosphoros		no	no	no	no	✅	Phaeton		no	no	no	no	11220	1	monologue	M (no reply)	14		0		War; Com			repreal		god									
+11	9	243	38	196	38	211	✅	Helios		no	no	no	no	✅	Phaethon		no	no	no	no	11217	1	monologue	M (no reply)	16		0		Del			repreal		god									
+11	20	244	38	209	38	209	✅	Phaethon		no	no	no	no	✅	someone	speaker of the speech in which it is embedded	no	no	yes	no	11218	1	monologue	M (no reply)	1		2		Inf			rephyp		mortal						procatalepsis	3rd		
+11	10	245	38	222	38	290	✅	Helios		no	no	no	no	✅	Phaethon		no	no	no	no	11219	1	monologue	M (no reply)	69		0		Inf; Nar; War			repreal		god									
+11	11	246	38	333	38	346	✅	Phosphoros		no	no	no	no	✅	Phaethon		no	no	no	no	11220	1	monologue	M (no reply)	14		0		War; Com			repreal		god									
 11	216	247	39	33	39	73	✅	Deriades		no	no	no	no	✅	troops of Deriades (Indian army)		no	no	collective	collective	11221	1	monologue	M (no reply)	41		0		Exh; Del			firstlevel	8 of 9	mortal			type 1 = general to troops						
 11	217	248	39	78	39	122	✅	Dionysus		no	no	no	no	✅	troops of Dionysus		no	no	collective	collective	11222	1	monologue	M (no reply)	45		0		Exh			firstlevel	35 of 55	god			type 1 = general to troops						
 11	218	249	39	138	39	170	✅	Aeacus		no	no	no	no	✅	Zeus		no	no	no	no	11223	1	soliloquy	S	33		0		Pra; Req			firstlevel	1 of 1	mortal									
@@ -264,25 +264,25 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	229	263	40	423	40	427	✅	Dionysus		no	no	no	no	✅	Heracles Astrochiton		no	no	no	no	11236	1	dialogue	D1	5		0		Que			firstlevel	38 of 55	god									
 11	230	264	40	429	40	573	✅	Heracles Astrochiton		no	no	no	no	✅	Dionysus		no	no	no	no	11236	2	dialogue	D2	145		0		Res; Nar			firstlevel	1 of 1	god									
 11	12	265	40	443	40	500	✅	Heracles Astrochiton		no	no	no	no	✅	inhabitants of Tyr		no	no	collective	collective	11237	1	monologue	M (no reply)	58		1		Ora; Ins; Inf			repreal		god									
-11	13	266	40	542	40	569	✅	Eros		no	no	no	no	✅	Naiads		no	no	no	no	11238	1	monologue	M (no reply)	28		1		Del; Que			repreal		god									
+11	13	266	40	542	40	569	✅	Eros		no	no	no	no	✅	naiads		no	no	no	no	11238	1	monologue	M (no reply)	28		1		Del; Que			repreal		god									
 11	24	267	40	546	40	547	✅	Abarbarië		no	no	no	no	✅	someone	Eros?	no	no	yes	no	11239	1	monologue	M (no reply)	1		2		Inf			rephyp		god						procatalepsis	3rd		
 11	231	268	41	315	41	317	✅	Harmonia (goddess of Harmony)		no	no	no	no	✅	Aphrodite		no	no	no	no	11240	1	dialogue	D1	3		0		Que			firstlevel	1 of 2	god									
 11	232	269	41	318	41	337	✅	Aphrodite		no	no	no	no	✅	Harmonia (goddess of Harmony)		no	no	no	no	11240	2	dialogue	D2	20		0		Res; Que; Del			firstlevel	7 of 9	god									
 11	233	270	41	339	41	359	✅	Harmonia (goddess of Harmony)		no	no	no	no	✅	Aphrodite		no	no	no	no	11240	3	dialogue	D3	21		0		Inf; Res			firstlevel	2 of 2	god									
 11	234	271	41	408	41	427	✅	Aphrodite		no	no	no	no	✅	Eros		no	no	no	no	11241	1	monologue	M (no reply)	20		0		Del			firstlevel	8 of 9	god				yes					
 11	235	272	42	38	42	39	✅	Eros		no	no	no	no	✅	self		no	no	no	no	11242	1	soliloquy	S	2		0		Tau			firstlevel	3 of 6	god									
-11	236	273	42	100	42	107	✅	Naiad 3		no	no	yes	no	✅	Dionysus		no	no	no	no	11243	1	monologue	M (no reply)	8		0		Del			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
+11	236	273	42	100	42	107	✅	naiad		no	no	yes	no	✅	Dionysus		no	no	no	no	11243	1	monologue	M (no reply)	8		0		Del			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
 11	237	274	42	114	42	123	✅	Dionysus		no	no	no	no	✅	self		no	no	no	no	11244	1	soliloquy	S	10		0		Per			firstlevel	39 of 55	god									
-11	238	275	42	158	42	163	✅	Dionysus		no	no	no	no	✅	Beroe (Nonnus)		no	no	no	no	11245	1	monologue	M (no reply)	6		0		Que			firstlevel	40 of 55	god				yes					
+11	238	275	42	158	42	163	✅	Dionysus		no	no	no	no	✅	Beroe (nymph)		no	no	no	no	11245	1	monologue	M (no reply)	6		0		Que			firstlevel	40 of 55	god				yes					
 11	239	276	42	205	42	273	✅	Pan		no	no	no	no	✅	Dionysus		no	no	no	no	11246	1	monologue	M (no reply)	69		0		Del; Com			firstlevel	3 of 3	god									
-11	240	277	42	282	42	312	✅	Dionysus		gardner	no	no	no	✅	Beroe (Nonnus)		no	no	no	no	11247	1	monologue	M (no reply)	31		0		Inf; Del			firstlevel	41 of 55	god		gardner		yes					
+11	240	277	42	282	42	312	✅	Dionysus		gardner	no	no	no	✅	Beroe (nymph)		no	no	no	no	11247	1	monologue	M (no reply)	31		0		Inf; Del			firstlevel	41 of 55	god		gardner		yes					
 11	25	278	42	286	42	290	✅	Dionysus		no	no	no	no	✅	self		no	no	no	no	11248	1	soliloquy	S	5		1		Inf			rephyp		god						first person potential speech	2nd		
 11	26	279	42	292	42	292	✅	Dionysus		no	no	no	no	✅	self		no	no	no	no	11249	1	soliloquy	S	1		1		Del			rephyp		god						first person potential speech	2nd		
 11	27	280	42	294	42	294	✅	Dionysus		no	no	no	no	✅	self		no	no	no	no	11250	1	soliloquy	S	1		1		Que			rephyp		god						first person potential speech	2nd		
 11	28	281	42	296	42	300	✅	Dionysus		no	no	no	no	✅	self		no	no	no	no	11251	1	soliloquy	S	5		1		Per			rephyp		god						first person potential speech	2nd		
-11	241	282	42	319	42	321	✅	Dionysus		no	no	no	no	✅	Beroe (Nonnus)		no	no	no	no	11252	1	monologue	M (no reply)	3		0		Que			firstlevel	42 of 55	god				yes					
-11	242	283	42	363	42	428	✅	Dionysus		no	no	no	no	✅	Beroe (Nonnus)		no	no	no	no	11253	1	monologue	M (no reply)	66		0		Del; Per; Nar			firstlevel	43 of 55	god									
-11	243	284	42	459	42	485	✅	Poseidon		no	no	no	no	✅	Beroe (Nonnus)		no	no	no	no	11254	1	monologue	M (no reply)	27		0		Lau; Com			firstlevel	2 of 4	god									
+11	241	282	42	319	42	321	✅	Dionysus		no	no	no	no	✅	Beroe (nymph)		no	no	no	no	11252	1	monologue	M (no reply)	3		0		Que			firstlevel	42 of 55	god				yes					
+11	242	283	42	363	42	428	✅	Dionysus		no	no	no	no	✅	Beroe (nymph)		no	no	no	no	11253	1	monologue	M (no reply)	66		0		Del; Per; Nar			firstlevel	43 of 55	god									
+11	243	284	42	459	42	485	✅	Poseidon		no	no	no	no	✅	Beroe (nymph)		no	no	no	no	11254	1	monologue	M (no reply)	27		0		Lau; Com			firstlevel	2 of 4	god									
 11	244	285	42	488	42	490	✅	Poseidon		no	no	no	no	✅	self		no	no	no	no	11255	1	soliloquy	S	3		0		Lau			firstlevel	3 of 4	god									
 11	245	286	42	506	42	525	✅	Aphrodite		no	no	no	no	❌	Dionysus and Poseidon		no	no	no	tandem	11256	1	monologue	M (no reply)	20		0		Del			firstlevel	9 of 9	god									
 11	246	287	43	70	43	142	✅	Dionysus		no	no	no	no	✅	troops of Dionysus		no	no	collective	collective	11257	1	monologue	M (no reply)	73		0		Exh			firstlevel	44 of 55	god			type 1 = general to troops						
@@ -315,12 +315,12 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	270	314	47	78	47	103	✅	Attic farmer		no	no	yes	no	✅	Icarius		no	no	no	no	11279	1	monologue	M (no reply)	26		0		Que; Lau			firstlevel	1 of 1	mortal	yes								
 11	271	315	47	132	47	136	✅	Icarius		no	no	no	no	✅	self		no	no	no	no	11280	1	soliloquy	S	5		0		Lam			firstlevel	1 of 2	mortal									
 11	272	316	47	161	47	186	✅	ghost of Icarius	shade	as a phantom after death	dead	no	no	✅	Erigone		no	no	no	no	11281	1	monologue	M (no reply)	26		0		Com; Nar			firstlevel	2 of 2	mortal		as a phantom after death							
-11	273	317	47	193	47	204	✅	Erigone		no	no	no	no	❌	self and the hills (Attica)		no	no	no	no	11282	1	soliloquy	S	12		0		Que			firstlevel	1 of 1	mortal									
+11	273	317	47	193	47	204	✅	Erigone		no	no	no	no	❌	self and hills of Attica		no	no	no	no	11282	1	soliloquy	S	12		0		Que			firstlevel	1 of 1	mortal									
 11	274	318	47	275	47	294	✅	Dionysus		no	no	no	no	✅	troops of Dionysus		no	no	no	no	11283	1	monologue	M (no reply)	20		0		Com; Del			firstlevel	50 of 55	god									
-11	275	319	47	320	47	418	✅	Ariadne		no	no	no	no	❌	self and Peitho and rocks 3		no	no	no	no	11284	1	soliloquy	S	99		0		Ora; Inf; Lam			firstlevel	1 of 2	mortal									
+11	275	319	47	320	47	418	✅	Ariadne		no	no	no	no	❌	self and Peitho and rocks		no	no	no	no	11284	1	soliloquy	S	99		0		Ora; Inf; Lam			firstlevel	1 of 2	mortal									
 11	276	320	47	428	47	452	✅	Dionysus		no	no	no	no	✅	Ariadne		no	no	no	no	11285	1	monologue	M (no reply)	25		0		Con			firstlevel	51 of 55	god									
 11	32	321	47	433	47	434	✅	Ariadne		no	no	no	no	✅	someone	speaker of the speech in which it is embedded	no	no	yes	no	11286	1	monologue	M (no reply)	2		1		Inf			rephyp		mortal						procatalepsis	2nd		
-11	277	322	47	498	47	532	✅	someone from Argos		no	no	yes	no	✅	Satyr 3		no	no	no	no	11287	1	monologue	M (no reply)	35		0		Inf; Del			firstlevel	1 of 1	mortal	yes				type 1= anonymous				
+11	277	322	47	498	47	532	✅	someone from Argos		no	no	yes	no	✅	satyr		no	no	no	no	11287	1	monologue	M (no reply)	35		0		Inf; Del			firstlevel	1 of 1	mortal	yes				type 1= anonymous				
 11	278	323	47	537	47	566	✅	Hera		Melampus	no	no	no	✅	Perseus		no	no	no	no	11288	1	monologue	M (no reply)	30		0		Del; Cha			firstlevel	12 of 12	god		Melampus	type 2 = god to mortals						
 11	279	324	47	596	47	606	✅	Perseus		no	no	no	no	✅	Dionysus		no	no	no	no	11289	1	monologue	M (no reply)	11		0		Cha			firstlevel	1 of 1	mortal									
 11	280	325	47	613	47	653	✅	Dionysus		no	no	no	no	✅	Hera		no	no	no	no	11290	1	monologue	M (no reply)	41		0	replies to Hera dashing upon Dionysus	Tau; Nar			firstlevel	52 of 55	god			type 1*						
@@ -336,7 +336,7 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	290	335	48	440	48	448	✅	Nemesis		no	no	no	no	✅	Artemis		no	no	no	no	11298	3	dialogue	D3	9		0		Con			firstlevel	2 of 2	god									
 11	291	336	48	489	48	513	✅	Dionysus		no	no	no	no	✅	self		no	no	no	no	11299	1	soliloquy	S	25		0		Lam			firstlevel	54 of 55	god									
 11	33	337	48	513	48	513	✅	Aura		no	no	no	no	✅	Dionysus		no	no	no	no	11300	1	monologue	M (no reply)	1		1		Com			rephyp		mortal						desired speech	2nd		
-11	292	338	48	522	48	526	✅	Hamadryad 4		no	no	yes	no	✅	Dionysus		no	no	no	no	11301	1	monologue	M (no reply)	5		0		Inf			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
+11	292	338	48	522	48	526	✅	hamadryad		no	no	yes	no	✅	Dionysus		no	no	no	no	11301	1	monologue	M (no reply)	5		0		Inf			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
 11	293	339	48	533	48	562	✅	Ariadne		as a phantom after death	dead	no	no	✅	Dionysus		no	no	no	no	11302	1	monologue	M (no reply)	30		0		Lam			firstlevel	2 of 2	mortal		as a phantom after death							
 11	34	340	48	549	48	549	✅	someone		no	no	yes	no	✅	self		no	no	yes	no	11303	1	soliloquy	S	1		1		Inf			rephyp		unspecified	yes					potential τις-speech	2nd		
 11	35	341	48	559	48	560	✅	Ariadne		no	no	no	no	✅	Theseus		no	no	no	no	11304	1	monologue	M (no reply)	2		1		Mes			rephyp		mortal						messenger speech	2nd		
