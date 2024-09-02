@@ -88,11 +88,13 @@ fields = [
 # Function Definitions
 #
 
-def readTable(table, xls_file, dtype=None):
+def readTable(table, xls_file, dtype=None, cols=None):
     '''Read a table from the Excel file'''
     
     print(f'Reading {table}...', end='')
     df = pd.read_excel(xls_file, table, dtype=dtype)
+    if cols is not None:
+        df = df[cols]
     print('{} rows'.format(len(df)))
 
     return df
@@ -124,7 +126,7 @@ args = parser.parse_args()
 
 authors = readTable('Authors', args.xls_file)
 works = readTable('Works', args.xls_file, dtype={'author':'Int64'})
-characters = readTable('Characters', args.xls_file, dtype='str')
+characters = readTable('Characters', args.xls_file, dtype='str', cols=['name', 'wd', 'manto', 'topostext', 'being', 'number', 'gender', 'disguise','same_as', 'anon', 'notes'])
 
 # speeches
 
