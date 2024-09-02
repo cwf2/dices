@@ -7,7 +7,7 @@
 {% block results %}
 <table class="table table-striped">
   <thead>
-    <tr><th>Name</th><th>Gender</th><th>Number</th><th>Being</th><th>Speaker</th><th>Addressee</th><th>WikiData ID</th><th>MANTO ID</tr>
+    <tr><th>Name</th><th>Gender</th><th>Number</th><th>Being</th><th>Speaker</th><th>Addressee</th><th>Linked Data</th></tr>
   </thead>
   <tbody>
     {% for c in page_obj %}
@@ -39,18 +39,23 @@
       </td>
       <td>
         {% if c.wd %}
-        {{ c.wd }}
-        <a style="margin-left: 0.5em" href="https://www.wikidata.org/wiki/{{ c.wd }}">
-          <i class="fa-solid fa-up-right-from-square"></i>
-        </a>
+        <span class="badge badge-dark">
+        	<a style="margin-left: 0.5em" href="https://www.wikidata.org/wiki/{{ c.wd }}">
+          	  WD <i class="fa-solid fa-up-right-from-square"></i>
+			</a>
+		</span>
         {% endif %}
-      </td>
-      <td>
         {% if c.manto %}
-        {{ c.manto }}
-        <a style="margin-left: 0.5em" href="https://resource.manto.unh.edu/{{ c.manto }}">
-          <i class="fa-solid fa-up-right-from-square"></i>
-        </a>
+        <span class="badge badge-dark">
+	        <a style="margin-left: 0.5em" href="https://resource.manto.unh.edu/{{ c.manto }}">
+				MANTO <i class="fa-solid fa-up-right-from-square"></i>
+	        </a>
+		</span>
+        <span class="badge badge-dark">
+            <a style="margin-left:0.5em" href="https://topostext.org/people/{{ char.tt }}">
+                TT <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+		</span>
         {% endif %}
       </td>
     </tr>
