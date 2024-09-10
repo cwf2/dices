@@ -83,7 +83,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 80	82	1	Iliad	3	428	n	3	436	n	✅	Helena	no	no	no	no	no	✅	Paris	no	no	no	no	no	1044	1	dialogue	D1	9	no	0	no	Req; War	no	firstlevel	5 of 7	mortal	no	no	no	no	no	no
 81	83	1	Iliad	3	438	n	3	446	n	✅	Paris	no	no	no	no	no	✅	Helena	no	no	no	no	no	1044	2	dialogue	D2	9	no	0	no	Per	no	firstlevel	2 of 7	mortal	no	no	no	no	no	no
 82	84	1	Iliad	3	456	n	3	460	n	✅	Agamemnon	no	no	no	no	no	❌	Greeks and Trojans	no	no	no	yes	yes	1045	1	monologue	M (no reply)	5	no	0	no	Com	no	firstlevel	13 of 47	mortal	no	no	also in Fingerle's Feldhernreden	no	no	no
-83	85	1	Iliad	4	7	n	4	19	n	✅	Zeus	no	no	no	no	no	✅	gods	assembled gods are addressee, but the speech has the explicit intention to provoke Hera	no	no	no	no	1046	1	general interlocution	G1	13	no	0	no	Cha; Del	no	firstlevel	5 of 39	god	no	no	no	no	no	no
+83	85	1	Iliad	4	7	n	4	19	n	✅	Zeus	no	no	no	no	no	❌	Hera and gods	assembled gods are addressee, but the speech has the explicit intention to provoke Hera	no	no	no	no	1046	1	general interlocution	G1	13	no	0	no	Cha; Del	no	firstlevel	5 of 39	god	no	no	no	no	no	no
 84	86	1	Iliad	4	25	n	4	29	n	✅	Hera	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1046	2	general interlocution	G2	5	no	0	no	Tau; War; Del	no	firstlevel	4 of 31	god	no	no	no	no	no	no
 85	87	1	Iliad	4	31	n	4	49	n	✅	Zeus	no	no	no	no	no	✅	Hera	no	no	no	no	no	1046	3	general interlocution	G3	19	no	0	no	Del	no	firstlevel	6 of 39	god	no	no	no	no	no	no
 86	88	1	Iliad	4	51	n	4	67	n	✅	Hera	no	no	no	no	no	✅	Zeus	no	no	no	no	no	1046	4	general interlocution	G4	17	no	0	no	Del	no	firstlevel	5 of 31	god	no	no	no	no	no	no
@@ -104,7 +104,7 @@ orig_id	seq	work_id	work	from_book	from_line	b	to_book	to_line	a	s_ok	speaker	sp
 100	103	1	Iliad	4	303	n	4	309	n	✅	Nestor	no	no	no	no	no	✅	Greeks	particularly Nestor's own comrades	no	no	yes	yes	1057	1	monologue	M (no reply)	7	no	0	no	War	no	firstlevel	5 of 33	mortal	no	no	type 1: general to troops	no	no	no
 101	104	1	Iliad	4	313	n	4	316	n	✅	Agamemnon	no	no	no	no	no	✅	Nestor	no	no	no	no	no	1058	1	dialogue	D1	4	no	0	no	Des	no	firstlevel	21 of 47	mortal	no	no	no	no	no	Agamemnon (accidently) hears what Nestor sayd to his comrades (previous monologue) and reacts to that. Same sequence of speeches!
 102	105	1	Iliad	4	318	n	4	325	n	✅	Nestor	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1058	2	dialogue	D2	8	no	0	no	Des	no	firstlevel	6 of 33	mortal	no	no	no	no	no	no
-103	106	1	Iliad	4	338	n	4	348	n	✅	Agamemnon	no	no	no	no	no	✅	Menestheus	no	no	no	no	no	1059	1	general interlocution	G1	11	no	0	no	Del	no	firstlevel	22 of 47	mortal	no	no	type 3: general to individual	no	no	no
+103	106	1	Iliad	4	338	n	4	348	n	✅	Agamemnon	no	no	no	no	no	❌	Menestheus and Odysseus	no	no	no	no	no	1059	1	general interlocution	G1	11	no	0	no	Del	no	firstlevel	22 of 47	mortal	no	no	type 3: general to individual	no	no	no
 104	107	1	Iliad	4	350	n	4	355	n	✅	Odysseus	no	no	no	no	no	✅	Agamemnon	no	no	no	no	no	1059	2	general interlocution	G2	6	no	0	no	Del	no	firstlevel	6 of 27	mortal	no	no	no	no	no	no
 105	108	1	Iliad	4	358	n	4	363	n	✅	Agamemnon	no	no	no	no	no	✅	Odysseus	no	no	no	no	no	1059	3	general interlocution	G3	6	no	0	no	Des; Del	no	firstlevel	23 of 47	mortal	no	no	no	no	no	no
 106	109	1	Iliad	4	370	n	4	400	n	✅	Agamemnon	no	no	no	no	no	✅	Diomedes	no	no	no	no	no	1060	1	general interlocution	G1	31	no	0	no	Del; Nar	no	firstlevel	24 of 47	mortal	no	no	type 3: general to individual	no	no	no

@@ -421,8 +421,8 @@ custodian of the underworld				divine	individual	male			yes	not Cerberus
 Cyane	Q1423058		2125	mortal	individual	female				nymph, turns to water from grief
 Cybele	Q188236	10149415	366	divine	individual	female				the mother of the gods
 cyclopes		8188111		creature	collective	male			yes	
-Cycnus	Q604672		853	mortal	individual	male				a boy who turns into a swan in anger
-Cycnus (Neptune's son)	Q1066344	8188116	13742	mortal	individual	male				son of Neptune, hero, near-invulnerable, is crushed/suffocated by Achilles and turned into a swan by Neptune
+Cycnus (son of Apollo)	Q604672		853	mortal	individual	male				a boy who turns into a swan in anger
+Cycnus (son of Poseidon)	Q1066344	8188116	13742	mortal	individual	male				son of Neptune, hero, near-invulnerable, is crushed/suffocated by Achilles and turned into a swan by Neptune
 Cyllarus	Q3676711		4501	creature	individual	male				an exceptionally beautiful centaur
 Cymodoce	Q15711584	9878279	5588	divine	individual	female				oldest of the Nereids
 Cymodocea	Q15711584	9878279	5588	divine	individual	female				sea nymph, former ship of Aeneas' fleet
@@ -1634,3 +1634,4 @@ Zetes	Q4024302	8190179	2087	mortal	individual	male
 Zeus	Q34201	8188419	1	divine	individual	male				
 Zeus-bull				creature	individual	male	bull	Zeus	yes	
 Zion	Q205318		6056	other	collective	none				
+fish				creature	individual	male			yes	
