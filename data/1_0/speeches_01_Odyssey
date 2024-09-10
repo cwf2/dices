@@ -478,7 +478,7 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 356	477	2	Odyssey	18	313	18	319	✅	Odysseus-beggar		beggar	no	no	no	✅	female servants		no	no	collective	collective	2189	1	general interlocution	G1	7		0		Com			firstlevel	70 of 130	mortal		beggar	
 357	478	2	Odyssey	18	327	18	336	✅	Melantho		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2189	2	general interlocution	G2	10		0		Vit; War			firstlevel	1 of 2	mortal			
 358	479	2	Odyssey	18	338	18	339	✅	Odysseus-beggar		beggar	no	no	no	✅	Melantho		no	no	no	no	2189	3	general interlocution	G3	2		0		Thr			firstlevel	71 of 130	mortal		beggar	
-359	480	2	Odyssey	18	351	18	355	✅	Eurymachus		no	no	no	no	✅	suitors of Penelope		no	no	collective	collective	2190	1	general interlocution	G1	5		0		Del			firstlevel	6 of 13	mortal			
+359	480	2	Odyssey	18	351	18	355	✅	Eurymachus		no	no	no	no	❌	suitors of Penelope and Odysseus-beggar		no	no	collective	collective	2190	1	general interlocution	G1	5		0		Del			firstlevel	6 of 13	mortal			
 360	481	2	Odyssey	18	357	18	364	✅	Eurymachus		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2190	2	general interlocution	G2	8		0		Del; Per			firstlevel	7 of 13	mortal			
 361	482	2	Odyssey	18	366	18	386	✅	Odysseus-beggar		beggar	no	no	no	✅	Eurymachus		no	no	no	no	2190	3	general interlocution	G3	21		0		Vit; Des			firstlevel	72 of 130	mortal		beggar	
 362	483	2	Odyssey	18	389	18	393	✅	Eurymachus		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2190	4	general interlocution	G4	5		0		Vit; Thr			firstlevel	8 of 13	mortal			
@@ -543,7 +543,7 @@ orig_id	seq	work_id	work	from_book	from_line	to_book	to_line	s_ok	speaker	speake
 418	542	2	Odyssey	20	262	20	267	✅	Telemachus		no	no	no	no	❌	Odysseus and suitors of Penelope		no	no	no	no	2214	1	general interlocution	G1	6		0		Del; War			firstlevel	68 of 82	mortal			
 419	543	2	Odyssey	20	271	20	274	✅	Antinous		no	no	no	no	✅	Telemachus		no	no	no	no	2214	2	general interlocution	G2	4		0		Del			firstlevel	17 of 23	mortal			
 420	544	2	Odyssey	20	292	20	298	✅	Ctesippus		no	no	no	no	✅	Odysseus-beggar		beggar	no	no	no	2215	1	general interlocution	G1	7		0		Del			firstlevel	1 of 1	mortal			
-421	545	2	Odyssey	20	304	20	319	✅	Telemachus		no	no	no	no	✅	Ctesippus		no	no	no	no	2215	2	general interlocution	G2	16		0		Del; War			firstlevel	69 of 82	mortal			
+421	545	2	Odyssey	20	304	20	319	✅	Telemachus		no	no	no	no	❌	Ctesippus and suitors of Penelope		no	no	no	no	2215	2	general interlocution	G2	16		0		Del; War			firstlevel	69 of 82	mortal			
 422	546	2	Odyssey	20	322	20	337	✅	Agelaus		no	no	no	no	✅	suitors of Penelope		no	no	collective	collective	2215	3	general interlocution	G3	16		0		Del; Exh			firstlevel	1 of 4	mortal			
 423	547	2	Odyssey	20	339	20	344	✅	Telemachus		no	no	no	no	✅	Agelaus		no	no	no	no	2215	4	general interlocution	G4	6		0		Del; War			firstlevel	70 of 82	mortal			
 424	548	2	Odyssey	20	351	20	357	✅	Theoclymenus		no	no	no	no	✅	suitors of Penelope		no	no	collective	collective	2216	1	general interlocution	G1	7		0		Del			firstlevel	6 of 7	mortal			
