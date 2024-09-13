@@ -322,6 +322,7 @@ Charis	Q1108130	9960215	1505	divine	individual	female
 Charon	Q6612	10113469	537	divine	individual	male				
 Cheirobie				mortal	individual	female				daughter of Deriades
 children				mortal	collective	x			yes	
+children of Aura				mortal	collective	x				
 children of Gaia				divine	collective	x			yes	Hecatonchires and Cyclopes and Titans
 Chione	Q15077045		2565	mortal	individual	female				daughter of Daedalion, killed by an arrow from Diana
 Chiron	Q183417	8188002	1086	creature	individual	male				
@@ -698,6 +699,7 @@ hands of Heracles				other	collective	none			yes	the hands of Hercules
 Hannibal	Q36456		14	mortal	individual	male				
 Hannibal's soldiers				mortal	collective	male			yes	
 Hanno	Q313555		381	mortal	individual	male				Hanno the Great
+hares				creature	collective	x			yes	
 Harmonia (daughter of Aphrodite)	Q978079	8188460	443	divine	individual	female				Harmonia as wife of Cadmus
 Harmonia (goddess of Harmony)	Q978079	8188460		divine	individual	female				Detachment from Theban connection: Harmonia as allmighty, world-preserving god
 Hasdrubal	Q311702		144	mortal	individual	male				
@@ -825,6 +827,7 @@ Ithacan women				mortal	collective	female			yes	women of Ithaca
 Itys	Q1675360	8188621	1861	mortal	individual	male				son of Procne and Tereus
 Iulus	Q655566	11304358	387	mortal	individual	male		Ascanius		
 Iustitia	Q1102307	8188168	194	divine	individual	female				personification
+jackals				creature	collective	x			yes	
 Jacob	Q289957		947	mortal	individual	male				the patriarch of the Israelites
 Jacob (apostle)	Q43999		18018	mortal	individual	male				
 Jairus	Q325476			mortal	individual	male				Matt 9.18-19; Marc. 5.22-24; Luc. 8.41-42
