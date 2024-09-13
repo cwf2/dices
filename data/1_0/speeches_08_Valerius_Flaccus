@@ -15,7 +15,7 @@ orig_id	seq	work	work_id	from_book	from_line	b	to_book	to_line	a	interrupted	s_o
 14.0	14	Val. Flacc.	7	1	336	y	1	347	n	n	✅	Aeson						✅	Jason						7010	2	G	G (reply)	11.416666666666666		0		Far; Exh	
 15.0	15	Val. Flacc.	7	1	505	n	1	527	n	n	✅	Sol						✅	Jupiter						7011	1	D	D	23		0		Per; Req	
 16.0	16	Val. Flacc.	7	1	531	y	1	560	n	n	✅	Jupiter						❌	Sol and Minerva and Juno				y	(or G?)	7011	2	D	D (reply)	34.75		0		Res; Ora	
-	17	Val. Flacc.	7	1	562	y	1	567	n	n	✅	Jupiter						❌	Sol and Minerva and Juno				y	(or G?)	7011	3	D	D (reply)			0			
+	17	Val. Flacc.	7	1	563	y	1	567	n	n	✅	Jupiter						❌	Sol and Minerva and Juno				y	(or G?)	7011	3	D	D (reply)			0			
 17.0	18	Val. Flacc.	7	1	598	n	1	607	n	y	✅	Boreas						✅	Aeolus						7012	1	M	M (no reply)	9.916666666666666		0		Lam; Req	
 18.0	19	Val. Flacc.	7	1	627	n	1	632	n	n	✅	Argonauts				y		✅	self						7013	1	S	S	6		0		Lam	
 19.0	20	Val. Flacc.	7	1	642	y	1	650	n	y	✅	Neptune						✅	self						7014	1	S	S	8.166666666666666		0		Lam; Thr	
