@@ -19,7 +19,7 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	15.0	18	3	326	3	371	✅	Electra (Pleiad)		no	no	no	no	✅	Cadmus		no	no	no	no	11015	2	dialogue	D2	46.0		0		Con			firstlevel	1 of 1	mortal/god									
 11	16.0	19	3	425	3	444	✅	Hermes		no	no	no	no	✅	Electra (Pleiad)		no	no	no	no	11016	1	monologue	M (no reply)	20.0		0		Mes			firstlevel	1 of 7	god									
 11	17.0	20	4	36	4	63	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	✅	Electra (Pleiad)		no	no	no	no	11017	1	monologue	M (no reply)	28.0		0	questions seem to be rhetorical --> del?	Nar; Lam; Que			firstlevel	1 of 2	mortal									
-11	18.0	21	4	77	4	176	✅	Aphrodite		Peisinoe	no	no	no	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	11018	1	monologue	M (no reply)	100.0		0		Del			firstlevel	1 of 9	god		Peisinoe		yes					
+11	18.0	21	4	77	4	176	✅	Aphrodite-Peisinoe		Peisinoe	no	no	no	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	11018	1	monologue	M (no reply)	100.0		0		Del			firstlevel	1 of 9	god		Peisinoe		yes					
 11	19.0	22	4	182	4	196	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	❌	Samothrace and Artemis		no	no	no	no	11019	1	monologue	M (no reply)	15.0		0		Far			firstlevel	2 of 2	mortal									
 11	20.0	23	4	216	4	225	✅	Selene		no	no	no	no	❌	self and Harmonia (daughter of Aphrodite) and Aphrodite		no	no	no	collective	11020	1	monologue	M (no reply)	10.0		0		Tau			firstlevel	1 of 2	god					type 3 = divine				
 11	4.0	24	4	220	4	221	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	✅	Aphrodite		no	no	no	no	11021	1	monologue	M (no reply)	2.0		1		Inf			rephyp		mortal						messenger speech	2nd		
