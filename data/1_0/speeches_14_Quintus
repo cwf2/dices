@@ -1,176 +1,176 @@
-work_id	seq	orig_id	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	Unnamed: 31	speech/speaker	mortal/god	anonymous?	disguise?	battle-exhortations (ch. 2)
-12	1	1	1	100	1	114	✅	Andromache		no	no	no	no	✅	self		no	no	no	no	12001	1	soliloquy	S	15		0		Lam			1 of 2	mortal			
-12	2	2	1	186	1	197	✅	Priam		no	no	no	no	✅	Zeus		no	no	no	no	12002	1	monologue	M (no reply)	12		0		Pra; Req			1 of 5	mortal			
-12	3	3	1	212	1	219	✅	Greeks		no	no	yes	collective	✅	self		no	no	yes	collective	12003	1	monologue	M (no reply)	8		0		Del			1 of 1	mortal	collective		
-12	4	4	1	326	1	334	✅	Penthesilea		no	no	no	no	✅	Greeks		no	no	no	no	12004	1	monologue	M (no reply)	9		0		Thr; Vit			1 of 2	mortal			
-12	5	5	1	358	1	372	✅	Trojan		no	no	yes	no	✅	Trojans	O friends'	no	no	yes	collective	12005	1	monologue	M (no reply)	15		0		Del; Exh			1 of 1	mortal	collective		
-12	6	6	1	409	1	435	✅	Hippodamea		no	no	no	no	✅	Trojan women		no	no	yes	collective	12006	1	general interlocution	G1	27		0		Exh; Per; Del			1 of 1	mortal			type 1: general to troops
-12	7	7	1	451	1	474	✅	Theano		no	no	no	no	✅	Trojan women		no	no	yes	collective	12006	2	general interlocution	G2	24		0		Lam; Inf			1 of 1	mortal			
-12	8	8	1	497	1	507	✅	Aias (son of Telamon)		no	no	no	no	✅	Achilles		no	no	no	no	12007	1	monologue	M (no reply)	11		0		Del; Exh			1 of 8	mortal			type 4: other
-12	9	9	1	553	1	562	✅	Penthesilea		no	no	no	no	❌	Achilles and Aias (son of Telamon)		no	no	no	tandem	12008	1	general interlocution	G1	10		0		Cha; Tau			2 of 2	mortal			
-12	10	10	1	575	1	591	✅	Achilles		no	no	no	no	✅	Penthesilea		no	no	no	no	12008	2	general interlocution	G2	17		0		Vit; Del; Que			1 of 8	mortal			
-12	11	11	1	644	1	653	✅	Achilles		no	no	no	no	✅	Penthesilea		no	no	no	no	12008	3	general interlocution	G3	10		0		Tau			2 of 8	mortal			
-12	12	12	1	723	1	740	✅	Thersites		no	no	no	no	✅	Achilles		no	no	no	no	12009	1	general interlocution	G1	18		0		Tau			1 of 1	mortal			
-12	13	13	1	751	1	754	✅	someone	(Greek)	no	no	yes	no	✅	Thersites		no	no	no	no	12009	2	general interlocution	G2	4		0	or monologue in between a dialogue?	Del			1 of 1	mortal	yes		
-12	14	14	1	757	1	765	✅	Achilles		no	no	no	no	✅	Thersites		no	no	no	no	12009	3	general interlocution	G3	9		0		Vit			3 of 8	mortal			
-12	15	15	2	10	2	25	✅	Thymoites		no	no	no	no	✅	Trojans		no	no	yes	collective	12010	1	general interlocution	G1	16		0		Lam; Del			1 of 1	mortal			
-12	16	16	2	27	2	40	✅	Priam		no	no	no	no	✅	Trojans		no	no	yes	collective	12010	2	general interlocution	G2	14		0		Del; Exh			2 of 5	mortal			
-12	17	17	2	43	2	62	✅	Polydamas		no	no	no	no	✅	Priam		no	no	no	no	12010	3	general interlocution	G3	20		0		Del; Exh			1 of 3	mortal			
-12	18	18	2	68	2	80	✅	Paris		no	no	no	no	✅	Polydamas		no	no	no	no	12010	4	general interlocution	G4	13		0		Vit			1 of 4	mortal			
-12	19	19	2	87	2	92	✅	Polydamas		no	no	no	no	✅	Paris		no	no	no	no	12010	5	general interlocution	G5	6		0		Vit			2 of 3	mortal			
-12	20	20	2	127	2	135	✅	Priam		no	no	no	no	✅	Memnon		no	no	no	no	12011	1	dialogue	D1	9		0		Lau; Inv; Gre			3 of 5	mortal			
-12	21	21	2	148	2	155	✅	Memnon		no	no	no	no	✅	Priam		no	no	no	no	12011	2	dialogue	D2	8		0		Del			1 of 3	mortal			
-12	22	22	2	157	2	160	✅	Priam		no	no	no	no	✅	Memnon		no	no	no	no	12011	3	dialogue	D3	4		0		Del			4 of 5	mortal			
-12	23	23	2	167	2	172	✅	Zeus		no	no	no	no	✅	Olympian gods		no	no	yes	collective	12012	1	monologue	M (no reply)	6		0		Del			1 of 2	god			
-12	24	24	2	268	2	276	✅	Nestor		no	no	no	no	✅	Thrasymedes		no	no	no	no	12013	1	monologue	M (no reply)	9		0		Com			1 of 14	mortal			type 3: general to indivudual
-12	25	25	2	309	2	318	✅	Memnon		no	no	no	no	✅	Nestor		no	no	no	no	12014	1	dialogue	D1	10		0		Del; War			2 of 3	mortal			
-12	26	26	2	320	2	337	✅	Nestor		no	no	no	no	✅	Memnon		no	no	no	no	12014	2	dialogue	D2	18		0		Cha			2 of 14	mortal			
-12	27	27	2	390	2	394	✅	Nestor		no	no	no	no	✅	Achilles		no	no	no	no	12015	1	monologue	M (no reply)	5		0		Req			3 of 14	mortal			
-12	28	28	2	412	2	429	✅	Memnon		no	no	no	no	✅	Achilles		no	no	no	no	12016	1	dialogue	D1	18		0		Cha; Tau; Inf			3 of 3	mortal			
-12	29	29	2	431	2	451	✅	Achilles		no	no	no	no	✅	Memnon		no	no	no	no	12016	2	dialogue	D2	21		0		Cha; Inf			4 of 8	mortal			
-12	30	30	2	609	2	622	✅	Eos		no	no	no	no	✅	Memnon	She does address Memnon, but he's dead, so it feels more like a soliloquy	no	dead	no	no	12017	1	soliloquy	S	14		0		Del; Inf; Vow			1 of 1	god			
-12	31	31	3	40	3	42	✅	Apollo		no	no	no	no	✅	Achilles		no	no	no	no	12018	1	dialogue	D1	3		0		Com			1 of 3	god			
-12	32	32	3	46	3	52	✅	Achilles		no	no	no	no	✅	Apollo		no	no	no	no	12018	2	dialogue	D2	7		0		Del; Com			5 of 8	mortal			
-12	33	33	3	57	3	59	✅	Apollo		no	no	no	no	✅	self		no	no	no	no	12019	1	soliloquy	S	3		0		Del; Ora			2 of 3	god			
-12	34	34	3	68	3	82	✅	Achilles		no	no	no	no	✅	Trojans		no	no	yes	collective	12020	1	monologue	M (no reply)	15		0		Cha; Ora			6 of 8	mortal			
-12	35	35	3	98	3	127	✅	Hera		no	no	no	no	✅	Apollo		no	no	no	no	12021	1	monologue	M (no reply)	30		0		Del; Vit			1 of 2	god			
-12	36	36	3	167	3	169	✅	Achilles		no	no	no	no	✅	Trojans		no	no	yes	collective	12022	1	monologue	M (no reply)	3		0		Thr			7 of 8	mortal			
-12	37	37	3	190	3	211	✅	Paris		no	no	no	no	✅	Trojans		no	no	yes	collective	12023	1	monologue	M (no reply)	22		0		Exh			2 of 4	mortal			type 1: general to troops
-12	38	38	3	246	3	249	✅	Glaucus (Lycian)		no	no	no	no	✅	Aias (son of Telamon)		no	no	no	no	12024	1	dialogue	D1	4		0		Thr			1 of 1	mortal			
-12	39	39	3	253	3	266	✅	Aias (son of Telamon)		no	no	no	no	✅	Glaucus (Lycian)		no	no	no	no	12024	2	dialogue	D2	14		0		Vit; Cha			2 of 8	mortal			
-12	40	40	3	344	3	348	✅	Aias (son of Telamon)		no	no	no	no	✅	Paris		no	no	no	no	12025	1	monologue	M (no reply)	5		0		Vit; Thr			3 of 8	mortal			
-12	41	41	3	435	3	458	✅	Aias (son of Telamon)		no	no	no	no	✅	Achilles	Dead	no	dead	no	no	12026	1	soliloquy	S	24		0		Lam			4 of 8	mortal			
-12	42	42	3	463	3	489	✅	Phoinix		no	no	no	no	✅	Achilles	Dead	no	dead	no	no	12027	1	soliloquy	S	27		0		Lam; Nar			1 of 3	mortal			
-12	43	43	3	493	3	503	✅	Agamemnon		no	no	no	no	❌	Achilles and Zeus	Achilles is dead	no	Achilles is dead	no	no	12028	1	soliloquy	S	11		0		Lam			1 of 8	mortal			
-12	44	44	3	518	3	524	✅	Nestor		no	no	no	no	✅	Agamemnon		no	no	no	no	12029	1	monologue	M (no reply)	7		0		Exh			4 of 14	mortal			
-12	45	45	3	560	3	573	✅	Briseis		no	no	no	no	✅	Achilles	Dead	no	dead	no	no	12030	1	soliloquy	S	14		0		Lam			1 of 1	mortal			
-12	46	46	3	608	3	630	✅	Thetis		no	no	no	no	✅	self		no		no	no	12031	1	soliloquy	S	23		0		Lam; Inf			1 of 2	god			
-12	47	47	3	633	3	654	✅	Calliope		no	no	no	no	✅	Thetis		no	no	no	no	12032	1	monologue	M (no reply)	22		0		Con; Del			1 of 1	god			
-12	48	48	3	770	3	780	✅	Poseidon		no	no	no	no	✅	Thetis		no	no	no	no	12033	1	monologue	M (no reply)	11		0		Con; Inf			1 of 2	god			
-12	49	49	4	20	4	31	✅	someone	(Trojan)	no	no	yes	no	✅	Trojans		no	no	yes	collective	12034	1	general interlocution	G1	12		0		Des			1 of 1	mortal	yes		
-12	50	50	4	34	4	42	✅	someone	(Trojan)	no	no	yes	no	✅	Trojans		no	no	yes	collective	12034	2	general interlocution	G2	9		0		Del			1 of 1	mortal	yes		
-12	51	51	4	49	4	55	✅	Hera		no	no	no	no	✅	Zeus		no	no	no	no	12035	1	monologue	M (no reply)	7		0		Que			2 of 2	god			
-12	52	52	4	83	4	87	✅	Diomedes		no	no	no	no	✅	Greeks		no	no	yes	collective	12036	1	general interlocution	G1	5		0		Exh			1 of 5	mortal			type 1: general to troops
-12	53	53	4	89	4	99	✅	Aias (son of Telamon)		no	no	no	no	✅	Diomedes		no	no	no	no	12036	2	general interlocution	G2	11		0		Del			5 of 8	mortal			
-12	54	54	4	103	4	108	✅	Diomedes		no	no	no	no	✅	Aias (son of Telamon)		no	no	no	no	12036	3	general interlocution	G3	6		0		Del			2 of 5	mortal			
-12	55	55	4	266	4	268	✅	Nestor		no	no	no	no	❌	Aias (son of Telamon) and Diomedes		no	no	no	no	12037	1	monologue	M (no reply)	3		0		Lau			5 of 14	mortal			
-12	56	56	4	294	4	299	✅	Phoinix		no	no	no	no	✅	Greeks		no	no	yes	collective	12038	1	general interlocution	G1	6		0		Del; Com			2 of 3	mortal			
-12	57	57	4	303	4	322	✅	Nestor		no	no	no	no	✅	Greeks		no	no	yes	collective	12038	2	general interlocution	G2	20		0		Del; Nar			6 of 14	mortal			
-12	58	58	4	409	4	409	✅	Agamemnon		no	no	no	no	✅	Greeks		no	no	yes	collective	12039	1	monologue	M (no reply)	1		0		Inf			2 of 8	mortal			
-12	59	59	4	490	4	494	✅	Euryalus (Quintus)		no	no	no	no	✅	Greeks		no	no	yes	collective	12040	1	monologue	M (no reply)	5		0		Del			1 of 1	mortal			
-12	60	60	4	526	4	532	✅	someone	(Greek); Loeb says it might be Nestor	no	no	yes	no	✅	horses of Menelaus	being praised	no	no	no	tandem	12041	1	monologue	M (no reply)	7		0	Speech has a hiatus	Lau			1 of 1	mortal	yes		
-12	61	61	5	123	5	127	✅	Thetis		no	no	no	no	✅	Greeks		no	no	no	no	12042	1	monologue	M (no reply)	5		0		Del			2 of 2	god			
-12	62	62	5	141	5	164	✅	Nestor		no	no	no	no	❌	Idomeneus and Agamemnon		no	no	no	tandem	12043	1	general interlocution	G1	24		0		Del; Exh			7 of 14	mortal			
-12	63	63	5	166	5	174	✅	Agamemnon		no	no	no	no	✅	Nestor		no	no	no	no	12043	2	general interlocution	G2	9		0		Lau; Del			3 of 8	mortal			
-12	64	64	5	181	5	236	✅	Aias (son of Telamon)		no	no	no	no	✅	Odysseus		no	no	no	no	12044	1	dialogue	D1	56		0		Que; Vit; Nar			6 of 8	mortal			
-12	65	65	5	239	5	290	✅	Odysseus		no	no	no	no	✅	Aias (son of Telamon)		no	no	no	no	12044	2	dialogue	D2	52		0		Del; Inf			1 of 8	mortal			
-12	66	66	5	292	5	305	✅	Aias (son of Telamon)		no	no	no	no	✅	Odysseus		no	no	no	no	12044	3	dialogue	D3	14		0		Del			7 of 8	mortal			
-12	67	67	5	307	5	316	✅	Odysseus		no	no	no	no	✅	Aias (son of Telamon)		no	no	no	no	12044	4	dialogue	D4	10		0		Del			2 of 8	mortal			
-12	68	68	5	342	5	344	✅	Cymothoe		no	no	no	no	✅	Nereids		no	no	no	no	12045	1	monologue	M (no reply)	3		0		Lam			1 of 1	mortal			
-12	69	69	5	415	5	427	✅	Menelaus		no	no	no	no	✅	Agamemnon		no	no	yes	collective	12046	1	dialogue	D1	13		0		Del			1 of 5	mortal			
-12	70	70	5	428	5	431	✅	Agamemnon		no	no	no	no	✅	Menelaus		no	no	no	no	12046	2	dialogue	D2	4		0		Del			4 of 8	mortal			
-12	71	71	5	465	5	481	✅	Aias (son of Telamon)		no	no	no	no	✅	self		no	no	no	no	12047	1	soliloquy	S	17		0		Lam			8 of 8	mortal			
-12	72	72	5	509	5	520	✅	Teucer		no	no	no	no	✅	Aias (son of Telamon)	Dead	no	no	no	no	12048	1	soliloquy	S	12		0		Lam			1 of 2	mortal			
-12	73	73	5	532	5	558	✅	Tecmessa		no	no	no	no	✅	Aias (son of Telamon)	Dead	no	no	no	no	12049	1	soliloquy	S	27		0		Lam			1 of 1	mortal			
-12	74	74	5	560	5	567	✅	Agamemnon		no	no	no	no	✅	Tecmessa		no	no	no	no	12049	2	monologue	M (reply)	8		0	Seems to be a reply to Tecmessa's lament; speech cluster	Con			5 of 8	mortal			
-12	75	75	5	574	5	597	✅	Odysseus		no	no	no	no	✅	Greeks		no	no	yes	collective	12050	1	general interlocution	G1	24		0		Del			3 of 8	mortal			
-12	76	76	5	601	5	611	✅	Nestor		no	no	no	no	✅	Greeks		no	no	yes	collective	12050	2	general interlocution	G2	11		0		Del; Exh			8 of 14	mortal			
-12	77	77	6	9	6	31	✅	Menelaus		no	no	no	no	✅	Greeks		no	no	yes	collective	12051	1	general interlocution	G1	23		0		Del; Exh			2 of 5	mortal			type 1*: general to troops, inverse exhortation
-12	78	78	6	41	6	55	✅	Diomedes		no	no	no	no	✅	Menelaus		no	no	no	no	12051	2	general interlocution	G2	15		0		Vit; Thr			5 of 5	mortal			type 4: other
-12	79	79	6	59	6	67	✅	Calchas		no	no	no	no	✅	Greeks		no	no	yes	collective	12051	3	general interlocution	G3	9		0		Ora			1 of 4	mortal			
-12	80	80	6	72	6	83	✅	Odysseus		no	no	no	no	✅	Greeks		no	no	yes	collective	12051	4	general interlocution	G4	12		0		Del			4 of 8	mortal			
-12	81	81	6	85	6	92	✅	Menelaus		no	no	no	no	✅	Odysseus		no	no	no	no	12051	5	general interlocution	G5	8		0		Vow			3 of 5	mortal			
-12	82	82	6	298	6	307	✅	Paris		no	no	no	no	✅	Eurypylus		no	no	no	no	12052	1	dialogue	D1	10		0		Gre; Req			3 of 4	mortal			type 3: general to indivudual
-12	83	83	6	309	6	314	✅	Eurypylus		no	no	no	no	✅	Paris		no	no	no	no	12052	2	dialogue	D2	6		0		Vow			1 of 7	mortal			
-12	84	84	6	385	6	389	✅	Eurypylus		no	no	no	no	✅	Nireus		no	no	no	no	12053	1	monologue	M (no reply)	5		0		Tau			2 of 7	mortal			
-12	85	85	6	414	6	424	✅	Eurypylus		no	no	no	no	✅	Machaon		no	no	no	no	12054	1	dialogue	D1	11		0		Tau			3 of 7	mortal			
-12	86	86	6	426	6	428	✅	Machaon		no	no	no	no	✅	Eurypylus		no	no	no	no	12054	2	dialogue	D2	3		0		Ora			1 of 1	mortal			
-12	87	87	6	431	6	434	✅	Eurypylus		no	no	no	no	✅	Machaon		no	no	no	no	12054	3	dialogue	D3	4		0		Tau			4 of 7	mortal			
-12	88	88	6	443	6	451	✅	Teucer		no	no	no	no	✅	Greeks		no	no	yes	collective	12055	1	monologue	M (no reply)	9		0		Exh			2 of 2	mortal			type 1: general to troops
-12	89	89	6	604	6	608	✅	Eurypylus		no	no	no	no	✅	Trojans		no	no	no	no	12056	1	monologue	M (no reply)	5		0		Exh			5 of 7	mortal			type 1: general to troops
-12	90	90	7	38	7	55	✅	Nestor		no	no	no	no	✅	Podaleirus		no	no	no	no	12057	1	dialogue	D1	18		0		Con			9 of 14	mortal			
-12	91	91	7	58	7	65	✅	Podaleirus		no	no	no	no	✅	Nestor		no	no	no	no	12057	2	dialogue	D2	8		0		Lam			1 of 1	mortal			
-12	92	92	7	67	7	92	✅	Nestor		no	no	no	no	✅	Podaleirus		no	no	no	no	12057	3	dialogue	D3	26		0		Con			10 of 14	mortal			
-12	93	93	7	179	7	181	✅	Neoptolemus		no	no	no	no	❌	Odysseus and Diomedes		no	no	no	tandem	12058	1	general interlocution	G1	3		0		Com			1 of 19	mortal			
-12	94	94	7	183	7	218	✅	Odysseus		no	no	no	no	✅	Neoptolemus		no	no	no	no	12058	2	general interlocution	G2	36		0		Inf; Req			5 of 8	mortal			
-12	95	95	7	220	7	225	✅	Neoptolemus		no	no	no	no	❌	Odysseus and Diomedes		no	no	no	tandem	12058	3	general interlocution	G3	6		0		Del			2 of 19	mortal			
-12	96	96	7	262	7	286	✅	Deidamia		no	no	no	no	✅	Neoptolemus		no	no	no	no	12059	1	general interlocution	G1	25		0		Lam; Per			1 of 1	mortal			
-12	97	97	7	288	7	291	✅	Neoptolemus		no	no	no	no	✅	Deidamia		no	no	no	no	12059	2	general interlocution	G2	4		0		Del			3 of 19	mortal			
-12	98	98	7	294	7	311	✅	Lycomedes		no	no	no	no	✅	Neoptolemus		no	no	no	no	12059	3	general interlocution	G3	18		0		War; Del			1 of 1	mortal			
-12	99	99	7	422	7	430	✅	Diomedes		no	no	no	no	✅	Greeks		no	no	yes	collective	12060	1	monologue	M (no reply)	9		0		Del			3 of 5	mortal			type 1: general to troops
-12	100	100	7	513	7	521	✅	Eurypylus		no	no	no	no	✅	Greeks		no	no	yes	collective	12061	1	monologue	M (no reply)	9		0		Tau; Vit			6 of 7	mortal			
-12	101	101	7	642	7	666	✅	Phoinix		no	no	no	no	✅	Neoptolemus		no	no	no	no	12062	1	dialogue	D1	25		0		Gre; Lau; Lam; Exh			3 of 3	mortal			type 4: other
-12	102	102	7	668	7	669	✅	Neoptolemus		no	no	no	no	✅	Phoinix		no	no	no	no	12062	2	dialogue	D2	2		0		Del			4 of 19	mortal			
-12	103	103	7	689	7	699	✅	Agamemnon		no	no	no	no	✅	Neoptolemus		no	no	no	no	12063	1	dialogue	D1	11		0		Del			6 of 8	mortal			
-12	104	104	7	701	7	704	✅	Neoptolemus		no	no	no	no	✅	Agamemnon		no	no	no	no	12063	2	dialogue	D2	4		0		Des			5 of 19	mortal			
-12	105	105	8	15	8	22	✅	Neoptolemus		no	no	no	no	✅	Myrmidons		no	no	no	no	12064	1	single speech	M (no reply)	8		0		Del; Exh			6 of 19	mortal			type 1: general to troops
-12	106	106	8	138	8	145	✅	Eurypylus		no	no	no	no	✅	Neoptolemus		no	no	no	no	12065	1	dialogue	D1	8		0		Que			7 of 7	mortal			
-12	107	107	8	147	8	161	✅	Neoptolemus		no	no	no	no	✅	Eurypylus		no	no	no	no	12065	2	dialogue	D2	15		0		Res			7 of 19	mortal			
-12	108	108	8	210	8	216	✅	Neoptolemus		no	no	no	no	✅	Eurypylus	now dead	no	dead	no	no	12065	3	monologue	M (no reply)	7		0	A fight between the two happened in between; speech cluster	Tau			8 of 19	mortal			
-12	109	109	8	256	8	266	✅	Helenus		no	no	no	no	✅	Trojans		no	no	no	no	12066	1	monologue	M (no reply)	11		0		Del; Exh			1 of 1	mortal			type 1: general to troops
-12	110	110	8	431	8	442	✅	Ganymedes		no	no	no	no	✅	Zeus		no	no	no	no	12067	1	monologue	M (no reply)	12		0		Del			1 of 1	mortal			
-12	111	111	8	452	8	477	✅	Nestor		no	no	no	no	✅	Greeks		no	no	no	no	12068	1	monologue	M (no reply)	26		0		Del			11 of 14	mortal			
-12	112	112	9	9	9	22	✅	Antenor		no	no	no	no	✅	Zeus		no	no	no	no	12069	1	monologue	M (no reply)	14		0		Pra; Req			1 of 1	mortal			
-12	113	113	9	50	9	60	✅	Neoptolemus		no	no	no	no	✅	Achilles	dead	no	dead	no	no	12070	1	soliloquy	S	11		0		Lam; Vow			9 of 19	mortal			
-12	114	114	9	85	9	109	✅	Deiphobus		no	no	no	no	✅	Trojans		no	no	no	no	12071	1	monologue	M (no reply)	25		0		Del; Exh			1 of 1	mortal			type 1: general to troops
-12	115	115	9	227	9	229	✅	Automedon		no	no	no	no	✅	Neoptolemus		no	no	no	no	12072	1	monologue	M (no reply)	3		0		Inf			1 of 1	mortal			
-12	116	116	9	248	9	252	✅	Neoptolemus		no	no	no	no	✅	Deiphobus		no	no	no	no	12073	1	dialogue	D1	5		0		Cha			10 of 19	mortal			
-12	117	117	9	261	9	263	✅	Neoptolemus		no	no	no	no	✅	Deiphobus		no	no	no	no	12073	2	dialogue	D2	3		0		Vit			11 of 19	mortal			
-12	118	118	9	275	9	283	✅	Neoptolemus		no	no	no	no	✅	Greeks		no	no	yes	collective	12074	1	monologue	M (no reply)	9		0		Exh			12 of 19	mortal			type 1: general to troops
-12	119	119	9	313	9	320	✅	Poseidon		no	no	no	no	✅	Apollo		no	no	no	no	12075	1	monologue	M (no reply)	8		0		Del; Per			2 of 2	god			
-12	120	120	9	491	9	515	✅	Agamemnon		no	no	no	no	✅	Philoctetes		no	no	no	no	12076	1	dialogue	D1	25		0		Del			7 of 8	mortal			
-12	121	121	9	518	9	524	✅	Philoctetes		no	no	no	no	✅	Agamemnon		no	no	no	no	12076	2	dialogue	D2	7		0		Del			1 of 4	mortal			
-12	122	122	9	537	9	539	✅	Philoctetes		no	no	no	no	✅	Greeks		no	no	yes	collective	12077	1	monologue	M (no reply)	3		0		Exh			2 of 4	mortal			type 1: general to troops
-12	123	123	10	10	10	25	✅	Polydamas		no	no	no	no	✅	Trojans		no	no	yes	collective	12078	1	general interlocution	G1	16		0		Del			3 of 3	mortal			
-12	124	124	10	27	10	44	✅	Aeneas		no	no	no	no	✅	Trojans		no	no	yes	collective	12078	2	general interlocution	G2	18		0		Del; Per			1 of 1	mortal			
-12	125	125	10	226	10	230	✅	Philoctetes		no	no	no	no	✅	Paris		no	no	no	no	12079	1	monologue	M (no reply)	5		0		Vit; Thr			3 of 4	mortal			
-12	126	126	10	284	10	305	✅	Paris		no	no	no	no	✅	Oenone		no	no	no	no	12080	1	dialogue	D1	22		0		Req			4 of 4	mortal			
-12	127	127	10	308	10	327	✅	Oenone		no	no	no	no	✅	Paris		no	no	no	no	12080	2	dialogue	D2	20		0		Vit; Del			1 of 2	mortal			
-12	128	128	10	373	10	384	✅	Hecuba		no	no	no	no	✅	Paris	Dead	no	dead	no	no	12081	1	soliloquy	S	12		0		Lam			1 of 2	mortal			
-12	129	129	10	392	10	405	✅	Helena		no	no	no	no	✅	Paris	Dead	no	dead	no	no	12082	1	soliloquy	S	14		0		Lam			1 of 2	mortal			
-12	130	130	10	424	10	431	✅	Oenone		no	no	no	no	✅	self		no	no	no	no	12083	1	soliloquy	S	8		0		Lam			2 of 2	mortal			
-12	131	131	10	471	10	476	✅	nymph		no	no	yes	no	✅	self		no	no	yes	no	12084	1	soliloquy	S	6		0		Vit			1 of 1	mortal	yes		
-12	132	132	11	137	11	141	✅	Apollo-Polymestor		Polymestor	no	no	no	❌	Aeneas and Eurymachus		no	no	no	no	12085	1	monologue	M (no reply)	5		0		Lau; Exh			3 of 3	god		Polymestor	type 2: god to mortals
-12	133	133	11	217	11	220	✅	Neoptolemus		no	no	no	no	✅	Greeks		no	no	yes	collective	12086	1	monologue	M (no reply)	4		0		Tau			13 of 19	mortal			type 1: general to troops
-12	134	134	11	491	11	495	✅	Philoctetes		no	no	no	no	✅	Aeneas		no	no	no	no	12087	1	monologue	M (no reply)	5		0		Cha; Tau			4 of 4	mortal			
-12	135	135	12	8	12	20	✅	Calchas		no	no	no	no	✅	Greeks		no	no	yes	collective	12088	1	general interlocution	G1	13		0		Ora; War			2 of 4	mortal			
-12	136	136	12	25	12	45	✅	Odysseus		no	no	no	no	✅	Greeks		no	no	yes	collective	12088	2	general interlocution	G2	21		0		Ins			6 of 8	mortal			
-12	137	137	12	51	12	65	✅	Calchas		no	no	no	no	✅	Greeks		no	no	yes	collective	12088	3	general interlocution	G3	15		0		Del; Ora			3 of 4	mortal			
-12	138	138	12	67	12	72	✅	Neoptolemus		no	no	no	no	✅	Calchas		no	no	no	no	12088	4	general interlocution	G4	6		0		Del			14 of 19	mortal			
-12	139	139	12	74	12	83	✅	Odysseus		no	no	no	no	✅	Neoptolemus		no	no	no	no	12088	5	general interlocution	G5	10		0		Del			7 of 8	mortal			
-12	140	140	12	153	12	153	✅	Epeius		no	no	no	no	✅	Athena		no	no	no	no	12089	1	monologue	M (no reply)	1		0		Pra			1 of 1	mortal			
-12	141	141	12	206	12	213	✅	Themis		no	no	no	no	✅	Olympian gods		no	no	yes	collective	12090	1	monologue	M (no reply)	8		0		Del; War			1 of 1	god			
-12	142	142	12	220	12	242	✅	Odysseus		no	no	no	no	✅	Greeks		no	no	yes	collective	12091	1	general interlocution	G1	23		0		Del			8 of 8	mortal			
-12	143	143	12	247	12	258	✅	Sinon		no	no	no	no	✅	Greeks		no	no	yes	collective	12091	2	general interlocution	G2	12		0		Del			2 of 2	mortal			
-12	144	144	12	254	12	258	✅	Greeks		no	no	yes	collective	✅	self		no	no	yes	collective	12091	3	general interlocution	G3	5		0		Lau			1 of 1	mortal	collective		
-12	145	145	12	261	12	273	✅	Nestor		no	no	no	no	✅	Greeks		no	no	yes	collective	12091	4	general interlocution	G4	13		0		Del; Exh			12 of 14	mortal			
-12	146	146	12	275	12	280	✅	Neoptolemus		no	no	no	no	✅	Nestor		no	no	no	no	12091	5	general interlocution	G5	6		0		Com; Del			15 of 19	mortal			
-12	147	147	12	287	12	296	✅	Nestor		no	no	no	no	✅	Neoptolemus		no	no	no	no	12091	6	general interlocution	G6	10		0		Del			13 of 14	mortal			
-12	148	148	12	298	12	302	✅	Neoptolemus		no	no	no	no	✅	Nestor		no	no	no	no	12091	7	general interlocution	G7	5		0		Del			16 of 19	mortal			
-12	149	149	12	375	12	386	✅	Sinon		no	no	no	no	✅	Trojans		no	no	yes	collective	12092	1	monologue	M (no reply)	12		0		Inf; Lam			1 of 2	mortal			
-12	150	150	12	540	12	551	✅	Cassandra		no	no	no	no	✅	Trojans		no	no	yes	collective	12093	1	general interlocution	G1	12		0		Lam			1 of 1	mortal			
-12	151	151	12	553	12	561	✅	someone	(Trojan)	no	no	yes	no	✅	Cassandra		no	no	no	no	12093	2	general interlocution	G2	9		0		Vit			1 of 1	mortal	yes		
-12	152	152	13	15	13	18	✅	someone	(Trojan)	no	no	yes	no	✅	self		no	no	no	no	12094	1	monologue	M (no reply)	4		0		Tau			1 of 1	mortal	yes		
-12	153	153	13	191	13	197	✅	Ilioneus		no	no	no	no	✅	Diomedes		no	no	no	no	12095	1	dialogue	D1	7		0		Per			1 of 1	mortal			
-12	154	154	13	199	13	202	✅	Diomedes		no	no	no	no	✅	Ilioneus		no	no	no	no	12095	2	dialogue	D2	4		0		Del			4 of 5	mortal			
-12	155	155	13	226	13	236	✅	Priam		no	no	no	no	✅	Neoptolemus		no	no	no	no	12096	1	dialogue	D1	11		0		Per; Com; Des			5 of 5	mortal			
-12	156	156	13	238	13	240	✅	Neoptolemus		no	no	no	no	✅	Priam		no	no	no	no	12096	2	dialogue	D2	3		0		Del			17 of 19	mortal			
-12	157	157	13	272	13	286	✅	Andromache		no	no	no	no	✅	Greeks		no	no	yes	collective	12097	1	monologue	M (no reply)	15		0		Lam; Des			2 of 2	mortal			
-12	158	158	13	334	13	349	✅	Calchas		no	no	no	no	✅	Greeks		no	no	yes	collective	12098	1	monologue	M (no reply)	16		0		Inf; War			4 of 4	mortal			
-12	159	159	13	359	13	373	✅	Menelaus		no	no	no	no	✅	Deiphobus		no	no	no	no	12099	1	monologue	M (no reply)	15		0		Tau; Vit			4 of 5	mortal			
-12	160	160	13	409	13	414	✅	Agamemnon		no	no	no	no	✅	Menelaus		no	no	no	no	12100	1	monologue	M (no reply)	6		0		Del			8 of 8	mortal			
-12	161	161	13	469	13	477	✅	someone	(at sea)	no	no	yes	no	✅	self		no	no	yes	no	12101	1	soliloquy	S	9		0		Lau			1 of 1	mortal	yes		
-12	162	162	13	506	13	517	✅	Aethra		no	no	no	no	❌	Demophon (son of Theseus) and Acamas (son of Theseus)		no	no	no	no	12102	1	general interlocution	G1	12		0		Des; Per; Req			1 of 1	mortal			
-12	163	163	13	527	13	531	✅	Demophon (son of Theseus)		no	no	no	no	✅	Aethra		no	no	no	no	12102	2	general interlocution	G2	5		0		Inf			1 of 1	mortal			
-12	164	164	14	117	14	119	✅	Greeks		no	no	no	no	✅	Zeus		no	no	no	no	12103	1	monologue	M (no reply)	3		0		Pra; Req; Lau			1 of 1	mortal	collective		
-12	165	165	14	155	14	164	✅	Helena		no	no	no	no	✅	Menelaus		no	no	no	no	12104	1	dialogue	D1	10		0		Req; Inf; Per			2 of 2	mortal			
-12	166	166	14	166	14	168	✅	Menelaus		no	no	no	no	✅	Helena		no	no	no	no	12104	2	dialogue	D2	3		0		Del			5 of 5	mortal			
-12	167	167	14	185	14	222	✅	Achilles	Shade	no	shade	no	no	✅	Neoptolemus		no	no	no	no	12105	1	monologue	M (no reply)	38		0		Con			8 of 8	mortal			
-12	168	168	14	235	14	245	✅	Neoptolemus		no	no	no	no	✅	Greeks		no	no	no	no	12106	1	monologue	M (no reply)	11		0		Del; Inf; War			18 of 19	mortal			
-12	169	169	14	254	14	256	✅	Greeks		no	no	yes	collective	✅	Achilles	Dead	no	dead	no	no	12107	1	soliloquy	S	3		0		Lau; Per			1 of 1	mortal	collective		
-12	170	170	14	289	14	301	✅	Hecuba		no	no	no	no	✅	Polyxena	Dead	no	dead	no	no	12108	1	soliloquy	S	13		0		Lam			2 of 2	mortal			
-12	171	171	14	308	14	312	✅	Neoptolemus		no	no	no	no	✅	Achilles	Dead	no	dead	no	no	12109	1	monologue	M (no reply)	5		0		Pra; Req			19 of 19	mortal			
-12	172	172	14	338	14	345	✅	Nestor		no	no	no	no	✅	Greeks		no	no	no	no	12110	1	monologue	M (no reply)	8		0		Del; Com			14 of 14	mortal			
-12	173	173	14	427	14	442	✅	Athena		no	no	no	no	✅	Zeus		no	no	no	no	12111	1	dialogue	D1	16		0		Del; Req			1 of 1	god			
-12	174	174	14	444	14	448	✅	Zeus		no	no	no	no	✅	Athena		no	no	no	no	12111	2	dialogue	D2	5		0		Del			2 of 2	god			
-12	175	175	14	602	14	604	✅	someone	(Greek)	no	no	yes	no	✅	self		no	no	yes	no	12112	1	soliloquy	S	3		0		Lam			1 of 1	mortal	yes		
+work_id	seq	orig_id	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	mortal/divine	addressee being	speech/speaker	anonymous?	disguise?	battle-exhortations (ch. 2)
+12	1	1	1	100	1	114	✅	Andromache		no	no	no	no	✅	self		no	no	no	no	12001	1	soliloquy	S	15		0		Lam		mortal	mortal	1 of 2			
+12	2	2	1	186	1	197	✅	Priam		no	no	no	no	✅	Zeus		no	no	no	no	12002	1	monologue	M (no reply)	12		0		Pra; Req		mortal	divine	1 of 5			
+12	3	3	1	212	1	219	✅	Greeks		no	no	yes	collective	✅	self		no	no	yes	collective	12003	1	monologue	M (no reply)	8		0		Del		mortal	mortal	1 of 1	collective		
+12	4	4	1	326	1	334	✅	Penthesilea		no	no	no	no	✅	Greeks		no	no	no	no	12004	1	monologue	M (no reply)	9		0		Thr; Vit		mortal	mortal	1 of 2			
+12	5	5	1	358	1	372	✅	Trojan		no	no	yes	no	✅	Trojans	O friends'	no	no	yes	collective	12005	1	monologue	M (no reply)	15		0		Del; Exh		mortal	mortal	1 of 1	collective		
+12	6	6	1	409	1	435	✅	Hippodamea		no	no	no	no	✅	Trojan women		no	no	yes	collective	12006	1	general interlocution	G1	27		0		Exh; Per; Del		mortal	mortal	1 of 1			type 1: general to troops
+12	7	7	1	451	1	474	✅	Theano		no	no	no	no	✅	Trojan women		no	no	yes	collective	12006	2	general interlocution	G2	24		0		Lam; Inf		mortal	mortal	1 of 1			
+12	8	8	1	497	1	507	✅	Aias (son of Telamon)		no	no	no	no	✅	Achilles		no	no	no	no	12007	1	monologue	M (no reply)	11		0		Del; Exh		mortal	mortal	1 of 8			type 4: other
+12	9	9	1	553	1	562	✅	Penthesilea		no	no	no	no	❌	Achilles and Aias (son of Telamon)		no	no	no	tandem	12008	1	general interlocution	G1	10		0		Cha; Tau		mortal	mortal	2 of 2			
+12	10	10	1	575	1	591	✅	Achilles		no	no	no	no	✅	Penthesilea		no	no	no	no	12008	2	general interlocution	G2	17		0		Vit; Del; Que		mortal	mortal	1 of 8			
+12	11	11	1	644	1	653	✅	Achilles		no	no	no	no	✅	Penthesilea		no	no	no	no	12008	3	general interlocution	G3	10		0		Tau		mortal	mortal	2 of 8			
+12	12	12	1	723	1	740	✅	Thersites		no	no	no	no	✅	Achilles		no	no	no	no	12009	1	general interlocution	G1	18		0		Tau		mortal	mortal	1 of 1			
+12	13	13	1	751	1	754	✅	someone	(Greek)	no	no	yes	no	✅	Thersites		no	no	no	no	12009	2	general interlocution	G2	4		0	or monologue in between a dialogue?	Del		mortal	mortal	1 of 1	yes		
+12	14	14	1	757	1	765	✅	Achilles		no	no	no	no	✅	Thersites		no	no	no	no	12009	3	general interlocution	G3	9		0		Vit		mortal	mortal	3 of 8			
+12	15	15	2	10	2	25	✅	Thymoites		no	no	no	no	✅	Trojans		no	no	yes	collective	12010	1	general interlocution	G1	16		0		Lam; Del		mortal	mortal	1 of 1			
+12	16	16	2	27	2	40	✅	Priam		no	no	no	no	✅	Trojans		no	no	yes	collective	12010	2	general interlocution	G2	14		0		Del; Exh		mortal	mortal	2 of 5			
+12	17	17	2	43	2	62	✅	Polydamas		no	no	no	no	✅	Priam		no	no	no	no	12010	3	general interlocution	G3	20		0		Del; Exh		mortal	mortal	1 of 3			
+12	18	18	2	68	2	80	✅	Paris		no	no	no	no	✅	Polydamas		no	no	no	no	12010	4	general interlocution	G4	13		0		Vit		mortal	mortal	1 of 4			
+12	19	19	2	87	2	92	✅	Polydamas		no	no	no	no	✅	Paris		no	no	no	no	12010	5	general interlocution	G5	6		0		Vit		mortal	mortal	2 of 3			
+12	20	20	2	127	2	135	✅	Priam		no	no	no	no	✅	Memnon		no	no	no	no	12011	1	dialogue	D1	9		0		Lau; Inv; Gre		mortal	mortal	3 of 5			
+12	21	21	2	148	2	155	✅	Memnon		no	no	no	no	✅	Priam		no	no	no	no	12011	2	dialogue	D2	8		0		Del		mortal	mortal	1 of 3			
+12	22	22	2	157	2	160	✅	Priam		no	no	no	no	✅	Memnon		no	no	no	no	12011	3	dialogue	D3	4		0		Del		mortal	mortal	4 of 5			
+12	23	23	2	167	2	172	✅	Zeus		no	no	no	no	✅	Olympian gods		no	no	yes	collective	12012	1	monologue	M (no reply)	6		0		Del		divine	divine	1 of 2			
+12	24	24	2	268	2	276	✅	Nestor		no	no	no	no	✅	Thrasymedes		no	no	no	no	12013	1	monologue	M (no reply)	9		0		Com		mortal	mortal	1 of 14			type 3: general to indivudual
+12	25	25	2	309	2	318	✅	Memnon		no	no	no	no	✅	Nestor		no	no	no	no	12014	1	dialogue	D1	10		0		Del; War		mortal	mortal	2 of 3			
+12	26	26	2	320	2	337	✅	Nestor		no	no	no	no	✅	Memnon		no	no	no	no	12014	2	dialogue	D2	18		0		Cha		mortal	mortal	2 of 14			
+12	27	27	2	390	2	394	✅	Nestor		no	no	no	no	✅	Achilles		no	no	no	no	12015	1	monologue	M (no reply)	5		0		Req		mortal	mortal	3 of 14			
+12	28	28	2	412	2	429	✅	Memnon		no	no	no	no	✅	Achilles		no	no	no	no	12016	1	dialogue	D1	18		0		Cha; Tau; Inf		mortal	mortal	3 of 3			
+12	29	29	2	431	2	451	✅	Achilles		no	no	no	no	✅	Memnon		no	no	no	no	12016	2	dialogue	D2	21		0		Cha; Inf		mortal	mortal	4 of 8			
+12	30	30	2	609	2	622	✅	Eos		no	no	no	no	✅	Memnon	She does address Memnon, but he's dead, so it feels more like a soliloquy	no	dead	no	no	12017	1	soliloquy	S	14		0		Del; Inf; Vow		divine	mortal	1 of 1			
+12	31	31	3	40	3	42	✅	Apollo		no	no	no	no	✅	Achilles		no	no	no	no	12018	1	dialogue	D1	3		0		Com		divine	mortal	1 of 3			
+12	32	32	3	46	3	52	✅	Achilles		no	no	no	no	✅	Apollo		no	no	no	no	12018	2	dialogue	D2	7		0		Del; Com		mortal	divine	5 of 8			
+12	33	33	3	57	3	59	✅	Apollo		no	no	no	no	✅	self		no	no	no	no	12019	1	soliloquy	S	3		0		Del; Ora		divine	divine	2 of 3			
+12	34	34	3	68	3	82	✅	Achilles		no	no	no	no	✅	Trojans		no	no	yes	collective	12020	1	monologue	M (no reply)	15		0		Cha; Ora		mortal	mortal	6 of 8			
+12	35	35	3	98	3	127	✅	Hera		no	no	no	no	✅	Apollo		no	no	no	no	12021	1	monologue	M (no reply)	30		0		Del; Vit		divine	divine	1 of 2			
+12	36	36	3	167	3	169	✅	Achilles		no	no	no	no	✅	Trojans		no	no	yes	collective	12022	1	monologue	M (no reply)	3		0		Thr		mortal	mortal	7 of 8			
+12	37	37	3	190	3	211	✅	Paris		no	no	no	no	✅	Trojans		no	no	yes	collective	12023	1	monologue	M (no reply)	22		0		Exh		mortal	mortal	2 of 4			type 1: general to troops
+12	38	38	3	246	3	249	✅	Glaucus (Lycian)		no	no	no	no	✅	Aias (son of Telamon)		no	no	no	no	12024	1	dialogue	D1	4		0		Thr		mortal	mortal	1 of 1			
+12	39	39	3	253	3	266	✅	Aias (son of Telamon)		no	no	no	no	✅	Glaucus (Lycian)		no	no	no	no	12024	2	dialogue	D2	14		0		Vit; Cha		mortal	mortal	2 of 8			
+12	40	40	3	344	3	348	✅	Aias (son of Telamon)		no	no	no	no	✅	Paris		no	no	no	no	12025	1	monologue	M (no reply)	5		0		Vit; Thr		mortal	mortal	3 of 8			
+12	41	41	3	435	3	458	✅	Aias (son of Telamon)		no	no	no	no	✅	Achilles	Dead	no	dead	no	no	12026	1	soliloquy	S	24		0		Lam		mortal	mortal	4 of 8			
+12	42	42	3	463	3	489	✅	Phoinix		no	no	no	no	✅	Achilles	Dead	no	dead	no	no	12027	1	soliloquy	S	27		0		Lam; Nar		mortal	mortal	1 of 3			
+12	43	43	3	493	3	503	✅	Agamemnon		no	no	no	no	❌	Achilles and Zeus	Achilles is dead	no	Achilles is dead	no	no	12028	1	soliloquy	S	11		0		Lam		mortal	divine	1 of 8			
+12	44	44	3	518	3	524	✅	Nestor		no	no	no	no	✅	Agamemnon		no	no	no	no	12029	1	monologue	M (no reply)	7		0		Exh		mortal	mortal	4 of 14			
+12	45	45	3	560	3	573	✅	Briseis		no	no	no	no	✅	Achilles	Dead	no	dead	no	no	12030	1	soliloquy	S	14		0		Lam		mortal	mortal	1 of 1			
+12	46	46	3	608	3	630	✅	Thetis		no	no	no	no	✅	self		no		no	no	12031	1	soliloquy	S	23		0		Lam; Inf		divine	divine	1 of 2			
+12	47	47	3	633	3	654	✅	Calliope		no	no	no	no	✅	Thetis		no	no	no	no	12032	1	monologue	M (no reply)	22		0		Con; Del		divine	divine	1 of 1			
+12	48	48	3	770	3	780	✅	Poseidon		no	no	no	no	✅	Thetis		no	no	no	no	12033	1	monologue	M (no reply)	11		0		Con; Inf		divine	divine	1 of 2			
+12	49	49	4	20	4	31	✅	someone	(Trojan)	no	no	yes	no	✅	Trojans		no	no	yes	collective	12034	1	general interlocution	G1	12		0		Des		mortal	mortal	1 of 1	yes		
+12	50	50	4	34	4	42	✅	someone	(Trojan)	no	no	yes	no	✅	Trojans		no	no	yes	collective	12034	2	general interlocution	G2	9		0		Del		mortal	mortal	1 of 1	yes		
+12	51	51	4	49	4	55	✅	Hera		no	no	no	no	✅	Zeus		no	no	no	no	12035	1	monologue	M (no reply)	7		0		Que		divine	divine	2 of 2			
+12	52	52	4	83	4	87	✅	Diomedes		no	no	no	no	✅	Greeks		no	no	yes	collective	12036	1	general interlocution	G1	5		0		Exh		mortal	mortal	1 of 5			type 1: general to troops
+12	53	53	4	89	4	99	✅	Aias (son of Telamon)		no	no	no	no	✅	Diomedes		no	no	no	no	12036	2	general interlocution	G2	11		0		Del		mortal	mortal	5 of 8			
+12	54	54	4	103	4	108	✅	Diomedes		no	no	no	no	✅	Aias (son of Telamon)		no	no	no	no	12036	3	general interlocution	G3	6		0		Del		mortal	mortal	2 of 5			
+12	55	55	4	266	4	268	✅	Nestor		no	no	no	no	❌	Aias (son of Telamon) and Diomedes		no	no	no	no	12037	1	monologue	M (no reply)	3		0		Lau		mortal	mortal	5 of 14			
+12	56	56	4	294	4	299	✅	Phoinix		no	no	no	no	✅	Greeks		no	no	yes	collective	12038	1	general interlocution	G1	6		0		Del; Com		mortal	mortal	2 of 3			
+12	57	57	4	303	4	322	✅	Nestor		no	no	no	no	✅	Greeks		no	no	yes	collective	12038	2	general interlocution	G2	20		0		Del; Nar		mortal	mortal	6 of 14			
+12	58	58	4	409	4	409	✅	Agamemnon		no	no	no	no	✅	Greeks		no	no	yes	collective	12039	1	monologue	M (no reply)	1		0		Inf		mortal	mortal	2 of 8			
+12	59	59	4	490	4	494	✅	Euryalus (Quintus)		no	no	no	no	✅	Greeks		no	no	yes	collective	12040	1	monologue	M (no reply)	5		0		Del		mortal	mortal	1 of 1			
+12	60	60	4	526	4	532	✅	someone	(Greek); Loeb says it might be Nestor	no	no	yes	no	✅	horses of Menelaus	being praised	no	no	no	tandem	12041	1	monologue	M (no reply)	7		0	Speech has a hiatus	Lau		mortal	animal	1 of 1	yes		
+12	61	61	5	123	5	127	✅	Thetis		no	no	no	no	✅	Greeks		no	no	no	no	12042	1	monologue	M (no reply)	5		0		Del		divine	mortal	2 of 2			
+12	62	62	5	141	5	164	✅	Nestor		no	no	no	no	❌	Idomeneus and Agamemnon		no	no	no	tandem	12043	1	general interlocution	G1	24		0		Del; Exh		mortal	mortal	7 of 14			
+12	63	63	5	166	5	174	✅	Agamemnon		no	no	no	no	✅	Nestor		no	no	no	no	12043	2	general interlocution	G2	9		0		Lau; Del		mortal	mortal	3 of 8			
+12	64	64	5	181	5	236	✅	Aias (son of Telamon)		no	no	no	no	✅	Odysseus		no	no	no	no	12044	1	dialogue	D1	56		0		Que; Vit; Nar		mortal	mortal	6 of 8			
+12	65	65	5	239	5	290	✅	Odysseus		no	no	no	no	✅	Aias (son of Telamon)		no	no	no	no	12044	2	dialogue	D2	52		0		Del; Inf		mortal	mortal	1 of 8			
+12	66	66	5	292	5	305	✅	Aias (son of Telamon)		no	no	no	no	✅	Odysseus		no	no	no	no	12044	3	dialogue	D3	14		0		Del		mortal	mortal	7 of 8			
+12	67	67	5	307	5	316	✅	Odysseus		no	no	no	no	✅	Aias (son of Telamon)		no	no	no	no	12044	4	dialogue	D4	10		0		Del		mortal	mortal	2 of 8			
+12	68	68	5	342	5	344	✅	Cymothoe		no	no	no	no	✅	Nereids		no	no	no	no	12045	1	monologue	M (no reply)	3		0		Lam		mortal	mortal	1 of 1			
+12	69	69	5	415	5	427	✅	Menelaus		no	no	no	no	✅	Agamemnon		no	no	yes	collective	12046	1	dialogue	D1	13		0		Del		mortal	mortal	1 of 5			
+12	70	70	5	428	5	431	✅	Agamemnon		no	no	no	no	✅	Menelaus		no	no	no	no	12046	2	dialogue	D2	4		0		Del		mortal	mortal	4 of 8			
+12	71	71	5	465	5	481	✅	Aias (son of Telamon)		no	no	no	no	✅	self		no	no	no	no	12047	1	soliloquy	S	17		0		Lam		mortal	mortal	8 of 8			
+12	72	72	5	509	5	520	✅	Teucer		no	no	no	no	✅	Aias (son of Telamon)	Dead	no	no	no	no	12048	1	soliloquy	S	12		0		Lam		mortal	mortal	1 of 2			
+12	73	73	5	532	5	558	✅	Tecmessa		no	no	no	no	✅	Aias (son of Telamon)	Dead	no	no	no	no	12049	1	soliloquy	S	27		0		Lam		mortal	mortal	1 of 1			
+12	74	74	5	560	5	567	✅	Agamemnon		no	no	no	no	✅	Tecmessa		no	no	no	no	12049	2	monologue	M (reply)	8		0	Seems to be a reply to Tecmessa's lament; speech cluster	Con		mortal	mortal	5 of 8			
+12	75	75	5	574	5	597	✅	Odysseus		no	no	no	no	✅	Greeks		no	no	yes	collective	12050	1	general interlocution	G1	24		0		Del		mortal	mortal	3 of 8			
+12	76	76	5	601	5	611	✅	Nestor		no	no	no	no	✅	Greeks		no	no	yes	collective	12050	2	general interlocution	G2	11		0		Del; Exh		mortal	mortal	8 of 14			
+12	77	77	6	9	6	31	✅	Menelaus		no	no	no	no	✅	Greeks		no	no	yes	collective	12051	1	general interlocution	G1	23		0		Del; Exh		mortal	mortal	2 of 5			type 1*: general to troops, inverse exhortation
+12	78	78	6	41	6	55	✅	Diomedes		no	no	no	no	✅	Menelaus		no	no	no	no	12051	2	general interlocution	G2	15		0		Vit; Thr		mortal	mortal	5 of 5			type 4: other
+12	79	79	6	59	6	67	✅	Calchas		no	no	no	no	✅	Greeks		no	no	yes	collective	12051	3	general interlocution	G3	9		0		Ora		mortal	mortal	1 of 4			
+12	80	80	6	72	6	83	✅	Odysseus		no	no	no	no	✅	Greeks		no	no	yes	collective	12051	4	general interlocution	G4	12		0		Del		mortal	mortal	4 of 8			
+12	81	81	6	85	6	92	✅	Menelaus		no	no	no	no	✅	Odysseus		no	no	no	no	12051	5	general interlocution	G5	8		0		Vow		mortal	mortal	3 of 5			
+12	82	82	6	298	6	307	✅	Paris		no	no	no	no	✅	Eurypylus		no	no	no	no	12052	1	dialogue	D1	10		0		Gre; Req		mortal	mortal	3 of 4			type 3: general to indivudual
+12	83	83	6	309	6	314	✅	Eurypylus		no	no	no	no	✅	Paris		no	no	no	no	12052	2	dialogue	D2	6		0		Vow		mortal	mortal	1 of 7			
+12	84	84	6	385	6	389	✅	Eurypylus		no	no	no	no	✅	Nireus		no	no	no	no	12053	1	monologue	M (no reply)	5		0		Tau		mortal	mortal	2 of 7			
+12	85	85	6	414	6	424	✅	Eurypylus		no	no	no	no	✅	Machaon		no	no	no	no	12054	1	dialogue	D1	11		0		Tau		mortal	mortal	3 of 7			
+12	86	86	6	426	6	428	✅	Machaon		no	no	no	no	✅	Eurypylus		no	no	no	no	12054	2	dialogue	D2	3		0		Ora		mortal	mortal	1 of 1			
+12	87	87	6	431	6	434	✅	Eurypylus		no	no	no	no	✅	Machaon		no	no	no	no	12054	3	dialogue	D3	4		0		Tau		mortal	mortal	4 of 7			
+12	88	88	6	443	6	451	✅	Teucer		no	no	no	no	✅	Greeks		no	no	yes	collective	12055	1	monologue	M (no reply)	9		0		Exh		mortal	mortal	2 of 2			type 1: general to troops
+12	89	89	6	604	6	608	✅	Eurypylus		no	no	no	no	✅	Trojans		no	no	no	no	12056	1	monologue	M (no reply)	5		0		Exh		mortal	mortal	5 of 7			type 1: general to troops
+12	90	90	7	38	7	55	✅	Nestor		no	no	no	no	✅	Podaleirus		no	no	no	no	12057	1	dialogue	D1	18		0		Con		mortal	mortal	9 of 14			
+12	91	91	7	58	7	65	✅	Podaleirus		no	no	no	no	✅	Nestor		no	no	no	no	12057	2	dialogue	D2	8		0		Lam		mortal	mortal	1 of 1			
+12	92	92	7	67	7	92	✅	Nestor		no	no	no	no	✅	Podaleirus		no	no	no	no	12057	3	dialogue	D3	26		0		Con		mortal	mortal	10 of 14			
+12	93	93	7	179	7	181	✅	Neoptolemus		no	no	no	no	❌	Odysseus and Diomedes		no	no	no	tandem	12058	1	general interlocution	G1	3		0		Com		mortal	mortal	1 of 19			
+12	94	94	7	183	7	218	✅	Odysseus		no	no	no	no	✅	Neoptolemus		no	no	no	no	12058	2	general interlocution	G2	36		0		Inf; Req		mortal	mortal	5 of 8			
+12	95	95	7	220	7	225	✅	Neoptolemus		no	no	no	no	❌	Odysseus and Diomedes		no	no	no	tandem	12058	3	general interlocution	G3	6		0		Del		mortal	mortal	2 of 19			
+12	96	96	7	262	7	286	✅	Deidamia		no	no	no	no	✅	Neoptolemus		no	no	no	no	12059	1	general interlocution	G1	25		0		Lam; Per		mortal	mortal	1 of 1			
+12	97	97	7	288	7	291	✅	Neoptolemus		no	no	no	no	✅	Deidamia		no	no	no	no	12059	2	general interlocution	G2	4		0		Del		mortal	mortal	3 of 19			
+12	98	98	7	294	7	311	✅	Lycomedes		no	no	no	no	✅	Neoptolemus		no	no	no	no	12059	3	general interlocution	G3	18		0		War; Del		mortal	mortal	1 of 1			
+12	99	99	7	422	7	430	✅	Diomedes		no	no	no	no	✅	Greeks		no	no	yes	collective	12060	1	monologue	M (no reply)	9		0		Del		mortal	mortal	3 of 5			type 1: general to troops
+12	100	100	7	513	7	521	✅	Eurypylus		no	no	no	no	✅	Greeks		no	no	yes	collective	12061	1	monologue	M (no reply)	9		0		Tau; Vit		mortal	mortal	6 of 7			
+12	101	101	7	642	7	666	✅	Phoinix		no	no	no	no	✅	Neoptolemus		no	no	no	no	12062	1	dialogue	D1	25		0		Gre; Lau; Lam; Exh		mortal	mortal	3 of 3			type 4: other
+12	102	102	7	668	7	669	✅	Neoptolemus		no	no	no	no	✅	Phoinix		no	no	no	no	12062	2	dialogue	D2	2		0		Del		mortal	mortal	4 of 19			
+12	103	103	7	689	7	699	✅	Agamemnon		no	no	no	no	✅	Neoptolemus		no	no	no	no	12063	1	dialogue	D1	11		0		Del		mortal	mortal	6 of 8			
+12	104	104	7	701	7	704	✅	Neoptolemus		no	no	no	no	✅	Agamemnon		no	no	no	no	12063	2	dialogue	D2	4		0		Des		mortal	mortal	5 of 19			
+12	105	105	8	15	8	22	✅	Neoptolemus		no	no	no	no	✅	Myrmidons		no	no	no	no	12064	1	single speech	M (no reply)	8		0		Del; Exh		mortal	mortal	6 of 19			type 1: general to troops
+12	106	106	8	138	8	145	✅	Eurypylus		no	no	no	no	✅	Neoptolemus		no	no	no	no	12065	1	dialogue	D1	8		0		Que		mortal	mortal	7 of 7			
+12	107	107	8	147	8	161	✅	Neoptolemus		no	no	no	no	✅	Eurypylus		no	no	no	no	12065	2	dialogue	D2	15		0		Res		mortal	mortal	7 of 19			
+12	108	108	8	210	8	216	✅	Neoptolemus		no	no	no	no	✅	Eurypylus	now dead	no	dead	no	no	12065	3	monologue	M (no reply)	7		0	A fight between the two happened in between; speech cluster	Tau		mortal	mortal	8 of 19			
+12	109	109	8	256	8	266	✅	Helenus		no	no	no	no	✅	Trojans		no	no	no	no	12066	1	monologue	M (no reply)	11		0		Del; Exh		mortal	mortal	1 of 1			type 1: general to troops
+12	110	110	8	431	8	442	✅	Ganymedes		no	no	no	no	✅	Zeus		no	no	no	no	12067	1	monologue	M (no reply)	12		0		Del		mortal	divine	1 of 1			
+12	111	111	8	452	8	477	✅	Nestor		no	no	no	no	✅	Greeks		no	no	no	no	12068	1	monologue	M (no reply)	26		0		Del		mortal	mortal	11 of 14			
+12	112	112	9	9	9	22	✅	Antenor		no	no	no	no	✅	Zeus		no	no	no	no	12069	1	monologue	M (no reply)	14		0		Pra; Req		mortal	divine	1 of 1			
+12	113	113	9	50	9	60	✅	Neoptolemus		no	no	no	no	✅	Achilles	dead	no	dead	no	no	12070	1	soliloquy	S	11		0		Lam; Vow		mortal	mortal	9 of 19			
+12	114	114	9	85	9	109	✅	Deiphobus		no	no	no	no	✅	Trojans		no	no	no	no	12071	1	monologue	M (no reply)	25		0		Del; Exh		mortal	mortal	1 of 1			type 1: general to troops
+12	115	115	9	227	9	229	✅	Automedon		no	no	no	no	✅	Neoptolemus		no	no	no	no	12072	1	monologue	M (no reply)	3		0		Inf		mortal	mortal	1 of 1			
+12	116	116	9	248	9	252	✅	Neoptolemus		no	no	no	no	✅	Deiphobus		no	no	no	no	12073	1	dialogue	D1	5		0		Cha		mortal	mortal	10 of 19			
+12	117	117	9	261	9	263	✅	Neoptolemus		no	no	no	no	✅	Deiphobus		no	no	no	no	12073	2	dialogue	D2	3		0		Vit		mortal	mortal	11 of 19			
+12	118	118	9	275	9	283	✅	Neoptolemus		no	no	no	no	✅	Greeks		no	no	yes	collective	12074	1	monologue	M (no reply)	9		0		Exh		mortal	mortal	12 of 19			type 1: general to troops
+12	119	119	9	313	9	320	✅	Poseidon		no	no	no	no	✅	Apollo		no	no	no	no	12075	1	monologue	M (no reply)	8		0		Del; Per		divine	divine	2 of 2			
+12	120	120	9	491	9	515	✅	Agamemnon		no	no	no	no	✅	Philoctetes		no	no	no	no	12076	1	dialogue	D1	25		0		Del		mortal	mortal	7 of 8			
+12	121	121	9	518	9	524	✅	Philoctetes		no	no	no	no	✅	Agamemnon		no	no	no	no	12076	2	dialogue	D2	7		0		Del		mortal	mortal	1 of 4			
+12	122	122	9	537	9	539	✅	Philoctetes		no	no	no	no	✅	Greeks		no	no	yes	collective	12077	1	monologue	M (no reply)	3		0		Exh		mortal	mortal	2 of 4			type 1: general to troops
+12	123	123	10	10	10	25	✅	Polydamas		no	no	no	no	✅	Trojans		no	no	yes	collective	12078	1	general interlocution	G1	16		0		Del		mortal	mortal	3 of 3			
+12	124	124	10	27	10	44	✅	Aeneas		no	no	no	no	✅	Trojans		no	no	yes	collective	12078	2	general interlocution	G2	18		0		Del; Per		mortal	mortal	1 of 1			
+12	125	125	10	226	10	230	✅	Philoctetes		no	no	no	no	✅	Paris		no	no	no	no	12079	1	monologue	M (no reply)	5		0		Vit; Thr		mortal	mortal	3 of 4			
+12	126	126	10	284	10	305	✅	Paris		no	no	no	no	✅	Oenone		no	no	no	no	12080	1	dialogue	D1	22		0		Req		mortal	mortal	4 of 4			
+12	127	127	10	308	10	327	✅	Oenone		no	no	no	no	✅	Paris		no	no	no	no	12080	2	dialogue	D2	20		0		Vit; Del		mortal	mortal	1 of 2			
+12	128	128	10	373	10	384	✅	Hecuba		no	no	no	no	✅	Paris	Dead	no	dead	no	no	12081	1	soliloquy	S	12		0		Lam		mortal	mortal	1 of 2			
+12	129	129	10	392	10	405	✅	Helena		no	no	no	no	✅	Paris	Dead	no	dead	no	no	12082	1	soliloquy	S	14		0		Lam		mortal	mortal	1 of 2			
+12	130	130	10	424	10	431	✅	Oenone		no	no	no	no	✅	self		no	no	no	no	12083	1	soliloquy	S	8		0		Lam		mortal	mortal	2 of 2			
+12	131	131	10	471	10	476	✅	nymph		no	no	yes	no	✅	self		no	no	yes	no	12084	1	soliloquy	S	6		0		Vit		mortal	mortal	1 of 1	yes		
+12	132	132	11	137	11	141	✅	Apollo-Polymestor		Polymestor	no	no	no	❌	Aeneas and Eurymachus		no	no	no	no	12085	1	monologue	M (no reply)	5		0		Lau; Exh		divine	mortal	3 of 3		Polymestor	type 2: god to mortals
+12	133	133	11	217	11	220	✅	Neoptolemus		no	no	no	no	✅	Greeks		no	no	yes	collective	12086	1	monologue	M (no reply)	4		0		Tau		mortal	mortal	13 of 19			type 1: general to troops
+12	134	134	11	491	11	495	✅	Philoctetes		no	no	no	no	✅	Aeneas		no	no	no	no	12087	1	monologue	M (no reply)	5		0		Cha; Tau		mortal	mortal	4 of 4			
+12	135	135	12	8	12	20	✅	Calchas		no	no	no	no	✅	Greeks		no	no	yes	collective	12088	1	general interlocution	G1	13		0		Ora; War		mortal	mortal	2 of 4			
+12	136	136	12	25	12	45	✅	Odysseus		no	no	no	no	✅	Greeks		no	no	yes	collective	12088	2	general interlocution	G2	21		0		Ins		mortal	mortal	6 of 8			
+12	137	137	12	51	12	65	✅	Calchas		no	no	no	no	✅	Greeks		no	no	yes	collective	12088	3	general interlocution	G3	15		0		Del; Ora		mortal	mortal	3 of 4			
+12	138	138	12	67	12	72	✅	Neoptolemus		no	no	no	no	✅	Calchas		no	no	no	no	12088	4	general interlocution	G4	6		0		Del		mortal	mortal	14 of 19			
+12	139	139	12	74	12	83	✅	Odysseus		no	no	no	no	✅	Neoptolemus		no	no	no	no	12088	5	general interlocution	G5	10		0		Del		mortal	mortal	7 of 8			
+12	140	140	12	153	12	153	✅	Epeius		no	no	no	no	✅	Athena		no	no	no	no	12089	1	monologue	M (no reply)	1		0		Pra		mortal	divine	1 of 1			
+12	141	141	12	206	12	213	✅	Themis		no	no	no	no	✅	Olympian gods		no	no	yes	collective	12090	1	monologue	M (no reply)	8		0		Del; War		divine	divine	1 of 1			
+12	142	142	12	220	12	242	✅	Odysseus		no	no	no	no	✅	Greeks		no	no	yes	collective	12091	1	general interlocution	G1	23		0		Del		mortal	mortal	8 of 8			
+12	143	143	12	247	12	258	✅	Sinon		no	no	no	no	✅	Greeks		no	no	yes	collective	12091	2	general interlocution	G2	12		0		Del		mortal	mortal	2 of 2			
+12	144	144	12	254	12	258	✅	Greeks		no	no	yes	collective	✅	self		no	no	yes	collective	12091	3	general interlocution	G3	5		0		Lau		mortal	mortal	1 of 1	collective		
+12	145	145	12	261	12	273	✅	Nestor		no	no	no	no	✅	Greeks		no	no	yes	collective	12091	4	general interlocution	G4	13		0		Del; Exh		mortal	mortal	12 of 14			
+12	146	146	12	275	12	280	✅	Neoptolemus		no	no	no	no	✅	Nestor		no	no	no	no	12091	5	general interlocution	G5	6		0		Com; Del		mortal	mortal	15 of 19			
+12	147	147	12	287	12	296	✅	Nestor		no	no	no	no	✅	Neoptolemus		no	no	no	no	12091	6	general interlocution	G6	10		0		Del		mortal	mortal	13 of 14			
+12	148	148	12	298	12	302	✅	Neoptolemus		no	no	no	no	✅	Nestor		no	no	no	no	12091	7	general interlocution	G7	5		0		Del		mortal	mortal	16 of 19			
+12	149	149	12	375	12	386	✅	Sinon		no	no	no	no	✅	Trojans		no	no	yes	collective	12092	1	monologue	M (no reply)	12		0		Inf; Lam		mortal	mortal	1 of 2			
+12	150	150	12	540	12	551	✅	Cassandra		no	no	no	no	✅	Trojans		no	no	yes	collective	12093	1	general interlocution	G1	12		0		Lam		mortal	mortal	1 of 1			
+12	151	151	12	553	12	561	✅	someone	(Trojan)	no	no	yes	no	✅	Cassandra		no	no	no	no	12093	2	general interlocution	G2	9		0		Vit		mortal	mortal	1 of 1	yes		
+12	152	152	13	15	13	18	✅	someone	(Trojan)	no	no	yes	no	✅	self		no	no	no	no	12094	1	monologue	M (no reply)	4		0		Tau		mortal	mortal	1 of 1	yes		
+12	153	153	13	191	13	197	✅	Ilioneus		no	no	no	no	✅	Diomedes		no	no	no	no	12095	1	dialogue	D1	7		0		Per		mortal	mortal	1 of 1			
+12	154	154	13	199	13	202	✅	Diomedes		no	no	no	no	✅	Ilioneus		no	no	no	no	12095	2	dialogue	D2	4		0		Del		mortal	mortal	4 of 5			
+12	155	155	13	226	13	236	✅	Priam		no	no	no	no	✅	Neoptolemus		no	no	no	no	12096	1	dialogue	D1	11		0		Per; Com; Des		mortal	mortal	5 of 5			
+12	156	156	13	238	13	240	✅	Neoptolemus		no	no	no	no	✅	Priam		no	no	no	no	12096	2	dialogue	D2	3		0		Del		mortal	mortal	17 of 19			
+12	157	157	13	272	13	286	✅	Andromache		no	no	no	no	✅	Greeks		no	no	yes	collective	12097	1	monologue	M (no reply)	15		0		Lam; Des		mortal	mortal	2 of 2			
+12	158	158	13	334	13	349	✅	Calchas		no	no	no	no	✅	Greeks		no	no	yes	collective	12098	1	monologue	M (no reply)	16		0		Inf; War		mortal	mortal	4 of 4			
+12	159	159	13	359	13	373	✅	Menelaus		no	no	no	no	✅	Deiphobus		no	no	no	no	12099	1	monologue	M (no reply)	15		0		Tau; Vit		mortal	mortal	4 of 5			
+12	160	160	13	409	13	414	✅	Agamemnon		no	no	no	no	✅	Menelaus		no	no	no	no	12100	1	monologue	M (no reply)	6		0		Del		mortal	mortal	8 of 8			
+12	161	161	13	469	13	477	✅	someone	(at sea)	no	no	yes	no	✅	self		no	no	yes	no	12101	1	soliloquy	S	9		0		Lau		mortal	mortal	1 of 1	yes		
+12	162	162	13	506	13	517	✅	Aethra		no	no	no	no	❌	Demophon (son of Theseus) and Acamas (son of Theseus)		no	no	no	no	12102	1	general interlocution	G1	12		0		Des; Per; Req		mortal	mortal	1 of 1			
+12	163	163	13	527	13	531	✅	Demophon (son of Theseus)		no	no	no	no	✅	Aethra		no	no	no	no	12102	2	general interlocution	G2	5		0		Inf		mortal	mortal	1 of 1			
+12	164	164	14	117	14	119	✅	Greeks		no	no	no	no	✅	Zeus		no	no	no	no	12103	1	monologue	M (no reply)	3		0		Pra; Req; Lau		mortal	divine	1 of 1	collective		
+12	165	165	14	155	14	164	✅	Helena		no	no	no	no	✅	Menelaus		no	no	no	no	12104	1	dialogue	D1	10		0		Req; Inf; Per		mortal	mortal	2 of 2			
+12	166	166	14	166	14	168	✅	Menelaus		no	no	no	no	✅	Helena		no	no	no	no	12104	2	dialogue	D2	3		0		Del		mortal	mortal	5 of 5			
+12	167	167	14	185	14	222	✅	Achilles	Shade	no	shade	no	no	✅	Neoptolemus		no	no	no	no	12105	1	monologue	M (no reply)	38		0		Con		mortal	mortal	8 of 8			
+12	168	168	14	235	14	245	✅	Neoptolemus		no	no	no	no	✅	Greeks		no	no	no	no	12106	1	monologue	M (no reply)	11		0		Del; Inf; War		mortal	mortal	18 of 19			
+12	169	169	14	254	14	256	✅	Greeks		no	no	yes	collective	✅	Achilles	Dead	no	dead	no	no	12107	1	soliloquy	S	3		0		Lau; Per		mortal	mortal	1 of 1	collective		
+12	170	170	14	289	14	301	✅	Hecuba		no	no	no	no	✅	Polyxena	Dead	no	dead	no	no	12108	1	soliloquy	S	13		0		Lam		mortal	mortal	2 of 2			
+12	171	171	14	308	14	312	✅	Neoptolemus		no	no	no	no	✅	Achilles	Dead	no	dead	no	no	12109	1	monologue	M (no reply)	5		0		Pra; Req		mortal	mortal	19 of 19			
+12	172	172	14	338	14	345	✅	Nestor		no	no	no	no	✅	Greeks		no	no	no	no	12110	1	monologue	M (no reply)	8		0		Del; Com		mortal	mortal	14 of 14			
+12	173	173	14	427	14	442	✅	Athena		no	no	no	no	✅	Zeus		no	no	no	no	12111	1	dialogue	D1	16		0		Del; Req		divine	divine	1 of 1			
+12	174	174	14	444	14	448	✅	Zeus		no	no	no	no	✅	Athena		no	no	no	no	12111	2	dialogue	D2	5		0		Del		divine	divine	2 of 2			
+12	175	175	14	602	14	604	✅	someone	(Greek)	no	no	yes	no	✅	self		no	no	yes	no	12112	1	soliloquy	S	3		0		Lam		mortal	mortal	1 of 1	yes		
