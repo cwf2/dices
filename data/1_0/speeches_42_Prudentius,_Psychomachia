@@ -1,10 +1,10 @@
 work_id	seq	from_line	b	to_line	a	s_ok	speaker	speaker_notes	speaker_disguise	dead/vision	anonymous	collective/tandem	a_ok	addressee	addressee_notes	addressee_disguise	dead/vision.1	anonymous.1	collective/tandem.1	cluster_id	cluster_part	simple_cluster_type	long_cluster_type	length	words	embedded_level	misc_notes	short_speech_type	long_speech_type	hypothetical_type
-43	1	53		97		✅	Pudicitia		no	no	no	no	✅	Libido		no	no	no	no	43001	1	Monologue	M1 (no reply)	44		0		Com; inf; que		no
+43	1	53		97		✅	Pudicitia		no	no	no	no	✅	Libido		no	no	no	no	43001	1	Monologue	M1 (no reply)	44		0		tau; thr; nar		no
 43	2	118		120		✅	Ira		no	no	no	no	✅	Patientia		no	no	no	no	43002	1	Monologue	M1 (no reply)	2		0		com		no
 43	3	155		161		✅	Patientia		no	no	no	no	✅	Ira		no	no	no	no	43003	1	Monologue	M1 (no reply)	6		0		Inf		no
-43	4	206		252		✅	Superbia		no	no	no	no	❌	Spes and Mens Humilis		no	no	no	yes	43004	1	dialogue	D1	46		0		Que; tau; vit		no
-43	5	285		304		✅	Spes		no	no	no	no	✅	Superbia		no	yes	no	no	43004	2	dialogue	D2	19		0		exh; inf		no
-43	6	351		406		✅	Sobrietas		no	no	no	no	✅	Luxuria		no	no	no	no	43005	1	Monologue	M1 (no reply)	55		0		pra; que; vit; req		no
+43	4	206		252		✅	Superbia		no	no	no	no	❌	Spes and Mens Humilis		no	no	no	yes	43004	1	dialogue	D1	46		0		tau; vit		no
+43	5	285		304		✅	Spes		no	no	no	no	✅	Superbia		no	yes	no	no	43004	2	dialogue	D2	19		0		vit; nar; war		no
+43	6	351		406		✅	Sobrietas		no	no	no	no	❌	Virtues		no	no	no	no	43005	1	Monologue	M1 (no reply)	55		0		exh; vit		no
 43	7	427		431		✅	Sobrietas		no	no	no	no	✅	Luxuria		no	yes	no	no	43006	1	Monologue	M1 (no reply)	4		0		Far; vit; tau		no
 43	8	511		550		✅	Avaritia		no	no	no	no	✅	Vices		no	no	yes	yes	43007	1	Monologue	M1 (no reply)	39		0		Inf; des; que;		no
 43	9	606		628		✅	Operatio		no	no	no	no	✅	Virtues		no	no	yes	yes	43008	1	Monologue	M1 (no reply)	22		0		com; lau; inf		no

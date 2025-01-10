@@ -11,12 +11,12 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	8.0	10	2	113	2	162	✅	hamadryad		no	no	yes	no	✅	hamadryad	Feels more introspective?	no	no	no	no	11008	2	dialogue	D2	50.0		0		Del; Des			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
 11	9.0	11	2	209	2	236	✅	Nike		Leto	no	no	no	✅	Zeus		no	no	no	no	11009	1	monologue	M (no reply)	28.0		0	Questions seem to be rhetorical	Req; Inf; Des; Del			firstlevel	1 of 1	god		Leto	type 2 = god to mortals	yes					
 11	10.0	12	2	258	2	355	✅	Typhon		no	no	no	no	✅	self	his hands and his bulls	no	no	no	no	11010	1	monologue	M (no reply)	98.0		0		Exh			firstlevel	2 of 2	god			type 1 = general to troops						
-11	3.0	13	2	304	2	304	✅	someone		no	no	yes	no	✅	self		no	no	yes	no	11011	1	soliloquy	S	1.0		1		Inf			rephyp		unspecified	yes					potential τις-speech	2nd		
+11	3.0	13	2	304	2	304	✅	someone		no	no	yes	no	✅	self		no	no	yes	no	11011	1	soliloquy	S	1.0		1		Inf			rephyp		mortal	yes					potential τις-speech	2nd		
 11	11.0	14	2	565	2	630	✅	Zeus		no	no	no	no	✅	Typhon		no	dead	no	no	11012	1	monologue	M (no reply)	66.0		0		Tau			firstlevel	2 of 12	god									
 11	12.0	15	2	663	2	698	✅	Zeus		no	no	no	no	✅	Cadmus		no	no	no	no	11013	1	monologue	M (no reply)	36.0		0		Vow; War; Ins			firstlevel	3 of 12	god									
 11	13.0	16	3	103	3	122	✅	crow		no	no	yes	no	✅	Cadmus		no	no	no	no	11014	1	monologue	M (no reply)	20.0		0		Exh; Lau			firstlevel	1 of 1	animal	yes				type 1 = anonymous				
 11	14.0	17	3	248	3	319	✅	Cadmus		no	no	no	no	✅	Electra (Pleiad)		no	no	no	no	11015	1	dialogue	D1	72.0		0	reply to indirect speech; could be just a dialogue as well	Res; Nar			firstlevel	2 of 3	mortal									
-11	15.0	18	3	326	3	371	✅	Electra (Pleiad)		no	no	no	no	✅	Cadmus		no	no	no	no	11015	2	dialogue	D2	46.0		0		Con			firstlevel	1 of 1	mortal/god									
+11	15.0	18	3	326	3	371	✅	Electra (Pleiad)		no	no	no	no	✅	Cadmus		no	no	no	no	11015	2	dialogue	D2	46.0		0		Con			firstlevel	1 of 1	god									
 11	16.0	19	3	425	3	444	✅	Hermes		no	no	no	no	✅	Electra (Pleiad)		no	no	no	no	11016	1	monologue	M (no reply)	20.0		0		Mes			firstlevel	1 of 7	god									
 11	17.0	20	4	36	4	63	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	✅	Electra (Pleiad)		no	no	no	no	11017	1	monologue	M (no reply)	28.0		0	questions seem to be rhetorical --> del?	Nar; Lam; Que			firstlevel	1 of 2	mortal									
 11	18.0	21	4	77	4	176	✅	Aphrodite-Peisinoe		Peisinoe	no	no	no	✅	Harmonia (daughter of Aphrodite)		no	no	no	no	11018	1	monologue	M (no reply)	100.0		0		Del			firstlevel	1 of 9	god		Peisinoe		yes					
@@ -37,7 +37,7 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	29.0	36	6	346	6	365	✅	Alpheus		no	no	no	no	❌	Nile and Pyramus		no	no	no	tandem	11031	1	monologue	M (no reply)	20.0		0		Lam; Del			firstlevel	1 of 1	god					type 2 = mythological				
 11	30.0	37	7	29	7	66	✅	Aeon		no	no	no	no	✅	Zeus		no	no	no	no	11032	1	dialogue	D1	38.0		0		Del; Que; Lam			firstlevel	1 of 1	god									
 11	31.0	38	7	73	7	105	✅	Zeus		no	no	no	no	✅	Aeon		no	no	no	no	11032	2	dialogue	D2	33.0		0		Del			firstlevel	4 of 12	god									
-11	32.0	39	7	226	7	254	✅	naiad		no	no	yes	no	✅	self		no	no	no	no	11033	1	soliloquy	S	29.0		0	Questions seem to be rhetorical	Del			firstlevel	1 of 1	mortal	yes				type 1 = anonymous				
+11	32.0	39	7	226	7	254	✅	naiad		no	no	yes	no	✅	self		no	no	no	no	11033	1	soliloquy	S	29.0		0	Questions seem to be rhetorical	Del			firstlevel	1 of 1	divine	yes				type 1 = anonymous				
 11	33.0	40	7	286	7	307	✅	Zeus		no	no	no	no	❌	Night and Helios and Selene		no	no	yes	no	11034	1	monologue	M (no reply)	22.0		0		Que; Req			firstlevel	5 of 12	god									
 11	34.0	41	7	352	7	368	✅	Zeus		no	no	no	no	✅	Semele		no	no	no	no	11035	1	monologue	M (no reply)	17.0		0		Per			firstlevel	6 of 12	god									
 11	35.0	42	8	50	8	102	✅	Phthonus		Ares	no	no	no	❌	Hera and Athena		no	no	no	no	11036	1	monologue	M (no reply)	53.0		0		Inf; Far; Del			firstlevel	1 of 1	god		Ares		yes					
@@ -45,7 +45,7 @@ work_id	orig_seq	seq	from_book	from_line	to_book	to_line	s_ok	speaker	speaker_no
 11	36.0	44	8	126	8	164	✅	Hera		no	no	no	no	✅	Apate		no	no	no	no	11038	1	dialogue	D1	39.0		0		Lau; Del; Req			firstlevel	2 of 12	god				yes					
 11	37.0	45	8	166	8	175	✅	Apate		no	no	no	no	✅	Hera		no	no	no	no	11038	2	dialogue	D2	10.0		0		Del; Ins			firstlevel	1 of 1	god									
 11	38.0	46	8	207	8	263	✅	Hera		nurse	no	no	no	✅	Semele		no	no	no	no	11040	1	monologue	M (no reply)	57.0		0		Que; Nar			firstlevel	3 of 12	god		nurse		yes					
-11	6.0	47	8	250	8	250	✅	someone		no	no	yes	no	✅	self		no	no	yes	no	11041	1	soliloquy	S	1.0		1		Inf			rephyp		unspecified	yes					potential τις-speech	2nd		
+11	6.0	47	8	250	8	250	✅	someone		no	no	yes	no	✅	self		no	no	yes	no	11041	1	soliloquy	S	1.0		1		Inf			rephyp		mortal	yes					potential τις-speech	2nd		
 11	39.0	48	8	270	8	283	✅	Hera		no	no	no	no	✅	weapons of Zeus		no	no	collective	collective	11042	1	monologue	M (no reply)	14.0		0		Exh			firstlevel	4 of 12	god									
 11	40.0	49	8	290	8	347	✅	Semele		no	no	no	no	✅	Zeus		no	no	no	no	11043	1	dialogue	D1	58.0		0		Que; Del; Req			firstlevel	1 of 4	mortal									
 11	41.0	50	8	357	8	366	✅	Zeus		no	no	no	no	✅	Semele		no	no	no	no	11043	2	dialogue	D2	10.0		0		Del			firstlevel	7 of 12	god									
