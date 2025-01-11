@@ -1,10 +1,12 @@
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
+from django.views.generic import TemplateView
 from django.views.generic.base import RedirectView
 from . import views
 
 frontend_urls = ([
     path('', views.AppIndex.as_view(), name='index'),
+    path('book/', TemplateView.as_view(template_name='speechdb/book_appendix.html')),
     path('login/', auth_views.LoginView.as_view(template_name='speechdb/login.html'), name='login'),
     path('logout/', auth_views.logout_then_login, {'login_url':'app:index'}, name='logout'),
     path('meta/', views.AppMetadataList.as_view(), name='meta'),
