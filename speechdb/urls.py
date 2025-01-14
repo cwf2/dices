@@ -6,7 +6,7 @@ from . import views
 
 frontend_urls = ([
     path('', views.AppIndex.as_view(), name='index'),
-    path('book/', TemplateView.as_view(template_name='speechdb/book_appendix.html')),
+    path('book/', TemplateView.as_view(template_name='speechdb/book_appendix.html'), name='book'),
     path('login/', auth_views.LoginView.as_view(template_name='speechdb/login.html'), name='login'),
     path('logout/', auth_views.logout_then_login, {'login_url':'app:index'}, name='logout'),
     path('meta/', views.AppMetadataList.as_view(), name='meta'),
