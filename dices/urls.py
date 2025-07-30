@@ -18,4 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('speechdb.urls')),
+    path('admin/', admin.site.urls)
 ]

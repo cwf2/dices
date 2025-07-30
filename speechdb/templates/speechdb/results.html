@@ -10,47 +10,42 @@
   </div>
 </div>
 <div class="btn-toolbar" role="toolbar">
-  <div class="btn-group btn-group-sm" role="group">
-    <form class="row row-cols-lg-auto align-items-center">
-      {% for k,v in params.items %}
-        {% if k != 'page_size' %}
-          <input type="hidden" name="{{ k }}" value="{{ v }}">
-          {% endif %}
-      {% endfor %}
+	<form class="row row-cols-lg-auto align-items-center">
+  	<div class="btn-group btn-group-sm" role="group">
+			{% for field in pager_form %}
+				{% if field.is_hidden %}
+					{{ field }}
+				{% endif %}
+			{% endfor %}
       <div class="col-12">
         <div class="btn-group btn-group-sm">
           <span class="btn btn-outline-secondary btn-sm disabled">
             {{ page_obj.paginator.count }} results:
           </span>
-        <select class="btn btn-outline-secondary btn-sm" id="sel_page_size" name="page_size">
-          <option value="10">10 per page</option>
-          <option value="50" {% if params.page_size == 50 %}selected="selected"{% endif %}>50 per page</option>
-          <option value="100" {% if params.page_size == 100 %}selected="selected"{% endif %}>100 per page</option>
-          <option value="0"  {% if params.page_size == 0 %}selected="selected"{% endif %}>view all</option>    
-        </select>
+					{{ pager_form.page_size }}
         <button type="submit" class="btn btn-outline-secondary btn-sm">change</button>
       </div>
       </div>
-    </form>
-  </div>
+		</div>
 
-  {% if page_obj %}
+		{% if page_obj %}
 
-  <div class="btn-group btn-group-sm ms-5" role="group">
-    {% if page_obj.has_previous %}
-    <a class="btn btn-outline-secondary" href="?page={{ page_obj.previous_page_number }}{% for k, v in params.items %}&{{ k }}={{ v }}{% endfor %}">Prev</a>
-    {% else %}
-    <a href="#" class="btn btn-outline-secondary disabled">Prev</a>
-    {% endif %}
-    <a class="btn btn-outline-secondary disabled" href="#">Page <strong>{{ page_obj.number }}</strong> of {{ page_obj.paginator.num_pages }}</a>
-    {% if page_obj.has_next %}
-    <a class="btn btn-outline-secondary" href="?page={{ page_obj.next_page_number }}{% for k, v in params.items %}&{{ k }}={{ v }}{% endfor %}">Next</a>
-    {% else %}
-    <a href="#" class="btn btn-outline-secondary disabled">Next</a>
-    {% endif %}
-  </div>
-  </div>
-  {% endif %}
+	  <div class="btn-group btn-group-sm ms-5" role="group">
+	    {% if page_obj.has_previous %}
+	    <button type="submit" name="page" value="{{ page_obj.previous_page_number }}" class="btn btn-outline-secondary">Prev</button>
+	    {% else %}
+	    <button type="submit" class="btn btn-outline-secondary disabled">Prev</button>
+	    {% endif %}
+	    <a class="btn btn-outline-secondary disabled" href="#">Page <strong>{{ page_obj.number }}</strong> of {{ page_obj.paginator.num_pages }}</a>
+	    {% if page_obj.has_next %}
+	    <button type="submit" name="page" value="{{ page_obj.next_page_number }}" class="btn btn-outline-secondary">Next</button>
+	    {% else %}
+	    <button type="submit" class="btn btn-outline-secondary disabled">Next</button>
+	    {% endif %}
+	  </div>
+	  </div>
+	  {% endif %}
+	</form>
 </div>
 {% endblock %}
 

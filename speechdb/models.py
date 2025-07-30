@@ -54,7 +54,6 @@ class Character(models.Model):
     class CharacterNumber(models.TextChoices):
         INDIVIDUAL = ('individual', 'Individual')
         COLLECTIVE = ('collective', 'Collective')
-        OTHER = ('other', 'Other')
 
 
     class CharacterBeing(models.TextChoices):
@@ -65,10 +64,10 @@ class Character(models.Model):
         
 
     class CharacterGender(models.TextChoices):
-        NA = ('none', 'Unknown/not-applicable')
-        NB = ('x', 'Mixed/non-binary')
-        FEMALE = ('female', 'Female')
         MALE = ('male', 'Male')
+        FEMALE = ('female', 'Female')
+        NB = ('x', 'Mixed/non-binary')
+        NA = ('none', 'Unknown/not-applicable')
 
     
     name = models.CharField(max_length=128)
@@ -232,8 +231,7 @@ class Speech(models.Model):
     l_fi = models.CharField('first line', max_length=16)
     l_la = models.CharField('last line', max_length=16)
     spkr = models.ManyToManyField(CharacterInstance, related_name='speeches')
-    addr = models.ManyToManyField(CharacterInstance, related_name='addresses',
-             blank=True)
+    addr = models.ManyToManyField(CharacterInstance, related_name='addresses', blank=True)
     # TODO should be unique per cluster
     part = models.IntegerField()
     level = models.IntegerField(default=0)

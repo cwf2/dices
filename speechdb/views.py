@@ -1,7 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.db.models import Q, Count, Max
 from django.views.generic import ListView, DetailView, TemplateView
@@ -12,6 +11,7 @@ from .models import Metadata
 from .models import Author, Work, Character, CharacterInstance, Speech, SpeechCluster, SpeechTag
 from .serializers import MetadataSerializer
 from .serializers import AuthorSerializer, WorkSerializer, CharacterSerializer, CharacterInstanceSerializer, SpeechSerializer, SpeechClusterSerializer
+from .forms import InstanceForm, CharacterForm, TextForm, SpeechForm, PagerForm
 import csv
 import re
 
@@ -24,19 +24,28 @@ PAGE_SIZE = 25
 
 
 # parameter validation
-def ValidateParams(request, valid_params):
+def ValidateParams(request):
     '''collect valid parameters, check types'''
-    params = {}
     
-    for param, vtype in valid_params:
-        if param in request.GET:
-            val = request.GET[param][:256].strip()
-            if val != '':
-                try:
-                    params[param] = vtype(val)
-                except ValueError:
-                    print("Value Error")
-                    pass
+    params = dict()
+    
+    if request.method == "GET":
+        form = PagerForm(request.GET)
+
+        if form.is_valid():
+            for k, v in form.cleaned_data.items():
+                if (v == "") or (v == []) or (v is None):
+                    continue
+                elif not isinstance(v, list):
+                    v = [v]
+                params[k] = v
+        
+    if "page_size" in params:
+        try:
+            params["page_size"] = int(params["page_size"][0])
+        except ValueError:
+            del params["page_size"]
+    
     return params
 
 #
@@ -123,7 +132,7 @@ class CharacterInstanceFilter(filters.FilterSet):
     being = filters.ChoiceFilter('being',
                     choices=Character.CharacterBeing.choices)
     anon = filters.BooleanFilter('anon')
-    id = filters.NumberFilter('char__id')
+    char_id = filters.NumberFilter('char__id')
     char_name = filters.CharFilter('char__name')
     wd = filters.CharFilter('char__wd')
     manto = filters.CharFilter('char__manto')
@@ -219,7 +228,6 @@ class SpeechFilter(filters.FilterSet):
         
     class Meta:
         model = Speech
-        distinct = True        
         exclude = []
 
 
@@ -378,168 +386,201 @@ class AppMetadataList(ListView):
     queryset = Metadata.objects.all()
 
 
-class AppAuthorList(ListView):
+class AppAuthorList(LoginRequiredMixin, ListView):
     model = Author
-    template_name = 'speechdb/author_list.html'
+    template_name = "speechdb/author_list.html"
     paginate_by = PAGE_SIZE
-    
-    _valid_params = [
-        ('lang', str),
-        ('page_size', int),
-    ]
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
-        # add useful info
-        context['params'] = self.params
-        context['lang_choices'] = Work.Language.choices
+        
+        # form data
+        context["text_form"] = TextForm(self.request.GET)
+        context["pager_form"] = PagerForm(self.request.GET)
         
         return context
 
     def get_queryset(self):
         # collect user search params
-        self.params = ValidateParams(self.request, self._valid_params)    
+        params = ValidateParams(self.request)    
 
         # construct query
         query = []
         
         # language
-        if 'lang' in self.params:
-            query.append(Q(work__lang=self.params['lang']))
+        if "lang" in params:
+            q = Q()
+            for lang in params["lang"]:
+                q |= Q(work__lang=lang)
+            query.append(q)
         
         # get query set
-        qs = Author.objects.filter(*query).distinct()
+        qs = Author.objects.filter(*query).prefetch_related('work_set').distinct()
+        
+        for author in qs:
+                works = list(author.work_set.all())
+                author.work_count = len(works)
+                author.langs = ", ".join(sorted(set(w.lang for w in works if w.lang)))
         
         # pagination
-        if 'page_size' in self.params:
-            if self.params['page_size'] > 0:
-                self.paginate_by = self.params['page_size']
+        if "page_size" in params:
+            if params["page_size"] > 0:
+                self.paginate_by = params["page_size"]
             else:
-                self.paginate_by = qs.count() + 1
+                self.paginate_by = qs.count() + 1        
 
         return qs
 
 
-class AppWorkList(ListView):
+class AppWorkList(LoginRequiredMixin, ListView):
     model = Work
     template_name = 'speechdb/work_list.html'
     paginate_by = PAGE_SIZE
     
-    _valid_params = [
-        ('lang', str),
-        ('auth_id', int),
-        ('page_size', int),
-    ]
-    
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super().get_context_data(**kwargs)
-        # add useful info
-        context['params'] = self.params
-        context['lang_choices'] = Work.Language.choices
-        context['authors'] = Author.objects.all()
-        
-        return context
-
     def get_queryset(self):
         # collect user search params
-        self.params = ValidateParams(self.request, self._valid_params)    
+        params = ValidateParams(self.request)
 
         # construct query
         query = []
         
-        # author by id
-        if 'auth_id' in self.params:
-            query.append(Q(author=self.params['auth_id']))
+        # text properties
+        if 'author_name' in params:
+            q = Q()
+            for author_name in params["author_name"]:
+                q |= Q(instances__speeches__work__author__name=author_name)
+                q |= Q(instances__addresses__work__author__name=author_name)
+            query.append(q)
 
-        if 'lang' in self.params:
-            query.append(Q(lang=self.params['lang']))
-        
-        # get query set
-        qs = Work.objects.filter(*query).distinct()
+        if 'work_title' in params:
+            q = Q()
+            for work_title in params["work_title"]:
+                q |= Q(instances__speeches__work__title=work_title)
+                q |= Q(instances__addresses__work__title=work_title)
+            query.append(q)
+            
+        if 'lang' in params:
+            q = Q()
+            for lang in params["lang"]:
+                q |= Q(instances__speeches__work__lang=lang)
+                q |= Q(instances__addresses__work__lang=lang)
+            query.append(q)
+
+        # perform query
+        qs = Work.objects.filter(*query).distinct().order_by('author', 'title')
+
+        # annotate results
+        qs = qs.annotate(
+            Count('speech', distinct=True),
+            Count('speech__spkr', distinct=True),
+        )
+
         # pagination
-        if 'page_size' in self.params:
-            if self.params['page_size'] > 0:
-                self.paginate_by = self.params['page_size']
+        if 'page_size' in params:
+            if params['page_size'] > 0:
+                self.paginate_by = params['page_size']
             else:
                 self.paginate_by = qs.count() + 1
           
-
         return qs
+
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+
+        # form data
+        context['text_form'] = TextForm(self.request.GET)
+        context['pager_form'] = PagerForm(self.request.GET)
+        
+        return context
+
 
 
 class AppCharacterList(LoginRequiredMixin, ListView):
     model = Character
     template_name = 'speechdb/character_list.html'
     paginate_by = PAGE_SIZE
-    _valid_params = [
-        ('gender', str),
-        ('being', str),
-        ('number', str),
-        ('lang', str),
-        ('auth_id', int),
-        ('work_id', int),
-        ('manto', str),        
-        ('wd', str),
-        ('tt', str),        
-        ('page_size', int),  
-    ]
-    
-    # authentication
-    login_url = '/app/login/'
-    
-    
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super().get_context_data(**kwargs)
-        # add useful info
-        context['params'] = self.params
-        context['lang_choices'] = Work.Language.choices
-        context['authors'] = Author.objects.all()                
-        context['works'] = Work.objects.all()        
-        context['character_being_choices'] = Character.CharacterBeing.choices
-        context['character_number_choices'] = Character.CharacterNumber.choices
-        context['character_gender_choices'] = Character.CharacterGender.choices        
-       
-        return context
-    
-    def get_queryset(self):
-        # collect user search params
-        self.params = ValidateParams(self.request, self._valid_params)
         
+    def get_queryset(self):
+        
+        # collect user search params
+        params = ValidateParams(self.request)
+                                
         # construct query
         query = []
         
-        if 'gender' in self.params:
-            query.append(Q(gender=self.params['gender']))
+        if "char_name" in params:
+            q = Q()
+            for name in params["char_name"]:
+                q |= Q(name=name)
+            query.append(q)
+            
+        if 'char_gender' in params:
+            q = Q()
+            for gender in params["char_gender"]:
+                q |= Q(gender=gender)
+            query.append(q)
         
-        if 'being' in self.params:
-            query.append(Q(being=self.params['being']))
+        if 'char_being' in params:
+            q = Q()
+            for being in params["char_being"]:
+                q |= Q(being=being)
+            query.append(q)
             
-        if 'number' in self.params:
-            query.append(Q(number=self.params['number']))
+        if 'char_number' in params:
+            q = Q()
+            for number in params["char_number"]:
+                q |= Q(number=number)
+            query.append(q)
 
-        if 'manto' in self.params:
-            query.append(Q(manto=self.params['manto']))
+        if 'char_manto' in params:
+            q = Q()
+            for manto in params["char_manto"]:
+                q |= Q(manto=manto)
+            query.append(q)
 
-        if 'wd' in self.params:
-            query.append(Q(wd=self.params['wd']))
+        if 'char_wd' in params:
+            q = Q()
+            for wd in params["wd"]:
+                q |= Q(wd=wd)
+            query.append(q)
 
-        if 'tt' in self.params:
-            query.append(Q(tt=self.params['tt']))
+        if 'char_tt' in params:
+            q = Q()
+            for tt in params["tt"]:
+                q |= Q(tt=tt)
+            query.append(q)
 
-        if 'auth_id' in self.params:
-            query.append(Q(instances__speeches__work__author=self.params['auth_id'])|
-                        Q(instances__addresses__work__author=self.params['auth_id']))
+        # text properties
+        if 'author_name' in params:
+            q = Q()
+            for author_name in params["author_name"]:
+                q |= Q(instances__speeches__work__author__name=author_name)
+                q |= Q(instances__addresses__work__author__name=author_name)
+            query.append(q)
 
-        if 'work_id' in self.params:
-            query.append(Q(instances__speeches__work=self.params['work_id'])|
-                        Q(instances__addresses__work=self.params['work_id']))
+        if 'work_title' in params:
+            q = Q()
+            for work_title in params["work_title"]:
+                q |= Q(instances__speeches__work__title=work_title)
+                q |= Q(instances__addresses__work__title=work_title)
+            query.append(q)
+
+        if 'work_id' in params:
+            q = Q()
+            for work_title in params["work_id"]:
+                q |= Q(instances__speeches__work__pk=work_id)
+                q |= Q(instances__addresses__work__pk=work_id)
+            query.append(q)
             
-        if 'lang' in self.params:
-            query.append(Q(instances__speeches__work__lang=self.params['lang'])|
-                        Q(instances__addresses__work__lang=self.params['lang']))
+        if 'lang' in params:
+            q = Q()
+            for lang in params["lang"]:
+                q |= Q(instances__speeches__work__lang=lang)
+                q |= Q(instances__addresses__work__lang=lang)
+            query.append(q)
         
         qs = Character.objects.filter(*query).distinct().order_by('name')
         
@@ -550,13 +591,25 @@ class AppCharacterList(LoginRequiredMixin, ListView):
         )
         
         # pagination
-        if 'page_size' in self.params:
-            if self.params['page_size'] > 0:
-                self.paginate_by = self.params['page_size']
+        if 'page_size' in params:
+            if params['page_size'] > 0:
+                self.paginate_by = params['page_size']
             else:
                 self.paginate_by = qs.count() + 1        
         
         return qs
+
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+
+        # form data
+        context['character_form'] = CharacterForm(self.request.GET)
+        context['text_form'] = TextForm(self.request.GET)
+        context["pager_form"] = PagerForm(self.request.GET)
+       
+        return context
 
 
 class AppCharacterInstanceList(LoginRequiredMixin, ListView):
@@ -564,86 +617,111 @@ class AppCharacterInstanceList(LoginRequiredMixin, ListView):
     template_name = 'speechdb/characterinstance_list.html'
     queryset = CharacterInstance.objects.all()
     paginate_by = PAGE_SIZE
-    _valid_params = [
-        ('name', str),
-        ('gender', str),
-        ('number', str),
-        ('being', str),
-        ('anon', bool),
-        ('char_name', str),
-        ('char_gender', str),
-        ('char_number', str),
-        ('char_being', str),
-        ('char_manto', str),
-        ('char_wd', str),
-        ('char_tt', str),                        
-        ('page_size', int),
-    ]
-    
-    # authentication
-    login_url = '/app/login/'
-    
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super().get_context_data(**kwargs)
-        # add useful info
-        context['params'] = self.params
-        context['lang_choices'] = Work.Language.choices
-        context['authors'] = Author.objects.all()                
-        context['works'] = Work.objects.all()
-        context['names'] = CharacterInstance.objects.values_list('name', flat=True).distinct()
-        context['characters'] = Character.objects.all()
-        context['character_being_choices'] = Character.CharacterBeing.choices
-        context['character_number_choices'] = Character.CharacterNumber.choices
-        context['character_gender_choices'] = Character.CharacterGender.choices        
-
-        return context
     
     
     def get_queryset(self):
-        # collect user search params
-        self.params = ValidateParams(self.request, self._valid_params)
         
+        # collect user search params
+        params = ValidateParams(self.request)
+                                
         # construct query
         query = []
         
-        # instance properties        
-        if 'name' in self.params:
-            query.append(Q(name=self.params['name']))
-
-        if 'gender' in self.params:
-            query.append(Q(gender=self.params['gender']))
+        # instance properties
+        if "inst_name" in params:
+            q = Q()
+            for name in params["inst_name"]:
+                q |= Q(name=name)
+            query.append(q)
+            
+        if 'inst_gender' in params:
+            q = Q()
+            for gender in params["inst_gender"]:
+                q |= Q(gender=gender)
+            query.append(q)
         
-        if 'being' in self.params:
-            query.append(Q(being=self.params['being']))
-
-        if 'number' in self.params:
-            query.append(Q(number=self.params['number']))
+        if 'inst_being' in params:
+            q = Q()
+            for being in params["inst_being"]:
+                q |= Q(being=being)
+            query.append(q)
+            
+        if 'inst_number' in params:
+            q = Q()
+            for number in params["inst_number"]:
+                q |= Q(number=number)
+            query.append(q)
          
-        if 'anon' in self.params:
-            query.append(Q(anon=self.params['anon']))
+        if 'inst_anon' in params:
+            q = Q()
+            for anon in params["inst_anon"]:
+                q |= Q(anon=anon)
+            query.append(q)
         
         # character properties
-        if 'char_name' in self.params:
-            query.append(Q(char__name=self.params['char_name']))
+        if "char_name" in params:
+            q = Q()
+            for name in params["char_name"]:
+                q |= Q(char__name=name)
+            query.append(q)
             
-        if 'char_gender' in self.params:
-            query.append(Q(char__gender=self.params['char_gender']))
+        if 'char_gender' in params:
+            q = Q()
+            for gender in params["char_gender"]:
+                q |= Q(char__gender=gender)
+            query.append(q)
         
-        if 'char_being' in self.params:
-            query.append(Q(char__being=self.params['char_being']))
+        if 'char_being' in params:
+            q = Q()
+            for being in params["char_being"]:
+                q |= Q(char__being=being)
+            query.append(q)
+            
+        if 'char_number' in params:
+            q = Q()
+            for number in params["char_number"]:
+                q |= Q(char__number=number)
+            query.append(q)
+        
+        if 'char_manto' in params:
+            q = Q()
+            for manto in params["char_manto"]:
+                q |= Q(char__manto=manto)
+            query.append(q)
 
-        if 'char_number' in self.params:
-            query.append(Q(char__number=self.params['char_number']))
+        if 'char_wd' in params:
+            q = Q()
+            for wd in params["char_wd"]:
+                q |= Q(char__wd=wd)
+            query.append(q)
 
-        if 'char_manto' in self.params:
-            query.append(Q(char__manto=self.params['char_manto']))
+        if 'char_tt' in params:
+            q = Q()
+            for tt in params["char_tt"]:
+                q |= Q(char__tt=tt)
+            query.append(q)
+            
+        # text properties
+        if 'author_name' in params:
+            q = Q()
+            for author_name in params["author_name"]:
+                q |= Q(speeches__work__author__name=author_name)
+                q |= Q(addresses__work__author__name=author_name)
+            query.append(q)
 
-        if 'char_wd' in self.params:
-            query.append(Q(char__manto=self.params['char_wd']))
-
-        if 'char_tt' in self.params:
-            query.append(Q(char__manto=self.params['char_tt']))
+        if 'work_title' in params:
+            q = Q()
+            for work_title in params:
+                q |= Q(speeches__work__title=work_title)
+                q |= Q(addresses__work__title=work_title)
+            query.append(q)
+            
+        if 'lang' in params:
+            q = Q()
+            for lang in params["lang"]:
+                q |= Q(speeches__work__lang=lang)
+                q |= Q(addresses__work__lang=lang)
+            query.append(q)
         
         # perform query
         qs = CharacterInstance.objects.filter(*query).order_by('name')
@@ -655,290 +733,373 @@ class AppCharacterInstanceList(LoginRequiredMixin, ListView):
         )
         
         # pagination
-        if 'page_size' in self.params:
-            if self.params['page_size'] > 0:
-                self.paginate_by = self.params['page_size']
+        if 'page_size' in params:
+            if params["page_size"] > 0:
+                self.paginate_by = params["page_size"]
             else:
                 self.paginate_by = qs.count() + 1
         
         return qs
 
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        
+        # form data
+        context["character_form"] = CharacterForm(self.request.GET)
+        context["instance_form"] = InstanceForm(self.request.GET)
+        context["text_form"] = TextForm(self.request.GET)
+        context["pager_form"] = PagerForm(self.request.GET)
+                            
+        return context
 
 
 class AppSpeechList(LoginRequiredMixin, ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
     paginate_by = PAGE_SIZE
-    ordering = ['work', 'seq']    
-    _valid_params = [
-        ('spkr_id', int),
-        ('addr_id', int),
-        ('char_id', int),
-        ('spkr_inst_id', int),
-        ('addr_inst_id', int),
-        ('char_inst_id', int),
-        ('char_inst_name', str),
-        ('spkr_inst_name', str),
-        ('addr_inst_name', str),
-        ('spkr_name', str),
-        ('addr_name', str),
-        ('char_name', str), 
-        ('spkr_being', str),
-        ('addr_being', str),               
-        ('char_being', str),
-        ('spkr_number', str),
-        ('addr_number', str),               
-        ('char_number', str),
-        ('spkr_gender', str),
-        ('addr_gender', str),               
-        ('char_gender', str),
-        ('spkr_manto', str),
-        ('addr_manto', str),               
-        ('char_manto', str),
-        ('spkr_wd', str),
-        ('addr_wd', str),               
-        ('char_wd', str),
-        ('spkr_tt', str),
-        ('addr_tt', str),               
-        ('char_tt', str),
-        ('cluster_id', int),
-        ('spkr_disguised', bool),
-        ('type', str),
-        ('tags', str),
-        ('part', int),
-        ('n_parts', int),
-        ('level', int),
-        ('work_id', int),
-        ('auth_id', int),
-        ('lang', str),
-        ('page_size', int),
-    ]
-        
-    # authentication
-    login_url = '/app/login/'
-    
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super().get_context_data(**kwargs)
-        # add useful info
-        context['params'] = self.params
-        context['reader'] = CTS_READER
-        context['lang_choices'] = Work.Language.choices        
-        context['authors'] = Author.objects.all()          
-        context['works'] = Work.objects.all()
-        context['characters'] = Character.objects.all()
-        context['character_being_choices'] = Character.CharacterBeing.choices
-        context['character_number_choices'] = Character.CharacterNumber.choices
-        context['character_gender_choices'] = Character.CharacterGender.choices        
-        context['speech_type_choices'] = Speech.SpeechType.choices
-        context['anons'] = sorted(set(i.name for i in CharacterInstance.objects.filter(anon=True)))
-        context['max_parts'] = Speech.objects.aggregate(Max('part'))['part__max']
-        context['tag_choices'] = SpeechTag.TagType.choices
-        
-        return context
-     
+    ordering = ['work', 'seq']
+         
     def get_queryset(self):
-        # collect user search params
-        self.params = ValidateParams(self.request, self._valid_params)
         
+        # collect user search params
+        params = ValidateParams(self.request)
+                            
+        print(params)
         # initial set of objects plus annotations
         qs = Speech.objects.annotate(Count('cluster__speeches'))
         
         # construct query
         query = []
         
-        # any participant
-        if 'char_id' in self.params:
-            query.append(
-                Q(spkr__char=self.params['char_id']) | 
-                Q(addr__char=self.params['char_id'])
-            )
+        #
+        # speaker properties
+        # 
         
-        # any participant by name
-        if 'char_name' in self.params:
-            query.append(
-                Q(spkr__char__name=self.params['char_name']) |
-                Q(addr__char__name=self.params['char_name'])
-            )
+        # speaker character id
+        if "spkr_char_id" in params:
+            q = Q()
+            for id in params["spkr_char_id"]:
+                q |= Q(spkr__char=id)
+            query.append(q)
 
-        # any participant by being
-        if 'char_being' in self.params:
-            query.append(
-                Q(spkr__being=self.params['char_being']) |
-                Q(addr__being=self.params['char_being'])
-            )
+        # speaker character name
+        if "spkr_char_name" in params:
+            q = Q()
+            for name in params["spkr_char_name"]:
+                q |= Q(spkr__char__name=name)
+            query.append(q)
             
-        # any participant by gender
-        if 'char_gender' in self.params:
-            query.append(
-                Q(spkr__gender=self.params['char_gender']) |
-                Q(addr__gender=self.params['char_gender'])
-            )
-        
-        # speaker by id
-        if 'spkr_id' in self.params:
-            query.append(Q(spkr__char=self.params['spkr_id']))
+        # speaker character being
+        if "spkr_char_being" in params:
+            q = Q()
+            for being in params["spkr_char_being"]:
+                q |= Q(spkr__char__being=being)
+            query.append(q)
 
-        # speaker by instance id
-        if 'spkr_inst_id' in self.params:
-            query.append(Q(spkr__id=self.params['spkr_inst_id']))
-        
-        # speaker by instance name
-        if 'spkr_inst_name' in self.params:
-            query.append(Q(spkr__name=self.params['spkr_inst_name']))
+        # speaker character gender
+        if "spkr_char_gender" in params:
+            q = Q()
+            for gender in params["spkr_char_gender"]:
+                q |= Q(spkr__char__gender=gender)
+            query.append(q)
             
-        # speaker by name
-        if 'spkr_name' in self.params:
-            query.append(Q(spkr__char__name=self.params['spkr_name']))
+        # speaker character number
+        if "spkr_char_number" in params:
+            q = Q()
+            for number in params["spkr_char_number"]:
+                q |= Q(spkr__char__number=number)
+            query.append(q)
+            
+        # speaker manto
+        if "spkr_char_manto" in params:
+            q = Q()
+            for manto in params["spkr_char_manto"]:
+                q |= Q(spkr__char__manto=manto)
+            query.append(q)
 
-        # speaker by being
-        if 'spkr_being' in self.params:
-            query.append(Q(spkr__being=self.params['spkr_being']))
+        # speaker wikidata
+        if "spkr_char_wd" in params:
+            q = Q()
+            for wd in params["spkr_char_wd"]:
+                q |= Q(spkr__char__wd=wd)
+            query.append(q)
 
-        # speaker by gender
-        if 'spkr_gender' in self.params:
-            query.append(Q(spkr__gender=self.params['spkr_gender']))
+        # speaker topostext
+        if "spkr_char_tt" in params:
+            q = Q()
+            for tt in params["spkr_char_tt"]:
+                q |= Q(spkr__char__tt=tt)
+            query.append(q)
+            
+        # speaker instance id
+        if "spkr_inst_id" in params:
+            q = Q()
+            for id in params["spkr_inst_id"]:
+                q |= Q(spkr__id=id)
+            query.append(q)
+        
+        # speaker instance name
+        if "spkr_inst_name" in params:
+            q = Q()
+            for name in params["spkr_inst_name"]:
+                q |= Q(spkr__name=name)
+            query.append(q)
+            
+        # speaker instance being
+        if "spkr_inst_being" in params:
+            q = Q()
+            for being in params["spkr_inst_being"]:
+                q |= Q(spkr__being=being)
+            query.append(q)
 
-        # speaker by number
-        if 'spkr_number' in self.params:
-            query.append(Q(spkr__number=self.params['spkr_number']))
+        # speaker instance gender
+        if "spkr_inst_gender" in params:
+            q = Q()
+            for gender in params["spkr_inst_gender"]:
+                q |= Q(spkr__gender=gender)
+            query.append(q)
+
+        # speaker instance number
+        if "spkr_inst_number" in params:
+            q = q()
+            for number in params["spkr_inst_number"]:
+                q |= Q(spkr__number=number)
+            query.append(q)
         
         # speaker disguised
-        if 'spkr_disguised' in self.params:
-            query.append(Q(spkr__disguise__isnull=not(self.params['spkr_disguised'])))
-
-        # speaker by manto
-        if 'spkr_manto' in self.params:
-            query.append(Q(spkr__char__manto=self.params['spkr_manto']))
-
-        # speaker by wikidata
-        if 'spkr_wd' in self.params:
-            query.append(Q(spkr__char__wd=self.params['spkr_wd']))
-
-        # speaker by topostext
-        if 'spkr_tt' in self.params:
-            query.append(Q(spkr__char__tt=self.params['spkr_tt']))
-                    
-        # addressee by id
-        if 'addr_id' in self.params:
-            query.append(Q(addr__char=self.params['addr_id']))
-
-        # addressee by instance id
-        if 'addr_inst_id' in self.params:
-            query.append(Q(addr__id=self.params['addr_inst_id']))
-        
-        # addressee by instance name
-        if 'addr_inst_name' in self.params:
-            query.append(Q(addr__name=self.params['addr_inst_name']))
-
-        # addressee by name
-        if 'addr_name' in self.params:
-            query.append(Q(addr__char__name=self.params['addr_name']))
-
-        # addressee by being
-        if 'addr_being' in self.params:
-            query.append(Q(addr__being=self.params['addr_being']))
-
-        # addressee by gender
-        if 'addr_gender' in self.params:
-            query.append(Q(addr__gender=self.params['addr_gender']))
-
-        # addressee by number
-        if 'addr_number' in self.params:
-            query.append(Q(addr__number=self.params['addr_number']))
-
-        # speaker by manto
-        if 'addr_manto' in self.params:
-            query.append(Q(addr__char__manto=self.params['addr_manto']))
-
-        # speaker by wikidata
-        if 'addr_wd' in self.params:
-            query.append(Q(addr__char__wd=self.params['addr_wd']))
-
-        # speaker by topostext
-        if 'addr_tt' in self.params:
-            query.append(Q(addr__char__tt=self.params['addr_tt']))
-                     
-
-        if 'cluster_id' in self.params:
-            query.append(Q(cluster__pk=self.params['cluster_id']))
-        
-        if 'type' in self.params:
-            query.append(Q(type=self.params['type']))
-        
-        if 'part' in self.params:
-            query.append(Q(part=self.params['part']))
-        
-        if 'n_parts' in self.params:
-            query.append(Q(cluster__speeches__count=self.params['n_parts']))
-
-        if 'level' in self.params:
-            query.append(Q(level=self.params['level']))
-        
-        if 'work_id' in self.params:
-            query.append(Q(work__pk=self.params['work_id']))
-
-        if 'auth_id' in self.params:
-            query.append(Q(work__author__pk=self.params['auth_id']))
+        if "spkr_disguised" in params:
+            if len(params["spkr_disguised"]) > 0:
+                query.append(Q(spkr__disguise__isnull=not(params["spkr_disguised"][0])))
             
-        if 'lang' in self.params:
-            query.append(Q(work__lang=self.params['lang']))
+        #
+        # addressee properties
+        #
+                    
+        # addressee character id
+        if "addr_char_id" in params:
+            q = Q()
+            for id in params["addr_char_id"]:
+                q |= Q(addr__char=id)
+            query.append(q)
 
-        if 'tags' in self.params:
-            query.append(Q(tags__type=self.params['tags']))
-  
-        qs = qs.filter(*query)
-        qs = qs.order_by('seq')
-        qs = qs.order_by('work')
+        # addressee character name
+        if "addr_char_name" in params:
+            q = Q()
+            for name in params["addr_char_name"]:
+                q |= Q(addr__char__name=name)
+            query.append(q)
+            
+        # addressee character being
+        if "addr_char_being" in params:
+            q = Q()
+            for being in params["addr_char_being"]:
+                q |= Q(addr__char__being=being)
+            query.append(q)
+
+        # addressee character gender
+        if "addr_char_gender" in params:
+            q = Q()
+            for gender in params["addr_char_gender"]:
+                q |= Q(addr__char__gender=gender)
+            query.append(q)
+            
+        # addressee character number
+        if "addr_char_number" in params:
+            q = Q()
+            for number in params["addr_char_number"]:
+                q |= Q(addr__char__number=number)
+            query.append(q)
+            
+        # addressee manto
+        if "addr_char_manto" in params:
+            q = Q()
+            for manto in params["addr_char_manto"]:
+                q |= Q(addr__char__manto=manto)
+            query.append(q)
+
+        # addressee wikidata
+        if "addr_char_wd" in params:
+            q = Q()
+            for wd in params["addr_char_wd"]:
+                q |= Q(addr__char__wd=wd)
+            query.append(q)
+
+        # addressee topostext
+        if "addr_char_tt" in params:
+            q = Q()
+            for tt in params["addr_char_tt"]:
+                q |= Q(addr__char__tt=tt)
+            query.append(q)
+            
+        # addressee instance id
+        if "addr_inst_id" in params:
+            q = Q()
+            for id in params["addr_inst_id"]:
+                q |= Q(addr__id=id)
+            query.append(q)
+        
+        # addressee instance name
+        if "addr_inst_name" in params:
+            q = Q()
+            for name in params["addr_inst_name"]:
+                q |= Q(addr__name=name)
+            query.append(q)
+            
+        # addressee instance being
+        if "addr_inst_being" in params:
+            q = Q()
+            for being in params["addr_inst_being"]:
+                q |= Q(addr__being=being)
+            query.append(q)
+
+        # addressee instance gender
+        if "addr_inst_gender" in params:
+            q = Q()
+            for gender in params["addr_inst_gender"]:
+                q |= Q(addr__gender=gender)
+            query.append(q)
+
+        # addressee instance number
+        if "addr_inst_number" in params:
+            q = q()
+            for number in params["addr_inst_number"]:
+                q |= Q(addr__number=number)
+            query.append(q)
+        
+        # addressee disguised
+        if "addr_disguised" in params:
+            if len(params["addr_disguised"]) > 0:
+                query.append(Q(addr__disguise__isnull=not(params["addr_disguised"][0])))
+                     
+        #
+        # speech properties
+        # 
+
+        # cluster id
+        if "cluster_id" in params:
+            q = Q()
+            for id in params["cluster_id"]:
+                q |= Q(cluster=id)
+            query.append(q)
+        
+        # cluster type
+        if "type" in params:
+            q = Q()
+            for type_ in params["type"]:
+                q |= Q(type=type_)
+            query.append(q)
+        
+        # cluster part
+        if "part" in params:
+            q = Q()
+            for part in params["part"]:
+                q |= Q(part=part)
+            query.append(q)
+        
+        # total parts in cluster
+        if "n_parts" in params:
+            q = Q()
+            for n in params["n_parts"]:
+                q |= Q(cluster__speeches__count=n)
+            query.append(q)
+
+        # embedded level
+        if "level" in params:
+            q = Q()
+            for level in params["level"]:
+                q |= Q(level=level)
+            query.append(q)
+            
+        # speech tags
+        if "tags" in params:
+            q = Q()
+            for tag in params["tags"]:
+                q |= Q(tags__type=tag)
+            query.append(q)
+        
+        #
+        # work properties
+        #
+        
+        # work id
+        if "work_id" in params:
+            q = Q()
+            for id in params["work_id"]:
+                q |= Q(work=id)
+            query.append(q)
+        
+        # work title
+        if "work_title" in params:
+            q = Q()
+            for title in params["work_title"]:
+                q |= Q(work__title=title)
+            query.append(q)
+            
+        # author id
+        if "auth_id" in params:
+            q = Q()
+            for id in params["auth_id"]:
+                q |= q(work__author=id)
+            query.append(q)
+            
+        # author name
+        if "auth_name" in params:
+            q = Q()
+            for name in params["auth_name"]:
+                q |= q(work__author__name=name)
+            query.append(q)
+            
+        # language
+        if "lang" in params:
+            q = Q()
+            for lang in params["lang"]:
+                q |= Q(work__lang=lang)
+            query.append(q)
+
+        # execute query
+        qs = qs.filter(*query).distinct()
+        qs = qs.order_by("seq")
+        qs = qs.order_by("work")
         
         # pagination
-        if 'page_size' in self.params:
-            if self.params['page_size'] > 0:
-                self.paginate_by = self.params['page_size']
+        if "page_size" in params:
+            if params["page_size"] > 0:
+                self.paginate_by = params["page_size"]
             else:
                 self.paginate_by = qs.count() + 1
-
+ 
         return qs
         
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
 
+        # form data
+        context["spkr_character_form"] = CharacterForm(self.request.GET, prefix="spkr")
+        context["spkr_instance_form"] = InstanceForm(self.request.GET, prefix="spkr")
+        context["addr_character_form"] = CharacterForm(self.request.GET, prefix="addr")
+        context["addr_instance_form"] = InstanceForm(self.request.GET, prefix="addr")  
+        context["speech_form"] = SpeechForm(self.request.GET)      
+        context["text_form"] = TextForm(self.request.GET)
+        context["pager_form"] = PagerForm(self.request.GET)
+
+        # CTS reader
+        context['reader'] = CTS_READER
+        
+        return context
+    
+        
 class AppSpeechClusterList(LoginRequiredMixin, ListView):
     model = SpeechCluster
     template_name = 'speechdb/speechcluster_list.html'
     paginate_by = PAGE_SIZE
-    _valid_params = [
-        ('spkr_id', int),
-        ('addr_id', int),
-        ('char_id', int),
-        ('spkr_name', str),
-        ('addr_name', str), 
-        ('char_name', str), 
-        ('spkr_inst_name', str),
-        ('addr_inst_name', str),
-        ('char_inst_name', str),
-        ('spkr_being', str),
-        ('addr_being', str),
-        ('char_being', str),
-        ('spkr_number', str),
-        ('addr_number', str),
-        ('char_number', str),
-        ('spkr_gender', str),
-        ('addr_gender', str),               
-        ('char_gender', str),
-        ('cluster_id', int),
-        ('cluster_type', str),
-        ('n_parts', int),
-        ('work_id', int),
-        ('auth_id', int),
-        ('lang', str),
-        ('page_size', int),        
-    ]
-    
-    # authentication
-    login_url = '/app/login/'
     
     def get_queryset(self):
         # collect user search params
-        self.params = ValidateParams(self.request, self._valid_params)
+        params = ValidateParams(self.request)
         
         # initial set of objects plus annotations
         qs = SpeechCluster.objects.annotate(Count('speeches'))
@@ -946,186 +1107,380 @@ class AppSpeechClusterList(LoginRequiredMixin, ListView):
         # construct query
         query = []
         
-        # any participant by id
-        if 'char_id' in self.params:
-            query.append(Q(speech__spkr__char=self.params['char_id']) |
-                         Q(speech__addr__char=self.params['char_id'])
-            )
+        #
+        # any participant
+        #
+        
+        # any participant by character id
+        if "char_id" in params:
+            q = Q()
+            for id in params["char_id"]:
+                q |= Q(speeches__spkr__char__id=id)
+                q |= Q(speeches__addr__char__id=id)
+            query.append(q)
+        
+        # any participant by character name
+        if "char_name" in params:
+            q = Q()
+            for name in params["char_name"]:
+                q |= Q(speeches__spkr__char__name=name)
+                q |= Q(speeches__addr__char__name=name)
+            query.append(q)
+
+        # any participant by character being
+        if "char_being" in params:
+            q = Q()
+            for being in params["char_being"]:
+                q |= Q(speeches__spkr__char__being=being)
+                q |= Q(speeches__addr__char__being=being)
+            query.append(q)
+
+        # any participant by character gender
+        if "char_gender" in params:
+            q = Q()
+            for gender in params["gender"]:
+                q |= Q(speeches__spkr__char__gender=gender) 
+                q |= Q(speeches__addr__char__gender=gender)
+            query.append(q)
+            
+        # any participant by instance id
+        if "inst_id" in params:
+            q = Q()
+            for id in params["inst_id"]:
+                q |= Q(speeches__spkr__id=id)
+                q |= Q(speeches__addr__id=id)
+            query.append(q)
         
         # any participant by instance name
-        if 'char_inst_name' in self.params:
-            query.append(Q(speech__spkr__name=self.params['char_inst_name']) |
-                         Q(speech__addr__name=self.params['char_inst_name'])
-            )
+        if "inst_name" in params:
+            q = Q()
+            for name in params["inst_name"]:
+                q |= Q(speeches__spkr__name=name)
+                q |= Q(speeches__addr__name=name)
+            query.append(q)
 
-        # any participant by name
-        if 'char_name' in self.params:
-            query.append(Q(speech__spkr__char__name=self.params['char_name']) |
-                         Q(speech__addr__char__name=self.params['char_name'])
-            )
+        # any participant by instance being
+        if "inst_being" in params:
+            q = Q()
+            for being in params["char_being"]:
+                q |= Q(speeches__spkr__being=being)
+                q |= Q(speeches__addr__being=being)
+            query.append(q)
 
-        # any participant by being
-        if 'char_being' in self.params:
-            query.append(Q(speech__spkr__being=self.params['char_being']) |
-                         Q(speech__addr__being=self.params['char_being'])
-            )
+        # any participant by instance gender
+        if "inst_gender" in params:
+            q = Q()
+            for gender in params["gender"]:
+                q |= Q(speeches__spkr__gender=gender)
+                q |= Q(speeches__addr__gender=gender)
+            query.append(q)
+                    
+        # any participant disguised
+        if "disguised" in params:
+            q = Q()
+            for disg in params["disguised"]:
+                q |= Q(speeches__spkr__disguise__isnull=not(disg))
+                q |= Q(speeches__addr__disguise__isnull=not(disg))                
+            query.append()
+                    
+                    
+        #
+        # speaker
+        #
+                    
+        # speaker by character id
+        if "spkr_char_id" in params:
+            q = Q()
+            for id in params["spkr_char_id"]:
+                q |= Q(speeches__spkr__char__id=id)
+            query.append(q)
+                    
+        # speaker by character name
+        if "spkr_char_name" in params:
+            q = Q()
+            for name in params["spkr_char_name"]:
+                q |= Q(speeches__spkr__char__name=name)
+            query.append(q)
 
-        # any participant by gender
-        if 'char_gender' in self.params:
-            query.append(Q(speech__spkr__gender=self.params['char_gender']) |
-                         Q(speech__addr__gender=self.params['char_gender'])
-            )
+        # speaker by character being
+        if "spkr_char_being" in params:
+            q = Q()
+            for being in params["spkr_char_being"]:
+                q |= Q(speeches__spkr__char__being=being)
+            query.append(q)
+
+        # speaker by character number
+        if "spkr_char_number" in params:
+            q = Q()
+            for number in params["spkr_char_number"]:
+                q |= Q(speeches__spkr__char__number=number)
+            query.append(q)
+
+        # speaker by character gender
+        if "spkr_gender" in params:
+            q = Q()
+            for gender in params["gender"]:
+                q |= Q(speeches__spkr__char__gender=gender)
+            query.append(q)
         
-        # speaker by id
-        if 'spkr_id' in self.params:
-            query.append(Q(speeches__spkr__char=self.params['spkr_id']))
+        # speaker by instance id
+        if "spkr_inst_id" in params:
+            q = Q()
+            for id in params["spkr_inst_id"]:
+                q |= Q(speeches__spkr__id=id)
+            query.append(q)
         
         # speaker by instance name
-        if 'spkr_inst_name' in self.params:
-            query.append(Q(speeches__spkr__name=self.params['spkr_inst_name']))
+        if "spkr_inst_name" in params:
+            q = Q()
+            for name in params["spkr_inst_name"]:
+                q |= Q(speeches__spkr__name=name)
+            query.append(q)
             
-        # speaker by name
-        if 'spkr_name' in self.params:
-            query.append(Q(speeches__spkr__char__name=self.params['spkr_name']))
+        # speaker instance being
+        if "spkr_inst_being" in params:
+            q = Q()
+            for being in params["spkr_inst_being"]:
+                q |= Q(speeches__spkr__being=being)
+            query.append(q)
 
-        # speaker by being
-        if 'spkr_being' in self.params:
-            query.append(Q(speeches__spkr__being=self.params['spkr_being']))
+        # speaker instance gender
+        if "spkr_inst_gender" in params:
+            q = Q()
+            for gender in params["spkr_inst_gender"]:
+                q |= Q(speeches__spkr__gender=gender)
+            query.append(q)
 
-        # speaker by number
-        if 'spkr_number' in self.params:
-            query.append(Q(speeches__spkr__number=self.params['spkr_number']))
-
-        # speaker by gender
-        if 'spkr_gender' in self.params:
-            query.append(Q(speeches__spkr__gender=self.params['spkr_gender']))
+        # speaker instance number
+        if "spkr_inst_number" in params:
+            q = q()
+            for number in params["spkr_inst_number"]:
+                q |= Q(speeches__spkr__number=number)
+            query.append(q)
         
-        # addressee by id
-        if 'addr_id' in self.params:
-            query.append(Q(speeches__addr__char=self.params['addr_id']))
+        # speaker disguised
+        if "spkr_disguised" in params:
+            if len(params["spkr_disguised"]) > 0:
+                query.append(Q(speeches__spkr__disguise__isnull=not(params["spkr_disguised"][0])))
+        
+        #
+        # addressee
+        #
+        
+        # addressee by character id
+        if "addr_char_id" in params:
+            q = Q()
+            for id in params["addr_char_id"]:
+                q |= Q(speeches__addr__char__id=id)
+            query.append(q)
+                    
+        # addressee by character name
+        if "addr_char_name" in params:
+            q = Q()
+            for name in params["addr_char_name"]:
+                q |= Q(speeches__addr__char__name=name)
+            query.append(q)
+
+        # addressee by character being
+        if "addr_char_being" in params:
+            q = Q()
+            for being in params["addr_char_being"]:
+                q |= Q(speeches__addr__char__being=being)
+            query.append(q)
+
+        # addressee by character number
+        if "addr_char_number" in params:
+            q = Q()
+            for number in params["addr_char_number"]:
+                q |= Q(speeches__addr__char__number=number)
+            query.append(q)
+
+        # addressee by character gender
+        if "addr_gender" in params:
+            q = Q()
+            for gender in params["gender"]:
+                q |= Q(speeches__addr__char__gender=gender)
+            query.append(q)
+        
+        # addressee by instance id
+        if "addr_inst_id" in params:
+            q = Q()
+            for id in params["addr_inst_id"]:
+                q |= Q(speeches__addr__id=id)
+            query.append(q)
         
         # addressee by instance name
-        if 'addr_inst_name' in self.params:
-            query.append(Q(speeches__addr__name=self.params['addr_inst_name']))
-
-        # addressee by name
-        if 'addr_name' in self.params:
-            query.append(Q(speeches__addr__char__name=self.params['addr_name']))
-
-        # addressee by being
-        if 'addr_being' in self.params:
-            query.append(Q(speeches__addr__being=self.params['addr_being']))
-
-        # addressee by number
-        if 'addr_number' in self.params:
-            query.append(Q(speeches__addr__number=self.params['addr_number']))
-
-        # addressee by gender
-        if 'addr_gender' in self.params:
-            query.append(Q(speeches__addr__gender=self.params['addr_gender']))
-
-        if 'cluster_id' in self.params:
-            query.append(Q(pk=self.params['cluster_id']))
-        
-        if 'cluster_type' in self.params:
-            query.append(Q(speeches__type=self.params['cluster_type']))
-                
-        if 'n_parts' in self.params:
-            query.append(Q(speeches__count=self.params['n_parts']))
-        
-        if 'work_id' in self.params:
-            query.append(Q(speeches__work__pk=self.params['work_id']))
-
-        if 'auth_id' in self.params:
-            query.append(Q(speeches__work__author__pk=self.params['auth_id']))
+        if "addr_inst_name" in params:
+            q = Q()
+            for name in params["addr_inst_name"]:
+                q |= Q(speeches__addr__name=name)
+            query.append(q)
             
-        if 'lang' in self.params:
-            query.append(Q(speeches__work__lang=self.params['lang']))
+        # addressee instance being
+        if "addr_inst_being" in params:
+            q = Q()
+            for being in params["addr_inst_being"]:
+                q |= Q(speeches__addr__being=being)
+            query.append(q)
+
+        # addressee instance gender
+        if "addr_inst_gender" in params:
+            q = Q()
+            for gender in params["addr_inst_gender"]:
+                q |= Q(speeches__addr__gender=gender)
+            query.append(q)
+
+        # addressee instance number
+        if "addr_inst_number" in params:
+            q = q()
+            for number in params["addr_inst_number"]:
+                q |= Q(speeches__addr__number=number)
+            query.append(q)
         
-        # perform query
-        qs = qs.filter(*query).distinct().order_by('seq')
+        # addressee disguised
+        if "addr_disguised" in params:
+            if len(params["addr_disguised"]) > 0:
+                query.append(Q(speeches__addr__disguise__isnull=not(params["addr_disguised"][0])))
+
+        #
+        # speech properties
+        #
+
+        # cluster id
+        if "cluster_id" in params:
+            q = Q()
+            for id in params["cluster_id"]:
+                q |= Q(id=params["cluster_id"])
+            query.append(q)
+                        
+        # turns in cluster
+        if "n_parts" in params:
+            q = Q()
+            for n in params["n_parts"]:
+                q |= Q(speeches__count=n)
+            query.append(q)
+
+        # turn type
+        if "turn_type" in params:
+            q = Q()
+            for type_ in params["cluster_type"]:
+                q |= Q(speeches__type=type_)
+            query.append(q)
+            
+        # embedded level
+        if "level" in params:
+            q = Q()
+            for level in params["level"]:
+                q |= Q(speeches__level=level)
+            query.append(q)
+
+        # speech tags
+        if "tags" in params:
+            q = Q()
+            for tag in params["tags"]:
+                q |= Q(speeches__tags__type=tag)
+            query.append(q)
+        
+        #
+        # work properties
+        #
+        
+        # work id
+        if "work_id" in params:
+            q = Q()
+            for id in params["work_id"]:
+                q |= Q(speeches__work__id=id)
+            query.append(q)
+        
+        # work title
+        if "work_title" in params:
+            q = Q()
+            for title in params["work_title"]:
+                q |= Q(speeches__work__title=title)
+            query.append(q)
+            
+        # author id
+        if "auth_id" in params:
+            q = Q()
+            for id in params["auth_id"]:
+                q |= q(speeches__work__author__id=id)
+            query.append(q)
+            
+        # author name
+        if "auth_name" in params:
+            q = Q()
+            for name in params["auth_name"]:
+                q |= q(speeches__work__author__name=name)
+            query.append(q)
+            
+        # language
+        if "lang" in params:
+            q = Q()
+            for lang in params["lang"]:
+                q |= Q(speeches__work__lang=lang)
+            query.append(q)        
+                
+        # execute query
+        qs = qs.filter(*query).distinct()
+        qs = qs.order_by('seq')
 
         # pagination
-        if 'page_size' in self.params:
-            if self.params['page_size'] > 0:
-                self.paginate_by = self.params['page_size']
+        if "page_size" in params:
+            if params["page_size"] > 0:
+                self.paginate_by = params["page_size"]
             else:
-                self.paginate_by = qs.count() + 1        
-        
+                self.paginate_by = qs.count() + 1
+         
         return qs
-    
-    # authentication
-    login_url = '/app/login/'
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
+
         # add useful info
-        context['params'] = self.params
-        context['lang_choices'] = Work.Language.choices
-        context['authors'] = Author.objects.all()                
-        context['works'] = Work.objects.all()
-        context['clusters'] = SpeechCluster.objects.all()
-        context['characters'] = Character.objects.all()
-        context['anons'] = sorted(set(i.name for i in CharacterInstance.objects.filter(anon=True)))        
-        context['character_being_choices'] = Character.CharacterBeing.choices
-        context['character_number_choices'] = Character.CharacterNumber.choices
-        context['character_gender_choices'] = Character.CharacterGender.choices        
-        context['speech_type_choices'] = Speech.SpeechType.choices
+        context["spkr_character_form"] = CharacterForm(self.request.GET, prefix="spkr")
+        context["spkr_instance_form"] = InstanceForm(self.request.GET, prefix="spkr")
+        context["addr_character_form"] = CharacterForm(self.request.GET, prefix="addr")
+        context["addr_instance_form"] = InstanceForm(self.request.GET, prefix="addr")  
+        context["speech_form"] = SpeechForm(self.request.GET)      
+        context["text_form"] = TextForm(self.request.GET)
+        context["pager_form"] = PagerForm(self.request.GET)
         
         return context
 
 
-class AppCharacterInstanceDetail(DetailView):
+class AppCharacterInstanceDetail(LoginRequiredMixin, DetailView):
     model = CharacterInstance
     template_name = 'speechdb/characterinstance_detail.html'
     context_object_name = 'inst'
     
-    # authentication
-    login_url = '/app/login/'    
-    
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
         context['reader'] = CTS_READER
-        context['characters'] = Character.objects.all()
-        context['names'] = sorted(set([c.name for c in CharacterInstance.objects.all()]))
-        context['character_being_choices'] = Character.CharacterBeing.choices
-        context['character_number_choices'] = Character.CharacterNumber.choices
-        context['character_gender_choices'] = Character.CharacterGender.choices        
                 
         return context
 
 
-class AppCharacterDetail(DetailView):
+class AppCharacterDetail(LoginRequiredMixin, DetailView):
     model = Character
     template_name = 'speechdb/character_detail.html'
     context_object_name = 'char'
-    
-    # authentication
-    login_url = '/app/login/'
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # add useful info
         context['reader'] = CTS_READER
-        context['characters'] = Character.objects.all()
-        context['character_being_choices'] = Character.CharacterBeing.choices
-        context['character_number_choices'] = Character.CharacterNumber.choices
-        context['character_gender_choices'] = Character.CharacterGender.choices        
         
         return context
 
 
-class AppSpeechClusterDetail(DetailView):
+class AppSpeechClusterDetail(LoginRequiredMixin, DetailView):
     model = SpeechCluster
     template_name = 'speechdb/speechcluster_detail.html'
     context_object_name = 'cluster'
-    
-    # authentication
-    login_url = '/app/login/'
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -1147,4 +1502,3 @@ class AppIndex(TemplateView):
         context['characters'] = Character.objects.all()
         context['speeches'] = Speech.objects.all()
         return context
-

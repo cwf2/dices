@@ -6,7 +6,7 @@
 {% block results %}
 <table class="table table-striped">
   <thead>
-    <tr><th>Name</th><th>Character</th><th>Disguise</th><th>Context</th><th>Anon</th><th>Speaker</th><th>Addressee</th>
+    <tr><th>Name</th><th>Instance of</th><th>Disguise</th><th>Context</th><th>Speaker</th><th>Addressee</th>
   </thead>
   <tbody>
     {% for inst in page_obj %}
@@ -27,7 +27,6 @@
       </td>
       <td>{% if inst.disguise %} {{ inst.disguise }}{% endif %}</td>
       <td>{{ inst.context }}</td>      
-      <td>{% if inst.anon %}Yes{% else %}No{% endif %}</td>
       <td>
         {% if inst.speeches__count > 0 %}
         {{ inst.speeches__count }}
@@ -54,43 +53,10 @@
 <form action="{% url 'app:instances' %}" method="GET">
   <div class="card small">
     <div class="card-header" id="hdr_instance">
-      <span>Instance</span>
+      <span>Instance Properties</span>
     </div>
     <div class="card-body">
-      <label for="sel_char_name">Name</label>
-      <select class="form-control form-control-sm" id="sel_name" name="name">
-        <option value="">-----</option> 
-        {% for name in names %}
-        <option value="{{ name }}" {% if params.name == name %} selected="selected" {% endif %}>{{ name }}</option>
-        {% endfor %}
-      </select>
-      <label for="sel_gender">Gender</label>
-      <select class="form-control form-control-sm" id="sel_gender" name="gender">
-        <option value="" >-----</option>
-        {% for k, v in character_gender_choices %}
-        <option value="{{ k }}" {% if params.gender == k %} selected="selected" {% endif %}>{{ v }}</option>
-        {% endfor %}                                            
-      </select>
-      <label for="sel_being">Being</label>
-      <select class="form-control form-control-sm" id="sel_being" name="being">
-        <option value="" >-----</option>
-        {% for k, v in character_being_choices %}
-        <option value="{{ k }}" {% if params.being == k %} selected="selected" {% endif %}>{{ v }}</option>
-        {% endfor %}                                            
-      </select>
-      <label for="sel_number">Number</label>
-      <select class="form-control form-control-sm" id="sel_number" name="number">
-        <option value="" >-----</option>
-        {% for k, v in character_number_choices %}
-        <option value="{{ k }}" {% if params.number == k %} selected="selected" {% endif %}>{{ v }}</option>
-        {% endfor %}                                            
-      </select>
-      <label for="sel_anon">Anonymous</label>
-      <select class="form-control form-control-sm" id="sel_anon" name="anon">
-        <option value="" >-----</option>
-        <option value="true" {% if params.anon %} selected="selected" {% endif %}>Yes</option>
-        <option value="false">No</option>
-      </select>
+			{% include "speechdb/default_form.html" with form=instance_form %}
     </div>
   </div>
   <div class="card small">
@@ -98,34 +64,7 @@
       <span>Character</span>
     </div>
     <div class="card-body">
-      <label for="sel_char_name">Name</label>
-      <select class="form-control form-control-sm" id="sel_char_name" name="char_name">
-        <option value="">-----</option> 
-        {% for c in characters %}
-        <option value="{{ c.name }}" {% if params.char_name == c.name %} selected="selected" {% endif %}>{{ c.name }}</option>
-        {% endfor %}
-      </select>
-      <label for="sel_char_gender">Gender</label>
-      <select class="form-control form-control-sm" id="sel_char_gender" name="char_gender">
-        <option value="" >-----</option>
-        {% for k, v in character_gender_choices %}
-        <option value="{{ k }}" {% if params.char_gender == k %} selected="selected" {% endif %}>{{ v }}</option>
-        {% endfor %}                                            
-      </select>
-      <label for="sel_char_being">Being</label>
-      <select class="form-control form-control-sm" id="sel_char_being" name="char_being">
-        <option value="" >-----</option>
-        {% for k, v in character_being_choices %}
-        <option value="{{ k }}" {% if params.char_being == k %} selected="selected" {% endif %}>{{ v }}</option>
-        {% endfor %}                                            
-      </select>
-      <label for="sel_char_number">Number</label>
-      <select class="form-control form-control-sm" id="sel_char_number" name="char_number">
-        <option value="" >-----</option>
-        {% for k, v in character_number_choices %}
-        <option value="{{ k }}">{{ v }}</option>
-        {% endfor %}                                            
-      </select>
+			{% include "speechdb/default_form.html" with form=character_form %}
     </div>
     <div class="card-footer">
       <div class="row justify-content-around">

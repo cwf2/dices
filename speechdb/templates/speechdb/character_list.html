@@ -66,79 +66,25 @@
 
 {% block sidebar_content %}
 <form action="{% url 'app:characters' %}" method="GET">
-  <div class="form-group">
-    <div class="card small">
-      <div class="card-header" id="hdr_character">
-        <span>Character Properties</span>
-      </div>
-      <div class="card-body">
-        <div class="form-group">
-          <label for="sel_gender">Gender</label>
-          <select class="form-control form-control-sm" id="sel_gender" name="gender">
-            <option value="">-----</option>
-            {% for k, v in character_gender_choices %}
-            <option value="{{ k }}" {% if params.gender == k %} selected="selected" {% endif %}>{{ v }}</option>
-            {% endfor %}                                            
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="sel_being">Being</label>
-          <select class="form-control form-control-sm" id="sel_being" name="being">
-            <option value="">-----</option>
-            {% for k, v in character_being_choices %}
-            <option value="{{ k }}" {% if params.being == k %} selected="selected" {% endif %}>{{ v }}</option>
-            {% endfor %}                                            
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="sel_number">Number</label>
-          <select class="form-control form-control-sm" id="sel_number" name="number">
-            <option value="">-----</option>
-            {% for k, v in character_number_choices %}
-            <option value="{{ k }}" {% if params.number == k %} selected="selected" {% endif %}>{{ v }}</option>
-            {% endfor %}                                            
-          </select>
-        </div>
-      </div>
+	<div class="card small">
+	  <div class="card-header" id="hdr_character">
+	    <span>Character Properties</span>
+	  </div>
+		<div class="card-body">
+		{% include "speechdb/default_form.html" with form=character_form %}
+		</div>
+	</div>
+  <div class="card small">
+    <div class="card-header">
+      <span>Source properties</span>
     </div>
-    <div class="card small">
-      <div class="card-header">
-        <span>Text properties</span>
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <label for="sel_lang">Language</label>
-              <select class="form-control form-control-sm" id="sel_lang" name="lang">
-                <option value="">-----</option>
-                {% for k, v in lang_choices %}
-                <option value="{{ k }}" {% if params.lang == k %} selected="selected" {% endif %}>{{ v }}</option>
-                {% endfor %}
-              </select>
-              <label for="sel_auth">Author</label>
-              <select class="form-control form-control-sm" id="sel_auth" name="auth_id">
-                <option value="">-----</option>
-                {% for a in authors %}
-                <option value="{{ a.pk }}" {% if params.auth_id == a.pk %} selected="selected" {% endif %}>{{ a.name }}</option>
-                {% endfor %}
-              </select>
-              <label for="sel_work">Work</label>
-              <select class="form-control form-control-sm" id="sel_work" name="work_id">
-                <option value="">-----</option>
-                {% for w in works %}
-                <option value="{{ w.pk }}" {% if params.work_id == w.pk %} selected="selected" {% endif %}>{{ w.get_long_name }}</option>
-                {% endfor %}
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="row justify-content-around">
-            <button type="submit" class="btn btn-primary btn-sm w-25" >Search</button>
-            <a class="btn btn-secondary btn-sm w-25"  href="{% url 'app:characters' %}">Reset</a>
-        </div>
+    <div class="card-body">
+		{% include "speechdb/default_form.html" with form=text_form %}
+    </div>
+    <div class="card-footer">
+      <div class="row justify-content-around">
+          <button type="submit" class="btn btn-primary btn-sm w-25" >Search</button>
+          <a class="btn btn-secondary btn-sm w-25"  href="{% url 'app:characters' %}">Reset</a>
       </div>
     </div>
   </div>
