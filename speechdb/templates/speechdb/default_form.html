@@ -1,0 +1,14 @@
+<div class="form-group">
+	{% for field in form %}
+	{% if not field.is_hidden %}
+	<div class="row">
+		<div class="col">
+			{{ field.label_tag }}
+			{{ field }}
+		</div>
+	</div>
+	{% else %}
+	{{ field }}
+	{% endif %}
+	{% endfor %}
+</div>

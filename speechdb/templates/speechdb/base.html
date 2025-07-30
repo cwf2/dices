@@ -5,10 +5,28 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Font Awesome -->
     <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+		<!-- Include jQuery & Select2 -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+		<!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<!-- DICES style -->
     <link href="{% static 'speechdb/style.css' %}" rel="stylesheet">
     <link rel="icon" type="image/png" href="{% static 'speechdb/dices.png' %}"/>
+		<!-- Select2 functionality -->
+		<script>
+		  $(document).ready(function() {
+		    $(".tagging-select").each(function() {
+		      $(this).select2({
+		        tokenSeparators: [','],  // Split input on commas
+		        placeholder: "any",
+		      });
+		    });
+		  });
+		</script>
 	<style type="text/css">
 		.uniform-badge {
 		    display: inline-block; /* Allows alignment of text and icon */
@@ -30,15 +48,14 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        {% block navbar %}
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+          <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'app:speeches' %}">Speeches</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'app:clusters' %}">Speech Clusters</a>
-            </li>
+            </li>						
             <li class="nav-item">
               <a class="nav-link" href="{% url 'app:characters' %}">Characters</a>
             </li>
@@ -52,13 +69,13 @@
               <a class="nav-link" href="{% url 'app:works' %}">Works</a>
             </li>
           </ul>
+					
           <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'app:book' %}">Book</a>
+                <a class="nav-link" href="{% url 'app:book' %}"><i class="fa-solid fa-laptop-code"></i> DICES Book</a>
             </li>
-		</ul>
+					</ul>
         </div>
-        {% endblock %}
       </div>
     </nav>
     <div id="content" style="padding:20px;">

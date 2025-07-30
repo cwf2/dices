@@ -5,28 +5,14 @@
 {% block results %}
 <table class="table table-striped">
   <thead>
-    <tr><th>Name</th><th>WikiData ID</th><th>CITE ID</tr>
+    <tr><th>Name</th><th>Language</th><th>Works</th></tr>
   </thead>
   <tbody>
     {% for author in page_obj %}
     <tr>
       <td>{{ author.name }}</td>
-      <td>
-        {% if author.wd %}
-          {{ author.wd }}
-          <a style="margin-left: 0.5em" href="https://www.wikidata.org/wiki/{{ author.wd }}">
-            <i class="fa-solid fa-up-right-from-square"></i>
-          </a>
-        {% endif %}
-      </td>
-      <td>
-        {% if author.urn %}
-          {{ author.urn }}
-          <a style="margin-left: 0.5em" href="https://catalog.perseus.org/catalog/{{ author.urn }}">
-            <i class="fa-solid fa-up-right-from-square"></i>
-          </a>
-        {% endif %}
-      </td>
+			<td>{{ author.langs }} </td>
+			<td>{{ author.work_count }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -36,26 +22,31 @@
 {% block sidebar_content %}
 <form action="{% url 'app:authors' %}" method="GET">
   <div class="card small">
-    <div class="card-header" id="hdr_author">
-      <span>Author</span>
+    <div class="card-header" id="hdr_work">
+      <span>Text Properties</span>
     </div>
     <div class="card-body">
-      <div class="form-group">
-        <label for="sel_lang">Language</label>
-        <select class="form-control form-control-sm" id="sel_lang" name="lang">
-          <option value="">-----</option>
-          {% for k,v in lang_choices %}
-          <option value="{{ k }}" {% if params.lang == k %} selected="selected" {% endif  %}>{{ v }}</option>
-          {% endfor %}                                            
-        </select>
-      </div>
-    </div>
-    <div class="card-footer">
+			<div class="form-group">
+				<div class="row">
+					<div class="col">
+						{{ text_form.lang.label_tag }}
+						{{ text_form.lang }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						{{ text_form.work_title.label_tag }}
+						{{ text_form.work_title }}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-footer">
       <div class="row justify-content-around">
           <button type="submit" class="btn btn-primary btn-sm w-25" >Search</button>
-          <a class="btn btn-secondary btn-sm w-25"  href="{% url 'app:authors' %}">Reset</a>
+          <a class="btn btn-secondary btn-sm w-25"  href="{% url 'app:works' %}">Reset</a>
       </div>
     </div>
-</div>
+  </div>
 </form>
 {% endblock %}
