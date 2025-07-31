@@ -1,6 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.db.models import Q, Count, Max
@@ -392,6 +392,9 @@ class AppAuthorList(LoginRequiredMixin, ListView):
     template_name = "speechdb/author_list.html"
     paginate_by = PAGE_SIZE
     
+    # authentication
+    login_url = reverse_lazy("app:login")
+    
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
@@ -438,6 +441,9 @@ class AppWorkList(LoginRequiredMixin, ListView):
     model = Work
     template_name = 'speechdb/work_list.html'
     paginate_by = PAGE_SIZE
+    
+    # authentication
+    login_url = reverse_lazy("app:login")
     
     def get_queryset(self):
         # collect user search params
@@ -503,6 +509,9 @@ class AppCharacterList(LoginRequiredMixin, ListView):
     model = Character
     template_name = 'speechdb/character_list.html'
     paginate_by = PAGE_SIZE
+    
+    # authentication
+    login_url = reverse_lazy("app:login")
         
     def get_queryset(self):
         
@@ -618,6 +627,9 @@ class AppCharacterInstanceList(LoginRequiredMixin, ListView):
     template_name = 'speechdb/characterinstance_list.html'
     queryset = CharacterInstance.objects.all()
     paginate_by = PAGE_SIZE
+    
+    # authentication
+    login_url = reverse_lazy("app:login")
     
     
     def get_queryset(self):
@@ -761,6 +773,9 @@ class AppSpeechList(LoginRequiredMixin, ListView):
     template_name = 'speechdb/speech_list.html'
     paginate_by = PAGE_SIZE
     ordering = ['work', 'seq']
+    
+    # authentication
+    login_url = reverse_lazy("app:login")
          
     def get_queryset(self):
         
@@ -1097,6 +1112,9 @@ class AppSpeechClusterList(LoginRequiredMixin, ListView):
     model = SpeechCluster
     template_name = 'speechdb/speechcluster_list.html'
     paginate_by = PAGE_SIZE
+    
+    # authentication
+    login_url = reverse_lazy("app:login")
     
     def get_queryset(self):
         # collect user search params
@@ -1454,6 +1472,9 @@ class AppCharacterInstanceDetail(LoginRequiredMixin, DetailView):
     model = CharacterInstance
     template_name = 'speechdb/characterinstance_detail.html'
     context_object_name = 'inst'
+    
+    # authentication
+    login_url = reverse_lazy("app:login")
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
