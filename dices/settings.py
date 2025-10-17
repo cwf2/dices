@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
@@ -79,12 +80,11 @@ WSGI_APPLICATION = 'dices.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join('data', 'dices.db'),
-    }
+    'default': dj_database_url.parse(
+        os.getenv('DATABASE_URL', 'sqlite:///data/dices.db'),
+        conn_max_age=600,
+    )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
