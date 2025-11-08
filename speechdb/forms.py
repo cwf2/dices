@@ -14,6 +14,9 @@ def get_author_name_choices():
 
 def get_work_title_choices():
     return [(title, title) for title in sorted(set(w.title for w in Work.objects.all()))]
+    
+def get_work_lang_choices():
+    return [("", "any")] + Work.Language.choices
 
 #
 # form classes
@@ -122,7 +125,7 @@ class TextForm(PrefixedForm):
     
         self.fields["lang"] = forms.ChoiceField(
             label = "Language",
-            choices = [("", "any")] + Work.Language.choices, 
+            choices = get_work_lang_choices(), 
             required = False,
             initial = "",
             widget = forms.Select(attrs={
@@ -332,6 +335,7 @@ class PagerForm(forms.Form):
         )
     
         self.fields["lang"] = forms.ChoiceField(
+            choices = get_work_lang_choices(),
             required = False,
             widget = forms.HiddenInput(),
         )

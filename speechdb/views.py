@@ -39,6 +39,12 @@ def ValidateParams(request):
                 elif not isinstance(v, list):
                     v = [v]
                 params[k] = v
+
+        # short-circuit if bad params encountered
+        else:
+            print("validation failed")
+            print(form.errors)
+            return None
         
     if "page_size" in params:
         try:
@@ -765,6 +771,10 @@ class AppSpeechList(ListView):
         
         # collect user search params
         params = ValidateParams(self.request)
+        
+        # short-circuit if search params are malformed
+        if params is None:
+            return Speech.objects.none()
                             
         print(params)
         # initial set of objects plus annotations
@@ -1041,14 +1051,14 @@ class AppSpeechList(ListView):
         if "auth_id" in params:
             q = Q()
             for id in params["auth_id"]:
-                q |= q(work__author=id)
+                q |= Q(work__author=id)
             query.append(q)
             
         # author name
-        if "auth_name" in params:
+        if "author_name" in params:
             q = Q()
-            for name in params["auth_name"]:
-                q |= q(work__author__name=name)
+            for name in params["author_name"]:
+                q |= Q(work__author__name=name)
             query.append(q)
             
         # language
@@ -1253,7 +1263,7 @@ class AppSpeechClusterList(ListView):
 
         # speaker instance number
         if "spkr_inst_number" in params:
-            q = q()
+            q = Q()
             for number in params["spkr_inst_number"]:
                 q |= Q(speeches__spkr__number=number)
             query.append(q)
@@ -1403,14 +1413,14 @@ class AppSpeechClusterList(ListView):
         if "auth_id" in params:
             q = Q()
             for id in params["auth_id"]:
-                q |= q(speeches__work__author__id=id)
+                q |= Q(speeches__work__author__id=id)
             query.append(q)
             
         # author name
         if "auth_name" in params:
             q = Q()
             for name in params["auth_name"]:
-                q |= q(speeches__work__author__name=name)
+                q |= Q(speeches__work__author__name=name)
             query.append(q)
             
         # language
