@@ -361,7 +361,7 @@ class SpeechList(ListAPIView):
             kwargs['fields'] = ['id']
         if 'depth' in self.request.query_params:
             depth = self.request.query_params['depth']
-            m = re.fullmatch('\d+', depth)
+            m = re.fullmatch(r'\d+', depth)
             if m:
                 kwargs['depth'] = int(depth)
         return super().get_serializer(*args, **kwargs)
