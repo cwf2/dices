@@ -13,14 +13,14 @@
     <tr>
       <td>
         {{ inst.name }}
-        <a href="{% url 'app:instance_detail' inst.pk %}">
+        <a href="{% url 'app:instance_detail' inst.public_id %}">
           <i class="fa-solid fa-circle-info"></i>
         </a>
       </td>
       <td>
         {% if inst.char %}
         {{ inst.char.name }}
-        <a href="{% url 'app:character_detail' inst.char.pk %}">
+        <a href="{% url 'app:character_detail' inst.char.public_id %}">
           <i class="fa-solid fa-circle-info"></i>
         </a>
         {% endif %}

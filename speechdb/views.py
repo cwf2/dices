@@ -39,6 +39,12 @@ def ValidateParams(request):
                 elif not isinstance(v, list):
                     v = [v]
                 params[k] = v
+
+        # short-circuit if bad params encountered
+        else:
+            print("validation failed")
+            print(form.errors)
+            return None
         
     if "page_size" in params:
         try:
@@ -765,6 +771,10 @@ class AppSpeechList(ListView):
         
         # collect user search params
         params = ValidateParams(self.request)
+        
+        # short-circuit if search params are malformed
+        if params is None:
+            return Speech.objects.none()
                             
         print(params)
         # initial set of objects plus annotations
@@ -1041,14 +1051,14 @@ class AppSpeechList(ListView):
         if "auth_id" in params:
             q = Q()
             for id in params["auth_id"]:
-                q |= q(work__author=id)
+                q |= Q(work__author=id)
             query.append(q)
             
         # author name
-        if "auth_name" in params:
+        if "author_name" in params:
             q = Q()
-            for name in params["auth_name"]:
-                q |= q(work__author__name=name)
+            for name in params["author_name"]:
+                q |= Q(work__author__name=name)
             query.append(q)
             
         # language
@@ -1253,7 +1263,7 @@ class AppSpeechClusterList(ListView):
 
         # speaker instance number
         if "spkr_inst_number" in params:
-            q = q()
+            q = Q()
             for number in params["spkr_inst_number"]:
                 q |= Q(speeches__spkr__number=number)
             query.append(q)
@@ -1403,14 +1413,14 @@ class AppSpeechClusterList(ListView):
         if "auth_id" in params:
             q = Q()
             for id in params["auth_id"]:
-                q |= q(speeches__work__author__id=id)
+                q |= Q(speeches__work__author__id=id)
             query.append(q)
             
         # author name
         if "auth_name" in params:
             q = Q()
             for name in params["auth_name"]:
-                q |= q(speeches__work__author__name=name)
+                q |= Q(speeches__work__author__name=name)
             query.append(q)
             
         # language
@@ -1448,11 +1458,46 @@ class AppSpeechClusterList(ListView):
         
         return context
 
+class AppAuthorDetail(DetailView):
+    model = Author
+    template_name = "speechdb/author_detail.html"
+    context_object_name = "author"
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+
+
+class AppWorkDetail(DetailView):
+    model = Work
+    template_name = "speechdb/work_detail.html"
+    context_object_name = "work"
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+
+    
+class AppSpeechDetail(DetailView):
+    model = Speech
+    template_name = "speechdb/speech_detail.html"
+    context_object_name = "speech"
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['reader'] = CTS_READER
+                
+        return context
+
 
 class AppCharacterInstanceDetail(DetailView):
     model = CharacterInstance
     template_name = 'speechdb/characterinstance_detail.html'
     context_object_name = 'inst'
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+    
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -1467,6 +1512,9 @@ class AppCharacterDetail(DetailView):
     model = Character
     template_name = 'speechdb/character_detail.html'
     context_object_name = 'char'
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+    
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -1481,6 +1529,9 @@ class AppSpeechClusterDetail(DetailView):
     model = SpeechCluster
     template_name = 'speechdb/speechcluster_detail.html'
     context_object_name = 'cluster'
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
