@@ -1,18 +1,54 @@
-from django.db import models
+from django.db import models, IntegrityError
+import secrets
+
+URN_BASE = "http://epicspeeches.net"
+
+class PublicIdModel(models.Model):
+    '''a base class that incorporates a public-facing unique id in all records
+        - every new record gets a `public_id` field, a four-digit hex code
+        - this is suitable for generating record-specific URNs
+    '''
+
+    # expect four character string
+    public_id = models.CharField(max_length=4, unique=True, editable=False)
+        
+    class Meta:
+         abstract = True
+    
+    @property
+    def dices_urn(self):
+        '''return a urn for the object using project namespace'''
+        
+        return f"{URN_BASE}/{self.__class__.__name__}/{self.public_id}"
+    
+    
+    # overload the save method to generate a unique public_id value
+    def save(self, *args, **kwargs):
+        if not self.public_id:
+            for _ in range(100):
+                
+                # generate four-digit hex
+                candidate = f"{secrets.randbits(16):04X}"
+                if not type(self).objects.filter(public_id=candidate).exists():
+                    self.public_id = candidate
+                    break
+            else:
+                raise IntegrityError("No available unique public_id after 100 attempts")
+        super().save(*args, **kwargs)
 
 # Metadata about the database itself
-class Metadata(models.Model):
+class Metadata(PublicIdModel):
     name = models.CharField(max_length=128, blank=False, unique=True)
     value = models.TextField()
 
 # Entity classes
 
-class Author(models.Model):
+class Author(PublicIdModel):
     '''An ancient author'''
     
     name = models.CharField(max_length=128)
-    wd = models.CharField('WikiData ID', max_length=32)
-    urn = models.CharField(max_length=128)
+    wd = models.CharField('WikiData ID', max_length=32, blank=True, default="")
+    urn = models.CharField(max_length=128, blank=True, default="")
     
     class Meta:
         ordering = ['name']
@@ -21,17 +57,17 @@ class Author(models.Model):
         return self.name
 
 
-class Work(models.Model):
+class Work(PublicIdModel):
     '''An epic text'''
 
     class Language(models.TextChoices):
         GREEK = ('greek', 'Greek')
         LATIN = ('latin', 'Latin')
-    
+        
     title = models.CharField(max_length=128)
-    wd = models.CharField('WikiData ID', max_length=32)
-    tlg = models.CharField(max_length=12, blank=True)
-    urn = models.CharField(max_length=128)
+    wd = models.CharField('WikiData ID', max_length=32, blank=True, default="")
+    tlg = models.CharField(max_length=12, blank=True, default="")
+    urn = models.CharField(max_length=128, blank=True, default="")
     author = models.ForeignKey(Author, on_delete=models.PROTECT)
     lang = models.CharField(max_length=8, choices=Language.choices)
     
@@ -48,7 +84,7 @@ class Work(models.Model):
         return f'{self.author.name} {self.title}'
 
 
-class Character(models.Model):
+class Character(PublicIdModel):
     '''An epic character'''
     
     class CharacterNumber(models.TextChoices):
@@ -69,7 +105,6 @@ class Character(models.Model):
         NB = ('x', 'Mixed/non-binary')
         NA = ('none', 'Unknown/not-applicable')
 
-    
     name = models.CharField(max_length=128)
     being = models.CharField(max_length=16, choices=CharacterBeing.choices,
             default=CharacterBeing.MORTAL)
@@ -77,10 +112,10 @@ class Character(models.Model):
             default=CharacterNumber.INDIVIDUAL)
     gender = models.CharField(max_length=16, choices=CharacterGender.choices,
             default=CharacterGender.NA)
-    wd = models.CharField('WikiData ID', max_length=32, null=True)
-    manto = models.CharField('MANTO ID', max_length=32, null=True)
-    tt = models.CharField('ToposText ID', max_length=32, null=True)
-
+    wd = models.CharField('WikiData ID', max_length=32, blank=True, default="")
+    manto = models.CharField('MANTO ID', max_length=32, blank=True, default="")
+    tt = models.CharField('ToposText ID', max_length=32, blank=True, default="")
+    notes = models.CharField('Notes', max_length=256, blank=True, default="")
 
     class Meta:
         ordering = ['name']
@@ -96,10 +131,11 @@ class Character(models.Model):
         return Speech.objects.filter(addr__char__id=self.id)
 
 
-class CharacterInstance(models.Model):
+class CharacterInstance(PublicIdModel):
     '''A character engaged in a speech'''
-    
+
     name = models.CharField(max_length=128)
+    display = models.CharField(max_length=128)
     being = models.CharField(max_length=16, 
             choices=Character.CharacterBeing.choices,
             default=Character.CharacterBeing.MORTAL)
@@ -111,11 +147,10 @@ class CharacterInstance(models.Model):
             default=Character.CharacterGender.NA)
     char = models.ForeignKey(Character, related_name='instances', 
             null=True, on_delete=models.PROTECT)
-    disguise = models.CharField(max_length=128, null=True)
+    disguise = models.CharField(max_length=128, blank=True, default="")
     anon = models.BooleanField(default=False)
-    #TODO tuple (char, context) should be unique
+    notes = models.CharField(max_length=256, blank=True, default="")
     context = models.CharField(max_length=128)
-    tags = models.JSONField(default=dict)
     
     class Meta:
         ordering = ['name']
@@ -133,17 +168,16 @@ class CharacterInstance(models.Model):
         
         return name
     
-    @property
-    def speeches_by_char(self):
+    def get_speeches(self):
         '''returns set of speeches by all instances of underlying char'''
         return Speech.objects.filter(spkr__char=self.char)
         
-    def addresses_by_char(self):
+    def get_addresses(self):
         '''returns set of speeches by all instances of underlying char'''
         return Speech.objects.filter(addr__char=self.char)
 
 
-class SpeechCluster(models.Model):
+class SpeechCluster(PublicIdModel):
     '''A group of related speeches'''
     
     class Meta:
@@ -215,7 +249,7 @@ class SpeechCluster(models.Model):
         
         
 
-class Speech(models.Model):
+class Speech(PublicIdModel):
     '''A direct speech instance'''
     
     class SpeechType(models.TextChoices):
@@ -231,10 +265,12 @@ class Speech(models.Model):
     l_fi = models.CharField('first line', max_length=16)
     l_la = models.CharField('last line', max_length=16)
     spkr = models.ManyToManyField(CharacterInstance, related_name='speeches')
-    addr = models.ManyToManyField(CharacterInstance, related_name='addresses', blank=True)
-    # TODO should be unique per cluster
+    addr = models.ManyToManyField(CharacterInstance, related_name='addresses', blank=True, default="")
+    spkr_notes = models.CharField(max_length=256, blank=True, default="")
+    addr_notes = models.CharField(max_length=256, blank=True, default="")
     part = models.IntegerField()
     level = models.IntegerField(default=0)
+    notes = models.CharField(max_length=256, blank=True, default="")
     
     class Meta:
         ordering = ['work', 'seq']
@@ -263,7 +299,7 @@ class Speech(models.Model):
         return t
 
 
-class SpeechTag(models.Model):
+class SpeechTag(PublicIdModel):
     '''A category tag for speeches'''
 
     class TagType(models.TextChoices):
@@ -298,5 +334,5 @@ class SpeechTag(models.Model):
     type = models.CharField(max_length=3, choices=TagType.choices, 
                                 default=TagType.UNDEFINED)
     doubt = models.BooleanField(default=False)
-    notes = models.CharField(max_length=128, null=True)
+    notes = models.CharField(max_length=128, blank=True, default="")
     speech = models.ForeignKey(Speech, on_delete=models.CASCADE, related_name='tags')

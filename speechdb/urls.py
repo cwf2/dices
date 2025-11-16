@@ -6,23 +6,21 @@ from . import views
 
 frontend_urls = ([
     path('', views.AppIndex.as_view(), name='index'),
-    path('book/', TemplateView.as_view(template_name='speechdb/book_appendix.html'), name='book'),
     path('login/', auth_views.LoginView.as_view(template_name='speechdb/login.html'), name='login'),
     path('logout/', auth_views.logout_then_login, {'login_url':'app:index'}, name='logout'),
     path('meta/', views.AppMetadataList.as_view(), name='meta'),
     path('authors/', views.AppAuthorList.as_view(), name='authors'),
+    path('author/<str:public_id>', views.AppAuthorDetail.as_view(), name="author_detail"),
     path('works/', views.AppWorkList.as_view(), name='works'),
+    path('work/<str:public_id>', views.AppWorkDetail.as_view(), name="work_detail"),
     path('characters/', views.AppCharacterList.as_view(), name='characters'),
-    path('characters/<int:pk>', views.AppCharacterDetail.as_view(), name='character_detail'),
-    path('characters/search/', RedirectView.as_view(pattern_name='app:characters'), name='character_search'),    
+    path('character/<str:public_id>/', views.AppCharacterDetail.as_view(), name='character_detail'),
     path('instances/', views.AppCharacterInstanceList.as_view(), name='instances'),
-    path('instances/<int:pk>', views.AppCharacterInstanceDetail.as_view(), name='instance_detail'),
-    path('instances/search', RedirectView.as_view(pattern_name='app:instances'), name='instances_search'),    
+    path('characterinstance/<str:public_id>', views.AppCharacterInstanceDetail.as_view(), name='instance_detail'),
     path('clusters/', views.AppSpeechClusterList.as_view(), name='clusters'),
-    path('clusters/<int:pk>/', views.AppSpeechClusterDetail.as_view(), name='cluster_detail'),
-    path('clusters/search/', RedirectView.as_view(pattern_name='app:clusters'), name='cluster_search'),    
+    path('speechcluster/<str:public_id>/', views.AppSpeechClusterDetail.as_view(), name='cluster_detail'),
     path('speeches/', views.AppSpeechList.as_view(), name='speeches'),
-    path('speeches/search/', RedirectView.as_view(pattern_name='app:speeches'), name='speech_search'),    
+    path('speech/<str:public_id>/', views.AppSpeechDetail.as_view(), name="speech_detail"),
 ], 'app')
 
 api_urls = ([

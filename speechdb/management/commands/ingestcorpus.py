@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
 import django.db.utils
-from speechdb.models import Metadata
+from speechdb.models import Metadata, IntegrityError
 from speechdb.models import Author, Work, Character, CharacterInstance
 from speechdb.models import Speech, SpeechCluster, SpeechTag
 import csv
@@ -9,371 +9,302 @@ import os
 import re
 import time
 from django.core import serializers
+from git import Repo
 
 
-def validate(s, choices, default=None, allow_none=False):
+def validate(s, choices=None, allow_na=False, na_value="", transform=None):
     '''Validate user input'''
     
-    if s is not None:
-        s = str(s).strip().lower()
-        if len(s) == 0:
-            s = None
+    # strip whitespace
+    s = s or ""
+    s = str(s).strip()
     
-    allowed = choices.values
-    if allow_none:
-        allowed.append(None)
+    if transform:
+        s = transform(s)
     
-    if s not in allowed:
-        s = default.value
-    
-    return s
+    # if choices, make sure s is one of them
+    if choices is not None:
+        for val in list(choices.values):
+            if s.lower() == val.lower():
+                s = val
+                break
+        if s not in choices.values:
+            raise ValueError(f"Can't validate field value {s}")
+
+    # if na, see whether allowed
+    if s == "":
+        if allow_na:
+            return na_value
+        else:
+            raise ValueError("Can't validate null value")
+    else:
+        return s
 
 
 def addAuthors(file):
     '''Parse the authors list from a TSV file'''
-    f = open(file)
-    reader = csv.DictReader(f, delimiter='\t')
+    
+    with open(file) as f:
+        reader = csv.DictReader(f, delimiter='\t')
         
-    for rec in reader:
-        a = Author()
-        a.id = int(rec.get('id').strip())
-        a.name = rec.get('name').strip()
-        a.wd = rec.get('wd').strip()
-        a.urn = rec.get('urn').strip()
-        a.save()
+        for rec in reader:
+            a = Author()
+            a.id = int(rec.get('id').strip())
+            try:
+                a.name = validate(rec.get('name'))
+            except:
+                print(rec)
+                raise
+            a.wd = validate(rec.get('wd'), allow_na=True)
+            a.urn = validate(rec.get('urn'), allow_na=True)
+            a.save()
 
 
 def addWorks(file):
     '''Parse the works list from a TSV file'''
-    f = open(file)
-    reader = csv.DictReader(f, delimiter='\t')
+
+    with open(file) as f:
+        reader = csv.DictReader(f, delimiter='\t')
     
-    for rec in reader:
-        w = Work()
-        w.id = int(rec.get('id').strip())
-        auth_id = rec.get('author').strip()
-        try:
-            w.author = Author.objects.get(id=int(auth_id))
-        except:
-            print(f'Skipping work {w.id}: Can\'t parse author id "{auth_id}".')
-            continue
-        w.title = rec.get('title').strip()
-        w.lang = rec.get('lang').strip()
-        w.wd = rec.get('wd').strip()
-        w.urn = rec.get('urn').strip()
-        w.tlg = rec.get('tlg').strip()
-        w.save()
+        for rec in reader:
+            w = Work()
+            w.id = int(validate(rec.get('id')))
+            auth_id = int(validate(rec.get('author')))
+            try:
+                w.author = Author.objects.get(id=auth_id)
+            except:
+                raise ValueError(f'Failed on work {w}: Can\'t parse author id "{auth_id}".')
+
+            w.title = validate(rec.get('title'))
+            w.lang = validate(rec.get('lang'), choices=Work.Language)
+            w.wd = validate(rec.get('wd'), allow_na=True)
+            w.urn = validate(rec.get('urn'), allow_na=True)
+            w.tlg = validate(rec.get('tlg'), allow_na=True)
+            w.save()
 
 
-def addChars(file):
-    '''Parse the characters list from a TSV file'''
-    f = open(file)
-    reader = csv.DictReader(f, delimiter='\t')
+
+def addCharacters(file):
+    '''Parse the characters list from a TSV file
     
-    # a container for anonymous instances and alternate identities
-    characters = {}
-    alt_chars = {}
-    anon_chars = {}
+        NEW VERSION!
+    '''
+
+    with open(file) as f:
+        reader = csv.DictReader(f, delimiter='\t')
     
-    for rec in reader:
-        c = Character()
+        for rec in reader:
+            c = Character()
         
-        # name
-        c.name = rec.get('name').strip() or None
-        if c.name is None:
-            print(f'Character {c.id} has no name. Skipping')
-            continue
-        if c.name == 'self':
-            continue
-        if len(Character.objects.filter(name=c.name)) > 0:
-            print(f'Adding duplicate char name {c.name}.')
+            # name
+            c.name = validate(rec.get('name'))
+        
+            # being
+            c.being = validate(rec.get('being'), Character.CharacterBeing)
+
+            # number
+            c.number = validate(rec.get('number'), Character.CharacterNumber)
+
+            # gender
+            c.gender = validate(rec.get('gender'), Character.CharacterGender)
+
+            # wikidata id
+            c.wd = validate(rec.get('wd'), allow_na=True)
             
-        # wikidata id
-        c.wd = rec.get('wd')
-        if c.wd is not None:
-            c.wd = c.wd.strip()
+            # manto id
+            c.manto = validate(rec.get('manto'), allow_na=True)
             
-        # manto id
-        c.manto = rec.get('manto')
-        if c.manto is not None:
-            c.manto = c.manto.strip()
+            # topostext id
+            c.tt = validate(rec.get('topostext'), allow_na=True)
             
-        # topostext id
-        c.tt = rec.get('topostext')
-        if c.tt is not None:
-            c.tt = c.tt.strip()
-            
-        # anonymous
-        c.anon = (rec.get('anon') is not None) and (
-                    len(rec.get('anon').strip()) > 0)
-        # being
-        c.being = validate(rec.get('being'), Character.CharacterBeing,
-                    default=Character.CharacterBeing.MORTAL)
-        # number
-        c.number = validate(rec.get('number'), Character.CharacterNumber,
-                    default=Character.CharacterNumber.INDIVIDUAL)
-        # gender
-        c.gender = validate(rec.get('gender'), Character.CharacterGender,
-                    default=Character.CharacterGender.NA)
+            # notes
+            c.notes = validate(rec.get('notes'), allow_na=True)
         
-        # disguise
-        c.disguise = rec.get('disguise')
-        if c.disguise is not None:
-            c.disguise = c.disguise.strip()
-            if c.disguise == '':
-                c.disguise = None
-        c.same_as = rec.get('same_as').strip() or None
-        c.notes = rec.get('notes').strip() or None
-        
-        # tags
-        c.tags = {}
-        for col in rec.keys():
-            if col.startswith('tag_'):
-                key = col[4:]
-                vals = []
-                for tag in rec.get(col).split(','):
-                    tag = tag.strip()
-                    if tag != '':
-                        vals.append(tag)
-                if len(vals) > 0:
-                    c.tags[key] = vals
-        
-        # validation problems
-        if c.being is None:
-            print(f'Character {c} has no being')
-        
-        if c.name in characters or c.name in alt_chars or c.name in anon_chars:
-            print(f'Multiple records for name {c.name}.')
-        
-        if c.same_as is not None:
-            alt_chars[c.name] = c
-        elif c.anon:
-            anon_chars[c.name] = c
-        else:
-            characters[c.name] = c
             c.save()
+
+
+
+def getInstances(file):
+    '''Parse the character instances list from a TSV file
+    
+        because instance contexts are generated from speech records,
+        we can't populate CharacterInstances yet. Instead, we return
+        a dictionary indexing instance attributes by name.
+    '''
+    
+    with open(file) as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        
+        instances = {}
+        
+        for rec in reader:
+            inst = dict(
+                name = validate(rec.get('name')),
+                being = validate(rec.get('being'), Character.CharacterBeing),
+                number = validate(rec.get('number'), Character.CharacterNumber),
+                gender = validate(rec.get('gender'), Character.CharacterGender),
+                disguise = validate(rec.get('disguise'), allow_na=True),
+                char = None,
+                anon = validate(rec.get('anon'), allow_na=True) == 'yes',
+                notes = validate(rec.get('notes'), allow_na=True),
+            )
             
-    return characters, alt_chars, anon_chars
+            # display name defaults to instance name
+            inst["display"] = validate(rec.get('screen name'), allow_na=True) or inst["name"]
+            
+            # if instance of, check character list
+            char_name = validate(rec.get('instance of'), allow_na=True)
+            if char_name:
+                qs = Character.objects.filter(name=char_name)
+                if len(qs) < 1:
+                    raise ValueError(f"Instance failed on character name: {rec}")
+                elif len(qs) > 1:
+                    raise IntegrityError(f"Instance matches two character names: {rec}")
+                else:
+                    inst["char"] = qs.first()
+                    
+            # otherwise, check instance name against character list
+            else:
+                qs = Character.objects.filter(name=inst["name"])
+                if len(qs) > 1:
+                    raise IntegrityError(f"Instance matches two character names: {rec}")
+                elif len(qs) == 1:
+                    inst["char"] = qs.first()
+            
+            instances[inst["name"]] = inst
+            
+    return instances
+            
 
-    
-def addInst(name, speech, characters, alt_chars={}, anon_chars={}):
-    '''get or create character instance'''
-    
-    # details of this instance
-    instance_params = {
-        'name': name,
-        'context': speech.work.title,
-    }
-
-    # look for the name in characters list, alt ids, anonymous chars
-    if name in characters:
-        c = characters[name]
-        instance_params['name'] = c.name
-        instance_params['gender'] = c.gender
-        instance_params['being'] = c.being
-        instance_params['number'] = c.number
-        instance_params['char'] = c
-    elif name in alt_chars:
-        c = alt_chars[name]
-        instance_params['name'] = c.name
-        instance_params['gender'] = c.gender
-        instance_params['being'] = c.being
-        instance_params['number'] = c.number
-        instance_params['disguise'] = c.disguise
-        instance_params['anon'] = c.anon
-        try:
-            instance_params['char'] = characters[c.same_as]
-        except KeyError:
-            print('Pseud {name} points to non-existent char {same_as}.'.format(
-                    name=name, same_as=alt_chars[name].same_as))
-    elif name in anon_chars:
-        c = anon_chars[name]
-        instance_params['name'] = c.name
-        instance_params['gender'] = c.gender
-        instance_params['being'] = c.being
-        instance_params['number'] = c.number
-        instance_params['anon'] = c.anon
-        instance_params['tags'] = c.tags
-    else:
-        print(f'Failed to find character {name}.')
-        return None
-    
-    #print(f'DEBUG: speech={speech}; params={instance_params}')
-    inst, created = CharacterInstance.objects.get_or_create(**instance_params)
-    
-    return inst
-
-
-def addSpeeches(file, characters, alt_chars={}, anon_chars={}):
+def addSpeeches(file, instances):
     '''Parse the speeches list from a TSV file'''
-    f = open(file)
-    reader = csv.DictReader(f, delimiter='\t')
     
-    skipped = []
+    with open(file) as f:
+        reader = csv.DictReader(f, delimiter='\t')
     
-    for rec in reader:
-        s = Speech()
-        errs = []
+        for rec in reader:
+            try:
+                s = Speech()
         
-        # sequence
-        try:
-            s.seq = rec.get('seq').strip()
-            assert s.seq
-        except:
-            errs.append('seq')
+                # sequence
+                s.seq = int(validate(rec.get('seq')))
         
-        # locus
-        try:
-            book_fi = rec.get('from_book').strip()
-            assert book_fi
-            book_fi += '.'
-        except:
-            book_fi = ''
+                # locus
+                book_fi = validate(rec.get('from_book'), allow_na=True)
+                if book_fi:
+                    book_fi += '.'
+                else:
+                    book_fi = ''
             
-        try:
-            book_la = rec.get('to_book').strip()
-            assert book_la
-            book_la += '.'
-        except:
-            book_la = ''
+                book_la = validate(rec.get('to_book'), allow_na=True)
+                if book_la:
+                    book_la += '.'
+                else:
+                    book_la = ''
 
-        try:
-            line_fi = rec.get('from_line').strip()
-            assert line_fi
-        except:
-            errs.append('from_line')
-
-        try:
-            line_la = rec.get('to_line').strip()
-            assert line_la
-        except:
-            errs.append('to_line')
+                line_fi = validate(rec.get('from_line'))
+                line_la = validate(rec.get('to_line'))
     
-        s.l_fi = book_fi + line_fi
-        s.l_la = book_la + line_la
+                s.l_fi = book_fi + line_fi
+                s.l_la = book_la + line_la
         
-        # work
-        work_id = rec.get('work_id').strip()
-        try:
-            work_id = int(work_id)
-            s.work = Work.objects.get(id=work_id)            
-        except ValueError:
-            work_id = 99
-            errs.append('work')
+                # work
+                work_id = int(validate(rec.get('work_id')))
+                s.work = Work.objects.get(id=work_id)            
 
-        # cluster type
-        try:
-            s.type = rec.get('simple_cluster_type')[0].upper()
-            assert s.type
-        except:
-            errs.append('simple_cluster_type')
-            # temp value: speech should be deleted
-            s.type='M'
+                # cluster type
+                s.type = validate(rec.get('turn_type'), choices=Speech.SpeechType, transform=lambda s: s[0])
         
-        # cluster_id
-        cluster_id = rec.get('cluster_id').strip()
-        try:
-            cluster_id = int(cluster_id)            
+                # cluster_id
+                cluster_id = int(validate(rec.get('cluster_id')))
+                s.cluster, cluster_created = SpeechCluster.objects.get_or_create(id=cluster_id)
 
-            s.cluster, cluster_created = SpeechCluster.objects.get_or_create(id=cluster_id)
-        except ValueError:
-            errs.append('cluster_id')
-            cluster_created = False
-
-        # cluster part
-        try:
-            part = rec.get('cluster_part').strip()
-            if 'or' in part:
-                m = re.search('\d+', part)
-                if m:
-                    part = m.group(0)
-            s.part = int(part)
-        except:
-            errs.append('part')
-            # temp value: speech should be deleted
-            s.part = 1
+                # cluster part
+                s.part = int(validate(rec.get('cluster_part')))
             
-        # embeddedness
-        try:
-            s.level = int(rec.get('embedded_level').strip())
-        except:
-            errs.append('embedded_level')
+                # embeddedness
+                s.level = int(validate(rec.get('embedded_level')))
         
-        # speaker notes
-        try:
-            s.spkr_notes = rec.get('speaker_notes').strip() or None
-        except AttributeError:
-            s.spkr_notes = None
+                # speaker notes
+                s.spkr_notes = validate(rec.get('speaker_notes'), allow_na=True)
         
-        # addressee notes
-        try:
-            s.addr_notes = rec.get('addressee_notes').strip() or None
-        except AttributeError:
-            s.addr_notes = None
+                # addressee notes
+                s.addr_notes = validate(rec.get('addressee_notes'), allow_na=True)
         
-        # general notes
-        s.notes = rec.get('misc_notes').strip() or None    
+                # general notes
+                s.notes = validate(rec.get('misc_notes'), allow_na=True)
 
-        # speech must be saved before adding character instances
-        if len(errs) == 0:
-            s.save()
+                # speech must be saved before adding character instances
+                s.save()
+
+            except:
+                print(s)
+                raise
+                    
+            # generate context from work
+            context = s.work.get_long_name()
                     
             # speakers
-            try:
-                spkr_str = rec.get('speaker').strip()
-                assert spkr_str != ''
+            spkr_str = validate(rec.get('speaker'))
 
-                for name in spkr_str.split(' and '):
-                    inst = addInst(name, s, characters=characters, 
-                            alt_chars=alt_chars, anon_chars=anon_chars)
-                    if inst is not None:
-                        s.spkr.add(inst)
-                assert len(s.spkr.all()) > 0
-                                
-            except:
-                errs.append('speaker')
+            for name in spkr_str.split(';'):
+                if name in instances:
+                    inst, inst_created = CharacterInstance.objects.get_or_create(
+                        name = name,
+                        display = instances[name]["display"],
+                        context = context,
+                        being = instances[name]["being"],
+                        number = instances[name]["number"],
+                        gender = instances[name]["gender"],
+                        disguise = instances[name]["disguise"],
+                        char = instances[name]["char"],
+                        anon = instances[name]["anon"],
+                        notes = instances[name]["notes"],
+                    )
+                    s.spkr.add(inst)
+                else:
+                    raise ValueError(f"speech {s} failed on speaker {name}")
+            assert len(s.spkr.all()) > 0
+            
+            # addressees            
+            addr_str = validate(rec.get('addressee'))
 
-            # addressees
-            try:
-                addr_str = rec.get('addressee').strip()
-                assert addr_str != ''
-
-                for name in addr_str.split(' and '):
-                    if name == 'self':
-                        inst = s.spkr.first()
+            for name in addr_str.split(';'):
+                if name == 'self':
+                    inst = s.spkr.first()
+                else: 
+                    if name in instances:
+                        inst, inst_created = CharacterInstance.objects.get_or_create(
+                            name = name,
+                            display = instances[name]["display"],
+                            context = context,
+                            being = instances[name]["being"],
+                            number = instances[name]["number"],
+                            gender = instances[name]["gender"],
+                            disguise = instances[name]["disguise"],
+                            char = instances[name]["char"],
+                            anon = instances[name]["anon"],
+                            notes = instances[name]["notes"],
+                        )
                     else:
-                        inst = addInst(name, s, characters=characters,
-                                alt_chars=alt_chars, anon_chars=anon_chars)
-                    if inst is not None:
-                        s.addr.add(inst)
-                assert len(s.addr.all()) > 0
-                
-            except:
-                errs.append('addressee')
+                        raise ValueError(f"speech {s} failed on addressee {name}")
+                s.addr.add(inst)
+            assert len(s.addr.all()) > 0
+            
+            s.save()
             
             # speech type tags
-            tag_notes = rec.get('long_speech_type').strip() or None
-            tag_str = rec.get('short_speech_type').strip()
+            tag_str = validate(rec.get('short_speech_type'), allow_na=True)
             for tag in tag_str.split(';'):
                 tag = tag.strip().lower()
                 doubt = tag.endswith('?')
                 tag = tag.strip(' ?')
-                if tag not in SpeechTag.TagType.values:
-                    tag = SpeechTag.TagType.UNDEFINED
-                t = SpeechTag(type=tag, speech=s, doubt=doubt, notes=tag_notes)
-                t.save()
+                if tag is not None and len(tag) > 0:
+                    if tag not in SpeechTag.TagType.values:
+                        raise ValueError(f"speech {s} failed on undefined tag {tag}")
+                    t = SpeechTag(type=tag, speech=s, doubt=doubt)
+                    t.save()
             
-                
-        else:
-            skipped.append((reader.line_num, str(s), errs))
-            if cluster_created:
-                s.cluster.delete()
-    
-    if len(skipped) > 0:
-        print(f'skipped {len(skipped)} rows:')
-        for line_num, speech, errs in skipped:
-            print(line_num, speech, errs)
-
 
 class Command(BaseCommand):
     help = 'Check data integrity?'
@@ -397,15 +328,19 @@ class Command(BaseCommand):
         # characters
         char_file = os.path.join(path, 'characters')
         self.stderr.write(f'Reading data from {char_file}')
-        characters, alt_chars, anon_chars = addChars(char_file)
+        addCharacters(char_file)
+
+        # instances
+        inst_file = os.path.join(path, 'instances')
+        self.stderr.write(f'Reading data from {inst_file}')
+        instances = getInstances(inst_file)
 
         # speeches, clusters, and char instances
         speech_files = [os.path.join(path, f) for f in sorted(os.listdir(path))
                         if f.startswith('speeches')]
         for speech_file in speech_files:
             self.stderr.write(f'Reading data from {speech_file}')
-            addSpeeches(speech_file, characters=characters, alt_chars=alt_chars,
-                        anon_chars=anon_chars)
+            addSpeeches(speech_file, instances=instances)
                         
         # set sort-order for speech clusters
         cluster_index = {}
@@ -419,6 +354,14 @@ class Command(BaseCommand):
             cluster.seq = cluster_index[cluster.pk]
             cluster.save()
         
+        # get current git hash
+        repo = Repo(search_parent_directories=True)
+        if repo:
+            commit_hash = repo.head.object.hexsha
+        else:
+            commit_hash = ""
+        
         # metadata
-        Metadata(name='version', value='1.0b').save()
+        Metadata(name='version', value='1.1').save()
         Metadata(name='date', value=time.strftime('%Y-%m-%d %H:%M:%S %z')).save()
+        Metadata(name='git-commit', value=commit_hash).save()

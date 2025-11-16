@@ -78,15 +78,21 @@ WSGI_APPLICATION = 'dices.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'sqlite': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join('data', 'dices.db'),
+    },
+    'postgres': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dices',
-        'USER': 'django',
-        'HOST': 'localhost',
-        'PASSWORD': os.environ.get('DJANGO_ADMIN_PW'),
-        'PORT': 5432,
-    }
+        'NAME': os.getenv('POSTGRES_DB', 'dices'),
+        'USER': os.getenv('POSTGRES_USER', 'django'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
+        'HOST': os.getenv('POSTGRES_HOST', 'localhost'),
+        'PORT': os.getenv('POSTGRES_PORT', '5432'),
+    },
 }
+
+DATABASES['default'] = DATABASES[os.getenv('DJANGO_DB', 'sqlite')]
 
 
 # Password validation
