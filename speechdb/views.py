@@ -393,7 +393,7 @@ class AppMetadataList(ListView):
     queryset = Metadata.objects.all()
 
 
-class AppAuthorList(LoginRequiredMixin, ListView):
+class AppAuthorList(ListView):
     model = Author
     template_name = "speechdb/author_list.html"
     paginate_by = PAGE_SIZE
@@ -443,7 +443,7 @@ class AppAuthorList(LoginRequiredMixin, ListView):
         return qs
 
 
-class AppWorkList(LoginRequiredMixin, ListView):
+class AppWorkList(ListView):
     model = Work
     template_name = 'speechdb/work_list.html'
     paginate_by = PAGE_SIZE
@@ -511,7 +511,7 @@ class AppWorkList(LoginRequiredMixin, ListView):
 
 
 
-class AppCharacterList(LoginRequiredMixin, ListView):
+class AppCharacterList(ListView):
     model = Character
     template_name = 'speechdb/character_list.html'
     paginate_by = PAGE_SIZE
@@ -628,7 +628,7 @@ class AppCharacterList(LoginRequiredMixin, ListView):
         return context
 
 
-class AppCharacterInstanceList(LoginRequiredMixin, ListView):
+class AppCharacterInstanceList(ListView):
     model = CharacterInstance
     template_name = 'speechdb/characterinstance_list.html'
     queryset = CharacterInstance.objects.all()
@@ -774,7 +774,7 @@ class AppCharacterInstanceList(LoginRequiredMixin, ListView):
         return context
 
 
-class AppSpeechList(LoginRequiredMixin, ListView):
+class AppSpeechList(ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
     paginate_by = PAGE_SIZE
@@ -1118,7 +1118,7 @@ class AppSpeechList(LoginRequiredMixin, ListView):
         return context
     
         
-class AppSpeechClusterList(LoginRequiredMixin, ListView):
+class AppSpeechClusterList(ListView):
     model = SpeechCluster
     template_name = 'speechdb/speechcluster_list.html'
     paginate_by = PAGE_SIZE
@@ -1510,7 +1510,7 @@ class AppSpeechDetail(DetailView):
         return context
 
 
-class AppCharacterInstanceDetail(LoginRequiredMixin, DetailView):
+class AppCharacterInstanceDetail(DetailView):
     model = CharacterInstance
     template_name = 'speechdb/characterinstance_detail.html'
     context_object_name = 'inst'
@@ -1530,7 +1530,7 @@ class AppCharacterInstanceDetail(LoginRequiredMixin, DetailView):
         return context
 
 
-class AppCharacterDetail(LoginRequiredMixin, DetailView):
+class AppCharacterDetail(DetailView):
     model = Character
     template_name = 'speechdb/character_detail.html'
     context_object_name = 'char'
@@ -1547,7 +1547,7 @@ class AppCharacterDetail(LoginRequiredMixin, DetailView):
         return context
 
 
-class AppSpeechClusterDetail(LoginRequiredMixin, DetailView):
+class AppSpeechClusterDetail(DetailView):
     model = SpeechCluster
     template_name = 'speechdb/speechcluster_detail.html'
     context_object_name = 'cluster'
