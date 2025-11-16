@@ -51,7 +51,7 @@
                 {% for inst in s.spkr.all %}
                   <div>
                     {{ inst.name }}
-                    <a href="{% url 'app:instance_detail' inst.id %}">
+                    <a href="{% url 'app:instance_detail' inst.public_id %}">
                       <i class="fa-solid fa-circle-info"></i>
                     </a>
                   </div>
@@ -61,7 +61,7 @@
                 {% for inst in s.addr.all %}
                   <div>
                     {{ inst.name }}
-                    <a href="{% url 'app:instance_detail' inst.id %}">
+                    <a href="{% url 'app:instance_detail' inst.public_id %}">
                       <i class="fa-solid fa-circle-info"></i>
                     </a>
                   </div>

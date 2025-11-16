@@ -11,7 +11,7 @@
     {% for c in page_obj %}
     <tr>
       <td>{{ c.get_loc_str }}
-          <a style="margin-left:0.5em" href="{% url 'app:cluster_detail' c.pk %}">
+          <a style="margin-left:0.5em" href="{% url 'app:cluster_detail' c.public_id %}">
               <i class="fa-solid fa-circle-info"></i>
           </a>
          {% if c.get_urn %}          

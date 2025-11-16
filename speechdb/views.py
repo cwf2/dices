@@ -1458,11 +1458,46 @@ class AppSpeechClusterList(ListView):
         
         return context
 
+class AppAuthorDetail(DetailView):
+    model = Author
+    template_name = "speechdb/author_detail.html"
+    context_object_name = "author"
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+
+
+class AppWorkDetail(DetailView):
+    model = Work
+    template_name = "speechdb/work_detail.html"
+    context_object_name = "work"
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+
+    
+class AppSpeechDetail(DetailView):
+    model = Speech
+    template_name = "speechdb/speech_detail.html"
+    context_object_name = "speech"
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # add useful info
+        context['reader'] = CTS_READER
+                
+        return context
+
 
 class AppCharacterInstanceDetail(DetailView):
     model = CharacterInstance
     template_name = 'speechdb/characterinstance_detail.html'
     context_object_name = 'inst'
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+    
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -1477,6 +1512,9 @@ class AppCharacterDetail(DetailView):
     model = Character
     template_name = 'speechdb/character_detail.html'
     context_object_name = 'char'
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+    
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -1491,6 +1529,9 @@ class AppSpeechClusterDetail(DetailView):
     model = SpeechCluster
     template_name = 'speechdb/speechcluster_detail.html'
     context_object_name = 'cluster'
+    slug_field = "public_id"
+    slug_url_kwarg = "public_id"
+
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context

@@ -20,6 +20,9 @@
     <tr>
       <td>
           {{ s.work.get_long_name }} {{ s.l_fi }}—{{ s.l_la }}
+          <a style="margin-left:0.5em" href="{% url 'app:speech_detail' s.public_id %}">
+              <i class="fa-solid fa-circle-info"></i>
+          </a>
           {% if s.get_urn %}
           <a style="margin-left:0.5em" href="{{ reader }}{{ s.get_urn }}">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -30,7 +33,7 @@
         {% for inst in s.spkr.all %}
         <div>
           {{ inst.name }}
-          <a style="margin-left:0.5em" href="{% url 'app:instance_detail' inst.id %}">
+          <a style="margin-left:0.5em" href="{% url 'app:instance_detail' inst.public_id %}">
               <i class="fa-solid fa-circle-info"></i>
           </a>
         </div>
@@ -40,7 +43,7 @@
         {% for inst in s.addr.all %}
         <div>
             {{ inst.name }}            
-            <a style="margin-left:0.5em" href="{% url 'app:instance_detail' inst.id %}">
+            <a style="margin-left:0.5em" href="{% url 'app:instance_detail' inst.public_id %}">
                 <i class="fa-solid fa-circle-info"></i>            
             </a>
         </div>
@@ -51,7 +54,7 @@
       </td>
       <td>
           {{ s.part }} of {{ s.cluster.speeches.count }}
-          <a style="margin-left: 1em" href="{% url 'app:cluster_detail' s.cluster.id %}">
+          <a style="margin-left: 1em" href="{% url 'app:cluster_detail' s.cluster.public_id %}">
               <i class="fa-solid fa-circle-info"></i>
           </a>
       </td>

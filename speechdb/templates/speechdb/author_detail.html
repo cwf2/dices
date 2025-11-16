@@ -1,0 +1,48 @@
+{% extends "speechdb/base_nosidebar.html" %}
+
+{% block title %}Author Detail{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+  <div class="accordion">
+    <div class="accordion-item">
+			<div class="accordion-header" style="padding: 20px 20px">
+      <h4>Author Detail</h4>
+			<small>Author {{ author.public_id }}</small>
+      <div class="accordion-body">
+        <table class="table">
+          <thead>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td>{{ author.name}}</td>
+            </tr>
+            <tr>
+              <td>CITE URN</td>
+              <td>
+                {% if author.urn %}
+                {{ author.urn }}
+                <a style="margin-left:0.5em" href="https://catalog.perseus.org/catalog/{{ author.urn }}">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>                  
+                </a>
+                {% endif %}
+              </td>
+            </tr>
+            <tr>
+              <td>WikiData</td>
+              <td>
+                {% if author.wd %}
+                {{ author.wd }}
+                <a style="margin-left:0.5em" href="https://www.wikidata.org/wiki/{{ author.wd }}">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                {% endif %}
+              </td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>    
+</div>
+{% endblock %}

@@ -6,7 +6,9 @@
 <div class="jumbotron">
   <div class="accordion">
     <div class="accordion-item">
-      <h4 class="accordion-header" style="padding: 20px 20px">Character Detail</h4>
+			<div class="accordion-header" style="padding: 20px 20px">
+      <h4>Character Detail</h4>
+			<small>Character {{ char.public_id }}</small>
       <div class="accordion-body">
         <table class="table">
           <thead>
@@ -101,7 +103,7 @@
             <tr>
               <td>
                 {{ inst.name }}
-                <a href="{% url 'app:instance_detail' inst.pk %}">
+                <a href="{% url 'app:instance_detail' inst.public_id %}">
                   <i class="fa-solid fa-circle-info"></i>
                 </a>
               </td>
