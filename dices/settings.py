@@ -27,6 +27,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [os.environ.get('DJANGO_HOSTNAME')]
+CSRF_TRUSTED_ORIGINS = ["http://" + os.environ.get('DJANGO_HOSTNAME'), "https://" + os.environ.get('DJANGO_HOSTNAME')]
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Application definition
 
