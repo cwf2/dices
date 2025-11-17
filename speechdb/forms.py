@@ -194,11 +194,19 @@ class PagerForm(forms.Form):
     # lazy field definitions
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-    
+
         self.fields["char_name"] = forms.MultipleChoiceField(
             choices = get_char_name_choices(),
             required = False,
             widget = forms.MultipleHiddenInput(),
+        )
+        self.fields["char_id"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["char_pk"] = forms.IntegerField(
+            required = False,
+            widget = forms.HiddenInput(),
         )
         self.fields["char_gender"] = forms.MultipleChoiceField(
             choices = Character.CharacterGender.choices,
@@ -221,6 +229,14 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
+        self.fields["inst_id"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["inst_pk"] = forms.IntegerField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )        
         self.fields["inst_gender"] = forms.MultipleChoiceField(
             choices = Character.CharacterGender.choices,
             required = False,
@@ -247,6 +263,14 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
+        self.fields["spkr_char_id"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["spkr_char_pk"] = forms.IntegerField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )        
         self.fields["spkr_char_gender"] = forms.MultipleChoiceField(
             choices = Character.CharacterGender.choices,
             required = False,
@@ -266,6 +290,14 @@ class PagerForm(forms.Form):
             choices = get_inst_name_choices(),
             required = False,
             widget = forms.MultipleHiddenInput(),
+        )
+        self.fields["spkr_inst_id"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["spkr_inst_pk"] = forms.IntegerField(
+            required = False,
+            widget = forms.HiddenInput(),
         )
         self.fields["spkr_inst_gender"] = forms.MultipleChoiceField(
             choices = Character.CharacterGender.choices,
@@ -293,6 +325,14 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
+        self.fields["addr_char_id"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["addr_char_pk"] = forms.IntegerField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )        
         self.fields["addr_char_gender"] = forms.MultipleChoiceField(
             choices = Character.CharacterGender.choices,
             required = False,
@@ -313,6 +353,14 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
+        self.fields["addr_inst_id"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["addr_inst_pk"] = forms.IntegerField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )        
         self.fields["addr_inst_gender"] = forms.MultipleChoiceField(
             choices = Character.CharacterGender.choices,
             required = False,
@@ -334,6 +382,7 @@ class PagerForm(forms.Form):
             widget = forms.MultipleHiddenInput(),
         )
     
+        # work properties
         self.fields["lang"] = forms.ChoiceField(
             choices = get_work_lang_choices(),
             required = False,
@@ -343,6 +392,22 @@ class PagerForm(forms.Form):
             choices = get_author_name_choices(),
             required = False,
             widget = forms.MultipleHiddenInput(),
+        )
+        self.fields["author_id"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["author_pk"] = forms.IntegerField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["work_id"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["work_pk"] = forms.IntegerField(
+            required = False,
+            widget = forms.HiddenInput(),
         )
         self.fields["work_title"] = forms.MultipleChoiceField(
             choices = get_work_title_choices(),
