@@ -42,8 +42,6 @@ def ValidateParams(request):
 
         # short-circuit if bad params encountered
         else:
-            print("validation failed")
-            print(form.errors)
             return None
         
     if "page_size" in params:
@@ -459,6 +457,22 @@ class AppWorkList(ListView):
                 q |= Q(instances__addresses__work__author__name=author_name)
             query.append(q)
 
+
+        if 'author_pk' in params:
+            q = Q()
+            for author_pk in params["author_pk"]:
+                q |= Q(instances__speeches__work__author__pk=author_pk)
+                q |= Q(instances__addresses__work__author__pk=author_pk)
+            query.append(q)
+
+
+        if 'author_id' in params:
+            q = Q()
+            for author_pubid in params["author_id"]:
+                q |= Q(instances__speeches__work__author__public_id=author_pubid)
+                q |= Q(instances__addresses__work__author__public_id=author_pubid)
+            query.append(q)
+
         if 'work_title' in params:
             q = Q()
             for work_title in params["work_title"]:
@@ -567,6 +581,20 @@ class AppCharacterList(ListView):
                 q |= Q(instances__addresses__work__author__name=author_name)
             query.append(q)
 
+        if 'author_id' in params:
+            q = Q()
+            for author_pubid in params["author_id"]:
+                q |= Q(instances__speeches__work__author__public_id=author_pubid)
+                q |= Q(instances__addresses__work__author__public_id=author_pubid)
+            query.append(q)
+
+        if 'author_pk' in params:
+            q = Q()
+            for author_pk in params["author_pk"]:
+                q |= Q(instances__speeches__work__author__pk=author_pk)
+                q |= Q(instances__addresses__work__author__pk=author_pk)
+            query.append(q)
+
         if 'work_title' in params:
             q = Q()
             for work_title in params["work_title"]:
@@ -576,11 +604,18 @@ class AppCharacterList(ListView):
 
         if 'work_id' in params:
             q = Q()
-            for work_title in params["work_id"]:
-                q |= Q(instances__speeches__work__pk=work_id)
-                q |= Q(instances__addresses__work__pk=work_id)
+            for work_pubid in params["work_id"]:
+                q |= Q(instances__speeches__work__public_id=work_pubid)
+                q |= Q(instances__addresses__work__public_id=work_pubid)
             query.append(q)
             
+        if 'work_pk' in params:
+            q = Q()
+            for work_pk in params["work_pk"]:
+                q |= Q(instances__speeches__work__pk=work_pk)
+                q |= Q(instances__addresses__work__pk=work_pk)
+            query.append(q)
+
         if 'lang' in params:
             q = Q()
             for lang in params["lang"]:
@@ -665,6 +700,18 @@ class AppCharacterInstanceList(ListView):
             query.append(q)
         
         # character properties
+        if "char_id" in params:
+            q = Q()
+            for char_pubid in params["char_id"]:
+                q |= Q(char__public_id=char_pubid)
+            query.append(q)
+
+        if "char_pk" in params:
+            q = Q()
+            for char_pk in params["char_pk"]:
+                q |= Q(char__public_pk=char_pk)
+            query.append(q)
+
         if "char_name" in params:
             q = Q()
             for name in params["char_name"]:
@@ -708,6 +755,20 @@ class AppCharacterInstanceList(ListView):
             query.append(q)
             
         # text properties
+        if 'author_id' in params:
+            q = Q()
+            for author_pubid in params["author_id"]:
+                q |= Q(speeches__work__author__public_id=author_pubid)
+                q |= Q(addresses__work__author__public_id=author_pubid)
+            query.append(q)
+
+        if 'author_pk' in params:
+            q = Q()
+            for author_pk in params["author_pk"]:
+                q |= Q(speeches__work__author__pk=author_pk)
+                q |= Q(addresses__work__author__pk=author_pk)
+            query.append(q)
+
         if 'author_name' in params:
             q = Q()
             for author_name in params["author_name"]:
@@ -720,6 +781,20 @@ class AppCharacterInstanceList(ListView):
             for work_title in params:
                 q |= Q(speeches__work__title=work_title)
                 q |= Q(addresses__work__title=work_title)
+            query.append(q)
+
+        if 'work_id' in params:
+            q = Q()
+            for work_pubid in params:
+                q |= Q(speeches__work__public_id=work_pubid)
+                q |= Q(addresses__work__public_id=work_pubid)
+            query.append(q)
+        
+        if 'work_pk' in params:
+            q = Q()
+            for work_pk in params:
+                q |= Q(speeches__work__pk=work_pk)
+                q |= Q(addresses__work__pk=work_pk)
             query.append(q)
             
         if 'lang' in params:
@@ -776,7 +851,6 @@ class AppSpeechList(ListView):
         if params is None:
             return Speech.objects.none()
                             
-        print(params)
         # initial set of objects plus annotations
         qs = Speech.objects.annotate(Count('cluster__speeches'))
         
@@ -787,11 +861,18 @@ class AppSpeechList(ListView):
         # speaker properties
         # 
         
-        # speaker character id
+        # speaker character public id
         if "spkr_char_id" in params:
             q = Q()
-            for id in params["spkr_char_id"]:
-                q |= Q(spkr__char=id)
+            for pubid in params["spkr_char_id"]:
+                q |= Q(spkr__char__public_id=pubid)
+            query.append(q)
+
+        # speaker character id
+        if "spkr_char_pk" in params:
+            q = Q()
+            for pk in params["spkr_char_pk"]:
+                q |= Q(spkr__char__pk=pk)
             query.append(q)
 
         # speaker character name
@@ -843,11 +924,18 @@ class AppSpeechList(ListView):
                 q |= Q(spkr__char__tt=tt)
             query.append(q)
             
-        # speaker instance id
+        # speaker instance public id
         if "spkr_inst_id" in params:
             q = Q()
-            for id in params["spkr_inst_id"]:
-                q |= Q(spkr__id=id)
+            for pubid in params["spkr_inst_id"]:
+                q |= Q(spkr__public_id=pubid)
+            query.append(q)
+
+        # speaker instance pk
+        if "spkr_inst_pk" in params:
+            q = Q()
+            for pk in params["spkr_inst_pk"]:
+                q |= Q(spkr__pk=pk)
             query.append(q)
         
         # speaker instance name
@@ -887,11 +975,18 @@ class AppSpeechList(ListView):
         # addressee properties
         #
                     
-        # addressee character id
+        # addressee character public id
         if "addr_char_id" in params:
             q = Q()
-            for id in params["addr_char_id"]:
-                q |= Q(addr__char=id)
+            for puid in params["addr_char_id"]:
+                q |= Q(addr__char__public_id=pubid)
+            query.append(q)
+
+        # addressee character pk
+        if "addr_char_pk" in params:
+            q = Q()
+            for pk in params["addr_char_pk"]:
+                q |= Q(addr__char__pk=pk)
             query.append(q)
 
         # addressee character name
@@ -943,11 +1038,18 @@ class AppSpeechList(ListView):
                 q |= Q(addr__char__tt=tt)
             query.append(q)
             
-        # addressee instance id
+        # addressee instance public id
         if "addr_inst_id" in params:
             q = Q()
-            for id in params["addr_inst_id"]:
-                q |= Q(addr__id=id)
+            for pubid in params["addr_inst_id"]:
+                q |= Q(addr__public_id=pubid)
+            query.append(q)
+
+        # addressee instance pk
+        if "addr_inst_pk" in params:
+            q = Q()
+            for pk in params["addr_inst_pk"]:
+                q |= Q(addr__pk=pk)
             query.append(q)
         
         # addressee instance name
@@ -987,11 +1089,18 @@ class AppSpeechList(ListView):
         # speech properties
         # 
 
-        # cluster id
+        # cluster public id
         if "cluster_id" in params:
             q = Q()
-            for id in params["cluster_id"]:
-                q |= Q(cluster=id)
+            for pubid in params["cluster_id"]:
+                q |= Q(cluster__public_id=pubid)
+            query.append(q)
+
+        # cluster pk
+        if "cluster_pk" in params:
+            q = Q()
+            for pk in params["cluster_pk"]:
+                q |= Q(cluster__pk=pk)
             query.append(q)
         
         # cluster type
@@ -1033,11 +1142,18 @@ class AppSpeechList(ListView):
         # work properties
         #
         
-        # work id
+        # work public id
         if "work_id" in params:
             q = Q()
-            for id in params["work_id"]:
-                q |= Q(work=id)
+            for pubid in params["work_id"]:
+                q |= Q(work__public_id=pubid)
+            query.append(q)
+
+        # work pk
+        if "work_pk" in params:
+            q = Q()
+            for pk in params["work_pk"]:
+                q |= Q(work__pk=pk)
             query.append(q)
         
         # work title
@@ -1047,11 +1163,18 @@ class AppSpeechList(ListView):
                 q |= Q(work__title=title)
             query.append(q)
             
-        # author id
+        # author public id
         if "auth_id" in params:
             q = Q()
-            for id in params["auth_id"]:
-                q |= Q(work__author=id)
+            for pubid in params["auth_id"]:
+                q |= Q(work__author__public_id=pubid)
+            query.append(q)
+
+        # author pk
+        if "auth_pk" in params:
+            q = Q()
+            for pk in params["auth_pk"]:
+                q |= Q(work__author__pk=pk)
             query.append(q)
             
         # author name
@@ -1121,12 +1244,20 @@ class AppSpeechClusterList(ListView):
         # any participant
         #
         
-        # any participant by character id
+        # any participant by character public id
         if "char_id" in params:
             q = Q()
-            for id in params["char_id"]:
-                q |= Q(speeches__spkr__char__id=id)
-                q |= Q(speeches__addr__char__id=id)
+            for pubid in params["char_id"]:
+                q |= Q(speeches__spkr__char__public_id=pubid)
+                q |= Q(speeches__addr__char__public_id=pubid)
+            query.append(q)
+
+        # any participant by character id
+        if "char_pk" in params:
+            q = Q()
+            for pk in params["char_pk"]:
+                q |= Q(speeches__spkr__char__pk=pk)
+                q |= Q(speeches__addr__char__pk=pk)
             query.append(q)
         
         # any participant by character name
@@ -1153,12 +1284,20 @@ class AppSpeechClusterList(ListView):
                 q |= Q(speeches__addr__char__gender=gender)
             query.append(q)
             
-        # any participant by instance id
+        # any participant by instance public id
         if "inst_id" in params:
             q = Q()
-            for id in params["inst_id"]:
-                q |= Q(speeches__spkr__id=id)
-                q |= Q(speeches__addr__id=id)
+            for pubid in params["inst_id"]:
+                q |= Q(speeches__spkr__public_id=pubid)
+                q |= Q(speeches__addr__public_id=pubid)
+            query.append(q)
+
+        # any participant by instance pk
+        if "inst_pk" in params:
+            q = Q()
+            for pk in params["inst_pk"]:
+                q |= Q(speeches__spkr__pk=pk)
+                q |= Q(speeches__addr__pk=pk)
             query.append(q)
         
         # any participant by instance name
@@ -1198,11 +1337,18 @@ class AppSpeechClusterList(ListView):
         # speaker
         #
                     
-        # speaker by character id
+        # speaker by character public id
         if "spkr_char_id" in params:
             q = Q()
-            for id in params["spkr_char_id"]:
-                q |= Q(speeches__spkr__char__id=id)
+            for pubid in params["spkr_char_id"]:
+                q |= Q(speeches__spkr__char__public_id=pubid)
+            query.append(q)
+
+        # speaker by character pk
+        if "spkr_char_pk" in params:
+            q = Q()
+            for pk in params["spkr_char_pk"]:
+                q |= Q(speeches__spkr__char__pk=pk)
             query.append(q)
                     
         # speaker by character name
@@ -1277,13 +1423,20 @@ class AppSpeechClusterList(ListView):
         # addressee
         #
         
-        # addressee by character id
+        # addressee by character public id
         if "addr_char_id" in params:
             q = Q()
-            for id in params["addr_char_id"]:
-                q |= Q(speeches__addr__char__id=id)
+            for pubid in params["addr_char_id"]:
+                q |= Q(speeches__addr__char__public_id=pubid)
             query.append(q)
                     
+        # addressee by character pk
+        if "addr_char_pk" in params:
+            q = Q()
+            for id in params["addr_char_pk"]:
+                q |= Q(speeches__addr__char__pk=pk)
+            query.append(q)
+
         # addressee by character name
         if "addr_char_name" in params:
             q = Q()
@@ -1312,11 +1465,18 @@ class AppSpeechClusterList(ListView):
                 q |= Q(speeches__addr__char__gender=gender)
             query.append(q)
         
-        # addressee by instance id
+        # addressee by instance public id
         if "addr_inst_id" in params:
             q = Q()
-            for id in params["addr_inst_id"]:
-                q |= Q(speeches__addr__id=id)
+            for pubid in params["addr_inst_id"]:
+                q |= Q(speeches__addr__public_id=pubid)
+            query.append(q)
+
+        # addressee by instance pk
+        if "addr_inst_pk" in params:
+            q = Q()
+            for pk in params["addr_inst_pk"]:
+                q |= Q(speeches__addr__pk=pk)
             query.append(q)
         
         # addressee by instance name
@@ -1356,11 +1516,18 @@ class AppSpeechClusterList(ListView):
         # speech properties
         #
 
-        # cluster id
+        # cluster public id
         if "cluster_id" in params:
             q = Q()
-            for id in params["cluster_id"]:
-                q |= Q(id=params["cluster_id"])
+            for pubid in params["cluster_id"]:
+                q |= Q(public_id=pubid)
+            query.append(q)
+
+        # cluster id
+        if "cluster_pk" in params:
+            q = Q()
+            for pk in params["cluster_pk"]:
+                q |= Q(pk=pk)
             query.append(q)
                         
         # turns in cluster
@@ -1395,11 +1562,18 @@ class AppSpeechClusterList(ListView):
         # work properties
         #
         
-        # work id
+        # work public id
         if "work_id" in params:
             q = Q()
-            for id in params["work_id"]:
-                q |= Q(speeches__work__id=id)
+            for pubid in params["work_id"]:
+                q |= Q(speeches__work__public_id=pubid)
+            query.append(q)
+
+        # work pk
+        if "work_pk" in params:
+            q = Q()
+            for id in params["work_pk"]:
+                q |= Q(speeches__work__pk=pk)
             query.append(q)
         
         # work title
@@ -1409,11 +1583,18 @@ class AppSpeechClusterList(ListView):
                 q |= Q(speeches__work__title=title)
             query.append(q)
             
-        # author id
+        # author public id
         if "auth_id" in params:
             q = Q()
-            for id in params["auth_id"]:
-                q |= Q(speeches__work__author__id=id)
+            for pubid in params["auth_id"]:
+                q |= Q(speeches__work__author__public_id=pubid)
+            query.append(q)
+
+        # author pk
+        if "auth_pk" in params:
+            q = Q()
+            for pk in params["auth_pk"]:
+                q |= Q(speeches__work__author__pk=pk)
             query.append(q)
             
         # author name
