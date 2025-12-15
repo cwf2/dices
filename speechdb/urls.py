@@ -20,6 +20,7 @@ frontend_urls = ([
     path('clusters/', views.AppSpeechClusterList.as_view(), name='clusters'),
     path('speechcluster/<str:public_id>/', views.AppSpeechClusterDetail.as_view(), name='cluster_detail'),
     path('speeches/', views.AppSpeechList.as_view(), name='speeches'),
+    path('speeches/csv/', views.AppSpeechCSV.as_view(), name='speeches_csv'),
     path('speech/<str:public_id>/', views.AppSpeechDetail.as_view(), name="speech_detail"),
 ], 'app')
 

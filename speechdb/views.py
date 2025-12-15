@@ -1,10 +1,10 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.db.models import Q, Count, Max
-from django.views.generic import ListView, DetailView, TemplateView
+from django.views.generic import ListView, DetailView, TemplateView, View
 from django_filters.views import FilterView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from django_filters import rest_framework as filters
@@ -50,6 +50,8 @@ def ValidateParams(request):
             params["page_size"] = int(params["page_size"][0])
         except ValueError:
             del params["page_size"]
+    
+    print(params)
     
     return params
 
@@ -465,19 +467,19 @@ class AppWorkList(ListView):
             query.append(q)
 
 
-        if 'author_pk' in params:
+        if 'author_id' in params:
             q = Q()
-            for author_pk in params["author_pk"]:
-                q |= Q(instances__speeches__work__author__pk=author_pk)
-                q |= Q(instances__addresses__work__author__pk=author_pk)
+            for pk in params["author_id"]:
+                q |= Q(instances__speeches__work__author__pk=pk)
+                q |= Q(instances__addresses__work__author__pk=pk)
             query.append(q)
 
 
-        if 'author_id' in params:
+        if 'author_pubid' in params:
             q = Q()
-            for author_pubid in params["author_id"]:
-                q |= Q(instances__speeches__work__author__public_id=author_pubid)
-                q |= Q(instances__addresses__work__author__public_id=author_pubid)
+            for pubid in params["author_pubid"]:
+                q |= Q(instances__speeches__work__author__public_id=pubid)
+                q |= Q(instances__addresses__work__author__public_id=pubid)
             query.append(q)
 
         if 'work_title' in params:
@@ -849,19 +851,23 @@ class AppCharacterInstanceList(ListView):
         return context
 
 
-class AppSpeechList(ListView):
-    model = Speech
-    template_name = 'speechdb/speech_list.html'
-    paginate_by = PAGE_SIZE
-    ordering = ['work', 'seq']
+class SpeechQueryMixin:
+    '''validate and assemble speech query params
+        - designed to be reused by HTML and CSV views
+    '''
+        
+    @property
+    def params(self):
+        if not hasattr(self, "_params"):
+            self._params = ValidateParams(self.request)
     
-    # authentication
-    login_url = reverse_lazy("app:login")
-         
-    def get_queryset(self):
+        return self._params
+    
+    
+    def speech_queryset(self):
         
         # collect user search params
-        params = ValidateParams(self.request)
+        params = self.params
         
         # short-circuit if search params are malformed
         if params is None:
@@ -977,7 +983,7 @@ class AppSpeechList(ListView):
 
         # speaker instance number
         if "spkr_inst_number" in params:
-            q = q()
+            q = Q()
             for number in params["spkr_inst_number"]:
                 q |= Q(spkr__number=number)
             query.append(q)
@@ -1091,7 +1097,7 @@ class AppSpeechList(ListView):
 
         # addressee instance number
         if "addr_inst_number" in params:
-            q = q()
+            q = Q()
             for number in params["addr_inst_number"]:
                 q |= Q(addr__number=number)
             query.append(q)
@@ -1208,19 +1214,27 @@ class AppSpeechList(ListView):
             query.append(q)
 
         # execute query
-        qs = qs.filter(*query).distinct()
-        qs = qs.order_by("seq")
-        qs = qs.order_by("work")
-        
-        # pagination
-        if "page_size" in params:
-            if params["page_size"] > 0:
-                self.paginate_by = params["page_size"]
-            else:
-                self.paginate_by = qs.count() + 1
- 
+        qs = qs.filter(*query).distinct().order_by("work", "seq")
         return qs
-        
+            
+
+class AppSpeechList(SpeechQueryMixin, ListView):
+    model = Speech
+    template_name = 'speechdb/speech_list.html'
+    paginate_by = PAGE_SIZE
+    ordering = ['work', 'seq']
+
+    def get_queryset(self):
+        return self.speech_queryset()
+    
+    def get_paginate_by(self, qs):
+        if self.params is None:
+            ps = PAGE_SIZE
+        else:
+            ps = self.params.get("page_size", PAGE_SIZE)
+
+        if ps > 0:
+            return ps
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -1240,6 +1254,31 @@ class AppSpeechList(ListView):
         
         return context
     
+
+class AppSpeechCSV(SpeechQueryMixin, View):
+    '''export speech list as a CSV text file'''
+    
+    filename = "speeches.csv"
+
+    def get(self, request):
+        qs = self.speech_queryset()
+
+        if qs is None or not qs.exists():  # optional; speech_queryset can return none()
+            qs = []
+
+        response = HttpResponse(
+            content_type="text/csv",
+            headers={"Content-Disposition": f'attachment; filename="{self.filename}"'},
+        )
+
+        writer = csv.writer(response)
+        writer.writerow(["work", "first_line", "last_line", "speaker", "addressee"])  # headers
+
+        for s in qs:
+            writer.writerow([s.work.title, s.l_fi, s.l_la, s.get_spkr_str(), s.get_addr_str()])
+
+        return response
+        
         
 class AppSpeechClusterList(ListView):
     model = SpeechCluster
@@ -1603,16 +1642,16 @@ class AppSpeechClusterList(ListView):
             query.append(q)
             
         # author public id
-        if "auth_id" in params:
+        if "auth_pubid" in params:
             q = Q()
-            for pubid in params["auth_id"]:
+            for pubid in params["auth_pubid"]:
                 q |= Q(speeches__work__author__public_id=pubid)
             query.append(q)
 
         # author pk
-        if "auth_pk" in params:
+        if "auth_id" in params:
             q = Q()
-            for pk in params["auth_pk"]:
+            for pk in params["auth_id"]:
                 q |= Q(speeches__work__author__pk=pk)
             query.append(q)
             

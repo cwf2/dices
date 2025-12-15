@@ -200,11 +200,11 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-        self.fields["char_id"] = forms.CharField(
+        self.fields["char_pubid"] = forms.CharField(
             required = False,
             widget = forms.HiddenInput(),
         )
-        self.fields["char_pk"] = forms.IntegerField(
+        self.fields["char_id"] = forms.IntegerField(
             required = False,
             widget = forms.HiddenInput(),
         )
@@ -229,11 +229,11 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-        self.fields["inst_id"] = forms.CharField(
+        self.fields["inst_pubid"] = forms.CharField(
             required = False,
             widget = forms.HiddenInput(),
         )
-        self.fields["inst_pk"] = forms.IntegerField(
+        self.fields["inst_id"] = forms.IntegerField(
             required = False,
             widget = forms.HiddenInput(),
         )        
@@ -263,11 +263,11 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-        self.fields["spkr_char_id"] = forms.CharField(
+        self.fields["spkr_char_pubid"] = forms.CharField(
             required = False,
             widget = forms.HiddenInput(),
         )
-        self.fields["spkr_char_pk"] = forms.IntegerField(
+        self.fields["spkr_char_id"] = forms.IntegerField(
             required = False,
             widget = forms.HiddenInput(),
         )        
@@ -291,11 +291,11 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-        self.fields["spkr_inst_id"] = forms.CharField(
+        self.fields["spkr_inst_pubid"] = forms.CharField(
             required = False,
             widget = forms.HiddenInput(),
         )
-        self.fields["spkr_inst_pk"] = forms.IntegerField(
+        self.fields["spkr_inst_id"] = forms.IntegerField(
             required = False,
             widget = forms.HiddenInput(),
         )
@@ -325,11 +325,11 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-        self.fields["addr_char_id"] = forms.CharField(
+        self.fields["addr_char_pubid"] = forms.CharField(
             required = False,
             widget = forms.HiddenInput(),
         )
-        self.fields["addr_char_pk"] = forms.IntegerField(
+        self.fields["addr_char_id"] = forms.IntegerField(
             required = False,
             widget = forms.HiddenInput(),
         )        
@@ -353,11 +353,11 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-        self.fields["addr_inst_id"] = forms.CharField(
+        self.fields["addr_inst_pubid"] = forms.CharField(
             required = False,
             widget = forms.HiddenInput(),
         )
-        self.fields["addr_inst_pk"] = forms.IntegerField(
+        self.fields["addr_inst_id"] = forms.IntegerField(
             required = False,
             widget = forms.HiddenInput(),
         )        
@@ -393,19 +393,19 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-        self.fields["author_id"] = forms.CharField(
+        self.fields["author_pubid"] = forms.CharField(
             required = False,
             widget = forms.HiddenInput(),
         )
-        self.fields["author_pk"] = forms.IntegerField(
+        self.fields["author_id"] = forms.IntegerField(
             required = False,
             widget = forms.HiddenInput(),
         )
-        self.fields["work_id"] = forms.CharField(
+        self.fields["work_pubid"] = forms.CharField(
             required = False,
             widget = forms.HiddenInput(),
         )
-        self.fields["work_pk"] = forms.IntegerField(
+        self.fields["work_id"] = forms.IntegerField(
             required = False,
             widget = forms.HiddenInput(),
         )
