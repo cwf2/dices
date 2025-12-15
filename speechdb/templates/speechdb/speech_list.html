@@ -16,7 +16,7 @@
     </tr>
   </thead>
   <tbody>
-    {% for s in page_obj %}
+    {% for s in object_list %}
     <tr>
       <td>
           {{ s.work.get_long_name }} {{ s.l_fi }}—{{ s.l_la }}

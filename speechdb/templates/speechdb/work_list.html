@@ -8,7 +8,7 @@
     <tr><th>Author</th><th>Title</th><th>Speeches</th><th>Character Instances</th></tr>
   </thead>
   <tbody>
-    {% for work in page_obj %}
+    {% for work in object_list %}
     <tr>
       <td>
 				{{ work.author.name }}

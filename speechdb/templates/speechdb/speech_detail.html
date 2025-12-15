@@ -16,16 +16,69 @@
           <tbody>
             <tr>
               <td>Locus</td>
-              <td>{{ speech.work.get_long_name }} {{ speech.l_range }}</td>
+              <td>{{ speech.work.get_long_name }} {{ speech.l_fi }}—{{ speech.l_la }}</td>
+							<td>
+		          {% if speech.get_urn %}
+		          <a href="{{ reader }}{{ speech.get_urn }}">
+		              <i class="fa-solid fa-arrow-up-right-from-square"></i> linked text
+		          </a>          
+		          {% endif %}
+							</td>
             </tr>
+		        {% for inst in speech.spkr.all %}
             <tr>
-              <td>Speaker</td>
-              <td>{{ speech.get_spkr_str }}</td>
+              <td>{% if forloop.first %}Speaker{% if not forloop.last %}s{% endif %}{% endif %}</td>
+							<td>{{ inst.name }}</td>
+							<td>
+			          <a href="{% url 'app:instance_detail' inst.public_id %}">
+			              <i class="fa-solid fa-circle-info"></i> see instance detail
+			          </a>
+							</td>
             </tr>
+		        {% endfor %}
+		        {% for inst in speech.addr.all %}						
             <tr>
-              <td>Addressee</td>
-              <td>{{ speech.get_addr_str }}</td>
+              <td>{% if forloop.first %}Addressee{% if not forloop.last %}s{% endif %}{% endif %}</td>
+							<td>{{ inst.name }}</td>
+							<td>
+			          <a href="{% url 'app:instance_detail' inst.public_id %}">
+			              <i class="fa-solid fa-circle-info"></i> see instance detail
+			          </a>
+							</td>
             </tr>
+						{% endfor %}						
+						<tr>
+							<td>Conversation type</td>
+				      <td>
+				        {{ speech.get_type_display }}
+				      </td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Turn</td>
+				      <td>
+				          {{ speech.part }} of {{ speech.cluster.speeches.count }}
+							</td>
+							<td>
+				          <a href="{% url 'app:cluster_detail' speech.cluster.public_id %}">
+				              <i class="fa-solid fa-circle-info"></i> see speech cluster detail
+				          </a>
+				      </td>
+						</tr>
+						<tr>
+							<td>Speech type tags</td>
+				      <td class="small">
+				        {% for tag in speech.tags.all %}
+				          <span class="badge bg-secondary">{{ tag.get_type_display }}</span>
+				        {% endfor %}
+				      </td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Embedded level</td>
+				      <td>{{ speech.level }}</td>
+							<td></td>
+						</tr>
           </tbody>
       </table>
     </div>

@@ -8,7 +8,7 @@
     <tr><th>Loci</th><th>Parts</th><th>Participants</th></tr>
   </thead>
   <tbody>
-    {% for c in page_obj %}
+    {% for c in object_list %}
     <tr>
       <td>{{ c.get_loc_str }}
           <a style="margin-left:0.5em" href="{% url 'app:cluster_detail' c.public_id %}">
