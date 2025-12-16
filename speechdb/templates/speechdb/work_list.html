@@ -40,8 +40,7 @@
 </table>
 {% endblock %}
 
-{% block sidebar_content %}
-<form action="{% url 'app:works' %}" method="GET">
+{% block filters %}
   <div class="card small">
     <div class="card-header" id="hdr_work">
       <span>Source Properties</span>
@@ -49,12 +48,5 @@
     <div class="card-body">
 		{% include "speechdb/default_form.html" with form=text_form %}
     </div>
-    <div class="card-footer">
-      <div class="row justify-content-around">
-          <button type="submit" class="btn btn-primary btn-sm w-25" >Search</button>
-          <a class="btn btn-secondary btn-sm w-25"  href="{% url 'app:works' %}">Reset</a>
-      </div>
-    </div>
   </div>
-</form>
 {% endblock %}

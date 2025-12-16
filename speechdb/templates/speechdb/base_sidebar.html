@@ -1,20 +1,20 @@
 {% extends "speechdb/base.html" %}
 
 {% block body %}
-<nav aria-label="Page navigation">
-  <div class="d-flex justify-content-between">
-    {% block pagination %}
-    {% endblock %}
-  </div>
-</nav>
 <div class="row">
   <div class="col-lg-3 collapse show" id="collapseSidebar">
-    <div class="alert alert-secondary">
+    <div class="alert alert-secondary position-relative">
+		  <button class="btn position-absolute top-0" id="btnCollapseSidebar" style="right:0" data-bs-toggle="collapse" data-bs-target="#collapseSidebar">
+				<i class="fa-solid fa-square-caret-left"></i>
+			</button>			
       {% block sidebar_content %}
       {% endblock %}
     </div>
   </div>
-  <div class="col">
+  <div class="col position-relative">
+		<button class="btn position-absolute top-0" id="btnExpandSidebar" style="left:-1.25rem" data-bs-toggle="collapse" data-bs-target="#collapseSidebar">
+	    <i class="fa-solid fa-square-caret-right"></i>
+  	</button>
     {% block content %}
     {% endblock %}
   </div>
