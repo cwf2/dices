@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.core.paginator import Paginator
 from django.db.models import Q, Count, Max
 from django.views.generic import ListView, DetailView, TemplateView, View
+from django.views.decorators.cache import cache_page
 from django_filters.views import FilterView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from django_filters import rest_framework as filters
@@ -1170,6 +1171,11 @@ class SpeechQueryMixin:
 class AppSpeechList(SpeechQueryMixin, ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
+    
+    def dispatch(self, request, *args, **kwargs):
+            if not request.GET:
+                return cache_page(60 * 15)(super().dispatch)(request, *args, **kwargs)
+            return super().dispatch(request, *args, **kwargs)
         
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
