@@ -502,13 +502,6 @@ class AppWorkList(ListView):
 class AppCharacterList(ListView):
     model = Character
     template_name = 'speechdb/character_list.html'
-<<<<<<< HEAD
-    paginate_by = PAGE_SIZE
-    
-    # authentication
-    login_url = reverse_lazy("app:login")
-=======
->>>>>>> main
         
     def get_queryset(self):
         
