@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+
+# logging
+import logging
+logger = logging.getLogger(__name__)
+
+# DOTENV
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
@@ -29,6 +35,39 @@ DEBUG = False
 ALLOWED_HOSTS = [os.environ.get('DJANGO_HOSTNAME')]
 CSRF_TRUSTED_ORIGINS = ["http://" + os.environ.get('DJANGO_HOSTNAME'), "https://" + os.environ.get('DJANGO_HOSTNAME')]
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+#
+# Caching: try Redis, fall back on local memory
+#
+
+from django.core.cache import caches
+from redis import Redis
+from redis.exceptions import RedisError
+
+def redis_available(url):
+    try:
+        r = Redis.from_url(url, socket_connect_timeout=0.1, socket_timeout=0.1)
+        r.ping()
+        return True
+    except RedisError:
+        return False
+        
+REDIS_URL = "redis://127.0.0.1:6379/1"
+
+if redis_available(REDIS_URL):
+    logger.warning("Using Redis cache backend")
+    CACHES = {
+        "default": {
+            "BACKEND": "django_redis.cache.RedisCache",
+            "LOCATION": REDIS_URL,
+            "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient"},
+        }
+    }
+else:
+    logger.warning("Redis unavailable; using local memory cache")
+    CACHES = {
+        "default": {"BACKEND": "django.core.cache.backends.locmem.LocMemCache"}
+    }
 
 # Application definition
 
