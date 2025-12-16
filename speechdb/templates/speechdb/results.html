@@ -1,60 +1,53 @@
-{% extends "speechdb/base_sidebar.html" %}
+{% extends "speechdb/base.html" %}
 
-{% block pagination %}
-
-<div class="btn-toolbar" role="toolbar">
-  <div class="btn-group btn-group-sm me-2" role="group">
-    <a class="btn btn-outline-secondary" role="button" data-bs-toggle="collapse" data-bs-target="#collapseSidebar" aria-expanded="true" aria-controls="collapseSidebar">
-    toggle filters
-    </a>
+{% block body %}
+<div class="row">
+	<!-- collapsible filters pane -->
+  <div class="col-lg-3 collapse show" id="collapseSidebar">
+    <div class="alert alert-secondary">
+			<form action="{{ request.path }}" method="GET">
+				<!-- panel controls -->
+				<div class="d-flex align-items-center justify-content-between mb-3">
+					<div class="d-flex align-items-center me-auto ms-2 my-2 gap-3">
+		        <button type="submit" class="btn btn-secondary btn-sm px-4" >Update</button>
+		        <a class="btn btn-outline-secondary btn-sm px-4"  href="{% url 'app:speeches' %}">Reset</a>
+					</div>
+					
+				  <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCollapseSidebar" data-bs-toggle="collapse" data-bs-target="#collapseSidebar">
+						<i class="fa-solid fa-square-caret-left"></i>
+					</button>
+				</div>
+			
+			<!-- filters -->
+      {% block filters %}
+      {% endblock %}
+			</form>
+    </div>
   </div>
-</div>
-<div class="btn-toolbar" role="toolbar">
-	<form class="row row-cols-lg-auto align-items-center">
-  	<div class="btn-group btn-group-sm" role="group">
-			{% for field in pager_form %}
-				{% if field.is_hidden %}
-					{{ field }}
-				{% endif %}
-			{% endfor %}
-      <div class="col-12">
-        <div class="btn-group btn-group-sm">
-          <span class="btn btn-outline-secondary btn-sm disabled">
-            {{ page_obj.paginator.count }} results:
-          </span>
-					{{ pager_form.page_size }}
-        <button type="submit" class="btn btn-outline-secondary btn-sm">change</button>
-      </div>
-      </div>
+	
+	<!-- results pane -->
+  <div class="col position-relative">
+		<button class="btn position-absolute top-0" id="btnExpandSidebar" style="left:-1.25rem" data-bs-toggle="collapse" data-bs-target="#collapseSidebar">
+	    <i class="fa-solid fa-square-caret-right"></i>
+  	</button>
+		<div class="d-flex align-items-center">
+		  <div class="d-flex ms-auto">
+		    <span class="btn btn-outline-secondary btn-sm disabled">
+		      {{ object_list|length }} results
+		    </span>
+		    <a class="btn btn-outline-secondary btn-sm"
+		       href="{% url 'app:speeches_csv' %}?{{ request.GET.urlencode }}">
+		      <i class="fa-solid fa-download"></i> CSV
+		    </a>
+		  </div>
 		</div>
-
-		{% if page_obj %}
-
-	  <div class="btn-group btn-group-sm ms-5" role="group">
-	    {% if page_obj.has_previous %}
-	    <button type="submit" name="page" value="{{ page_obj.previous_page_number }}" class="btn btn-outline-secondary">Prev</button>
-	    {% else %}
-	    <button type="submit" class="btn btn-outline-secondary disabled">Prev</button>
-	    {% endif %}
-	    <a class="btn btn-outline-secondary disabled" href="#">Page <strong>{{ page_obj.number }}</strong> of {{ page_obj.paginator.num_pages }}</a>
-	    {% if page_obj.has_next %}
-	    <button type="submit" name="page" value="{{ page_obj.next_page_number }}" class="btn btn-outline-secondary">Next</button>
-	    {% else %}
-	    <button type="submit" class="btn btn-outline-secondary disabled">Next</button>
-	    {% endif %}
-	  </div>
-	  </div>
-	  {% endif %}
-	</form>
-</div>
-{% endblock %}
-
-{% block content %}
-  {% if page_obj.paginator.count == 0 %}
-  <div class="jumbotron">
+  {% if not object_list %}
+  <div class="p-4 bg-light rounded">
     <p>Your search produced no results.</p>
   </div>
   {% endif %}
   {% block results %}
   {% endblock %}
+  </div>
+</div>
 {% endblock %}

@@ -20,7 +20,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 CTS_READER = 'https://scaife.perseus.org/reader/'
-PAGE_SIZE = 25
 
 
 # parameter validation
@@ -43,14 +42,6 @@ def ValidateParams(request):
         # short-circuit if bad params encountered
         else:
             return None
-        
-    if "page_size" in params:
-        try:
-            params["page_size"] = int(params["page_size"][0])
-        except ValueError:
-            del params["page_size"]
-    
-    print(params)
     
     return params
 
@@ -395,7 +386,6 @@ class AppMetadataList(ListView):
 class AppAuthorList(ListView):
     model = Author
     template_name = "speechdb/author_list.html"
-    paginate_by = PAGE_SIZE
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -403,7 +393,6 @@ class AppAuthorList(ListView):
         
         # form data
         context["text_form"] = TextForm(self.request.GET)
-        context["pager_form"] = PagerForm(self.request.GET)
         
         return context
 
@@ -429,20 +418,12 @@ class AppAuthorList(ListView):
                 author.work_count = len(works)
                 author.langs = ", ".join(sorted(set(w.lang for w in works if w.lang)))
         
-        # pagination
-        if "page_size" in params:
-            if params["page_size"] > 0:
-                self.paginate_by = params["page_size"]
-            else:
-                self.paginate_by = qs.count() + 1        
-
         return qs
 
 
 class AppWorkList(ListView):
     model = Work
     template_name = 'speechdb/work_list.html'
-    paginate_by = PAGE_SIZE
     
     def get_queryset(self):
         # collect user search params
@@ -497,13 +478,6 @@ class AppWorkList(ListView):
             Count('speech', distinct=True),
             Count('speech__spkr', distinct=True),
         )
-
-        # pagination
-        if 'page_size' in params:
-            if params['page_size'] > 0:
-                self.paginate_by = params['page_size']
-            else:
-                self.paginate_by = qs.count() + 1
           
         return qs
 
@@ -514,16 +488,13 @@ class AppWorkList(ListView):
 
         # form data
         context['text_form'] = TextForm(self.request.GET)
-        context['pager_form'] = PagerForm(self.request.GET)
         
         return context
-
 
 
 class AppCharacterList(ListView):
     model = Character
     template_name = 'speechdb/character_list.html'
-    paginate_by = PAGE_SIZE
         
     def get_queryset(self):
         
@@ -632,14 +603,7 @@ class AppCharacterList(ListView):
             Count('instances__speeches', distinct=True),
             Count('instances__addresses', distinct=True),
         )
-        
-        # pagination
-        if 'page_size' in params:
-            if params['page_size'] > 0:
-                self.paginate_by = params['page_size']
-            else:
-                self.paginate_by = qs.count() + 1        
-        
+                
         return qs
 
 
@@ -650,7 +614,6 @@ class AppCharacterList(ListView):
         # form data
         context['character_form'] = CharacterForm(self.request.GET)
         context['text_form'] = TextForm(self.request.GET)
-        context["pager_form"] = PagerForm(self.request.GET)
        
         return context
 
@@ -659,8 +622,6 @@ class AppCharacterInstanceList(ListView):
     model = CharacterInstance
     template_name = 'speechdb/characterinstance_list.html'
     queryset = CharacterInstance.objects.all()
-    paginate_by = PAGE_SIZE
-    
     
     def get_queryset(self):
         
@@ -814,14 +775,7 @@ class AppCharacterInstanceList(ListView):
             Count('speeches', distinct=True),
             Count('addresses', distinct=True),
         )
-        
-        # pagination
-        if 'page_size' in params:
-            if params["page_size"] > 0:
-                self.paginate_by = params["page_size"]
-            else:
-                self.paginate_by = qs.count() + 1
-        
+                
         return qs
 
 
@@ -833,7 +787,6 @@ class AppCharacterInstanceList(ListView):
         context["character_form"] = CharacterForm(self.request.GET)
         context["instance_form"] = InstanceForm(self.request.GET)
         context["text_form"] = TextForm(self.request.GET)
-        context["pager_form"] = PagerForm(self.request.GET)
                             
         return context
 
@@ -851,7 +804,7 @@ class SpeechQueryMixin:
         return self._params
     
     
-    def speech_queryset(self):
+    def get_queryset(self):
         
         # collect user search params
         params = self.params
@@ -861,7 +814,7 @@ class SpeechQueryMixin:
             return Speech.objects.none()
                             
         # initial set of objects plus annotations
-        qs = Speech.objects.annotate(Count('cluster__speeches'))
+        qs = Speech.objects.annotate(cluster_size = Count('cluster__speeches'))
         
         # construct query
         query = []
@@ -1202,27 +1155,22 @@ class SpeechQueryMixin:
 
         # execute query
         qs = qs.filter(*query).distinct().order_by("work", "seq")
+        
+        # prefetch related data to avoid unnecessary queries
+        qs = qs.select_related(
+            "work", "work__author", "cluster"
+        ).prefetch_related(
+            "spkr", "addr", "tags",
+        )
+        
+        
         return qs
             
 
 class AppSpeechList(SpeechQueryMixin, ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
-    paginate_by = PAGE_SIZE
-    ordering = ['work', 'seq']
-
-    def get_queryset(self):
-        return self.speech_queryset()
-    
-    def get_paginate_by(self, qs):
-        if self.params is None:
-            ps = PAGE_SIZE
-        else:
-            ps = self.params.get("page_size", PAGE_SIZE)
-
-        if ps > 0:
-            return ps
-    
+        
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
@@ -1234,7 +1182,6 @@ class AppSpeechList(SpeechQueryMixin, ListView):
         context["addr_instance_form"] = InstanceForm(self.request.GET, prefix="addr")  
         context["speech_form"] = SpeechForm(self.request.GET)      
         context["text_form"] = TextForm(self.request.GET)
-        context["pager_form"] = PagerForm(self.request.GET)
 
         # CTS reader
         context['reader'] = CTS_READER
@@ -1248,10 +1195,7 @@ class AppSpeechCSV(SpeechQueryMixin, View):
     filename = "speeches.csv"
 
     def get(self, request):
-        qs = self.speech_queryset()
-
-        if qs is None or not qs.exists():  # optional; speech_queryset can return none()
-            qs = []
+        qs = self.get_queryset()
 
         response = HttpResponse(
             content_type="text/csv",
@@ -1270,7 +1214,6 @@ class AppSpeechCSV(SpeechQueryMixin, View):
 class AppSpeechClusterList(ListView):
     model = SpeechCluster
     template_name = 'speechdb/speechcluster_list.html'
-    paginate_by = PAGE_SIZE
     
     def get_queryset(self):
         # collect user search params
@@ -1656,13 +1599,6 @@ class AppSpeechClusterList(ListView):
         # execute query
         qs = qs.filter(*query).distinct()
         qs = qs.order_by('seq')
-
-        # pagination
-        if "page_size" in params:
-            if params["page_size"] > 0:
-                self.paginate_by = params["page_size"]
-            else:
-                self.paginate_by = qs.count() + 1
          
         return qs
     
@@ -1677,7 +1613,6 @@ class AppSpeechClusterList(ListView):
         context["addr_instance_form"] = InstanceForm(self.request.GET, prefix="addr")  
         context["speech_form"] = SpeechForm(self.request.GET)      
         context["text_form"] = TextForm(self.request.GET)
-        context["pager_form"] = PagerForm(self.request.GET)
         
         return context
 
