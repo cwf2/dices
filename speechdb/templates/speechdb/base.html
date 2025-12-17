@@ -20,9 +20,9 @@
 		<script src="{% static 'speechdb/dices.js' %}"></script>
     <title>{% block title %}DICES{% endblock %}</title>
   </head>
-  <body>
+  <body class="d-flex flex-column vh-100">
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'app:index' %}">
           DICES
@@ -60,7 +60,7 @@
         </div>
       </div>
     </nav>
-    <div id="content" style="padding:20px;">
+    <div id="content" class="container-fluid flex-grow-1 p-3 d-flex flex-column">
     {% block body %}
     {% endblock %}
     </div>
