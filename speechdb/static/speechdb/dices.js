@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
 	// hide expand button when sidebar visible
-	const sidebar = document.getElementById("collapseSidebar");
+	const sidebar = document.getElementById("sidebarContainer");
 	const openBtn = document.getElementById("btnExpandSidebar");
 
 	if (sidebar && openBtn) {

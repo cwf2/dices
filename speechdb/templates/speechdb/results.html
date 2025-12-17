@@ -1,9 +1,9 @@
 {% extends "speechdb/base.html" %}
 
 {% block body %}
-<div class="row">
+<div class="row h-100" style="min-height:0;">
 	<!-- collapsible filters pane -->
-  <div class="col-lg-3 collapse show" id="collapseSidebar">
+  <div id="sidebarContainer" class="col-lg-3 h-100 overflow-auto collapse show">
     <div class="alert alert-secondary">
 			<form action="{{ request.path }}" method="GET">
 				<!-- panel controls -->
@@ -14,7 +14,7 @@
 					</div>
 					
 					<div class="d-flex align-items-center ms-auto me-2 my-2 gap-3">
-					  <button type="button" class="btn btn-light text-muted btn-sm" id="btnCollapseSidebar" data-bs-toggle="collapse" data-bs-target="#collapseSidebar">
+					  <button type="button" class="btn btn-light text-muted btn-sm" id="btnCollapseSidebar" data-bs-toggle="collapse" data-bs-target="#sidebarContainer">
 							<i class="fa-solid fa-square-caret-left"></i>
 						</button>
 					</div>
@@ -28,8 +28,8 @@
   </div>
 	
 	<!-- results pane -->
-  <div class="col position-relative">
-		<button class="btn position-absolute top-0 expand-btn" id="btnExpandSidebar" style="left:-1.25rem" data-bs-toggle="collapse" data-bs-target="#collapseSidebar">
+  <div id="resultsContainer" class="col h-100 overflow-auto flex-grow-1 position-relative">
+		<button class="btn position-absolute top-0 expand-btn" id="btnExpandSidebar" style="left:-1.25rem" data-bs-toggle="collapse" data-bs-target="#sidebarContainer">
 	    <i class="fa-solid fa-square-caret-right"></i>
   	</button>
 		<div class="d-flex align-items-center">
