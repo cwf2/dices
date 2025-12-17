@@ -2,3 +2,11 @@ a {
 	text-decoration: none;
 	color: black;
 }
+
+.uniform-badge {
+    display: inline-block; /* Allows alignment of text and icon */
+    justify-content: left; /* Centers the content horizontally */
+    width: 120px; /* Set a consistent width */
+    height: auto; /* Adjust height automatically */
+    text-align: center; /* Ensures proper text alignment */
+}

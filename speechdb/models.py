@@ -1,4 +1,5 @@
 from django.db import models, IntegrityError
+from django.utils.functional import cached_property
 import secrets
 
 URN_BASE = "http://epicspeeches.net"
@@ -76,12 +77,15 @@ class Work(PublicIdModel):
 
 
     def __str__(self):
-        return f'{self.author.name} {self.title}'
+        return self.get_long_name()
 
     
     def get_long_name(self):
         '''Return common name as a string'''
-        return f'{self.author.name} {self.title}'
+        if self.author.name == "Anonymous":
+            return self.title
+        else:
+            return f'{self.author.name}, {self.title}'
 
 
 class Character(PublicIdModel):
@@ -171,7 +175,7 @@ class CharacterInstance(PublicIdModel):
     def get_speeches(self):
         '''returns set of speeches by all instances of underlying char'''
         return Speech.objects.filter(spkr__char=self.char)
-        
+    
     def get_addresses(self):
         '''returns set of speeches by all instances of underlying char'''
         return Speech.objects.filter(addr__char=self.char)
@@ -184,69 +188,64 @@ class SpeechCluster(PublicIdModel):
         ordering = ['seq']
 
     seq = models.IntegerField(default=0)
-                
-    def get_spkr_str(self):
-        '''Return speaker list as a string'''
-        chars = []
-        for speech in self.speeches.all():
-            chars.extend([str(c) for c in speech.spkr.all()])
-        chars = sorted(set(chars))
-        return ', '.join(chars)
     
-    def get_addr_str(self):
+    @cached_property
+    def _speeches(self):
+        return list(self.speeches.all())
+
+    @cached_property
+    def work(self):
+        return self._speeches[0].work if self._speeches else None
+                
+    @cached_property
+    def speakers(self):
+        s=set()
+        for sp in self._speeches: s.update(sp.spkr.all())
+        return tuple(s)    
+
+    @cached_property
+    def addressees(self):
+        s=set()
+        for sp in self._speeches: s.update(sp.addr.all())
+        return tuple(s) 
+
+    def get_spkr_str(self, sep=", "):
+        '''Return speaker list as a string'''
+        return sep.join(sorted(map(str, self.speakers)))    
+
+    def get_addr_str(self, sep=", "):
         '''Return addressee list as a string'''
-        chars = []
-        for speech in self.speeches.all():
-            chars.extend([str(c) for c in speech.addr.all()])
-        chars = sorted(set(chars))
-        return ', '.join(chars)
-        
-    def get_chars_str(self):
-        chars = []
-        for speech in self.speeches.all():
-            chars.extend([str(c) for c in speech.spkr.all()])
-            chars.extend([str(c) for c in speech.addr.all()])
-        chars = sorted(set(chars))
-        return ', '.join(chars)
-        
+        return sep.join(sorted(map(str, self.addressees)))        
+
+    def get_chars_str(self, sep=", "):
+        '''Return list of all participants as a string'''
+        chars = set(self.speakers + self.addressees)
+        return sep.join(sorted(map(str, chars)))
+                
     def get_urn(self):
         '''Return CTS URN for the whole cluster'''
-        urn = self.speeches.first().work.urn
-        l_fi = self.speeches.first().l_fi
-        l_la = self.speeches.last().l_la
+            
+        work = self.work
+        if work is None or work.urn is None:
+            return None
         
-        if urn:
-            return f'{urn}:{l_fi}-{l_la}'
+        urn = work.urn
+        l_fi = self._speeches[0].l_fi
+        l_la = self._speeches[-1].l_la
         
+        return f'{urn}:{l_fi}-{l_la}'
+
     def get_loc_str(self):
         '''Return line range of conversation as a string'''
-        long_name = self.work.get_long_name()
-        l_fi = self.speeches.first().l_fi
-        l_la = self.speeches.last().l_la
-        return f'{long_name} {l_fi}–{l_la}'
-    
-    @property
-    def work(self):
-        return self.speeches.first().work
 
-    @property
-    def speakers(self):
-        speakersSquares = [speech.spkr.all() for speech in self.speeches.all()]
-        newlist = []
-        for speakerChunk in speakersSquares:
-            for speaker in speakerChunk:
-                newlist.append(speaker)
-        return set(newlist)
-    
-    @property
-    def addressees(self):
-        addressesSquares = [speech.addr.all() for speech in self.speeches.all()]
-        newlist = []
-        for addresseeChunk in addressesSquares:
-            for addressee in addresseeChunk: 
-                newlist.append(addressee)
-        return set(newlist)
+        work = self.work
+        if work is None:
+            return None
         
+        long_name = work.get_long_name()
+        l_fi = self._speeches[0].l_fi
+        l_la = self._speeches[-1].l_la
+        return f'{long_name} {l_fi}–{l_la}'
         
 
 class Speech(PublicIdModel):

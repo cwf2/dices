@@ -385,26 +385,27 @@ class AppMetadataList(ListView):
     queryset = Metadata.objects.all()
 
 
-class AppAuthorList(ListView):
-    model = Author
-    template_name = "speechdb/author_list.html"
-    
-    # authentication
-    login_url = reverse_lazy("app:login")
-    
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super().get_context_data(**kwargs)
+class AuthorQueryMixin:
+    '''validate and assemble author query params
+        - designed to be reused by HTML and CSV views
+    '''
         
-        # form data
-        context["text_form"] = TextForm(self.request.GET)
-        
-        return context
-
+    @property
+    def params(self):
+        if not hasattr(self, "_params"):
+            self._params = ValidateParams(self.request)
+    
+        return self._params
+    
     def get_queryset(self):
+        
         # collect user search params
-        params = ValidateParams(self.request)    
-
+        params = self.params
+        
+        # short-circuit if search params are malformed
+        if params is None:
+            return Author.objects.none()
+                                    
         # construct query
         query = []
         
@@ -426,17 +427,66 @@ class AppAuthorList(ListView):
         return qs
 
 
-class AppWorkList(ListView):
-    model = Work
-    template_name = 'speechdb/work_list.html'
+class AppAuthorList(AuthorQueryMixin, ListView):
+    model = Author
+    template_name = "speechdb/author_list.html"
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        
+        # form data
+        context["text_form"] = TextForm(self.request.GET)
+        context["csv_url_name"] = "app:authors_csv"
+        
+        return context
+
+
+class AppAuthorCSV(AuthorQueryMixin, View):        
+    filename = "authors.csv"
+
+    def get(self, request):
+        qs = self.get_queryset()
+
+        response = HttpResponse(
+            content_type="text/csv",
+            headers={"Content-Disposition": f'attachment; filename="{self.filename}"'},
+        )
+
+        writer = csv.writer(response)
+        writer.writerow(["name", "language", "works"])  # headers
+
+        for author in qs:
+            writer.writerow([author.name, author.langs, author.work_count])
+
+        return response
+
+
+class WorkQueryMixin:
+    '''validate and assemble work query params
+        - designed to be reused by HTML and CSV views
+    '''
+        
+    @property
+    def params(self):
+        if not hasattr(self, "_params"):
+            self._params = ValidateParams(self.request)
+    
+        return self._params
+    
     
     # authentication
     login_url = reverse_lazy("app:login")
     
     def get_queryset(self):
+        
         # collect user search params
-        params = ValidateParams(self.request)
-
+        params = self.params
+        
+        # short-circuit if search params are malformed
+        if params is None:
+            return Work.objects.none()
+                                    
         # construct query
         query = []
         
@@ -490,28 +540,66 @@ class AppWorkList(ListView):
         return qs
 
 
+class AppWorkList(WorkQueryMixin, ListView):
+    model = Work
+    template_name = 'speechdb/work_list.html'
+
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
 
         # form data
         context['text_form'] = TextForm(self.request.GET)
+        context["csv_url_name"] = "app:works_csv"
         
         return context
 
 
-class AppCharacterList(ListView):
-    model = Character
-    template_name = 'speechdb/character_list.html'
+class AppWorkCSV(WorkQueryMixin, View):
+    filename = "works.csv"
+
+    def get(self, request):
+        qs = self.get_queryset()
+
+        response = HttpResponse(
+            content_type="text/csv",
+            headers={"Content-Disposition": f'attachment; filename="{self.filename}"'},
+        )
+
+        writer = csv.writer(response)
+        writer.writerow(["author", "title", "language", "speeches", "speakers"])  # headers
+
+        for work in qs:
+            writer.writerow([work.author.name, work.title, work.speech__count, work.speech__spkr__count])
+
+        return response
+
+
+class CharacterQueryMixin:
+    '''validate and assemble character query params
+        - designed to be reused by HTML and CSV views
+    '''
         
+    @property
+    def params(self):
+        if not hasattr(self, "_params"):
+            self._params = ValidateParams(self.request)
+    
+        return self._params
+    
+    
     def get_queryset(self):
         
         # collect user search params
-        params = ValidateParams(self.request)
-                                
+        params = self.params
+        
+        # short-circuit if search params are malformed
+        if params is None:
+            return Character.objects.none()
+                                    
         # construct query
         query = []
-        
+
         if "char_name" in params:
             q = Q()
             for name in params["char_name"]:
@@ -615,6 +703,10 @@ class AppCharacterList(ListView):
         return qs
 
 
+class AppCharacterList(CharacterQueryMixin, ListView):
+    model = Character
+    template_name = 'speechdb/character_list.html'
+
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
@@ -622,20 +714,53 @@ class AppCharacterList(ListView):
         # form data
         context['character_form'] = CharacterForm(self.request.GET)
         context['text_form'] = TextForm(self.request.GET)
+        context["csv_url_name"] = "app:characters_csv"
        
         return context
 
 
-class AppCharacterInstanceList(ListView):
-    model = CharacterInstance
-    template_name = 'speechdb/characterinstance_list.html'
-    queryset = CharacterInstance.objects.all()
+class AppCharacterCSV(CharacterQueryMixin, View):
+    filename = "characters.csv"
+
+    def get(self, request):
+        qs = self.get_queryset()
+
+        response = HttpResponse(
+            content_type="text/csv",
+            headers={"Content-Disposition": f'attachment; filename="{self.filename}"'},
+        )
+
+        writer = csv.writer(response)
+        writer.writerow(["name", "gender", "number", "being", "speeches", "addresses", "wikidata", "manto", "topostext"])  # headers
+
+        for c in qs:
+            writer.writerow([c.name, c.gender, c.number, c.being, c.instances__speeches__count, c.instances__addresses__count, c.wd, c.manto, c.tt])
+
+        return response
+
+
+class CharacterInstanceQueryMixin:
+    '''validate and assemble character query params
+        - designed to be reused by HTML and CSV views
+    '''
+        
+    @property
+    def params(self):
+        if not hasattr(self, "_params"):
+            self._params = ValidateParams(self.request)
+    
+        return self._params
+    
     
     def get_queryset(self):
         
         # collect user search params
-        params = ValidateParams(self.request)
-                                
+        params = self.params
+        
+        # short-circuit if search params are malformed
+        if params is None:
+            return CharacterInstance.objects.none()
+                                    
         # construct query
         query = []
         
@@ -787,6 +912,11 @@ class AppCharacterInstanceList(ListView):
         return qs
 
 
+class AppCharacterInstanceList(CharacterInstanceQueryMixin, ListView):
+    model = CharacterInstance
+    template_name = 'speechdb/characterinstance_list.html'
+
+
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
@@ -795,9 +925,39 @@ class AppCharacterInstanceList(ListView):
         context["character_form"] = CharacterForm(self.request.GET)
         context["instance_form"] = InstanceForm(self.request.GET)
         context["text_form"] = TextForm(self.request.GET)
+        context["csv_url_name"] = "app:instances_csv"
                             
         return context
 
+
+class AppCharacterInstanceCSV(CharacterInstanceQueryMixin, View):
+    '''export character instance list as a CSV text file'''
+    
+    filename = "instances.csv"
+
+    def get(self, request):
+        qs = self.get_queryset()
+
+        response = HttpResponse(
+            content_type="text/csv",
+            headers={"Content-Disposition": f'attachment; filename="{self.filename}"'},
+        )
+
+        writer = csv.writer(response)
+        writer.writerow(["name", "character", "disguise", "context", "speeches", "addresses"])  # headers
+
+        for inst in qs:
+            writer.writerow([
+                inst.name,
+                inst.char.name if inst.char else None,
+                inst.disguise,
+                inst.context,
+                inst.speeches__count,
+                inst.addresses__count,
+            ])
+
+        return response
+        
 
 class SpeechQueryMixin:
     '''validate and assemble speech query params
@@ -1192,9 +1352,10 @@ class AppSpeechList(SpeechQueryMixin, ListView):
         context["spkr_character_form"] = CharacterForm(self.request.GET, prefix="spkr")
         context["spkr_instance_form"] = InstanceForm(self.request.GET, prefix="spkr")
         context["addr_character_form"] = CharacterForm(self.request.GET, prefix="addr")
-        context["addr_instance_form"] = InstanceForm(self.request.GET, prefix="addr")  
+        context["addr_instance_form"] = InstanceForm(self.request.GET, prefix="addr")
         context["speech_form"] = SpeechForm(self.request.GET)      
         context["text_form"] = TextForm(self.request.GET)
+        context["csv_url_name"] = "app:speeches_csv"
 
         # CTS reader
         context['reader'] = CTS_READER
@@ -1223,24 +1384,42 @@ class AppSpeechCSV(SpeechQueryMixin, View):
 
         return response
         
+
+class SpeechClusterQueryMixin:
+    '''validate and assemble speech cluster query params
+        - designed to be reused by HTML and CSV views
+    '''
         
-class AppSpeechClusterList(ListView):
-    model = SpeechCluster
-    template_name = 'speechdb/speechcluster_list.html'
+    @property
+    def params(self):
+        if not hasattr(self, "_params"):
+            self._params = ValidateParams(self.request)
+    
+        return self._params
+    
     
     # authentication
     login_url = reverse_lazy("app:login")
     
     def get_queryset(self):
-        # collect user search params
-        params = ValidateParams(self.request)
         
+        # collect user search params
+        params = self.params
+        
+        # short-circuit if search params are malformed
+        if params is None:
+            return SpeechCluster.objects.none()
+                            
         # initial set of objects plus annotations
-        qs = SpeechCluster.objects.annotate(Count('speeches'))
-                
+        qs = SpeechCluster.objects.annotate(
+            speech_count = Count('speeches', distinct=True),
+        ).prefetch_related(
+            "speeches__spkr", "speeches__addr", "speeches__work",
+        )
+
         # construct query
         query = []
-        
+
         #
         # any participant
         #
@@ -1617,6 +1796,11 @@ class AppSpeechClusterList(ListView):
         qs = qs.order_by('seq')
          
         return qs
+
+
+class AppSpeechClusterList(SpeechClusterQueryMixin, ListView):
+    model = SpeechCluster
+    template_name = 'speechdb/speechcluster_list.html'
     
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -1629,8 +1813,33 @@ class AppSpeechClusterList(ListView):
         context["addr_instance_form"] = InstanceForm(self.request.GET, prefix="addr")  
         context["speech_form"] = SpeechForm(self.request.GET)      
         context["text_form"] = TextForm(self.request.GET)
+        context["csv_url_name"] = "app:clusters_csv"
         
         return context
+
+
+class AppSpeechClusterCSV(SpeechClusterQueryMixin, View):
+    '''export speech cluster list as a CSV text file'''
+    
+    filename = "clusters.csv"
+
+    def get(self, request):
+        qs = self.get_queryset()
+
+        response = HttpResponse(
+            content_type="text/csv",
+            headers={"Content-Disposition": f'attachment; filename="{self.filename}"'},
+        )
+
+        writer = csv.writer(response)
+        writer.writerow(["loci", "parts", "participants"])  # headers
+
+        for cl in qs:
+            writer.writerow([cl.get_loc_str(), cl.speech_count, c.get_chars_str()])
+
+        return response
+        
+
 
 class AppAuthorDetail(DetailView):
     model = Author
