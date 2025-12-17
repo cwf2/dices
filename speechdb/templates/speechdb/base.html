@@ -17,42 +17,7 @@
     <link href="{% static 'speechdb/style.css' %}" rel="stylesheet">
     <link rel="icon" type="image/png" href="{% static 'speechdb/dices.png' %}"/>
 		<!-- Select2 functionality -->
-		<script>
-		  $(document).ready(function() {
-		    $(".tagging-select").each(function() {
-		      $(this).select2({
-		        tokenSeparators: [','],  // Split input on commas
-		        placeholder: "any",
-		      });
-		    });
-		  			
-				const sidebar = document.getElementById("collapseSidebar");
-				const openBtn = document.getElementById("btnExpandSidebar");
-
-				if (sidebar && openBtn) {
-				      sidebar.addEventListener("shown.bs.collapse", () => {
-				        openBtn.style.display = "none";
-				      });
-				      sidebar.addEventListener("hidden.bs.collapse", () => {
-				        openBtn.style.display = "inline-block";
-				      });
-
-				      // set initial state on page load
-				      openBtn.style.display = sidebar.classList.contains("show")
-				        ? "none"
-				        : "inline-block";
-		    }
-			});
-		</script>
-	<style type="text/css">
-		.uniform-badge {
-		    display: inline-block; /* Allows alignment of text and icon */
-		    justify-content: left; /* Centers the content horizontally */
-		    width: 120px; /* Set a consistent width */
-		    height: auto; /* Adjust height automatically */
-		    text-align: center; /* Ensures proper text alignment */
-		}
-	</style>
+		<script src="{% static 'speechdb/dices.js' %}"></script>
     <title>{% block title %}DICES{% endblock %}</title>
   </head>
   <body>

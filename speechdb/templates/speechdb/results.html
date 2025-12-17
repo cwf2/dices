@@ -7,15 +7,17 @@
     <div class="alert alert-secondary">
 			<form action="{{ request.path }}" method="GET">
 				<!-- panel controls -->
-				<div class="d-flex align-items-center justify-content-between mb-3">
+				<div class="bg-white border rounded d-flex gap-2 align-items-center mb-3">
 					<div class="d-flex align-items-center me-auto ms-2 my-2 gap-3">
 		        <button type="submit" class="btn btn-secondary btn-sm px-4" >Update</button>
 		        <a class="btn btn-outline-secondary btn-sm px-4"  href="{% url 'app:speeches' %}">Reset</a>
 					</div>
 					
-				  <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCollapseSidebar" data-bs-toggle="collapse" data-bs-target="#collapseSidebar">
-						<i class="fa-solid fa-square-caret-left"></i>
-					</button>
+					<div class="d-flex align-items-center ms-auto me-2 my-2 gap-3">
+					  <button type="button" class="btn btn-light text-muted btn-sm" id="btnCollapseSidebar" data-bs-toggle="collapse" data-bs-target="#collapseSidebar">
+							<i class="fa-solid fa-square-caret-left"></i>
+						</button>
+					</div>
 				</div>
 			
 			<!-- filters -->
@@ -27,7 +29,7 @@
 	
 	<!-- results pane -->
   <div class="col position-relative">
-		<button class="btn position-absolute top-0" id="btnExpandSidebar" style="left:-1.25rem" data-bs-toggle="collapse" data-bs-target="#collapseSidebar">
+		<button class="btn position-absolute top-0 expand-btn" id="btnExpandSidebar" style="left:-1.25rem" data-bs-toggle="collapse" data-bs-target="#collapseSidebar">
 	    <i class="fa-solid fa-square-caret-right"></i>
   	</button>
 		<div class="d-flex align-items-center">
@@ -36,7 +38,7 @@
 		      {{ object_list|length }} results
 		    </span>
 		    <a class="btn btn-outline-secondary btn-sm"
-		       href="{% url 'app:speeches_csv' %}?{{ request.GET.urlencode }}">
+		       href="{% url csv_url_name %}?{{ request.GET.urlencode }}">
 		      <i class="fa-solid fa-download"></i> CSV
 		    </a>
 		  </div>
