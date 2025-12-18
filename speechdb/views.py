@@ -1345,10 +1345,10 @@ class AppSpeechList(SpeechQueryMixin, ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
     
-    # def dispatch(self, request, *args, **kwargs):
-    #         if not request.GET:
-    #             return cache_page(60 * 15)(super().dispatch)(request, *args, **kwargs)
-    #         return super().dispatch(request, *args, **kwargs)
+    def dispatch(self, request, *args, **kwargs):
+            if not request.GET:
+                return cache_page(60 * 15)(super().dispatch)(request, *args, **kwargs)
+            return super().dispatch(request, *args, **kwargs)
         
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
