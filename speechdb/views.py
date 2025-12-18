@@ -537,6 +537,7 @@ class AppWorkList(WorkQueryMixin, ListView):
         # form data
         context['text_form'] = TextForm(self.request.GET)
         context["csv_url_name"] = "app:works_csv"
+        context["active"] = "works"
         
         return context
 
