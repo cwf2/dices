@@ -107,7 +107,18 @@ class InstanceForm(PrefixedForm):
         )
         self.fields["inst_anon"] = forms.ChoiceField(
             label = "Anon",
-            choices = [("", "any"), ("True", "True"), ("False", "False")],
+            choices = [("", ""), ("True", "True"), ("False", "False")],
+            required = False,
+            initial = "",
+            widget = forms.Select(attrs={
+                "class": "form-select tagging-select", 
+                "data-allow-clear": "true",
+                "data-minimum-results-for-search": "Infinity",
+            }),
+        )
+        self.fields["inst_disguised"] = forms.ChoiceField(
+            label = "Disguised",
+            choices = [("", ""), ("True", "True"), ("False", "False")],
             required = False,
             initial = "",
             widget = forms.Select(attrs={
@@ -123,7 +134,7 @@ class TextForm(PrefixedForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
     
-        self.fields["lang"] = forms.ChoiceField(
+        self.fields["work_lang"] = forms.ChoiceField(
             label = "Language",
             choices = get_work_lang_choices(), 
             required = False,
@@ -195,6 +206,7 @@ class PagerForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        # character properties
         self.fields["char_name"] = forms.MultipleChoiceField(
             choices = get_char_name_choices(),
             required = False,
@@ -223,7 +235,20 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.HiddenInput(),
         )
-    
+        self.fields["char_wd"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["char_manto"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["char_tt"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+
+        #instance properties
         self.fields["inst_name"] = forms.MultipleChoiceField(
             choices = get_inst_name_choices(),
             required = False,
@@ -257,7 +282,13 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.HiddenInput(),
         )    
+        self.fields["inst_disguised"] = forms.ChoiceField(
+            choices = [("True", "True"), ("False", "False")],
+            required = False,
+            widget = forms.HiddenInput(),
+        )    
     
+        # speaker character properties
         self.fields["spkr_char_name"] = forms.MultipleChoiceField(
             choices = get_char_name_choices(),
             required = False,
@@ -286,6 +317,20 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.HiddenInput(),
         )
+        self.fields["spkr_char_wd"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["spkr_char_manto"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["spkr_char_tt"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        
+        # speaker instance properties
         self.fields["spkr_inst_name"] = forms.MultipleChoiceField(
             choices = get_inst_name_choices(),
             required = False,
@@ -319,7 +364,13 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.HiddenInput(),
         )
+        self.fields["spkr_inst_disguised"] = forms.ChoiceField(
+            choices = [("True", "True"), ("False", "False")],
+            required = False,
+            widget = forms.HiddenInput(),
+        )
             
+        # addressee character properties
         self.fields["addr_char_name"] = forms.MultipleChoiceField(
             choices = get_char_name_choices(),
             required = False,
@@ -348,6 +399,20 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.HiddenInput(),
         )
+        self.fields["addr_char_wd"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["addr_char_manto"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        self.fields["addr_char_tt"] = forms.CharField(
+            required = False,
+            widget = forms.HiddenInput(),
+        )
+        
+        # addressee instance properties
         self.fields["addr_inst_name"] = forms.MultipleChoiceField(
             choices = get_inst_name_choices(),
             required = False,
@@ -381,11 +446,16 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
+        self.fields["addr_inst_disguised"] = forms.ChoiceField(
+            choices = [("True", "True"), ("False", "False")],
+            required = False,
+            widget = forms.MultipleHiddenInput(),
+        )
     
         # work properties
-        self.fields["lang"] = forms.ChoiceField(
+        self.fields["work_lang"] = forms.ChoiceField(
             choices = get_work_lang_choices(),
-            required = False,
+            required = False,   
             widget = forms.HiddenInput(),
         )
         self.fields["author_name"] = forms.MultipleChoiceField(
@@ -414,7 +484,8 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-    
+        
+        # speech properties
         self.fields["type"] = forms.MultipleChoiceField(
             choices = Speech.SpeechType.choices,
             required = False,
@@ -439,12 +510,4 @@ class PagerForm(forms.Form):
             min_value = 0,
             required = False,
             widget = forms.HiddenInput(),
-        )
-    
-        self.fields["page_size"] = forms.ChoiceField(
-            choices = [("25", "25 per page"), ("50", "50 per page"), ("100", "100 per page"), ("0", "view all")],
-            required = False,
-            widget = forms.Select(attrs={
-                "class": "btn btn-outline-secondary btn-small",
-            }),
         )

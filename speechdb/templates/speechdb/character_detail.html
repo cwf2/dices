@@ -34,7 +34,7 @@
               <td>speeches as speaker:</td>
               <td>
                 {{ char.get_speeches.count }}
-                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?spkr_id={{ char.id }}">
+                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?spkr_char_pubid={{ char.public_id }}">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
               </td>
@@ -43,7 +43,7 @@
               <td>speeches as addressee:</td>
               <td>
                 {{ char.get_addresses.count }}
-                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?addr_id={{ char.id }}">
+                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?addr_char_pubid={{ char.public_id }}">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
               </td>
@@ -110,13 +110,13 @@
               <td>{{ inst.context }}</td>
               <td>
                 {{ inst.speeches.count }}
-                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?spkr_inst_id={{ inst.id }}">
+                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?spkr_inst_pubid={{ inst.public_id }}">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
               </td>
               <td>
                 {{ inst.addresses.count }}
-                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?addr_inst_id={{ inst.id }}">
+                <a style="margin-left: 1em" href="{% url 'app:speeches' %}?addr_inst_pubid={{ inst.public_id }}">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
               </td>

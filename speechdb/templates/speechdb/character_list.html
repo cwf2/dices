@@ -10,52 +10,54 @@
     <tr><th>Name</th><th>Gender</th><th>Number</th><th>Being</th><th>Speaker</th><th>Addressee</th><th>Linked Data</th></tr>
   </thead>
   <tbody>
-    {% for c in object_list %}
+    {% for char in object_list %}
     <tr>
       <td>
-        {{ c.name }}
-        <a href="{% url 'app:character_detail' c.public_id %}">
+        {{ char.name }}
+        <a href="{% url 'app:character_detail' char.public_id %}">
           <i class="fa-solid fa-circle-info"></i>
         </a>
       </td>
-      <td>{{ c.gender }}</td>
-      <td>{{ c.number }}</td>
-      <td>{{ c.being }}</td>
+      <td>{{ char.gender }}</td>
+      <td>{{ char.number }}</td>
+      <td>{{ char.being }}</td>
       <td>
-        {% if c.instances__speeches__count > 0 %}
-        {{ c.instances__speeches__count }}
-        <a style="margin-left:1em" href="{% url 'app:speeches' %}?spkr_id={{ c.pk }}">
+        {% if char.instances__speeches__count > 0 %}
+        {{ char.instances__speeches__count }}
+        <a style="margin-left:1em" href="{% url 'app:speeches' %}?spkr_char_pubid={{ char.public_id }}">
           <i class="fa-solid fa-magnifying-glass"></i>
         </a>
         {% endif %}
       </td>
       <td>
-        {% if c.instances__addresses__count > 0 %}
-        {{ c.instances__addresses__count }}
-        <a style="margin-left:1em" href="{% url 'app:speeches' %}?addr_id={{ c.pk }}">
+        {% if char.instances__addresses__count > 0 %}
+        {{ char.instances__addresses__count }}
+        <a style="margin-left:1em" href="{% url 'app:speeches' %}?addr_char_pubid={{ char.pubid }}">
           <i class="fa-solid fa-magnifying-glass"></i>
         </a>
         {% endif %}
       </td>
       <td>
-        {% if c.wd %}
+        {% if char.wd %}
         <span class="badge badge-dark">
-        	<a style="margin-left: 0.5em" href="https://www.wikidata.org/wiki/{{ c.wd }}">
+        	<a style="margin-left: 0.5em" href="https://www.wikidata.org/wiki/{{ char.wd }}">
           	  WD <i class="fa-solid fa-up-right-from-square"></i>
-			</a>
-		</span>
+					</a>
+				</span>
         {% endif %}
-        {% if c.manto %}
+        {% if char.manto %}
         <span class="badge badge-dark">
-	        <a style="margin-left: 0.5em" href="https://resource.manto.unh.edu/{{ c.manto }}">
+	        <a style="margin-left: 0.5em" href="https://resource.manto.unh.edu/{{ char.manto }}">
 				MANTO <i class="fa-solid fa-up-right-from-square"></i>
 	        </a>
-		</span>
+				</span>
+				{% endif %}
+				{% if char.tt %}
         <span class="badge badge-dark">
             <a style="margin-left:0.5em" href="https://topostext.org/people/{{ char.tt }}">
                 TT <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
-		</span>
+				</span>
         {% endif %}
       </td>
     </tr>

@@ -410,9 +410,9 @@ class AuthorQueryMixin:
         query = []
         
         # language
-        if "lang" in params:
+        if 'work_lang' in params:
             q = Q()
-            for lang in params["lang"]:
+            for lang in params["work_lang"]:
                 q |= Q(work__lang=lang)
             query.append(q)
         
@@ -490,39 +490,44 @@ class WorkQueryMixin:
         # text properties
         if 'author_name' in params:
             q = Q()
-            for author_name in params["author_name"]:
-                q |= Q(instances__speeches__work__author__name=author_name)
-                q |= Q(instances__addresses__work__author__name=author_name)
+            for name in params["author_name"]:
+                q |= Q(author__name=name)
             query.append(q)
-
 
         if 'author_id' in params:
             q = Q()
             for pk in params["author_id"]:
-                q |= Q(instances__speeches__work__author__pk=pk)
-                q |= Q(instances__addresses__work__author__pk=pk)
+                q |= Q(author__pk=pk)
             query.append(q)
-
 
         if 'author_pubid' in params:
             q = Q()
             for pubid in params["author_pubid"]:
-                q |= Q(instances__speeches__work__author__public_id=pubid)
-                q |= Q(instances__addresses__work__author__public_id=pubid)
+                q |= Q(author__public_id=pubid)
             query.append(q)
 
         if 'work_title' in params:
             q = Q()
-            for work_title in params["work_title"]:
-                q |= Q(instances__speeches__work__title=work_title)
-                q |= Q(instances__addresses__work__title=work_title)
+            for title in params["work_title"]:
+                q |= Q(title=title)
+            query.append(q)
+
+        if 'work_id' in params:
+            q = Q()
+            for pk in params["work_id"]:
+                q |= Q(pk=pk)
+            query.append(q)
+
+        if 'work_pubid' in params:
+            q = Q()
+            for pubid in params["work_pubid"]:
+                q |= Q(public_id=pubid)
             query.append(q)
             
-        if 'lang' in params:
+        if 'work_lang' in params:
             q = Q()
             for lang in params["lang"]:
-                q |= Q(instances__speeches__work__lang=lang)
-                q |= Q(instances__addresses__work__lang=lang)
+                q |= Q(lang=lang)
             query.append(q)
 
         # perform query
@@ -602,6 +607,18 @@ class CharacterQueryMixin:
             for name in params["char_name"]:
                 q |= Q(name=name)
             query.append(q)
+
+        if "char_id" in params:
+            q = Q()
+            for pk in params["char_id"]:
+                q |= Q(pk=pk)
+            query.append(q)
+
+        if "char_pubid" in params:
+            q = Q()
+            for pubid in params["char_pubid"]:
+                q |= Q(public_id=pubid)
+            query.append(q)
             
         if 'char_gender' in params:
             q = Q()
@@ -629,62 +646,62 @@ class CharacterQueryMixin:
 
         if 'char_wd' in params:
             q = Q()
-            for wd in params["wd"]:
+            for wd in params["char_wd"]:
                 q |= Q(wd=wd)
             query.append(q)
 
         if 'char_tt' in params:
             q = Q()
-            for tt in params["tt"]:
+            for tt in params["char_tt"]:
                 q |= Q(tt=tt)
             query.append(q)
 
         # text properties
         if 'author_name' in params:
             q = Q()
-            for author_name in params["author_name"]:
-                q |= Q(instances__speeches__work__author__name=author_name)
-                q |= Q(instances__addresses__work__author__name=author_name)
+            for name in params["author_name"]:
+                q |= Q(instances__speeches__work__author__name=name)
+                q |= Q(instances__addresses__work__author__name=name)
             query.append(q)
 
         if 'author_id' in params:
             q = Q()
-            for author_pubid in params["author_id"]:
+            for pk in params["author_id"]:
+                q |= Q(instances__speeches__work__author__pk=pk)
+                q |= Q(instances__addresses__work__author__pk=pk)
+            query.append(q)
+
+        if 'author_pubid' in params:
+            q = Q()
+            for pubid in params["author_pubid"]:
                 q |= Q(instances__speeches__work__author__public_id=author_pubid)
                 q |= Q(instances__addresses__work__author__public_id=author_pubid)
             query.append(q)
 
-        if 'author_pk' in params:
-            q = Q()
-            for author_pk in params["author_pk"]:
-                q |= Q(instances__speeches__work__author__pk=author_pk)
-                q |= Q(instances__addresses__work__author__pk=author_pk)
-            query.append(q)
-
         if 'work_title' in params:
             q = Q()
-            for work_title in params["work_title"]:
-                q |= Q(instances__speeches__work__title=work_title)
-                q |= Q(instances__addresses__work__title=work_title)
+            for title in params["work_title"]:
+                q |= Q(instances__speeches__work__title=title)
+                q |= Q(instances__addresses__work__title=title)
             query.append(q)
 
-        if 'work_id' in params:
+        if 'work_pubid' in params:
             q = Q()
-            for work_pubid in params["work_id"]:
-                q |= Q(instances__speeches__work__public_id=work_pubid)
-                q |= Q(instances__addresses__work__public_id=work_pubid)
+            for pubid in params["work_pubid"]:
+                q |= Q(instances__speeches__work__public_id=pubid)
+                q |= Q(instances__addresses__work__public_id=pubid)
             query.append(q)
             
-        if 'work_pk' in params:
+        if 'work_id' in params:
             q = Q()
-            for work_pk in params["work_pk"]:
-                q |= Q(instances__speeches__work__pk=work_pk)
-                q |= Q(instances__addresses__work__pk=work_pk)
+            for pk in params["work_pk"]:
+                q |= Q(instances__speeches__work__pk=pk)
+                q |= Q(instances__addresses__work__pk=pk)
             query.append(q)
 
-        if 'lang' in params:
+        if 'work_lang' in params:
             q = Q()
-            for lang in params["lang"]:
+            for lang in params["work_lang"]:
                 q |= Q(instances__speeches__work__lang=lang)
                 q |= Q(instances__addresses__work__lang=lang)
             query.append(q)
@@ -767,6 +784,18 @@ class CharacterInstanceQueryMixin:
             for name in params["inst_name"]:
                 q |= Q(name=name)
             query.append(q)
+
+        if "inst_id" in params:
+            q = Q()
+            for pk in params["inst_id"]:
+                q |= Q(pk=pk)
+            query.append(q)
+
+        if "inst_pubid" in params:
+            q = Q()
+            for pubid in params["inst_pubid"]:
+                q |= Q(public_id=pubid)
+            query.append(q)
             
         if 'inst_gender' in params:
             q = Q()
@@ -791,18 +820,24 @@ class CharacterInstanceQueryMixin:
             for anon in params["inst_anon"]:
                 q |= Q(anon=anon)
             query.append(q)
+
+        if 'inst_disguised' in params:
+            q = Q()
+            for disg in params["inst_disguised"]:
+                q |= Q(disguise__isnull=not(disg))
+            query.append(q)
         
         # character properties
         if "char_id" in params:
             q = Q()
-            for char_pubid in params["char_id"]:
-                q |= Q(char__public_id=char_pubid)
+            for pk in params["char_id"]:
+                q |= Q(char__pk=pk)
             query.append(q)
 
-        if "char_pk" in params:
+        if "char_pubid" in params:
             q = Q()
-            for char_pk in params["char_pk"]:
-                q |= Q(char__public_pk=char_pk)
+            for pubid in params["char_pubid"]:
+                q |= Q(char__public_id=pubid)
             query.append(q)
 
         if "char_name" in params:
@@ -850,47 +885,47 @@ class CharacterInstanceQueryMixin:
         # text properties
         if 'author_id' in params:
             q = Q()
-            for author_pubid in params["author_id"]:
-                q |= Q(speeches__work__author__public_id=author_pubid)
-                q |= Q(addresses__work__author__public_id=author_pubid)
+            for pk in params["author_id"]:
+                q |= Q(speeches__work__author__pk=pk)
+                q |= Q(addresses__work__author__pk=pk)
             query.append(q)
 
-        if 'author_pk' in params:
+        if 'author_pubid' in params:
             q = Q()
-            for author_pk in params["author_pk"]:
-                q |= Q(speeches__work__author__pk=author_pk)
-                q |= Q(addresses__work__author__pk=author_pk)
+            for pubid in params["author_pubid"]:
+                q |= Q(speeches__work__author__public_id=pubid)
+                q |= Q(addresses__work__author__public_id=pubid)
             query.append(q)
 
         if 'author_name' in params:
             q = Q()
-            for author_name in params["author_name"]:
-                q |= Q(speeches__work__author__name=author_name)
-                q |= Q(addresses__work__author__name=author_name)
+            for name in params["author_name"]:
+                q |= Q(speeches__work__author__name=name)
+                q |= Q(addresses__work__author__name=name)
             query.append(q)
 
         if 'work_title' in params:
             q = Q()
-            for work_title in params:
-                q |= Q(speeches__work__title=work_title)
-                q |= Q(addresses__work__title=work_title)
+            for title in params:
+                q |= Q(speeches__work__title=title)
+                q |= Q(addresses__work__title=title)
             query.append(q)
 
         if 'work_id' in params:
             q = Q()
-            for work_pubid in params:
-                q |= Q(speeches__work__public_id=work_pubid)
-                q |= Q(addresses__work__public_id=work_pubid)
+            for pk in params["work_id"]:
+                q |= Q(speeches__work__pk=pk)
+                q |= Q(addresses__work__pk=pk)
             query.append(q)
         
-        if 'work_pk' in params:
+        if 'work_pubid' in params:
             q = Q()
-            for work_pk in params:
-                q |= Q(speeches__work__pk=work_pk)
-                q |= Q(addresses__work__pk=work_pk)
+            for pubid in params["work_pubid"]:
+                q |= Q(speeches__work__public_id=pubid)
+                q |= Q(addresses__work__public_id=pubid)
             query.append(q)
             
-        if 'lang' in params:
+        if 'work_lang' in params:
             q = Q()
             for lang in params["lang"]:
                 q |= Q(speeches__work__lang=lang)
@@ -988,18 +1023,18 @@ class SpeechQueryMixin:
         # speaker properties
         # 
         
-        # speaker character public id
+        # speaker character primary key (old id)
         if "spkr_char_id" in params:
             q = Q()
-            for pubid in params["spkr_char_id"]:
-                q |= Q(spkr__char__public_id=pubid)
+            for pk in params["spkr_char_id"]:
+                q |= Q(spkr__char__pk=pk)
             query.append(q)
 
-        # speaker character id
-        if "spkr_char_pk" in params:
+        # speaker character public id
+        if "spkr_char_pubid" in params:
             q = Q()
-            for pk in params["spkr_char_pk"]:
-                q |= Q(spkr__char__pk=pk)
+            for pubid in params["spkr_char_pubid"]:
+                q |= Q(spkr__char__public_id=pubid)
             query.append(q)
 
         # speaker character name
@@ -1051,18 +1086,18 @@ class SpeechQueryMixin:
                 q |= Q(spkr__char__tt=tt)
             query.append(q)
             
-        # speaker instance public id
+        # speaker instance primary key (old id)
         if "spkr_inst_id" in params:
             q = Q()
-            for pubid in params["spkr_inst_id"]:
-                q |= Q(spkr__public_id=pubid)
+            for pk in params["spkr_inst_id"]:
+                q |= Q(spkr__pk=pk)
             query.append(q)
 
-        # speaker instance pk
-        if "spkr_inst_pk" in params:
+        # speaker instance public id
+        if "spkr_inst_pubid" in params:
             q = Q()
-            for pk in params["spkr_inst_pk"]:
-                q |= Q(spkr__pk=pk)
+            for pk in params["spkr_inst_pubid"]:
+                q |= Q(spkr__public_id=pubid)
             query.append(q)
         
         # speaker instance name
@@ -1092,28 +1127,36 @@ class SpeechQueryMixin:
             for number in params["spkr_inst_number"]:
                 q |= Q(spkr__number=number)
             query.append(q)
+            
+        # speaker instance anonymous
+        if "spkr_inst_anon" in params:
+            q = Q()
+            for anon in params["spkr_inst_anon"]:
+                q |= Q(spkr__anon=anon)
+            query.append(q)
         
         # speaker disguised
-        if "spkr_disguised" in params:
-            if len(params["spkr_disguised"]) > 0:
-                query.append(Q(spkr__disguise__isnull=not(params["spkr_disguised"][0])))
-            
+        if "spkr_inst_disguised" in params:
+            q = Q()
+            for disg in params["spkr_inst_disguised"]:
+                q |= Q(spkr__disguise__isnull=not(disg))
+            query.append(q)
         #
         # addressee properties
         #
                     
-        # addressee character public id
+        # addressee character primary key (old id)
         if "addr_char_id" in params:
             q = Q()
-            for puid in params["addr_char_id"]:
-                q |= Q(addr__char__public_id=pubid)
+            for pk in params["addr_char_id"]:
+                q |= Q(addr__char__pk=pk)
             query.append(q)
 
-        # addressee character pk
-        if "addr_char_pk" in params:
+        # addressee character public id
+        if "addr_char_pubid" in params:
             q = Q()
-            for pk in params["addr_char_pk"]:
-                q |= Q(addr__char__pk=pk)
+            for pubid in params["addr_char_pubid"]:
+                q |= Q(addr__char__public_id=pubid)
             query.append(q)
 
         # addressee character name
@@ -1165,18 +1208,18 @@ class SpeechQueryMixin:
                 q |= Q(addr__char__tt=tt)
             query.append(q)
             
-        # addressee instance public id
+        # addressee instance primary key (old id)
         if "addr_inst_id" in params:
             q = Q()
-            for pubid in params["addr_inst_id"]:
-                q |= Q(addr__public_id=pubid)
+            for pk in params["addr_inst_id"]:
+                q |= Q(addr__pk=pk)
             query.append(q)
 
-        # addressee instance pk
-        if "addr_inst_pk" in params:
+        # addressee instance public id
+        if "addr_inst_pubid" in params:
             q = Q()
-            for pk in params["addr_inst_pk"]:
-                q |= Q(addr__pk=pk)
+            for pubid in params["addr_inst_pubid"]:
+                q |= Q(addr__public_id=pubid)
             query.append(q)
         
         # addressee instance name
@@ -1207,27 +1250,36 @@ class SpeechQueryMixin:
                 q |= Q(addr__number=number)
             query.append(q)
         
+        # addressee instance anonymous
+        if "addr_inst_anon" in params:
+            q = Q()
+            for anon in params["addr_inst_anon"]:
+                q |= Q(addr__anon=anon)
+            query.append(q)
+        
         # addressee disguised
-        if "addr_disguised" in params:
-            if len(params["addr_disguised"]) > 0:
-                query.append(Q(addr__disguise__isnull=not(params["addr_disguised"][0])))
+        if "addr_inst_disguised" in params:
+            q = Q()
+            for disg in params["addr_inst_disguised"]:
+                q |= Q(addr__disguise__isnull=not(disg))
+            query.append(q)
                      
         #
         # speech properties
         # 
 
-        # cluster public id
+        # cluster primary key (old id)
         if "cluster_id" in params:
             q = Q()
-            for pubid in params["cluster_id"]:
-                q |= Q(cluster__public_id=pubid)
+            for pk in params["cluster_id"]:
+                q |= Q(cluster__pk=pk)
             query.append(q)
 
-        # cluster pk
-        if "cluster_pk" in params:
+        # cluster public id
+        if "cluster_pubid" in params:
             q = Q()
-            for pk in params["cluster_pk"]:
-                q |= Q(cluster__pk=pk)
+            for pubid in params["cluster_pubid"]:
+                q |= Q(cluster__public_id=pubid)
             query.append(q)
         
         # cluster type
@@ -1269,18 +1321,18 @@ class SpeechQueryMixin:
         # work properties
         #
         
-        # work public id
+        # work primary key (old id)
         if "work_id" in params:
             q = Q()
-            for pubid in params["work_id"]:
-                q |= Q(work__public_id=pubid)
+            for pk in params["work_id"]:
+                q |= Q(work__pk=pk)
             query.append(q)
 
-        # work pk
-        if "work_pk" in params:
+        # work public id
+        if "work_pubid" in params:
             q = Q()
-            for pk in params["work_pk"]:
-                q |= Q(work__pk=pk)
+            for pubid in params["work_pubid"]:
+                q |= Q(work__public_id=pubid)
             query.append(q)
         
         # work title
@@ -1290,18 +1342,18 @@ class SpeechQueryMixin:
                 q |= Q(work__title=title)
             query.append(q)
             
-        # author public id
+        # author primary key (old id)
         if "auth_id" in params:
             q = Q()
-            for pubid in params["auth_id"]:
-                q |= Q(work__author__public_id=pubid)
+            for pk in params["auth_id"]:
+                q |= Q(work__author__pk=pk)
             query.append(q)
 
-        # author pk
-        if "auth_pk" in params:
+        # author public id
+        if "auth_pubid" in params:
             q = Q()
-            for pk in params["auth_pk"]:
-                q |= Q(work__author__pk=pk)
+            for pubid in params["auth_pubic"]:
+                q |= Q(work__author__public_id=pubid)
             query.append(q)
             
         # author name
@@ -1312,9 +1364,9 @@ class SpeechQueryMixin:
             query.append(q)
             
         # language
-        if "lang" in params:
+        if "work_lang" in params:
             q = Q()
-            for lang in params["lang"]:
+            for lang in params["work_lang"]:
                 q |= Q(work__lang=lang)
             query.append(q)
 
@@ -1418,20 +1470,20 @@ class SpeechClusterQueryMixin:
         # any participant
         #
         
-        # any participant by character public id
+        # any participant by character primary key
         if "char_id" in params:
             q = Q()
-            for pubid in params["char_id"]:
-                q |= Q(speeches__spkr__char__public_id=pubid)
-                q |= Q(speeches__addr__char__public_id=pubid)
-            query.append(q)
-
-        # any participant by character id
-        if "char_pk" in params:
-            q = Q()
-            for pk in params["char_pk"]:
+            for pk in params["char_id"]:
                 q |= Q(speeches__spkr__char__pk=pk)
                 q |= Q(speeches__addr__char__pk=pk)
+            query.append(q)
+
+        # any participant by character public id
+        if "char_pubid" in params:
+            q = Q()
+            for pubid in params["char_pubid"]:
+                q |= Q(speeches__spkr__char__public_id=pubid)
+                q |= Q(speeches__addr__char__public_id=pubid)
             query.append(q)
         
         # any participant by character name
@@ -1458,20 +1510,20 @@ class SpeechClusterQueryMixin:
                 q |= Q(speeches__addr__char__gender=gender)
             query.append(q)
             
-        # any participant by instance public id
+        # any participant by instance primary key
         if "inst_id" in params:
             q = Q()
-            for pubid in params["inst_id"]:
-                q |= Q(speeches__spkr__public_id=pubid)
-                q |= Q(speeches__addr__public_id=pubid)
-            query.append(q)
-
-        # any participant by instance pk
-        if "inst_pk" in params:
-            q = Q()
-            for pk in params["inst_pk"]:
+            for pk in params["inst_id"]:
                 q |= Q(speeches__spkr__pk=pk)
                 q |= Q(speeches__addr__pk=pk)
+            query.append(q)
+
+        # any participant by instance public id
+        if "inst_pubid" in params:
+            q = Q()
+            for pubid in params["inst_pubid"]:
+                q |= Q(speeches__spkr__public_id=pubid)
+                q |= Q(speeches__addr__public_id=pubid)
             query.append(q)
         
         # any participant by instance name
@@ -1499,30 +1551,37 @@ class SpeechClusterQueryMixin:
             query.append(q)
                     
         # any participant disguised
-        if "disguised" in params:
+        if "inst_disguised" in params:
             q = Q()
-            for disg in params["disguised"]:
+            for disg in params["inst_disguised"]:
                 q |= Q(speeches__spkr__disguise__isnull=not(disg))
                 q |= Q(speeches__addr__disguise__isnull=not(disg))                
+            query.append()   
+
+        # any participant anonymous
+        if "inst_anon" in params:
+            q = Q()
+            for anon in params["inst_anon"]:
+                q |= Q(speeches__spkr__anon=anon)
+                q |= Q(speeches__addr__anon=anon)
             query.append()
-                    
                     
         #
         # speaker
         #
                     
-        # speaker by character public id
+        # speaker by character primary key (old id)
         if "spkr_char_id" in params:
             q = Q()
-            for pubid in params["spkr_char_id"]:
-                q |= Q(speeches__spkr__char__public_id=pubid)
+            for pk in params["spkr_char_id"]:
+                q |= Q(speeches__spkr__char__pk=pk)
             query.append(q)
 
-        # speaker by character pk
-        if "spkr_char_pk" in params:
+        # speaker by character public id
+        if "spkr_char_pubid" in params:
             q = Q()
-            for pk in params["spkr_char_pk"]:
-                q |= Q(speeches__spkr__char__pk=pk)
+            for pubid in params["spkr_char_pubid"]:
+                q |= Q(speeches__spkr__char__public_id=pubid)
             query.append(q)
                     
         # speaker by character name
@@ -1553,11 +1612,18 @@ class SpeechClusterQueryMixin:
                 q |= Q(speeches__spkr__char__gender=gender)
             query.append(q)
         
-        # speaker by instance id
+        # speaker by instance primary key
         if "spkr_inst_id" in params:
             q = Q()
-            for id in params["spkr_inst_id"]:
-                q |= Q(speeches__spkr__id=id)
+            for pk in params["spkr_inst_id"]:
+                q |= Q(speeches__spkr__pk=pk)
+            query.append(q)
+
+        # speaker by instance public id
+        if "spkr_inst_pubid" in params:
+            q = Q()
+            for pubid in params["spkr_inst_pubid"]:
+                q |= Q(speeches__spkr__public_id=pubid)
             query.append(q)
         
         # speaker by instance name
@@ -1588,27 +1654,36 @@ class SpeechClusterQueryMixin:
                 q |= Q(speeches__spkr__number=number)
             query.append(q)
         
-        # speaker disguised
-        if "spkr_disguised" in params:
-            if len(params["spkr_disguised"]) > 0:
-                query.append(Q(speeches__spkr__disguise__isnull=not(params["spkr_disguised"][0])))
+        # speaker instance disguised
+        if "spkr_inst_disguised" in params:
+            q = Q()
+            for disg in params["spkr_inst_disguised"]:
+                q |= Q(speeches__spkr__disguise__isnull=not(disg))                
+            query.append()   
+
+        # speaker instance anonymous
+        if "spkr_inst_anon" in params:
+            q = Q()
+            for anon in params["spkr_inst_anon"]:
+                q |= Q(speeches__spkr__anon=anon)
+            query.append()
         
         #
         # addressee
         #
         
-        # addressee by character public id
+        # addressee by character primary key
         if "addr_char_id" in params:
             q = Q()
-            for pubid in params["addr_char_id"]:
-                q |= Q(speeches__addr__char__public_id=pubid)
+            for pk in params["addr_char_id"]:
+                q |= Q(speeches__addr__char__pk=pk)
             query.append(q)
                     
-        # addressee by character pk
-        if "addr_char_pk" in params:
+        # addressee by character public id
+        if "addr_char_pubid" in params:
             q = Q()
-            for id in params["addr_char_pk"]:
-                q |= Q(speeches__addr__char__pk=pk)
+            for id in params["addr_char_pubid"]:
+                q |= Q(speeches__addr__char__public_id=pubid)
             query.append(q)
 
         # addressee by character name
@@ -1639,18 +1714,18 @@ class SpeechClusterQueryMixin:
                 q |= Q(speeches__addr__char__gender=gender)
             query.append(q)
         
-        # addressee by instance public id
+        # addressee by instance primary key
         if "addr_inst_id" in params:
             q = Q()
-            for pubid in params["addr_inst_id"]:
-                q |= Q(speeches__addr__public_id=pubid)
+            for pk in params["addr_inst_id"]:
+                q |= Q(speeches__addr__pk=pk)
             query.append(q)
 
-        # addressee by instance pk
-        if "addr_inst_pk" in params:
+        # addressee by instance public id
+        if "addr_inst_pubid" in params:
             q = Q()
-            for pk in params["addr_inst_pk"]:
-                q |= Q(speeches__addr__pk=pk)
+            for pubid in params["addr_inst_pubid"]:
+                q |= Q(speeches__addr__public_id=pubid)
             query.append(q)
         
         # addressee by instance name
@@ -1681,27 +1756,36 @@ class SpeechClusterQueryMixin:
                 q |= Q(speeches__addr__number=number)
             query.append(q)
         
-        # addressee disguised
-        if "addr_disguised" in params:
-            if len(params["addr_disguised"]) > 0:
-                query.append(Q(speeches__addr__disguise__isnull=not(params["addr_disguised"][0])))
+        # addressee instance disguised
+        if "addr inst_disguised" in params:
+            q = Q()
+            for disg in params["addr_inst_disguised"]:
+                q |= Q(speeches__addr__disguise__isnull=not(disg))                
+            query.append()   
+
+        # addressee instance anonymous
+        if "addr_inst_anon" in params:
+            q = Q()
+            for anon in params["inst_anon"]:
+                q |= Q(speeches__addr__anon=anon)
+            query.append()
 
         #
         # speech properties
         #
 
-        # cluster public id
+        # cluster primary key (old id)
         if "cluster_id" in params:
             q = Q()
-            for pubid in params["cluster_id"]:
-                q |= Q(public_id=pubid)
+            for pk in params["cluster_id"]:
+                q |= Q(pk=pk)
             query.append(q)
 
-        # cluster id
-        if "cluster_pk" in params:
+        # cluster public id
+        if "cluster_pubid" in params:
             q = Q()
-            for pk in params["cluster_pk"]:
-                q |= Q(pk=pk)
+            for pubid in params["cluster_pubid"]:
+                q |= Q(public_id=pubid)
             query.append(q)
                         
         # turns in cluster
@@ -1712,9 +1796,9 @@ class SpeechClusterQueryMixin:
             query.append(q)
 
         # turn type
-        if "turn_type" in params:
+        if "type" in params:
             q = Q()
-            for type_ in params["cluster_type"]:
+            for type_ in params["type"]:
                 q |= Q(speeches__type=type_)
             query.append(q)
             
@@ -1736,18 +1820,18 @@ class SpeechClusterQueryMixin:
         # work properties
         #
         
-        # work public id
+        # work primary key
         if "work_id" in params:
             q = Q()
-            for pubid in params["work_id"]:
-                q |= Q(speeches__work__public_id=pubid)
+            for pk in params["work_id"]:
+                q |= Q(speeches__work__pk=pk)
             query.append(q)
 
-        # work pk
-        if "work_pk" in params:
+        # work public id
+        if "work_pubid" in params:
             q = Q()
-            for id in params["work_pk"]:
-                q |= Q(speeches__work__pk=pk)
+            for id in params["work_pubid"]:
+                q |= Q(speeches__work__public_id=pubid)
             query.append(q)
         
         # work title
@@ -1757,31 +1841,31 @@ class SpeechClusterQueryMixin:
                 q |= Q(speeches__work__title=title)
             query.append(q)
             
-        # author public id
-        if "auth_pubid" in params:
+        # author primary key (old id)
+        if "author_id" in params:
             q = Q()
-            for pubid in params["auth_pubid"]:
-                q |= Q(speeches__work__author__public_id=pubid)
-            query.append(q)
-
-        # author pk
-        if "auth_id" in params:
-            q = Q()
-            for pk in params["auth_id"]:
+            for pk in params["author_id"]:
                 q |= Q(speeches__work__author__pk=pk)
             query.append(q)
-            
-        # author name
-        if "auth_name" in params:
+        
+        # author public id
+        if "author_pubid" in params:
             q = Q()
-            for name in params["auth_name"]:
+            for pubid in params["author_pubid"]:
+                q |= Q(speeches__work__author__public_id=pubid)
+            query.append(q)
+        
+        # author name
+        if "author_name" in params:
+            q = Q()
+            for name in params["author_name"]:
                 q |= Q(speeches__work__author__name=name)
             query.append(q)
             
         # language
-        if "lang" in params:
+        if "work_lang" in params:
             q = Q()
-            for lang in params["lang"]:
+            for lang in params["work_lang"]:
                 q |= Q(speeches__work__lang=lang)
             query.append(q)        
                 
