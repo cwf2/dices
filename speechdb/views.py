@@ -409,12 +409,13 @@ class AuthorQueryMixin:
         # construct query
         query = []
         
+        # title
+        if 'work_title' in params:
+            query.append(Q(work__title__in=params["work_title"]))
+        
         # language
         if 'work_lang' in params:
-            q = Q()
-            for lang in params["work_lang"]:
-                q |= Q(work__lang=lang)
-            query.append(q)
+            query.append(Q(work__lang__in=params["work_lang"]))
         
         # get query set
         qs = Author.objects.filter(*query).prefetch_related('work_set').distinct()
@@ -489,46 +490,25 @@ class WorkQueryMixin:
         
         # text properties
         if 'author_name' in params:
-            q = Q()
-            for name in params["author_name"]:
-                q |= Q(author__name=name)
-            query.append(q)
+            query.append(Q(author__name__in=params["author_name"]))
 
         if 'author_id' in params:
-            q = Q()
-            for pk in params["author_id"]:
-                q |= Q(author__pk=pk)
-            query.append(q)
+            query.append(Q(author__pk__in=params["author_id"]))
 
         if 'author_pubid' in params:
-            q = Q()
-            for pubid in params["author_pubid"]:
-                q |= Q(author__public_id=pubid)
-            query.append(q)
+            query.append(Q(author__public_id__in=params["author_pubid"]))
 
         if 'work_title' in params:
-            q = Q()
-            for title in params["work_title"]:
-                q |= Q(title=title)
-            query.append(q)
+            query.append(Q(title__in=params["work_title"]))
 
         if 'work_id' in params:
-            q = Q()
-            for pk in params["work_id"]:
-                q |= Q(pk=pk)
-            query.append(q)
+            query.append(Q(pk__in=params["work_id"]))
 
         if 'work_pubid' in params:
-            q = Q()
-            for pubid in params["work_pubid"]:
-                q |= Q(public_id=pubid)
-            query.append(q)
+            query.append(Q(public_id__in=params["work_pubid"]))
             
         if 'work_lang' in params:
-            q = Q()
-            for lang in params["lang"]:
-                q |= Q(lang=lang)
-            query.append(q)
+            query.append(Q(lang__in=params["work_lang"]))
 
         # perform query
         qs = Work.objects.filter(*query).distinct().order_by('author', 'title')
@@ -603,108 +583,74 @@ class CharacterQueryMixin:
         query = []
 
         if "char_name" in params:
-            q = Q()
-            for name in params["char_name"]:
-                q |= Q(name=name)
-            query.append(q)
+            query.append(Q(name__in=params["char_name"]))
 
         if "char_id" in params:
-            q = Q()
-            for pk in params["char_id"]:
-                q |= Q(pk=pk)
-            query.append(q)
+            query.append(Q(pk__in=params["char_id"]))
 
         if "char_pubid" in params:
-            q = Q()
-            for pubid in params["char_pubid"]:
-                q |= Q(public_id=pubid)
-            query.append(q)
+            query.append(Q(public_id__in=params["pubid"]))
             
-        if 'char_gender' in params:
-            q = Q()
-            for gender in params["char_gender"]:
-                q |= Q(gender=gender)
-            query.append(q)
+        if "char_gender" in params:
+            query.append(Q(gender__in=params["char_gender"]))
         
-        if 'char_being' in params:
-            q = Q()
-            for being in params["char_being"]:
-                q |= Q(being=being)
-            query.append(q)
+        if "char_being" in params:
+            query.append(Q(being__in=params["char_being"]))
             
-        if 'char_number' in params:
-            q = Q()
-            for number in params["char_number"]:
-                q |= Q(number=number)
-            query.append(q)
+        if "char_number" in params:
+            query.append(Q(number__in=params["char_number"]))
 
-        if 'char_manto' in params:
-            q = Q()
-            for manto in params["char_manto"]:
-                q |= Q(manto=manto)
-            query.append(q)
+        if "char_manto" in params:
+            query.append(Q(manto__in=params["char_manto"]))
 
-        if 'char_wd' in params:
-            q = Q()
-            for wd in params["char_wd"]:
-                q |= Q(wd=wd)
-            query.append(q)
+        if "char_wd" in params:
+            query.append(Q(wd__in=params["char_wd"]))
 
-        if 'char_tt' in params:
-            q = Q()
-            for tt in params["char_tt"]:
-                q |= Q(tt=tt)
-            query.append(q)
+        if "char_tt" in params:
+            query.append(Q(tt__in=params["char_tt"]))
 
         # text properties
-        if 'author_name' in params:
-            q = Q()
-            for name in params["author_name"]:
-                q |= Q(instances__speeches__work__author__name=name)
-                q |= Q(instances__addresses__work__author__name=name)
-            query.append(q)
+        if "author_name" in params:
+            query.append(
+                Q(instances__speeches__work__author__name__in=params["author_name"]) |
+                Q(instances__addresses__work__author__name__in=params["author_name"])
+            )
 
-        if 'author_id' in params:
-            q = Q()
-            for pk in params["author_id"]:
-                q |= Q(instances__speeches__work__author__pk=pk)
-                q |= Q(instances__addresses__work__author__pk=pk)
-            query.append(q)
+        if "author_id" in params:
+            query.append(
+                Q(instances__speeches__work__author__pk__in=params["author_id"]) |
+                Q(instances__addresses__work__author__pk__in=params["author_id"])
+            )
 
-        if 'author_pubid' in params:
-            q = Q()
-            for pubid in params["author_pubid"]:
-                q |= Q(instances__speeches__work__author__public_id=author_pubid)
-                q |= Q(instances__addresses__work__author__public_id=author_pubid)
-            query.append(q)
+        if "author_pubid" in params:
+            query.append(
+                Q(instances__speeches__work__author__public_id__in=params["author_pubid"]) |
+                Q(instances__addresses__work__author__public_id__in=params["author_pubid"])
+            )
 
-        if 'work_title' in params:
-            q = Q()
-            for title in params["work_title"]:
-                q |= Q(instances__speeches__work__title=title)
-                q |= Q(instances__addresses__work__title=title)
-            query.append(q)
+        if "work_title" in params:
+            query.append(
+                Q(instances__speeches__work__title__in=params["work_title"]) |
+                Q(instances__addresses__work__title__in=params["work_title"])
+            )
 
-        if 'work_pubid' in params:
-            q = Q()
-            for pubid in params["work_pubid"]:
-                q |= Q(instances__speeches__work__public_id=pubid)
-                q |= Q(instances__addresses__work__public_id=pubid)
-            query.append(q)
+        if "work_pubid" in params:
+            query.append(
+                Q(instances__speeches__work__public_id__in=params["work_pubid"]) |
+                Q(instances__addresses__work__public_id__in=params["work_pubid"])
+            )
             
-        if 'work_id' in params:
-            q = Q()
-            for pk in params["work_pk"]:
-                q |= Q(instances__speeches__work__pk=pk)
-                q |= Q(instances__addresses__work__pk=pk)
-            query.append(q)
+        if "work_id" in params:
+            query.append(
+                Q(instances__speeches__work__pk__in=params["work_pk"]) |
+                Q(instances__addresses__work__pk__in=params["work_pk"])
+            )
 
-        if 'work_lang' in params:
-            q = Q()
-            for lang in params["work_lang"]:
-                q |= Q(instances__speeches__work__lang=lang)
-                q |= Q(instances__addresses__work__lang=lang)
-            query.append(q)
+        if "work_lang" in params:
+            query.append(
+                Q(instances__speeches__work__lang__in=params["work_lang"]) |
+                Q(instances__addresses__work__lang__in=params["work_lang"])
+            )
         
         qs = Character.objects.filter(*query).distinct().order_by('name')
         

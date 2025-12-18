@@ -10,7 +10,7 @@
 				<div class="bg-white border rounded d-flex gap-2 align-items-center mb-3">
 					<div class="d-flex align-items-center me-auto ms-2 my-2 gap-3">
 		        <button type="submit" class="btn btn-secondary btn-sm px-4" >Update</button>
-		        <a class="btn btn-outline-secondary btn-sm px-4"  href="{% url 'app:speeches' %}">Reset</a>
+		        <a class="btn btn-outline-secondary btn-sm px-4"  href="{{ request.path }}">Reset</a>
 					</div>
 					
 					<div class="d-flex align-items-center ms-auto me-2 my-2 gap-3">
