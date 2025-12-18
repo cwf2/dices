@@ -30,6 +30,7 @@ def ValidateParams(request):
     params = dict()
     
     if request.method == "GET":
+        print(request.GET)
         form = PagerForm(request.GET)
 
         if form.is_valid():
@@ -42,6 +43,7 @@ def ValidateParams(request):
 
         # short-circuit if bad params encountered
         else:
+            print(form.errors)
             return None
     
     return params
@@ -770,7 +772,10 @@ class CharacterInstanceQueryMixin:
         if 'inst_disguised' in params:
             q = Q()
             for disg in params["inst_disguised"]:
-                q |= Q(disguise__isnull=not(disg))
+                if disg.lower() == "true":
+                    q |= ~Q(disguise="")
+                elif disg.lower() == "false":
+                    q |= Q(disguise="")
             query.append(q)
         
         # character properties
@@ -1085,8 +1090,12 @@ class SpeechQueryMixin:
         if "spkr_inst_disguised" in params:
             q = Q()
             for disg in params["spkr_inst_disguised"]:
-                q |= Q(spkr__disguise__isnull=not(disg))
+                if disg.lower() == "true":
+                    q |= ~Q(spkr__disguise="")
+                elif disg.lower() == "false":
+                    q |= Q(spkr__disguise="")
             query.append(q)
+
         #
         # addressee properties
         #
@@ -1207,7 +1216,10 @@ class SpeechQueryMixin:
         if "addr_inst_disguised" in params:
             q = Q()
             for disg in params["addr_inst_disguised"]:
-                q |= Q(addr__disguise__isnull=not(disg))
+                if disg.lower() == "true":
+                    q |= ~Q(addr__disguise="")
+                elif disg.lower() == "false":
+                    q |= Q(addr__disguise="")
             query.append(q)
                      
         #
@@ -1326,7 +1338,6 @@ class SpeechQueryMixin:
             "spkr", "addr", "tags",
         )
         
-        
         return qs
             
 
@@ -1334,10 +1345,10 @@ class AppSpeechList(SpeechQueryMixin, ListView):
     model = Speech
     template_name = 'speechdb/speech_list.html'
     
-    def dispatch(self, request, *args, **kwargs):
-            if not request.GET:
-                return cache_page(60 * 15)(super().dispatch)(request, *args, **kwargs)
-            return super().dispatch(request, *args, **kwargs)
+    # def dispatch(self, request, *args, **kwargs):
+    #         if not request.GET:
+    #             return cache_page(60 * 15)(super().dispatch)(request, *args, **kwargs)
+    #         return super().dispatch(request, *args, **kwargs)
         
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context

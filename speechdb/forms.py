@@ -106,7 +106,7 @@ class InstanceForm(PrefixedForm):
             widget = forms.SelectMultiple(attrs={"class": "form-select tagging-select"}),
         )
         self.fields["inst_anon"] = forms.ChoiceField(
-            label = "Anon",
+            label = "Anonymous",
             choices = [("", ""), ("True", "True"), ("False", "False")],
             required = False,
             initial = "",

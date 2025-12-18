@@ -32,7 +32,7 @@
       <td>
         {% for inst in s.spkr.all %}
         <div>
-          {{ inst.name }}
+          {{ inst.display }}
           <a style="margin-left:0.5em" href="{% url 'app:instance_detail' inst.public_id %}">
               <i class="fa-solid fa-circle-info"></i>
           </a>
@@ -42,7 +42,7 @@
       <td>
         {% for inst in s.addr.all %}
         <div>
-            {{ inst.name }}            
+            {{ inst.display }}            
             <a style="margin-left:0.5em" href="{% url 'app:instance_detail' inst.public_id %}">
                 <i class="fa-solid fa-circle-info"></i>            
             </a>
@@ -79,6 +79,24 @@
     </div>
     <div class="card-body" id="collapse_speaker" aria-labelledby="hdr_speaker">
 			{% include "speechdb/default_form.html" with form=spkr_character_form %}
+			<div class="form-group">
+				<div class="row mt-2">
+					<div class="col-sm-7">
+						{{ spkr_instance_form.inst_anon.label_tag }}
+					</div>
+					<div class="col-sm-5">
+						{{ spkr_instance_form.inst_anon }}
+					</div>
+				</div>
+				<div class="row mt-2">
+					<div class="col-sm-7">
+						{{ spkr_instance_form.inst_disguised.label_tag }}
+					</div>
+					<div class="col-sm-5">
+						{{ spkr_instance_form.inst_disguised }}
+					</div>
+				</div>
+			</div>			
     </div>
   </div>
   <div class="card small mb-2">
