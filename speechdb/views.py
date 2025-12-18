@@ -15,6 +15,7 @@ from .serializers import AuthorSerializer, WorkSerializer, CharacterSerializer, 
 from .forms import InstanceForm, CharacterForm, TextForm, SpeechForm, PagerForm
 import csv
 import re
+import os
 
 import logging
 # Get an instance of a logger
@@ -441,6 +442,7 @@ class AppAuthorList(AuthorQueryMixin, ListView):
         # form data
         context["text_form"] = TextForm(self.request.GET)
         context["csv_url_name"] = "app:authors_csv"
+        context["active"] = "authors"
         
         return context
 
@@ -677,6 +679,7 @@ class AppCharacterList(CharacterQueryMixin, ListView):
         context['character_form'] = CharacterForm(self.request.GET)
         context['text_form'] = TextForm(self.request.GET)
         context["csv_url_name"] = "app:characters_csv"
+        context["active"] = "works"
        
         return context
 
@@ -909,6 +912,7 @@ class AppCharacterInstanceList(CharacterInstanceQueryMixin, ListView):
         context["instance_form"] = InstanceForm(self.request.GET)
         context["text_form"] = TextForm(self.request.GET)
         context["csv_url_name"] = "app:instances_csv"
+        context["active"] = "instances"        
                             
         return context
 
@@ -1346,9 +1350,10 @@ class AppSpeechList(SpeechQueryMixin, ListView):
     template_name = 'speechdb/speech_list.html'
     
     def dispatch(self, request, *args, **kwargs):
+        if not os.getenv("DEVEL"):
             if not request.GET:
                 return cache_page(60 * 15)(super().dispatch)(request, *args, **kwargs)
-            return super().dispatch(request, *args, **kwargs)
+        return super().dispatch(request, *args, **kwargs)
         
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -1361,6 +1366,7 @@ class AppSpeechList(SpeechQueryMixin, ListView):
         context["addr_instance_form"] = InstanceForm(self.request.GET, prefix="addr")
         context["speech_form"] = SpeechForm(self.request.GET)      
         context["text_form"] = TextForm(self.request.GET)
+        context["active"] = "speeches"
         context["csv_url_name"] = "app:speeches_csv"
 
         # CTS reader
@@ -1849,6 +1855,7 @@ class AppSpeechClusterList(SpeechClusterQueryMixin, ListView):
         context["speech_form"] = SpeechForm(self.request.GET)      
         context["text_form"] = TextForm(self.request.GET)
         context["csv_url_name"] = "app:clusters_csv"
+        context["active"] = "clusters"        
         
         return context
 

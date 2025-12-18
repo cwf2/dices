@@ -29,27 +29,52 @@
 	
 	<!-- results pane -->
   <div id="resultsContainer" class="col h-100 overflow-auto flex-grow-1 position-relative">
-		<button class="btn position-absolute top-0 expand-btn" id="btnExpandSidebar" style="left:-1.25rem" data-bs-toggle="collapse" data-bs-target="#sidebarContainer">
+		<button class="btn position-absolute expand-btn" id="btnExpandSidebar" style="left:-0.8rem;top:4rem;" data-bs-toggle="collapse" data-bs-target="#sidebarContainer">
 	    <i class="fa-solid fa-square-caret-right"></i>
   	</button>
-		<div class="d-flex align-items-center">
-		  <div class="d-flex ms-auto">
-		    <span class="btn btn-outline-secondary btn-sm disabled">
-		      {{ object_list|length }} results
-		    </span>
-		    <a class="btn btn-outline-secondary btn-sm"
-		       href="{% url csv_url_name %}?{{ request.GET.urlencode }}">
-		      <i class="fa-solid fa-download"></i> CSV
-		    </a>
-		  </div>
-		</div>
+
+			<nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link{% if active == 'speeches' %} active{% endif %}" href="{% url 'app:speeches' %}">Speeches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active == 'clusters' %} active{% endif %}" href="{% url 'app:clusters' %}">Speech Clusters</a>
+            </li>						
+            <li class="nav-item">
+              <a class="nav-link{% if active == 'characters' %} active{% endif %}" href="{% url 'app:characters' %}">Characters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active == 'instances' %} active{% endif %}" href="{% url 'app:instances' %}">Character Instances</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active == 'authors' %} active{% endif %}" href="{% url 'app:authors' %}">Authors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active == 'works' %} active{% endif %}" href="{% url 'app:works' %}">Works</a>
+            </li>
+          </ul>
+					<div class="ms-3">
+				    <span class="text text-secondary me-2">
+				      {{ object_list|length }} results
+				    </span>
+				    <a class="btn btn-light btn-sm" href="{% url csv_url_name %}?{{ request.GET.urlencode }}"><i class="fa-solid fa-download"></i> CSV</a>
+					</div>
+				</div>
+			</nav>
+
   {% if not object_list %}
   <div class="p-4 bg-light rounded">
     <p>Your search produced no results.</p>
   </div>
   {% endif %}
+
+	<!-- container for results table -->
+	<div class="container-fluid mt-3">
   {% block results %}
   {% endblock %}
+	</div>
   </div>
 </div>
 {% endblock %}
