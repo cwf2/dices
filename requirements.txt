@@ -10,3 +10,5 @@ python-dotenv==1.1.1
 sqlparse==0.5.3
 typing_extensions==4.15.0
 whitenoise==6.11.0
+psycopg-binary==3.2.10
+gunicorn==23.0.0
