@@ -149,8 +149,8 @@ class CharacterInstance(PublicIdModel):
     gender = models.CharField(max_length=16,
             choices=Character.CharacterGender.choices,
             default=Character.CharacterGender.NA)
-    char = models.ForeignKey(Character, related_name='instances', 
-            null=True, on_delete=models.PROTECT)
+    char = models.ForeignKey(Character, related_name='instances',
+            null=True, on_delete=models.SET_NULL)
     disguise = models.CharField(max_length=128, blank=True, default="")
     anon = models.BooleanField(default=False)
     notes = models.CharField(max_length=256, blank=True, default="")

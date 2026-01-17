@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.core.paginator import Paginator
 from django.db.models import Q, Count, Max
 from django.views.generic import ListView, DetailView, TemplateView, View
@@ -471,7 +471,8 @@ class WorkQueryMixin:
     '''validate and assemble work query params
         - designed to be reused by HTML and CSV views
     '''
-        
+    login_url = reverse_lazy("app:login")
+
     @property
     def params(self):
         if not hasattr(self, "_params"):
@@ -1402,7 +1403,8 @@ class SpeechClusterQueryMixin:
     '''validate and assemble speech cluster query params
         - designed to be reused by HTML and CSV views
     '''
-        
+    login_url = reverse_lazy("app:login")
+
     @property
     def params(self):
         if not hasattr(self, "_params"):
@@ -1923,6 +1925,7 @@ class AppCharacterInstanceDetail(DetailView):
     context_object_name = 'inst'
     slug_field = "public_id"
     slug_url_kwarg = "public_id"
+    login_url = reverse_lazy("app:login")
     
     
     def get_context_data(self, **kwargs):
