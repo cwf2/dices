@@ -681,7 +681,7 @@ class AppCharacterList(CharacterQueryMixin, ListView):
         context['character_form'] = CharacterForm(self.request.GET)
         context['text_form'] = TextForm(self.request.GET)
         context["csv_url_name"] = "app:characters_csv"
-        context["active"] = "works"
+        context["active"] = "characters"
        
         return context
 
