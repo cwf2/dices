@@ -170,7 +170,7 @@ class CharacterInstance(PublicIdModel):
             if name != self.char.name:
                 name += '/' + self.char.name
         
-        return name
+        return f"{name} ({self.context})"
     
     def get_speeches(self):
         '''returns set of speeches by all instances of underlying char'''
