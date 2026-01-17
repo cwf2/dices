@@ -2,7 +2,7 @@ from django.db import models, IntegrityError
 from django.utils.functional import cached_property
 import secrets
 
-URN_BASE = "http://epicspeeches.net"
+URN_BASE = "https://db.dices.mta.ca/app"
 
 class PublicIdModel(models.Model):
     '''a base class that incorporates a public-facing unique id in all records
