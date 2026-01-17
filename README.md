@@ -8,4 +8,4 @@ DICES is a database of metadata on direct speech representation in Greek and Lat
 - Ovid, Metamorphoses
 - Lucan, Civil War
 
-This repository contains the Django backend for the project. The code is not currently ready for release. If you'd like to know more about the project, please take a look at our website, [www.epicspeeches.net](http://dices.mta.ca).
+This repository contains the Django backend for the project. The code is not currently ready for release. If you'd like to know more about the project, please take a look at our website, [dices.mta.ca](http://dices.mta.ca).
