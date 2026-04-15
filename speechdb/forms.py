@@ -282,10 +282,10 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-        self.fields["inst_number"] = forms.MultipleChoiceField(
+        self.fields["inst_number"] = forms.ChoiceField(
             choices = Character.CharacterNumber.choices,
             required = False,
-            widget = forms.MultipleHiddenInput(),
+            widget = forms.HiddenInput(),
         )
         self.fields["inst_anon"] = forms.ChoiceField(
             choices = [("True", "True"), ("False", "False")],
@@ -364,10 +364,10 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-        self.fields["spkr_inst_number"] = forms.MultipleChoiceField(
+        self.fields["spkr_inst_number"] = forms.ChoiceField(
             choices = Character.CharacterNumber.choices,
             required = False,
-            widget = forms.MultipleHiddenInput(),
+            widget = forms.HiddenInput(),
         )
         self.fields["spkr_inst_anon"] = forms.ChoiceField(
             choices = [("True", "True"), ("False", "False")],
@@ -446,20 +446,20 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.MultipleHiddenInput(),
         )
-        self.fields["addr_inst_number"] = forms.MultipleChoiceField(
+        self.fields["addr_inst_number"] = forms.ChoiceField(
             choices = Character.CharacterNumber.choices,
             required = False,
-            widget = forms.MultipleHiddenInput(),
+            widget = forms.HiddenInput(),
         )
         self.fields["addr_inst_anon"] = forms.ChoiceField(
             choices = [("True", "True"), ("False", "False")],
             required = False,
-            widget = forms.MultipleHiddenInput(),
+            widget = forms.HiddenInput(),
         )
         self.fields["addr_inst_disguised"] = forms.ChoiceField(
             choices = [("True", "True"), ("False", "False")],
             required = False,
-            widget = forms.MultipleHiddenInput(),
+            widget = forms.HiddenInput(),
         )
     
         # work properties
