@@ -1,14 +1,21 @@
 <div class="form-group">
-	{% for field in form %}
-	{% if not field.is_hidden %}
-	<div class="row">
-		<div class="col">
-			{{ field.label_tag }}
-			{{ field }}
-		</div>
-	</div>
-	{% else %}
-	{{ field }}
-	{% endif %}
-	{% endfor %}
+  {% for field in form %}
+  {% if not field.is_hidden %}
+  {% if field.field.inline %}
+  <div class="row mt-2">
+    <div class="col-sm-7">{{ field.label_tag }}</div>
+    <div class="col-sm-5">{{ field }}</div>
+  </div>
+  {% else %}
+  <div class="row">
+    <div class="col">
+      {{ field.label_tag }}
+      {{ field }}
+    </div>
+  </div>
+  {% endif %}
+  {% else %}
+  {{ field }}
+  {% endif %}
+  {% endfor %}
 </div>

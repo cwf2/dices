@@ -99,11 +99,16 @@ class InstanceForm(PrefixedForm):
             required = False,
             widget = forms.SelectMultiple(attrs={"class": "form-select tagging-select"}),
         )
-        self.fields["inst_number"] = forms.MultipleChoiceField(
+        self.fields["inst_number"] = forms.ChoiceField(
             label = "Number",
-            choices = Character.CharacterNumber.choices,
+            choices = [("", "any")] + Character.CharacterNumber.choices,
             required = False,
-            widget = forms.SelectMultiple(attrs={"class": "form-select tagging-select"}),
+            initial = "",
+            widget = forms.Select(attrs={
+                "class": "form-select tagging-select", 
+                "data-allow-clear": "true",
+                "data-minimum-results-for-search": "Infinity",
+            }),
         )
         self.fields["inst_anon"] = forms.ChoiceField(
             label = "Anonymous",
@@ -116,6 +121,7 @@ class InstanceForm(PrefixedForm):
                 "data-minimum-results-for-search": "Infinity",
             }),
         )
+        self.fields['inst_anon'].inline = True
         self.fields["inst_disguised"] = forms.ChoiceField(
             label = "Disguised",
             choices = [("", ""), ("True", "True"), ("False", "False")],
@@ -127,9 +133,10 @@ class InstanceForm(PrefixedForm):
                 "data-minimum-results-for-search": "Infinity",
             }),
         )
+        self.fields['inst_disguised'].inline = True
     
 
-class TextForm(PrefixedForm):
+class TextForm(forms.Form):
     # lazy field definitions
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -185,6 +192,7 @@ class SpeechForm(forms.Form):
             max_value = max_parts,
             widget = forms.NumberInput(attrs={"class": "form-control form-control-sm"}),
         )
+        self.fields['part'].inline = True
         self.fields["n_parts"] = forms.IntegerField(
             label = "Parts in cluster",
             required = False,
@@ -192,12 +200,14 @@ class SpeechForm(forms.Form):
             max_value = max_parts,
             widget = forms.NumberInput(attrs={"class": "form-control form-control-sm"}),
         )
-        level = forms.IntegerField(
+        self.fields['n_parts'].inline = True        
+        self.fields["level"] = forms.IntegerField(
             label = "Embedded level",
             required = False,
             min_value = 0,
             widget = forms.NumberInput(attrs={"class": "form-control form-control-sm"}),
         )
+        self.fields['level'].inline = True
     
     
 class PagerForm(forms.Form):

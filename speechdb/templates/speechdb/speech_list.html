@@ -74,37 +74,45 @@
 
 {% block filters %}
   <div class="card small mb-2">
-    <div class="card-header" id="hdr_speaker">
-      <span>Speaker Properties</span>
+			<div class="card-header d-flex align-items-center justify-content-between">
+	    <span>Speaker</span>
+	    <ul class="nav nav-tabs card-header-tabs" id="spkrTab" role="tablist">
+	      <li class="nav-item" role="presentation">
+					<button class="nav-link" id="spkrTabChar" data-bs-toggle="tab" data-bs-target="#spkr-char-pane" type="button" role="tab">Character</button>
+	      </li>
+	      <li class="nav-item" role="presentation">
+					<button class="nav-link active" id="spkrTabInst" data-bs-toggle="tab" data-bs-target="#spkr-inst-pane" type="button" role="tab">Instance</button>
+	      </li>
+	    </ul>
     </div>
-    <div class="card-body" id="collapse_speaker" aria-labelledby="hdr_speaker">
+    <div class="card-body tab-content" id="collapse_speaker" aria-labelledby="hdr_speaker">
+			<div class="tab-pane fade" id="spkr-char-pane" role="tabpanel" aria-labelledby="spkrTabChar">
 			{% include "speechdb/default_form.html" with form=spkr_character_form %}
-			<div class="form-group">
-				<div class="row mt-2">
-					<div class="col-sm-7">
-						{{ spkr_instance_form.inst_anon.label_tag }}
-					</div>
-					<div class="col-sm-5">
-						{{ spkr_instance_form.inst_anon }}
-					</div>
-				</div>
-				<div class="row mt-2">
-					<div class="col-sm-7">
-						{{ spkr_instance_form.inst_disguised.label_tag }}
-					</div>
-					<div class="col-sm-5">
-						{{ spkr_instance_form.inst_disguised }}
-					</div>
-				</div>
-			</div>			
+			</div>
+			<div class="tab-pane fade show active" id="spkr-inst-pane" role="tabpanel" aria-labelledby="spkrTabInst">
+			{% include "speechdb/default_form.html" with form=spkr_instance_form %}
+			</div>
     </div>
   </div>
   <div class="card small mb-2">
-    <div class="card-header" id="hdr_addressee">
-      <span>Addressee Properties</span>
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <span>Addressee</span>
+			<ul class="nav nav-tabs card-header-tabs" id="addrTab" role="tablist">
+		      <li class="nav-item" role="presentation">
+						<button class="nav-link" id="addrTabChar" data-bs-toggle="tab" data-bs-target="#addr-char-pane" type="button" role="tab">Character</button>
+		      </li>
+		      <li class="nav-item" role="presentation">
+						<button class="nav-link active" id="addrTabInst" data-bs-toggle="tab" data-bs-target="#addr-inst-pane" type="button" role="tab">Instance</button>
+		      </li>
+		    </ul>
     </div>
-    <div class="card-body" id="collapse_addressee" aria-labelledby="hdr_addressee">
+    <div class="card-body tab-content" id="collapse_addressee" aria-labelledby="hdr_addressee">
+			<div class="tab-pane fade" id="addr-char-pane" role="tabpanel" aria-labelledby="addrTabChar">
 			{% include "speechdb/default_form.html" with form=addr_character_form %}
+			</div>
+			<div class="tab-pane fade show active" id="addr-inst-pane" role="tabpanel" aria-labelledby="addrTabInst">
+			{% include "speechdb/default_form.html" with form=addr_instance_form %}
+			</div>
     </div>
   </div>
   <div class="card small mb-2">
@@ -112,7 +120,7 @@
       <span>Conversation properties</span>
     </div>
 		<div class="card-body">
-			{% include "speechdb/speech_form.html" with form=speech_form %}
+			{% include "speechdb/default_form.html" with form=speech_form %}
 		</div>
   </div>
   <div class="card small mb-2">

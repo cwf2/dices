@@ -26,4 +26,14 @@ $(document).ready(function() {
 	     placeholder: "any",
 	   });
 	 });
+	 
+	 // re-render Select2 widgets when a tab becomes visible
+	 	document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(tab => {
+	 	  tab.addEventListener('shown.bs.tab', function () {
+	 	    $(this.getAttribute('data-bs-target') + ' .tagging-select').select2({
+	 	      tokenSeparators: [','],
+	 	      placeholder: "any",
+	 	    });
+	 	  });
+	 	});
 });
