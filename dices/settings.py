@@ -38,8 +38,13 @@ if _hostname:
     ALLOWED_HOSTS = [_hostname]
     CSRF_TRUSTED_ORIGINS = [f"http://{_hostname}", f"https://{_hostname}"]
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_SSL_REDIRECT = False  # nginx handles this
+    SILENCED_SYSTEM_CHECKS = ['security.W004'] # nginx handles this
 else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
 
 #
 # Caching: try Redis, fall back on local memory
