@@ -40,10 +40,11 @@ if _hostname:
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
-    SECURE_SSL_REDIRECT = False  # nginx handles this
-    SILENCED_SYSTEM_CHECKS = ['security.W004'] # nginx handles this
 else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+SECURE_SSL_REDIRECT = False  # nginx handles this
+SILENCED_SYSTEM_CHECKS = ['security.W004'] # nginx handles this
 
 
 #
@@ -191,6 +192,7 @@ if not DEBUG:
 #
 
 REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticatedOrReadOnly'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 200,
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
