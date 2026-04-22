@@ -63,17 +63,6 @@ class CharacterForm(PrefixedForm):
             required = False,
             widget = forms.SelectMultiple(attrs={"class": "form-select tagging-select"}),
         )
-        self.fields["char_number"] = forms.ChoiceField(
-            label = "Number",
-            choices = [("", "any")] + Character.CharacterNumber.choices,
-            required = False,
-            initial = "",
-            widget = forms.Select(attrs={
-                "class": "form-select tagging-select", 
-                "data-allow-clear": "true",
-                "data-minimum-results-for-search": "Infinity",
-            }),
-        )
 
 
 class InstanceForm(PrefixedForm):
