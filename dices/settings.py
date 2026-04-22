@@ -44,7 +44,7 @@ else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 SECURE_SSL_REDIRECT = False  # nginx handles this
-SILENCED_SYSTEM_CHECKS = ['security.W004'] # nginx handles this
+SILENCED_SYSTEM_CHECKS = ['security.W004', 'security.W008'] # nginx handles these
 
 
 #
