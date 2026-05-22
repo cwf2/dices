@@ -12,7 +12,7 @@
       <th>Type</th>
       <th style="width:6em">Turn</th>
       <th>Tags</th>
-      <th>Embedded</th>
+      <th class="d-none d-xl-table-cell">Embedded</th>
     </tr>
   </thead>
   <tbody>
@@ -63,7 +63,7 @@
           <span class="badge bg-secondary">{{ tag.get_type_display }}</span><br>
         {% endfor %}
       </td>
-      <td>
+      <td class="d-none d-xl-table-cell">
         {{ s.level }}
       </td>
     </tr>
@@ -74,16 +74,16 @@
 
 {% block filters %}
   <div class="card small mb-2">
-			<div class="card-header d-flex align-items-center justify-content-between">
-	    <span>Speaker</span>
-	    <ul class="nav nav-tabs card-header-tabs" id="spkrTab" role="tablist">
-	      <li class="nav-item" role="presentation">
-					<button class="nav-link" id="spkrTabChar" data-bs-toggle="tab" data-bs-target="#spkr-char-pane" type="button" role="tab">Character</button>
-	      </li>
-	      <li class="nav-item" role="presentation">
-					<button class="nav-link active" id="spkrTabInst" data-bs-toggle="tab" data-bs-target="#spkr-inst-pane" type="button" role="tab">Instance</button>
-	      </li>
-	    </ul>
+    <div class="card-header">
+      <div class="fw-semibold small mb-1">Speaker</div>
+      <ul class="nav nav-tabs card-header-tabs" id="spkrTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="spkrTabChar" data-bs-toggle="tab" data-bs-target="#spkr-char-pane" type="button" role="tab">Character</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="spkrTabInst" data-bs-toggle="tab" data-bs-target="#spkr-inst-pane" type="button" role="tab">Instance</button>
+        </li>
+      </ul>
     </div>
     <div class="card-body tab-content" id="collapse_speaker" aria-labelledby="hdr_speaker">
 			<div class="tab-pane fade" id="spkr-char-pane" role="tabpanel" aria-labelledby="spkrTabChar">
@@ -95,16 +95,16 @@
     </div>
   </div>
   <div class="card small mb-2">
-    <div class="card-header d-flex align-items-center justify-content-between">
-      <span>Addressee</span>
-			<ul class="nav nav-tabs card-header-tabs" id="addrTab" role="tablist">
-		      <li class="nav-item" role="presentation">
-						<button class="nav-link" id="addrTabChar" data-bs-toggle="tab" data-bs-target="#addr-char-pane" type="button" role="tab">Character</button>
-		      </li>
-		      <li class="nav-item" role="presentation">
-						<button class="nav-link active" id="addrTabInst" data-bs-toggle="tab" data-bs-target="#addr-inst-pane" type="button" role="tab">Instance</button>
-		      </li>
-		    </ul>
+    <div class="card-header">
+      <div class="fw-semibold small mb-1">Addressee</div>
+      <ul class="nav nav-tabs card-header-tabs" id="addrTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="addrTabChar" data-bs-toggle="tab" data-bs-target="#addr-char-pane" type="button" role="tab">Character</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="addrTabInst" data-bs-toggle="tab" data-bs-target="#addr-inst-pane" type="button" role="tab">Instance</button>
+        </li>
+      </ul>
     </div>
     <div class="card-body tab-content" id="collapse_addressee" aria-labelledby="hdr_addressee">
 			<div class="tab-pane fade" id="addr-char-pane" role="tabpanel" aria-labelledby="addrTabChar">

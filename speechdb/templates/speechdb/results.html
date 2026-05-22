@@ -40,13 +40,13 @@
               <a class="nav-link{% if active == 'speeches' %} active{% endif %}" href="{% url 'app:speeches' %}">Speeches</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link{% if active == 'clusters' %} active{% endif %}" href="{% url 'app:clusters' %}">Speech Clusters</a>
+              <a class="nav-link{% if active == 'clusters' %} active{% endif %}" href="{% url 'app:clusters' %}">Clusters</a>
             </li>						
             <li class="nav-item">
               <a class="nav-link{% if active == 'characters' %} active{% endif %}" href="{% url 'app:characters' %}">Characters</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link{% if active == 'instances' %} active{% endif %}" href="{% url 'app:instances' %}">Character Instances</a>
+              <a class="nav-link{% if active == 'instances' %} active{% endif %}" href="{% url 'app:instances' %}">Instances</a>
             </li>
             <li class="nav-item">
               <a class="nav-link{% if active == 'authors' %} active{% endif %}" href="{% url 'app:authors' %}">Authors</a>
@@ -72,8 +72,10 @@
 
 	<!-- container for results table -->
 	<div class="container-fluid mt-3">
-  {% block results %}
-  {% endblock %}
+    <div class="table-responsive">
+      {% block results %}
+      {% endblock %}
+    </div>
 	</div>
   </div>
 </div>
