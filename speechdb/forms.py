@@ -7,7 +7,10 @@ def get_char_name_choices():
     return [(c.name, c.name) for c in Character.objects.all()]
 
 def get_inst_name_choices():
-    return [(name, name) for name in sorted(set(inst.name for inst in CharacterInstance.objects.all()))]
+    names = set()
+    for inst in CharacterInstance.objects.all():
+        names.add(inst.display if inst.anon else inst.name)
+    return [(name, name) for name in sorted(names)]
 
 def get_author_name_choices():
     return [(a.name, a.name) for a in Author.objects.all()]

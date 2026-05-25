@@ -735,7 +735,7 @@ class CharacterInstanceQueryMixin:
         if "inst_name" in params:
             q = Q()
             for name in params["inst_name"]:
-                q |= Q(name=name)
+                q |= Q(name=name) | Q(display=name, anon=True)
             query.append(q)
 
         if "inst_id" in params:
@@ -1061,7 +1061,7 @@ class SpeechQueryMixin:
         if "spkr_inst_name" in params:
             q = Q()
             for name in params["spkr_inst_name"]:
-                q |= Q(spkr__name=name)
+                q |= Q(spkr__name=name) | Q(spkr__display=name, spkr__anon=True)
             query.append(q)
             
         # speaker instance being
@@ -1187,9 +1187,9 @@ class SpeechQueryMixin:
         if "addr_inst_name" in params:
             q = Q()
             for name in params["addr_inst_name"]:
-                q |= Q(addr__name=name)
+                q |= Q(addr__name=name) | Q(addr__display=name, addr__anon=True)
             query.append(q)
-            
+
         # addressee instance being
         if "addr_inst_being" in params:
             q = Q()
@@ -1496,8 +1496,8 @@ class SpeechClusterQueryMixin:
         if "inst_name" in params:
             q = Q()
             for name in params["inst_name"]:
-                q |= Q(speeches__spkr__name=name)
-                q |= Q(speeches__addr__name=name)
+                q |= Q(speeches__spkr__name=name) | Q(speeches__spkr__display=name, speeches__spkr__anon=True)
+                q |= Q(speeches__addr__name=name) | Q(speeches__addr__display=name, speeches__addr__anon=True)
             query.append(q)
 
         # any participant by instance being
@@ -1596,7 +1596,7 @@ class SpeechClusterQueryMixin:
         if "spkr_inst_name" in params:
             q = Q()
             for name in params["spkr_inst_name"]:
-                q |= Q(speeches__spkr__name=name)
+                q |= Q(speeches__spkr__name=name) | Q(speeches__spkr__display=name, speeches__spkr__anon=True)
             query.append(q)
             
         # speaker instance being
@@ -1698,7 +1698,7 @@ class SpeechClusterQueryMixin:
         if "addr_inst_name" in params:
             q = Q()
             for name in params["addr_inst_name"]:
-                q |= Q(speeches__addr__name=name)
+                q |= Q(speeches__addr__name=name) | Q(speeches__addr__display=name, speeches__addr__anon=True)
             query.append(q)
             
         # addressee instance being
