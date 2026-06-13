@@ -137,7 +137,16 @@ class Character(PublicIdModel):
 
 class CharacterInstance(PublicIdModel):
     '''A character engaged in a speech'''
-
+    
+    class StateChange(models.TextChoices):
+        NONE = ("none", "None")
+        DEATH = ("death", "Death")
+        DEIFICATION = ("deification", "Deification")
+        DISGUISE = ("disguise", "Disguise")
+        DREAM = ("dream", "Dream")
+        GENDER = ("gender", "Gender")
+        METAMORPHOSIS = ("metamorphosis", "Metamorphosis")
+        
     name = models.CharField(max_length=128)
     display = models.CharField(max_length=128)
     being = models.CharField(max_length=16, 
@@ -152,6 +161,9 @@ class CharacterInstance(PublicIdModel):
     char = models.ForeignKey(Character, related_name='instances',
             null=True, blank=True, on_delete=models.SET_NULL)
     disguise = models.CharField(max_length=128, blank=True, default="")
+    changed = models.CharField(max_length=16,
+            choices=StateChange.choices,
+            default=StateChange.NONE)
     anon = models.BooleanField(default=False)
     notes = models.CharField(max_length=256, blank=True, default="")
     context = models.CharField(max_length=128)
