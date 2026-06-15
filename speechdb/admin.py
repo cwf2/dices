@@ -26,8 +26,8 @@ class CharacterAdmin(BaseAdmin):
 
 @admin.register(CharacterInstance)
 class CharacterInstanceAdmin(BaseAdmin):
-    list_display = ['name', 'char', 'context', 'being', 'gender']
-    list_filter = ['being', 'gender', 'number', 'anon']
+    list_display = ['name', 'char', 'context', 'being', 'gender', "changed"]
+    list_filter = ['being', 'gender', 'number', 'anon', "changed"]
     search_fields = ['name', 'char__name', 'context']
     autocomplete_fields = ['char']
 
