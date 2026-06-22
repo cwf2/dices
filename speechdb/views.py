@@ -1115,15 +1115,13 @@ class SpeechQueryMixin:
                 q |= Q(spkr__anon=anon)
             query.append(q)
         
-        # speaker disguised
-        if "spkr_inst_disguised" in params:
+        # speaker instance changed state
+        if "spkr_inst_changed" in params:
             q = Q()
-            for disg in params["spkr_inst_disguised"]:
-                if disg.lower() == "true":
-                    q |= ~Q(spkr__disguise="")
-                elif disg.lower() == "false":
-                    q |= Q(spkr__disguise="")
+            for changed in params["spkr_inst_changed"]:
+                q |= Q(spkr__changed=changed)
             query.append(q)
+
 
         #
         # addressee properties
@@ -1249,6 +1247,13 @@ class SpeechQueryMixin:
                     q |= ~Q(addr__disguise="")
                 elif disg.lower() == "false":
                     q |= Q(addr__disguise="")
+            query.append(q)
+
+        # addressee instance changed state
+        if "addr_inst_changed" in params:
+            q = Q()
+            for changed in params["addr_inst_changed"]:
+                q |= Q(addr__changed=changed)
             query.append(q)
                      
         #

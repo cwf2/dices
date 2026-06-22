@@ -102,6 +102,12 @@ class InstanceForm(PrefixedForm):
                 "data-minimum-results-for-search": "Infinity",
             }),
         )
+        self.fields["inst_changed"] = forms.MultipleChoiceField(
+            label = "Changed State",
+            choices = CharacterInstance.StateChange.choices,
+            required = False,
+            widget = forms.SelectMultiple(attrs={"class": "form-select tagging-select"}),
+        )
         self.fields["inst_anon"] = forms.ChoiceField(
             label = "Anonymous",
             choices = [("", ""), ("True", "True"), ("False", "False")],
@@ -114,12 +120,6 @@ class InstanceForm(PrefixedForm):
             }),
         )
         self.fields['inst_anon'].inline = True
-        self.fields["inst_changed"] = forms.MultipleChoiceField(
-            label = "Changed State",
-            choices = CharacterInstance.StateChange.choices,
-            required = False,
-            widget = forms.SelectMultiple(attrs={"class": "form-select tagging-select"}),
-        )
 
 
 class TextForm(forms.Form):
@@ -370,7 +370,12 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.HiddenInput(),
         )
-            
+        self.fields["spkr_inst_changed"] = forms.MultipleChoiceField(
+            choices = CharacterInstance.StateChange.choices,
+            required = False,
+            widget = forms.MultipleHiddenInput(),
+        )
+
         # addressee character properties
         self.fields["addr_char_name"] = forms.MultipleChoiceField(
             choices = get_char_name_choices(),
@@ -452,7 +457,12 @@ class PagerForm(forms.Form):
             required = False,
             widget = forms.HiddenInput(),
         )
-    
+        self.fields["addr_inst_changed"] = forms.MultipleChoiceField(
+            choices = CharacterInstance.StateChange.choices,
+            required = False,
+            widget = forms.MultipleHiddenInput(),
+        )
+
         # work properties
         self.fields["work_lang"] = forms.ChoiceField(
             choices = get_work_lang_choices(),
