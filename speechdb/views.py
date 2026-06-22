@@ -1435,14 +1435,16 @@ class AppSpeechCSV(SpeechQueryMixin, View):
             headers={"Content-Disposition": f'attachment; filename="{self.filename}"'},
         )
 
-        writer = csv.writer(response)
+        # QUOTE_NONNUMERIC: quote every string field (e.g. "1.59" or "1,59")
+        # so Excel doesn't try to interpret book.line loci as numbers/dates
+        writer = csv.writer(response, quoting=csv.QUOTE_NONNUMERIC)
         writer.writerow([label for label, _ in self.fields])
 
         for s in qs:
             writer.writerow([accessor(s) for _, accessor in self.fields])
 
         return response
-        
+
 
 class SpeechClusterQueryMixin:
     '''validate and assemble speech cluster query params
