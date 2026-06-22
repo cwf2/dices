@@ -447,8 +447,14 @@ class AppAuthorList(AuthorQueryMixin, ListView):
         return context
 
 
-class AppAuthorCSV(AuthorQueryMixin, View):        
+class AppAuthorCSV(AuthorQueryMixin, View):
     filename = "authors.csv"
+
+    fields = [
+        ("name", lambda a: a.name),
+        ("language", lambda a: a.langs),
+        ("works", lambda a: a.work_count),
+    ]
 
     def get(self, request):
         qs = self.get_queryset()
@@ -459,10 +465,10 @@ class AppAuthorCSV(AuthorQueryMixin, View):
         )
 
         writer = csv.writer(response)
-        writer.writerow(["name", "language", "works"])  # headers
+        writer.writerow([label for label, _ in self.fields])
 
         for author in qs:
-            writer.writerow([author.name, author.langs, author.work_count])
+            writer.writerow([accessor(author) for _, accessor in self.fields])
 
         return response
 
@@ -546,6 +552,14 @@ class AppWorkList(WorkQueryMixin, ListView):
 class AppWorkCSV(WorkQueryMixin, View):
     filename = "works.csv"
 
+    fields = [
+        ("author", lambda w: w.author.name),
+        ("title", lambda w: w.title),
+        ("language", lambda w: w.lang),
+        ("speeches", lambda w: w.speech__count),
+        ("speakers", lambda w: w.speech__spkr__count),
+    ]
+
     def get(self, request):
         qs = self.get_queryset()
 
@@ -555,10 +569,10 @@ class AppWorkCSV(WorkQueryMixin, View):
         )
 
         writer = csv.writer(response)
-        writer.writerow(["author", "title", "language", "speeches", "speakers"])  # headers
+        writer.writerow([label for label, _ in self.fields])
 
         for work in qs:
-            writer.writerow([work.author.name, work.title, work.speech__count, work.speech__spkr__count])
+            writer.writerow([accessor(work) for _, accessor in self.fields])
 
         return response
 
@@ -689,6 +703,18 @@ class AppCharacterList(CharacterQueryMixin, ListView):
 class AppCharacterCSV(CharacterQueryMixin, View):
     filename = "characters.csv"
 
+    fields = [
+        ("name", lambda c: c.name),
+        ("gender", lambda c: c.gender),
+        ("number", lambda c: c.number),
+        ("being", lambda c: c.being),
+        ("speeches", lambda c: c.instances__speeches__count),
+        ("addresses", lambda c: c.instances__addresses__count),
+        ("wikidata", lambda c: c.wd),
+        ("manto", lambda c: c.manto),
+        ("topostext", lambda c: c.tt),
+    ]
+
     def get(self, request):
         qs = self.get_queryset()
 
@@ -698,10 +724,10 @@ class AppCharacterCSV(CharacterQueryMixin, View):
         )
 
         writer = csv.writer(response)
-        writer.writerow(["name", "gender", "number", "being", "speeches", "addresses", "wikidata", "manto", "topostext"])  # headers
+        writer.writerow([label for label, _ in self.fields])
 
         for c in qs:
-            writer.writerow([c.name, c.gender, c.number, c.being, c.instances__speeches__count, c.instances__addresses__count, c.wd, c.manto, c.tt])
+            writer.writerow([accessor(c) for _, accessor in self.fields])
 
         return response
 
@@ -921,8 +947,17 @@ class AppCharacterInstanceList(CharacterInstanceQueryMixin, ListView):
 
 class AppCharacterInstanceCSV(CharacterInstanceQueryMixin, View):
     '''export character instance list as a CSV text file'''
-    
+
     filename = "instances.csv"
+
+    fields = [
+        ("name", lambda inst: inst.name),
+        ("character", lambda inst: inst.char.name if inst.char else None),
+        ("disguise", lambda inst: inst.disguise),
+        ("context", lambda inst: inst.context),
+        ("speeches", lambda inst: inst.speeches__count),
+        ("addresses", lambda inst: inst.addresses__count),
+    ]
 
     def get(self, request):
         qs = self.get_queryset()
@@ -933,17 +968,10 @@ class AppCharacterInstanceCSV(CharacterInstanceQueryMixin, View):
         )
 
         writer = csv.writer(response)
-        writer.writerow(["name", "character", "disguise", "context", "speeches", "addresses"])  # headers
+        writer.writerow([label for label, _ in self.fields])
 
         for inst in qs:
-            writer.writerow([
-                inst.name,
-                inst.char.name if inst.char else None,
-                inst.disguise,
-                inst.context,
-                inst.speeches__count,
-                inst.addresses__count,
-            ])
+            writer.writerow([accessor(inst) for _, accessor in self.fields])
 
         return response
         
@@ -1379,8 +1407,25 @@ class AppSpeechList(SpeechQueryMixin, ListView):
 
 class AppSpeechCSV(SpeechQueryMixin, View):
     '''export speech list as a CSV text file'''
-    
+
     filename = "speeches.csv"
+
+    # ordered (header, accessor) pairs; keeps header row and data rows in sync,
+    # and roughly mirrors the columns shown on the speeches HTML page
+    fields = [
+        ("urn", lambda s: s.get_urn() or ""),
+        ("author", lambda s: s.work.author.name),
+        ("work", lambda s: s.work.title),
+        ("first_line", lambda s: s.l_fi),
+        ("last_line", lambda s: s.l_la),
+        ("speaker", lambda s: s.get_spkr_str()),
+        ("addressee", lambda s: s.get_addr_str()),
+        ("type", lambda s: s.get_type_display()),
+        ("turn", lambda s: s.part),
+        ("cluster_size", lambda s: s.cluster_size),
+        ("tags", lambda s: "; ".join(t.get_type_display() for t in s.tags.all())),
+        ("embedded_level", lambda s: s.level),
+    ]
 
     def get(self, request):
         qs = self.get_queryset()
@@ -1391,10 +1436,10 @@ class AppSpeechCSV(SpeechQueryMixin, View):
         )
 
         writer = csv.writer(response)
-        writer.writerow(["work", "first_line", "last_line", "speaker", "addressee"])  # headers
+        writer.writerow([label for label, _ in self.fields])
 
         for s in qs:
-            writer.writerow([s.work.title, s.l_fi, s.l_la, s.get_spkr_str(), s.get_addr_str()])
+            writer.writerow([accessor(s) for _, accessor in self.fields])
 
         return response
         
@@ -1865,8 +1910,14 @@ class AppSpeechClusterList(SpeechClusterQueryMixin, ListView):
 
 class AppSpeechClusterCSV(SpeechClusterQueryMixin, View):
     '''export speech cluster list as a CSV text file'''
-    
+
     filename = "clusters.csv"
+
+    fields = [
+        ("loci", lambda cl: cl.get_loc_str()),
+        ("parts", lambda cl: cl.speech_count),
+        ("participants", lambda cl: cl.get_chars_str()),
+    ]
 
     def get(self, request):
         qs = self.get_queryset()
@@ -1877,10 +1928,10 @@ class AppSpeechClusterCSV(SpeechClusterQueryMixin, View):
         )
 
         writer = csv.writer(response)
-        writer.writerow(["loci", "parts", "participants"])  # headers
+        writer.writerow([label for label, _ in self.fields])
 
         for cl in qs:
-            writer.writerow([cl.get_loc_str(), cl.speech_count, c.get_chars_str()])
+            writer.writerow([accessor(cl) for _, accessor in self.fields])
 
         return response
         

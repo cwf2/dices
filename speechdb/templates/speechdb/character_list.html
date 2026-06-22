@@ -32,7 +32,7 @@
       <td>
         {% if char.instances__addresses__count > 0 %}
         {{ char.instances__addresses__count }}
-        <a style="margin-left:1em" href="{% url 'app:speeches' %}?addr_char_pubid={{ char.pubid }}">
+        <a style="margin-left:1em" href="{% url 'app:speeches' %}?addr_char_pubid={{ char.public_id }}">
           <i class="fa-solid fa-magnifying-glass"></i>
         </a>
         {% endif %}
