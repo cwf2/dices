@@ -114,19 +114,13 @@ class InstanceForm(PrefixedForm):
             }),
         )
         self.fields['inst_anon'].inline = True
-        self.fields["inst_disguised"] = forms.ChoiceField(
-            label = "Disguised",
-            choices = [("", ""), ("True", "True"), ("False", "False")],
+        self.fields["inst_changed"] = forms.MultipleChoiceField(
+            label = "Changed State",
+            choices = CharacterInstance.StateChange.choices,
             required = False,
-            initial = "",
-            widget = forms.Select(attrs={
-                "class": "form-select tagging-select", 
-                "data-allow-clear": "true",
-                "data-minimum-results-for-search": "Infinity",
-            }),
+            widget = forms.SelectMultiple(attrs={"class": "form-select tagging-select"}),
         )
-        self.fields['inst_disguised'].inline = True
-    
+
 
 class TextForm(forms.Form):
     # lazy field definitions
@@ -288,8 +282,13 @@ class PagerForm(forms.Form):
             choices = [("True", "True"), ("False", "False")],
             required = False,
             widget = forms.HiddenInput(),
-        )    
-    
+        )
+        self.fields["inst_changed"] = forms.MultipleChoiceField(
+            choices = CharacterInstance.StateChange.choices,
+            required = False,
+            widget = forms.MultipleHiddenInput(),
+        )
+
         # speaker character properties
         self.fields["spkr_char_name"] = forms.MultipleChoiceField(
             choices = get_char_name_choices(),

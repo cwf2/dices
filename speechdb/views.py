@@ -800,13 +800,8 @@ class CharacterInstanceQueryMixin:
                 q |= Q(anon=anon)
             query.append(q)
 
-        if 'inst_disguised' in params:
-            q = Q()
-            for disg in params["inst_disguised"]:
-                if disg.lower() == "true":
-                    q |= ~Q(disguise="")
-                elif disg.lower() == "false":
-                    q |= Q(disguise="")
+        if 'inst_changed' in params:
+            q = Q(changed__in=params["inst_changed"])
             query.append(q)
         
         # character properties
@@ -1569,7 +1564,7 @@ class SpeechClusterQueryMixin:
             for disg in params["inst_disguised"]:
                 q |= Q(speeches__spkr__disguise__isnull=not(disg))
                 q |= Q(speeches__addr__disguise__isnull=not(disg))                
-            query.append()   
+            query.append(q)   
 
         # any participant anonymous
         if "inst_anon" in params:
@@ -1577,7 +1572,7 @@ class SpeechClusterQueryMixin:
             for anon in params["inst_anon"]:
                 q |= Q(speeches__spkr__anon=anon)
                 q |= Q(speeches__addr__anon=anon)
-            query.append()
+            query.append(q)
                     
         #
         # speaker
@@ -1672,14 +1667,14 @@ class SpeechClusterQueryMixin:
             q = Q()
             for disg in params["spkr_inst_disguised"]:
                 q |= Q(speeches__spkr__disguise__isnull=not(disg))                
-            query.append()   
+            query.append(q)   
 
         # speaker instance anonymous
         if "spkr_inst_anon" in params:
             q = Q()
             for anon in params["spkr_inst_anon"]:
                 q |= Q(speeches__spkr__anon=anon)
-            query.append()
+            query.append(q)
         
         #
         # addressee
@@ -1770,18 +1765,18 @@ class SpeechClusterQueryMixin:
             query.append(q)
         
         # addressee instance disguised
-        if "addr inst_disguised" in params:
+        if "addr_inst_disguised" in params:
             q = Q()
             for disg in params["addr_inst_disguised"]:
                 q |= Q(speeches__addr__disguise__isnull=not(disg))                
-            query.append()   
+            query.append(q)   
 
         # addressee instance anonymous
         if "addr_inst_anon" in params:
             q = Q()
-            for anon in params["inst_anon"]:
+            for anon in params["addr_inst_anon"]:
                 q |= Q(speeches__addr__anon=anon)
-            query.append()
+            query.append(q)
 
         #
         # speech properties
