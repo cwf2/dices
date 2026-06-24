@@ -1299,7 +1299,7 @@ class SpeechQueryMixin:
         if "n_parts" in params:
             q = Q()
             for n in params["n_parts"]:
-                q |= Q(cluster__speeches__count=n)
+                q |= Q(cluster_size=n)
             query.append(q)
 
         # embedded level
@@ -1812,7 +1812,7 @@ class SpeechClusterQueryMixin:
         if "n_parts" in params:
             q = Q()
             for n in params["n_parts"]:
-                q |= Q(speeches__count=n)
+                q |= Q(speech_count=n)
             query.append(q)
 
         # turn type
