@@ -49,6 +49,13 @@ def ValidateParams(request):
     
     return params
 
+
+# for CSV export
+def excel_safe(locus):
+    '''stringify canonical loci in a way that Excel won't interpret as numbers'''
+    
+    return locus.replace(".", "_")
+
 #
 # API filters
 #
@@ -1416,8 +1423,8 @@ class AppSpeechCSV(SpeechQueryMixin, View):
         ("urn", lambda s: s.get_urn() or ""),
         ("author", lambda s: s.work.author.name),
         ("work", lambda s: s.work.title),
-        ("first_line", lambda s: s.l_fi),
-        ("last_line", lambda s: s.l_la),
+        ("first_line", lambda s: excel_safe(s.l_fi)),
+        ("last_line", lambda s: excel_safe(s.l_la)),
         ("speaker", lambda s: s.get_spkr_str()),
         ("addressee", lambda s: s.get_addr_str()),
         ("type", lambda s: s.get_type_display()),
@@ -1916,7 +1923,7 @@ class AppSpeechClusterCSV(SpeechClusterQueryMixin, View):
     filename = "clusters.csv"
 
     fields = [
-        ("loci", lambda cl: cl.get_loc_str()),
+        ("loci", lambda cl: excel_safe(cl.get_loc_str())),
         ("parts", lambda cl: cl.speech_count),
         ("participants", lambda cl: cl.get_chars_str()),
     ]
