@@ -8,11 +8,13 @@ class BaseAdmin(admin.ModelAdmin):
 
 @admin.register(Author)
 class AuthorAdmin(BaseAdmin):
+    readonly_fields = ["public_id"]
     list_display = ['name', 'urn', 'wd']
     search_fields = ['name', 'urn']
 
 @admin.register(Work)
 class WorkAdmin(BaseAdmin):
+    readonly_fields = ["public_id"]
     list_display = ['title', 'author', 'lang']
     list_filter = ['lang', 'author']
     search_fields = ['title', 'author__name', 'urn']
@@ -20,12 +22,14 @@ class WorkAdmin(BaseAdmin):
 
 @admin.register(Character)
 class CharacterAdmin(BaseAdmin):
+    readonly_fields = ["public_id"]
     list_display = ['name', 'being', 'gender', 'number']
     list_filter = ['being', 'gender', 'number']
     search_fields = ['name', 'manto', 'wd']
 
 @admin.register(CharacterInstance)
 class CharacterInstanceAdmin(BaseAdmin):
+    readonly_fields = ["public_id"]
     list_display = ['name', 'char', 'context', 'being', 'gender', "changed"]
     list_filter = ['being', 'gender', 'number', 'anon', "changed"]
     search_fields = ['name', 'char__name', 'context']
@@ -33,6 +37,7 @@ class CharacterInstanceAdmin(BaseAdmin):
 
 @admin.register(Speech)
 class SpeechAdmin(BaseAdmin):
+    readonly_fields = ["public_id"]
     list_display = ['__str__', 'get_speakers', 'get_addressees', 'type', 'l_fi', 'l_la']
     list_filter = ['type', 'work', 'work__lang', 'level']
     search_fields = ['work__title', 'work__author__name', 'spkr__name', 'spkr__char__name', 'addr__name', 'l_fi']
@@ -49,11 +54,13 @@ class SpeechAdmin(BaseAdmin):
 
 @admin.register(SpeechCluster)
 class SpeechClusterAdmin(BaseAdmin):
+    readonly_fields = ["public_id"]
     list_display = ['public_id', 'seq']
     search_fields = ['public_id']
 
 @admin.register(SpeechTag)
 class SpeechTagAdmin(BaseAdmin):
+    readonly_fields = ["public_id"]
     list_display = ['speech', 'type', 'doubt']
     list_filter = ['type', 'doubt']
     search_fields = ['speech__work__title']
