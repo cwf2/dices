@@ -79,7 +79,7 @@ class SpeechAdmin(BaseAdmin):
     list_display = ['__str__', 'get_speakers', 'get_addressees', 'type', 'l_fi', 'l_la']
     list_filter = ['type', 'work', 'work__lang', 'level']
     search_fields = ['work__title', 'work__author__name', 'spkr__name', 'spkr__char__name', 'addr__name', 'l_fi']
-    autocomplete_fields = ['work', 'cluster']
+    autocomplete_fields = ['work', 'cluster', 'embedded_in']
     filter_horizontal = ['spkr', 'addr']
     inlines = [SpeechTagInline]
 
@@ -93,6 +93,36 @@ class SpeechAdmin(BaseAdmin):
     @admin.display(description='Addressees')
     def get_addressees(self, obj):
         return ', '.join(a.name for a in obj.addr.all())
+
+    def get_urls(self):
+        custom_urls = [
+            path(
+                'guess-enclosing/',
+                self.admin_site.admin_view(self.guess_enclosing),
+                name='speechdb_speech_guess_enclosing',
+            ),
+        ]
+        return custom_urls + super().get_urls()
+
+    def guess_enclosing(self, request):
+        '''Suggest a likely embedded_in candidate based on work + line range'''
+        work_id = request.GET.get('work')
+        l_fi = request.GET.get('l_fi')
+        l_la = request.GET.get('l_la')
+        if not (work_id and l_fi and l_la):
+            return JsonResponse({})
+
+        level = request.GET.get('level')
+        try:
+            level = int(level) if level is not None and level.strip() != '' else None
+        except ValueError:
+            level = None
+
+        exclude_pk = request.GET.get('exclude') or None
+        candidate = Speech.guess_enclosing(work_id, l_fi, l_la, level=level, exclude_pk=exclude_pk)
+        if candidate is None:
+            return JsonResponse({})
+        return JsonResponse({'id': candidate.id, 'text': str(candidate)})
 
 @admin.register(SpeechCluster)
 class SpeechClusterAdmin(BaseAdmin):

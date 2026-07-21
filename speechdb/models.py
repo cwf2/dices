@@ -1,8 +1,25 @@
 from django.db import models, IntegrityError
 from django.utils.functional import cached_property
+import re
 import secrets
 
 URN_BASE = "https://db.dices.mta.ca/app"
+
+def _locus_key(locus):
+    '''Parse a locus string (e.g. "345", "12.345", "12.345a") into a sortable
+    (book, line) tuple. Best-effort only: leading digits are taken from each
+    dot-separated part and anything else (editorial suffixes, etc.) is ignored.
+    '''
+    if not locus:
+        return (0, 0)
+    parts = str(locus).split('.', 1)
+    book_str, line_str = parts if len(parts) == 2 else ('0', parts[0])
+
+    def leading_int(s):
+        m = re.match(r'\d+', s.strip())
+        return int(m.group()) if m else 0
+
+    return (leading_int(book_str), leading_int(line_str))
 
 class PublicIdModel(models.Model):
     '''a base class that incorporates a public-facing unique id in all records
@@ -285,6 +302,8 @@ class Speech(PublicIdModel):
     addr_notes = models.CharField(max_length=256, blank=True, default="")
     part = models.IntegerField()
     level = models.IntegerField(default=0)
+    embedded_in = models.ForeignKey('self', null=True, blank=True,
+            on_delete=models.SET_NULL, related_name='embedded_speeches')
     notes = models.CharField(max_length=256, blank=True, default="")
     
     class Meta:
@@ -312,6 +331,39 @@ class Speech(PublicIdModel):
         if t == 'D' or t == 'G':
             t += str(self.part)
         return t
+
+    @classmethod
+    def guess_enclosing(cls, work, l_fi, l_la, level=None, exclude_pk=None):
+        '''Best-guess the enclosing speech for a (work, l_fi, l_la, level) locus:
+        the tightest existing speech in the same work whose own line range
+        fully contains it. When candidates tie on starting line, prefer the
+        deepest one whose level is still less than `level` (if given) -- e.g.
+        a speech and a quotation embedded right at its first line will share
+        a starting locus, and level is what tells them apart. This never
+        excludes a candidate outright for having a suspicious level, since a
+        line-tightest match with an unexpected level is itself worth surfacing
+        rather than hiding. A suggestion only -- always meant to be overridable.
+        '''
+        fi_key, la_key = _locus_key(l_fi), _locus_key(l_la)
+
+        qs = cls.objects.filter(work=work)
+        if exclude_pk is not None:
+            qs = qs.exclude(pk=exclude_pk)
+
+        best, best_key = None, None
+        for candidate in qs:
+            c_fi, c_la = _locus_key(candidate.l_fi), _locus_key(candidate.l_la)
+            if not (c_fi <= fi_key and c_la >= la_key and (c_fi, c_la) != (fi_key, la_key)):
+                continue
+
+            if level is not None:
+                key = (c_fi, candidate.level if candidate.level < level else -1)
+            else:
+                key = (c_fi,)
+
+            if best is None or key > best_key:
+                best, best_key = candidate, key
+        return best
 
 
 class SpeechTag(PublicIdModel):
