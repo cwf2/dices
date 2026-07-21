@@ -200,7 +200,11 @@ class SpeechCluster(PublicIdModel):
         ordering = ['seq']
 
     seq = models.IntegerField(default=0)
-    
+
+    def __str__(self):
+        loc = self.get_loc_str()
+        return loc if loc else f"New cluster (seq {self.seq})"
+
     @cached_property
     def _speeches(self):
         return list(self.speeches.all())
