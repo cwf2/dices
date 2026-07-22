@@ -128,7 +128,8 @@ class SpeechAdmin(BaseAdmin):
 class SpeechClusterAdmin(BaseAdmin):
     readonly_fields = ["public_id"]
     list_display = ['public_id', 'get_loc', 'seq']
-    search_fields = ['public_id']
+    search_fields = ['public_id', 'speeches__work__title', 'speeches__work__author__name',
+            'speeches__l_fi', 'speeches__l_la']
 
     def get_queryset(self, request):
         return super().get_queryset(request).prefetch_related('speeches__work__author')
