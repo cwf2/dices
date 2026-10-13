@@ -130,7 +130,7 @@ WSGI_APPLICATION = 'dices.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
+_DATABASE_OPTIONS = {
     'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join('data', 'dices.db'),
@@ -145,7 +145,9 @@ DATABASES = {
     },
 }
 
-DATABASES['default'] = DATABASES[os.getenv('DJANGO_DB', 'sqlite')]
+# Only the selected backend goes into DATABASES: Django loads every configured
+# alias (e.g. in the test runner), so an unused postgres entry needs psycopg.
+DATABASES = {'default': _DATABASE_OPTIONS[os.getenv('DJANGO_DB', 'sqlite')]}
 
 
 # Password validation
