@@ -17,15 +17,17 @@ class DynamicModelSerializer(serializers.ModelSerializer):
         # Instantiate the superclass normally
         super().__init__(*args, **kwargs)
 
+        if depth >= 0:
+            # Subclass Meta so the override stays on this instance; mutating
+            # the shared class attribute would leak into later requests.
+            self.Meta = type('Meta', (self.Meta,), {'depth': depth})
+
         if fields is not None:
             # Drop any fields that are not specified in the `fields` argument.
             allowed = set(fields)
             existing = set(self.fields)
             for field_name in existing - allowed:
                 self.fields.pop(field_name)
-
-        if depth >= 0:
-            self.Meta.depth = depth
 
 
 class MetadataSerializer(DynamicModelSerializer):
