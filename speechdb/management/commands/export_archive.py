@@ -21,14 +21,14 @@ DATASET_DOI = '10.5683/SP3/N8LS2Y'
 # Listed so that every table comes after the tables it refers to, which is
 # also the order an importer should load them in.
 TABLES = [
-    ('metadata', Metadata),
-    ('authors', Author),
-    ('works', Work),
-    ('characters', Character),
-    ('instances', CharacterInstance),
-    ('clusters', SpeechCluster),
-    ('speeches', Speech),
-    ('tags', SpeechTag),
+    ('metadata', Metadata, 'database metadata'),
+    ('authors', Author, 'authors'),
+    ('works', Work, 'works'),
+    ('characters', Character, 'characters'),
+    ('instances', CharacterInstance, 'character instances'),
+    ('clusters', SpeechCluster, 'speech clusters'),
+    ('speeches', Speech, 'speeches'),
+    ('tags', SpeechTag, 'speech tags'),
 ]
 
 FLAT_FILE = 'speeches_flat'
@@ -91,8 +91,9 @@ class Command(BaseCommand):
 
         written = []
 
-        for name, model in TABLES:
-            written.append(self.export_model(output_dir, name, model, ext, delimiter))
+        for name, model, description in TABLES:
+            written.append(self.export_model(
+                output_dir, name, model, description, ext, delimiter))
             for m2m in model._meta.many_to_many:
                 written.append(self.export_junction(
                     output_dir, f'{model._meta.model_name}_{m2m.name}',
@@ -119,14 +120,14 @@ class Command(BaseCommand):
         self.stdout.write(f'  {path.name}: {count} rows')
         return count
 
-    def export_model(self, output_dir, name, model, ext, delimiter):
+    def export_model(self, output_dir, name, model, description, ext, delimiter):
         '''One file per model, one column per concrete field (foreign keys
         as <field>_id), so new model fields are exported automatically.'''
         header = [f.attname for f in model._meta.concrete_fields]
         rows = model.objects.order_by('pk').values_list(*header)
         filename = f'{name}.{ext}'
         count = self.write_rows(output_dir / filename, header, rows, delimiter)
-        return (filename, header, count, model._meta.verbose_name_plural)
+        return (filename, header, count, description)
 
     def export_junction(self, output_dir, name, m2m, ext, delimiter):
         '''One file per many-to-many relation, one row per link'''
