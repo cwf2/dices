@@ -4,11 +4,11 @@ Django==5.2.18
 django-filter==25.2
 drf-spectacular==0.29.0
 django-redis
-djangorestframework==3.16.1
+djangorestframework==3.17.2
 fontawesomefree==6.6.0
 packaging==25.0
-python-dotenv==1.1.1
-sqlparse==0.5.3
+python-dotenv==1.2.2
+sqlparse==0.6.0
 typing_extensions==4.15.0
 whitenoise==6.11.0
 psycopg[binary]==3.2.10
