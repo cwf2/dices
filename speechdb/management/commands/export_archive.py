@@ -1,9 +1,11 @@
 import csv
+import hashlib
 import subprocess
 import time
 from pathlib import Path
 
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
+from django.db import transaction
 
 from speechdb.models import (
     Metadata, Author, Work, Character, CharacterInstance,
@@ -58,6 +60,29 @@ def git_commit():
     return result.stdout.strip()
 
 
+def data_filenames(ext):
+    '''Files covered by the content hash, in load order. The metadata file is
+    left out because it holds the hash, and so are the derived readable file
+    and the README.'''
+    names = []
+    for name, model, _ in TABLES:
+        if model is not Metadata:
+            names.append(f'{name}.{ext}')
+        names += [f'{model._meta.model_name}_{m2m.name}.{ext}'
+                  for m2m in model._meta.many_to_many]
+    return names
+
+
+def content_hash(directory, ext):
+    '''SHA-256 over the data files: for each file in order, its name, a NUL
+    byte, its bytes, and a NUL byte.'''
+    digest = hashlib.sha256()
+    for filename in data_filenames(ext):
+        digest.update(filename.encode('utf-8') + b'\0')
+        digest.update((Path(directory) / filename).read_bytes() + b'\0')
+    return digest.hexdigest()
+
+
 class Command(BaseCommand):
     help = ('Export the database as delimited text files for archival '
             '(e.g. Dataverse/Borealis). The files are derived from the '
@@ -80,18 +105,36 @@ class Command(BaseCommand):
             action='store_true',
             help='Skip writing README.txt',
         )
+        parser.add_argument(
+            '--release',
+            metavar='VERSION',
+            help=('Stamp this export as a release: record VERSION, the date, '
+                  'the code commit and the content hash in the database '
+                  'metadata. Without this option the database is not changed.'),
+        )
+        parser.add_argument(
+            '--verify',
+            action='store_true',
+            help=('Treat output_dir as an existing export and check its data '
+                  'files against the content hash in its metadata file'),
+        )
 
     def handle(self, *args, **options):
         output_dir = Path(options['output_dir'])
-        output_dir.mkdir(parents=True, exist_ok=True)
-
         ext = options['format']
+
+        if options['verify']:
+            return self.verify(output_dir)
+
+        output_dir.mkdir(parents=True, exist_ok=True)
         delimiter = '\t' if ext == 'tsv' else ','
         self.stdout.write(f'Exporting to {output_dir} ({ext.upper()})')
 
         written = []
 
         for name, model, description in TABLES:
+            if model is Metadata:
+                continue
             written.append(self.export_model(
                 output_dir, name, model, description, ext, delimiter))
             for m2m in model._meta.many_to_many:
@@ -99,15 +142,83 @@ class Command(BaseCommand):
                     output_dir, f'{model._meta.model_name}_{m2m.name}',
                     m2m, ext, delimiter))
 
+        digest = content_hash(output_dir, ext)
+        self.stdout.write(f'  content hash: {digest}')
+
+        status = self.release_status(options['release'], digest)
+        if options['release']:
+            self.stamp_release(options['release'], digest)
+
+        # the metadata file is written last so it includes any new stamp
+        written.insert(0, self.export_model(
+            output_dir, 'metadata', Metadata, 'database metadata', ext, delimiter))
         written.append(self.export_flat(output_dir, ext, delimiter))
 
         if not options['no_readme']:
-            self.write_readme(output_dir, written, ext)
+            self.write_readme(output_dir, written, ext, digest, status)
             self.stdout.write('  README.txt')
 
         total = sum(count for _, _, count, _ in written)
         self.stdout.write(self.style.SUCCESS(
             f'Done: {len(written)} files, {total} rows in {output_dir}'))
+        self.stdout.write(status)
+
+    def release_status(self, release, digest):
+        '''Describe how this export relates to the stamped release record'''
+        if release:
+            return f'This export is release {release}, stamped in the database metadata.'
+        stamped = dict(Metadata.objects.values_list('name', 'value'))
+        if 'content-sha256' not in stamped:
+            return 'No release hash is recorded in the database metadata.'
+        version = stamped.get('version', '?')
+        if stamped['content-sha256'] == digest:
+            return f'Identical to release {version}: no data changes since it was stamped.'
+        return (f'Differs from release {version}: the data has changed since '
+                f'it was stamped.')
+
+    def stamp_release(self, version, digest):
+        values = {
+            'version': version,
+            'date': time.strftime('%Y-%m-%d %H:%M:%S %z'),
+            'git-commit': git_commit(),
+            'doi': DATASET_DOI,
+            'content-sha256': digest,
+            'export-format': str(FORMAT_VERSION),
+        }
+        if not values['git-commit']:
+            del values['git-commit']
+        with transaction.atomic():
+            for name, value in values.items():
+                Metadata.objects.update_or_create(name=name, defaults={'value': value})
+
+    def verify(self, directory):
+        for ext in ('tsv', 'csv'):
+            if (directory / f'authors.{ext}').exists():
+                break
+        else:
+            raise CommandError(f'No export files found in {directory}')
+
+        missing = [n for n in data_filenames(ext) if not (directory / n).exists()]
+        if missing:
+            raise CommandError(f'Missing files: {", ".join(missing)}')
+
+        delimiter = '\t' if ext == 'tsv' else ','
+        meta_path = directory / f'metadata.{ext}'
+        if not meta_path.exists():
+            raise CommandError(f'Missing {meta_path.name}')
+        with open(meta_path, newline='', encoding='utf-8') as f:
+            records = {r['name']: r['value']
+                       for r in csv.DictReader(f, delimiter=delimiter)}
+        recorded = records.get('content-sha256')
+        if not recorded:
+            raise CommandError(f'{meta_path.name} has no content-sha256 record')
+
+        actual = content_hash(directory, ext)
+        if actual != recorded:
+            raise CommandError(
+                f'Content hash mismatch: files give {actual}, metadata records {recorded}')
+        self.stdout.write(self.style.SUCCESS(
+            f'OK: files match release {records.get("version", "?")} ({actual})'))
 
     def write_rows(self, path, header, rows, delimiter):
         count = 0
@@ -168,8 +279,8 @@ class Command(BaseCommand):
         count = self.write_rows(output_dir / filename, header, rows(), delimiter)
         return (filename, header, count, 'readable summary, derived; ignored on import')
 
-    def write_readme(self, output_dir, written, ext):
-        version = Metadata.objects.filter(name='version').first()
+    def write_readme(self, output_dir, written, ext, digest, status):
+        stamped = dict(Metadata.objects.values_list('name', 'value'))
         commit = git_commit()
 
         lines = [
@@ -179,11 +290,13 @@ class Command(BaseCommand):
             f'Export date:     {time.strftime("%Y-%m-%d %H:%M:%S %z")}',
             f'Export format:   version {FORMAT_VERSION}',
         ]
-        if version:
-            lines.append(f'Database version: {version.value}')
+        if stamped.get('version'):
+            lines.append(f'Release:         {stamped["version"]} ({stamped.get("date", "")})')
         if commit:
             lines.append(f'Git commit:      {commit}')
         lines += [
+            f'Content hash:    {digest}',
+            f'Status:          {status}',
             '',
             'Format',
             '------',
@@ -194,6 +307,13 @@ class Command(BaseCommand):
             '  Every file keeps the database ids: <name>_id columns refer to the',
             '  id column of the related file, and public_id is the stable public',
             '  identifier used in DICES URNs.',
+            '',
+            'Verifying',
+            '---------',
+            '  content-sha256 in metadata is the SHA-256 of the data files: for',
+            '  each file in the order listed under Files (skipping metadata and',
+            '  speeches_flat), its name, a NUL byte, its bytes, and a NUL byte.',
+            '  With the DICES code: python manage.py export_archive <dir> --verify',
             '',
             'Files',
             '-----',

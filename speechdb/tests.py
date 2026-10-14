@@ -1,13 +1,16 @@
 import csv
+import hashlib
+import io
 import tempfile
 from pathlib import Path
 
 from django.core.management import call_command
+from django.core.management.base import CommandError
 from django.test import TestCase
 from rest_framework.test import APIClient
 
-from speechdb.models import (Author, Character, CharacterInstance, Speech,
-                             SpeechCluster, SpeechTag, Work)
+from speechdb.models import (Author, Character, CharacterInstance, Metadata,
+                             Speech, SpeechCluster, SpeechTag, Work)
 from speechdb.serializers import SpeechSerializer
 
 
@@ -148,3 +151,90 @@ class ExportArchiveTests(TestCase):
         self.assertIn('speech_spkr.tsv  (1 rows)', text)
         self.assertNotIn('Creatures and Episodes', text)
         self.assertFalse((self.export('--no-readme') / 'README.txt').exists())
+
+
+class ReleaseStampTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        author = Author.objects.create(name='Homer')
+        cls.work = Work.objects.create(title='Iliad', author=author, lang='greek')
+        Metadata.objects.create(name='version', value='1.1')
+        Metadata.objects.create(name='date', value='2025-11-16 13:55:55 -0400')
+
+    def export(self, *args):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        out = io.StringIO()
+        call_command('export_archive', tmp.name, *args, stdout=out)
+        return Path(tmp.name), out.getvalue()
+
+    def meta(self):
+        return dict(Metadata.objects.values_list('name', 'value'))
+
+    def test_plain_export_does_not_change_the_database(self):
+        before = self.meta()
+        self.export()
+        self.assertEqual(self.meta(), before)
+
+    def test_release_stamps_metadata(self):
+        out, _ = self.export('--release', '1.2')
+        meta = self.meta()
+        self.assertEqual(meta['version'], '1.2')
+        self.assertNotEqual(meta['date'], '2025-11-16 13:55:55 -0400')
+        self.assertEqual(meta['doi'], '10.5683/SP3/N8LS2Y')
+        self.assertEqual(meta['export-format'], '1')
+        self.assertRegex(meta['content-sha256'], r'^[0-9a-f]{64}$')
+        self.assertEqual(Metadata.objects.filter(name='version').count(), 1)
+
+    def test_metadata_file_carries_the_new_stamp(self):
+        out, _ = self.export('--release', '1.2')
+        with open(out / 'metadata.tsv', newline='', encoding='utf-8') as f:
+            rows = {r['name']: r['value'] for r in csv.DictReader(f, delimiter='\t')}
+        self.assertEqual(rows['version'], '1.2')
+        self.assertEqual(rows['content-sha256'], self.meta()['content-sha256'])
+
+    def test_hash_matches_the_documented_definition(self):
+        out, _ = self.export('--release', '1.2')
+        digest = hashlib.sha256()
+        for name in ['authors', 'works', 'characters', 'instances', 'clusters',
+                     'speeches', 'speech_spkr', 'speech_addr', 'tags']:
+            digest.update(f'{name}.tsv'.encode() + b'\0')
+            digest.update((out / f'{name}.tsv').read_bytes() + b'\0')
+        self.assertEqual(digest.hexdigest(), self.meta()['content-sha256'])
+
+    def test_stamping_does_not_change_the_hash(self):
+        first, _ = self.export()
+        second, _ = self.export('--release', '1.2')
+        third, _ = self.export()
+        hashes = []
+        for out in (first, second, third):
+            text = (out / 'README.txt').read_text(encoding='utf-8')
+            hashes.append([l for l in text.splitlines() if l.startswith('Content hash:')][0])
+        self.assertEqual(len(set(hashes)), 1)
+
+    def test_status_reports_changes_since_release(self):
+        self.export('--release', '1.2')
+        out, _ = self.export()
+        self.assertIn('Identical to release 1.2',
+                      (out / 'README.txt').read_text(encoding='utf-8'))
+        Author.objects.create(name='Virgil')
+        out, console = self.export()
+        self.assertIn('Differs from release 1.2',
+                      (out / 'README.txt').read_text(encoding='utf-8'))
+        self.assertIn('Differs from release 1.2', console)
+
+    def test_verify_accepts_a_release_and_rejects_tampering(self):
+        out, _ = self.export('--release', '1.2')
+        report = io.StringIO()
+        call_command('export_archive', str(out), '--verify', stdout=report)
+        self.assertIn('OK', report.getvalue())
+
+        works = out / 'works.tsv'
+        works.write_text(works.read_text(encoding='utf-8') + 'tampered\n', encoding='utf-8')
+        with self.assertRaisesMessage(CommandError, 'Content hash mismatch'):
+            call_command('export_archive', str(out), '--verify', stdout=io.StringIO())
+
+    def test_verify_requires_a_recorded_hash(self):
+        out, _ = self.export()
+        with self.assertRaisesMessage(CommandError, 'no content-sha256'):
+            call_command('export_archive', str(out), '--verify', stdout=io.StringIO())
