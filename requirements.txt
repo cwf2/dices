@@ -1,6 +1,6 @@
 asgiref==3.10.0
 dj-database-url==3.0.1
-Django==5.2.8
+Django==5.2.18
 django-filter==25.2
 drf-spectacular==0.29.0
 django-redis
