@@ -14,8 +14,18 @@ set -e  # Exit on error
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 BACKUP_DIR="${PROJECT_DIR}/backups"
-LOG_FILE="/var/log/dices_backup.log"
+LOG_FILE="${LOG_FILE:-/var/log/dices_backup.log}"
 KEEP_BACKUPS=30  # Keep last 30 backups
+
+# Virtual environment: set VENV_DIR to override; otherwise look for venv/ or
+# .venv/ in the project directory, then venv/ one level up (e.g. /var/dices/venv)
+VENV_DIR="${VENV_DIR:-}"
+
+# Fall back to a log file in the project directory if the log location
+# is not writable (e.g. when run by a non-root user)
+if ! { touch "$LOG_FILE" 2>/dev/null && [ -w "$LOG_FILE" ]; }; then
+    LOG_FILE="${PROJECT_DIR}/backup.log"
+fi
 
 # Email notification (optional - set to your email)
 NOTIFY_EMAIL=""
@@ -48,13 +58,20 @@ log "Starting DICES database backup"
 # Change to project directory
 cd "$PROJECT_DIR"
 
-# Activate virtual environment if it exists
-if [ -d "venv" ]; then
-    log "Activating virtual environment"
-    source venv/bin/activate
-elif [ -d ".venv" ]; then
-    log "Activating virtual environment"
-    source .venv/bin/activate
+# Activate virtual environment if one is found
+if [ -z "$VENV_DIR" ]; then
+    for candidate in "venv" ".venv" "../venv"; do
+        if [ -f "$candidate/bin/activate" ]; then
+            VENV_DIR="$candidate"
+            break
+        fi
+    done
+fi
+if [ -n "$VENV_DIR" ] && [ -f "$VENV_DIR/bin/activate" ]; then
+    log "Activating virtual environment: $VENV_DIR"
+    source "$VENV_DIR/bin/activate"
+else
+    log "No virtual environment found; using python from PATH"
 fi
 
 # Create backup directory if it doesn't exist
@@ -68,7 +85,7 @@ python manage.py backup_db \
     --keep-last=$KEEP_BACKUPS
 
 # Check if backup was created
-LATEST_BACKUP=$(ls -t "$BACKUP_DIR"/dices_db_*.sql.gz 2>/dev/null | head -1)
+LATEST_BACKUP=$(ls -t "$BACKUP_DIR"/dices_db_*.gz 2>/dev/null | head -1)
 if [ -n "$LATEST_BACKUP" ]; then
     BACKUP_SIZE=$(du -h "$LATEST_BACKUP" | cut -f1)
     log "Backup completed successfully: $(basename "$LATEST_BACKUP") ($BACKUP_SIZE)"

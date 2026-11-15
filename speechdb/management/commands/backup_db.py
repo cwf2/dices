@@ -7,7 +7,7 @@ from django.conf import settings
 
 
 class Command(BaseCommand):
-    help = 'Create versioned database backups with PostgreSQL dumps and Django JSON fixtures'
+    help = 'Create versioned database backups (PostgreSQL dump or SQLite copy) and Django JSON fixtures'
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -20,7 +20,7 @@ class Command(BaseCommand):
             '--format',
             choices=['pg_dump', 'json', 'both'],
             default='both',
-            help='Backup format: pg_dump (PostgreSQL), json (Django fixture), or both'
+            help='Backup format: pg_dump (native database backup: PostgreSQL dump, or a consistent SQLite copy), json (Django fixture), or both'
         )
         parser.add_argument(
             '--git-commit',
@@ -47,7 +47,43 @@ class Command(BaseCommand):
 
         # PostgreSQL dump
         if options['format'] in ['pg_dump', 'both']:
-            if 'postgresql' not in db_engine:
+            if 'sqlite3' in db_engine:
+                # SQLite: use the online backup API, which gives a consistent
+                # copy even while the site is writing to the database
+                import sqlite3
+                sqlite_backup_file = backup_dir / f"dices_db_{timestamp}.sqlite3"
+                self.stdout.write(f"Creating SQLite backup: {sqlite_backup_file}")
+
+                try:
+                    src = sqlite3.connect(f"file:{db_config['NAME']}?mode=ro", uri=True)
+                    dst = sqlite3.connect(str(sqlite_backup_file))
+                    try:
+                        src.backup(dst)
+                    finally:
+                        dst.close()
+                        src.close()
+
+                    # Verify the copy before keeping it
+                    check = sqlite3.connect(str(sqlite_backup_file))
+                    try:
+                        result = check.execute('PRAGMA integrity_check').fetchone()[0]
+                    finally:
+                        check.close()
+                    if result != 'ok':
+                        raise CommandError(f"SQLite integrity check failed: {result}")
+
+                    backups_created.append(sqlite_backup_file)
+
+                    subprocess.run(['gzip', '-k', str(sqlite_backup_file)], check=True)
+                    backups_created.append(Path(str(sqlite_backup_file) + '.gz'))
+
+                    self.stdout.write(
+                        self.style.SUCCESS(f"✓ SQLite backup created: {sqlite_backup_file}.gz")
+                    )
+                except sqlite3.Error as e:
+                    raise CommandError(f"SQLite backup failed: {str(e)}")
+
+            elif 'postgresql' not in db_engine:
                 self.stderr.write(
                     self.style.WARNING(
                         f"pg_dump format requires PostgreSQL, but using {db_engine}. Skipping."

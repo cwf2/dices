@@ -4,3 +4,5 @@ venv
 *.pyc
 __pycache__/
 data/dices.db
+backups/
+backup.log
