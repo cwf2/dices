@@ -298,13 +298,13 @@ class Speech(PublicIdModel):
     l_la = models.CharField('last line', max_length=16)
     spkr = models.ManyToManyField(CharacterInstance, related_name='speeches')
     addr = models.ManyToManyField(CharacterInstance, related_name='addresses', blank=True, default="")
-    spkr_notes = models.CharField(max_length=256, blank=True, default="")
-    addr_notes = models.CharField(max_length=256, blank=True, default="")
+    spkr_notes = models.TextField(blank=True, default="")
+    addr_notes = models.TextField(blank=True, default="")
     part = models.IntegerField()
     level = models.IntegerField(default=0)
     embedded_in = models.ForeignKey('self', null=True, blank=True,
             on_delete=models.SET_NULL, related_name='embedded_speeches')
-    notes = models.CharField(max_length=256, blank=True, default="")
+    notes = models.TextField(blank=True, default="")
     
     class Meta:
         ordering = ['work', 'seq']
