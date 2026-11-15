@@ -4,7 +4,7 @@ Django==5.2.18
 django-filter==25.2
 drf-spectacular==0.29.0
 django-redis
-djangorestframework==3.17.2
+djangorestframework==3.18.2
 fontawesomefree==6.6.0
 packaging==25.0
 python-dotenv==1.2.2
