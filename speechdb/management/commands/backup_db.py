@@ -4,7 +4,6 @@ import time
 from pathlib import Path
 from django.core.management.base import BaseCommand, CommandError
 from django.conf import settings
-from git import Repo, InvalidGitRepositoryError
 
 
 class Command(BaseCommand):
@@ -119,6 +118,8 @@ class Command(BaseCommand):
 
         # Git commit if requested
         if options['git_commit']:
+            # GitPython is only needed for this optional step
+            from git import Repo, InvalidGitRepositoryError
             try:
                 repo = Repo(search_parent_directories=True)
 
