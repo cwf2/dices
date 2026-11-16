@@ -1,6 +1,7 @@
 import csv
 import hashlib
 import io
+import json
 import tempfile
 from pathlib import Path
 
@@ -238,3 +239,144 @@ class ReleaseStampTests(TestCase):
         out, _ = self.export()
         with self.assertRaisesMessage(CommandError, 'no content-sha256'):
             call_command('export_archive', str(out), '--verify', stdout=io.StringIO())
+
+
+class ImportSpeechesTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        from django.contrib.auth import get_user_model
+        cls.user = get_user_model().objects.create_user('editor')
+        author = Author.objects.create(name='Dracontius')
+        cls.work = Work.objects.create(title='Helen', author=author, lang='latin')
+        other = Work.objects.create(title='Medea', author=author, lang='latin')
+        cls.paris_char = Character.objects.create(name='Paris')
+        cls.priam_char = Character.objects.create(name='Priam')
+        cls.paris = CharacterInstance.objects.create(
+            name='Paris', display='Paris', char=cls.paris_char,
+            context='Dracontius, Helen')
+        cluster = SpeechCluster.objects.create(seq=1)
+        cls.old = Speech.objects.create(
+            cluster=cluster, work=cls.work, type='M', seq=1, l_fi='8.91',
+            l_la='8.102', part=1)
+        cls.old.spkr.add(cls.paris)
+        cls.old.addr.add(cls.paris)
+        SpeechTag.objects.create(speech=cls.old, type='exh')
+        # a cluster seq already taken by another work
+        taken = SpeechCluster.objects.create(seq=500)
+        Speech.objects.create(cluster=taken, work=other, type='M', seq=1,
+                              l_fi='1', l_la='2', part=1)
+
+    def batch(self, **changes):
+        data = {
+            'instances': [
+                dict(name='Paris', status=f'EXISTS {self.paris.public_id}', char='',
+                     being='', number='', gender='', anon=''),
+                dict(name='Priam', status='new', char=self.priam_char.public_id,
+                     being='mortal', number='individual', gender='male', anon='no'),
+                dict(name='Trojans', status='new', char='', being='mortal',
+                     number='collective', gender='x', anon='yes'),
+            ],
+            'speeches': [
+                dict(status=f'EXISTS {self.old.public_id}', seq='1', l_fi='8.91',
+                     l_la='8.102', type='M', cluster='101', part='1', level='0',
+                     embedded_in='', spkr='Paris', addr='Priam; Trojans',
+                     spkr_notes='', addr_notes='', notes='', tags='gre, inf'),
+                dict(status='new', seq='2', l_fi='8.221', l_la='8.229', type='D',
+                     cluster='102', part='1', level='0', embedded_in='',
+                     spkr='Priam', addr='Paris', spkr_notes='', addr_notes='',
+                     notes='', tags='que, ins'),
+                dict(status='new', seq='3', l_fi='8.225', l_la='8.226', type='M',
+                     cluster='103', part='1', level='1', embedded_in='8.221',
+                     spkr='Trojans', addr='Trojans', spkr_notes='', addr_notes='',
+                     notes='imagined', tags='vit'),
+                dict(status='skip', seq='4', l_fi='8.300', l_la='8.301', type='X',
+                     cluster='x', part='', level='', embedded_in='', spkr='', addr='',
+                     spkr_notes='', addr_notes='', notes='', tags=''),
+            ],
+        }
+        for path, value in changes.items():
+            kind, i, field = path.split('__')
+            data[kind][int(i)][field] = value
+        f = tempfile.NamedTemporaryFile('w', suffix='.json', delete=False)
+        json.dump(data, f)
+        f.close()
+        self.addCleanup(Path(f.name).unlink)
+        return f.name
+
+    def run_import(self, path, apply=True):
+        out = io.StringIO()
+        args = [path, '--work', self.work.public_id, '--user', 'editor']
+        if apply:
+            args.append('--apply')
+        call_command('import_speeches', *args, stdout=out)
+        return out.getvalue()
+
+    def test_dry_run_writes_nothing(self):
+        from django.contrib.admin.models import LogEntry
+        out = self.run_import(self.batch(), apply=False)
+        self.assertIn('DRY RUN', out)
+        self.assertEqual(Speech.objects.filter(work=self.work).count(), 1)
+        self.assertFalse(CharacterInstance.objects.filter(name='Priam').exists())
+        self.assertEqual(LogEntry.objects.count(), 0)
+
+    def test_apply_creates_speeches_instances_and_clusters(self):
+        self.run_import(self.batch())
+        new = Speech.objects.get(work=self.work, l_fi='8.221')
+        self.assertEqual(new.cluster.seq, 102)
+        self.assertEqual([i.name for i in new.spkr.all()], ['Priam'])
+        self.assertEqual(new.spkr.get().char, self.priam_char)
+        self.assertEqual(new.spkr.get().context, 'Dracontius, Helen')
+        self.assertEqual(sorted(t.type for t in new.tags.all()), ['ins', 'que'])
+        embedded = Speech.objects.get(work=self.work, l_fi='8.225')
+        self.assertEqual(embedded.embedded_in, new)
+        self.assertTrue(embedded.spkr.get().anon)
+        self.assertFalse(Speech.objects.filter(l_fi='8.300').exists())
+
+    def test_existing_speech_is_brought_in_line(self):
+        self.run_import(self.batch())
+        self.old.refresh_from_db()
+        self.assertEqual(self.old.cluster.seq, 101)
+        self.assertEqual(sorted(i.name for i in self.old.addr.all()), ['Priam', 'Trojans'])
+        self.assertEqual(sorted(t.type for t in self.old.tags.all()), ['gre', 'inf'])
+
+    def test_changes_are_logged(self):
+        from django.contrib.admin.models import LogEntry
+        self.run_import(self.batch())
+        entries = LogEntry.objects.filter(user=self.user)
+        self.assertTrue(entries.exists())
+        self.assertTrue(all(e.change_message.startswith('import_speeches:') for e in entries))
+
+    def test_rerun_changes_nothing(self):
+        from django.contrib.admin.models import LogEntry
+        path = self.batch()
+        self.run_import(path)
+        before = (Speech.objects.count(), CharacterInstance.objects.count(),
+                  SpeechCluster.objects.count(), LogEntry.objects.count())
+        out = self.run_import(path)
+        self.assertIn('0 changes logged', out)
+        self.assertEqual(before, (Speech.objects.count(), CharacterInstance.objects.count(),
+                                  SpeechCluster.objects.count(), LogEntry.objects.count()))
+
+    def test_problems_are_all_reported_and_nothing_written(self):
+        path = self.batch(speeches__1__tags='que, xyz', speeches__1__addr='Priamus',
+                          speeches__2__cluster='500')
+        with self.assertRaises(CommandError) as cm:
+            self.run_import(path)
+        msg = str(cm.exception)
+        self.assertIn("bad tag 'xyz'", msg)
+        self.assertIn("'Priamus' not listed", msg)
+        self.assertIn('used by another work', msg)
+        self.assertEqual(Speech.objects.filter(work=self.work).count(), 1)
+
+    def test_embedded_speech_needs_a_parent(self):
+        path = self.batch(speeches__2__embedded_in='')
+        with self.assertRaisesRegex(CommandError, 'level > 0 but no embedded_in'):
+            self.run_import(path)
+
+    def test_unknown_work_or_user(self):
+        path = self.batch()
+        with self.assertRaisesRegex(CommandError, 'no Work'):
+            call_command('import_speeches', path, '--work', 'ZZZZ', '--user', 'editor')
+        with self.assertRaisesRegex(CommandError, 'no user'):
+            call_command('import_speeches', path, '--work', self.work.public_id,
+                         '--user', 'nobody')
