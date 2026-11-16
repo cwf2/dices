@@ -253,7 +253,7 @@ class ImportSpeechesTests(TestCase):
         cls.priam_char = Character.objects.create(name='Priam')
         cls.paris = CharacterInstance.objects.create(
             name='Paris', display='Paris', char=cls.paris_char,
-            context='Dracontius, Helen')
+            context='Dracontius Helen')
         cluster = SpeechCluster.objects.create(seq=1)
         cls.old = Speech.objects.create(
             cluster=cluster, work=cls.work, type='M', seq=1, l_fi='8.91',
@@ -325,7 +325,7 @@ class ImportSpeechesTests(TestCase):
         self.assertEqual(new.cluster.seq, 102)
         self.assertEqual([i.name for i in new.spkr.all()], ['Priam'])
         self.assertEqual(new.spkr.get().char, self.priam_char)
-        self.assertEqual(new.spkr.get().context, 'Dracontius, Helen')
+        self.assertEqual(new.spkr.get().context, 'Dracontius Helen')
         self.assertEqual(sorted(t.type for t in new.tags.all()), ['ins', 'que'])
         embedded = Speech.objects.get(work=self.work, l_fi='8.225')
         self.assertEqual(embedded.embedded_in, new)
@@ -380,3 +380,98 @@ class ImportSpeechesTests(TestCase):
         with self.assertRaisesRegex(CommandError, 'no user'):
             call_command('import_speeches', path, '--work', self.work.public_id,
                          '--user', 'nobody')
+
+
+class ContextNameTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        from django.contrib.auth import get_user_model
+        cls.admin = get_user_model().objects.create_superuser('boss', password='x')
+        cls.homer = Author.objects.create(name='Homer')
+        cls.iliad = Work.objects.create(title='Iliad', author=cls.homer, lang='greek')
+        anon = Author.objects.create(name='Anonymous')
+        cls.orphic = Work.objects.create(title='Orphic Argonautica', author=anon, lang='greek')
+
+    def test_context_name_is_author_space_title(self):
+        self.assertEqual(self.iliad.get_context_name(), 'Homer Iliad')
+        self.assertEqual(self.orphic.get_context_name(), 'Anonymous Orphic Argonautica')
+        # display name is unchanged
+        self.assertEqual(self.iliad.get_long_name(), 'Homer, Iliad')
+
+    def test_admin_add_instance_builds_context_from_work(self):
+        self.client.force_login(self.admin)
+        r = self.client.get('/admin/speechdb/characterinstance/add/',
+                            {'work': self.iliad.pk})
+        self.assertEqual(r.context['adminform'].form.initial['context'], 'Homer Iliad')
+        r = self.client.get('/admin/speechdb/characterinstance/add/', {'work': 'junk'})
+        self.assertNotIn('context', r.context['adminform'].form.initial)
+
+
+class AuditContextsTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        from django.contrib.auth import get_user_model
+        cls.user = get_user_model().objects.create_user('editor')
+        author = Author.objects.create(name='Nonnus')
+        cls.work = Work.objects.create(title='Dionysiaca', author=author, lang='greek')
+        other = Work.objects.create(title='Paraphrase', author=author, lang='greek')
+
+        def inst(name, context):
+            return CharacterInstance.objects.create(name=name, display=name, context=context)
+        cls.good = inst('Dionysus', 'Nonnus Dionysiaca')
+        cls.bad = inst('shores of Naxos', 'Dionysiaca')
+        cls.comma = inst('Ariadne', 'Nonnus, Dionysiaca')
+        cls.multi = inst('Jesus', 'Nonnus Dionysiaca')
+        cls.orphan = inst('nobody', 'Nonnus Dionysiaca')
+        for i, (w, spkr, addr) in enumerate([(cls.work, cls.good, cls.bad),
+                                              (cls.work, cls.comma, cls.multi),
+                                              (other, cls.multi, cls.multi)]):
+            s = Speech.objects.create(cluster=SpeechCluster.objects.create(seq=i),
+                                      work=w, type='M', seq=i, l_fi='1', l_la='2', part=1)
+            s.spkr.add(spkr)
+            s.addr.add(addr)
+
+    def audit(self, *args):
+        out = io.StringIO()
+        call_command('audit_contexts', *args, stdout=out)
+        return out.getvalue()
+
+    def test_report_finds_each_kind_and_changes_nothing(self):
+        out = self.audit()
+        self.assertIn('5 instances: 1 ok, 2 mismatch, 1 multi-work, 1 orphan', out)
+        self.assertIn("'Dionysiaca' -> 'Nonnus Dionysiaca'", out)
+        self.bad.refresh_from_db()
+        self.assertEqual(self.bad.context, 'Dionysiaca')
+
+    def test_apply_fixes_mismatches_only_and_logs(self):
+        from django.contrib.admin.models import LogEntry
+        self.audit('--apply', '--user', 'editor')
+        for i in (self.bad, self.comma, self.multi, self.orphan):
+            i.refresh_from_db()
+        self.assertEqual(self.bad.context, 'Nonnus Dionysiaca')
+        self.assertEqual(self.comma.context, 'Nonnus Dionysiaca')
+        self.assertEqual(LogEntry.objects.filter(user=self.user).count(), 2)
+        self.assertIn('0 mismatch', self.audit())
+
+    def test_apply_needs_user(self):
+        with self.assertRaisesRegex(CommandError, '--apply needs --user'):
+            self.audit('--apply')
+
+
+class StableOrderingTests(TestCase):
+    def test_paging_through_same_named_instances_sees_each_once(self):
+        # more than one page (PAGE_SIZE 200) of instances that tie on name
+        CharacterInstance.objects.bulk_create(
+            [CharacterInstance(name='Hermes', display='Hermes', context='x',
+                               public_id=f'{n:04X}') for n in range(250)])
+        client = APIClient()
+        seen = []
+        for page in (1, 2):
+            r = client.get('/api/instances/', {'page': page}).json()
+            seen += [i['id'] for i in r['results']]
+        self.assertEqual(sorted(seen), sorted(CharacterInstance.objects.values_list('id', flat=True)))
+
+    def test_every_default_ordering_ends_with_id(self):
+        from speechdb.models import Author, Character, Speech, SpeechCluster, Work
+        for model in (Author, Work, Character, CharacterInstance, SpeechCluster, Speech):
+            self.assertEqual(model._meta.ordering[-1], 'id', model.__name__)

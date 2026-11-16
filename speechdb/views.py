@@ -529,7 +529,7 @@ class WorkQueryMixin:
             query.append(Q(lang__in=params["work_lang"]))
 
         # perform query
-        qs = Work.objects.filter(*query).distinct().order_by('author', 'title')
+        qs = Work.objects.filter(*query).distinct().order_by('author', 'title', 'id')
 
         # annotate results
         qs = qs.annotate(
@@ -679,7 +679,7 @@ class CharacterQueryMixin:
                 Q(instances__addresses__work__lang__in=params["work_lang"])
             )
         
-        qs = Character.objects.filter(*query).distinct().order_by('name')
+        qs = Character.objects.filter(*query).distinct().order_by('name', 'id')
         
         # calculate some useful counts
         qs = qs.annotate(
@@ -917,7 +917,7 @@ class CharacterInstanceQueryMixin:
             query.append(q)
         
         # perform query
-        qs = CharacterInstance.objects.filter(*query).order_by('name')
+        qs = CharacterInstance.objects.filter(*query).order_by('name', 'id')
         
         # calculate some useful counts
         qs = qs.annotate(
@@ -1370,7 +1370,7 @@ class SpeechQueryMixin:
             query.append(q)
 
         # execute query
-        qs = qs.filter(*query).distinct().order_by("work", "seq")
+        qs = qs.filter(*query).distinct().order_by("work", "seq", "id")
         
         # prefetch related data to avoid unnecessary queries
         qs = qs.select_related(
@@ -1891,7 +1891,7 @@ class SpeechClusterQueryMixin:
                 
         # execute query
         qs = qs.filter(*query).distinct()
-        qs = qs.order_by('seq')
+        qs = qs.order_by('seq', 'id')
          
         return qs
 

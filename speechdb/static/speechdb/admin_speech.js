@@ -7,23 +7,25 @@
         var $addAddr = $('#add_id_addr');
         if (!$work.length || (!$addSpkr.length && !$addAddr.length)) return;
 
-        function setContextParam($link, contextText) {
+        // pass the selected work's id; the instance admin builds the context
+        // string from it (Work.get_context_name), so it matches the house form
+        function setWorkParam($link, workId) {
             if (!$link.length) return;
             var url = new URL($link.attr('href'), window.location.href);
-            url.searchParams.set('context', contextText);
+            url.searchParams.delete('context');
+            url.searchParams.set('work', workId);
             $link.attr('href', url.pathname + '?' + url.searchParams.toString());
         }
 
         function updateContext() {
-            if (!$.fn.select2) return;
-            var data = $work.select2('data');
-            var text = (data && data.length) ? data[0].text : '';
-            if (!text) return;
-            setContextParam($addSpkr, text);
-            setContextParam($addAddr, text);
+            var workId = $work.val();
+            if (!workId) return;
+            setWorkParam($addSpkr, workId);
+            setWorkParam($addAddr, workId);
         }
 
         $work.on('change select2:select', updateContext);
+        updateContext();  // an existing speech already has a work
     });
 
     document.addEventListener('DOMContentLoaded', function() {

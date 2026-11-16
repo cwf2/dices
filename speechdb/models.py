@@ -69,7 +69,7 @@ class Author(PublicIdModel):
     urn = models.CharField(max_length=128, blank=True, default="")
     
     class Meta:
-        ordering = ['name']
+        ordering = ['name', 'id']
     
     def __str__(self):
         return self.name
@@ -90,13 +90,19 @@ class Work(PublicIdModel):
     lang = models.CharField(max_length=8, choices=Language.choices)
     
     class Meta:
-        ordering = ['author', 'title']
+        ordering = ['author', 'title', 'id']
 
 
     def __str__(self):
         return self.get_long_name()
 
     
+    def get_context_name(self):
+        '''Return the CharacterInstance.context string for this work:
+        "Author Title", no comma (even for "Anonymous"). This is the form
+        used throughout the data; get_long_name() is for display.'''
+        return f'{self.author.name} {self.title}'
+
     def get_long_name(self):
         '''Return common name as a string'''
         if self.author.name == "Anonymous":
@@ -139,7 +145,7 @@ class Character(PublicIdModel):
     notes = models.CharField('Notes', max_length=256, blank=True, default="")
 
     class Meta:
-        ordering = ['name']
+        ordering = ['name', 'id']
 
 
     def __str__(self):
@@ -186,7 +192,7 @@ class CharacterInstance(PublicIdModel):
     context = models.CharField(max_length=128)
     
     class Meta:
-        ordering = ['name']
+        ordering = ['name', 'id']
     
     def __str__(self):
         return self.get_long_name()
@@ -214,7 +220,7 @@ class SpeechCluster(PublicIdModel):
     '''A group of related speeches'''
     
     class Meta:
-        ordering = ['seq']
+        ordering = ['seq', 'id']
 
     seq = models.IntegerField(default=0)
 
@@ -307,7 +313,7 @@ class Speech(PublicIdModel):
     notes = models.TextField(blank=True, default="")
     
     class Meta:
-        ordering = ['work', 'seq']
+        ordering = ['work', 'seq', 'id']
     
     def __str__(self):
         return f'{self.work} {self.l_fi}-{self.l_la}'

@@ -88,7 +88,7 @@ class Command(BaseCommand):
                             help='admin username the change-log entries are filed under')
         parser.add_argument('--context',
                             help='context string for new instances '
-                                 '(default: the Work\'s long name, "Author, Title")')
+                                 '(default: "Author Title", Work.get_context_name)')
         parser.add_argument('--apply', action='store_true',
                             help='commit the changes (default: dry run, rolled back)')
 
@@ -108,7 +108,7 @@ class Command(BaseCommand):
             self.user = get_user_model().objects.get(username=options['user'])
         except get_user_model().DoesNotExist:
             raise CommandError(f'no user {options["user"]!r}')
-        self.context = options['context'] or self.work.get_long_name()
+        self.context = options['context'] or self.work.get_context_name()
 
         errors = self.validate(data)
         if errors:

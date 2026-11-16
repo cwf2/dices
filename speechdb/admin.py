@@ -43,9 +43,14 @@ class CharacterInstanceAdmin(BaseAdmin):
 
     def get_changeform_initial_data(self, request):
         initial = super().get_changeform_initial_data(request)
-        context = request.GET.get('context')
-        if context:
-            initial['context'] = context
+        # the speech form passes ?work=<pk>; the context string is built here
+        # so it always has the house form "Author Title" (Work.get_context_name)
+        work_id = request.GET.get('work', '')
+        work = Work.objects.filter(pk=work_id).first() if work_id.isdigit() else None
+        if work is not None:
+            initial['context'] = work.get_context_name()
+        elif request.GET.get('context'):
+            initial['context'] = request.GET['context']
         return initial
 
     def get_urls(self):
