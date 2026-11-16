@@ -475,3 +475,76 @@ class StableOrderingTests(TestCase):
         from speechdb.models import Author, Character, Speech, SpeechCluster, Work
         for model in (Author, Work, Character, CharacterInstance, SpeechCluster, Speech):
             self.assertEqual(model._meta.ordering[-1], 'id', model.__name__)
+
+
+class RemoveWorkTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        from django.contrib.auth import get_user_model
+        cls.user = get_user_model().objects.create_user('editor')
+        cls.author = Author.objects.create(name='Dracontius')
+        cls.gone = Work.objects.create(title='Verba Herculis', author=cls.author, lang='latin')
+        cls.kept = Work.objects.create(title='Hylas', author=cls.author, lang='latin')
+        cls.char = Character.objects.create(name='Heracles')
+
+        def inst(name, ctx):
+            return CharacterInstance.objects.create(name=name, display=name, char=cls.char,
+                                                    context=ctx)
+        cls.minerva = inst('Minerva', 'Dracontius Verba Herculis')
+        cls.hercules = inst('Hercules', 'Dracontius Verba Herculis')
+        cls.shared = inst('Venus', 'Dracontius Hylas')   # also used in the kept work
+
+        def speech(work, seq, spkr, addr, **kw):
+            s = Speech.objects.create(cluster=kw.pop('cluster', None) or
+                                      SpeechCluster.objects.create(seq=seq),
+                                      work=work, type='M', seq=seq, l_fi=f'{seq}',
+                                      l_la=f'{seq}', part=1, **kw)
+            s.spkr.add(spkr)
+            s.addr.add(addr)
+            return s
+        cls.s1 = speech(cls.gone, 1, cls.minerva, cls.hercules)
+        SpeechTag.objects.create(speech=cls.s1, type='ins')
+        cls.s2 = speech(cls.gone, 2, cls.hercules, cls.shared, level=1, embedded_in=cls.s1)
+        cls.s3 = speech(cls.kept, 3, cls.shared, cls.shared)
+
+    def remove(self, *extra):
+        out = io.StringIO()
+        call_command('remove_work', self.gone.public_id, '--user', 'editor', *extra, stdout=out)
+        return out.getvalue()
+
+    def test_dry_run_changes_nothing(self):
+        out = self.remove()
+        self.assertIn('DRY RUN', out)
+        self.assertTrue(Work.objects.filter(pk=self.gone.pk).exists())
+        self.assertEqual(Speech.objects.count(), 3)
+
+    def test_apply_removes_work_speeches_clusters_and_own_instances(self):
+        self.remove('--apply')
+        self.assertFalse(Work.objects.filter(pk=self.gone.pk).exists())
+        self.assertEqual(list(Speech.objects.all()), [self.s3])
+        self.assertEqual(SpeechCluster.objects.count(), 1)
+        self.assertEqual(SpeechTag.objects.count(), 0)
+        self.assertEqual(set(CharacterInstance.objects.all()), {self.shared})
+        self.assertTrue(Character.objects.filter(pk=self.char.pk).exists())
+        self.assertTrue(Author.objects.filter(pk=self.author.pk).exists())
+
+    def test_deletions_are_logged_with_recoverable_data(self):
+        from django.contrib.admin.models import DELETION, LogEntry
+        self.remove('--apply', '--reason', 'out of scope')
+        entries = LogEntry.objects.filter(user=self.user, action_flag=DELETION)
+        self.assertEqual(entries.count(), 7)   # 2 speeches, 2 clusters, 2 instances, work
+        speech_entry = entries.get(object_id=str(self.s1.pk),
+                                   content_type__model='speech')
+        msg = speech_entry.change_message
+        self.assertTrue(msg.startswith('remove_work (out of scope): '))
+        data = json.loads(msg.split(': ', 1)[1])
+        self.assertEqual(data['fields']['l_fi'], '1')
+        self.assertEqual(data['tags'], ['ins'])
+        self.assertTrue(data['spkr'][0].startswith('Minerva'))
+
+    def test_refuses_if_another_work_embeds_in_it(self):
+        self.s3.embedded_in = self.s1
+        self.s3.save()
+        with self.assertRaisesRegex(CommandError, 'embedded in this one'):
+            self.remove('--apply')
+        self.assertTrue(Work.objects.filter(pk=self.gone.pk).exists())
